@@ -1,4 +1,4 @@
-package com.cyanogenmod.cmparts.activities.MainActivity;
+package com.cyanogenmod.cmparts.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
