@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CMParts</string>
+    <string name="device_settings_title">端末設定</string>
+    <!--  Trackball Wake -->
+    <string name="trackball_settings_title">トラックボール設定</string>
+    <string name="trackball_settings_summary">トラックボールによる復帰とアンロック</string>
+    <string name="pref_trackball_wake_title">トラックボールで復帰</string>
+</resources>
