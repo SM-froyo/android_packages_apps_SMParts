@@ -89,7 +89,7 @@ public class TrackballActivity extends PreferenceActivity
 		return value;
 	}
 	
-	 private int getRowId(String key) {
+	private int getRowId(String key) {
 		String selection = "key='"+key+"'";
 		Cursor cur = managedQuery(SettingsProvider.CONTENT_URI, DEFAULT_PROJECTION, selection, null, null);
 		cur.moveToFirst();
@@ -99,11 +99,11 @@ public class TrackballActivity extends PreferenceActivity
 			return cur.getInt(0);
 		}
 	}
-
+	
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
 		if (key.equals(TRACKBALL_WAKE_PREF)) {
-			 writeToProvider(TRACKBALL_WAKE_PREF,mTrackballWakePref.isChecked()? "1" : "0");
+			writeToProvider(TRACKBALL_WAKE_PREF,mTrackballWakePref.isChecked()? "1" : "0");
 		}
 	}
 }
