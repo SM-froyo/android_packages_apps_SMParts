@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory
+		android:title="@string/device_settings_title">
+		
+		<PreferenceScreen android:key="trackball_settings"
+			android:title="@string/trackball_settings_title"
+			android:summary="@string/trackball_settings_summary">
+			<intent android:action="android.intent.action.MAIN"
+					android:targetPackage="com.cyanogenmod.cmparts"
+					android:targetClass="com.cyanogenmod.cmparts.activities.TrackballActivity" />
+		</PreferenceScreen>
+			
+	</PreferenceCategory>
+
+</PreferenceScreen>

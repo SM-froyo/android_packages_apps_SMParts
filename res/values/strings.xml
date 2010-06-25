@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">CMParts</string>
-
+    <string name="device_settings_title">Device Settings</string>
+    
+    <!--  Trackball Wake -->
+    <string name="trackball_settings_title">Trackball Settings</string>
+    <string name="trackball_settings_summary">Trackball Wake and Unlock</string>
+    <string name="pref_trackball_wake_title">Trackball Wake</string>
 </resources>
