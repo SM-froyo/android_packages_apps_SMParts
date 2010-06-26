@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 	<CheckBoxPreference android:key="pref_trackball_wake"
-		android:title="@string/pref_trackball_wake_title"
-                android:summary="@string/pref_trackball_wake_summary"/>
+		android:title="@string/pref_trackball_wake_title" android:summary="@string/pref_trackball_wake_summary" />
 
-        <CheckBoxPreference android:key="pref_trackball_unlock"
-                android:title="@string/pref_trackball_unlock_title"
-                android:title="@string/pref_trackball_unlock_summary"/>
+	<CheckBoxPreference android:key="pref_trackball_unlock"
+		android:title="@string/pref_trackball_unlock_title" android:summary="@string/pref_trackball_unlock_summary" />
 </PreferenceScreen>
