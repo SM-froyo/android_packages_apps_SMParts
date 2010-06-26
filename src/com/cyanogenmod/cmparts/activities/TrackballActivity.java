@@ -11,6 +11,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
 
 import com.cyanogenmod.cmparts.R;
 import com.cyanogenmod.cmparts.provider.SettingsProvider;
@@ -104,7 +105,8 @@ public class TrackballActivity extends PreferenceActivity
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
 		if (key.equals(TRACKBALL_WAKE_PREF)) {
-			writeToProvider(TRACKBALL_WAKE_PREF,mTrackballWakePref.isChecked()? "1" : "0");
+			 //writeToProvider(TRACKBALL_WAKE_PREF,mTrackballWakePref.isChecked()? "1" : "0");
+                         Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_WAKE_SCREEN, 0);
 		}
 	}
 }
