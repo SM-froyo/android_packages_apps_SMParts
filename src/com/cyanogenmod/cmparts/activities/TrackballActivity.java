@@ -8,6 +8,7 @@ import android.database.SQLException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
@@ -103,9 +104,15 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
 
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
-		if (key.equals(TRACKBALL_WAKE_PREF)) {
-			//writeToProvider(TRACKBALL_WAKE_PREF,mTrackballWakePref.isChecked()? "1" : "0");
-			Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_WAKE_SCREEN, 0);
+	}
+
+	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+		boolean value;
+		if (preference == mTrackballWakePref) {
+			value = mTrackballWakePref.isChecked();
+			Settings.System.putInt(getContentResolver(),
+					Settings.System.TRACKBALL_WAKE_SCREEN, value ? 1 : 0);
 		}
+		return true;
 	}
 }
