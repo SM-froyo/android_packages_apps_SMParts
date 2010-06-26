@@ -121,7 +121,7 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
             value = mTrackballUnlockPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.TRACKBALL_UNLOCK_SCREEN, value ? 1 : 0);
-            return true;
         }
+        return true;
     }
 }
