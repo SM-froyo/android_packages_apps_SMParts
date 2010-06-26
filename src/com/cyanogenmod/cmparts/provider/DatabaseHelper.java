@@ -8,9 +8,9 @@ import android.util.Log;
 import com.cyanogenmod.cmparts.provider.SettingsProvider.Constants;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-	
+
 	private static final String TAG = "DatabaseHelper";
-	
+
 	private static final String DATABASE_NAME = "settings.db";
 	private static final int DATABASE_VERSION = 1;
 
@@ -30,8 +30,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		 db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-		 onCreate(db);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+		onCreate(db);
 	}
 
 }
