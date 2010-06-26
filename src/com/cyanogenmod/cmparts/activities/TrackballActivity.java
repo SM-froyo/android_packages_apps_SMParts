@@ -1,11 +1,7 @@
 package com.cyanogenmod.cmparts.activities;
 
-import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.database.Cursor;
-import android.database.SQLException;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
@@ -16,7 +12,6 @@ import android.provider.Settings;
 
 import com.cyanogenmod.cmparts.R;
 import com.cyanogenmod.cmparts.provider.SettingsProvider;
-import com.cyanogenmod.cmparts.provider.SettingsProvider.Constants;
 
 public class TrackballActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 
