@@ -124,3 +124,4 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
             return true;
         }
     }
+}
