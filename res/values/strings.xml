@@ -3,8 +3,14 @@
     <string name="app_name">CMParts</string>
     <string name="device_settings_title">Device Settings</string>
     
-    <!--  Trackball Wake -->
     <string name="trackball_settings_title">Trackball Settings</string>
     <string name="trackball_settings_summary">Trackball Wake and Unlock</string>
+
+    <!-- Trackball Wake -->
     <string name="pref_trackball_wake_title">Trackball Wake</string>
+    <string name="pref_trackball_wake_summary">Pressing the trackball wakes the device.</string>
+
+    <!-- Trackball Unlock -->
+    <string name="pref_trackball_unlock_title">Trackball Unlock</string>
+    <string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device.</string>
 </resources>
