@@ -20,42 +20,42 @@ import com.cyanogenmod.cmparts.provider.SettingsProvider.Constants;
 
 public class TrackballActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 
-	private static final String TRACKBALL_WAKE_PREF = "pref_trackball_wake";
-        private static final String TRACKBALL_UNLOCK_PREF = "pref_trackball_unlock";
+    private static final String TRACKBALL_WAKE_PREF = "pref_trackball_wake";
+    private static final String TRACKBALL_UNLOCK_PREF = "pref_trackball_unlock";
 
-	private CheckBoxPreference mTrackballWakePref;
-        private CheckBoxPreference mTrackballUnlockPref;
+    private CheckBoxPreference mTrackballWakePref;
+    private CheckBoxPreference mTrackballUnlockPref;
 
-	private String[] DEFAULT_PROJECTION = new String[] {
-			SettingsProvider.Constants._ID,
-			SettingsProvider.Constants.KEY,
-			SettingsProvider.Constants.VALUE
-	};
+    private String[] DEFAULT_PROJECTION = new String[] {
+            SettingsProvider.Constants._ID,
+            SettingsProvider.Constants.KEY,
+            SettingsProvider.Constants.VALUE
+    };
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-		setTitle(R.string.trackball_settings_title);
-		addPreferencesFromResource(R.xml.trackball_settings);
+        setTitle(R.string.trackball_settings_title);
+        addPreferencesFromResource(R.xml.trackball_settings);
 
-		PreferenceScreen prefSet = getPreferenceScreen();
+        PreferenceScreen prefSet = getPreferenceScreen();
 
-		/* Trackball Wake */
-		mTrackballWakePref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_WAKE_PREF);
-		mTrackballWakePref.setChecked(Settings.System.getInt(getContentResolver(), 
-                        Settings.System.TRACKBALL_WAKE_SCREEN, 0) == 1);
+        /* Trackball Wake */
+        mTrackballWakePref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_WAKE_PREF);
+        mTrackballWakePref.setChecked(Settings.System.getInt(getContentResolver(), 
+                Settings.System.TRACKBALL_WAKE_SCREEN, 0) == 1);
 
-                /* Trackball Unlock */
-                mTrackballUnlockPref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_UNLOCK_PREF);
-                mTrackballUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
-                        Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
+        /* Trackball Unlock */
+        mTrackballUnlockPref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_UNLOCK_PREF);
+        mTrackballUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
 
-		final PreferenceGroup parentPreference = getPreferenceScreen();
-		parentPreference.getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
-	}
-	
-	/*
+        final PreferenceGroup parentPreference = getPreferenceScreen();
+        parentPreference.getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+    }
+
+    /*
 	private void writeToProvider(String key, String value) {
 		ContentValues values = new ContentValues();
 
@@ -110,22 +110,22 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
 			return cur.getInt(0);
 		}
 	}
-	*/
+     */
 
-	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
-			String key) {
-	}
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
+            String key) {
+    }
 
-	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-		boolean value;
-		if (preference == mTrackballWakePref) {
-                    value = mTrackballWakePref.isChecked();
-                    Settings.System.putInt(getContentResolver(),
-                            Settings.System.TRACKBALL_WAKE_SCREEN, value ? 1 : 0);
-		} else if (preference == mTrackballUnlockPref) {
-                    value = mTrackballUnlockPref.isChecked();
-                    Settings.System.putInt(getContentResolver(),
-                            Settings.System.TRACKBALL_UNLOCK_SCREEN, value ? 1 : 0);
-		return true;
-	}
-}
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        boolean value;
+        if (preference == mTrackballWakePref) {
+            value = mTrackballWakePref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.TRACKBALL_WAKE_SCREEN, value ? 1 : 0);
+        } else if (preference == mTrackballUnlockPref) {
+            value = mTrackballUnlockPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.TRACKBALL_UNLOCK_SCREEN, value ? 1 : 0);
+            return true;
+        }
+    }
