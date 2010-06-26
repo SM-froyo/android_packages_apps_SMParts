@@ -42,6 +42,9 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
 		/* Trackball Wake */
 		mTrackballWakePref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_WAKE_PREF);
 		mTrackballWakePref.setChecked(getInt(TRACKBALL_WAKE_PREF,0)!=0);
+		
+		mTrackballWakePref.setChecked(Settings.System.getInt(getContentResolver(), 
+                Settings.System.TRACKBALL_WAKE_SCREEN, 0) == 1);
 
 		final PreferenceGroup parentPreference = getPreferenceScreen();
 		parentPreference.getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
