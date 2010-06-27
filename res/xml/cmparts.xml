@@ -9,7 +9,13 @@
 				android:targetPackage="com.cyanogenmod.cmparts"
 				android:targetClass="com.cyanogenmod.cmparts.activities.TrackballActivity" />
 		</PreferenceScreen>
-
+		<PreferenceScreen android:key="brotips"
+			android:title="@string/brotips_title" android:summary="@string/brotips_summary">
+			<intent android:action="android.intent.action.MAIN"
+				android:targetPackage="com.cyanogenmod.cmparts"
+				android:targetClass="com.cyanogenmod.cmparts.activities.BrotipsActivity" />
+		</PreferenceScreen>
+		
 	</PreferenceCategory>
 
 </PreferenceScreen>
