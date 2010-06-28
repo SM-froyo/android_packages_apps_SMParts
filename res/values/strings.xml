@@ -5,6 +5,9 @@
 
 	<string name="trackball_settings_title">Trackball Settings</string>
 	<string name="trackball_settings_summary">Trackball Wake and Unlock</string>
+	
+	<string name="brotips_title">Br0tip Settings</string>
+	<string name="brotips_summary">Protips? More like Br0tips</string>
 
 	<!-- Trackball Wake -->
 	<string name="pref_trackball_wake_title">Trackball Wake</string>
@@ -13,4 +16,8 @@
 	<!-- Trackball Unlock -->
 	<string name="pref_trackball_unlock_title">Trackball Unlock</string>
 	<string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device.</string>
+
+	<!-- br0tips -->
+	<string name="pref_brotips_title">Enable Br0tips</string>
+	<string name="pref_brotips_summary">Change the Home screen tips</string>
 </resources>
