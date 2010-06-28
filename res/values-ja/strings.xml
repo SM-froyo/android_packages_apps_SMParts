@@ -5,10 +5,14 @@
 
     <string name="trackball_settings_title">トラックボール設定</string>
     <string name="trackball_settings_summary">トラックボールによる復帰とアンロック</string>
+    <string name="brotips_title">Br0tip設定</string>
+    <string name="brotips_summary">ProtipsよりもBr0tipsがいい</string>
 
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
 
     <string name="pref_trackball_unlock_title">トラックボールアンロック</string>
     <string name="pref_trackball_unlock_summary">トラックボールを押して端末をアンロックする</string>
+    <string name="pref_brotips_title">Br0tipsを有効にする</string>
+    <string name="pref_brotips_summary">ホームスクリーンティップスを変更する</string>
 </resources>
