@@ -6,7 +6,7 @@
     <string name="trackball_settings_title">トラックボール設定</string>
     <string name="trackball_settings_summary">トラックボールによる復帰とアンロック</string>
     <string name="brotips_title">Br0tip設定</string>
-    <string name="brotips_summary">ProtipsよりもBr0tipsがいい</string>
+    <string name="brotips_summary">Protips? Br0tipsがいいよ</string>
 
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
