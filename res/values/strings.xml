@@ -13,6 +13,12 @@
    <string name="ui_title">User interface</string>
 	<string name="ui_summary">User interface settings &amp; tweaks</string>
 
+   <!-- User interface, orientation -->
+   <string name="ui_rotation_title">Accelerometer rotation</string>
+   <string name="pref_rotation_90_title">90 degrees</string>
+   <string name="pref_rotation_180_title">180 degrees</string>
+   <string name="pref_rotation_270_title">270 degrees</string>
+
    <!-- User interface, WebView -->
    <string name="ui_webview_title">WebView</string>
    <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
