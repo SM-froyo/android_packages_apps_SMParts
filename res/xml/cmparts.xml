@@ -15,6 +15,12 @@
 				android:targetPackage="com.cyanogenmod.cmparts"
 				android:targetClass="com.cyanogenmod.cmparts.activities.BrotipsActivity" />
 		</PreferenceScreen>
+		<PreferenceScreen android:key="ui_settings"
+			android:title="@string/ui_title" android:summary="@string/ui_summary">
+			<intent android:action="android.intent.action.MAIN"
+				android:targetPackage="com.cyanogenmod.cmparts"
+				android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
+		</PreferenceScreen>
 		
 	</PreferenceCategory>
 

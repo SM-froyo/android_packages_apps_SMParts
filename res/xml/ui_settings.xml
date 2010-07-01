@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+   <PreferenceCategory android:title="@string/ui_webview_title">
+      <CheckBoxPreference android:key="pref_pinch_reflow"
+         android:title="@string/pref_pinch_reflow_title"
+         android:summary="@string/pref_pinch_reflow_summary" />
+   </PreferenceCategory>
+</PreferenceScreen>

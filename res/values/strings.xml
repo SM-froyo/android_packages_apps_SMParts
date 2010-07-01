@@ -9,6 +9,15 @@
 	<string name="brotips_title">Br0tip Settings</string>
 	<string name="brotips_summary">Protips? More like Br0tips</string>
 
+   <!-- User interface -->
+   <string name="ui_title">User interface</string>
+	<string name="ui_summary">User interface settings &amp; tweaks</string>
+
+   <!-- User interface, WebView -->
+   <string name="ui_webview_title">WebView</string>
+   <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
+   <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
+
 	<!-- Trackball Wake -->
 	<string name="pref_trackball_wake_title">Trackball Wake</string>
 	<string name="pref_trackball_wake_summary">Pressing the trackball wakes the device.</string>
