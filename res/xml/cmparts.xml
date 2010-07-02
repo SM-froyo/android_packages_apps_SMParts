@@ -22,6 +22,13 @@
 				android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
 		</PreferenceScreen>
 		
+		<PreferenceScreen android:key="long_press_home"
+			android:title="@string/long_press_home_title" android:summary="@string/long_press_home_summary">
+			<intent android:action="android.intent.action.MAIN"
+				android:targetPackage="com.cyanogenmod.cmparts"
+				android:targetClass="com.cyanogenmod.cmparts.activities.LongPressHomeActivity" />
+		</PreferenceScreen>
+		
 	</PreferenceCategory>
 
 </PreferenceScreen>

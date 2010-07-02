@@ -8,6 +8,9 @@
 	
    <string name="brotips_title">Br0tip Settings</string>
    <string name="brotips_summary">Protips? More like Br0tips</string>
+	
+	<string name="long_press_home_title">Long Press Home Settings</string>
+	<string name="long_press_home_summary">Number of recent applications, etc.</string>
 
    <!-- User interface -->
    <string name="ui_title">User Interface</string>
@@ -40,4 +43,14 @@
    <!-- br0tips -->
    <string name="pref_brotips_title">Enable Br0tips</string>
    <string name="pref_brotips_summary">Change the Home screen tips</string>
+	
+	<!-- Long Press Home -->
+    <string name="recent_apps_num_title">Number of recent apps</string>
+    <string name="recent_apps_num_summary">Number of recent apps to display on long press home</string>
+    <string name="dialog_recent_apps_num_title">Specify number of recent apps</string>
+    <string name="use_custom_app_title">Use custom application</string>
+    <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
+    <string name="select_custom_app_title">Select custom application</string>
+    <string name="group_applications">Applications</string>
+	
 </resources>

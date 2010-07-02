@@ -19,7 +19,12 @@
             <action android:name="android.intent.action.MAIN"/>
          </intent-filter>
         </activity>
- 	<activity android:name=".activities.BrotipsActivity">
+     	<activity android:name=".activities.BrotipsActivity">
+        	<intent-filter>
+        		<action android:name="android.intent.action.MAIN"/>
+        	</intent-filter>
+        </activity>
+        <activity android:name=".activities.LongPressHomeActivity">
         	<intent-filter>
         		<action android:name="android.intent.action.MAIN"/>
         	</intent-filter>
