@@ -21,8 +21,8 @@
 
    <!-- User interface, WebView -->
    <string name="ui_webview_title">WebView</string>
-   <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
-   <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
+   <string name="pref_pinch_reflow_title">ピンチイン後に戻す</string>
+   <string name="pref_pinch_reflow_summary">つまんでズームインした後、徐々に元に戻す</string>
 
     <!-- Trackball Wake -->
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
