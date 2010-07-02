@@ -5,14 +5,35 @@
 
     <string name="trackball_settings_title">トラックボール設定</string>
     <string name="trackball_settings_summary">トラックボールによる復帰とアンロック</string>
+
     <string name="brotips_title">Br0tip設定</string>
     <string name="brotips_summary">Protips? Br0tipsがいいよ</string>
 
+   <!-- User interface -->
+    <string name="ui_title">ユーザインタフェース</string>
+    <string name="ui_summary">ユーザインタフェース設定とTweak</string>
+
+   <!-- User interface, orientation -->
+   <string name="ui_rotation_title">画面回転</string>
+   <string name="pref_rotation_90_title">90度</string>
+   <string name="pref_rotation_180_title">180度</string>
+   <string name="pref_rotation_270_title">270度</string>
+
+   <!-- User interface, WebView -->
+   <string name="ui_webview_title">WebView</string>
+   <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
+   <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
+
+    <!-- Trackball Wake -->
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
 
+    <!-- Trackball Unlock -->
     <string name="pref_trackball_unlock_title">トラックボールアンロック</string>
     <string name="pref_trackball_unlock_summary">トラックボールを押して端末をアンロックする</string>
+
+    <!-- br0tips -->
     <string name="pref_brotips_title">Br0tipsを有効にする</string>
     <string name="pref_brotips_summary">ホーム画面のヒントを変更する</string>
+
 </resources>
