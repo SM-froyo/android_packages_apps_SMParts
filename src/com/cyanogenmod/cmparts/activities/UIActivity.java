@@ -11,11 +11,13 @@ import com.cyanogenmod.cmparts.R;
 
 public class UIActivity extends PreferenceActivity {
 
-    private static final String PINCH_REFLOW_PREF = "pref_pinch_reflow";    
+    private static final String BATTERY_PERCENTAGE_PREF = "pref_battery_percentage";
+    private static final String PINCH_REFLOW_PREF = "pref_pinch_reflow";
     private static final String ROTATION_90_PREF = "pref_rotation_90";
     private static final String ROTATION_180_PREF = "pref_rotation_180";
     private static final String ROTATION_270_PREF = "pref_rotation_270";
 
+    private CheckBoxPreference mBatteryPercentagePref;
     private CheckBoxPreference mPinchReflowPref;
     private CheckBoxPreference mRotation90Pref;
     private CheckBoxPreference mRotation180Pref;
@@ -44,10 +46,20 @@ public class UIActivity extends PreferenceActivity {
         mPinchReflowPref = (CheckBoxPreference) prefSet.findPreference(PINCH_REFLOW_PREF);
         mPinchReflowPref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.WEB_VIEW_PINCH_REFLOW, 0) == 1);
+
+        /* Battery Percentage */
+        mBatteryPercentagePref = (CheckBoxPreference) prefSet.findPreference(BATTERY_PERCENTAGE_PREF);
+        mBatteryPercentagePref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.BATTERY_PERCENTAGE_STATUS_ICON, 0) == 1);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
+        if (preference == mBatteryPercentagePref) {
+            value = mBatteryPercentagePref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.BATTERY_PERCENTAGE_STATUS_ICON, value ? 1 : 0);
+        }
         if (preference == mPinchReflowPref) {
             value = mPinchReflowPref.isChecked();
             Settings.System.putInt(getContentResolver(),

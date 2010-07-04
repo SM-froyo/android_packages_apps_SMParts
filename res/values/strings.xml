@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">CMParts</string>
-	<string name="device_settings_title">Device Settings</string>
+   <string name="app_name">CMParts</string>
+   <string name="device_settings_title">Device Settings</string>
 
-	<string name="trackball_settings_title">Trackball Settings</string>
-	<string name="trackball_settings_summary">Trackball Wake and Unlock</string>
+   <string name="trackball_settings_title">Trackball Settings</string>
+   <string name="trackball_settings_summary">Trackball Wake and Unlock</string>
 	
-	<string name="brotips_title">Br0tip Settings</string>
-	<string name="brotips_summary">Protips? More like Br0tips</string>
+   <string name="brotips_title">Br0tip Settings</string>
+   <string name="brotips_summary">Protips? More like Br0tips</string>
 
    <!-- User interface -->
-   <string name="ui_title">User interface</string>
-	<string name="ui_summary">User interface settings &amp; tweaks</string>
+   <string name="ui_title">User Interface</string>
+   <string name="ui_summary">User interface settings &amp; tweaks</string>
 
    <!-- User interface, orientation -->
    <string name="ui_rotation_title">Accelerometer rotation</string>
@@ -24,15 +24,20 @@
    <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
    <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
 
-	<!-- Trackball Wake -->
-	<string name="pref_trackball_wake_title">Trackball Wake</string>
-	<string name="pref_trackball_wake_summary">Pressing the trackball wakes the device.</string>
+   <!-- User interface, Other -->
+   <string name="ui_other_title">Other</string>
+   <string name="pref_battery_percentage_title">Battery Percentage</string>
+   <string name="pref_battery_percentage_summary">Battery percentage displayed in the status bar</string>
 
-	<!-- Trackball Unlock -->
-	<string name="pref_trackball_unlock_title">Trackball Unlock</string>
-	<string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device.</string>
+   <!-- Trackball Wake -->
+   <string name="pref_trackball_wake_title">Trackball Wake</string>
+   <string name="pref_trackball_wake_summary">Pressing the trackball wakes the device.</string>
 
-	<!-- br0tips -->
-	<string name="pref_brotips_title">Enable Br0tips</string>
-	<string name="pref_brotips_summary">Change the Home screen tips</string>
+   <!-- Trackball Unlock -->
+   <string name="pref_trackball_unlock_title">Trackball Unlock</string>
+   <string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device.</string>
+
+   <!-- br0tips -->
+   <string name="pref_brotips_title">Enable Br0tips</string>
+   <string name="pref_brotips_summary">Change the Home screen tips</string>
 </resources>
