@@ -21,10 +21,12 @@ import java.util.ArrayList;
 
 public class LongPressHomeActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
 
+    private static final String RECENT_APPS_SHOW_TITLE_PREF = "pref_show_recent_apps_title";
     private static final String RECENT_APPS_NUM_PREF= "pref_recent_apps_num";
     private static final String USE_CUSTOM_APP_PREF = "pref_use_custom_app";
     private static final String SELECT_CUSTOM_APP_PREF = "pref_select_custom_app";    
     
+    private CheckBoxPreference mShowRecentAppsTitlePref;
     private ListPreference mRecentAppsNumPref;
     private CheckBoxPreference mUseCustomAppPref;
     private Preference mSelectCustomAppPref;
@@ -42,6 +44,8 @@ public class LongPressHomeActivity extends PreferenceActivity implements Prefere
         addPreferencesFromResource(R.xml.long_press_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+        
+        mShowRecentAppsTitlePref = (CheckBoxPreference) prefSet.findPreference(RECENT_APPS_SHOW_TITLE_PREF);        
 
         mRecentAppsNumPref = (ListPreference) prefSet.findPreference(RECENT_APPS_NUM_PREF);
         mRecentAppsNumPref.setOnPreferenceChangeListener(this);
@@ -73,8 +77,10 @@ public class LongPressHomeActivity extends PreferenceActivity implements Prefere
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
         if (preference == mUseCustomAppPref) {
-            value = mUseCustomAppPref.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.USE_CUSTOM_APP, value ? 1 : 0);
+            Settings.System.putInt(getContentResolver(), Settings.System.USE_CUSTOM_APP, mUseCustomAppPref.isChecked() ? 1 : 0);
+        }
+        else if (preference == mShowRecentAppsTitlePref) {
+            Settings.System.putInt(getContentResolver(), Settings.System.RECENT_APPS_SHOW_TITLE , mShowRecentAppsTitlePref.isChecked() ? 1 : 0);
         }
         else if (preference == mSelectCustomAppPref) {
             pickShortcut();

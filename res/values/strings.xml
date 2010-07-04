@@ -45,6 +45,7 @@
    <string name="pref_brotips_summary">Change the Home screen tips</string>
 	
 	<!-- Long Press Home -->
+    <string name="recent_apps_show_title">Show recent apps title</string>
     <string name="recent_apps_num_title">Number of recent apps</string>
     <string name="recent_apps_num_summary">Number of recent apps to display on long press home</string>
     <string name="dialog_recent_apps_num_title">Specify number of recent apps</string>
