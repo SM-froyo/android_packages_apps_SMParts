@@ -27,10 +27,91 @@
    <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
    <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
 
-   <!-- User interface, Other -->
-   <string name="ui_other_title">Other</string>
+   <!-- Color Picker -->
+   <string name="title_color_picker">Pick a color</string>
+   <string name="msg_color_picker">Tap on center color to confirm.\nPress back to cancel.</string>
+
+   <!-- Battery and Clock -->
+   <string name="bc_title">Battery and Clock</string>
+   <string name="bc_summary">Battery and Clock tweaks</string>
+
+   <!-- Battery and Clock, Battery -->
+   <string name="battery_title">Battery</string>
    <string name="pref_battery_percentage_title">Battery Percentage</string>
    <string name="pref_battery_percentage_summary">Battery percentage displayed in the status bar</string>
+   <string name="battery_status_color_title">Battery percentage color</string>
+
+   <!-- Battery and Clock, Clock -->
+   <string name="clock_title">Clock</string>
+   <string name="title_show_clock">Show clock</string>
+   <string name="title_clock_color">Clock color</string>
+
+   <!-- Date and Provider -->
+   <string name="dp_title">Date and Provider</string>
+   <string name="dp_summary">Date and provider tweaks</string>
+
+   <!-- Date and Provider, Date -->
+   <string name="date_title">Date</string>
+   <string name="title_date_color">Date color</string>
+
+   <!-- Date and Provider, PLMN -->
+   <string name="plmn_title">PLMN carrier string</string>
+   <string name="title_show_plmn_ls">Display PLMN (lockscreen)</string>
+   <string name="summary_on_show_plmn_ls">PLMN field is displayed on lockscreen</string>
+   <string name="summary_off_show_plmn_ls">PLMN field is not displayed on lockscreen</string>
+   <string name="title_show_plmn_sb">Display PLMN (status bar)</string>
+   <string name="summary_on_show_plmn_sb">PLMN field is displayed in status bar</string>
+   <string name="summary_off_show_plmn_sb">PLMN field is not displayed in status bar</string>
+   <string name="title_plmn_label_color">Carrier PLMN label color</string>
+
+   <!-- Date and Provider, SPN -->
+   <string name="spn_title">Settings for SPN carrier string</string>
+   <string name="title_show_spn_ls">Display SPN (lockscreen)</string>
+   <string name="summary_on_show_spn_ls">SPN field is displayed on lockscreen</string>
+   <string name="summary_off_show_spn_ls">SPN field is not displayed on lockscreen</string>
+   <string name="title_show_spn_sb">Display SPN (status bar)</string>
+   <string name="summary_on_show_spn_sb">SPN field is displayed in status bar</string>
+   <string name="summary_off_show_spn_sb">SPN field is not displayed in status bar</string>
+   <string name="title_spn_label_color">Carrier SPN label color</string>
+
+   <!-- Notifications -->
+   <string name="title_notifications_sb">Status Bar Notifications</string>
+   <string name="title_notifications_color_tweaks">Notifications Colors</string>
+   <string name="summary_notifications_color_tweaks">Notifications ticker, ongoing notifications, latest notifications, clear notifications, etc.</string>
+   <string name="title_notifications_ticker_color">Notifications ticker color</string>
+   <string name="title_notifications_count_color">Notifications count color</string>
+   <string name="title_no_notifications_color">No notification title color</string>
+   <string name="title_clear_button_label_color">Clear notifications label color</string>
+   <string name="title_ongoing_notifications_color">Ongoing notifications title color</string>
+   <string name="title_latest_notifications_color">Latest notifications title color</string>
+   <string name="title_notifications_items">Items Notifications</string>
+   <string name="title_notifications_items_title">Items title color</string>
+   <string name="title_notifications_items_text">Items text color</string>
+   <string name="title_notifications_items_time">Items time color</string>
+
+   <!-- Tweaks Extras -->
+   <string name="te_title">Tweaks Extras</string>
+   <string name="te_title_summary">Extra Tools for Interface Tweaks</string>
+   <string name="te_reset">Reset</string>
+   <string name="title_reset_ui_tweaks_to_defaults">Reset UI tweaks to default</string>
+   <string name="te_xml">XML Tools</string>
+   <string name="title_dialog_ui_interface">UI interface tweaks</string>
+   <string name="message_dialog_reset">Reset all UI interface tweaks to default? Reboot to see changes.</string>
+   <string name="reset_ui_success">UI interface tweaks reset! Reboot to see changes.</string>
+   <string name="title_export_to_xml">Export colors to XML</string>
+   <string name="summary_export_to_xml">Export colors to /sdcard/spare_parts_ui.xml</string>
+   <string name="message_dialog_export">Export UI colors to XML? This will overwrite the existing file.</string>
+   <string name="xml_sdcard_unmounted">SD card not mounted!</string>
+   <string name="xml_write_error">Error writing XML!</string>
+   <string name="xml_export_success">XML export successful!</string>
+   <string name="title_import_from_xml">Import colors from XML</string>
+   <string name="summary_import_from_xml">Import colors from /sdcard/spare_parts_ui.xml</string>
+   <string name="message_dialog_import">Import UI colors from XML? Reboot to see changes.</string>
+   <string name="xml_file_not_found">XML file not found!</string>
+   <string name="xml_io_exception">Error reading file!</string>
+   <string name="xml_parse_error">Error parsing XML!</string>
+   <string name="xml_invalid_color">Invalid color code in XML!</string>
+   <string name="xml_import_success">XML import successful! Reboot to see changes.</string>
 
    <!-- Trackball Wake -->
    <string name="pref_trackball_wake_title">Trackball Wake</string>

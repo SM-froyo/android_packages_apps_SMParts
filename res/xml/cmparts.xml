@@ -1,34 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
-	<PreferenceCategory android:title="@string/device_settings_title">
-
-		<PreferenceScreen android:key="trackball_settings"
-			android:title="@string/trackball_settings_title" android:summary="@string/trackball_settings_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.TrackballActivity" />
-		</PreferenceScreen>
-		<PreferenceScreen android:key="brotips"
-			android:title="@string/brotips_title" android:summary="@string/brotips_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.BrotipsActivity" />
-		</PreferenceScreen>
-		<PreferenceScreen android:key="ui_settings"
-			android:title="@string/ui_title" android:summary="@string/ui_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
-		</PreferenceScreen>
-		
-		<PreferenceScreen android:key="long_press_home"
-			android:title="@string/long_press_home_title" android:summary="@string/long_press_home_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.LongPressHomeActivity" />
-		</PreferenceScreen>
-		
-	</PreferenceCategory>
-
+   <PreferenceCategory android:title="@string/device_settings_title">
+      <PreferenceScreen android:key="trackball_settings"
+         android:title="@string/trackball_settings_title" android:summary="@string/trackball_settings_summary">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.TrackballActivity" />
+      </PreferenceScreen>
+      <PreferenceScreen android:key="brotips"
+         android:title="@string/brotips_title" android:summary="@string/brotips_summary">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.BrotipsActivity" />
+      </PreferenceScreen>
+      <PreferenceScreen android:key="ui_settings"
+         android:title="@string/ui_title" android:summary="@string/ui_summary">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
+      </PreferenceScreen>
+      <PreferenceScreen android:key="long_press_home"
+         android:title="@string/long_press_home_title" android:summary="@string/long_press_home_summary">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.LongPressHomeActivity" />
+      </PreferenceScreen>
+      <PreferenceScreen android:key="battery_clock_settings"
+         android:title="@string/bc_title" android:summary="@string/bc_summary">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.BatteryClockActivity" />
+      </PreferenceScreen>
+      <PreferenceScreen android:key="date_provider_settings"
+         android:title="@string/dp_title" android:summary="@string/dp_summary">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.DateProviderActivity" />
+      </PreferenceScreen>
+      <PreferenceScreen android:key="notification_settings"
+         android:title="@string/title_notifications_color_tweaks" android:summary="@string/summary_notifications_color_tweaks">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.NotificationsActivity" />
+      </PreferenceScreen>
+      <PreferenceScreen android:key="tweaks_extras"
+         android:title="@string/te_title" android:summary="@string/te_title_summary">
+         <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.TweaksExtras" />
+      </PreferenceScreen>
+   </PreferenceCategory>
 </PreferenceScreen>

@@ -12,11 +12,5 @@
       <CheckBoxPreference android:key="pref_pinch_reflow"
          android:title="@string/pref_pinch_reflow_title"
          android:summary="@string/pref_pinch_reflow_summary" />
-   </PreferenceCategory>
-
-   <PreferenceCategory android:title="@string/ui_other_title">
-      <CheckBoxPreference android:key="pref_battery_percentage"
-         android:title="@string/pref_battery_percentage_title"
-         android:summary="@string/pref_battery_percentage_summary" />
-   </PreferenceCategory>
+   </PreferenceCategory>z
 </PreferenceScreen>
