@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">CMParts</string>
+  <string name="device_settings_title">Geräteeinstellungen</string>
+
+  <string name="trackball_settings_title">Trackball-Einstellungen</string>
+  <string name="trackball_settings_summary">Aufwecken und Entsperren durch Trackball</string>
+      
+  <string name="brotips_title">Br0tip-Einstellungen</string>
+  <string name="brotips_summary">Protips? More like Br0tips</string>
+
+  <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
+  <string name="long_press_home_summary">Anzahl letzter Apps, etc.</string>
+
+  <!-- User interface -->
+  <string name="ui_title">Benutzeroberfläche</string>
+  <string name="ui_summary">Einstellungen &amp; Tweaks für Benutzeroberfläche</string>
+
+  <!-- User interface, orientation -->
+  <string name="ui_rotation_title">Autorotation</string>
+  <string name="pref_rotation_90_title">90 Grad</string>
+  <string name="pref_rotation_180_title">180 Grad</string>
+  <string name="pref_rotation_270_title">270 Grad</string>
+
+  <!-- User interface, WebView -->
+  <string name="ui_webview_title">WebView</string>
+  <string name="pref_pinch_reflow_title">Textfluss nach Pinch</string>
+  <string name="pref_pinch_reflow_summary">Nach Pinch-To-Zoom Inhalte sofort neu anpassen</string>
+
+  <!-- User interface, Other -->
+  <string name="ui_other_title">Anderes</string>
+  <string name="pref_battery_percentage_title">Batterie-Prozentanzeige</string>
+  <string name="pref_battery_percentage_summary">Prozentanzeige für Ladezustand in Statuszeile anzeigen</string>
+
+  <!-- Trackball Wake -->
+  <string name="pref_trackball_wake_title">Trackball-Aufwachen</string>
+  <string name="pref_trackball_wake_summary">Aufwecken des Gerätes durch Drücken des Trackballs.</string>
+
+  <!-- Trackball Unlock -->
+  <string name="pref_trackball_unlock_title">Trackball-Entsperren</string>
+  <string name="pref_trackball_unlock_summary">Entsperren des Gerätes durch Drücken des Trackballs</string>
+
+  <!-- br0tips -->
+  <string name="pref_brotips_title">Br0tips verwenden</string>
+  <string name="pref_brotips_summary">Hinweise auf Bildschirm ändern</string>
+        
+  <!-- Long Press Home -->
+  <string name="recent_apps_show_title">Titel für letzte Apps zeigen</string>
+  <string name="recent_apps_num_title">Anzahl letzter Apps</string>
+  <string name="recent_apps_num_summary">Anzahl anzuzeigender Apps nach Gedrückthalten der Home-Taste</string>
+  <string name="dialog_recent_apps_num_title">Anzahl letzter Apps auswählen</string>
+  <string name="use_custom_app_title">Andere Anwendung verwenden</string>
+  <string name="use_custom_app_summary">Wähle andere Anwendung anstelle des Letzte-App-Dialogs</string>
+  <string name="select_custom_app_title">Wähle andere Anwendung</string>
+  <string name="group_applications">Anwendungen</string>
+    
+</resources>
