@@ -36,13 +36,17 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+        Boolean mCanEnableTrackball = (getResources().getBoolean(R.bool.has_trackball) == true);
+
         /* Trackball Wake */
         mTrackballWakePref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_WAKE_PREF);
+        mTrackballWakePref.setEnabled(mCanEnableTrackball);
         mTrackballWakePref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.TRACKBALL_WAKE_SCREEN, 0) == 1);
 
         /* Trackball Unlock */
         mTrackballUnlockPref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_UNLOCK_PREF);
+        mTrackballUnlockPref.setEnabled(mCanEnableTrackball);
         mTrackballUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
 
