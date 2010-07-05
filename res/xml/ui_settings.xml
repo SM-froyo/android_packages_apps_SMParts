@@ -12,5 +12,5 @@
       <CheckBoxPreference android:key="pref_pinch_reflow"
          android:title="@string/pref_pinch_reflow_title"
          android:summary="@string/pref_pinch_reflow_summary" />
-   </PreferenceCategory>z
+   </PreferenceCategory>
 </PreferenceScreen>
