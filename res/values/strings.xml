@@ -166,4 +166,52 @@
 
     <string name="button_settings_title">Button settings</string>
 
+    <!-- HapticTweaks -->
+    <string name="haptic_title">Haptic Feedback Tweaks</string>
+    <string name="haptic_summary">Adjust when and how strong haptic feedback occurs</string>
+
+    <string name="title_haptic_feedback">Haptic feedback main</string>
+    <string name="summary_on_haptic_feedback">Use haptic feedback on keypress for softkeys and certain UI interactions</string>
+    <string name="summary_off_haptic_feedback">No haptic feedback on keypress for softkeys and certain UI interactions</string>
+
+    <string name="title_haptic_feedback_up">Haptic feedback up</string>
+    <string name="summary_on_haptic_feedback_up">Use haptic feedback on key release for softkeys and certain UI interactions</string>
+    <string name="summary_off_haptic_feedback_up">No haptic feedback on key release for softkeys and certain UI interactions</string>
+
+    <string name="title_haptic_feedback_all">Haptic screen items</string>
+    <string name="summary_on_haptic_feedback_all">Use haptic feedback when making screen selections</string>
+    <string name="summary_off_haptic_feedback_all">No haptic feedback when making screen selections</string>
+
+    <string name="title_haptic_down_decider">Set Down Pattern</string>
+    <string name="title_haptic_up_decider">Set Up Pattern</string>
+    <string name="title_haptic_long_decider">Set Long-Press Pattern</string>
+    <string name="title_haptic_tap_decider">Set Keypad Tap Pattern</string>
+
+    <string name="title_haptic_menu">Haptic Adjust</string>
+    <string name="title_haptic_notice">REBOOT REQUIRED FOR CHANGES TO APPLY GLOBALLY</string>
+
+    <string name="haptic_delay_desc">ms Off Time</string>
+    <string name="haptic_vibe_desc">ms On Time</string>
+
+    <string name="haptic_down_description">Adjusting haptic values for button DOWN-PRESSES\n(Virtual hardkeys and certain UI interactions.)</string>
+    <string name="haptic_up_description">Adjusting haptic values for button RELEASES\n(Virtual hardkeys and most screen presses.)</string>
+    <string name="haptic_long_description">Adjusting haptic values for LONG-PRESSES.</string>
+    <string name="haptic_tap_description">Adjusting haptic values for on-screen keyboard taps</string>
+
+    <string name="haptic_plus_minus_desc">Press the Plus or Minus Buttons to add or remove steps in the sequence.</string>
+
+    <string name="haptic_button_plus">+</string>
+    <string name="haptic_button_minus">-</string>
+
+    <string name="haptic_button_save">Save</string>
+    <string name="haptic_button_test">Test</string>
+    <string name="haptic_button_cancel">Cancel</string>
+    <string name="haptic_button_revert">Revert Changes</string>
+    <string name="haptic_button_default">Load Defaults</string>
+
+    <string name="haptic_save_toast">Saving haptic values: </string>
+    <string name="haptic_cancel_toast">Haptic values unchanged</string>
+    <string name="haptic_revert_toast">Restoring last-used values</string>
+    <string name="haptic_default_toast">Loading hard-coded defaults</string>
+
 </resources>
