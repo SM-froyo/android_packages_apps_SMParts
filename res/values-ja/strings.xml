@@ -134,7 +134,7 @@
 
     <!-- Performance Settings -->
     <string name="performance_settings_title">パフォーマンス設定</string>
-    <string name="performance_settings_summary">デバイスパフォーマンスの調整<k/string>
+    <string name="performance_settings_summary">デバイスパフォーマンスの調整</string>
     
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Compcacheを使用する</string>
