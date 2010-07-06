@@ -2,4 +2,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <CheckBoxPreference android:key="pref_compcache"
         android:title="@string/pref_compcache_title" android:summary="@string/pref_compcache_summary" />
+
+    <CheckBoxPreference android:key="pref_jit_mode"
+        android:title="@string/pref_jit_mode_title" android:summary="@string/pref_jit_mode_summary" />
+
 </PreferenceScreen>
