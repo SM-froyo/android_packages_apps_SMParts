@@ -165,4 +165,8 @@
     <string name="pref_compcache_title">Use Compcache</string>
     <string name="pref_compcache_summary">Compress memory for increased virtual capacity</string>
 
+    <!-- Performance Settings : JIT Mode -->
+    <string name="pref_jit_mode_title">Use JIT</string>
+    <string name="pref_jit_mode_summary">Use the Dalvik just-in-time compiler (requires reboot)</string>
+
 </resources>
