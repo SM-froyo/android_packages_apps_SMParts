@@ -1,50 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Generic -->
     <string name="app_name">CMParts</string>
     <string name="device_settings_title">端末設定</string>
 
-    <string name="trackball_settings_title">トラックボール設定</string>
-    <string name="trackball_settings_summary">トラックボールによる復帰とアンロック</string>
-
+    <!-- br0tips -->
     <string name="brotips_title">Br0tip設定</string>
     <string name="brotips_summary">Protips? Br0tipsがいいよ</string>
-
-    <string name="long_press_home_title">ホーム長押し設定</string>
-    <string name="long_press_home_summary">最近使ったアプリ履歴の数、その他</string>
-
-   <!-- User interface -->
-    <string name="ui_title">ユーザインタフェース</string>
-    <string name="ui_summary">ユーザインタフェース設定とTweak</string>
-
-   <!-- User interface, orientation -->
-   <string name="ui_rotation_title">画面回転</string>
-   <string name="pref_rotation_90_title">90度</string>
-   <string name="pref_rotation_180_title">180度</string>
-   <string name="pref_rotation_270_title">270度</string>
-
-   <!-- User interface, WebView -->
-   <string name="ui_webview_title">WebView</string>
-   <string name="pref_pinch_reflow_title">ピンチイン後に戻す</string>
-   <string name="pref_pinch_reflow_summary">つまんでズームインした後、徐々に元に戻す</string>
-
-   <!-- User interface, Other -->
-   <string name="ui_other_title">その他</string>
-   <string name="pref_battery_percentage_title">バッテリ残量表示</string>
-   <string name="pref_battery_percentage_summary">バッテリの残量数値をステータスバーに表示する</string>
-
-    <!-- Trackball Wake -->
-    <string name="pref_trackball_wake_title">トラックボールで復帰</string>
-    <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
-
-    <!-- Trackball Unlock -->
-    <string name="pref_trackball_unlock_title">トラックボールアンロック</string>
-    <string name="pref_trackball_unlock_summary">トラックボールを押して端末をアンロックする</string>
-
-    <!-- br0tips -->
     <string name="pref_brotips_title">Br0tipsを有効にする</string>
     <string name="pref_brotips_summary">ホーム画面のヒントを変更する</string>
 
+    <!-- User interface -->
+    <string name="ui_title">ユーザインタフェース</string>
+    <string name="ui_summary">ユーザインタフェース設定とTweak</string>
+    <string name="ui_status_bar">Status Bar Customization</string>
+
+    <!-- User interface, orientation -->
+    <string name="ui_rotation_title">画面回転</string>
+    <string name="pref_rotation_90_title">90度</string>
+    <string name="pref_rotation_180_title">180度</string>
+    <string name="pref_rotation_270_title">270度</string>
+
+    <!-- User interface : WebView -->
+    <string name="ui_webview_title">WebView</string>
+    <string name="pref_pinch_reflow_title">ピンチイン後に戻す</string>
+    <string name="pref_pinch_reflow_summary">つまんでズームインした後、徐々に元に戻す</string>
+
+    <!-- Color Picker -->
+    <string name="title_color_picker">色を選択</string>
+    <string name="msg_color_picker">中央をタップして確定.\n戻るボタンでキャンセル.</string>
+
+    <!-- Battery and Clock -->
+    <string name="bc_title">バッテリと時計</string>
+    <string name="bc_summary">バッテリと時計のtweak</string>
+
+    <!-- Battery and Clock, Battery -->
+    <string name="battery_title">バッテリ</string>
+    <string name="pref_battery_percentage_title">バッテリ残量表示</string>
+    <string name="pref_battery_percentage_summary">バッテリの残量数値をステータスバーに表示する</string>
+    <string name="battery_status_color_title">バッテリ数値の色</string>
+
+    <!-- Battery and Clock, Clock -->
+    <string name="clock_title">時計</string>
+    <string name="title_show_clock">時計を表示</string>
+    <string name="title_clock_color">時計の色</string>
+
+    <!-- Date and Provider -->
+    <string name="dp_title">日付とプロバイダ</string>
+    <string name="dp_summary">日付とプロバイダのtweaks</string>
+
+    <!-- Date and Provider, Date -->
+    <string name="date_title">日付</string>
+    <string name="title_date_color">日付の色</string>
+
+    <!-- Date and Provider, PLMN -->
+    <string name="plmn_title">PLMNキャリア設定</string>
+    <string name="title_show_plmn_ls">PLMNを表示(ロック画面)</string>
+    <string name="summary_on_show_plmn_ls">PLMNフィールドはロック画面に表示される</string>
+    <string name="summary_off_show_plmn_ls">PLMNフィールドはロック画面に表示されない</string>
+    <string name="title_show_plmn_sb">PLMNを表示(ステータスバー)</string>
+    <string name="summary_on_show_plmn_sb">PLMNフィールドはステータスバーに表示される</string>
+    <string name="summary_off_show_plmn_sb">PLMNフィールドはステータスバーに表示されない</string>
+    <string name="title_plmn_label_color">キャリアPLMNラベルの色</string>
+
+    <!-- Date and Provider, SPN -->
+    <string name="spn_title">SPNキャリア設定</string>
+    <string name="title_show_spn_ls">SPNを表示(ロック画面)</string>
+    <string name="summary_on_show_spn_ls">SPNフィールドはロック画面に表示される</string>
+    <string name="summary_off_show_spn_ls">SPNフィールドはロック画面に表示されない</string>
+    <string name="title_show_spn_sb">SPNを表示(ステータスバー)</string>
+    <string name="summary_on_show_spn_sb">SPNィールドはステータスバーに表示される</string>
+    <string name="summary_off_show_spn_sb">SPNフィールドはステータスバーに表示されない</string>
+    <string name="title_spn_label_color">キャリアSPNラベルの色</string>
+
+    <!-- Notifications -->
+    <string name="title_notifications_sb">通知領域の設定</string>
+    <string name="title_notifications_color_tweaks">通知の色</string>
+    <string name="summary_notifications_color_tweaks">通知ティッカー, 実行中, 最新, 消去, 他.</string>
+    <string name="title_notifications_ticker_color">通知ティッカーの色</string>
+    <string name="title_notifications_count_color">通知カウンターの色</string>
+    <string name="title_no_notifications_color">通知なしタイトルの色</string>
+    <string name="title_clear_button_label_color">消去ボタンのラベルカラー</string>
+    <string name="title_ongoing_notifications_color">実行中のタイトルの色</string>
+    <string name="title_latest_notifications_color">最新通知のタイトルの色</string>
+    <string name="title_notifications_items">通知アイテム</string>
+    <string name="title_notifications_items_title">アイテムタイトルの色</string>
+    <string name="title_notifications_items_text">アイテムテキストの色</string>
+    <string name="title_notifications_items_time">アイテム時刻の色</string>
+
+    <!-- Tweaks Extras -->
+    <string name="te_title">エクストラTweaks</string>
+    <string name="te_title_summary">インタフェースのエクストラTweaks</string>
+    <string name="te_reset">リセット</string>
+    <string name="title_reset_ui_tweaks_to_defaults">UI Tweaksを初期設定に戻す</string>
+    <string name="te_xml">XMLツール</string>
+    <string name="title_dialog_ui_interface">ユーザインタフェース設定</string>
+    <string name="message_dialog_reset">すべてのユーザインタフェース設定をデフォルトにしますか? 変更を適用するには再起動します.</string>
+    <string name="reset_ui_success">UI設定をリセットしました! 変更を適用するには再起動します.</string>
+    <string name="title_export_to_xml">色設定をXMLに出力</string>
+    <string name="summary_export_to_xml">/sdcard/spare_parts_ui.xml に色設定を出力する</string>
+    <string name="message_dialog_export">XMLにUIの色設定を出力しますか? これはすでに存在するファイルを上書きします.</string>
+    <string name="xml_sdcard_unmounted">SDカードがマウントされてません!</string>
+    <string name="xml_write_error">XML書き込み中にエラー!</string>
+    <string name="xml_export_success">XML出力に成功!</string>
+    <string name="title_import_from_xml">XMLから色設定を読み込む</string>
+    <string name="summary_import_from_xml">/sdcard/spare_parts_ui.xml から色設定を読み込む</string>
+    <string name="message_dialog_import">XMLからUIの色設定を読み込みますか? 変更を適用するには再起動します.</string>
+    <string name="xml_file_not_found">XMLファルが見つかりません!</string>
+    <string name="xml_io_exception">ファイルを読み込み中にエラー!</string>
+    <string name="xml_parse_error">XML解析中にエラー!</string>
+    <string name="xml_invalid_color">XMLに不正なカラーコードがあります!</string>
+    <string name="xml_import_success">XML読み込みに成功. 変更を適用するには再起動します.</string>
+
+    <!-- Trackball Settings -->
+    <string name="trackball_settings_title">トラックボール設定</string>
+    <string name="trackball_settings_summary">トラックボールによる復帰とアンロック</string>
+    <string name="pref_trackball_wake_title">トラックボールで復帰</string>
+    <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
+    <string name="pref_trackball_unlock_title">トラックボールアンロック</string>
+    <string name="pref_trackball_unlock_summary">トラックボールを押して端末をアンロックする</string>
+
     <!-- Long Press Home -->
+    <string name="long_press_home_title">ホーム長押し設定</string>
+    <string name="long_press_home_summary">最近使ったアプリ履歴の数、その他</string>
     <string name="recent_apps_show_title">最近使ったアプリの履歴を表示</string>
     <string name="recent_apps_num_title">アプリ履歴の数</string>
     <string name="recent_apps_num_summary">ホームを長押ししたときに表示するアプリ履歴の数を設定する</string>
@@ -53,6 +131,16 @@
     <string name="use_custom_app_summary">アプリ履歴の代わりに、カスタムアプリケーションを起動する</string>
     <string name="select_custom_app_title">カスタムアプリケーションを選択</string>
     <string name="group_applications">アプリケーション</string>
+
+    <!-- Performance Settings -->
+    <string name="performance_settings_title">パフォーマンス設定</string>
+    <string name="performance_settings_summary">デバイスパフォーマンスのtweaks</string>
+    
+    <!-- Performance Settings : Compcache -->
+    <string name="pref_compcache_title">Compcacheを使用する</string>
+    <string name="pref_compcache_summary">仮想容量を増やすためにメモリを圧縮する</string>
+
+
 
 
 </resources>
