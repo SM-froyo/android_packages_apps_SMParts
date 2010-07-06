@@ -140,7 +140,8 @@
     <string name="pref_compcache_title">Compcacheを使用する</string>
     <string name="pref_compcache_summary">仮想容量を増やすためにメモリを圧縮する</string>
 
-
-
+    <!-- Performance Settings : JIT Mode -->
+    <string name="pref_jit_mode_title">JITを使用する</string>
+    <string name="pref_jit_mode_summary">Dalvik just-in-time コンパイラを使用する (再起動が必要)</string>
 
 </resources>
