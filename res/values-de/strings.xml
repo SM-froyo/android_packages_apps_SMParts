@@ -136,4 +136,11 @@
   <string name="select_custom_app_title">Wähle andere Anwendung</string>
   <string name="group_applications">Anwendungen</string>
     
+  <!-- Performance Settings -->
+  <string name="performance_settings_title">Leistung</string>
+  <string name="performance_settings_summary">Tweaks für Geräteleistung</string>
+
+  <!-- Performance Settings : Compcache -->
+  <string name="pref_compcache_title">Compcache verwenden</string>
+  <string name="pref_compcache_summary">Speicher komprimieren um Kapazitäten virtuell zu erhöhen</string>
 </resources>
