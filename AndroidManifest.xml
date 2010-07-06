@@ -10,27 +10,53 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.TrackballActivity">
-        	<intent-filter>
-        		<action android:name="android.intent.action.MAIN"/>
-        	</intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
         </activity>
         <activity android:name=".activities.UIActivity">
          <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
          </intent-filter>
         </activity>
-     	<activity android:name=".activities.BrotipsActivity">
-        	<intent-filter>
-        		<action android:name="android.intent.action.MAIN"/>
-        	</intent-filter>
+        <activity android:name=".activities.BrotipsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
         </activity>
         <activity android:name=".activities.LongPressHomeActivity">
-        	<intent-filter>
-        		<action android:name="android.intent.action.MAIN"/>
-        	</intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
         </activity>
-         <provider android:name=".provider.SettingsProvider"
-         	android:authorities="com.cyanogenmod.cmparts.provider.Settings" />
+        <activity android:name=".activities.BatteryClockActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.DateProviderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.NotificationsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.TweaksExtras">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.PerformanceSettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <provider android:name=".provider.SettingsProvider"
+            android:authorities="com.cyanogenmod.cmparts.provider.Settings" />
     </application>
 <uses-sdk android:minSdkVersion="8"></uses-sdk>
 </manifest>

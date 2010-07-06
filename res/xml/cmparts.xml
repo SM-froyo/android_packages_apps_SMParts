@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/device_settings_title">
+    
+        <!-- Trackball Settings -->
+        <PreferenceScreen android:key="trackball_settings"
+            android:title="@string/trackball_settings_title" android:summary="@string/trackball_settings_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.TrackballActivity" />
+        </PreferenceScreen>
+        
+        <!-- Br0tips -->
+        <PreferenceScreen android:key="brotips"
+            android:title="@string/brotips_title" android:summary="@string/brotips_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.BrotipsActivity" />
+        </PreferenceScreen>
+        
+        <!-- UI Settings -->
+        <PreferenceScreen android:key="ui_settings"
+            android:title="@string/ui_title" android:summary="@string/ui_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
+        </PreferenceScreen>
+        
+        <!-- Long Press Home -->
+        <PreferenceScreen android:key="long_press_home"
+            android:title="@string/long_press_home_title" android:summary="@string/long_press_home_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.LongPressHomeActivity" />
+        </PreferenceScreen>
 
-	<PreferenceCategory android:title="@string/device_settings_title">
-
-		<PreferenceScreen android:key="trackball_settings"
-			android:title="@string/trackball_settings_title" android:summary="@string/trackball_settings_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.TrackballActivity" />
-		</PreferenceScreen>
-		<PreferenceScreen android:key="brotips"
-			android:title="@string/brotips_title" android:summary="@string/brotips_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.BrotipsActivity" />
-		</PreferenceScreen>
-		<PreferenceScreen android:key="ui_settings"
-			android:title="@string/ui_title" android:summary="@string/ui_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
-		</PreferenceScreen>
-		
-		<PreferenceScreen android:key="long_press_home"
-			android:title="@string/long_press_home_title" android:summary="@string/long_press_home_summary">
-			<intent android:action="android.intent.action.MAIN"
-				android:targetPackage="com.cyanogenmod.cmparts"
-				android:targetClass="com.cyanogenmod.cmparts.activities.LongPressHomeActivity" />
-		</PreferenceScreen>
-		
-	</PreferenceCategory>
-
+        <!-- Performance settings -->
+        <PreferenceScreen android:key="performance_settings"
+            android:title="@string/performance_settings_title" android:summary="@string/performance_settings_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.PerformanceSettingsActivity" />
+        </PreferenceScreen>    
+    </PreferenceCategory>
 </PreferenceScreen>
