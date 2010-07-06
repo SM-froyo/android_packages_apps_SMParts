@@ -25,6 +25,8 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
     
     private static final String JIT_DISABLED = "int:fast";
     
+    private static final String JIT_PERSIST_PROP = "persist.sys.jit-mode";
+    
     private static final String JIT_PROP = "dalvik.vm.execution-mode";
     
     private CheckBoxPreference mCompcachePref;
@@ -51,11 +53,8 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
         }
 
         mJitPref = (CheckBoxPreference) prefSet.findPreference(JIT_PREF);
-        String jitMode = Settings.Secure.getString(getContentResolver(),
-                Settings.Secure.JIT_MODE);
-        if (jitMode == null || "".equals(jitMode)) {
-            jitMode = SystemProperties.get(JIT_PROP, JIT_ENABLED);
-        }
+        String jitMode = SystemProperties.get(JIT_PERSIST_PROP,
+                SystemProperties.get(JIT_PROP, JIT_ENABLED));
         mJitPref.setChecked(JIT_ENABLED.equals(jitMode));
         
     }
@@ -69,8 +68,8 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
         }
         
         if (preference == mJitPref) {
-            Settings.Secure.putString(getContentResolver(),
-                    Settings.Secure.JIT_MODE, mJitPref.isChecked() ? JIT_ENABLED : JIT_DISABLED);
+            SystemProperties.set(JIT_PERSIST_PROP, 
+                    mJitPref.isChecked() ? JIT_ENABLED : JIT_DISABLED);
         }
         
         return false;
