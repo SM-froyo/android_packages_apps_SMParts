@@ -33,5 +33,13 @@
                 android:targetPackage="com.cyanogenmod.cmparts"
                 android:targetClass="com.cyanogenmod.cmparts.activities.LongPressHomeActivity" />
         </PreferenceScreen>
+
+        <!-- Performance settings -->
+        <PreferenceScreen android:key="performance_settings"
+            android:title="@string/performance_settings_title" android:summary="@string/performance_settings_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.PerformanceSettingsActivity" />
+        </PreferenceScreen>    
     </PreferenceCategory>
 </PreferenceScreen>
