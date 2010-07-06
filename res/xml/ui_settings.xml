@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-   <PreferenceCategory android:title="@string/ui_rotation_title">
-      <CheckBoxPreference android:key="pref_rotation_90"
-         android:title="@string/pref_rotation_90_title" />
-      <CheckBoxPreference android:key="pref_rotation_180"
-         android:title="@string/pref_rotation_180_title" />
-      <CheckBoxPreference android:key="pref_rotation_270"
-         android:title="@string/pref_rotation_270_title" />
-   </PreferenceCategory>
-   <PreferenceCategory android:title="@string/ui_webview_title">
-      <CheckBoxPreference android:key="pref_pinch_reflow"
-         android:title="@string/pref_pinch_reflow_title"
-         android:summary="@string/pref_pinch_reflow_summary" />
-   </PreferenceCategory>
+
+    <!-- Status Bar Customization -->
+    <PreferenceCategory android:title="@string/ui_status_bar">
+
+        <!-- Battery and Clock -->
+        <PreferenceScreen android:key="battery_clock_settings"
+            android:title="@string/bc_title" android:summary="@string/bc_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.BatteryClockActivity" />
+        </PreferenceScreen>
+
+        <!-- Date and Provider -->
+        <PreferenceScreen android:key="date_provider_settings"
+            android:title="@string/dp_title" android:summary="@string/dp_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.DateProviderActivity" />
+        </PreferenceScreen>
+
+        <!-- Notification Colors -->
+        <PreferenceScreen android:key="notification_settings"
+            android:title="@string/title_notifications_color_tweaks"
+            android:summary="@string/summary_notifications_color_tweaks">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.NotificationsActivity" />
+        </PreferenceScreen>
+
+        <!-- Extras -->
+        <PreferenceScreen android:key="tweaks_extras"
+            android:title="@string/te_title" android:summary="@string/te_title_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.TweaksExtras" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <!-- Rotation -->
+    <PreferenceCategory android:title="@string/ui_rotation_title">
+        <CheckBoxPreference android:key="pref_rotation_90"
+            android:title="@string/pref_rotation_90_title" />
+        <CheckBoxPreference android:key="pref_rotation_180"
+            android:title="@string/pref_rotation_180_title" />
+        <CheckBoxPreference android:key="pref_rotation_270"
+            android:title="@string/pref_rotation_270_title" />
+    </PreferenceCategory>
+
+    <!-- Webview Should this be moved to the browser? -->
+    <PreferenceCategory android:title="@string/ui_webview_title">
+        <CheckBoxPreference android:key="pref_pinch_reflow"
+            android:title="@string/pref_pinch_reflow_title"
+            android:summary="@string/pref_pinch_reflow_summary" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
