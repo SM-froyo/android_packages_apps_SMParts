@@ -9,6 +9,9 @@
     <string name="brotips_title">Br0tip設定</string>
     <string name="brotips_summary">Protips? Br0tipsがいいよ</string>
 
+    <string name="long_press_home_title">ホーム長押し設定</string>
+    <string name="long_press_home_summary">最近使ったアプリ履歴の数、その他</string>
+
    <!-- User interface -->
     <string name="ui_title">ユーザインタフェース</string>
     <string name="ui_summary">ユーザインタフェース設定とTweak</string>
@@ -40,5 +43,16 @@
     <!-- br0tips -->
     <string name="pref_brotips_title">Br0tipsを有効にする</string>
     <string name="pref_brotips_summary">ホーム画面のヒントを変更する</string>
+
+    <!-- Long Press Home -->
+    <string name="recent_apps_show_title">最近使ったアプリの履歴を表示</string>
+    <string name="recent_apps_num_title">アプリ履歴の数</string>
+    <string name="recent_apps_num_summary">ホームを長押ししたときに表示するアプリ履歴の数を設定する</string>
+    <string name="dialog_recent_apps_num_title">アプリ履歴の数を指定</string>
+    <string name="use_custom_app_title">カスタムアプリケーションを使用</string>
+    <string name="use_custom_app_summary">アプリ履歴の代わりに、カスタムアプリケーションを起動する</string>
+    <string name="select_custom_app_title">カスタムアプリケーションを選択</string>
+    <string name="group_applications">アプリケーション</string>
+
 
 </resources>
