@@ -12,8 +12,8 @@
 
     <!-- User interface -->
     <string name="ui_title">ユーザインタフェース</string>
-    <string name="ui_summary">ユーザインタフェース設定とTweak</string>
-    <string name="ui_status_bar">Status Bar Customization</string>
+    <string name="ui_summary">ユーザインタフェース設定と調整</string>
+    <string name="ui_status_bar">ステータスバーのカスタマイズ</string>
 
     <!-- User interface, orientation -->
     <string name="ui_rotation_title">画面回転</string>
@@ -23,8 +23,8 @@
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
-    <string name="pref_pinch_reflow_title">ピンチイン後に戻す</string>
-    <string name="pref_pinch_reflow_summary">つまんでズームインした後、徐々に元に戻す</string>
+    <string name="pref_pinch_reflow_title">ピンチインリフロー</string>
+    <string name="pref_pinch_reflow_summary">つまんでズームした後、改行を調整する</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">色を選択</string>
@@ -32,7 +32,7 @@
 
     <!-- Battery and Clock -->
     <string name="bc_title">バッテリと時計</string>
-    <string name="bc_summary">バッテリと時計のtweak</string>
+    <string name="bc_summary">バッテリと時計の調整</string>
 
     <!-- Battery and Clock, Battery -->
     <string name="battery_title">バッテリ</string>
@@ -47,7 +47,7 @@
 
     <!-- Date and Provider -->
     <string name="dp_title">日付とプロバイダ</string>
-    <string name="dp_summary">日付とプロバイダのtweaks</string>
+    <string name="dp_summary">日付とプロバイダの調整</string>
 
     <!-- Date and Provider, Date -->
     <string name="date_title">日付</string>
@@ -89,10 +89,10 @@
     <string name="title_notifications_items_time">アイテム時刻の色</string>
 
     <!-- Tweaks Extras -->
-    <string name="te_title">エクストラTweaks</string>
-    <string name="te_title_summary">インタフェースのエクストラTweaks</string>
+    <string name="te_title">追加調整</string>
+    <string name="te_title_summary">インタフェースの追加調整</string>
     <string name="te_reset">リセット</string>
-    <string name="title_reset_ui_tweaks_to_defaults">UI Tweaksを初期設定に戻す</string>
+    <string name="title_reset_ui_tweaks_to_defaults">UI調整を初期設定に戻す</string>
     <string name="te_xml">XMLツール</string>
     <string name="title_dialog_ui_interface">ユーザインタフェース設定</string>
     <string name="message_dialog_reset">すべてのユーザインタフェース設定をデフォルトにしますか? 変更を適用するには再起動します.</string>
@@ -134,7 +134,7 @@
 
     <!-- Performance Settings -->
     <string name="performance_settings_title">パフォーマンス設定</string>
-    <string name="performance_settings_summary">デバイスパフォーマンスのtweaks</string>
+    <string name="performance_settings_summary">デバイスパフォーマンスの調整<k/string>
     
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Compcacheを使用する</string>
