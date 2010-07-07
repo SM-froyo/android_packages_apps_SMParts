@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-	<CheckBoxPreference android:key="pref_brotips"
-		android:title="@string/pref_brotips_title" android:summary="@string/pref_brotips_summary" />
-</PreferenceScreen>

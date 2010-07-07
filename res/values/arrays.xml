@@ -30,4 +30,16 @@
         <item>32m</item>
     </string-array>
 
+    <string-array name="entries_install_location">
+        <item>Automatic</item>
+        <item>Internal</item>
+        <item>External</item>
+    </string-array>
+
+    <string-array name="values_install_location">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>
