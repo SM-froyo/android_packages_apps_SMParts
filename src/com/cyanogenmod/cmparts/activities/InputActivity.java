@@ -13,13 +13,15 @@ import android.provider.Settings;
 import com.cyanogenmod.cmparts.R;
 import com.cyanogenmod.cmparts.provider.SettingsProvider;
 
-public class TrackballActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
+public class InputActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 
     private static final String TRACKBALL_WAKE_PREF = "pref_trackball_wake";
     private static final String TRACKBALL_UNLOCK_PREF = "pref_trackball_unlock";
+    private static final String MENU_UNLOCK_PREF = "pref_menu_unlock";
 
     private CheckBoxPreference mTrackballWakePref;
     private CheckBoxPreference mTrackballUnlockPref;
+    private CheckBoxPreference mMenuUnlockPref;
 
     private String[] DEFAULT_PROJECTION = new String[] {
             SettingsProvider.Constants._ID,
@@ -31,8 +33,8 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setTitle(R.string.trackball_settings_title);
-        addPreferencesFromResource(R.xml.trackball_settings);
+        setTitle(R.string.input_settings_title);
+        addPreferencesFromResource(R.xml.input_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
@@ -49,6 +51,11 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
         mTrackballUnlockPref.setEnabled(mCanEnableTrackball);
         mTrackballUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
+
+        /* Menu Unlock */
+        mMenuUnlockPref = (CheckBoxPreference) prefSet.findPreference(MENU_UNLOCK_PREF);
+        mMenuUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.MENU_UNLOCK_SCREEN, 0) == 1);
 
         final PreferenceGroup parentPreference = getPreferenceScreen();
         parentPreference.getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
@@ -125,6 +132,10 @@ public class TrackballActivity extends PreferenceActivity implements OnSharedPre
             value = mTrackballUnlockPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.TRACKBALL_UNLOCK_SCREEN, value ? 1 : 0);
+        } else if (preference == mMenuUnlockPref) {
+            value = mMenuUnlockPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.MENU_UNLOCK_SCREEN, value ? 1 : 0);
         }
         return true;
     }

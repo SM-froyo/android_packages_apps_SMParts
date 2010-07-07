@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic -->
+    <string name="app_name">CMParts</string>
+    <string name="device_settings_title">设备配置</string>
+
+    <!-- br0tips -->
+    <string name="brotips_title">Br0tip 配置</string>
+    <string name="brotips_summary">使用提示？太无聊了吧！换成Br0tips！</string>
+    <string name="pref_brotips_title">使用 Br0tips</string>
+    <string name="pref_brotips_summary">改变主画面中的使用提示内容</string>
+
+    <!-- User interface -->
+    <string name="ui_title">用户界面</string>
+    <string name="ui_summary">用户界面设置与微调</string>
+    <string name="ui_status_bar">自定义状态栏</string>
+
+    <!-- User interface : orientation -->
+    <string name="ui_rotation_title">画面转动角度</string>
+    <string name="pref_rotation_90_title">90 度</string>
+    <string name="pref_rotation_180_title">180 度</string>
+    <string name="pref_rotation_270_title">270 度</string>
+
+    <!-- User interface : WebView -->
+    <string name="ui_webview_title">网页视图</string>
+    <string name="pref_pinch_reflow_title">多点放大后回流</string>
+    <string name="pref_pinch_reflow_summary">通过多点触摸放大网页后立刻使内容回流</string>
+
+    <!-- Color Picker -->
+    <string name="title_color_picker">选择一种颜色</string>
+    <string name="msg_color_picker">点击中间的颜色进行确认。\n点击返回键取消。</string>
+
+    <!-- Battery and Clock -->
+    <string name="bc_title">电池与时钟</string>
+    <string name="bc_summary">电池与时钟微调设置</string>
+
+    <!-- Battery and Clock, Battery -->
+    <string name="battery_title">电池</string>
+    <string name="pref_battery_percentage_title">电量百分比</string>
+    <string name="pref_battery_percentage_summary">在状态栏中显示电量百分比</string>
+    <string name="battery_status_color_title">电量百分比颜色</string>
+
+    <!-- Battery and Clock, Clock -->
+    <string name="clock_title">时钟</string>
+    <string name="title_show_clock">显示时钟</string>
+    <string name="title_clock_color">时钟颜色</string>
+
+    <!-- Date and Provider -->
+    <string name="dp_title">日期与服务供应商</string>
+    <string name="dp_summary">日期与服务供应商显示微调</string>
+
+    <!-- Date and Provider, Date -->
+    <string name="date_title">日期</string>
+    <string name="title_date_color">日期颜色</string>
+
+    <!-- Date and Provider, PLMN -->
+    <string name="plmn_title">服务供应商名称</string>
+    <string name="title_show_plmn_ls">显示服务供应商名称 (锁屏)</string>
+    <string name="summary_on_show_plmn_ls">在设备锁定屏幕中显示服务供应商名称</string>
+    <string name="summary_off_show_plmn_ls">在设备锁定屏幕中不显示服务供应商名称</string>
+    <string name="title_show_plmn_sb">服务供应商名称 (状态栏)</string>
+    <string name="summary_on_show_plmn_sb">在状态栏中显示服务供应商名称</string>
+    <string name="summary_off_show_plmn_sb">在状态栏中不显示服务供应商名称</string>
+    <string name="title_plmn_label_color">服务供应商名称文字颜色</string>
+
+    <!-- Date and Provider, SPN -->
+    <string name="spn_title">服务供应商代号</string>
+    <string name="title_show_spn_ls">显示服务供应商代号 (锁屏)</string>
+    <string name="summary_on_show_spn_ls">在设备锁定屏幕中显示服务供应商代号</string>
+    <string name="summary_off_show_spn_ls">在设备锁定屏幕中不显示服务供应商代号</string>
+    <string name="title_show_spn_sb">显示服务供应商代号 (状态栏)</string>
+    <string name="summary_on_show_spn_sb">在状态栏中显示服务供应商代号</string>
+    <string name="summary_off_show_spn_sb">在状态栏中不显示服务供应商代号</string>
+    <string name="title_spn_label_color">服务供应商代号文字颜色</string>
+
+    <!-- Notifications -->
+    <string name="title_notifications_sb">状态栏通知</string>
+    <string name="title_notifications_color_tweaks">通知颜色</string>
+    <string name="summary_notifications_color_tweaks">状态栏中显示的各种通知的颜色</string>
+    <string name="title_notifications_ticker_color">通知弹出提示颜色</string>
+    <string name="title_notifications_count_color">通知数量颜色</string>
+    <string name="title_no_notifications_color">无通知文字颜色</string>
+    <string name="title_clear_button_label_color">清除通知文字颜色</string>
+    <string name="title_ongoing_notifications_color">正在进行通知标题颜色</string>
+    <string name="title_latest_notifications_color">最新通知标题颜色</string>
+    <string name="title_notifications_items">通知项目</string>
+    <string name="title_notifications_items_title">通知项目标题颜色</string>
+    <string name="title_notifications_items_text">通知项目文字颜色</string>
+    <string name="title_notifications_items_time">通知项目时间颜色</string>
+
+    <!-- Tweaks Extras -->
+    <string name="te_title">额外微调</string>
+    <string name="te_title_summary">用于界面微调的额外工具</string>
+    <string name="te_reset">重置</string>
+    <string name="title_reset_ui_tweaks_to_defaults">将界面设置重置为默认值</string>
+    <string name="te_xml">XML工具</string>
+    <string name="title_dialog_ui_interface">操作界面微调</string>
+    <string name="message_dialog_reset">是否重置所有微调选项到默认值？重启后生效。</string>
+    <string name="reset_ui_success">操作界面微调设置已重置！请重启使设置生效。</string>
+    <string name="title_export_to_xml">导出颜色设置为XML</string>
+    <string name="summary_export_to_xml">将界面颜色设置导出到/sdcard/spare_parts_ui.xml
+    </string>
+    <string name="message_dialog_export">是否将界面颜色导出到XML？此操作将覆盖原有文件。</string>
+    <string name="xml_sdcard_unmounted">SD卡未安装或加载。</string>
+    <string name="xml_write_error">写入XML时发生错误！</string>
+    <string name="xml_export_success">导出XML成功！</string>
+    <string name="title_import_from_xml">从XML中导入颜色设置</string>
+    <string name="summary_import_from_xml">从/sdcard/spare_parts_ui.xml中导入界面颜色设置</string>
+    <string name="message_dialog_import">是否导入界面颜色设置？重启后生效。</string>
+    <string name="xml_file_not_found">未发现XML文件！</string>
+    <string name="xml_io_exception">文件读取错误！</string>
+    <string name="xml_parse_error">分析XML时发生错误！</string>
+    <string name="xml_invalid_color">XML中存在无效的颜色代码！</string>
+    <string name="xml_import_success">导入XML成功！请重启使设置生效。</string>
+
+    <!-- Trackball Settings -->
+    <string name="trackball_settings_title">轨迹球设置</string>
+    <string name="trackball_settings_summary">轨迹球唤醒和解锁设备</string>
+    <string name="pref_trackball_wake_title">轨迹球唤醒设备</string>
+    <string name="pref_trackball_wake_summary">按下轨迹球使唤醒设备。</string>
+    <string name="pref_trackball_unlock_title">轨迹球解锁设备</string>
+    <string name="pref_trackball_unlock_summary">按下轨迹球解锁设备。</string>
+
+    <!-- Long Press Home -->
+    <string name="long_press_home_title">长按Home键设置</string>
+    <string name="long_press_home_summary">显示最近打开程序数量等设置</string>
+    <string name="recent_apps_show_title">显示最近打开程序名称</string>
+    <string name="recent_apps_num_title">记录最近打开程序数量</string>
+    <string name="recent_apps_num_summary">设置长按Home键打开最近程序列表中显示的程序数量</string>
+    <string name="dialog_recent_apps_num_title">指定最近程序数量</string>
+    <string name="use_custom_app_title">使用自定义程序</string>
+    <string name="use_custom_app_summary">启动自定义程序，而不是打开最近程序列表</string>
+    <string name="select_custom_app_title">选择自定义程序</string>
+    <string name="group_applications">应用程序</string>
+
+    <!-- Performance Settings -->
+    <string name="performance_settings_title">性能设置</string>
+    <string name="performance_settings_summary">设备性能微调</string>
+    
+    <!-- Performance Settings : Compcache -->
+    <string name="pref_compcache_title">使用 Compcache</string>
+    <string name="pref_compcache_summary">压缩内存以增加虚拟容量</string>
+
+    <!-- Performance Settings : JIT Mode -->
+    <string name="pref_jit_mode_title">使用 JIT</string>
+    <string name="pref_jit_mode_summary">使用Dalvik的JIT(Just-In-Time)编辑器 (需要重启)</string>
+
+</resources>

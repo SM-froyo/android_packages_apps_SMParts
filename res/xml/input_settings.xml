@@ -5,4 +5,7 @@
 
 	<CheckBoxPreference android:key="pref_trackball_unlock"
 		android:title="@string/pref_trackball_unlock_title" android:summary="@string/pref_trackball_unlock_summary" />
+
+    <CheckBoxPreference android:key="pref_menu_unlock"
+		android:title="@string/pref_menu_unlock_title" android:summary="@string/pref_menu_unlock_summary" />
 </PreferenceScreen>

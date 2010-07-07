@@ -5,19 +5,22 @@ import com.cyanogenmod.cmparts.R;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
-import android.provider.Settings;
+import android.util.Log;
 
 import java.io.File;
 
 /**
  * Performance Settings
  */
-public class PerformanceSettingsActivity extends PreferenceActivity {
+public class PerformanceSettingsActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
 
     private static final String COMPCACHE_PREF = "pref_compcache";
+    
+    private static final String COMPCACHE_PROP = "persist.service.compcache";
     
     private static final String JIT_PREF = "pref_jit_mode";
     
@@ -29,9 +32,19 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
     
     private static final String JIT_PROP = "dalvik.vm.execution-mode";
     
+    private static final String HEAPSIZE_PREF = "pref_heapsize";
+    
+    private static final String HEAPSIZE_PROP = "dalvik.vm.heapsize";
+    
+    private static final String HEAPSIZE_PERSIST_PROP = "persist.sys.vm.heapsize";
+    
+    private static final String HEAPSIZE_DEFAULT = "16m";
+    
     private CheckBoxPreference mCompcachePref;
 
     private CheckBoxPreference mJitPref;
+    
+    private ListPreference mHeapsizePref;
     
     private int swapAvailable = -1;
     
@@ -46,8 +59,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
         
         mCompcachePref = (CheckBoxPreference) prefSet.findPreference(COMPCACHE_PREF);
         if (isSwapAvailable()) {
-            mCompcachePref.setChecked(Settings.Secure.getInt(getContentResolver(),
-                    Settings.Secure.COMPCACHE_ENABLED, 0) == 1);
+            mCompcachePref.setChecked(SystemProperties.getBoolean(COMPCACHE_PROP, false));
         } else {
             prefSet.removePreference(mCompcachePref);
         }
@@ -57,13 +69,17 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
                 SystemProperties.get(JIT_PROP, JIT_ENABLED));
         mJitPref.setChecked(JIT_ENABLED.equals(jitMode));
         
+        mHeapsizePref = (ListPreference) prefSet.findPreference(HEAPSIZE_PREF);
+        mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP, 
+                SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
+        mHeapsizePref.setOnPreferenceChangeListener(this);
+        
     }
     
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mCompcachePref) {
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.COMPCACHE_ENABLED, mCompcachePref.isChecked() ? 1 : 0);
+            SystemProperties.set(COMPCACHE_PROP, mCompcachePref.isChecked() ? "1" : "0");
             return true;
         }
         
@@ -75,6 +91,16 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
         return false;
     }
     
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mHeapsizePref) {
+            if (newValue != null) {
+                SystemProperties.set(HEAPSIZE_PERSIST_PROP, (String)newValue);
+            }
+        }
+        return false;
+    }
+
     /**
      * Check if swap support is available on the system
      */

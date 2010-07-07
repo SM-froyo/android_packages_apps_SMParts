@@ -132,14 +132,17 @@
     <string name="xml_import_success">XML import successful! Reboot to see changes.
     </string>
 
-    <!-- Trackball Settings -->
-    <string name="trackball_settings_title">Trackball Settings</string>
-    <string name="trackball_settings_summary">Trackball Wake and Unlock</string>
+    <!-- Input Settings -->
+    <string name="input_settings_title">Input Settings</string>
+    <string name="input_settings_summary">Conrol button behavior</string>
     <string name="pref_trackball_wake_title">Trackball Wake</string>
     <string name="pref_trackball_wake_summary">Pressing the trackball wakes the device.
     </string>
     <string name="pref_trackball_unlock_title">Trackball Unlock</string>
     <string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device.
+    </string>
+    <string name="pref_menu_unlock_title">Menu Unlock</string>
+    <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device.
     </string>
 
     <!-- Long Press Home -->
@@ -168,5 +171,9 @@
     <!-- Performance Settings : JIT Mode -->
     <string name="pref_jit_mode_title">Use JIT</string>
     <string name="pref_jit_mode_summary">Use the Dalvik just-in-time compiler (requires reboot)</string>
+
+    <!-- Performance Setting : VM Heap Size -->
+    <string name="pref_heapsize_title">VM heap size</string>
+    <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
 
 </resources>
