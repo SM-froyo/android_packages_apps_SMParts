@@ -8,7 +8,6 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
-import android.provider.Settings;
 
 import java.io.File;
 
@@ -18,6 +17,8 @@ import java.io.File;
 public class PerformanceSettingsActivity extends PreferenceActivity {
 
     private static final String COMPCACHE_PREF = "pref_compcache";
+    
+    private static final String COMPCACHE_PROP = "persist.service.compcache";
     
     private static final String JIT_PREF = "pref_jit_mode";
     
@@ -46,8 +47,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
         
         mCompcachePref = (CheckBoxPreference) prefSet.findPreference(COMPCACHE_PREF);
         if (isSwapAvailable()) {
-            mCompcachePref.setChecked(Settings.Secure.getInt(getContentResolver(),
-                    Settings.Secure.COMPCACHE_ENABLED, 0) == 1);
+            mCompcachePref.setChecked(SystemProperties.getBoolean(COMPCACHE_PROP, false));
         } else {
             prefSet.removePreference(mCompcachePref);
         }
@@ -62,8 +62,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mCompcachePref) {
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.COMPCACHE_ENABLED, mCompcachePref.isChecked() ? 1 : 0);
+            SystemProperties.set(COMPCACHE_PROP, mCompcachePref.isChecked() ? "1" : "0");
             return true;
         }
         
