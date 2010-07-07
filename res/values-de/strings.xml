@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">CMParts</string>
-  <string name="device_settings_title">Geräteeinstellungen</string>
-
-  <string name="brotips_title">Br0tip-Einstellungen</string>
-  <string name="brotips_summary">Protips? More like Br0tips</string>
-
-  <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
-  <string name="long_press_home_summary">Anzahl letzter Apps, etc.</string>
+  <!-- Generic -->
+  <string name="app_name">CyanogenMod-Einstellungen</string>
 
   <!-- User interface -->
   <string name="ui_title">Benutzeroberfläche</string>
@@ -126,6 +120,8 @@
   <string name="pref_brotips_summary">Hinweise auf Bildschirm ändern</string>
         
   <!-- Long Press Home -->
+  <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
+  <string name="long_press_home_summary">Anzahl letzter Apps, etc.</string>
   <string name="recent_apps_show_title">Titel für letzte Apps zeigen</string>
   <string name="recent_apps_num_title">Anzahl letzter Apps</string>
   <string name="recent_apps_num_summary">Anzahl anzuzeigender Apps nach Gedrückthalten der Home-Taste</string>
@@ -150,4 +146,10 @@
   <!-- Performance Setting : VM Heap Size -->
   <string name="pref_heapsize_title">Größe VM-Heaps</string>
   <string name="pref_heapsize_summary">Maximale Speichernutzung pro VM-Heap (Neustart erforderlich)</string>
+
+  <!-- Application Settings : br0tips -->
+  <string name="brotips_title">Br0tip-Einstellungen</string>
+  <string name="brotips_summary">Protips? More like Br0tips</string>
+
+  <string name="button_settings_title">Tasten-Einstellungen</string>
 </resources>
