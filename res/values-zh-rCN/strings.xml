@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Generic -->
-    <string name="app_name">CMParts</string>
-    <string name="device_settings_title">设备配置</string>
-
-    <!-- br0tips -->
-    <string name="brotips_title">Br0tip 配置</string>
-    <string name="brotips_summary">使用提示？太无聊了吧！换成Br0tips！</string>
-    <string name="pref_brotips_title">使用 Br0tips</string>
-    <string name="pref_brotips_summary">改变主画面中的使用提示内容</string>
+    <string name="app_name">CyanogenMod 设置</string>
 
     <!-- User interface -->
     <string name="ui_title">用户界面</string>
@@ -98,8 +91,7 @@
     <string name="message_dialog_reset">是否重置所有微调选项到默认值？重启后生效。</string>
     <string name="reset_ui_success">操作界面微调设置已重置！请重启使设置生效。</string>
     <string name="title_export_to_xml">导出颜色设置为XML</string>
-    <string name="summary_export_to_xml">将界面颜色设置导出到/sdcard/spare_parts_ui.xml
-    </string>
+    <string name="summary_export_to_xml">将界面颜色设置导出到/sdcard/spare_parts_ui.xml</string>
     <string name="message_dialog_export">是否将界面颜色导出到XML？此操作将覆盖原有文件。</string>
     <string name="xml_sdcard_unmounted">SD卡未安装或加载。</string>
     <string name="xml_write_error">写入XML时发生错误！</string>
@@ -113,13 +105,15 @@
     <string name="xml_invalid_color">XML中存在无效的颜色代码！</string>
     <string name="xml_import_success">导入XML成功！请重启使设置生效。</string>
 
-    <!-- Trackball Settings -->
-    <string name="trackball_settings_title">轨迹球设置</string>
-    <string name="trackball_settings_summary">轨迹球唤醒和解锁设备</string>
+    <!-- Input Settings -->
+    <string name="input_settings_title">按键设置</string>
+    <string name="input_settings_summary">改变设备按键的行为</string>
     <string name="pref_trackball_wake_title">轨迹球唤醒设备</string>
     <string name="pref_trackball_wake_summary">按下轨迹球使唤醒设备。</string>
     <string name="pref_trackball_unlock_title">轨迹球解锁设备</string>
     <string name="pref_trackball_unlock_summary">按下轨迹球解锁设备。</string>
+    <string name="pref_menu_unlock_title">菜单键解锁设备</string>
+    <string name="pref_menu_unlock_summary">按下菜单键解锁设备。</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">长按Home键设置</string>
@@ -145,4 +139,21 @@
     <string name="pref_jit_mode_title">使用 JIT</string>
     <string name="pref_jit_mode_summary">使用Dalvik的JIT(Just-In-Time)编辑器 (需要重启)</string>
 
+    <!-- Performance Setting : VM Heap Size -->
+    <string name="pref_heapsize_title">虚拟机内存大小</string>
+    <string name="pref_heapsize_summary">设置每个虚拟机进程的可用内存最大值（需要重启）</string>
+
+    <!-- Application Settings -->
+    <string name="application_settings_title">程序设置</string>
+    <string name="application_settings_summary">改变各种程序设置，例如安装位置</string>
+
+    <!-- Application Settings : Install Location -->
+    <string name="pref_install_location_title">安装位置</string>
+    <string name="pref_install_location_summary">选择新安装程序的安装位置</string>
+
+    <!-- Application Settings : br0tips -->
+    <string name="pref_brotips_title">使用 Br0tips</string>
+    <string name="pref_brotips_summary">使用提示？太无聊了吧！换成Br0tips！</string>
+
+    <string name="button_settings_title">按钮设置</string>
 </resources>
