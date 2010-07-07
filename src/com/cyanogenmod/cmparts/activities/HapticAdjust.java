@@ -134,9 +134,9 @@ static final int TAP_TEXT = 4;
 
 
    // take value passed from parent activity (spare parts) and populate rows
-    private void setupRows (String ss) {
+    private boolean setupRows (String ss) {
         if (ss == null) {
-            return;
+            return false;
             }
         int[] vals = stringToInt(ss);
         int length = vals.length;
@@ -145,6 +145,7 @@ static final int TAP_TEXT = 4;
         addRow(vals[i]);
         }
         checkRowColors();
+        return true;
     }
 
 
@@ -257,7 +258,11 @@ static final int TAP_TEXT = 4;
         if (type == TAP_TEXT) {
             defString = Settings.System.getString(getContentResolver(), Settings.System.HAPTIC_TAP_ARRAY_DEFAULT);
         }
-        setupRows(defString);
+        boolean worked = setupRows(defString);
+        if (!worked) {
+        	revertChanges();
+        	return;
+        }
         checkRowColors();
     }
 
@@ -265,6 +270,8 @@ static final int TAP_TEXT = 4;
         mVibrator = new Vibrator();
         int i;
         int[] array = getArray();
+        clearTable();
+        setupRows(intToString(array));
         long[] vibePattern = new long[array.length];
         for (i = 0; i < array.length; i++) {
             vibePattern[i] = array[i];
@@ -343,13 +350,16 @@ static final int TAP_TEXT = 4;
             tv.setText(str);
             tv.requestLayout();
     	} 
-    	else {
+    	else if (counter > 1) {
     		int target = 401;
     		TextView tv = (TextView) findViewById(target);
             tv.setTextColor(Color.RED);
             String str = "  "+getString(R.string.haptic_delay_desc);
             tv.setText(str);
             tv.requestLayout();
+    	}
+    	else {
+    		revertChanges();
     	}
     }
 
