@@ -143,9 +143,13 @@
   <string name="pref_jit_mode_title">JIT verwenden</string>
   <string name="pref_jit_mode_summary">Den Dalvik Just-In-Time Compiler verwenden (Neustart erforderlich)</string>
 
-  <!-- Performance Setting : VM Heap Size -->
+  <!-- Performance Settings : VM Heap Size -->
   <string name="pref_heapsize_title">Größe VM-Heaps</string>
   <string name="pref_heapsize_summary">Maximale Speichernutzung pro VM-Heap (Neustart erforderlich)</string>
+
+  <!-- Performance Settings : Warning dialog -->
+  <string name="performance_settings_warning_title">WARNUNG: Drachen voraus!</string>
+  <string name="performance_settings_warning">Diese experimentellen Optionen beeinflussen die Leistung des Systems, wahrscheinlich zum Schlechten. Wir bitten darum, keine Fehler zu melden, wenn du die Standarteinstellungen änderst.</string>
 
   <!-- Application Settings : br0tips -->
   <string name="brotips_title">Br0tip-Einstellungen</string>
