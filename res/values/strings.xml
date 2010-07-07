@@ -169,4 +169,8 @@
     <string name="pref_jit_mode_title">Use JIT</string>
     <string name="pref_jit_mode_summary">Use the Dalvik just-in-time compiler (requires reboot)</string>
 
+    <!-- Performance Setting : VM Heap Size -->
+    <string name="pref_heapsize_title">VM heap size</string>
+    <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
+
 </resources>

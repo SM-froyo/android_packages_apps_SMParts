@@ -5,16 +5,18 @@ import com.cyanogenmod.cmparts.R;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
+import android.util.Log;
 
 import java.io.File;
 
 /**
  * Performance Settings
  */
-public class PerformanceSettingsActivity extends PreferenceActivity {
+public class PerformanceSettingsActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
 
     private static final String COMPCACHE_PREF = "pref_compcache";
     
@@ -30,9 +32,19 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
     
     private static final String JIT_PROP = "dalvik.vm.execution-mode";
     
+    private static final String HEAPSIZE_PREF = "pref_heapsize";
+    
+    private static final String HEAPSIZE_PROP = "dalvik.vm.heapsize";
+    
+    private static final String HEAPSIZE_PERSIST_PROP = "persist.sys.vm.heapsize";
+    
+    private static final String HEAPSIZE_DEFAULT = "16m";
+    
     private CheckBoxPreference mCompcachePref;
 
     private CheckBoxPreference mJitPref;
+    
+    private ListPreference mHeapsizePref;
     
     private int swapAvailable = -1;
     
@@ -57,6 +69,11 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
                 SystemProperties.get(JIT_PROP, JIT_ENABLED));
         mJitPref.setChecked(JIT_ENABLED.equals(jitMode));
         
+        mHeapsizePref = (ListPreference) prefSet.findPreference(HEAPSIZE_PREF);
+        mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP, 
+                SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
+        mHeapsizePref.setOnPreferenceChangeListener(this);
+        
     }
     
     @Override
@@ -74,6 +91,16 @@ public class PerformanceSettingsActivity extends PreferenceActivity {
         return false;
     }
     
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mHeapsizePref) {
+            if (newValue != null) {
+                SystemProperties.set(HEAPSIZE_PERSIST_PROP, (String)newValue);
+            }
+        }
+        return false;
+    }
+
     /**
      * Check if swap support is available on the system
      */
