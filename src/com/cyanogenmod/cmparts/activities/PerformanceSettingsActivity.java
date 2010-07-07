@@ -96,6 +96,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         if (preference == mHeapsizePref) {
             if (newValue != null) {
                 SystemProperties.set(HEAPSIZE_PERSIST_PROP, (String)newValue);
+                return true;
             }
         }
         return false;
