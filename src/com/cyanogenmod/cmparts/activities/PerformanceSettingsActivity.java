@@ -2,6 +2,9 @@ package com.cyanogenmod.cmparts.activities;
 
 import com.cyanogenmod.cmparts.R;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
@@ -9,7 +12,6 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
-import android.util.Log;
 
 import java.io.File;
 
@@ -46,6 +48,8 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
     
     private ListPreference mHeapsizePref;
     
+    private AlertDialog alertDialog;
+    
     private int swapAvailable = -1;
     
     @Override
@@ -73,7 +77,18 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP, 
                 SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
         mHeapsizePref.setOnPreferenceChangeListener(this);
+    
+        // Set up the warning
+        alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle(R.string.performance_settings_warning_title);
+        alertDialog.setMessage(getResources().getString(R.string.performance_settings_warning));
+        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                return;
+            }
+        });
         
+        alertDialog.show();
     }
     
     @Override

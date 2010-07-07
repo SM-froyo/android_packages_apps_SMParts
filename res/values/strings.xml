@@ -144,9 +144,13 @@
     <string name="pref_jit_mode_title">Use JIT</string>
     <string name="pref_jit_mode_summary">Use the Dalvik just-in-time compiler (requires reboot)</string>
 
-    <!-- Performance Setting : VM Heap Size -->
+    <!-- Performance Settings : VM Heap Size -->
     <string name="pref_heapsize_title">VM heap size</string>
     <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
+
+    <!-- Performance Settings : Warning dialog -->
+    <string name="performance_settings_warning_title">WARNING: Dragons Ahead!</string>
+    <string name="performance_settings_warning">The options in here will change the performance of your system, potentially for the worse. They are included for experimentation and we request that you do not file bug reports if you have changed any from the defaults.</string>
 
     <!-- Application Settings -->
     <string name="application_settings_title">Application settings</string>
@@ -161,4 +165,5 @@
     <string name="pref_brotips_summary">Protips? More like Br0tips</string>
 
     <string name="button_settings_title">Button settings</string>
+
 </resources>
