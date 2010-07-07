@@ -4,12 +4,6 @@
     <string name="app_name">CMParts</string>
     <string name="device_settings_title">Device Settings</string>
 
-    <!-- br0tips -->
-    <string name="brotips_title">Br0tip Settings</string>
-    <string name="brotips_summary">Protips? More like Br0tips</string>
-    <string name="pref_brotips_title">Enable Br0tips</string>
-    <string name="pref_brotips_summary">Change the Home screen tips</string>
-
     <!-- User interface -->
     <string name="ui_title">User Interface</string>
     <string name="ui_summary">User interface settings &amp; tweaks</string>
@@ -175,5 +169,17 @@
     <!-- Performance Setting : VM Heap Size -->
     <string name="pref_heapsize_title">VM heap size</string>
     <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
+
+    <!-- Application Settings -->
+    <string name="application_settings_title">Application settings</string>
+    <string name="application_settings_summary">Change various application settings such as install location</string>
+
+    <!-- Application Settings : Install Location -->
+    <string name="pref_install_location_title">Install location</string>
+    <string name="pref_install_location_summary">Select where new applications should be installed</string>
+
+    <!-- Application Settings : br0tips -->
+    <string name="pref_brotips_title">Enable Br0tips</string>
+    <string name="pref_brotips_summary">Protips? More like Br0tips</string>
 
 </resources>

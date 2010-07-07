@@ -10,14 +10,14 @@
                 android:targetClass="com.cyanogenmod.cmparts.activities.InputActivity" />
         </PreferenceScreen>
         
-        <!-- Br0tips -->
-        <PreferenceScreen android:key="brotips"
-            android:title="@string/brotips_title" android:summary="@string/brotips_summary">
+        <!-- Application Settings -->
+        <PreferenceScreen android:key="application_settings"
+            android:title="@string/application_settings_title" android:summary="@string/application_settings_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.BrotipsActivity" />
+                android:targetClass="com.cyanogenmod.cmparts.activities.ApplicationActivity" />
         </PreferenceScreen>
-        
+
         <!-- UI Settings -->
         <PreferenceScreen android:key="ui_settings"
             android:title="@string/ui_title" android:summary="@string/ui_summary">
