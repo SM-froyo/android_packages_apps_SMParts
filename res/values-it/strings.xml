@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic -->
+    <string name="app_name">CyanogenMod settings</string>
+
+    <!-- User interface -->
+    <string name="ui_title">Interfaccia utente</string>
+    <string name="ui_summary">Impostazioni e modifiche interfaccia utente</string>
+    <string name="ui_status_bar">Personalizzazione Status Bar</string>
+
+    <!-- User interface : orientation -->
+    <string name="ui_rotation_title">Rotazione accelerometro</string>
+    <string name="pref_rotation_90_title">90 gradi</string>
+    <string name="pref_rotation_180_title">180 gradi</string>
+    <string name="pref_rotation_270_title">270 gradi</string>
+
+    <!-- User interface : WebView -->
+    <string name="ui_webview_title">WebView</string>
+    <string name="pref_pinch_reflow_title">Reflow dopo il pinch in</string>
+    <string name="pref_pinch_reflow_summary">Reflow del testo dopo il pinch to zoom</string>
+
+    <!-- Color Picker -->
+    <string name="title_color_picker">Scegli un colore</string>
+    <string name="msg_color_picker">Premi al centro per confermare.\nPremi back per annullare</string>
+
+    <!-- Battery and Clock -->
+    <string name="bc_title">Batteria e orologio</string>
+    <string name="bc_summary">Modifiche alla batteria e all\'orologio</string>
+
+    <!-- Battery and Clock, Battery -->
+    <string name="battery_title">Batteria</string>
+    <string name="pref_battery_percentage_title">Percentuale batteria</string>
+    <string name="pref_battery_percentage_summary">Visualizza la percentuale della batteria nella status bar
+    </string>
+    <string name="battery_status_color_title">Colore percentuale batteria</string>
+
+    <!-- Battery and Clock, Clock -->
+    <string name="clock_title">Orologio</string>
+    <string name="title_show_clock">Mostra orologio</string>
+    <string name="title_clock_color">Colore orologio</string>
+
+    <!-- Date and Provider -->
+    <string name="dp_title">Data e operatore</string>
+    <string name="dp_summary">Modifiche data e operatore</string>
+
+    <!-- Date and Provider, Date -->
+    <string name="date_title">Data</string>
+    <string name="title_date_color">Colore data</string>
+
+    <!-- Date and Provider, PLMN -->
+    <string name="plmn_title">Stringa operatore</string>
+    <string name="title_show_plmn_ls">Visualizza operatore (lockscreen)</string>
+    <string name="summary_on_show_plmn_ls">L\'operatore viene visualizzato nel lockscreen</string>
+    <string name="summary_off_show_plmn_ls">L\'operatore non viene visualizzato nel lockscreen
+    </string>
+    <string name="title_show_plmn_sb">Visualizza operatore (status bar)</string>
+    <string name="summary_on_show_plmn_sb">L\'operatore viene visualizzato nella status bar</string>
+    <string name="summary_off_show_plmn_sb">L\'operatore non viene visualizzato nella status bar
+    </string>
+    <string name="title_plmn_label_color">Colore etichetta operatore</string>
+
+    <!-- Date and Provider, SPN -->
+    <string name="spn_title">Impostazioni stringa provider</string>
+    <string name="title_show_spn_ls">Visualizza provider (lockscreen)</string>
+    <string name="summary_on_show_spn_ls">Il provider viene visualizzato nel lockscreen</string>
+    <string name="summary_off_show_spn_ls">Il provider non viene visualizzato nel lockscreen
+    </string>
+    <string name="title_show_spn_sb">Visualizza provider (status bar)</string>
+    <string name="summary_on_show_spn_sb">Il provider viene visualizzato nella status bar</string>
+    <string name="summary_off_show_spn_sb">Il provider non viene visualizzato nella status bar
+    </string>
+    <string name="title_spn_label_color">Colore etichetta provider</string>
+
+    <!-- Notifications -->
+    <string name="title_notifications_sb">Notifiche status bar</string>
+    <string name="title_notifications_color_tweaks">Colori notifiche</string>
+    <string name="summary_notifications_color_tweaks">Ticker notifiche, notifiche in corso, ultime notifiche, cancella notifiche, etc.</string>
+    <string name="title_notifications_ticker_color">Ticker notifiche</string>
+    <string name="title_notifications_count_color">Colore conteggio notifiche</string>
+    <string name="title_no_notifications_color">Titolo Nessuna notifica</string>
+    <string name="title_clear_button_label_color">Etichetta Cancella</string>
+    <string name="title_ongoing_notifications_color">Titolo notifiche in corso</string>
+    <string name="title_latest_notifications_color">Titolo ultime notifiche</string>
+    <string name="title_notifications_items">Componenti della notifica</string>
+    <string name="title_notifications_items_title">Titolo</string>
+    <string name="title_notifications_items_text">Testo</string>
+    <string name="title_notifications_items_time">Ora</string>
+
+    <!-- Tweaks Extras -->
+    <string name="te_title">Modifiche extra</string>
+    <string name="te_title_summary">Strumenti extra per modifiche all\'interfaccia</string>
+    <string name="te_reset">Ripristina</string>
+    <string name="title_reset_ui_tweaks_to_defaults">Ripristina UI a valori di default</string>
+    <string name="te_xml">Strumenti XML</string>
+    <string name="title_dialog_ui_interface">Modifiche interfaccia UI</string>
+    <string name="message_dialog_reset">Ripristina tutte le modifiche alla UI a valori di default? Riavvio richiesto</string>
+    <string name="reset_ui_success">Ripristinata la UI a valori di default! Riavvia.</string>
+    <string name="title_export_to_xml">Esporta colori in XML</string>
+    <string name="summary_export_to_xml">Esporta colori in /sdcard/spare_parts_ui.xml</string>
+    <string name="message_dialog_export">Esporta colori UI in XML? Il file esistente verrà sovrascritto.</string>
+    <string name="xml_sdcard_unmounted">Scheda SD non montata!</string>
+    <string name="xml_write_error">Errore nello scrivere file XML!</string>
+    <string name="xml_export_success">XML esportato con successo!</string>
+    <string name="title_import_from_xml">Importa colori da XML</string>
+    <string name="summary_import_from_xml">Importa colori da /sdcard/spare_parts_ui.xml</string>
+    <string name="message_dialog_import">Importa colori UI da XML? Riavvio richiesto.</string>
+    <string name="xml_file_not_found">File XML non trovato!</string>
+    <string name="xml_io_exception">Errore nel leggere il file!</string>
+    <string name="xml_parse_error">Errore nel parsing del file!</string>
+    <string name="xml_invalid_color">Codice colore non valido!</string>
+    <string name="xml_import_success">File XML importato con successo! Riavvia affinchè le modifiche abbiano effetto.</string>
+
+    <!-- Input Settings -->
+    <string name="input_settings_title">Impostazioni input</string>
+    <string name="input_settings_summary">Scegli il comportamento dei pulsanti</string>
+    <string name="button_settings_title">Impostazioni pulsanti</string>
+    <string name="pref_trackball_wake_title">Trackball wake</string>
+    <string name="pref_trackball_wake_summary">Sveglia il telefono premendo la trackball</string>
+    <string name="pref_trackball_unlock_title">Trackball unlock</string>
+    <string name="pref_trackball_unlock_summary">Sblocca il telefono premendo la trackball</string>
+    <string name="pref_menu_unlock_title">Menu unlock</string>
+    <string name="pref_menu_unlock_summary">Sblocca il telefono premendo il tasto menu</string>
+    <string name="pref_trackball_screen_title">Pulsa sempre</string>
+    <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso</string>
+
+    <!-- Long Press Home -->
+    <string name="long_press_home_title">Impostazioni long-press del tasto home</string>
+    <string name="long_press_home_summary">Numero di applicazioni recenti, etc</string>
+    <string name="recent_apps_show_title">Mostra titolo applicazioni recenti</string>
+    <string name="recent_apps_num_title">Numero di applicazioni recenti</string>
+    <string name="recent_apps_num_summary">Numero di applicazioni recenti da visualizzare alla pressione prolungata del tasto home</string>
+    <string name="dialog_recent_apps_num_title">Specifica numero di applicazioni recenti</string>
+    <string name="use_custom_app_title">Usa applicazioni personalizzate</string>
+    <string name="use_custom_app_summary">Visualizza applicazioni personalizzate al posto di quelle recenti</string>
+    <string name="select_custom_app_title">Seleziona applicazioni</string>
+    <string name="group_applications">Applicazioni</string>
+
+    <!-- Performance Settings -->
+    <string name="performance_settings_title">Impostazioni performance</string>
+    <string name="performance_settings_summary">Modifiche performance del dispositivo</string>
+    
+    <!-- Performance Settings : Compcache -->
+    <string name="pref_compcache_title">Usa compcache</string>
+    <string name="pref_compcache_summary">Memoria compressa per maggior capacità virtuale</string>
+
+    <!-- Performance Settings : JIT Mode -->
+    <string name="pref_jit_mode_title">Usa JIT</string>
+    <string name="pref_jit_mode_summary">Usa compilatore Dalvik just-in-time (riavvio richiesto)</string>
+
+    <!-- Performance Settings : VM Heap Size -->
+    <string name="pref_heapsize_title">Dimensione heap VM</string>
+    <string name="pref_heapsize_summary">Massima quantità di memoria per heap VM (riavvio richiesto)</string>
+
+    <!-- Performance Settings : Warning dialog -->
+    <string name="performance_settings_warning_title">WARNING: Pericolo draghi!</string>
+    <string name="performance_settings_warning">Queste opzioni modificheranno le performance del dispositivo, probabilmente anche peggiorandole . Sono incluse per sperimentazione e ti richiediamo di non inviare bug report se le hai cambiate dai valori di default.</string>
+
+    <!-- Application Settings -->
+    <string name="application_settings_title">Impostazioni applicazioni</string>
+    <string name="application_settings_summary">Modifica diverse impostazioni riguardanti le applicazioni</string>
+
+    <!-- Application Settings : Install Location -->
+    <string name="pref_install_location_title">Luogo di installazione</string>
+    <string name="pref_install_location_summary">Seleziona dove vuoi che vengano installate le nuove applicazioni</string>
+
+    <!-- HapticTweaks -->
+    <string name="haptic_title">Modifiche feedback tattile</string>
+    <string name="haptic_summary">Scegli quando e con che intensità intervenga l\'haptic feedback</string>
+
+    <string name="title_haptic_feedback">Feedback tattile principale</string>
+    <string name="summary_on_haptic_feedback">Usa il feedback tattile per la pressione delle softkey e per certe interazioni con UI</string>
+    <string name="summary_off_haptic_feedback">Nessun feedback tattile per la pressione delle softkey e per certe interazioni con UI</string>
+
+    <string name="title_haptic_feedback_up">Feedback al rilascio</string>
+    <string name="summary_on_haptic_feedback_up">Usa il feedback tattile nel rilascio delle softkey e per certe interazioni con UI</string>
+    <string name="summary_off_haptic_feedback_up">Nessun feedback tattile nel rilascio delle softkey e per certe interazioni con UI</string>
+
+    <string name="title_haptic_feedback_all">Feedback per selezioni</string>
+    <string name="summary_on_haptic_feedback_all">Usa il feedback tattile per le selezioni sullo schermo</string>
+    <string name="summary_off_haptic_feedback_all">Nessun feedback tattile per le selezioni sullo schermo</string>
+
+    <string name="title_haptic_down_decider">Sequenza pressione</string>
+    <string name="title_haptic_up_decider">Sequenza rilascio</string>
+    <string name="title_haptic_long_decider">Sequenza pressione prol.</string>
+    <string name="title_haptic_tap_decider">Sequenza keypad</string>
+
+    <string name="title_haptic_menu">Aggiusta feedback</string>
+    <string name="title_haptic_notice">RIAVVIO RICHIESTO AFFINCHÈ LE MODIFICHE ABBIANO EFFETTO GLOBALMENTE</string>
+
+    <string name="haptic_delay_desc">ms Off Time</string>
+    <string name="haptic_vibe_desc">ms On Time</string>
+
+    <string name="haptic_down_description">Modifica valori tattili per la pressione dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
+    <string name="haptic_up_description">Modifica valori tattili al rilascio dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
+    <string name="haptic_long_description">Modifica valori tattili Per la pressione prolungata.</string>
+    <string name="haptic_tap_description">Modifica valori tattili per la tastiera virtuale</string>
+
+    <string name="haptic_plus_minus_desc">Premi i pulsanti più o meno per aggiungere o togliere step alla sequenza.</string>
+
+    <string name="haptic_button_plus">+</string>
+    <string name="haptic_button_minus">-</string>
+
+    <string name="haptic_button_save">Salva</string>
+    <string name="haptic_button_test">Testa</string>
+    <string name="haptic_button_cancel">Cancella</string>
+    <string name="haptic_button_revert">Ripristina modifiche</string>
+    <string name="haptic_button_default">Carica default</string>
+
+    <string name="haptic_save_toast">Salvando valori tattili: </string>
+    <string name="haptic_cancel_toast">Valori tattili non modificati</string>
+    <string name="haptic_revert_toast">Ripristino ultimi valori</string>
+    <string name="haptic_default_toast">Caricamento valori di default</string>
+
+</resources>
