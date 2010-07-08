@@ -17,29 +17,10 @@
 
 <resources>
 
-    <string-array name="entries_recent_apps_num">
-        <item>8</item>
-        <item>12</item>
-        <item>15</item>
-    </string-array>
-  
-    <string-array name="entries_heapsize">
-        <item>12m</item>
-        <item>16m</item>
-        <item>24m</item>
-        <item>32m</item>
-    </string-array>
-
     <string-array name="entries_install_location">
         <item>自动</item>
         <item>内置储存</item>
         <item>储存卡</item>
-    </string-array>
-
-    <string-array name="values_install_location">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
     </string-array>
 
 </resources>
