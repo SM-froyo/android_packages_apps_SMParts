@@ -5,7 +5,4 @@
         android:title="@string/pref_install_location_title" android:summary="@string/pref_install_location_summary"
         android:entries="@array/entries_install_location" android:entryValues="@array/values_install_location" />
 
-    <CheckBoxPreference android:key="pref_brotips"
-        android:title="@string/pref_brotips_title" android:summary="@string/pref_brotips_summary" />
-
 </PreferenceScreen>
