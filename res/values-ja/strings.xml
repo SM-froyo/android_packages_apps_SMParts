@@ -2,11 +2,6 @@
 <resources>
     <!-- Generic -->
     <string name="app_name">CyanogenMod設定</string>
-    <string name="device_settings_title">端末設定</string>
-
-    <!-- br0tips -->
-    <string name="brotips_title">Br0tip設定</string>
-    <string name="brotips_summary">Protips? Br0tipsがいいよ</string>
 
     <!-- User interface -->
     <string name="ui_title">ユーザインタフェース</string>
@@ -119,6 +114,8 @@
     <string name="pref_trackball_unlock_summary">トラックボールを押して端末をロックから解除する</string>
     <string name="pref_menu_unlock_title">メニューボタンでアンロック</string>
     <string name="pref_menu_unlock_summary">メニューボタンを押して端末をロックから解除する</string>
+    <string name="pref_trackball_screen_title">常に点滅する</string>
+    <string name="pref_trackball_screen_summary">スクリーンオン中はトラックボールを点滅させる</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">ホーム長押し設定</string>
@@ -159,12 +156,6 @@
     <!-- Application Settings : Install Location -->
     <string name="pref_install_location_title">インストール場所</string>
     <string name="pref_install_location_summary">新しいアプリケーションがインストールされる場所を選択</string>
-
-    <!-- Application Settings : br0tips -->
-    <string name="pref_brotips_title">Br0tipsを有効にする</string>
-    <string name="pref_brotips_summary">Protips? Br0tipsがいいよ</string>
-
-    <string name="button_settings_title">ボタン設定</string>
 
     <!-- HapticTweaks -->
     <string name="haptic_title">タッチフィードバック調整</string>
