@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Generic -->
-<<<<<<< HEAD
     <string name="app_name">CyanogenMod設定</string>
-=======
     <string name="app_name">CMParts</string>
     <string name="device_settings_title">端末設定</string>
 
     <!-- br0tips -->
     <string name="brotips_title">Br0tip設定</string>
     <string name="brotips_summary">Protips? Br0tipsがいいよ</string>
-<<<<<<< HEAD
-=======
->>>>>>> Fixed error in Japanese strings.xml (Duplicate entries)
->>>>>>> froyo
 
     <!-- User interface -->
     <string name="ui_title">ユーザインタフェース</string>
