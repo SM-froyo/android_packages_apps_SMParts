@@ -120,7 +120,7 @@
     <string name="pref_menu_unlock_title">Menu unlock</string>
     <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device</string>
     <string name="pref_trackball_screen_title">Always Pulse</string>
-    <string name="pref_trackball_screen_summary">Tackball will pulse while screen is on.</string>
+    <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press home settings</string>
