@@ -152,8 +152,8 @@
     <string name="pref_heapsize_summary">Massima quantità di memoria per heap VM (riavvio richiesto)</string>
 
     <!-- Performance Settings : Warning dialog -->
-    <string name="performance_settings_warning_title">WARNING: Pericolo draghi!</string>
-    <string name="performance_settings_warning">Queste opzioni modificheranno le performance del dispositivo, probabilmente anche peggiorandole . Sono incluse per sperimentazione e ti richiediamo di non inviare bug report se le hai cambiate dai valori di default.</string>
+    <string name="performance_settings_warning_title">WARNING: Dragons Ahead!</string>
+    <string name="performance_settings_warning">Queste opzioni modificheranno le performance del dispositivo, probabilmente anche peggiorandole. Sono incluse per sperimentazione e ti chiediamo di non inviare bug report se le hai cambiate dai valori di default.</string>
 
     <!-- Application Settings -->
     <string name="application_settings_title">Impostazioni applicazioni</string>
@@ -192,7 +192,7 @@
 
     <string name="haptic_down_description">Modifica valori tattili per la pressione dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
     <string name="haptic_up_description">Modifica valori tattili al rilascio dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
-    <string name="haptic_long_description">Modifica valori tattili Per la pressione prolungata.</string>
+    <string name="haptic_long_description">Modifica valori tattili per la pressione prolungata.</string>
     <string name="haptic_tap_description">Modifica valori tattili per la tastiera virtuale</string>
 
     <string name="haptic_plus_minus_desc">Premi i pulsanti più o meno per aggiungere o togliere step alla sequenza.</string>
