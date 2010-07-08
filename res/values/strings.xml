@@ -167,7 +167,7 @@
     <string name="button_settings_title">Button settings</string>
 
     <!-- HapticTweaks -->
-    <string name="haptic_title">Haptic Feedback Tweaks</string>
+    <string name="haptic_title">Haptic feedback tweaks</string>
     <string name="haptic_summary">Adjust when and how strong haptic feedback occurs</string>
 
     <string name="title_haptic_feedback">Haptic feedback main</string>
