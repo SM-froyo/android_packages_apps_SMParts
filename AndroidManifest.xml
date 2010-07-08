@@ -57,7 +57,19 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-
+        <activity android:name=".activities.HapticTweaksActivity">
+         <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".activities.HapticAdjust"
+                  android:label="@string/title_haptic_menu">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
         <provider android:name=".provider.SettingsProvider"
             android:authorities="com.cyanogenmod.cmparts.provider.Settings" />
     </application>

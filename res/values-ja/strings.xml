@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Generic -->
-    <string name="app_name">CMParts</string>
-    <string name="device_settings_title">端末設定</string>
-
-    <!-- br0tips -->
-    <string name="brotips_title">Br0tip設定</string>
-    <string name="brotips_summary">Protips? Br0tipsがいいよ</string>
-    <string name="pref_brotips_title">Br0tipsを有効にする</string>
-    <string name="pref_brotips_summary">ホーム画面のヒントを変更する</string>
+    <string name="app_name">CyanogenMod設定</string>
 
     <!-- User interface -->
     <string name="ui_title">ユーザインタフェース</string>
@@ -28,7 +21,7 @@
 
     <!-- Color Picker -->
     <string name="title_color_picker">色を選択</string>
-    <string name="msg_color_picker">中央をタップして確定.\n戻るボタンでキャンセル.</string>
+    <string name="msg_color_picker">中央をタップして確定\n戻るボタンでキャンセル</string>
 
     <!-- Battery and Clock -->
     <string name="bc_title">バッテリと時計</string>
@@ -95,30 +88,34 @@
     <string name="title_reset_ui_tweaks_to_defaults">UI調整を初期設定に戻す</string>
     <string name="te_xml">XMLツール</string>
     <string name="title_dialog_ui_interface">ユーザインタフェース設定</string>
-    <string name="message_dialog_reset">すべてのユーザインタフェース設定をデフォルトにしますか? 変更を適用するには再起動します.</string>
-    <string name="reset_ui_success">UI設定をリセットしました! 変更を適用するには再起動します.</string>
+    <string name="message_dialog_reset">すべてのユーザインタフェース設定をデフォルトにしますか? 変更を適用するには再起動します</string>
+    <string name="reset_ui_success">UI設定をリセットしました! 変更を適用するには再起動します</string>
     <string name="title_export_to_xml">色設定をXMLに出力</string>
     <string name="summary_export_to_xml">/sdcard/spare_parts_ui.xml に色設定を出力する</string>
-    <string name="message_dialog_export">XMLにUIの色設定を出力しますか? これはすでに存在するファイルを上書きします.</string>
+    <string name="message_dialog_export">XMLにUIの色設定を出力しますか? これはすでに存在するファイルを上書きします</string>
     <string name="xml_sdcard_unmounted">SDカードがマウントされてません!</string>
     <string name="xml_write_error">XML書き込み中にエラー!</string>
     <string name="xml_export_success">XML出力に成功!</string>
     <string name="title_import_from_xml">XMLから色設定を読み込む</string>
     <string name="summary_import_from_xml">/sdcard/spare_parts_ui.xml から色設定を読み込む</string>
-    <string name="message_dialog_import">XMLからUIの色設定を読み込みますか? 変更を適用するには再起動します.</string>
+    <string name="message_dialog_import">XMLからUIの色設定を読み込みますか? 変更を適用するには再起動します</string>
     <string name="xml_file_not_found">XMLファルが見つかりません!</string>
     <string name="xml_io_exception">ファイルを読み込み中にエラー!</string>
     <string name="xml_parse_error">XML解析中にエラー!</string>
     <string name="xml_invalid_color">XMLに不正なカラーコードがあります!</string>
-    <string name="xml_import_success">XML読み込みに成功. 変更を適用するには再起動します.</string>
+    <string name="xml_import_success">XML読み込みに成功. 変更を適用するには再起動します</string>
 
-    <!-- Trackball Settings -->
-    <string name="trackball_settings_title">トラックボール設定</string>
-    <string name="trackball_settings_summary">トラックボールによる復帰とアンロック</string>
+    <!-- Input Settings -->
+    <string name="input_settings_title">入力設定</string>
+    <string name="input_settings_summary">コントロールボタンの挙動</string>
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
-    <string name="pref_trackball_unlock_title">トラックボールアンロック</string>
-    <string name="pref_trackball_unlock_summary">トラックボールを押して端末をアンロックする</string>
+    <string name="pref_trackball_unlock_title">トラックボールでアンロック</string>
+    <string name="pref_trackball_unlock_summary">トラックボールを押して端末をロックから解除する</string>
+    <string name="pref_menu_unlock_title">メニューボタンでアンロック</string>
+    <string name="pref_menu_unlock_summary">メニューボタンを押して端末をロックから解除する</string>
+    <string name="pref_trackball_screen_title">常に点滅する</string>
+    <string name="pref_trackball_screen_summary">スクリーンオン中はトラックボールを点滅させる</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">ホーム長押し設定</string>
@@ -135,7 +132,7 @@
     <!-- Performance Settings -->
     <string name="performance_settings_title">パフォーマンス設定</string>
     <string name="performance_settings_summary">デバイスパフォーマンスの調整</string>
-    
+
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Compcacheを使用する</string>
     <string name="pref_compcache_summary">仮想容量を増やすためにメモリを圧縮する</string>
@@ -143,5 +140,69 @@
     <!-- Performance Settings : JIT Mode -->
     <string name="pref_jit_mode_title">JITを使用する</string>
     <string name="pref_jit_mode_summary">Dalvik just-in-time コンパイラを使用する (再起動が必要)</string>
+
+    <!-- Performance Setting : VM Heap Size -->
+    <string name="pref_heapsize_title">VMヒープサイズ</string>
+    <string name="pref_heapsize_summary">VMヒープごとの最大メモリ量(再起動が必要)</string>
+
+    <!-- Performance Settings : Warning dialog -->
+    <string name="performance_settings_warning_title">警告: 龍が来ているぞ!</string>
+    <string name="performance_settings_warning">ここにあるオプションはシステムパフォーマンスを変更し、もしかするとおかしくなるかもしれません。これらには実験的なものもあり、値をデフォルトから変更した場合にはバグ報告をしないでください。</string>
+
+    <!-- Application Settings -->
+    <string name="application_settings_title">アプリケーション設定</string>
+    <string name="application_settings_summary">インストール場所など、いくつかのアプリケーション設定</string>
+
+    <!-- Application Settings : Install Location -->
+    <string name="pref_install_location_title">インストール場所</string>
+    <string name="pref_install_location_summary">新しいアプリケーションがインストールされる場所を選択</string>
+
+    <!-- HapticTweaks -->
+    <string name="haptic_title">タッチフィードバック調整</string>
+    <string name="haptic_summary">タッチフィードバックの強さなどを調整する</string>
+
+    <string name="title_haptic_feedback">タッチフィードバックメイン</string>
+    <string name="summary_on_haptic_feedback">ソフトキーや多くのUI操作でタッチフィードバックを使用する</string>
+    <string name="summary_off_haptic_feedback">ソフトキーや多くのUI操作でタッチフィードバックを使用しない</string>
+
+    <string name="title_haptic_feedback_up">リリースフィードバック</string>
+    <string name="summary_on_haptic_feedback_up">ソフトキーや多くのUI操作で指を離したときにフィードバックを使用する</string>
+    <string name="summary_off_haptic_feedback_up">ソフトキーや多くのUI操作で指を離したときにフィードバックを使用しない</string>
+
+    <string name="title_haptic_feedback_all">タッチスクリーンアイテム</string>
+    <string name="summary_on_haptic_feedback_all">スクリーンでなにか選択したときにタッチフィードバックを使用する</string>
+    <string name="summary_off_haptic_feedback_all">スクリーンでなにか選択したときにタッチフィードバックを使用しない</string>
+
+    <string name="title_haptic_down_decider">タッチパターン設定</string>
+    <string name="title_haptic_up_decider">リリースパターン設定</string>
+    <string name="title_haptic_long_decider">長押しパターン設定</string>
+    <string name="title_haptic_tap_decider">タップパターン設定</string>
+
+    <string name="title_haptic_menu">タッチ調整</string>
+    <string name="title_haptic_notice">変更を適用するには再起動が必要</string>
+
+    <string name="haptic_delay_desc">オフタイム ミリ秒</string>
+    <string name="haptic_vibe_desc">オンタイム ミリ秒</string>
+
+    <string name="haptic_down_description">ボタンを押したときの値を調整\n(バーチャルハードキーと多くのUI操作)</string>
+    <string name="haptic_up_description">ボタンを離したたおきの値を調整\n(バーチャルハードキーと多くのスクリーン操作)</string>
+    <string name="haptic_long_description">長押ししたときの値を調整</string>
+    <string name="haptic_tap_description">スクリーンキーボードをタップしたときの値を調整</string>
+
+    <string name="haptic_plus_minus_desc">プラスボタンとマイナスボタンで値を増減して調節してください</string>
+
+    <string name="haptic_button_plus">+</string>
+    <string name="haptic_button_minus">-</string>
+
+    <string name="haptic_button_save">保存</string>
+    <string name="haptic_button_test">テスト</string>
+    <string name="haptic_button_cancel">キャンセル</string>
+    <string name="haptic_button_revert">変更を戻す</string>
+    <string name="haptic_button_default">デフォルトを読み込む</string>
+
+    <string name="haptic_save_toast">保存する値: </string>
+    <string name="haptic_cancel_toast">値は変更されません</string>
+    <string name="haptic_revert_toast">前回の値に戻します</string>
+    <string name="haptic_default_toast">初期設定に戻します</string>
 
 </resources>
