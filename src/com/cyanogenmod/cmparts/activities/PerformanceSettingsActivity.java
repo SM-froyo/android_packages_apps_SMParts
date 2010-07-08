@@ -106,7 +106,6 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         return false;
     }
     
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mHeapsizePref) {
             if (newValue != null) {
