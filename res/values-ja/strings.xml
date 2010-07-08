@@ -108,6 +108,7 @@
     <!-- Input Settings -->
     <string name="input_settings_title">入力設定</string>
     <string name="input_settings_summary">コントロールボタンの挙動</string>
+    <string name="button_settings_title">ボタン設定</string>
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
     <string name="pref_trackball_unlock_title">トラックボールでアンロック</string>
@@ -178,18 +179,18 @@
     <string name="title_haptic_long_decider">長押しパターン設定</string>
     <string name="title_haptic_tap_decider">タップパターン設定</string>
 
-    <string name="title_haptic_menu">タッチ調整</string>
+    <string name="title_haptic_menu">フィードバック調整</string>
     <string name="title_haptic_notice">変更を適用するには再起動が必要</string>
 
-    <string name="haptic_delay_desc">オフタイム ミリ秒</string>
-    <string name="haptic_vibe_desc">オンタイム ミリ秒</string>
+    <string name="haptic_delay_desc">ミリ秒 オフ</string>
+    <string name="haptic_vibe_desc">ミリ秒 オン</string>
 
     <string name="haptic_down_description">ボタンを押したときの値を調整\n(バーチャルハードキーと多くのUI操作)</string>
-    <string name="haptic_up_description">ボタンを離したたおきの値を調整\n(バーチャルハードキーと多くのスクリーン操作)</string>
+    <string name="haptic_up_description">ボタンを離したときの値を調整\n(バーチャルハードキーと多くのスクリーン操作)</string>
     <string name="haptic_long_description">長押ししたときの値を調整</string>
     <string name="haptic_tap_description">スクリーンキーボードをタップしたときの値を調整</string>
 
-    <string name="haptic_plus_minus_desc">プラスボタンとマイナスボタンで値を増減して調節してください</string>
+    <string name="haptic_plus_minus_desc">プラスボタンとマイナスボタンで回数を増減して調節してください</string>
 
     <string name="haptic_button_plus">+</string>
     <string name="haptic_button_minus">-</string>
@@ -200,7 +201,7 @@
     <string name="haptic_button_revert">変更を戻す</string>
     <string name="haptic_button_default">デフォルトを読み込む</string>
 
-    <string name="haptic_save_toast">保存する値: </string>
+    <string name="haptic_save_toast">保存した値: </string>
     <string name="haptic_cancel_toast">値は変更されません</string>
     <string name="haptic_revert_toast">前回の値に戻します</string>
     <string name="haptic_default_toast">初期設定に戻します</string>
