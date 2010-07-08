@@ -2,7 +2,6 @@
 <resources>
     <!-- Generic -->
     <string name="app_name">CyanogenMod設定</string>
-    <string name="app_name">CMParts</string>
     <string name="device_settings_title">端末設定</string>
 
     <!-- br0tips -->
