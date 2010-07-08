@@ -162,12 +162,6 @@
     <string name="pref_install_location_title">Install location</string>
     <string name="pref_install_location_summary">Select where new applications should be installed</string>
 
-    <!-- Application Settings : br0tips -->
-    <string name="pref_brotips_title">Enable Br0tips</string>
-    <string name="pref_brotips_summary">Protips? More like Br0tips</string>
-
-    <string name="button_settings_title">Button settings</string>
-
     <!-- HapticTweaks -->
     <string name="haptic_title">Haptic feedback tweaks</string>
     <string name="haptic_summary">Adjust when and how strong haptic feedback occurs</string>
