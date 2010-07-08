@@ -14,10 +14,12 @@ public class InputActivity extends PreferenceActivity {
     private static final String TRACKBALL_WAKE_PREF = "pref_trackball_wake";
     private static final String TRACKBALL_UNLOCK_PREF = "pref_trackball_unlock";
     private static final String MENU_UNLOCK_PREF = "pref_menu_unlock";
+    private static final String TRACKBALL_SCREEN_PREF = "pref_trackball_screen";
 
     private CheckBoxPreference mTrackballWakePref;
     private CheckBoxPreference mTrackballUnlockPref;
     private CheckBoxPreference mMenuUnlockPref;
+    private CheckBoxPreference mTrackballScreenPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,11 @@ public class InputActivity extends PreferenceActivity {
         mMenuUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.MENU_UNLOCK_SCREEN, 0) == 1);
 
+        /* Trackball While Screen On */
+        mTrackballScreenPref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_SCREEN_PREF);
+        mTrackballScreenPref.setEnabled(mCanEnableTrackball);
+        mTrackballScreenPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.TRACKBALL_SCREEN_ON, 0) == 1);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -66,7 +73,12 @@ public class InputActivity extends PreferenceActivity {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MENU_UNLOCK_SCREEN, value ? 1 : 0);
             return true;
+        } else if (preference == mTrackballScreenPref) {
+            value = mTrackballScreenPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.TRACKBALL_SCREEN_ON, value ? 1 : 0);
         }
+
         return false;
     }
 }
