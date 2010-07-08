@@ -68,7 +68,6 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
         return false;
     }
     
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mInstallLocationPref) {
             if (newValue != null) {

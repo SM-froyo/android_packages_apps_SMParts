@@ -33,12 +33,4 @@
             android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
     </PreferenceScreen>
         
-    <!-- Haptic Feedback -->
-    <PreferenceScreen android:key="haptic_settings"
-        android:title="@string/haptic_title" android:summary="@string/haptic_summary">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.HapticTweaksActivity" />
-    </PreferenceScreen>	
-
 </PreferenceScreen>

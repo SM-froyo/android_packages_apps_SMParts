@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     
+    <!-- Haptic Feedback -->
+    <PreferenceScreen android:key="haptic_settings"
+        android:title="@string/haptic_title" android:summary="@string/haptic_summary">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.HapticTweaksActivity" />
+    </PreferenceScreen>
+
     <!-- Long Press Home -->
     <PreferenceScreen android:key="long_press_home"
         android:title="@string/long_press_home_title" android:summary="@string/long_press_home_summary">
