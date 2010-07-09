@@ -34,7 +34,7 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
             Log.wtf(LOG_TAG, "Unable to get PackageManager!");
         }
         
-        setTitle(R.string.performance_settings_title);
+        setTitle(R.string.application_settings_title);
         addPreferencesFromResource(R.xml.application_settings);
         
         PreferenceScreen prefSet = getPreferenceScreen();
