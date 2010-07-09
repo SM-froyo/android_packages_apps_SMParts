@@ -124,13 +124,13 @@
     <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso</string>
 
     <!-- Long Press Home -->
-    <string name="long_press_home_title">Impostazioni long-press del tasto home</string>
-    <string name="long_press_home_summary">Numero di applicazioni recenti, etc</string>
-    <string name="recent_apps_show_title">Mostra titolo applicazioni recenti</string>
-    <string name="recent_apps_num_title">Numero di applicazioni recenti</string>
+    <string name="long_press_home_title">Long-press tasto home</string>
+    <string name="long_press_home_summary">Numero di applicazioni recenti, etc.</string>
+    <string name="recent_apps_show_title">Mostra titolo Recenti</string>
+    <string name="recent_apps_num_title">Numero di applicazioni</string>
     <string name="recent_apps_num_summary">Numero di applicazioni recenti da visualizzare alla pressione prolungata del tasto home</string>
     <string name="dialog_recent_apps_num_title">Specifica numero di applicazioni recenti</string>
-    <string name="use_custom_app_title">Usa applicazioni personalizzate</string>
+    <string name="use_custom_app_title">Applicazioni personalizzate</string>
     <string name="use_custom_app_summary">Visualizza applicazioni personalizzate al posto di quelle recenti</string>
     <string name="select_custom_app_title">Seleziona applicazioni</string>
     <string name="group_applications">Applicazioni</string>
@@ -153,7 +153,7 @@
 
     <!-- Performance Settings : Warning dialog -->
     <string name="performance_settings_warning_title">WARNING: Dragons Ahead!</string>
-    <string name="performance_settings_warning">Queste opzioni modificheranno le performance del dispositivo, probabilmente anche peggiorandole. Sono incluse per sperimentazione e ti chiediamo di non inviare bug report se le hai cambiate dai valori di default.</string>
+    <string name="performance_settings_warning">Queste opzioni modificheranno le performance del dispositivo, probabilmente anche peggiorandole. Sono incluse per sperimentazione e ti chiediamo di non inviare bug report se hai modificato i valori di default.</string>
 
     <!-- Application Settings -->
     <string name="application_settings_title">Impostazioni applicazioni</string>
@@ -164,20 +164,20 @@
     <string name="pref_install_location_summary">Seleziona dove vuoi che vengano installate le nuove applicazioni</string>
 
     <!-- HapticTweaks -->
-    <string name="haptic_title">Modifiche feedback tattile</string>
-    <string name="haptic_summary">Scegli quando e con che intensità intervenga l\'haptic feedback</string>
+    <string name="haptic_title">Modifiche feedback aptico</string>
+    <string name="haptic_summary">Scegli quando e con che intensità vuoi che intervenga il feedback aptico</string>
 
-    <string name="title_haptic_feedback">Feedback tattile principale</string>
-    <string name="summary_on_haptic_feedback">Usa il feedback tattile per la pressione delle softkey e per certe interazioni con UI</string>
-    <string name="summary_off_haptic_feedback">Nessun feedback tattile per la pressione delle softkey e per certe interazioni con UI</string>
+    <string name="title_haptic_feedback">Feedback aptico</string>
+    <string name="summary_on_haptic_feedback">Usa feedback aptico alla pressione delle softkey e per certe interazioni con la UI</string>
+    <string name="summary_off_haptic_feedback">Nessun feedback aptico alla pressione delle softkey e per certe interazioni con la UI</string>
 
     <string name="title_haptic_feedback_up">Feedback al rilascio</string>
-    <string name="summary_on_haptic_feedback_up">Usa il feedback tattile nel rilascio delle softkey e per certe interazioni con UI</string>
-    <string name="summary_off_haptic_feedback_up">Nessun feedback tattile nel rilascio delle softkey e per certe interazioni con UI</string>
+    <string name="summary_on_haptic_feedback_up">Usa feedback aptico al rilascio delle softkey e per certe interazioni con la UI</string>
+    <string name="summary_off_haptic_feedback_up">Nessun feedback aptico al rilascio delle softkey e per certe interazioni con la UI</string>
 
     <string name="title_haptic_feedback_all">Feedback per selezioni</string>
-    <string name="summary_on_haptic_feedback_all">Usa il feedback tattile per le selezioni sullo schermo</string>
-    <string name="summary_off_haptic_feedback_all">Nessun feedback tattile per le selezioni sullo schermo</string>
+    <string name="summary_on_haptic_feedback_all">Usa feedback aptico per le selezioni sullo schermo</string>
+    <string name="summary_off_haptic_feedback_all">Nessun feedback aptico per le selezioni sullo schermo</string>
 
     <string name="title_haptic_down_decider">Sequenza pressione</string>
     <string name="title_haptic_up_decider">Sequenza rilascio</string>
@@ -190,10 +190,10 @@
     <string name="haptic_delay_desc">ms Off Time</string>
     <string name="haptic_vibe_desc">ms On Time</string>
 
-    <string name="haptic_down_description">Modifica valori tattili per la pressione dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
-    <string name="haptic_up_description">Modifica valori tattili al rilascio dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
-    <string name="haptic_long_description">Modifica valori tattili per la pressione prolungata.</string>
-    <string name="haptic_tap_description">Modifica valori tattili per la tastiera virtuale</string>
+    <string name="haptic_down_description">Modifica valori aptici per la pressione dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
+    <string name="haptic_up_description">Modifica valori aptici al rilascio dei tasti\n(Hardkey virtuali e certe interazioni UI.)</string>
+    <string name="haptic_long_description">Modifica valori aptici per la pressione prolungata.</string>
+    <string name="haptic_tap_description">Modifica valori aptici per la tastiera virtuale</string>
 
     <string name="haptic_plus_minus_desc">Premi i pulsanti più o meno per aggiungere o togliere step alla sequenza.</string>
 
@@ -206,8 +206,8 @@
     <string name="haptic_button_revert">Ripristina modifiche</string>
     <string name="haptic_button_default">Carica default</string>
 
-    <string name="haptic_save_toast">Salvando valori tattili: </string>
-    <string name="haptic_cancel_toast">Valori tattili non modificati</string>
+    <string name="haptic_save_toast">Salvando valori aptici: </string>
+    <string name="haptic_cancel_toast">Valori aptici non modificati</string>
     <string name="haptic_revert_toast">Ripristino ultimi valori</string>
     <string name="haptic_default_toast">Caricamento valori di default</string>
 
