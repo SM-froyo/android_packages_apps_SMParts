@@ -146,6 +146,10 @@
     <!-- Performance Settings : JIT Mode -->
     <string name="pref_jit_mode_title">Usa JIT</string>
     <string name="pref_jit_mode_summary">Usa compilatore Dalvik just-in-time (riavvio richiesto)</string>
+  
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">Abilita dithering</string>
+    <string name="pref_use_dithering_summary">Il dithering migliora la qualità dell\'immagine a scapito delle performance (riavvio richiesto)</string>
 
     <!-- Performance Settings : VM Heap Size -->
     <string name="pref_heapsize_title">Dimensione heap VM</string>
