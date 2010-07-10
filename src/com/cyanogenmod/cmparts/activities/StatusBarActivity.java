@@ -10,7 +10,7 @@ import android.provider.Settings.SettingNotFoundException;
 
 import com.cyanogenmod.cmparts.R;
 
-public class BatteryClockActivity extends PreferenceActivity {
+public class StatusBarActivity extends PreferenceActivity {
 
     /* Display Battery Percentage */
     private static final String BATTERY_PERCENTAGE_PREF = "pref_battery_percentage";
@@ -24,13 +24,19 @@ public class BatteryClockActivity extends PreferenceActivity {
     /* Clock Font Color */
     private static final String UI_CLOCK_COLOR = "clock_color";
     private Preference mClockColorPref;
+    /* Display dBm Signal */
+    private static final String UI_SHOW_STATUS_DBM = "show_status_dbm";
+    private CheckBoxPreference mShowDbmPref;
+    /* dBm Font Color */
+    private static final String UI_DBM_COLOR = "dbm_color";
+    private Preference mDbmColorPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setTitle(R.string.bc_title);
-        addPreferencesFromResource(R.xml.battery_clock_settings);
+        setTitle(R.string.status_bar_title);
+        addPreferencesFromResource(R.xml.status_bar_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
@@ -38,7 +44,7 @@ public class BatteryClockActivity extends PreferenceActivity {
         mBatteryPercentagePref = (CheckBoxPreference) prefSet.findPreference(BATTERY_PERCENTAGE_PREF);
         mBatteryPercentagePref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.BATTERY_PERCENTAGE_STATUS_ICON, 0) == 1);
-        /* Battery Precentage Color */
+        /* Battery Percentage Color */
         mBatteryPercentColorPreference = prefSet.findPreference(UI_BATTERY_PERCENT_COLOR);
         /* Show Clock */
         mShowClockPref = (CheckBoxPreference) prefSet.findPreference(UI_SHOW_STATUS_CLOCK);
@@ -46,6 +52,12 @@ public class BatteryClockActivity extends PreferenceActivity {
                 Settings.System.SHOW_STATUS_CLOCK, 1) != 0);
         /* Clock Color */
         mClockColorPref = prefSet.findPreference(UI_CLOCK_COLOR);
+        /* Show dBm Signal */
+        mShowDbmPref = (CheckBoxPreference) prefSet.findPreference(UI_SHOW_STATUS_DBM);
+        mShowDbmPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.SHOW_STATUS_DBM, 0) != 0);
+        /* dBm Signal Color */
+        mDbmColorPref = prefSet.findPreference(UI_DBM_COLOR);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -58,10 +70,7 @@ public class BatteryClockActivity extends PreferenceActivity {
         }
         /* Battery Font Color */
         else if (preference == mBatteryPercentColorPreference) {
-            ColorPickerDialog cp = new ColorPickerDialog(this,
-                mBatteryColorListener,
-                readBatteryColor());
-            cp.show();
+            showColorPicker(mBatteryColorHandler);
         }
         /* Display Clock */
         else if (preference == mShowClockPref) {
@@ -71,41 +80,56 @@ public class BatteryClockActivity extends PreferenceActivity {
         }
         /* Clock Font Color */
         else if (preference == mClockColorPref) {
-            ColorPickerDialog cp = new ColorPickerDialog(this,
-                mClockFontColorListener,
-                readClockFontColor());
-            cp.show();          
+            showColorPicker(mClockColorHandler);
+        }
+        /* Display dBm Signal */
+        else if (preference == mShowDbmPref) {
+            value = mShowDbmPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SHOW_STATUS_DBM, value ? 1 : 0);
+        }
+        /* dBm Signal Font Color */
+        else if (preference == mDbmColorPref) {
+            showColorPicker(mDbmColorHandler);
         }
         return true;
     }
-    /* Battery Font Color */
-    ColorPickerDialog.OnColorChangedListener mBatteryColorListener = 
-        new ColorPickerDialog.OnColorChangedListener() {
-            public void colorChanged(int color) {
-                Settings.System.putInt(getContentResolver(), Settings.System.BATTERY_PERCENTAGE_STATUS_COLOR, color);
-            }
-    };
-    private int readBatteryColor() {
-        try {
-            return Settings.System.getInt(getContentResolver(), Settings.System.BATTERY_PERCENTAGE_STATUS_COLOR);
-        }
-        catch (SettingNotFoundException e) {
-            return -1;
-        }
+
+    private void showColorPicker(SettingsColorHandler handler) {
+        ColorPickerDialog cp = new ColorPickerDialog(this, handler, handler.readColor());
+        cp.show();
     }
+
+    /* Battery Font Color */
+    SettingsColorHandler mBatteryColorHandler = new SettingsColorHandler(Settings.System.BATTERY_PERCENTAGE_STATUS_COLOR, -1);
+
     /* Clock Font Color */
-    ColorPickerDialog.OnColorChangedListener mClockFontColorListener = 
-        new ColorPickerDialog.OnColorChangedListener() {
-            public void colorChanged(int color) {
-                Settings.System.putInt(getContentResolver(), Settings.System.CLOCK_COLOR, color);
-            }
-    };
-    private int readClockFontColor() {
-        try {
-            return Settings.System.getInt(getContentResolver(), Settings.System.CLOCK_COLOR);
+    SettingsColorHandler mClockColorHandler = new SettingsColorHandler(Settings.System.CLOCK_COLOR, -16777216);
+
+    /* dBm Signal Font Color */
+    SettingsColorHandler mDbmColorHandler = new SettingsColorHandler(Settings.System.DBM_COLOR, -16777216);
+
+    private class SettingsColorHandler implements ColorPickerDialog.OnColorChangedListener {
+
+        private final String mSetting;
+        private final int mDefaultColor;
+
+        private SettingsColorHandler(String setting, int defaultColor) {
+            mSetting = setting;
+            mDefaultColor = defaultColor;
         }
-        catch (SettingNotFoundException e) {
-            return -16777216;
+
+        public void colorChanged(int color) {
+            Settings.System.putInt(getContentResolver(), mSetting, color);
+        }
+
+        private int readColor() {
+            try {
+                return Settings.System.getInt(getContentResolver(), mSetting);
+            }
+            catch (SettingNotFoundException e) {
+                return mDefaultColor;
+            }
         }
     }
 }

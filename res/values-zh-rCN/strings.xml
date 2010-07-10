@@ -23,20 +23,27 @@
     <string name="title_color_picker">选择一种颜色</string>
     <string name="msg_color_picker">点击中间的颜色进行确认。\n点击返回键取消。</string>
 
-    <!-- Battery and Clock -->
-    <string name="bc_title">电池与时钟</string>
-    <string name="bc_summary">电池与时钟微调设置</string>
+    <!-- Status Bar -->
+    <string name="status_bar_title">电池与时钟</string>
+    <string name="status_bar_summary">电池与时钟微调设置</string>
 
-    <!-- Battery and Clock, Battery -->
+    <!-- Status Bar, Battery -->
     <string name="battery_title">电池</string>
     <string name="pref_battery_percentage_title">电量百分比</string>
     <string name="pref_battery_percentage_summary">在状态栏中显示电量百分比</string>
     <string name="battery_status_color_title">电量百分比颜色</string>
 
-    <!-- Battery and Clock, Clock -->
+    <!-- Status Bar, Clock -->
     <string name="clock_title">时钟</string>
     <string name="title_show_clock">显示时钟</string>
     <string name="title_clock_color">时钟颜色</string>
+
+    <!-- Status Bar, dBm Signal -->
+    <string name="dbm_title">dBm signal strength</string>
+    <string name="title_show_dbm">Show dBm</string>
+    <string name="summary_on_show_dbm">Signal strength in dBm displayed in the status bar</string>
+    <string name="summary_off_show_dbm">Signal strength in dBm displayed in the status bar</string>
+    <string name="title_dbm_color">dBm color</string>
 
     <!-- Date and Provider -->
     <string name="dp_title">日期与服务供应商</string>
