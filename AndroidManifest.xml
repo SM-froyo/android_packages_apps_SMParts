@@ -10,6 +10,7 @@
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.InputActivity">
