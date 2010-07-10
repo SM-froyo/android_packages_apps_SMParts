@@ -86,7 +86,8 @@
       android:layout_alignParentLeft="true">
     </Button>
 
-    <Button android:id="@+id/test_button"
+    <view class="com.cyanogenmod.cmparts.activities.HapticAdjust$TestButton" 
+      android:id="@+id/test_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/haptic_button_test"
@@ -94,8 +95,7 @@
       android:clickable="true"
       android:textStyle="bold"
       android:minWidth="125px"
-      android:layout_centerHorizontal="true">
-    </Button>
+      android:layout_centerHorizontal="true"/>
 
     <Button android:id="@+id/cancel_button"
       android:layout_height="wrap_content"
