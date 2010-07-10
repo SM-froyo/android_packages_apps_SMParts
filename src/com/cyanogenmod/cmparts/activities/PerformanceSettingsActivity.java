@@ -3,7 +3,6 @@ package com.cyanogenmod.cmparts.activities;
 import com.cyanogenmod.cmparts.R;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -42,9 +41,17 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
     
     private static final String HEAPSIZE_DEFAULT = "16m";
     
+    private static final String USE_DITHERING_PREF = "pref_use_dithering";
+    
+    private static final String USE_DITHERING_PERSIST_PROP = "persist.sys.use_dithering";
+    
+    private static final String USE_DITHERING_DEFAULT = "1";
+    
     private CheckBoxPreference mCompcachePref;
 
     private CheckBoxPreference mJitPref;
+    
+    private CheckBoxPreference mUseDitheringPref;
     
     private ListPreference mHeapsizePref;
     
@@ -72,6 +79,10 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         String jitMode = SystemProperties.get(JIT_PERSIST_PROP,
                 SystemProperties.get(JIT_PROP, JIT_ENABLED));
         mJitPref.setChecked(JIT_ENABLED.equals(jitMode));
+        
+        mUseDitheringPref = (CheckBoxPreference) prefSet.findPreference(USE_DITHERING_PREF);
+        String useDithering = SystemProperties.get(USE_DITHERING_PERSIST_PROP, USE_DITHERING_DEFAULT);
+        mUseDitheringPref.setChecked("1".equals(useDithering));
         
         mHeapsizePref = (ListPreference) prefSet.findPreference(HEAPSIZE_PREF);
         mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP, 
@@ -101,12 +112,18 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         if (preference == mJitPref) {
             SystemProperties.set(JIT_PERSIST_PROP, 
                     mJitPref.isChecked() ? JIT_ENABLED : JIT_DISABLED);
+            return true;
+        }
+        
+        if (preference == mUseDitheringPref) {
+            SystemProperties.set(USE_DITHERING_PERSIST_PROP,
+                    mUseDitheringPref.isChecked() ? "1" : "0");
+            return true;
         }
         
         return false;
     }
     
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mHeapsizePref) {
             if (newValue != null) {

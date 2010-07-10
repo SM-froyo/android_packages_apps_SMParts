@@ -17,16 +17,12 @@ import android.util.Log;
 
 public class ApplicationActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
-    private static final String BROTIPS_PREF= "pref_brotips";
-
     private static final String INSTALL_LOCATION_PREF = "pref_install_location";
     
     private static final String LOG_TAG = "CMParts";
     
     private ListPreference mInstallLocationPref;
     
-    private CheckBoxPreference mBrotipsPref;
-
     private IPackageManager mPm;
         
     @Override
@@ -38,14 +34,10 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
             Log.wtf(LOG_TAG, "Unable to get PackageManager!");
         }
         
-        setTitle(R.string.performance_settings_title);
+        setTitle(R.string.application_settings_title);
         addPreferencesFromResource(R.xml.application_settings);
         
         PreferenceScreen prefSet = getPreferenceScreen();
-        
-        mBrotipsPref = (CheckBoxPreference) prefSet.findPreference(BROTIPS_PREF);
-        mBrotipsPref.setChecked(Settings.System.getInt(getContentResolver(), 
-                Settings.System.BROTIPS, 0) == 1);
         
         mInstallLocationPref = (ListPreference) prefSet.findPreference(INSTALL_LOCATION_PREF);
         String installLocation = "0";
@@ -58,17 +50,6 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
         mInstallLocationPref.setOnPreferenceChangeListener(this);
     }
     
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mBrotipsPref) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.BROTIPS, mBrotipsPref.isChecked() ? 1 : 0);
-            return true;
-        }
-        return false;
-    }
-    
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mInstallLocationPref) {
             if (newValue != null) {
