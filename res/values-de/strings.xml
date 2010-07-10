@@ -19,7 +19,6 @@
   <string name="pref_pinch_reflow_summary">Nach Pinch-To-Zoom Inhalte sofort neu anpassen</string>
 
   <!-- User interface, Other -->
-  <string name="ui_other_title">Anderes</string>
   <string name="title_color_picker">Farbe wählen</string>
   <string name="msg_color_picker">Zum Bestätigen auf Mitte der Farbe tippen.\nZum Abbrechen Zurück-Taste drücken.</string>
 
