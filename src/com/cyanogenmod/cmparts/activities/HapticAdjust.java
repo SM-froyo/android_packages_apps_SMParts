@@ -9,17 +9,16 @@ import android.widget.Button;
 import android.text.InputType;
 import android.view.View;
 import android.view.View.OnClickListener;
-
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import android.widget.TableRow;
-
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.graphics.Color;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Vibrator;
@@ -32,7 +31,7 @@ public class HapticAdjust extends Activity {
     Button subButton;
     Button saveButton;
     Button cancelButton;
-    Button testButton;
+    TestButton mTestButton;
     Button revertButton;
     Button defaultButton;
 
@@ -40,8 +39,7 @@ public class HapticAdjust extends Activity {
     int counter=0;
     String startString = "0";
     String defString = "0";
-
-
+    
 static final String TAG = "HapticAdjust";
 static final int DOWN_TEXT = 1;
 static final int UP_TEXT = 2;
@@ -55,7 +53,7 @@ static final int TAP_TEXT = 4;
             if(v==subButton) { subRow();}
             if(v==saveButton) { saveChanges();}
             if(v==cancelButton) {cancelChanges();}
-            if(v==testButton) {testVibe();}
+            if(v==mTestButton) {testVibe();}
             if(v==revertButton) {revertChanges();}
             if(v==defaultButton) {defSet(hapType);}
         }
@@ -64,7 +62,6 @@ static final int TAP_TEXT = 4;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         if (HapticAdjust.this.getIntent().getExtras() != null)
         {
@@ -117,7 +114,7 @@ static final int TAP_TEXT = 4;
         addButton = (Button) findViewById(R.id.add_button);
         subButton = (Button) findViewById(R.id.sub_button);
         saveButton = (Button) findViewById(R.id.save_button);
-        testButton = (Button) findViewById(R.id.test_button);
+        mTestButton = (TestButton) findViewById(R.id.test_button);
         cancelButton = (Button) findViewById(R.id.cancel_button);
         revertButton = (Button) findViewById(R.id.revert_button);
         defaultButton = (Button) findViewById(R.id.default_button);
@@ -127,7 +124,7 @@ static final int TAP_TEXT = 4;
         cancelButton.setOnClickListener(myClickListener);
         revertButton.setOnClickListener(myClickListener);
         defaultButton.setOnClickListener(myClickListener);
-        testButton.setOnClickListener(myClickListener);
+        mTestButton.setOnClickListener(myClickListener);
         mVibrator = new Vibrator();
         setupRows(startString);
     }
@@ -214,7 +211,7 @@ static final int TAP_TEXT = 4;
         return;
     }
 
-// save settings: trim off any trailing 0's, return to spareparts with bundle
+// save settings: trim off any trailing 0's, return to haptictweaks with bundle
     private void saveChanges() {
         int[] array = new int[counter];
         array = getArray();
@@ -398,4 +395,18 @@ static final int TAP_TEXT = 4;
         }
         return out;
     }
+    
+    
+    public static class TestButton extends Button {
+        public TestButton(Context context) {
+           super(context);
+            }
+        public TestButton(Context context, AttributeSet attrs){
+            super(context, attrs);
+            }
+        @Override
+        public void playSoundEffect(int effectId) {
+            return;
+        }
+    } 
 }

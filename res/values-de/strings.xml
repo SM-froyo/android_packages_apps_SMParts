@@ -105,18 +105,19 @@
   <string name="xml_invalid_color">Ungültiger Farbcode im XML!</string>
   <string name="xml_import_success">XML-Import erfolgreich! Neustart erforderlich um Änderungen anzuwenden.</string>
 
-  <!-- Trackball Wake -->
+  <!-- Input Settings -->
+  <string name="input_settings_title">Eingabe-Einstellungen</string>
+  <string name="input_settings_summary">Verhalten Control-Taste</string>
+  <string name="button_settings_title">Tasten-Einstellungen</string>
   <string name="pref_trackball_wake_title">Trackball-Aufwachen</string>
   <string name="pref_trackball_wake_summary">Aufwecken des Gerätes durch Drücken des Trackballs.</string>
-
-  <!-- Trackball Unlock -->
   <string name="pref_trackball_unlock_title">Trackball-Entsperren</string>
   <string name="pref_trackball_unlock_summary">Entsperren des Gerätes durch Drücken des Trackballs</string>
+  <string name="pref_menu_unlock_title">Menu entsterren</string>
+  <string name="pref_menu_unlock_summary">Menu-Taste entsperrt das Gerät.</string>
+  <string name="pref_trackball_screen_title">Immer pulsieren</string>
+  <string name="pref_trackball_screen_summary">Trackball-Licht pulsiert, wenn Bildschirm an ist.</string>
 
-  <!-- br0tips -->
-  <string name="pref_brotips_title">Br0tips verwenden</string>
-  <string name="pref_brotips_summary">Hinweise auf Bildschirm ändern</string>
-        
   <!-- Long Press Home -->
   <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
   <string name="long_press_home_summary">Anzahl letzter Apps, etc.</string>
@@ -141,6 +142,10 @@
   <string name="pref_jit_mode_title">JIT verwenden</string>
   <string name="pref_jit_mode_summary">Den Dalvik Just-In-Time Compiler verwenden (Neustart erforderlich)</string>
 
+  <!-- Performance Settings : Dithering -->
+  <string name="pref_use_dithering_title">Dithering</string>
+  <string name="pref_use_dithering_summary">Dithering von Oberflächen verbessert die Bildqualität auf Kosten der Geräteleistung (Neustart erforderlich)</string>
+
   <!-- Performance Settings : VM Heap Size -->
   <string name="pref_heapsize_title">Größe VM-Heaps</string>
   <string name="pref_heapsize_summary">Maximale Speichernutzung pro VM-Heap (Neustart erforderlich)</string>
@@ -149,9 +154,59 @@
   <string name="performance_settings_warning_title">WARNUNG: Drachen voraus!</string>
   <string name="performance_settings_warning">Diese experimentellen Optionen beeinflussen die Leistung des Systems, wahrscheinlich zum Schlechten. Wir bitten darum, keine Fehler zu melden, wenn du die Standarteinstellungen änderst.</string>
 
-  <!-- Application Settings : br0tips -->
-  <string name="brotips_title">Br0tip-Einstellungen</string>
-  <string name="brotips_summary">Protips? More like Br0tips</string>
+  <!-- Application Settings -->
+  <string name="application_settings_title">Anwendungseinstellungen</string>
+  <string name="application_settings_summary">Verschiedene Anwendungseinstellungen ändern, wie zB. Installationsort, etc...</string>
 
-  <string name="button_settings_title">Tasten-Einstellungen</string>
+  <!-- Application Settings : Install Location -->
+  <string name="pref_install_location_title">Installationsort</string>
+  <string name="pref_install_location_summary">Installationsort für neue Anwendungen auswählen</string>
+
+  <!-- HapticTweaks -->
+  <string name="haptic_title">Haptisches Feedback Tweaks</string>
+  <string name="haptic_summary">Anpassungen für Stärke und Auftreten des haptischen Feedbacks (HF)</string>
+
+  <string name="title_haptic_feedback">HF bei Drücken</string>
+  <string name="summary_on_haptic_feedback">Haptisches Feedback beim Drücken von Bildschirmtasten und bestimmten Interaktionen</string>
+  <string name="summary_off_haptic_feedback">Kein haptisches Feedback bei Bildschirmtasten und bestimmten Interaktionen</string>
+
+  <string name="title_haptic_feedback_up">HF bei Loslassen</string>
+  <string name="summary_on_haptic_feedback_up">Haptisches Feedback beim Loslassen von Bildschirmtasten und bestimmten Interaktionen</string>
+  <string name="summary_off_haptic_feedback_up">Kein haptisches Feedback beim Loslassen von Bildschirmtasten und bestimmten Interaktionen</string>
+
+  <string name="title_haptic_feedback_all">HF bei Bildschirmelementen</string>
+  <string name="summary_on_haptic_feedback_all">Haptisches Feedback beim Auswählen von Bildschirmelementen</string>
+  <string name="summary_off_haptic_feedback_all">Kein haptisches Feedback beim Auswählen von Bildschirmelementen</string>
+
+  <string name="title_haptic_down_decider">Muster: Runter</string>
+  <string name="title_haptic_up_decider">Muster: Hoch</string>
+  <string name="title_haptic_long_decider">Muster: Gedrückt halten</string>
+  <string name="title_haptic_tap_decider">Muster: Tastatur antippen</string>
+
+  <string name="title_haptic_menu">HF-Anpassungen</string>
+  <string name="title_haptic_notice">NEUSTART ERFORDERLICH ZUM ANWENDEN DER ÄNDERUNGEN</string>
+
+  <string name="haptic_delay_desc">Millisek. Verzögerung</string>
+  <string name="haptic_vibe_desc">Millisek. Dauer</string>
+
+  <string name="haptic_down_description">Anpassen der HF-Werte für Tasten DRÜCKEN\n(Virtuelle Tasten und bestimmte Interaktionen)</string>
+  <string name="haptic_up_description">Anpassen der HF-Werte für Tasten LOSLASSEN\n(Virtuelle Tasten und die meisten Bildschirmeingaben)</string>
+  <string name="haptic_long_description">Anpassen der HF-Werte für GEDRÜCKT HALTEN</string>
+  <string name="haptic_tap_description">Anpassen der HF-Werte für Tippen auf Bildschirmtastatur</string>
+
+  <string name="haptic_plus_minus_desc">Plus- oder Minustasten zum Hinzufügen oder Entfernen von Schritten in der Abfolge drücken</string>
+
+  <string name="haptic_button_plus">+</string>
+  <string name="haptic_button_minus">-</string>
+
+  <string name="haptic_button_save">Speichern</string>
+  <string name="haptic_button_test">Test</string>
+  <string name="haptic_button_cancel">Abbrechen</string>
+  <string name="haptic_button_revert">Wiederherstellen</string>
+  <string name="haptic_button_default">Standards laden</string>
+
+  <string name="haptic_save_toast">Speichere HF-Werte: </string>
+  <string name="haptic_cancel_toast">HF-Werte unverändert.</string>
+  <string name="haptic_revert_toast">Wiederherstellen letzter Werte...</string>
+  <string name="haptic_default_toast">Lade Standardwerte...</string>
 </resources>

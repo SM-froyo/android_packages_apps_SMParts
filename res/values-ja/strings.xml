@@ -140,7 +140,11 @@
 
     <!-- Performance Settings : JIT Mode -->
     <string name="pref_jit_mode_title">JITを使用する</string>
-    <string name="pref_jit_mode_summary">Dalvik just-in-time コンパイラを使用する (再起動が必要)</string>
+    <string name="pref_jit_mode_summary">Dalvik just-in-time コンパイラを使用する(再起動が必要)</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">サーフェスディザリング</string>
+    <string name="pref_use_dithering_summary">ディザリングは画像品質が向上するが相応のパフォーマンスが必要(再起動が必要)</string>
 
     <!-- Performance Setting : VM Heap Size -->
     <string name="pref_heapsize_title">VMヒープサイズ</string>
