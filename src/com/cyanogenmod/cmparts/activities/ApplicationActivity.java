@@ -19,7 +19,11 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
 
     private static final String INSTALL_LOCATION_PREF = "pref_install_location";
     
+    private static final String MOVE_ALL_APPS_PREF = "pref_move_all_apps";
+    
     private static final String LOG_TAG = "CMParts";
+    
+    private CheckBoxPreference mMoveAllAppsPref;
     
     private ListPreference mInstallLocationPref;
     
@@ -48,8 +52,22 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
         }
         mInstallLocationPref.setValue(installLocation);
         mInstallLocationPref.setOnPreferenceChangeListener(this);
+        
+        mMoveAllAppsPref = (CheckBoxPreference) prefSet.findPreference(MOVE_ALL_APPS_PREF);
+        mMoveAllAppsPref.setChecked(Settings.Secure.getInt(getContentResolver(), 
+            Settings.Secure.ALLOW_MOVE_ALL_APPS_EXTERNAL, 0) == 1);
     }
-    
+        
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mMoveAllAppsPref) {
+            Settings.Secure.putInt(getContentResolver(),
+                Settings.Secure.ALLOW_MOVE_ALL_APPS_EXTERNAL, mMoveAllAppsPref.isChecked() ? 1 : 0);
+            return true;
+        }
+        return false;
+    }
+
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mInstallLocationPref) {
             if (newValue != null) {

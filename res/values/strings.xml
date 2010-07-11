@@ -163,6 +163,10 @@
     <string name="application_settings_title">Application settings</string>
     <string name="application_settings_summary">Change various application settings such as install location</string>
 
+    <!-- Application Settings : Move any app -->
+    <string name="pref_move_all_apps_title">Allow application moving</string>
+    <string name="pref_move_all_apps_summary">Allow moving of any application to external storage</string>
+
     <!-- Application Settings : Install Location -->
     <string name="pref_install_location_title">Install location</string>
     <string name="pref_install_location_summary">Select where new applications should be installed</string>
