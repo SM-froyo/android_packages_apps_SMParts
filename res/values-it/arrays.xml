@@ -23,6 +23,16 @@
         <item>Interna</item>
         <item>Esterna</item>
     </string-array>
+   
+    <string-array name="entries_render_effect">
+        <item>Nessun effetto render</item>
+        <item>Night mode (rosso)</item>
+        <item>Terminale (verde)</item>
+        <item>Blu </item>
+        <item>Ambra</item>
+        <item>Salmone</item>
+        <item>Fucsia</item>
+    </string-array>
 
     
 
