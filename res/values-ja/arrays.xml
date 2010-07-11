@@ -23,4 +23,12 @@
         <item>外部</item>
     </string-array>
 
+    <string-array name="entries_render_effect">
+        <item>エフェクトなし</item>
+        <item>ナイトモード (赤)</item>
+        <item>ターミナル (緑)</item>
+        <item>アンバー</item>
+        <item>サーモン</item>
+    </string-array>
+
 </resources>

@@ -158,6 +158,10 @@
     <string name="application_settings_title">アプリケーション設定</string>
     <string name="application_settings_summary">インストール場所など、いくつかのアプリケーション設定</string>
 
+    <!-- Application Settings : Move any app -->
+    <string name="pref_move_all_apps_title">アプリケーションの移動を許可</string>
+    <string name="pref_move_all_apps_summary">すべてのアプリケーションについて、外部ストレージへの移動を許可する</string>
+
     <!-- Application Settings : Install Location -->
     <string name="pref_install_location_title">インストール場所</string>
     <string name="pref_install_location_summary">新しいアプリケーションがインストールされる場所を選択</string>
@@ -209,5 +213,11 @@
     <string name="haptic_cancel_toast">値は変更されません</string>
     <string name="haptic_revert_toast">前回の値に戻します</string>
     <string name="haptic_default_toast">初期設定に戻します</string>
+
+    <string name="general_title">一般</string>
+
+    <!-- UI Settings : Render effect -->
+    <string name="pref_render_effect_title">描画エフェクト</string>
+    <string name="pref_render_effect_summary">スクリーンを描画する色を変更する(バッテリ維持の可能性がある)</string>
 
 </resources>
