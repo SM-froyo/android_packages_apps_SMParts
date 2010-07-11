@@ -157,6 +157,10 @@
   <string name="application_settings_title">Anwendungseinstellungen</string>
   <string name="application_settings_summary">Verschiedene Anwendungseinstellungen ändern, wie zB. Installationsort, etc...</string>
 
+  <!-- Application Settings : Move any app -->
+  <string name="pref_move_all_apps_title">Verschieben erlauben</string>
+  <string name="pref_move_all_apps_summary">Das Verschieben beliebiger Anwendungen auf externen Speicher erlauben</string>
+
   <!-- Application Settings : Install Location -->
   <string name="pref_install_location_title">Installationsort</string>
   <string name="pref_install_location_summary">Installationsort für neue Anwendungen auswählen</string>
