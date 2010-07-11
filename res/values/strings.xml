@@ -219,4 +219,10 @@
     <string name="haptic_revert_toast">Restoring last-used values</string>
     <string name="haptic_default_toast">Loading hard-coded defaults</string>
 
+    <string name="general_title">General</string>
+
+    <!-- UI Settings : Render effect -->
+    <string name="pref_render_effect_title">Render effect</string>
+    <string name="pref_render_effect_summary">Change what colors are used to draw the screen (potential battery savings)</string>
+
 </resources>
