@@ -73,7 +73,7 @@
 
     <!-- Notifications -->
     <string name="title_notifications_sb">Statusbar notifications</string>
-    <string name="title_notifications_color_tweaks">Notifications Colors</string>
+    <string name="title_notifications_color_tweaks">Notifications colors</string>
     <string name="summary_notifications_color_tweaks">Notifications ticker, ongoing notifications, latest notifications, clear notifications, etc</string>
     <string name="title_notifications_ticker_color">Notifications ticker color</string>
     <string name="title_notifications_count_color">Notifications count color</string>
