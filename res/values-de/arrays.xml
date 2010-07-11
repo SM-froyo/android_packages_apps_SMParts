@@ -21,4 +21,14 @@
     <item>Intern</item>
     <item>Extern</item>
   </string-array>
+
+  <string-array name="entries_render_effect">
+    <item>Kein Render-Effekt</item>
+    <item>Nachtmodus (rot)</item>
+    <item>Terminal (grün)</item>
+    <item>Blau</item>
+    <item>Amber</item>
+    <item>Lachs</item>
+    <item>Fuchsia</item>
+  </string-array>
 </resources>
