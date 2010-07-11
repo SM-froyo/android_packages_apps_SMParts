@@ -208,4 +208,10 @@
   <string name="haptic_cancel_toast">HF-Werte unverändert.</string>
   <string name="haptic_revert_toast">Wiederherstellen letzter Werte...</string>
   <string name="haptic_default_toast">Lade Standardwerte...</string>
+
+  <string name="general_title">Allgemein</string>
+
+  <!-- UI Settings : Render effect -->
+  <string name="pref_render_effect_title">Render-Effekt</string>
+  <string name="pref_render_effect_summary">Die Farbe zum Zeichnen des Bildschirms wählen</string>
 </resources>
