@@ -112,7 +112,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         return true;
     }
     
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mRenderEffectPref) {
             writeRenderEffect(Integer.valueOf((String)newValue));
