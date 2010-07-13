@@ -46,7 +46,7 @@
         <item>No render effect</item>
         <item>Night mode (red)</item>
         <item>Terminal (green)</item>
-        <item>Blue </item>
+        <item>Blue</item>
         <item>Amber</item>
         <item>Salmon</item>
         <item>Fuscia</item>
@@ -61,5 +61,23 @@
         <item>5</item>
         <item>6</item>
     </string-array>
+    
+	<string-array name="render_entries">
+        <item>Night Mode (Red)</item>
+        <item>Terminal (Green)</item>
+        <item>Blue</item>
+        <item>Amber</item>
+        <item>Salmon</item>
+        <item>Fuscia</item>
+	</string-array>
+
+	<string-array name="render_values">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+	</string-array>
 
 </resources>
