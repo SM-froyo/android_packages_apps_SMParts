@@ -34,6 +34,15 @@
         <item>Fucsia</item>
     </string-array>
 
+    <string-array name="render_entries">
+        <item>Night Mode (Rosso)</item>
+        <item>Terminal (Verde)</item>
+        <item>Blu</item>
+        <item>Ambra</item>
+        <item>Salmone</item>
+        <item>Fucsia</item>
+	</string-array>
+
     
 
 </resources>
