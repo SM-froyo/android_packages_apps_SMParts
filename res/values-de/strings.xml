@@ -225,4 +225,17 @@
   <!-- UI Settings : Render effect -->
   <string name="pref_render_effect_title">Render-Effekt</string>
   <string name="pref_render_effect_summary">Die Farbe zum Zeichnen des Bildschirms wählen</string>
+
+  <string name="widget_name">RenderFX Widget</string>
+  <string name="renderfx_temp">RenderFX</string>
+  <string name="prefs_render_effect">Render-Effect</string>
+  <string name="notify_render_effect">Render-Effect ein</string>
+
+  <!--  Widget Types -->
+  <string name="night">Nacht</string>
+  <string name="terminal">Terminal</string>
+  <string name="blue">Blau</string>
+  <string name="amber">Amber</string>
+  <string name="salmon">Lachs</string>
+  <string name="fuscia">Fuchsie</string>
 </resources>
