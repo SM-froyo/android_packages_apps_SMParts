@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Generic -->
-    <string name="app_name">CyanogenMod settings</string>
+    <string name="app_name">Impostazioni CyanogenMod</string>
 
     <!-- User interface -->
     <string name="ui_title">User interface</string>
