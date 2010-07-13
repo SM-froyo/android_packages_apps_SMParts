@@ -40,11 +40,11 @@
     <string name="title_clock_color">Colore orologio</string>
 
     <!-- Status Bar, dBm Signal -->
-    <string name="dbm_title">dBm signal strength</string>
-    <string name="title_show_dbm">Show dBm</string>
-    <string name="summary_on_show_dbm">Signal strength in dBm displayed in the status bar</string>
-    <string name="summary_off_show_dbm">Signal strength in dBm displayed in the status bar</string>
-    <string name="title_dbm_color">dBm color</string>
+    <string name="dbm_title">Potenza segnale dBm</string>
+    <string name="title_show_dbm">Mostra dBm</string>
+    <string name="summary_on_show_dbm">La potenza del segnale viene visualizzata in dBm nella status bar</string>
+    <string name="summary_off_show_dbm">La potenza del segnale non viene visualizzato in dBm nella status bar</string>
+    <string name="title_dbm_color">colore dBm</string>
 
     <!-- Date and Provider -->
     <string name="dp_title">Data e operatore</string>
