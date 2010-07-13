@@ -225,4 +225,16 @@
     <string name="pref_render_effect_title">Effetto Render</string>
     <string name="pref_render_effect_summary">Scegli che colori utilizzare per visualizzare le immagini sullo schermo (possibili risparmi energetici)</string>
     
+<string name="widget_name">Widget RenderFX</string>
+    <string name="renderfx_temp">RenderFX</string>
+	<string name="prefs_render_effect">Effetto Render</string>
+	<string name="notify_render_effect">Effetto render attivo</string>
+	
+	<!--  Widget Types -->
+	<string name="night">Night</string>
+	<string name="terminal">Term</string>
+    <string name="blue">Blu</string>
+	<string name="amber">Ambra</string>
+	<string name="salmon">Salmone</string>
+	<string name="fuscia">Fucsia</string>
 </resources>
