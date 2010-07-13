@@ -14,12 +14,12 @@
     <!-- Status Bar Customization -->
     <PreferenceCategory android:title="@string/ui_status_bar">
 
-        <!-- Battery and Clock -->
-        <PreferenceScreen android:key="battery_clock_settings"
-            android:title="@string/bc_title" android:summary="@string/bc_summary">
+        <!-- Status Bar -->
+        <PreferenceScreen android:key="status_bar_settings"
+            android:title="@string/status_bar_title" android:summary="@string/status_bar_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.BatteryClockActivity" />
+                android:targetClass="com.cyanogenmod.cmparts.activities.StatusBarActivity" />
         </PreferenceScreen>
 
         <!-- Date and Provider -->

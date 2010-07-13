@@ -34,7 +34,7 @@ public class DateProviderActivity extends PreferenceActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setTitle(R.string.bc_title);
+        setTitle(R.string.status_bar_title);
         addPreferencesFromResource(R.xml.date_provider_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();

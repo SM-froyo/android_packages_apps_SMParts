@@ -19,4 +19,14 @@
          android:defaultValue="-16777216"
          android:dependency="show_status_clock" />
    </PreferenceCategory>
+   <PreferenceCategory android:title="@string/dbm_title">
+      <CheckBoxPreference
+         android:key="show_status_dbm"
+         android:title="@string/title_show_dbm"
+         android:disableDependentsState="false" />
+      <Preference android:key="dbm_color"
+         android:title="@string/title_dbm_color"
+         android:defaultValue="-16777216"
+         android:dependency="show_status_dbm" />
+   </PreferenceCategory>
 </PreferenceScreen>

@@ -116,6 +116,7 @@ public class TweaksExtras extends PreferenceActivity {
     }
     private void resetUITweaks() {
         Settings.System.putInt(getContentResolver(), Settings.System.CLOCK_COLOR, -16777216);
+        Settings.System.putInt(getContentResolver(), Settings.System.DBM_COLOR, -16777216);
         Settings.System.putInt(getContentResolver(), Settings.System.DATE_COLOR, -16777216);
         Settings.System.putInt(getContentResolver(), Settings.System.SPN_LABEL_COLOR, -16777216);
         Settings.System.putInt(getContentResolver(), Settings.System.PLMN_LABEL_COLOR, -16777216);
@@ -129,8 +130,9 @@ public class TweaksExtras extends PreferenceActivity {
         Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_ITEM_TITLE_COLOR, -16777216);
         Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_ITEM_TEXT_COLOR, -16777216);
         Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_ITEM_TIME_COLOR, -16777216);
-        Settings.System.putInt(getContentResolver(), Settings.System.BATTERY_PERCENTAGE_STATUS_ICON,1);
+        Settings.System.putInt(getContentResolver(), Settings.System.BATTERY_PERCENTAGE_STATUS_ICON, 0);
         Settings.System.putInt(getContentResolver(), Settings.System.SHOW_STATUS_CLOCK, 1);
+        Settings.System.putInt(getContentResolver(), Settings.System.SHOW_STATUS_DBM, 0);
         Settings.System.putInt(getContentResolver(), Settings.System.SHOW_PLMN_LS, 1);
         Settings.System.putInt(getContentResolver(), Settings.System.SHOW_SPN_LS, 1);
         Settings.System.putInt(getContentResolver(), Settings.System.SHOW_PLMN_SB, 1);
@@ -156,6 +158,7 @@ public class TweaksExtras extends PreferenceActivity {
             ArrayList<String> elements = new ArrayList<String>();
             elements.add(Settings.System.BATTERY_PERCENTAGE_STATUS_COLOR);
             elements.add(Settings.System.CLOCK_COLOR);
+            elements.add(Settings.System.DBM_COLOR);
             elements.add(Settings.System.DATE_COLOR);
             elements.add(Settings.System.PLMN_LABEL_COLOR);
             elements.add(Settings.System.SPN_LABEL_COLOR);
