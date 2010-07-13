@@ -24,8 +24,8 @@
     <string name="msg_color_picker">中央をタップして確定\n戻るボタンでキャンセル</string>
 
     <!-- Status Bar -->
-    <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_summary">バッテリと時計の調整</string>
+    <string name="status_bar_title">ステータスバー</string>
+    <string name="status_bar_summary">ステータスバーの調整</string>
 
     <!-- Status Bar, Battery -->
     <string name="battery_title">バッテリ</string>
@@ -43,7 +43,7 @@
     <string name="title_show_dbm">電波強度を表示</string>
     <string name="summary_on_show_dbm">電波強度をdBm単位でステータスバーに表示する</string>
     <string name="summary_off_show_dbm">電波強度をdBm単位でステータスバーに表示する</string>
-    <string name="title_dbm_color">dBmのカラー</string>
+    <string name="title_dbm_color">電波強度の色</string>
 
     <!-- Date and Provider -->
     <string name="dp_title">日付とプロバイダ</string>
