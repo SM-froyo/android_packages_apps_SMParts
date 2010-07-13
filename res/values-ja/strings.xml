@@ -39,11 +39,11 @@
     <string name="title_clock_color">時計の色</string>
 
     <!-- Status Bar, dBm Signal -->
-    <string name="dbm_title">dBm signal strength</string>
-    <string name="title_show_dbm">Show dBm</string>
-    <string name="summary_on_show_dbm">Signal strength in dBm displayed in the status bar</string>
-    <string name="summary_off_show_dbm">Signal strength in dBm displayed in the status bar</string>
-    <string name="title_dbm_color">dBm color</string>
+    <string name="dbm_title">電波強度(dBm)</string>
+    <string name="title_show_dbm">電波強度を表示</string>
+    <string name="summary_on_show_dbm">電波強度をdBm単位でステータスバーに表示する</string>
+    <string name="summary_off_show_dbm">電波強度をdBm単位でステータスバーに表示する</string>
+    <string name="title_dbm_color">dBmのカラー</string>
 
     <!-- Date and Provider -->
     <string name="dp_title">日付とプロバイダ</string>
@@ -227,4 +227,16 @@
     <string name="pref_render_effect_title">描画エフェクト</string>
     <string name="pref_render_effect_summary">スクリーンを描画する色を変更する(バッテリ維持の可能性がある)</string>
 
+    <string name="widget_name">RenderFXウィジェット</string>
+    <string name="renderfx_temp">RenderFX</string>
+    <string name="prefs_render_effect">描画エフェクト</string>
+    <string name="notify_render_effect">描画エフェクトオン</string>
+
+    <!--  Widget Types -->
+    <string name="night">ナイト</string>
+    <string name="terminal">ターミナル</string>
+    <string name="blue">ブルー</string>
+    <string name="amber">アンバー</string>
+    <string name="salmon">サーモン</string>
+    <string name="fuscia">フューシャ</string>
 </resources>
