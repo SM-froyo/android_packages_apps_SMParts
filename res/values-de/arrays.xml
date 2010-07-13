@@ -30,8 +30,86 @@
     <item>Amber</item>
     <item>Lachs</item>
     <item>Fuchsia</item>
-    <item>Calibrated (N1)</item>
-    <item>Calibrated (N1) Low Red</item>
-    <item>Calibrated (N1) Cool</item>
+    <item>Kalibriert (N1)</item>
+    <item>Kalibriert (N1) Schwachrot</item>
+    <item>Kalibriert (N1) Kalt</item>
+  </string-array>
+
+  <string-array name="entries_trackball_colors">
+    <item>Grün</item>
+    <item>Weiß</item>
+    <item>Rot</item>
+    <item>Blau</item>
+    <item>Gelb</item>
+    <item>Cyan</item>
+    <item>Magenta</item>
+    <item>Pink</item>
+    <item>Orange</item>
+    <item>Hellblau</item>
+    <item>Zufällig</item>
+  </string-array>
+
+  <string-array name="pref_trackball_blink_rate_entries">
+    <item>2 (Schnell)</item>
+    <item>3</item>
+    <item>4 (Mittel)</item>
+    <item>5</item>
+    <item>6 (Langsam)</item>
+  </string-array>
+
+  <string-array name="pref_lockscreen_delay_entries">
+    <item>Sofort</item>
+    <item>1 Sekunde</item>
+    <item>5 Sekunden</item>
+    <item>10 Sekunden</item>
+    <item>15 Sekunden</item>
+    <item>30 Sekunden</item>
+    <item>1 Minute</item>
+    <item>5 Minuten</item>
+    <item>10 Minuten</item>
+    <item>30 Minuten</item>
+  </string-array>
+
+  <string-array name="entries_light_filter_reset">
+    <item>400 Lux</item>
+    <item>500 Lux</item>
+    <item>600 Lux</item>
+    <item>700 Lux</item>
+    <item>800 Lux</item>
+    <item>900 Lux</item>
+    <item>1000 Lux</item>
+  </string-array>
+
+  <string-array name="entries_light_filter_interval">
+    <item>0,5 Sekunden</item>
+    <item>1 Sekunde</item>
+    <item>2 Sekunden</item>
+    <item>5 Sekunden</item>
+    <item>10 Sekunden</item>
+  </string-array>
+
+  <string-array name="entries_light_levels_dim">
+    <item>10</item>
+    <item>12</item>
+    <item>14</item>
+    <item>16</item>
+    <item>18</item>
+    <item>20 (Standard)</item>
+    <item>22</item>
+    <item>24</item>
+    <item>26</item>
+  </string-array>
+
+  <string-array name="entries_light_decrease_hysteresis">
+    <item>0 %</item>
+    <item>10 %</item>
+    <item>20 %</item>
+    <item>30 %</item>
+    <item>40 %</item>
+    <item>50 %</item>
+    <item>60 %</item>
+    <item>70 %</item>
+    <item>80 %</item>
+    <item>90 %</item>
   </string-array>
 </resources>
