@@ -33,4 +33,13 @@
         <item>フューシャ</item>
     </string-array>
 
+    <string-array name="render_entries">
+        <item>ナイトモード (赤)</item>
+        <item>ターミナル (緑)</item>
+        <item>ブルー</item>
+        <item>アンバー</item>
+        <item>サーモン</item>
+        <item>フューシャ</item>
+    </string-array>
+
 </resources>

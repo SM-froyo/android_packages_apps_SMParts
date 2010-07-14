@@ -1,5 +1,6 @@
 package com.cyanogenmod.cmparts.activities;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
@@ -22,6 +23,8 @@ public class NotificationsActivity extends PreferenceActivity {
     private static final String UI_NOTIF_ITEM_TITLE_COLOR = "notifications_title_color";
     private static final String UI_NOTIF_ITEM_TEXT_COLOR = "notifications_text_color";
     private static final String UI_NOTIF_ITEM_TIME_COLOR = "notifications_time_color";
+    private static final String UI_NOTIF_BAR_COLOR = "not_bar_color_mask";
+    private static final String UI_CUSTOM_NOT_BAR = "custom_not_bar";
 
     private Preference mNotifTickerColor;
     private Preference mNotifCountColor;
@@ -32,7 +35,9 @@ public class NotificationsActivity extends PreferenceActivity {
     private Preference mNotifItemTitlePref;
     private Preference mNotifItemTextPref;
     private Preference mNotifItemTimePref;
-
+    private Preference mNotifBarColorPref;
+    private CheckBoxPreference mCustomNotBar;
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +56,8 @@ public class NotificationsActivity extends PreferenceActivity {
         mNotifItemTitlePref = prefSet.findPreference(UI_NOTIF_ITEM_TITLE_COLOR);
         mNotifItemTextPref = prefSet.findPreference(UI_NOTIF_ITEM_TEXT_COLOR);
         mNotifItemTimePref = prefSet.findPreference(UI_NOTIF_ITEM_TIME_COLOR);
+        mNotifBarColorPref = prefSet.findPreference(UI_NOTIF_BAR_COLOR);
+        mCustomNotBar = (CheckBoxPreference) prefSet.findPreference(UI_CUSTOM_NOT_BAR);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -108,6 +115,17 @@ public class NotificationsActivity extends PreferenceActivity {
                 mNotifItemTimeColorListener,
                 readNotifItemTimeColor());
             cp.show();
+        }
+        else if (preference == mNotifBarColorPref) {
+            ColorPickerDialog cp = new ColorPickerDialog(this,
+                mNotifBarColorListener,
+                readNotifBarColor());
+            cp.show();
+        }
+        else if (preference == mCustomNotBar) {
+        	value = mCustomNotBar.isChecked();
+        	Settings.System.putInt(getContentResolver(), 
+        			Settings.System.NOTIF_BAR_CUSTOM, value ? 1 : 0);
         }
         return true;
     }
@@ -244,6 +262,25 @@ public class NotificationsActivity extends PreferenceActivity {
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_ITEM_TIME_COLOR, color);
+            }
+    };
+    private int readNotifBarColor() {
+        try {
+            return Settings.System.getInt(getContentResolver(), Settings.System.NOTIF_BAR_COLOR);
+        }
+        catch (SettingNotFoundException e) {
+            return -16777216;
+        }
+    }
+    ColorPickerDialog.OnColorChangedListener mNotifBarColorListener = 
+        new ColorPickerDialog.OnColorChangedListener() {
+            public void colorChanged(int color) {
+            	int r, g, b;
+            	r = Color.red(color);
+            	g = Color.green(color);
+            	b = Color.blue(color);
+            	int noAlpha = Color.argb(255, r, g, b);
+                Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_BAR_COLOR, noAlpha);
             }
     };
 }

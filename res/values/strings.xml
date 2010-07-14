@@ -244,4 +244,17 @@
 	<string name="amber">Amber</string>
 	<string name="salmon">Salmon</string>
 	<string name="fuscia">Fuscia</string>
+	
+	<!-- Notification Bar Colors -->
+	
+	<string name="title_notification_bar">Notification bar</string>
+    <string name="title_custom_not_bar">Custom notification bar</string>
+    <string name="summary_custom_not_bar_on">Using customized notification bar color and style</string>
+    <string name="summary_custom_not_bar_off">Using classic CyanogenMod notification bar</string>
+    
+    <string name="title_square_not_bar">Squared bar style</string>
+    <string name="summary_square_not_bar_on">Using squared off notification bar style</string>
+    <string name="summary_square_not_bar_off">Using classic rounded notification bar style</string>
+    <string name="title_not_bar_color_mask">Bar color</string>
+    <string name="summary_not_bar_color_mask">Note: Transparency (alpha) setting will not be applied</string>
 </resources>

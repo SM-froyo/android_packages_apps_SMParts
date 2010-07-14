@@ -23,8 +23,8 @@
   <string name="msg_color_picker">Zum Bestätigen auf Mitte der Farbe tippen.\nZum Abbrechen Zurück-Taste drücken.</string>
 
   <!-- Status Bar -->
-  <string name="status_bar_title">Status Bar</string>
-  <string name="status_bar_summary">Tweaks für Status Bar</string>
+  <string name="status_bar_title">Statuszeile</string>
+  <string name="status_bar_summary">Tweaks für die Statuszeile</string>
 
   <!-- Status Bar, Battery -->
   <string name="battery_title">Batterie</string>
@@ -38,11 +38,11 @@
   <string name="title_clock_color">Farbe Uhr</string>
 
   <!-- Status Bar, dBm Signal -->
-  <string name="dbm_title">dBm signal strength</string>
-  <string name="title_show_dbm">Show dBm</string>
-  <string name="summary_on_show_dbm">Signal strength in dBm displayed in the status bar</string>
-  <string name="summary_off_show_dbm">Signal strength in dBm displayed in the status bar</string>
-  <string name="title_dbm_color">dBm color</string>
+  <string name="dbm_title">dBm Signalstärke</string>
+  <string name="title_show_dbm">Zeige dBm</string>
+  <string name="summary_on_show_dbm">Signalstärke in dBm in der Statuszeile anzeigen</string>
+  <string name="summary_off_show_dbm">Signalstärke in der Statuszeile wird nicht angezeigt</string>
+  <string name="title_dbm_color">Farbe dBm</string>
 
   <!-- Date and Provider -->
   <string name="dp_title">Datum und Betreiber</string>
@@ -158,7 +158,7 @@
 
   <!-- Performance Settings : Warning dialog -->
   <string name="performance_settings_warning_title">WARNUNG: Drachen voraus!</string>
-  <string name="performance_settings_warning">Diese experimentellen Optionen beeinflussen die Leistung des Systems, wahrscheinlich zum Schlechten. Wir bitten darum, keine Fehler zu melden, wenn du die Standarteinstellungen änderst.</string>
+  <string name="performance_settings_warning">Diese experimentellen Optionen beeinflussen die Leistung des Systems, wahrscheinlich zum Schlechten. Wir bitten darum, keine Fehler zu melden, wenn du die Standardeinstellungen änderst.</string>
 
   <!-- Application Settings -->
   <string name="application_settings_title">Anwendungseinstellungen</string>
@@ -225,4 +225,17 @@
   <!-- UI Settings : Render effect -->
   <string name="pref_render_effect_title">Render-Effekt</string>
   <string name="pref_render_effect_summary">Die Farbe zum Zeichnen des Bildschirms wählen</string>
+
+  <string name="widget_name">RenderFX Widget</string>
+  <string name="renderfx_temp">RenderFX</string>
+  <string name="prefs_render_effect">Render-Effect</string>
+  <string name="notify_render_effect">Render-Effect ein</string>
+
+  <!--  Widget Types -->
+  <string name="night">Nacht</string>
+  <string name="terminal">Terminal</string>
+  <string name="blue">Blau</string>
+  <string name="amber">Amber</string>
+  <string name="salmon">Lachs</string>
+  <string name="fuscia">Fuchsie</string>
 </resources>
