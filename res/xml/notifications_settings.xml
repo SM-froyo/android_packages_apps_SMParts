@@ -40,4 +40,17 @@
          android:title="@string/title_notifications_items_time"
          android:defaultValue="-16777216" />
    </PreferenceCategory>
+   <PreferenceCategory android:title="@string/title_notification_bar">
+      <CheckBoxPreference android:key="custom_not_bar"
+         android:title="@string/title_custom_not_bar"
+         android:summaryOn="@string/summary_custom_not_bar_on"
+         android:summaryOff="@string/summary_custom_not_bar_off"
+         android:defaultValue="false" />
+      <Preference
+         android:key="not_bar_color_mask"
+         android:title="@string/title_not_bar_color_mask"
+         android:summary="@string/summary_not_bar_color_mask"
+         android:defaultValue="-1"
+         android:dependency="custom_not_bar" />
+   </PreferenceCategory>
 </PreferenceScreen>
