@@ -239,4 +239,15 @@
     <string name="amber">アンバー</string>
     <string name="salmon">サーモン</string>
     <string name="fuscia">フューシャ</string>
+
+    <!-- Notification Bar Colors -->
+    <string name="title_notification_bar">通知バー</string>
+    <string name="title_custom_not_bar">通知バーのカスタマイズ</string>
+    <string name="summary_custom_not_bar_on">色やスタイルをカスタマイズした通知バーを使用する</string>
+    <string name="summary_custom_not_bar_off">CyanogenMod従来の通知バーを使用する</string>
+    <string name="title_square_not_bar">角張った通知バー</string>
+    <string name="summary_square_not_bar_on">角張ったスタイルの通知バーを使用する</string>
+    <string name="summary_square_not_bar_off">従来の角を丸めたスタイルの通知バーを使用する</string>
+    <string name="title_not_bar_color_mask">バーの色</string>
+    <string name="summary_not_bar_color_mask">メモ: 透明度(alpha値)の設定は適用されません。</string>
 </resources>
