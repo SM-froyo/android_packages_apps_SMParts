@@ -21,11 +21,13 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 	private static final String STATUS_BAR_SCREEN = "status_bar_settings";
 	private static final String DATE_PROVIDER_SCREEN = "date_provider_settings";
 	private static final String NOTIFICATION_SCREEN = "notification_settings";
+	private static final String NOTIFICATION_TRACKBALL = "trackball_notifications";
 	private static final String EXTRAS_SCREEN = "tweaks_extras";
 	
 	private PreferenceScreen mStatusBarScreen;
     private PreferenceScreen mDateProviderScreen;
     private PreferenceScreen mNotificationScreen;
+    private PreferenceScreen mTrackballScreen;;
     private PreferenceScreen mExtrasScreen;
     
     /* Other */	
@@ -57,6 +59,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mStatusBarScreen = (PreferenceScreen) prefSet.findPreference(STATUS_BAR_SCREEN);
         mDateProviderScreen = (PreferenceScreen) prefSet.findPreference(DATE_PROVIDER_SCREEN);
         mNotificationScreen = (PreferenceScreen) prefSet.findPreference(NOTIFICATION_SCREEN);
+        mTrackballScreen = (PreferenceScreen) prefSet.findPreference(NOTIFICATION_TRACKBALL);
         mExtrasScreen = (PreferenceScreen) prefSet.findPreference(EXTRAS_SCREEN);
         
         /* Rotation */
@@ -92,6 +95,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         }
         if (preference == mNotificationScreen) {
         	startActivity(mNotificationScreen.getIntent());
+        }
+        if (preference == mTrackballScreen) {
+        	startActivity(mTrackballScreen.getIntent());
         }
         if (preference == mExtrasScreen) {
         	startActivity(mExtrasScreen.getIntent());

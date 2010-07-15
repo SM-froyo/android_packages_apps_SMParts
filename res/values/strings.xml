@@ -14,6 +14,11 @@
     <string name="pref_rotation_180_title">180 degrees</string>
     <string name="pref_rotation_270_title">270 degrees</string>
 
+ 	<!-- User interface : orientation -->
+    <string name="ui_trackball">Trackball settings</string>
+    <string name="trackball_title">Trackball notifications</string>
+    <string name="trackball_summary">Control notification colors\nand pulse</string>
+
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
@@ -93,6 +98,20 @@
     <string name="title_notifications_items_title">Items title color</string>
     <string name="title_notifications_items_text">Items text color</string>
     <string name="title_notifications_items_time">Items time color</string>
+    
+	<!-- User interface: Trackball notifcations -->
+	<string name="trackball_notifications_title">Trackball Notification Colors</string>
+	<string name="dialog_color_trackball">Choose a color</string>
+	<string name="color_google_voice_title">Google Voice</string>
+	<string name="color_google_voice_summary">Notificatoin color for Google Voice</string>
+	<string name="color_mms_title">SMS/MMS</string>
+	<string name="color_mms_summary">Notification color for Messaging</string>
+	<string name="color_gmail_title">GMail</string>
+	<string name="color_gmail_summary">Notification color for Google Mail</string>
+	<string name="color_email_title">Email</string>
+	<string name="color_email_summary">Notification color for inbuilt email</string>
+	<string name="color_twitter_title">Twitter</string>
+	<string name="color_twitter_summary">Notification color for Twitter App</string>
 
     <!-- Tweaks Extras -->
     <string name="te_title">Tweaks extras</string>

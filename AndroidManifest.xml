@@ -26,6 +26,11 @@
             <action android:name="android.intent.action.MAIN"/>
          </intent-filter>
         </activity>
+        <activity android:name=".activities.TrackballNotificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.ApplicationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

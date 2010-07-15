@@ -80,4 +80,19 @@
 		<item>6</item>
 	</string-array>
 
+	<string-array name="entries_trackball_colors">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Magenta</item>
+        <item>Orange</item>
+        <item>Cyan</item>
+        <item>White</item>
+        <item>Black</item>
+        <item>Gray</item>
+        <item>LightGray</item>
+        <item>DarkGray</item>
+    </string-array>
+
 </resources>
