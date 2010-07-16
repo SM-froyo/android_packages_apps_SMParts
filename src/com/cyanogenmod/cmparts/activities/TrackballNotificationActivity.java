@@ -19,52 +19,61 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	private static final String GMAIL_PREF= "pref_gmail";
 	private static final String EMAIL_PREF= "pref_email";
 	private static final String TWITTER_PREF= "pref_twitter";
-	
+
 	private ListPreference mGoogleVoice;
 	private ListPreference mMms;
 	private ListPreference mGmail;
 	private ListPreference mEmail;
 	private ListPreference mTwitter;
-	
+
 	public static String[] mPackage;
 	public String mPackageSource;
 
-	
+	public boolean isNull(String mString) {
+		if(mString == null || mString.matches("null") 
+		|| mString.length() == 0
+		|| mString.matches("|")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public static String[] getArray(String mGetFrom) {
-		if(mGetFrom == null || mGetFrom == "|" || mGetFrom.length() == 0) {
-			String[] tempfalse = new String[15];
+		if(mGetFrom == null || mGetFrom.matches("|") || mGetFrom.length() == 0) {
+			String[] tempfalse = new String[20];
 			return tempfalse;
 		}
-		String[] temp = new String[15];
+		String[] temp;
 		temp = mGetFrom.split("\\|");
 		for(int x = 0; x < temp.length; x++)
 			Log.i("GetArray", "X="+x+" temp="+temp[x]);
 		return temp;
 	}
-	
+
 	public String createString(String[] mArray) {
 		int i;
 		String temp = "";
 		for(i = 0; i < mArray.length; i++) {
-			if(mArray[i] == "" || mArray[i] == null || mArray[i] == "null" || mArray[i].length() == 0)
+			if(mArray[i] == "" || mArray[i] == null || mArray[i].matches("null") || mArray[i].length() == 0)
 				continue;
-			
+
 			temp = temp + "|" + mArray[i];
 			Log.i("createString", "String:" +temp+ " mArray: " +mArray[i]);
 		}
 		return temp;
 	}
-	
+
 	public static String[] getPackageAndColor(String mString) {
-		if(mString == null || mString == "=" || mString.length() == 0) {
+		if(mString == null || mString.matches("=") || mString.length() == 0 || mString.matches("null")) {
 			return null;
 		}
 		String[] temp;
 		temp = mString.split("=");
-		Log.i("getPackageAndColor", "Package:" +temp[0]+ " Color: " +temp[1]);
+		Log.i("getPackageAndColor", "String: "+mString);
 		return temp;
 	}
-	
+
 	public void addPackage(String pkg, String color) {
 		String stringtemp = Settings.System.getString(getContentResolver(), Settings.System.NOTIFICATION_PACKAGE_COLORS);
 		String[] temp = getArray(stringtemp);
@@ -75,7 +84,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		for(i = 0; i < temp.length; i++) {
 			temp2 = getPackageAndColor(temp[i]);
 			if(temp2 == null) {
-				break;
+				continue;
 			}
 			Log.i("addPackNew", "Temp2 Pkg="+pkg+" temp2[0]="+temp2[0]+" temp2[1]="+temp2[1]);
 			if(temp2[0].matches(pkg)) {
@@ -92,16 +101,15 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 			//Get the last one
 			for(x = 0; x < temp.length; x++) {
 				Log.i("addPackNew", "X="+x+" temp="+temp[x]);
-				if(temp[x] == null || temp[x] == "" || temp[x] == "null")
+				if(temp[x] == null || temp[x].length() == 0 || temp[x].matches("null"))
 					break;
 			}
-			
-			//String tempcolor = pkg+"="+color;
-			//temp[x-1] = tempcolor;
+			String tempcolor = pkg+"="+color;
+			temp[x] = tempcolor;
 		}
 		Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_PACKAGE_COLORS, createString(temp));
 	}
-	
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
