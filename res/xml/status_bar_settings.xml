@@ -18,6 +18,10 @@
          android:title="@string/title_clock_color"
          android:defaultValue="-16777216"
          android:dependency="show_status_clock" />
+      <CheckBoxPreference
+         android:key="show_clock_am_pm"
+         android:title="@string/clock_show_am_pm"
+         android:dependency="show_status_clock" />
    </PreferenceCategory>
    <PreferenceCategory android:title="@string/dbm_title">
       <CheckBoxPreference

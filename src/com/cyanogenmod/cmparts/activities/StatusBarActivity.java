@@ -1,5 +1,6 @@
 package com.cyanogenmod.cmparts.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
@@ -21,6 +22,8 @@ public class StatusBarActivity extends PreferenceActivity {
     /* Display Clock */
     private static final String UI_SHOW_STATUS_CLOCK = "show_status_clock";
     private CheckBoxPreference mShowClockPref;
+    private static final String UI_SHOW_CLOCK_AM_PM = "show_clock_am_pm";
+    private CheckBoxPreference mShowAmPmPref;
     /* Clock Font Color */
     private static final String UI_CLOCK_COLOR = "clock_color";
     private Preference mClockColorPref;
@@ -50,6 +53,9 @@ public class StatusBarActivity extends PreferenceActivity {
         mShowClockPref = (CheckBoxPreference) prefSet.findPreference(UI_SHOW_STATUS_CLOCK);
         mShowClockPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.SHOW_STATUS_CLOCK, 1) != 0);
+        mShowAmPmPref = (CheckBoxPreference) prefSet.findPreference(UI_SHOW_CLOCK_AM_PM);
+        mShowAmPmPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.SHOW_TWELVE_HOUR_CLOCK_PERIOD, 1) != 0);
         /* Clock Color */
         mClockColorPref = prefSet.findPreference(UI_CLOCK_COLOR);
         /* Show dBm Signal */
@@ -78,6 +84,12 @@ public class StatusBarActivity extends PreferenceActivity {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.SHOW_STATUS_CLOCK, value ? 1 : 0);
         }
+        else if (preference == mShowAmPmPref) {
+            value = mShowAmPmPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SHOW_TWELVE_HOUR_CLOCK_PERIOD, value ? 1 : 0);
+            timeUpdated();
+        }
         /* Clock Font Color */
         else if (preference == mClockColorPref) {
             showColorPicker(mClockColorHandler);
@@ -98,6 +110,11 @@ public class StatusBarActivity extends PreferenceActivity {
     private void showColorPicker(SettingsColorHandler handler) {
         ColorPickerDialog cp = new ColorPickerDialog(this, handler, handler.readColor());
         cp.show();
+    }
+    
+    private void timeUpdated() {
+        Intent timeChanged = new Intent(Intent.ACTION_TIME_CHANGED);
+        sendBroadcast(timeChanged);
     }
 
     /* Battery Font Color */
