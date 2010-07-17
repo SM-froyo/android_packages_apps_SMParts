@@ -104,13 +104,13 @@
     <string name="message_dialog_reset">Reset all UI interface tweaks to default? Reboot to see changes</string>
     <string name="reset_ui_success">UI interface tweaks reset! Reboot to see changes</string>
     <string name="title_export_to_xml">Export colors to XML</string>
-    <string name="summary_export_to_xml">Export colors to /sdcard/spare_parts_ui.xml</string>
+    <string name="summary_export_to_xml">Export colors to /sdcard/cmparts_ui.xml</string>
     <string name="message_dialog_export">Export UI colors to XML? This will overwrite the existing file</string>
     <string name="xml_sdcard_unmounted">SD card not mounted!</string>
     <string name="xml_write_error">Error writing XML!</string>
     <string name="xml_export_success">XML export successful!</string>
     <string name="title_import_from_xml">Import colors from XML</string>
-    <string name="summary_import_from_xml">Import colors from /sdcard/spare_parts_ui.xml</string>
+    <string name="summary_import_from_xml">Import colors from /sdcard/cmparts_ui.xml</string>
     <string name="message_dialog_import">Import UI colors from XML? Reboot to see changes</string>
     <string name="xml_file_not_found">XML file not found!</string>
     <string name="xml_io_exception">Error reading file!</string>
@@ -146,7 +146,7 @@
     <!-- Performance Settings -->
     <string name="performance_settings_title">Performance settings</string>
     <string name="performance_settings_summary">Device performance tweaks</string>
-    
+
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Use Compcache</string>
     <string name="pref_compcache_summary">Compress memory for increased virtual capacity</string>
@@ -232,12 +232,12 @@
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">Render effect</string>
     <string name="pref_render_effect_summary">Change what colors are used to draw the screen (potential battery savings)</string>
-    
+
     <string name="widget_name">RenderFX Widget</string>
     <string name="renderfx_temp">RenderFX</string>
 	<string name="prefs_render_effect">Render Effect</string>
 	<string name="notify_render_effect">Render effect on</string>
-	
+
 	<!--  Widget Types -->
 	<string name="night">Night</string>
 	<string name="terminal">Term</string>
@@ -245,14 +245,14 @@
 	<string name="amber">Amber</string>
 	<string name="salmon">Salmon</string>
 	<string name="fuscia">Fuscia</string>
-	
+
 	<!-- Notification Bar Colors -->
-	
+
 	<string name="title_notification_bar">Notification bar</string>
     <string name="title_custom_not_bar">Custom notification bar</string>
     <string name="summary_custom_not_bar_on">Using customized notification bar color and style</string>
     <string name="summary_custom_not_bar_off">Using classic CyanogenMod notification bar</string>
-    
+
     <string name="title_square_not_bar">Squared bar style</string>
     <string name="summary_square_not_bar_on">Using squared off notification bar style</string>
     <string name="summary_square_not_bar_off">Using classic rounded notification bar style</string>

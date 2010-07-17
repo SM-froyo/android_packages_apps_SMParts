@@ -97,13 +97,13 @@
   <string name="message_dialog_reset">Alle Tweaks zurücksetzen? Neustart erforderlich.</string>
   <string name="reset_ui_success">Tweaks zurückgesetzt! Neu starten um Änderungen anzuwenden.</string>
   <string name="title_export_to_xml">Farbexport nach XML</string>
-  <string name="summary_export_to_xml">Farben nach /sdcard/spare_parts_ui.xml exportieren.</string>
+  <string name="summary_export_to_xml">Farben nach /sdcard/cmparts_ui.xml exportieren.</string>
   <string name="message_dialog_export">Exportiere Farben zu XML-Datei? Vorhandene Datei wird überschrieben.</string>
   <string name="xml_sdcard_unmounted">SD-Karte ist nicht eingebunden!</string>
   <string name="xml_write_error">Fehler beim Schreiben der XML-Datei!</string>
   <string name="xml_export_success">XML-Export war erfolgreich!</string>
   <string name="title_import_from_xml">Farbimport aus XML</string>
-  <string name="summary_import_from_xml">Farben aus /sdcard/spare_parts_ui.xml importieren.</string>
+  <string name="summary_import_from_xml">Farben aus /sdcard/cmparts_ui.xml importieren.</string>
   <string name="message_dialog_import">Importiere Farben aus XML-Datei? Neustart erforderlich.</string>
   <string name="xml_file_not_found">XML-Datei nicht gefunden!</string>
   <string name="xml_io_exception">Fehler beim Lesen der XML-Datei!</string>
@@ -135,7 +135,7 @@
   <string name="use_custom_app_summary">Wähle andere Anwendung anstelle des Letzte-App-Dialogs</string>
   <string name="select_custom_app_title">Wähle andere Anwendung</string>
   <string name="group_applications">Anwendungen</string>
-    
+
   <!-- Performance Settings -->
   <string name="performance_settings_title">Leistung</string>
   <string name="performance_settings_summary">Tweaks für Geräteleistung</string>
