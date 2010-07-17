@@ -102,16 +102,24 @@
 	<!-- User interface: Trackball notifcations -->
 	<string name="trackball_notifications_title">Trackball Notification Colors</string>
 	<string name="dialog_color_trackball">Choose a color</string>
+	<string name="dialog_blink_trackball">Choose a blink rate</string>
+	<string name="color_trackball_flash">Flash color</string>
+	<string name="color_trackball_blink">Blink rate</string>
+	<string name="color_trackball_test">Flash test</string>
+	<string name="color_show_package_title">Show package name</string>
+	<string name="color_show_package_summary">Show the package name when it pulses</string>
 	<string name="color_google_voice_title">Google Voice</string>
 	<string name="color_google_voice_summary">Notificatoin color for Google Voice</string>
-	<string name="color_mms_title">SMS/MMS</string>
+	<string name="color_mms_title">Inbuilt Mms/Sms</string>
 	<string name="color_mms_summary">Notification color for Messaging</string>
 	<string name="color_gmail_title">GMail</string>
 	<string name="color_gmail_summary">Notification color for Google Mail</string>
-	<string name="color_email_title">Email</string>
+	<string name="color_email_title">Inbuilt Email</string>
 	<string name="color_email_summary">Notification color for inbuilt email</string>
 	<string name="color_twitter_title">Twitter</string>
 	<string name="color_twitter_summary">Notification color for Twitter App</string>
+    <string name="color_twicca_title">Twicca</string>
+    <string name="color_twicca_summary">Notification color for Twicca App</string>
 
     <!-- Tweaks Extras -->
     <string name="te_title">Tweaks extras</string>

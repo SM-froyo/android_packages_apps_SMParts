@@ -79,20 +79,47 @@
 		<item>5</item>
 		<item>6</item>
 	</string-array>
-
-	<string-array name="entries_trackball_colors">
-        <item>Red</item>
+    
+    <string-array name="entries_trackball_colors">
         <item>Green</item>
+        <item>White</item>
+        <item>Red</item>
         <item>Blue</item>
         <item>Yellow</item>
-        <item>Magenta</item>
-        <item>Orange</item>
         <item>Cyan</item>
-        <item>White</item>
-        <item>Black</item>
-        <item>Gray</item>
-        <item>LightGray</item>
-        <item>DarkGray</item>
+        <item>Magenta</item>
+        <item>Pink</item>
+        <item>Orange</item>
+        <item>Light Blue</item>
+    </string-array>
+
+    <string-array name="pref_trackball_colors_values" translatable="false">
+        <item>green</item>
+        <item>white</item>
+        <item>red</item>
+        <item>blue</item>
+        <item>yellow</item>
+        <item>cyan</item>
+        <item>#800080</item>
+        <item>#ffc0cb</item>
+        <item>#ffa500</item>
+        <item>#add8e6</item>
+    </string-array>
+
+	<string-array name="pref_trackball_blink_rate_entries">
+        <item>2 (Fast)</item>
+        <item>3</item>
+        <item>4 (Medium)</item>
+        <item>5</item>
+        <item>6 (Slow)</item>
+    </string-array>
+
+    <string-array name="pref_trackball_blink_rate_values" translatable="false">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
     </string-array>
 
 </resources>
