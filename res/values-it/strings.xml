@@ -38,6 +38,7 @@
     <string name="clock_title">Orologio</string>
     <string name="title_show_clock">Mostra orologio</string>
     <string name="title_clock_color">Colore orologio</string>
+    <string name="clock_show_am_pm">Mostra AM/PM per orologio a 12 ore</string>
 
     <!-- Status Bar, dBm Signal -->
     <string name="dbm_title">Potenza segnale dBm</string>
