@@ -103,13 +103,13 @@
     <string name="message_dialog_reset">Ripristina tutte le modifiche alla UI a valori di default? Riavvio richiesto</string>
     <string name="reset_ui_success">Ripristinata la UI a valori di default! Riavvia.</string>
     <string name="title_export_to_xml">Esporta colori in XML</string>
-    <string name="summary_export_to_xml">Esporta colori in /sdcard/cmparts_ui.xml</string>
+    <string name="summary_export_to_xml">Esporta colori in /sdcard/spare_parts_ui.xml</string>
     <string name="message_dialog_export">Esporta colori UI in XML? Il file esistente verrà sovrascritto.</string>
     <string name="xml_sdcard_unmounted">Scheda SD non montata!</string>
     <string name="xml_write_error">Errore nello scrivere file XML!</string>
     <string name="xml_export_success">XML esportato con successo!</string>
     <string name="title_import_from_xml">Importa colori da XML</string>
-    <string name="summary_import_from_xml">Importa colori da /sdcard/cmparts_ui.xml</string>
+    <string name="summary_import_from_xml">Importa colori da /sdcard/spare_parts_ui.xml</string>
     <string name="message_dialog_import">Importa colori UI da XML? Riavvio richiesto.</string>
     <string name="xml_file_not_found">File XML non trovato!</string>
     <string name="xml_io_exception">Errore nel leggere il file!</string>
@@ -145,7 +145,7 @@
     <!-- Performance Settings -->
     <string name="performance_settings_title">Impostazioni performance</string>
     <string name="performance_settings_summary">Modifiche performance del dispositivo</string>
-
+    
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Usa compcache</string>
     <string name="pref_compcache_summary">Memoria compressa per maggior capacità virtuale</string>
@@ -153,7 +153,7 @@
     <!-- Performance Settings : JIT Mode -->
     <string name="pref_jit_mode_title">Usa JIT</string>
     <string name="pref_jit_mode_summary">Usa compilatore Dalvik just-in-time (riavvio richiesto)</string>
-
+  
     <!-- Performance Settings : Dithering -->
     <string name="pref_use_dithering_title">Abilita dithering</string>
     <string name="pref_use_dithering_summary">Il dithering migliora la qualità dell\'immagine a scapito delle performance (riavvio richiesto)</string>
@@ -169,7 +169,7 @@
     <!-- Application Settings -->
     <string name="application_settings_title">Impostazioni applicazioni</string>
     <string name="application_settings_summary">Modifica diverse impostazioni riguardanti le applicazioni</string>
-
+   
     <!-- Application Settings : Move any app -->
     <string name="pref_move_all_apps_title">Abilita spostamento applicazioni</string>
     <string name="pref_move_all_apps_summary">Permette di spostare qualsiasi app nella memoria esterna</string>
@@ -225,18 +225,18 @@
     <string name="haptic_cancel_toast">Valori aptici non modificati</string>
     <string name="haptic_revert_toast">Ripristino ultimi valori</string>
     <string name="haptic_default_toast">Caricamento valori di default</string>
-
+    
     <string name="general_title">Generale</string>
 
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">Effetto Render</string>
     <string name="pref_render_effect_summary">Scegli che colori utilizzare per visualizzare le immagini sullo schermo (possibili risparmi energetici)</string>
-
+    
 <string name="widget_name">Widget RenderFX</string>
     <string name="renderfx_temp">RenderFX</string>
 	<string name="prefs_render_effect">Effetto Render</string>
 	<string name="notify_render_effect">Effetto render attivo</string>
-
+	
 	<!--  Widget Types -->
 	<string name="night">Night</string>
 	<string name="terminal">Term</string>
