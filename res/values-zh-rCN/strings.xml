@@ -98,13 +98,13 @@
     <string name="message_dialog_reset">是否重置所有微调选项到默认值？重启后生效。</string>
     <string name="reset_ui_success">操作界面微调设置已重置！请重启使设置生效。</string>
     <string name="title_export_to_xml">导出颜色设置为XML</string>
-    <string name="summary_export_to_xml">将界面颜色设置导出到/sdcard/spare_parts_ui.xml</string>
+    <string name="summary_export_to_xml">将界面颜色设置导出到/sdcard/cmparts_ui.xml</string>
     <string name="message_dialog_export">是否将界面颜色导出到XML？此操作将覆盖原有文件。</string>
     <string name="xml_sdcard_unmounted">SD卡未安装或加载。</string>
     <string name="xml_write_error">写入XML时发生错误！</string>
     <string name="xml_export_success">导出XML成功！</string>
     <string name="title_import_from_xml">从XML中导入颜色设置</string>
-    <string name="summary_import_from_xml">从/sdcard/spare_parts_ui.xml中导入界面颜色设置</string>
+    <string name="summary_import_from_xml">从/sdcard/cmparts_ui.xml中导入界面颜色设置</string>
     <string name="message_dialog_import">是否导入界面颜色设置？重启后生效。</string>
     <string name="xml_file_not_found">未发现XML文件！</string>
     <string name="xml_io_exception">文件读取错误！</string>
@@ -140,7 +140,7 @@
     <!-- Performance Settings -->
     <string name="performance_settings_title">性能设置</string>
     <string name="performance_settings_summary">设备性能微调</string>
-    
+
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">使用 Compcache</string>
     <string name="pref_compcache_summary">压缩内存以增加虚拟容量</string>
