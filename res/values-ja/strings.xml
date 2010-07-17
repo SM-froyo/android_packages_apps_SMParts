@@ -52,6 +52,7 @@
     <!-- Date and Provider, Date -->
     <string name="date_title">日付</string>
     <string name="title_date_color">日付の色</string>
+    <string name="clock_show_am_pm">12時間時計でAM/PMを表示する</string>
 
     <!-- Date and Provider, PLMN -->
     <string name="plmn_title">PLMNキャリア設定</string>
