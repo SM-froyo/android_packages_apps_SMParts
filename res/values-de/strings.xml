@@ -238,4 +238,16 @@
   <string name="amber">Amber</string>
   <string name="salmon">Lachs</string>
   <string name="fuscia">Fuchsie</string>
+
+  <!-- Notification Bar Colors -->
+  <string name="title_notification_bar">Statuszeile</string>
+  <string name="title_custom_not_bar">Eigene Statuszeile</string>
+  <string name="summary_custom_not_bar_on">Angepasste Farben und Aussehen der Statuszeile verwenden</string>
+  <string name="summary_custom_not_bar_off">Klassische Statuszeile von CyanogenMod verwenden</string>
+
+  <string name="title_square_not_bar">Eckige Statuszeile</string>
+  <string name="summary_square_not_bar_on">Ecken der Statuszeile nicht abrunden</string>
+  <string name="summary_square_not_bar_off">Klassische Statuszeile mit abgerundeten Ecken</string>
+  <string name="title_not_bar_color_mask">Farbe Statuszeile</string>
+  <string name="summary_not_bar_color_mask">Hinweis: Transparenzwert (alpha) wird nicht angewendet</string>
 </resources>
