@@ -36,6 +36,7 @@
   <string name="clock_title">Uhr</string>
   <string name="title_show_clock">Zeige Uhr</string>
   <string name="title_clock_color">Farbe Uhr</string>
+  <string name="clock_show_am_pm">AM/PM für 12h-Uhr zeigen</string>
 
   <!-- Status Bar, dBm Signal -->
   <string name="dbm_title">dBm Signalstärke</string>
