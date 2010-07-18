@@ -21,11 +21,11 @@
 
     <!-- Color Picker -->
     <string name="title_color_picker">Scegli un colore</string>
-    <string name="msg_color_picker">Premi al centro per confermare.\nPremi back per annullare</string>
+    <string name="msg_color_picker">Premi al centro per confermare.\nPremi indietro per annullare</string>
 
     <!-- Status Bar -->
     <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_summary">Modifiche alla batteria e all\'orologio</string>
+    <string name="status_bar_summary">Modifiche alla Status bar</string>
 
     <!-- Status Bar, Battery -->
     <string name="battery_title">Batteria</string>
