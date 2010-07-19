@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic -->
+    <string name="app_name">Paramètres CyanogenMod</string>
+
+    <!-- User interface -->
+    <string name="ui_title">Interface utilisateur</string>
+    <string name="ui_summary">Paramètres de l\'interface utilisateur &amp; tweaks</string>
+    <string name="ui_status_bar">Personalisation de la barre de statut</string>
+
+    <!-- User interface : orientation -->
+    <string name="ui_rotation_title">Rotation automatique</string>
+    <string name="pref_rotation_90_title">90 degrés</string>
+    <string name="pref_rotation_180_title">180 degrés</string>
+    <string name="pref_rotation_270_title">270 degrés</string>
+
+    <!-- User interface : WebView -->
+    <string name="ui_webview_title">WebView</string>
+    <string name="pref_pinch_reflow_title">Réarrangement après zoom</string>
+    <string name="pref_pinch_reflow_summary">Réarranger le contenu immédiatement après un zoom avant</string>
+
+    <!-- Color Picker -->
+    <string name="title_color_picker">Choisir une couleur</string>
+    <string name="msg_color_picker">Toucher la couleur au centre pour confirmer.\nPresser sur retour pour annuler</string>
+
+    <!-- Status Bar -->
+    <string name="status_bar_title">Barre de statut</string>
+    <string name="status_bar_summary">Tweaks de la barre de statut</string>
+
+    <!-- Status Bar, Battery -->
+    <string name="battery_title">Batterie</string>
+    <string name="pref_battery_percentage_title">Pourcentage de charge</string>
+    <string name="pref_battery_percentage_summary">Affichage du pourcentage de chargement de la batterie restant</string>
+    <string name="battery_status_color_title">Couleur de la charge</string>
+
+    <!-- Status Bar, Clock -->
+    <string name="clock_title">Heure</string>
+    <string name="title_show_clock">Afficher l\'heure</string>
+    <string name="title_clock_color">Couleur de l\'heure</string>
+    <string name="clock_show_am_pm">Afficher AM/PM</string>
+
+    <!-- Status Bar, dBm Signal -->
+    <string name="dbm_title">Force du signal en dBm</string>
+    <string name="title_show_dbm">Afficher les dBm</string>
+    <string name="summary_on_show_dbm">La force du signal mesurée en dBm sera affichée dans la barre de statut</string>
+    <string name="summary_off_show_dbm">La force du signal mesurée en dBm ne sera pas affichée dans la barre de statut</string>
+    <string name="title_dbm_color">Couleur des dBm</string>
+
+    <!-- Date and Provider -->
+    <string name="dp_title">Date et opérateur</string>
+    <string name="dp_summary">Tweaks date et opérateur</string>
+
+    <!-- Date and Provider, Date -->
+    <string name="date_title">Date</string>
+    <string name="title_date_color">Couleur de la date</string>
+
+    <!-- Date and Provider, PLMN -->
+    <string name="plmn_title">Paramètres de l\'affichage du réseau</string>
+    <string name="title_show_plmn_ls">Afficher réseau (lockscreen)</string>
+    <string name="summary_on_show_plmn_ls">Le réseau actuellement en utilisation sera affiché sur l\'écran de verrouillage</string>
+    <string name="summary_off_show_plmn_ls">Le réseau actuellement en utilisation ne sera pas affiché sur l\'écran de verrouillage</string>
+    <string name="title_show_plmn_sb">Afficher réseau (barre de statut)</string>
+    <string name="summary_on_show_plmn_sb">Le réseau actuellement en utilisation sera affiché dans la barre de statut</string>
+    <string name="summary_off_show_plmn_sb">Le réseau actuellement en utilisation ne sera pas affiché dans la barre de statut</string>
+    <string name="title_plmn_label_color">Couleur du réseau</string>
+
+    <!-- Date and Provider, SPN -->
+    <string name="spn_title">Paramètres de l\'affichage de l\'opérateur</string>
+    <string name="title_show_spn_ls">Afficher opérateur (lockscreen)</string>
+    <string name="summary_on_show_spn_ls">L\'opérateur sera affiché sur l\'écran de verrouillage</string>
+    <string name="summary_off_show_spn_ls">L\'opérateur ne sera affiché sur l\'écran de verrouillage</string>
+    <string name="title_show_spn_sb">Afficher opérateur (barre de statut)</string>
+    <string name="summary_on_show_spn_sb">L\'opérateur sera affiché dans la barre de statut</string>
+    <string name="summary_off_show_spn_sb">L\'opérateur ne sera pas affiché dans la barre de statut</string>
+    <string name="title_spn_label_color">Couleur de l\'opérateur</string>
+
+    <!-- Notifications -->
+    <string name="title_notifications_sb">Notifications de la barre de statut</string>
+    <string name="title_notifications_color_tweaks">Couleurs des notifications</string>
+    <string name="summary_notifications_color_tweaks">Alertes, notifications en cours, dernières notifications, effaçage des notifications, etc</string>
+    <string name="title_notifications_ticker_color">Alertes</string>
+    <string name="title_notifications_count_color">Nombre de notifications</string>
+    <string name="title_no_notifications_color">Aucune notification</string>
+    <string name="title_clear_button_label_color">Bouton effacer</string>
+    <string name="title_ongoing_notifications_color">Notifications en cours</string>
+    <string name="title_latest_notifications_color">Dernières notifications</string>
+    <string name="title_notifications_items">Contenu des notifications</string>
+    <string name="title_notifications_items_title">Couleur du titre</string>
+    <string name="title_notifications_items_text">Couleur du texte</string>
+    <string name="title_notifications_items_time">Couleur de l\'heure</string>
+
+    <!-- Tweaks Extras -->
+    <string name="te_title">Tweaks supplémentaires</string>
+    <string name="te_title_summary">Outils supplémentaires des tweaks de l\'UI</string>
+    <string name="te_reset">Remise à zéro</string>
+    <string name="title_reset_ui_tweaks_to_defaults">RàZ des paramètres de l'\UI</string>
+    <string name="te_xml">Outils XML</string>
+    <string name="title_dialog_ui_interface">Tweaks de l\'UI</string>
+    <string name="message_dialog_reset">Charger les paramètres par défaut des tweaks de l\'UI ? Redémarrer pour appliquer</string>
+    <string name="reset_ui_success">Les paramètres par défaut de l\'UI ont été restaurés ! Redémarrer pour appliquer</string>
+    <string name="title_export_to_xml">Exporter les couleurs</string>
+    <string name="summary_export_to_xml">Exporter les couleurs vers /sdcard/cmparts_ui.xml</string>
+    <string name="message_dialog_export">Exporter les couleurs en XML ? Ceci écrasera le fichier existant</string>
+    <string name="xml_sdcard_unmounted">La carte SD n\'est pas montée !</string>
+    <string name="xml_write_error">Erreur d\'écriture XML !</string>
+    <string name="xml_export_success">Export XML effectué avec succès !</string>
+    <string name="title_import_from_xml">Importer les couleurs</string>
+    <string name="summary_import_from_xml">Importer les couleurs depuis /sdcard/cmparts_ui.xml</string>
+    <string name="message_dialog_import">Importer les couleurs depuis XML ? Redémarrez pour appliquer</string>
+    <string name="xml_file_not_found">Fichier XML introuvable !</string>
+    <string name="xml_io_exception">Erreur de lecture du fichier !</string>
+    <string name="xml_parse_error">Erreur de parsage XML!</string>
+    <string name="xml_invalid_color">Code couleur invalide !</string>
+    <string name="xml_import_success">Import XML effectué avec succès ! Redémarrez pour appliquer</string>
+
+    <!-- Input Settings -->
+    <string name="input_settings_title">Paramètres des entrées</string>
+    <string name="input_settings_summary">Comportement des contrôles</string>
+    <string name="button_settings_title">Paramètres des boutons physiques</string>
+    <string name="pref_trackball_wake_title">Réveil par la trackball</string>
+    <string name="pref_trackball_wake_summary">Une pression sur la trackball réveille le téléphone</string>
+    <string name="pref_trackball_unlock_title">Déverrouillage par la trackball</string>
+    <string name="pref_trackball_unlock_summary">Une pression sur la trackball déverrouille le téléphone</string>
+    <string name="pref_menu_unlock_title">Déverrouillage par menu</string>
+    <string name="pref_menu_unlock_summary">Une pression sur le bouton menu déverrouille le téléphone</string>
+    <string name="pref_trackball_screen_title">Toujours respirer</string>
+    <string name="pref_trackball_screen_summary">La trackball respirera lorsque l\'écran sera allumé</string>
+
+    <!-- Long Press Home -->
+    <string name="long_press_home_title">Pression longue sur maison</string>
+    <string name="long_press_home_summary">Nombre d\'applications récentes, etc.</string>
+    <string name="recent_apps_show_title">Titre \"Récentes\"</string>
+    <string name="recent_apps_num_title">Nombre d\'application récentes</string>
+    <string name="recent_apps_num_summary">Nombre d\'applications récemment ouvertes à afficher lors d\'une longue pression sur maison</string>
+    <string name="dialog_recent_apps_num_title">Spécifier le nombre d\'applications récentes</string>
+    <string name="use_custom_app_title">Utiliser une application tierce</string>
+    <string name="use_custom_app_summary">Ouvrir une application en lieu et place du dialogue des dernières applications ouvertes</string>
+    <string name="select_custom_app_title">Sélectionner une application</string>
+    <string name="group_applications">Applications</string>
+
+    <!-- Performance Settings -->
+    <string name="performance_settings_title">Paramètres de performance</string>
+    <string name="performance_settings_summary">Tweaks de performance</string>
+
+    <!-- Performance Settings : Compcache -->
+    <string name="pref_compcache_title">Utiliser Compcache</string>
+    <string name="pref_compcache_summary">Compresser une partie de la RAM afin d\'augmenter virtuellement sa capacité</string>
+
+    <!-- Performance Settings : JIT Mode -->
+    <string name="pref_jit_mode_title">Activer JIT</string>
+    <string name="pref_jit_mode_summary">Utiliser le compilateur just-in-time de Dalvik (nécessite un redémarrage)</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">Activer le tramage</string>
+    <string name="pref_use_dithering_summary">Le tramage améliore la qualité des images au détriment des performances (nécessite un redémarrage)</string>
+
+    <!-- Performance Settings : VM Heap Size -->
+    <string name="pref_heapsize_title">VM heap size</string>
+    <string name="pref_heapsize_summary">Quantité de mémoire disponible pour chaque VM (nécessite un redémarrage)</string>
+
+    <!-- Performance Settings : Warning dialog -->
+    <string name="performance_settings_warning_title">ATTENTION AUX DRAGONS !</string>
+    <string name="performance_settings_warning">Les options présentes ici changeront les performances du système, que ce soit en bien ou en mal. Elles sont là à des fins d\'expérimentation. C\'est pourquoi nous vous demandons de ne pas remplir de rapport de bug lorsque vous changez ces options.</string>
+
+    <!-- Application Settings -->
+    <string name="application_settings_title">Paramètres des applications</string>
+    <string name="application_settings_summary">Divers paramètres comme l\'installation d\'applications dans la mémoire externe</string>
+
+    <!-- Application Settings : Move any app -->
+    <string name="pref_move_all_apps_title">Déplacement sur carte SD</string>
+    <string name="pref_move_all_apps_summary">Autoriser le déplacement de n\'importe quelle application dans la mémoire externe</string>
+
+    <!-- Application Settings : Install Location -->
+    <string name="pref_install_location_title">Emplacement d\'installation</string>
+    <string name="pref_install_location_summary">Choisir où les nouvelles applications seront installées</string>
+
+    <!-- HapticTweaks -->
+    <string name="haptic_title">Tweaks du retour haptique</string>
+    <string name="haptic_summary">Ajuster quand et comment le retour haptique s\'activera</string>
+
+    <string name="title_haptic_feedback">Retour haptique</string>
+    <string name="summary_on_haptic_feedback">Utiliser le retour haptique lors de certaines interactions utilisateur</string>
+    <string name="summary_off_haptic_feedback">Ne pas utiliser le retour haptique lors de certaines interactions utilisateur</string>
+
+    <string name="title_haptic_feedback_up">Retour au relâchement</string>
+    <string name="summary_on_haptic_feedback_up">Utiliser le retour haptique lors du relâchement de certaines touches</string>
+    <string name="summary_off_haptic_feedback_up">Ne pas utiliser le retour haptique lors du relâchement de certaines touches</string>
+
+    <string name="title_haptic_feedback_all">Retour à la séléction</string>
+    <string name="summary_on_haptic_feedback_all">Utiliser le retour haptique lors de séléctions à l\'écran</string>
+    <string name="summary_off_haptic_feedback_all">Ne pas utiliser le retour haptique lors de séléctions à l\'écran</string>
+
+    <string name="title_haptic_down_decider">Séquence à la pression</string>
+    <string name="title_haptic_up_decider">Séquence au relâchement</string>
+    <string name="title_haptic_long_decider">Séquence à la pression longue</string>
+    <string name="title_haptic_tap_decider">Séquence à l\'appui clavier</string>
+
+    <string name="title_haptic_menu">Séquence des vibrations</string>
+    <string name="title_haptic_notice">REDÉMARRAGE REQUIS POUR QUE LES CHANGEMENTS S\'APPLIQUENT</string>
+
+    <string name="haptic_delay_desc">ms au repos</string>
+    <string name="haptic_vibe_desc">ms en action</string>
+
+    <string name="haptic_down_description">Ajustement des valeurs haptiques pour les PRESSIONS\n(Touches physiques et certaines interactions.)</string>
+    <string name="haptic_up_description">Ajustement des valeurs haptiques les RELÂCHEMENTS\n(Touches physiques et la plupart des pressions à l\'écran.)</string>
+    <string name="haptic_long_description">Ajustement des valeurs haptiques pour les PRESSIONS LONGUES.</string>
+    <string name="haptic_tap_description">Ajustement des valeurs haptiques pour les pressions de touches sur le clavier virtuel</string>
+
+    <string name="haptic_plus_minus_desc">Presser les boutons + et - afin d\'ajouter ou de supprimer des étapes à la séquence.</string>
+
+    <string name="haptic_button_plus">+</string>
+    <string name="haptic_button_minus">-</string>
+
+    <string name="haptic_button_save">Enregistrer</string>
+    <string name="haptic_button_test">Tester</string>
+    <string name="haptic_button_cancel">Annuler</string>
+    <string name="haptic_button_revert">Revenir en arrière</string>
+    <string name="haptic_button_default">Par défaut</string>
+
+    <string name="haptic_save_toast">Enregistrement des valeurs haptiques : </string>
+    <string name="haptic_cancel_toast">Valeurs haptiques inchangées</string>
+    <string name="haptic_revert_toast">Restauration des dernières valeurs</string>
+    <string name="haptic_default_toast">Chargement des valeurs par défaut</string>
+
+    <string name="general_title">Général</string>
+
+    <!-- UI Settings : Render effect -->
+    <string name="pref_render_effect_title">Effet de rendu</string>
+    <string name="pref_render_effect_summary">Changer quelles couleurs sont utilisées afin de dessiner l\'interface</string>
+
+    <string name="widget_name">Widget RenderFX</string>
+    <string name="renderfx_temp">RenderFX</string>
+	<string name="prefs_render_effect">Effet de rendu</string>
+	<string name="notify_render_effect">Effet de rendu activé</string>
+
+	<!--  Widget Types -->
+	<string name="night">Nuit</string>
+	<string name="terminal">Term</string>
+    <string name="blue">Bleu</string>
+	<string name="amber">Ambre</string>
+	<string name="salmon">Saumon</string>
+	<string name="fuscia">Fuchsia</string>
+
+	<!-- Notification Bar Colors -->
+
+	<string name="title_notification_bar">Barre de notification</string>
+    <string name="title_custom_not_bar">Barre de notification personnalisée</string>
+    <string name="summary_custom_not_bar_on">Utilisation de la couleur et du style de la barre de notification personnelle</string>
+    <string name="summary_custom_not_bar_off">Utilisation de la barre de notification classique de CyanogenMod</string>
+
+    <string name="title_square_not_bar">Barre carrée</string>
+    <string name="summary_square_not_bar_on">Utilisation de la barre carrée</string>
+    <string name="summary_square_not_bar_off">Utilisation de la barre arrondie classique</string>
+    <string name="title_not_bar_color_mask">Couleur de la barre</string>
+    <string name="summary_not_bar_color_mask">Note : La transparence (alpha) ne sera pas prise en compte</string>
+</resources>
