@@ -237,6 +237,7 @@
     <string name="renderfx_temp">RenderFX</string>
 	<string name="prefs_render_effect">Effetto Render</string>
 	<string name="notify_render_effect">Effetto render attivo</string>
+        <string name="add_widget">Aggiungi widget</string>
 
 	<!--  Widget Types -->
 	<string name="night">Night</string>
