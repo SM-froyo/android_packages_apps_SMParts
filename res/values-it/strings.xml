@@ -122,6 +122,9 @@
     <string name="input_settings_title">Impostazioni input</string>
     <string name="input_settings_summary">Scegli il comportamento dei pulsanti</string>
     <string name="button_settings_title">Impostazioni pulsanti</string>
+    <string name="lockscreen_settings_title">Impostazioni Lockscreen</string>
+    <string name="pref_lockscreen_music_controls_title">Controlli player musicale</string>
+    <string name="pref_lockscreen_music_controls_summary">Visualizza i controlli del player musicale nel lockscreen</string>
     <string name="pref_trackball_wake_title">Trackball wake</string>
     <string name="pref_trackball_wake_summary">Sveglia il telefono premendo la trackball</string>
     <string name="pref_trackball_unlock_title">Trackball unlock</string>
