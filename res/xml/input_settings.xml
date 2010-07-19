@@ -17,6 +17,11 @@
             android:targetClass="com.cyanogenmod.cmparts.activities.LongPressHomeActivity" />
     </PreferenceScreen>
 
+    <PreferenceCategory android:title="@string/lockscreen_settings_title">
+        <CheckBoxPreference android:key="lockscreen_music_controls"
+            android:title="@string/pref_lockscreen_music_controls_title" android:summary="@string/pref_lockscreen_music_controls_summary" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/button_settings_title">
         <CheckBoxPreference android:key="pref_trackball_wake"
             android:title="@string/pref_trackball_wake_title" android:summary="@string/pref_trackball_wake_summary" />
