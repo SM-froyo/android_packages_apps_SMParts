@@ -9,7 +9,7 @@
 			/>        
         <Preference
 			android:key="save_settings"
-			android:title="Add widget"
+			android:title="@string/add_widget"
 			/>			
 	</PreferenceCategory>
 </PreferenceScreen>  

@@ -240,6 +240,7 @@
     <string name="renderfx_temp">RenderFX</string>
 	<string name="prefs_render_effect">Render Effect</string>
 	<string name="notify_render_effect">Render effect on</string>
+        <string name="add_widget">Add widget</string>
 
 	<!--  Widget Types -->
 	<string name="night">Night</string>
