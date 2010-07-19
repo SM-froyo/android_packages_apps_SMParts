@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Generic -->
-    <string name="app_name">CyanogenMod settings</string>
+    <string name="app_name">Impostazioni CyanogenMod</string>
 
     <!-- User interface -->
     <string name="ui_title">Interfaccia utente</string>
@@ -21,11 +21,11 @@
 
     <!-- Color Picker -->
     <string name="title_color_picker">Scegli un colore</string>
-    <string name="msg_color_picker">Premi al centro per confermare.\nPremi back per annullare</string>
+    <string name="msg_color_picker">Premi al centro per confermare.\nPremi indietro per annullare</string>
 
     <!-- Status Bar -->
     <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_summary">Modifiche alla batteria e all\'orologio</string>
+    <string name="status_bar_summary">Modifiche alla Status bar</string>
 
     <!-- Status Bar, Battery -->
     <string name="battery_title">Batteria</string>
@@ -38,6 +38,7 @@
     <string name="clock_title">Orologio</string>
     <string name="title_show_clock">Mostra orologio</string>
     <string name="title_clock_color">Colore orologio</string>
+    <string name="clock_show_am_pm">Mostra AM/PM per orologio a 12 ore</string>
 
     <!-- Status Bar, dBm Signal -->
     <string name="dbm_title">Potenza segnale dBm</string>
@@ -244,4 +245,17 @@
 	<string name="amber">Ambra</string>
 	<string name="salmon">Salmone</string>
 	<string name="fuscia">Fucsia</string>
+
+        <!-- Notification Bar Colors -->
+	
+	<string name="title_notification_bar">Barra Notifiche</string>
+    <string name="title_custom_not_bar">Personalizza la barra delle notifiche</string>
+    <string name="summary_custom_not_bar_on">Stai usando colore e stile della barra notifiche personalizzati</string>
+    <string name="summary_custom_not_bar_off">Stai usando la barra notifiche CyanogenMod classica </string>
+    
+    <string name="title_square_not_bar">Barra squadrata</string>
+    <string name="summary_square_not_bar_on">Stai usando la barra notifiche squadrata</string>
+    <string name="summary_square_not_bar_off">Stai usando la barra notifiche arrotondata</string>
+    <string name="title_not_bar_color_mask">Colore Barra</string>
+    <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) non verrà applicata</string>
 </resources>
