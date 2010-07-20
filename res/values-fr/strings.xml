@@ -30,7 +30,7 @@
     <!-- Status Bar, Battery -->
     <string name="battery_title">Batterie</string>
     <string name="pref_battery_percentage_title">Pourcentage de charge</string>
-    <string name="pref_battery_percentage_summary">Affichage du pourcentage de chargement de la batterie restant</string>
+    <string name="pref_battery_percentage_summary">Affichage du pourcentage de charge de la batterie</string>
     <string name="battery_status_color_title">Couleur de la charge</string>
 
     <!-- Status Bar, Clock -->
@@ -93,7 +93,7 @@
     <string name="te_title">Tweaks supplémentaires</string>
     <string name="te_title_summary">Outils supplémentaires des tweaks de l\'UI</string>
     <string name="te_reset">Remise à zéro</string>
-    <string name="title_reset_ui_tweaks_to_defaults">RàZ des paramètres de l'\UI</string>
+    <string name="title_reset_ui_tweaks_to_defaults">RàZ des paramètres de l\'UI</string>
     <string name="te_xml">Outils XML</string>
     <string name="title_dialog_ui_interface">Tweaks de l\'UI</string>
     <string name="message_dialog_reset">Charger les paramètres par défaut des tweaks de l\'UI ? Redémarrer pour appliquer</string>
@@ -117,6 +117,9 @@
     <string name="input_settings_title">Paramètres des entrées</string>
     <string name="input_settings_summary">Comportement des contrôles</string>
     <string name="button_settings_title">Paramètres des boutons physiques</string>
+    <string name="lockscreen_settings_title">Paramètres de l\'écran de verrouillage</string>
+    <string name="pref_lockscreen_music_controls_title">Contrôles de la lecture</string>
+    <string name="pref_lockscreen_music_controls_summary">Afficher les contrôles permettant de commander la lecture musicale sur l\'écran de verrouillage</string>
     <string name="pref_trackball_wake_title">Réveil par la trackball</string>
     <string name="pref_trackball_wake_summary">Une pression sur la trackball réveille le téléphone</string>
     <string name="pref_trackball_unlock_title">Déverrouillage par la trackball</string>
@@ -132,10 +135,10 @@
     <string name="recent_apps_show_title">Titre \"Récentes\"</string>
     <string name="recent_apps_num_title">Nombre d\'application récentes</string>
     <string name="recent_apps_num_summary">Nombre d\'applications récemment ouvertes à afficher lors d\'une longue pression sur maison</string>
-    <string name="dialog_recent_apps_num_title">Spécifier le nombre d\'applications récentes</string>
-    <string name="use_custom_app_title">Utiliser une application tierce</string>
+    <string name="dialog_recent_apps_num_title">Spécifier le nombre d\'applications affichées</string>
+    <string name="use_custom_app_title">Ouvrir une application</string>
     <string name="use_custom_app_summary">Ouvrir une application en lieu et place du dialogue des dernières applications ouvertes</string>
-    <string name="select_custom_app_title">Sélectionner une application</string>
+    <string name="select_custom_app_title">Sélectionner l\'application</string>
     <string name="group_applications">Applications</string>
 
     <!-- Performance Settings -->
@@ -156,7 +159,7 @@
 
     <!-- Performance Settings : VM Heap Size -->
     <string name="pref_heapsize_title">VM heap size</string>
-    <string name="pref_heapsize_summary">Quantité de mémoire disponible pour chaque VM (nécessite un redémarrage)</string>
+    <string name="pref_heapsize_summary">Quantité de mémoire disponible pour chaque machine virtuelle (nécessite un redémarrage)</string>
 
     <!-- Performance Settings : Warning dialog -->
     <string name="performance_settings_warning_title">ATTENTION AUX DRAGONS !</string>
@@ -167,7 +170,7 @@
     <string name="application_settings_summary">Divers paramètres comme l\'installation d\'applications dans la mémoire externe</string>
 
     <!-- Application Settings : Move any app -->
-    <string name="pref_move_all_apps_title">Déplacement sur carte SD</string>
+    <string name="pref_move_all_apps_title">Déplacement sur SD</string>
     <string name="pref_move_all_apps_summary">Autoriser le déplacement de n\'importe quelle application dans la mémoire externe</string>
 
     <!-- Application Settings : Install Location -->
@@ -180,7 +183,7 @@
 
     <string name="title_haptic_feedback">Retour haptique</string>
     <string name="summary_on_haptic_feedback">Utiliser le retour haptique lors de certaines interactions utilisateur</string>
-    <string name="summary_off_haptic_feedback">Ne pas utiliser le retour haptique lors de certaines interactions utilisateur</string>
+    <string name="summary_off_haptic_feedback">Ne pas utiliser le retour haptique</string>
 
     <string name="title_haptic_feedback_up">Retour au relâchement</string>
     <string name="summary_on_haptic_feedback_up">Utiliser le retour haptique lors du relâchement de certaines touches</string>
@@ -196,13 +199,13 @@
     <string name="title_haptic_tap_decider">Séquence à l\'appui clavier</string>
 
     <string name="title_haptic_menu">Séquence des vibrations</string>
-    <string name="title_haptic_notice">REDÉMARRAGE REQUIS POUR QUE LES CHANGEMENTS S\'APPLIQUENT</string>
+    <string name="title_haptic_notice">REDÉMARRAGE REQUIS AFIN QUE LES CHANGEMENTS S\'APPLIQUENT</string>
 
     <string name="haptic_delay_desc">ms au repos</string>
     <string name="haptic_vibe_desc">ms en action</string>
 
     <string name="haptic_down_description">Ajustement des valeurs haptiques pour les PRESSIONS\n(Touches physiques et certaines interactions.)</string>
-    <string name="haptic_up_description">Ajustement des valeurs haptiques les RELÂCHEMENTS\n(Touches physiques et la plupart des pressions à l\'écran.)</string>
+    <string name="haptic_up_description">Ajustement des valeurs haptiques pour les RELÂCHEMENTS\n(Touches physiques et la plupart des pressions à l\'écran.)</string>
     <string name="haptic_long_description">Ajustement des valeurs haptiques pour les PRESSIONS LONGUES.</string>
     <string name="haptic_tap_description">Ajustement des valeurs haptiques pour les pressions de touches sur le clavier virtuel</string>
 
