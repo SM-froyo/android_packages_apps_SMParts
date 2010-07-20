@@ -117,6 +117,10 @@
     <string name="input_settings_title">入力設定</string>
     <string name="input_settings_summary">コントロールボタンの挙動など</string>
     <string name="button_settings_title">ボタン設定</string>
+    <string name="lockscreen_settings_title">ロック画面設定</string>
+    <string name="pref_lockscreen_music_controls_title">ミュージックコントロール</string>
+    <string name="pref_lockscreen_music_controls_summary">ロック画面にミュージックコントロールを表示する</string>
+
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
     <string name="pref_trackball_unlock_title">トラックボールでアンロック</string>

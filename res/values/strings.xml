@@ -122,6 +122,9 @@
     <string name="input_settings_title">Input settings</string>
     <string name="input_settings_summary">Control button behavior</string>
     <string name="button_settings_title">Button settings</string>
+    <string name="lockscreen_settings_title">Lockscreen settings</string>
+    <string name="pref_lockscreen_music_controls_title">Lockscreen music controls</string>
+    <string name="pref_lockscreen_music_controls_summary">Displays music controls on the lockscreen</string>
     <string name="pref_trackball_wake_title">Trackball wake</string>
     <string name="pref_trackball_wake_summary">Pressing the trackball wakes the device</string>
     <string name="pref_trackball_unlock_title">Trackball unlock</string>
