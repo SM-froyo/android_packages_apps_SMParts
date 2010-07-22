@@ -34,12 +34,14 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String ROTATION_180_PREF = "pref_rotation_180";
     private static final String ROTATION_270_PREF = "pref_rotation_270";
     private static final String RENDER_EFFECT_PREF = "pref_render_effect";
+    private static final String POWER_PROMPT_PREF = "power_dialog_prompt";
     
     private CheckBoxPreference mPinchReflowPref;
     private CheckBoxPreference mRotation90Pref;
     private CheckBoxPreference mRotation180Pref;
     private CheckBoxPreference mRotation270Pref;
 
+    private CheckBoxPreference mPowerPromptPref;
     private ListPreference mRenderEffectPref;
     
     @Override
@@ -72,6 +74,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mPinchReflowPref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.WEB_VIEW_PINCH_REFLOW, 0) == 1);
         
+        mPowerPromptPref = (CheckBoxPreference) prefSet.findPreference(POWER_PROMPT_PREF);
         mRenderEffectPref = (ListPreference) prefSet.findPreference(RENDER_EFFECT_PREF);
         mRenderEffectPref.setOnPreferenceChangeListener(this);
         updateFlingerOptions();
@@ -99,6 +102,13 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             Settings.System.putInt(getContentResolver(),
                     Settings.System.WEB_VIEW_PINCH_REFLOW, value ? 1 : 0);
         }
+
+        if (preference == mPowerPromptPref) {
+            value = mPowerPromptPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_DIALOG_PROMPT, value ? 1 : 0);
+        }
+
         if (preference == mRotation90Pref ||
             preference == mRotation180Pref ||
             preference == mRotation270Pref) {

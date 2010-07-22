@@ -117,6 +117,10 @@
     <string name="input_settings_title">入力設定</string>
     <string name="input_settings_summary">コントロールボタンの挙動など</string>
     <string name="button_settings_title">ボタン設定</string>
+    <string name="lockscreen_settings_title">ロック画面設定</string>
+    <string name="pref_lockscreen_music_controls_title">ミュージックコントロール</string>
+    <string name="pref_lockscreen_music_controls_summary">ロック画面にミュージックコントロールを表示する</string>
+
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
     <string name="pref_trackball_unlock_title">トラックボールでアンロック</string>
@@ -224,6 +228,10 @@
 
     <string name="general_title">一般</string>
 
+    <!-- UI Settings : Power off prompt -->
+    <string name="pref_power_prompt_title">電源OFFの確認</string>
+    <string name="pref_power_prompt_summary">シャットダウンやリブート時に確認するかどうかを切り替える</string>
+
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">描画エフェクト</string>
     <string name="pref_render_effect_summary">スクリーンを描画する色を変更する(バッテリ維持の可能性がある)</string>
@@ -232,6 +240,7 @@
     <string name="renderfx_temp">RenderFX</string>
     <string name="prefs_render_effect">描画エフェクト</string>
     <string name="notify_render_effect">描画エフェクトオン</string>
+    <string name="add_widget">ウィジェットを使用</string>
 
     <!--  Widget Types -->
     <string name="night">ナイト</string>
