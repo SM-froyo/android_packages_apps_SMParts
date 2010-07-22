@@ -232,6 +232,10 @@
 
     <string name="general_title">Generale</string>
 
+    <!-- UI Settings : Power off prompt -->
+    <string name="pref_power_prompt_title">Power prompt</string>
+    <string name="pref_power_prompt_summary">Scegli se visualizzare il prompt di conferma per lo spegnimento e il riavvio</string>
+
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">Effetto Render</string>
     <string name="pref_render_effect_summary">Scegli che colori utilizzare per visualizzare le immagini sullo schermo (possibili risparmi energetici)</string>
