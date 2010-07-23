@@ -20,6 +20,10 @@
     <PreferenceCategory android:title="@string/lockscreen_settings_title">
         <CheckBoxPreference android:key="lockscreen_music_controls"
             android:title="@string/pref_lockscreen_music_controls_title" android:summary="@string/pref_lockscreen_music_controls_summary" />
+        <CheckBoxPreference android:key="lockscreen_always_music_controls"
+            android:dependency="lockscreen_music_controls"
+            android:title="@string/pref_lockscreen_always_music_controls_title" 
+            android:summary="@string/pref_lockscreen_always_music_controls_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/button_settings_title">
