@@ -125,6 +125,8 @@
     <string name="lockscreen_settings_title">Impostazioni Lockscreen</string>
     <string name="pref_lockscreen_music_controls_title">Controlli player musicale</string>
     <string name="pref_lockscreen_music_controls_summary">Visualizza i controlli del player musicale nel lockscreen</string>
+    <string name="pref_lockscreen_always_music_controls_title">Visualizza sempre controlli musicali</string>
+    <string name="pref_lockscreen_always_music_controls_summary">Visualizza sempre i controlli del player musicale nel lockscreen</string>
     <string name="pref_trackball_wake_title">Trackball wake</string>
     <string name="pref_trackball_wake_summary">Sveglia il telefono premendo la trackball</string>
     <string name="pref_trackball_unlock_title">Trackball unlock</string>
