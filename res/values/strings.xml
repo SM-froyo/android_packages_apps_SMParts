@@ -14,10 +14,10 @@
     <string name="pref_rotation_180_title">180 degrees</string>
     <string name="pref_rotation_270_title">270 degrees</string>
 
- 	<!-- User interface : orientation -->
+ 	<!-- User interface : trackball -->
     <string name="ui_trackball">Trackball settings</string>
     <string name="trackball_title">Trackball notifications</string>
-    <string name="trackball_summary">Control notification colors\nand pulse</string>
+    <string name="trackball_summary">Control notification colors and pulse</string>
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
@@ -106,20 +106,10 @@
 	<string name="color_trackball_flash">Flash color</string>
 	<string name="color_trackball_blink">Blink rate</string>
 	<string name="color_trackball_test">Flash test</string>
-	<string name="color_show_package_title">Show package name</string>
-	<string name="color_show_package_summary">Show the package name when it pulses</string>
-	<string name="color_google_voice_title">Google Voice</string>
-	<string name="color_google_voice_summary">Notificatoin color for Google Voice</string>
-	<string name="color_mms_title">Inbuilt Mms/Sms</string>
-	<string name="color_mms_summary">Notification color for Messaging</string>
-	<string name="color_gmail_title">GMail</string>
-	<string name="color_gmail_summary">Notification color for Google Mail</string>
-	<string name="color_email_title">Inbuilt Email</string>
-	<string name="color_email_summary">Notification color for inbuilt email</string>
-	<string name="color_twitter_title">Twitter</string>
-	<string name="color_twitter_summary">Notification color for Twitter App</string>
-    <string name="color_twicca_title">Twicca</string>
-    <string name="color_twicca_summary">Notification color for Twicca App</string>
+    <string name="pref_trackball_screen_title">Always pulse</string>
+    <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>
+    <string name="pref_trackball_sucess_title">Sucession</string>
+    <string name="pref_trackball_sucess_summary">Pulse notifications in sucession.</string>
 
     <!-- Tweaks Extras -->
     <string name="te_title">Tweaks extras</string>
@@ -160,8 +150,7 @@
     <string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device</string>
     <string name="pref_menu_unlock_title">Menu unlock</string>
     <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device</string>
-    <string name="pref_trackball_screen_title">Always pulse</string>
-    <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>
+
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press home settings</string>
