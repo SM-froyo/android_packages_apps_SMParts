@@ -52,5 +52,16 @@
          android:summary="@string/summary_not_bar_color_mask"
          android:defaultValue="-1"
          android:dependency="custom_not_bar" />
+      <CheckBoxPreference android:key="custom_exp_not_bar"
+         android:title="@string/title_custom_exp_not_bar"
+         android:summaryOn="@string/summary_custom_exp_not_bar_on"
+         android:summaryOff="@string/summary_custom_exp_not_bar_off"
+         android:defaultValue="false" />
+      <Preference
+         android:key="not_exp_bar_color_mask"
+         android:title="@string/title_not_exp_bar_color_mask"
+         android:summary="@string/summary_not_exp_bar_color_mask"
+         android:defaultValue="-1"
+         android:dependency="custom_exp_not_bar" />
    </PreferenceCategory>
 </PreferenceScreen>
