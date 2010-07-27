@@ -118,8 +118,10 @@
     <string name="input_settings_summary">コントロールボタンの挙動など</string>
     <string name="button_settings_title">ボタン設定</string>
     <string name="lockscreen_settings_title">ロック画面設定</string>
-    <string name="pref_lockscreen_music_controls_title">ミュージックコントロール</string>
-    <string name="pref_lockscreen_music_controls_summary">ロック画面にミュージックコントロールを表示する</string>
+    <string name="pref_lockscreen_music_controls_title">音楽コントロール</string>
+    <string name="pref_lockscreen_music_controls_summary">ロック画面に音楽コントロールを表示する</string>
+    <string name="pref_lockscreen_always_music_controls_title">常に音楽コントロールを表示</string>
+    <string name="pref_lockscreen_always_music_controls_summary">音楽を再生しているかどうかに関わらず、ロック画面に音楽コントロールを表示する</string>
 
     <string name="pref_trackball_wake_title">トラックボールで復帰</string>
     <string name="pref_trackball_wake_summary">トラックボールを押して端末をスリープから復帰する</string>
@@ -228,6 +230,10 @@
 
     <string name="general_title">一般</string>
 
+    <!-- UI Settings : Power off prompt -->
+    <string name="pref_power_prompt_title">電源OFFの確認</string>
+    <string name="pref_power_prompt_summary">シャットダウンやリブート時に確認するかどうかを切り替える</string>
+
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">描画エフェクト</string>
     <string name="pref_render_effect_summary">スクリーンを描画する色を変更する(バッテリ維持の可能性がある)</string>
@@ -236,6 +242,7 @@
     <string name="renderfx_temp">RenderFX</string>
     <string name="prefs_render_effect">描画エフェクト</string>
     <string name="notify_render_effect">描画エフェクトオン</string>
+    <string name="add_widget">ウィジェットを使用</string>
 
     <!--  Widget Types -->
     <string name="night">ナイト</string>
@@ -250,9 +257,13 @@
     <string name="title_custom_not_bar">通知バーのカスタマイズ</string>
     <string name="summary_custom_not_bar_on">色やスタイルをカスタマイズした通知バーを使用する</string>
     <string name="summary_custom_not_bar_off">CyanogenMod従来の通知バーを使用する</string>
-    <string name="title_square_not_bar">角張った通知バー</string>
-    <string name="summary_square_not_bar_on">角張ったスタイルの通知バーを使用する</string>
-    <string name="summary_square_not_bar_off">従来の角を丸めたスタイルの通知バーを使用する</string>
     <string name="title_not_bar_color_mask">バーの色</string>
-    <string name="summary_not_bar_color_mask">メモ: 透明度(alpha値)の設定は適用されません。</string>
+    <string name="summary_not_bar_color_mask">メモ: 透明度(alpha値)は予測できない結果になります!不透明色をお勧めします</string>
+
+    <string name="title_custom_exp_not_bar">カスタムプルダウンバー</string>
+    <string name="summary_custom_exp_not_bar_on">色やスタイルをカスタマイズしたプルダウンバーを使用する</string>
+    <string name="summary_custom_exp_not_bar_off">従来のCyanogenModプルダウンバーを使用する</string>
+
+    <string name="title_not_exp_bar_color_mask">プルダウンバーの色</string>
+    <string name="summary_not_exp_bar_color_mask">プルダウン通知バーに適用する色を選択する</string>
 </resources>

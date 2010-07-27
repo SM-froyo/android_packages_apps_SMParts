@@ -125,6 +125,8 @@
     <string name="lockscreen_settings_title">Lockscreen settings</string>
     <string name="pref_lockscreen_music_controls_title">Lockscreen music controls</string>
     <string name="pref_lockscreen_music_controls_summary">Displays music controls on the lockscreen</string>
+    <string name="pref_lockscreen_always_music_controls_title">Always display music controls</string>
+    <string name="pref_lockscreen_always_music_controls_summary">Display music controls regardless of whether or not music is playing</string>
     <string name="pref_trackball_wake_title">Trackball wake</string>
     <string name="pref_trackball_wake_summary">Pressing the trackball wakes the device</string>
     <string name="pref_trackball_unlock_title">Trackball unlock</string>
@@ -232,6 +234,10 @@
 
     <string name="general_title">General</string>
 
+    <!-- UI Settings : Power off prompt -->
+    <string name="pref_power_prompt_title">Power prompt</string>
+    <string name="pref_power_prompt_summary">Change whether there is a prompt after choosing shutdown or reboot</string>
+
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">Render effect</string>
     <string name="pref_render_effect_summary">Change what colors are used to draw the screen (potential battery savings)</string>
@@ -240,6 +246,7 @@
     <string name="renderfx_temp">RenderFX</string>
 	<string name="prefs_render_effect">Render Effect</string>
 	<string name="notify_render_effect">Render effect on</string>
+        <string name="add_widget">Add widget</string>
 
 	<!--  Widget Types -->
 	<string name="night">Night</string>
@@ -255,10 +262,14 @@
     <string name="title_custom_not_bar">Custom notification bar</string>
     <string name="summary_custom_not_bar_on">Using customized notification bar color and style</string>
     <string name="summary_custom_not_bar_off">Using classic CyanogenMod notification bar</string>
-
-    <string name="title_square_not_bar">Squared bar style</string>
-    <string name="summary_square_not_bar_on">Using squared off notification bar style</string>
-    <string name="summary_square_not_bar_off">Using classic rounded notification bar style</string>
     <string name="title_not_bar_color_mask">Bar color</string>
-    <string name="summary_not_bar_color_mask">Note: Transparency (alpha) setting will not be applied</string>
+    <string name="summary_not_bar_color_mask">Note: Transparency (alpha) setting can have unpredictable results!  Solid color recommended</string>
+    
+    <string name="title_custom_exp_not_bar">Custom pulldown bar</string>
+    <string name="summary_custom_exp_not_bar_on">Using customized expanded pulldown bar color and style</string>
+    <string name="summary_custom_exp_not_bar_off">Using classic CyanogenMod expanded pulldown bar</string>
+         
+    <string name="title_not_exp_bar_color_mask">Pulldown bar color</string>
+    <string name="summary_not_exp_bar_color_mask">Pick a color to apply to elements of the pulldown notification bar</string>
+
 </resources>

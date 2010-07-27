@@ -12,12 +12,14 @@ import android.provider.Settings;
 public class InputActivity extends PreferenceActivity {
 
     private static final String LOCKSCREEN_MUSIC_CONTROLS = "lockscreen_music_controls";
+    private static final String LOCKSCREEN_ALWAYS_MUSIC_CONTROLS = "lockscreen_always_music_controls";
     private static final String TRACKBALL_WAKE_PREF = "pref_trackball_wake";
     private static final String TRACKBALL_UNLOCK_PREF = "pref_trackball_unlock";
     private static final String MENU_UNLOCK_PREF = "pref_menu_unlock";
     private static final String TRACKBALL_SCREEN_PREF = "pref_trackball_screen";
 
     private CheckBoxPreference mMusicControlPref;
+    private CheckBoxPreference mAlwaysMusicControlPref;
     private CheckBoxPreference mTrackballWakePref;
     private CheckBoxPreference mTrackballUnlockPref;
     private CheckBoxPreference mMenuUnlockPref;
@@ -38,6 +40,11 @@ public class InputActivity extends PreferenceActivity {
         mMusicControlPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_MUSIC_CONTROLS);
         mMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.LOCKSCREEN_MUSIC_CONTROLS, 0) == 1);
+
+        /* Always Display Music Controls */
+        mAlwaysMusicControlPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ALWAYS_MUSIC_CONTROLS);
+        mAlwaysMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
+                Settings.System.LOCKSCREEN_ALWAYS_MUSIC_CONTROLS, 0) == 1);
 
         /* Trackball Wake */
         mTrackballWakePref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_WAKE_PREF);
@@ -69,6 +76,11 @@ public class InputActivity extends PreferenceActivity {
             value = mMusicControlPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_MUSIC_CONTROLS, value ? 1 : 0);
+            return true;
+        } else if (preference == mAlwaysMusicControlPref) {
+            value = mAlwaysMusicControlPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ALWAYS_MUSIC_CONTROLS, value ? 1 : 0);
             return true;
         } else if (preference == mTrackballWakePref) {
             value = mTrackballWakePref.isChecked();
