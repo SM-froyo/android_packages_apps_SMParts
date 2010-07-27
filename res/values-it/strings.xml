@@ -261,11 +261,15 @@
 	<string name="title_notification_bar">Barra Notifiche</string>
     <string name="title_custom_not_bar">Personalizza la barra delle notifiche</string>
     <string name="summary_custom_not_bar_on">Stai usando colore e stile della barra notifiche personalizzati</string>
-    <string name="summary_custom_not_bar_off">Stai usando la barra notifiche CyanogenMod classica </string>
+    <string name="summary_custom_not_bar_off">Stai usando la barra notifiche CyanogenMod classica</string>
     
-    <string name="title_square_not_bar">Barra squadrata</string>
-    <string name="summary_square_not_bar_on">Stai usando la barra notifiche squadrata</string>
-    <string name="summary_square_not_bar_off">Stai usando la barra notifiche arrotondata</string>
     <string name="title_not_bar_color_mask">Colore Barra</string>
-    <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) non verrà applicata</string>
+    <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) può avere risultati imprevedibili! Sono raccomandati colori pieni</string>
+
+    <string name="title_custom_exp_not_bar">Barra pulldown personalizzata</string>
+    <string name="summary_custom_exp_not_bar_on">Stai usando colore e stile della barra pulldown personalizzati</string>
+    <string name="summary_custom_exp_not_bar_off">Stai usando la barra pulldown CyanogenMod classica</string>
+         
+    <string name="title_not_exp_bar_color_mask">Colore Barra pulldown</string>
+    <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra pulldown</string>
 </resources>
