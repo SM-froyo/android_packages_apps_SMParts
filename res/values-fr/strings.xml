@@ -120,6 +120,8 @@
     <string name="lockscreen_settings_title">Paramètres de l\'écran de verrouillage</string>
     <string name="pref_lockscreen_music_controls_title">Contrôles de la lecture</string>
     <string name="pref_lockscreen_music_controls_summary">Afficher les contrôles permettant de commander la lecture musicale sur l\'écran de verrouillage</string>
+    <string name="pref_lockscreen_always_music_controls_title">Toujours les afficher</string>
+    <string name="pref_lockscreen_always_music_controls_summary">Toujours afficher les contrôles permettant de commander la lecture musicale, même sans lecture en cours</string>
     <string name="pref_trackball_wake_title">Réveil par la trackball</string>
     <string name="pref_trackball_wake_summary">Une pression sur la trackball réveille le téléphone</string>
     <string name="pref_trackball_unlock_title">Déverrouillage par la trackball</string>
@@ -227,6 +229,10 @@
 
     <string name="general_title">Général</string>
 
+    <!-- UI Settings : Power off prompt -->
+    <string name="pref_power_prompt_title">Confirmation d\'extinction</string>
+    <string name="pref_power_prompt_summary">Choisir si une confirmation doit être demandée lorsque le système est éteint ou redémarré</string>
+
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">Effet de rendu</string>
     <string name="pref_render_effect_summary">Changer quelles couleurs sont utilisées afin de dessiner l\'interface</string>
@@ -235,6 +241,7 @@
     <string name="renderfx_temp">RenderFX</string>
 	<string name="prefs_render_effect">Effet de rendu</string>
 	<string name="notify_render_effect">Effet de rendu activé</string>
+    <string name="add_widget">Ajouter le widget</string>
 
 	<!--  Widget Types -->
 	<string name="night">Nuit</string>
@@ -251,9 +258,13 @@
     <string name="summary_custom_not_bar_on">Utilisation de la couleur et du style de la barre de notification personnelle</string>
     <string name="summary_custom_not_bar_off">Utilisation de la barre de notification classique de CyanogenMod</string>
 
-    <string name="title_square_not_bar">Barre carrée</string>
-    <string name="summary_square_not_bar_on">Utilisation de la barre carrée</string>
-    <string name="summary_square_not_bar_off">Utilisation de la barre arrondie classique</string>
     <string name="title_not_bar_color_mask">Couleur de la barre</string>
-    <string name="summary_not_bar_color_mask">Note : La transparence (alpha) ne sera pas prise en compte</string>
+    <string name="summary_not_bar_color_mask">Note : La transparence (alpha) peut causer de drôles de résultats !</string>
+
+    <string name="title_custom_exp_not_bar">Barre déroulante personnalisée</string>
+    <string name="summary_custom_exp_not_bar_on">Utilisation de la couleur et du style personnalisé de la barre déroulante</string>
+    <string name="summary_custom_exp_not_bar_off">Utilisation de la barre déroulante classique de CyanogenMod</string>
+         
+    <string name="title_not_exp_bar_color_mask">Couleur de la barre déroulante</string>
+    <string name="summary_not_exp_bar_color_mask">Choisir une couleur à appliquer aux éléments de la barre déroulante</string>
 </resources>
