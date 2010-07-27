@@ -1,6 +1,5 @@
 package com.cyanogenmod.cmparts.activities;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
@@ -25,6 +24,8 @@ public class NotificationsActivity extends PreferenceActivity {
     private static final String UI_NOTIF_ITEM_TIME_COLOR = "notifications_time_color";
     private static final String UI_NOTIF_BAR_COLOR = "not_bar_color_mask";
     private static final String UI_CUSTOM_NOT_BAR = "custom_not_bar";
+    private static final String UI_CUSTOM_EXPANDED_BAR = "custom_exp_not_bar";
+    private static final String UI_EXP_BAR_COLOR = "not_exp_bar_color_mask";
 
     private Preference mNotifTickerColor;
     private Preference mNotifCountColor;
@@ -36,7 +37,10 @@ public class NotificationsActivity extends PreferenceActivity {
     private Preference mNotifItemTextPref;
     private Preference mNotifItemTimePref;
     private Preference mNotifBarColorPref;
+    private Preference mExpBarColorPref;
     private CheckBoxPreference mCustomNotBar;
+    private CheckBoxPreference mCustomExpBar;
+    
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,8 @@ public class NotificationsActivity extends PreferenceActivity {
         mNotifItemTimePref = prefSet.findPreference(UI_NOTIF_ITEM_TIME_COLOR);
         mNotifBarColorPref = prefSet.findPreference(UI_NOTIF_BAR_COLOR);
         mCustomNotBar = (CheckBoxPreference) prefSet.findPreference(UI_CUSTOM_NOT_BAR);
+        mExpBarColorPref = prefSet.findPreference(UI_EXP_BAR_COLOR);
+        mCustomExpBar = (CheckBoxPreference) prefSet.findPreference(UI_CUSTOM_EXPANDED_BAR);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -126,6 +132,17 @@ public class NotificationsActivity extends PreferenceActivity {
         	value = mCustomNotBar.isChecked();
         	Settings.System.putInt(getContentResolver(), 
         			Settings.System.NOTIF_BAR_CUSTOM, value ? 1 : 0);
+        }
+        else if (preference == mCustomExpBar) {
+        	value = mCustomExpBar.isChecked();
+        	Settings.System.putInt(getContentResolver(), 
+        			Settings.System.NOTIF_EXPANDED_BAR_CUSTOM, value ? 1 : 0);
+        }
+        else if (preference == mExpBarColorPref) {
+        	ColorPickerDialog cp = new ColorPickerDialog(this,
+        		mExpBarColorListener,
+        		readExpBarColor());
+        	cp.show();
         }
         return true;
     }
@@ -275,12 +292,21 @@ public class NotificationsActivity extends PreferenceActivity {
     ColorPickerDialog.OnColorChangedListener mNotifBarColorListener = 
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
-            	int r, g, b;
-            	r = Color.red(color);
-            	g = Color.green(color);
-            	b = Color.blue(color);
-            	int noAlpha = Color.argb(255, r, g, b);
-                Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_BAR_COLOR, noAlpha);
+            	Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_BAR_COLOR, color);
+            }
+    };
+    private int readExpBarColor() {
+        try {
+            return Settings.System.getInt(getContentResolver(), Settings.System.NOTIF_EXPANDED_BAR_COLOR);
+        }
+        catch (SettingNotFoundException e) {
+            return -16777216;
+        }
+    }
+    ColorPickerDialog.OnColorChangedListener mExpBarColorListener = 
+        new ColorPickerDialog.OnColorChangedListener() {
+            public void colorChanged(int color) {
+                Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_EXPANDED_BAR_COLOR, color);
             }
     };
 }
