@@ -91,6 +91,7 @@
         <item>Pink</item>
         <item>Orange</item>
         <item>Light Blue</item>
+	<item>Random</item>
     </string-array>
 
     <string-array name="pref_trackball_colors_values" translatable="false">
@@ -104,6 +105,7 @@
         <item>#ffc0cb</item>
         <item>#ffa500</item>
         <item>#add8e6</item>
+	<item>random</item>
     </string-array>
 
 	<string-array name="pref_trackball_blink_rate_entries">

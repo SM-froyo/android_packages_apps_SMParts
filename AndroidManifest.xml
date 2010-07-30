@@ -79,6 +79,11 @@
                 <category android:name="android.intent.category.PREFERENCE" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activities.BatteryTester"
+                  android:label="Battery Tester">
+        </activity>
+
         <provider android:name=".provider.SettingsProvider"
             android:authorities="com.cyanogenmod.cmparts.provider.Settings" />
 
@@ -98,6 +103,6 @@
 		</receiver>
 
 		<service android:enabled="true" android:name=".services.RenderFXService" />
-
+		<service android:enabled="true" android:name=".services.BatteryService" />
     </application>
 </manifest>

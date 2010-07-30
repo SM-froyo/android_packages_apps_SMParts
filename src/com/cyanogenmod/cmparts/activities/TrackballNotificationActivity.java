@@ -21,7 +21,7 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageInfo;
 import java.util.List;
-
+import java.util.Random;
 
 public class TrackballNotificationActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
 
@@ -29,7 +29,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
 	public static String[] mPackage;
 	public String mPackageSource;
-	
+
 	public boolean isNull(String mString) {
 		if(mString == null || mString.matches("null") 
 		|| mString.length() == 0
@@ -70,7 +70,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		temp = mString.split("=");
 		return temp;
 	}
-	
+
 	public String[] findPackage(String pkg) {
 		String mBaseString = Settings.System.getString(getContentResolver(), Settings.System.NOTIFICATION_PACKAGE_COLORS);
 		String[] mBaseArray = getArray(mBaseString);
@@ -97,7 +97,6 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 			if(temp2 == null) {
 				continue;
 			}
-			//Log.i("addPackNew", "Temp2 Pkg="+pkg+": Package="+temp2[0]+" Color="+temp2[1]+" Blink="+temp2[2]);
 			if(temp2[0].matches(pkg)) {
 				if(blink.matches("0")) {
 					temp2[1] = color;
@@ -128,85 +127,92 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		}
 		Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_PACKAGE_COLORS, createString(temp));
 	}
-	
+
+	private String[] colorList = {"green", "white", "red", "blue", "yellow", "cyan", "#800080", "#ffc0cb", "#ffa500", "#add8e6"};
+
 	public void testPackage(String pkg) {
 		String[] mTestPackage = findPackage(pkg);
 		if(mTestPackage == null) {
 			return;
 		}
 		final Notification notification = new Notification();
-		
 		notification.flags |= Notification.FLAG_SHOW_LIGHTS;
-		
 		int mBlinkRate = Integer.parseInt(mTestPackage[2]);
-		
-		notification.ledARGB = Color.parseColor(mTestPackage[1]);
-        notification.ledOnMS = 500;
-        notification.ledOffMS = mBlinkRate * 1000;
-        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        
-        nm.notify(NOTIFICATION_ID, notification);
-        
-        AlertDialog.Builder endFlash = new AlertDialog.Builder(this);
-        endFlash.setMessage("Clear Flash")
-        .setCancelable(false)
-        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-          public void onClick(DialogInterface dialog, int which) {
-        	  NotificationManager dialogNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        	  dialogNM.cancel(NOTIFICATION_ID);
-        } });
-        endFlash.show();
+
+		if(mTestPackage[1].equals("random")) {
+			Random generator = new Random();
+                        int x = generator.nextInt(colorList.length - 1);
+                        notification.ledARGB = Color.parseColor(colorList[x]);
+                } else {
+			notification.ledARGB = Color.parseColor(mTestPackage[1]);
+		}
+
+	        notification.ledOnMS = 500;
+		notification.ledOffMS = mBlinkRate * 1000;
+		NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+	        nm.notify(NOTIFICATION_ID, notification);
+
+        	AlertDialog.Builder endFlash = new AlertDialog.Builder(this);
+        	endFlash.setMessage("Clear Flash")
+        	.setCancelable(false)
+        	.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+          	public void onClick(DialogInterface dialog, int which) {
+        	  	NotificationManager dialogNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+	        	  dialogNM.cancel(NOTIFICATION_ID);
+       		 } });
+	        endFlash.show();
 	}
-	
+
 	public String getPackageName(String pkg) {
-        PackageManager packageManager = getPackageManager(); 
-        List<PackageInfo> packs = packageManager.getInstalledPackages(0);
-        int size = packs.size();
-        for (int i = 0; i < size; i++) {
-        	PackageInfo p = packs.get(i);
-        	if(p.packageName.equals(pkg))
-        		return p.applicationInfo.loadLabel(packageManager).toString();
-        }
-        return null;
+	        PackageManager packageManager = getPackageManager(); 
+		List<PackageInfo> packs = packageManager.getInstalledPackages(0);
+        	int size = packs.size();
+        	for (int i = 0; i < size; i++) {
+        		PackageInfo p = packs.get(i);
+        		if(p.packageName.equals(pkg))
+        			return p.applicationInfo.loadLabel(packageManager).toString();
+        	}
+        	return null;
 	}
-	
+
 	public String[] getPackageList() {
 		PackageManager packageManager = getPackageManager(); 
-        List<PackageInfo> packs = packageManager.getInstalledPackages(0);
-        int size = packs.size();
-        String[] list = new String[30];
-        int x = 0;
-        for (int i = 0; i < size; i++) {
-        	PackageInfo p = packs.get(i);
-        	try {
-        		Context appContext = createPackageContext(p.packageName, 0);
-        		boolean exists = (new File(appContext.getFilesDir(), "trackball_lights")).exists(); 
-			if(exists) {
-        			list[x] = p.packageName;
-        			x++;
+	        List<PackageInfo> packs = packageManager.getInstalledPackages(0);
+        	int size = packs.size();
+        	String[] list = new String[30];
+        	int x = 0;
+        	for (int i = 0; i < size; i++) {
+        		PackageInfo p = packs.get(i);
+        		try {
+        			Context appContext = createPackageContext(p.packageName, 0);
+        			boolean exists = (new File(appContext.getFilesDir(), "trackball_lights")).exists(); 
+				if(exists) {
+        				list[x] = p.packageName;
+        				x++;
+        			}
+        		} catch (Exception e) {
+        			Log.d("GetPackageList", e.toString());
         		}
-        	} catch (Exception e) {
-        		Log.d("GetPackageList", e.toString());
         	}
-        }
-        return list;
+        	return list;
 	}
 
 	private PreferenceScreen createPreferenceScreen() {
 		//The root of our system
 		String[] packageList = getPackageList();
 		PreferenceScreen root = getPreferenceManager().createPreferenceScreen(this);
-		
-        for(int i = 0; i < packageList.length; i++) {
-        	if(isNull(packageList[i]))
-        		continue;
-        	
+
+		for(int i = 0; i < packageList.length; i++) {
+        		if(isNull(packageList[i]))
+        			continue;
+
         	String packageName = getPackageName(packageList[i]);
         	PreferenceScreen appName = getPreferenceManager().createPreferenceScreen(this);
         	appName.setKey(packageList[i] + "_screen");
         	appName.setTitle(packageName);
         	root.addPreference(appName);
-        	
+
         	ListPreference colorList = new ListPreference(this);
         	colorList.setKey(packageList[i]);
         	colorList.setTitle(R.string.color_trackball_flash);
@@ -216,7 +222,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	colorList.setEntryValues(R.array.pref_trackball_colors_values);
         	colorList.setOnPreferenceChangeListener(this);
         	appName.addPreference(colorList);
-        	
+
         	ListPreference blinkList = new ListPreference(this);
         	blinkList.setKey(packageList[i]);
         	blinkList.setTitle(R.string.color_trackball_blink);
@@ -226,42 +232,56 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	blinkList.setEntryValues(R.array.pref_trackball_blink_rate_values);
         	blinkList.setOnPreferenceChangeListener(this);
         	appName.addPreference(blinkList);
-        	
+
         	Preference testColor = new Preference(this);
         	testColor.setKey(packageList[i]);
         	testColor.setSummary("Test the flash");
         	testColor.setTitle(R.string.color_trackball_test);
         	appName.addPreference(testColor);
         }
-        
+
         /*Advanced*/
         PreferenceScreen advancedScreen = getPreferenceManager().createPreferenceScreen(this);
         advancedScreen.setKey("advanced_screen");
         advancedScreen.setTitle("Advanced");
     	root.addPreference(advancedScreen);
-    	
+
     	CheckBoxPreference alwaysPulse = new CheckBoxPreference(this);
     	alwaysPulse.setKey("always_pulse");
     	alwaysPulse.setSummary(R.string.pref_trackball_screen_summary);
     	alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
     	advancedScreen.addPreference(alwaysPulse);
-    	
+
     	//TRACKBALL_NOTIFICATION_SUCESSION
     	CheckBoxPreference sucessionPulse = new CheckBoxPreference(this);
     	sucessionPulse.setKey("pulse_sucession");
     	sucessionPulse.setSummary(R.string.pref_trackball_sucess_summary);
     	sucessionPulse.setTitle(R.string.pref_trackball_sucess_title);
     	advancedScreen.addPreference(sucessionPulse);
-    	
+
+        //TRACKBALL_NOTIFICATION_SUCESSION
+        CheckBoxPreference randomPulse = new CheckBoxPreference(this);
+        randomPulse.setKey("pulse_random_colors");
+        randomPulse.setSummary("Random colors");
+        randomPulse.setTitle("Pulses the LED in random colors for all notifications");
+        advancedScreen.addPreference(randomPulse);
+
+        //TRACKBALL_NOTIFICATION_SUCESSION
+        CheckBoxPreference orderPulse = new CheckBoxPreference(this);
+        orderPulse.setKey("pulse_colors_in_order");
+        orderPulse.setSummary("Pulse in order");
+        orderPulse.setTitle("Pulses the LED color in order.");
+        advancedScreen.addPreference(orderPulse);
+
     	Preference resetColors = new Preference(this);
     	resetColors.setKey("reset_notifications");
     	resetColors.setSummary("Reset all colors and apps.");
     	resetColors.setTitle("Reset");
     	advancedScreen.addPreference(resetColors);
-    	
+
         return root;
 	}
-	
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);  
@@ -296,6 +316,16 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             	value = keyPref.isChecked();
                 Settings.System.putInt(getContentResolver(),
                         Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+	} else if (preference.getKey().toString().equals("pulse_random_colors")) {
+                CheckBoxPreference keyPref = (CheckBoxPreference) preference;
+                value = keyPref.isChecked();
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRACKBALL_NOTIFICATION_RANDOM, value ? 1 : 0);
+	} else if (preference.getKey().toString().equals("pulse_colors_in_order")) {
+                CheckBoxPreference keyPref = (CheckBoxPreference) preference;
+                value = keyPref.isChecked();
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, value ? 1 : 0);
         } else if(preference.getSummary() != null) {
         	if(preference.getSummary().toString().equals("Test the flash")) {
         		testPackage(preference.getKey().toString());

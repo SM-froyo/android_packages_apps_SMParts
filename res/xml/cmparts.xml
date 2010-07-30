@@ -33,4 +33,13 @@
             android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
     </PreferenceScreen>
         
+
+    <PreferenceScreen android:key="battery_tester"
+        android:title="Test Battery" android:summary="Battery Drain Tester">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.BatteryTester" />
+    </PreferenceScreen>
+
+
 </PreferenceScreen>
