@@ -272,4 +272,8 @@
     <string name="title_not_exp_bar_color_mask">Pulldown bar color</string>
     <string name="summary_not_exp_bar_color_mask">Pick a color to apply to elements of the pulldown notification bar</string>
 
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Lock home in memory</string>
+    <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
+
 </resources>
