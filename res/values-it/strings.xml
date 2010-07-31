@@ -272,4 +272,8 @@
          
     <string name="title_not_exp_bar_color_mask">Colore Barra pulldown</string>
     <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra pulldown</string>
+
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Forza home in memoria</string>
+    <string name="pref_lock_home_summary">Cerca di mantenere l\'applicazione home sempre in memoria</string>
 </resources>
