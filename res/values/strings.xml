@@ -272,4 +272,23 @@
     <string name="title_not_exp_bar_color_mask">Pulldown bar color</string>
     <string name="summary_not_exp_bar_color_mask">Pick a color to apply to elements of the pulldown notification bar</string>
 
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Lock home in memory</string>
+    <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
+
+	<!-- DSP Manager -->
+	<string name="dsp_settings_title">DSP Settings</string>
+	<string name="dsp_settings_summary">Modify device audio settings</string>
+	<string name="pref_dynamic_range_compression">Dynamic Range Compression</string>
+	<string name="pref_graphic_equalizer">5 Band Graphic Equalizer</string>
+	<string name="pref_headset_virtual_room">Headset Virtual Room Effect</string>
+	<string name="label_ratio">Ratio</string>
+	<string name="label_ratio_slider">1:x</string>
+	<string name="slider_6">+6 dB</string>
+	<string name="slider_63">63 Hz</string>
+	<string name="slider_250">250 Hz</string>
+	<string name="slider_1k">1 kHz</string>
+	<string name="slider_4k">4 kHz</string>
+	<string name="slider_16k">16 kHz</string>
+
 </resources>

@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
 
     <application android:label="@string/app_name" android:icon="@drawable/cm_icon">
         <activity android:name=".activities.MainActivity">
@@ -57,6 +58,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.PerformanceSettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.DSPManagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
