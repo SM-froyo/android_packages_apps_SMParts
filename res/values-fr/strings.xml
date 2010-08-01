@@ -267,4 +267,23 @@
          
     <string name="title_not_exp_bar_color_mask">Couleur de la barre déroulante</string>
     <string name="summary_not_exp_bar_color_mask">Choisir une couleur à appliquer aux éléments de la barre déroulante</string>
+
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Garder l\'accueil en mémoire</string>
+    <string name="pref_lock_home_summary">Tenter de garder l\'application Accueil dans la mémoire en tout temps</string>
+
+    <!-- DSP Manager -->
+    <string name="dsp_settings_title">Paramètres du DSP</string>
+    <string name="dsp_settings_summary">Modification des paramètres audio</string>
+    <string name="pref_dynamic_range_compression">Compresseur audio</string>
+    <string name="pref_graphic_equalizer">Égaliseur graphique 5 bandes</string>
+    <string name="pref_headset_virtual_room">Effet 3D dans le casque</string>
+    <string name="label_ratio">Ratio</string>
+    <string name="label_ratio_slider">1:x</string>
+    <string name="slider_6">+6 dB</string>
+    <string name="slider_63">63 Hz</string>
+    <string name="slider_250">250 Hz</string>
+    <string name="slider_1k">1 kHz</string>
+    <string name="slider_4k">4 kHz</string>
+    <string name="slider_16k">16 kHz</string>
 </resources>
