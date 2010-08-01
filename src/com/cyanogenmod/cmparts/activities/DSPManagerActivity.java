@@ -32,7 +32,7 @@ public final class DSPManagerActivity extends Activity {
 	/** Headset plugged in? */
 	boolean headsetPlugged;
 	
-	private BroadcastReceiver HeadphoneEnabler = new BroadcastReceiver()
+	final BroadcastReceiver HeadphoneEnabler = new BroadcastReceiver()
 	{
 	        @Override
 	        public void onReceive(Context context, Intent intent) {
@@ -63,6 +63,8 @@ public final class DSPManagerActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        setTitle(R.string.dsp_settings_title);
         setContentView(R.layout.dspmanager);
 
         registerReceiver(HeadphoneEnabler, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
