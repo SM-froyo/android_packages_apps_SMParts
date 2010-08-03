@@ -234,6 +234,10 @@
 
     <string name="general_title">Generale</string>
 
+    <!-- UI Settings : Power off prompt -->
+    <string name="pref_power_prompt_title">Power prompt</string>
+    <string name="pref_power_prompt_summary">Scegli se visualizzare il prompt di conferma per lo spegnimento e il riavvio</string>
+
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">Effetto Render</string>
     <string name="pref_render_effect_summary">Scegli che colori utilizzare per visualizzare le immagini sullo schermo (possibili risparmi energetici)</string>
@@ -257,11 +261,27 @@
 	<string name="title_notification_bar">Barra Notifiche</string>
     <string name="title_custom_not_bar">Personalizza la barra delle notifiche</string>
     <string name="summary_custom_not_bar_on">Stai usando colore e stile della barra notifiche personalizzati</string>
-    <string name="summary_custom_not_bar_off">Stai usando la barra notifiche CyanogenMod classica </string>
+    <string name="summary_custom_not_bar_off">Stai usando la barra notifiche CyanogenMod classica</string>
     
-    <string name="title_square_not_bar">Barra squadrata</string>
-    <string name="summary_square_not_bar_on">Stai usando la barra notifiche squadrata</string>
-    <string name="summary_square_not_bar_off">Stai usando la barra notifiche arrotondata</string>
     <string name="title_not_bar_color_mask">Colore Barra</string>
-    <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) non verrà applicata</string>
+    <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) può avere risultati imprevedibili! Sono raccomandati colori pieni</string>
+
+    <string name="title_custom_exp_not_bar">Barra pulldown personalizzata</string>
+    <string name="summary_custom_exp_not_bar_on">Stai usando colore e stile della barra pulldown personalizzati</string>
+    <string name="summary_custom_exp_not_bar_off">Stai usando la barra pulldown CyanogenMod classica</string>
+         
+    <string name="title_not_exp_bar_color_mask">Colore Barra pulldown</string>
+    <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra pulldown</string>
+
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Forza home in memoria</string>
+    <string name="pref_lock_home_summary">Cerca di mantenere l\'applicazione home sempre in memoria</string>
+
+    <!-- DSP Manager -->
+	<string name="dsp_settings_title">Impostazioni DSP</string>
+	<string name="dsp_settings_summary">Modifica impostazioni audio del device</string>
+	<string name="pref_dynamic_range_compression">Dynamic Range Compression</string>
+	<string name="pref_graphic_equalizer">Equalizzatore Grafico a 5 bande</string>
+	<string name="pref_headset_virtual_room">Effetto Virtual Room (cuffie)</string>
+	<string name="label_ratio">Rapporto</string>
 </resources>
