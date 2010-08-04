@@ -1,6 +1,7 @@
 package com.cyanogenmod.cmparts.activities;
 
 import com.cyanogenmod.cmparts.R;
+import com.cyanogenmod.cmparts.provider.FlingerPinger;
 
 import android.os.Bundle;
 import android.os.IBinder;
@@ -130,7 +131,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mRenderEffectPref) {
-            writeRenderEffect(Integer.valueOf((String)newValue));
+            FlingerPinger.writeRenderEffect(Integer.valueOf((String)newValue));
             return true;
         }
         return false;
@@ -166,19 +167,4 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         }
 
     }
-
-    private void writeRenderEffect(int id) {
-        try {
-            IBinder flinger = ServiceManager.getService("SurfaceFlinger");
-            if (flinger != null) {
-                Parcel data = Parcel.obtain();
-                data.writeInterfaceToken("android.ui.ISurfaceComposer");
-                data.writeInt(id);
-                flinger.transact(1014, data, null, 0);
-                data.recycle();
-            }
-        } catch (RemoteException ex) {
-        }
-    }
-
 }
