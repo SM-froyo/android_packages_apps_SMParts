@@ -54,6 +54,16 @@
         </PreferenceScreen>
 
     </PreferenceCategory>
+    
+    <!-- Tracball Settings -->
+    <PreferenceCategory android:title="@string/ui_trackball">
+    	<PreferenceScreen android:key="trackball_notifications"
+            android:title="@string/trackball_title" android:summary="@string/trackball_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.TrackballNotificationActivity" />
+        </PreferenceScreen>
+   </PreferenceCategory>
 
     <!-- Rotation -->
     <PreferenceCategory android:title="@string/ui_rotation_title">
