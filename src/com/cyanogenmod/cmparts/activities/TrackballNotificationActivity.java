@@ -31,7 +31,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	public String mPackageSource;
 
 	public boolean isNull(String mString) {
-		if(mString == null || mString.matches("null") 
+		if(mString == null || mString.matches("null")
 		|| mString.length() == 0
 		|| mString.matches("|")
 		|| mString.matches("")) {
@@ -164,14 +164,39 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	        endFlash.show();
 	}
 
+
+        public String knownPackage(String pkg) {
+                if(pkg.equals("com.android.email"))
+                        return "Email";
+                else if(pkg.equals("com.android.mms"))
+                        return "Messaging";
+                else if(pkg.equals("com.google.android.apps.googlevoice"))
+                        return "Google Voice";
+                else if(pkg.equals("com.google.android.gm"))
+                        return "Gmail";
+                else if(pkg.equals("com.google.android.gsf"))
+                        return "GTalk";
+                else if(pkg.equals("com.tiwtter.android"))
+                        return "Twitter";
+                else if(pkg.equals("jp.r246.twicca"))
+                        return "Twicca";
+
+                return null;
+        }
+
 	public String getPackageName(String pkg) {
 	        PackageManager packageManager = getPackageManager(); 
 		List<PackageInfo> packs = packageManager.getInstalledPackages(0);
         	int size = packs.size();
         	for (int i = 0; i < size; i++) {
         		PackageInfo p = packs.get(i);
-        		if(p.packageName.equals(pkg))
-        			return p.applicationInfo.loadLabel(packageManager).toString();
+        		if(p.packageName.equals(pkg)) {
+				if(knownPackage(pkg) != null) {
+					return knownPackage(pkg);
+				} else {
+        				return p.applicationInfo.loadLabel(packageManager).toString();
+				}
+			}
         	}
         	return null;
 	}
@@ -180,14 +205,14 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		PackageManager packageManager = getPackageManager(); 
 	        List<PackageInfo> packs = packageManager.getInstalledPackages(0);
         	int size = packs.size();
-        	String[] list = new String[30];
+        	String[] list = new String[50];
         	int x = 0;
         	for (int i = 0; i < size; i++) {
         		PackageInfo p = packs.get(i);
         		try {
         			Context appContext = createPackageContext(p.packageName, 0);
         			boolean exists = (new File(appContext.getFilesDir(), "trackball_lights")).exists(); 
-				if(exists) {
+				if(exists || (knownPackage(p.packageName) != null)) {
         				list[x] = p.packageName;
         				x++;
         			}

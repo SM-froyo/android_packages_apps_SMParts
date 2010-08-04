@@ -283,7 +283,7 @@
 
 
     <string name="chon_timer_name">Time Elapsed</string>
-    <string name="chronometer_initial_format">H:MM:SS</string>
+    <string name="chronometer_initial_format">00:00</string>
     <string name="start_battery_test">Start Test</string>
     <string name="startpercent_battery_test">0</string>
     <string name="endpercent_battery_test">0</string>
