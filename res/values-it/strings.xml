@@ -103,13 +103,23 @@
 	<string name="trackball_notifications_title">Colori Notifiche Trackball</string>
 	<string name="dialog_color_trackball">Scegli un colore</string>
 	<string name="dialog_blink_trackball">Scegli frequenza di lampeggio</string>
-	<string name="color_trackball_flash">Colore flash</string>
-	<string name="color_trackball_blink">Frequenza lampeggio</string>
-	<string name="color_trackball_test">Flash test</string>
+	<string name="color_trackball_flash_title">Colore lampeggio</string>
+        <string name="color_trackball_flash_summary">Colore da usare per il lampeggio del LED</string>
+	<string name="color_trackball_blink_title">Frequenza lampeggio</string>
+        <string name="color_trackball_blink_summary">Frequenza del lampeggio</string>
+	<string name="color_trackball_test_title">Prova lampeggio</string>
+        <string name="color_trackball_test_summary">Prova il lampeggio</string>
+    <string name="trackball_advanced_title">Avanzato</string>
     <string name="pref_trackball_screen_title">Pulsa sempre</string>
     <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso.</string>
     <string name="pref_trackball_sucess_title">Successione</string>
-    <string name="pref_trackball_sucess_summary">Notifiche pulsanti in successione.</string>
+    <string name="pref_trackball_sucess_summary">Notifiche pulsanti in successione</string>
+    <string name="pref_trackball_random_title">Colori Random</string>
+    <string name="pref_trackball_random_summary">Pulsa il LED con colori casuali per tutte le notifiche</string>
+    <string name="pref_trackball_order_title">Pulsa in ordine</string>
+    <string name="pref_trackball_order_summary">Pulsa il LED con colori in ordine</string>
+    <string name="pref_trackball_reset_title">Ripristino</string>
+    <string name="pref_trackball_reset_summary">Ripristina tutti i colori e le app</string>
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">WARNING: Può causare un aumento di consumo di batteria</string>
     <string name="notification_battery_warning">È stato provato che questa opzione aumenta il consumo di batteria del ~3% ogni ora. Se noti un aumento del consumo mentre sono attive le notifiche pulsanti questa ne è la causa. Non attivarla se non vuoi peggiorare la durata della batteria.</string>
