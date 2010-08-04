@@ -242,8 +242,8 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
         	ListPreference colorList = new ListPreference(this);
         	colorList.setKey(packageList[i]);
-        	colorList.setTitle(R.string.color_trackball_flash);
-        	colorList.setSummary("Color to flash");
+        	colorList.setTitle(R.string.color_trackball_flash_title);
+        	colorList.setSummary(R.string.color_trackball_flash_summary);
         	colorList.setDialogTitle(R.string.dialog_color_trackball);
         	colorList.setEntries(R.array.entries_trackball_colors);
         	colorList.setEntryValues(R.array.pref_trackball_colors_values);
@@ -252,8 +252,8 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
         	ListPreference blinkList = new ListPreference(this);
         	blinkList.setKey(packageList[i]);
-        	blinkList.setTitle(R.string.color_trackball_blink);
-        	blinkList.setSummary("Blink Rate");
+        	blinkList.setTitle(R.string.color_trackball_blink_title);
+        	blinkList.setSummary(R.string.color_trackball_blink_summary);
         	blinkList.setDialogTitle(R.string.dialog_blink_trackball);
         	blinkList.setEntries(R.array.pref_trackball_blink_rate_entries);
         	blinkList.setEntryValues(R.array.pref_trackball_blink_rate_values);
@@ -262,15 +262,15 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
         	Preference testColor = new Preference(this);
         	testColor.setKey(packageList[i]);
-        	testColor.setSummary("Test the flash");
-        	testColor.setTitle(R.string.color_trackball_test);
+        	testColor.setSummary(R.string.color_trackball_test_summary);
+        	testColor.setTitle(R.string.color_trackball_test_title);
         	appName.addPreference(testColor);
         }
 
         /*Advanced*/
         PreferenceScreen advancedScreen = getPreferenceManager().createPreferenceScreen(this);
         advancedScreen.setKey("advanced_screen");
-        advancedScreen.setTitle("Advanced");
+        advancedScreen.setTitle(R.string.trackball_advanced_title);
     	root.addPreference(advancedScreen);
 
     	CheckBoxPreference alwaysPulse = new CheckBoxPreference(this);
@@ -289,21 +289,21 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         //TRACKBALL_NOTIFICATION_SUCESSION
         CheckBoxPreference randomPulse = new CheckBoxPreference(this);
         randomPulse.setKey("pulse_random_colors");
-        randomPulse.setSummary("Random colors");
-        randomPulse.setTitle("Pulses the LED in random colors for all notifications");
+        randomPulse.setSummary(R.string.pref_trackball_random_summary);
+        randomPulse.setTitle(R.string.pref_trackball_random_title);
         advancedScreen.addPreference(randomPulse);
 
         //TRACKBALL_NOTIFICATION_SUCESSION
         CheckBoxPreference orderPulse = new CheckBoxPreference(this);
         orderPulse.setKey("pulse_colors_in_order");
-        orderPulse.setSummary("Pulse in order");
-        orderPulse.setTitle("Pulses the LED color in order.");
+        orderPulse.setSummary(R.string.pref_trackball_order_summary);
+        orderPulse.setTitle(R.string.pref_trackball_order_title);
         advancedScreen.addPreference(orderPulse);
 
     	Preference resetColors = new Preference(this);
     	resetColors.setKey("reset_notifications");
-    	resetColors.setSummary("Reset all colors and apps.");
-    	resetColors.setTitle("Reset");
+    	resetColors.setSummary(R.string.pref_trackball_reset_summary);
+    	resetColors.setTitle(R.string.pref_trackball_reset_title);
     	advancedScreen.addPreference(resetColors);
 
         return root;

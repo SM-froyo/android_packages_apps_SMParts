@@ -103,13 +103,24 @@
 	<string name="trackball_notifications_title">Trackball Notification Colors</string>
 	<string name="dialog_color_trackball">Choose a color</string>
 	<string name="dialog_blink_trackball">Choose a blink rate</string>
-	<string name="color_trackball_flash">Flash color</string>
-	<string name="color_trackball_blink">Blink rate</string>
-	<string name="color_trackball_test">Flash test</string>
+	<string name="color_trackball_flash_title">Flash color</string>
+        <string name="color_trackball_flash_summary">Color to flash</string>
+	<string name="color_trackball_blink_title">Blink rate</string>
+        <string name="color_trackball_blink_summary">Blink rate</string>
+	<string name="color_trackball_test_title">Flash test</string>
+        <string name="color_trackball_test_summary">Test the flash</string>
+    <string name="trackball_advanced_title">Advanced</string>
     <string name="pref_trackball_screen_title">Always pulse</string>
     <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>
     <string name="pref_trackball_sucess_title">Sucession</string>
     <string name="pref_trackball_sucess_summary">Pulse notifications in sucession.</string>
+    <string name="pref_trackball_random_title">Random colors</string>
+    <string name="pref_trackball_random_summary">Pulses the LED in random colors for all notifications</string>
+    <string name="pref_trackball_order_title">Pulse in order</string>
+    <string name="pref_trackball_order_summary">Pulses the LED color in order</string>
+    <string name="pref_trackball_reset_title">Reset</string>
+    <string name="pref_trackball_reset_summary">Reset all colors and apps</string>
+
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">WARNING: May Cause Battery Drain</string>
     <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incure the drain.</string>
