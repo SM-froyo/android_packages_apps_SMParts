@@ -13,6 +13,11 @@
     <string name="pref_rotation_90_title">90 gradi</string>
     <string name="pref_rotation_180_title">180 gradi</string>
     <string name="pref_rotation_270_title">270 gradi</string>
+    
+    <!-- User interface : trackball -->
+    <string name="ui_trackball">Impostazioni Trackball</string>
+    <string name="trackball_title">Notifiche Trackball</string>
+    <string name="trackball_summary">Imposta colore e pulsazione delle notifiche</string>
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
@@ -94,6 +99,21 @@
     <string name="title_notifications_items_text">Testo</string>
     <string name="title_notifications_items_time">Ora</string>
 
+    <!-- User interface: Trackball notifcations -->
+	<string name="trackball_notifications_title">Colori Notifiche Trackball</string>
+	<string name="dialog_color_trackball">Scegli un colore</string>
+	<string name="dialog_blink_trackball">Scegli frequenza di lampeggio</string>
+	<string name="color_trackball_flash">Colore flash</string>
+	<string name="color_trackball_blink">Frequenza lampeggio</string>
+	<string name="color_trackball_test">Flash test</string>
+    <string name="pref_trackball_screen_title">Pulsa sempre</string>
+    <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso.</string>
+    <string name="pref_trackball_sucess_title">Sucessione</string>
+    <string name="pref_trackball_sucess_summary">Notifiche pulsanti in successione.</string>
+    <!-- Trackball Settings : Warning dialog -->
+    <string name="notification_battery_warning_title">WARNING: Può causare un aumento di consumo di batteria</string>
+    <string name="notification_battery_warning">È stato provato che questa opzione aumenta il consumo di batteria del ~3% ogni ora. Se noti un aumento del consumo mentre sono attive le notifiche pulsanti questa ne è la causa. Non attivarla se non vuoi peggiorare la durata della batteria.</string>
+
     <!-- Tweaks Extras -->
     <string name="te_title">Modifiche extra</string>
     <string name="te_title_summary">Strumenti extra per modifiche all\'interfaccia</string>
@@ -133,9 +153,7 @@
     <string name="pref_trackball_unlock_summary">Sblocca il telefono premendo la trackball</string>
     <string name="pref_menu_unlock_title">Menu unlock</string>
     <string name="pref_menu_unlock_summary">Sblocca il telefono premendo il tasto menu</string>
-    <string name="pref_trackball_screen_title">Pulsa sempre</string>
-    <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso</string>
-
+    
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press tasto home</string>
     <string name="long_press_home_summary">Numero di applicazioni recenti, etc.</string>
@@ -264,14 +282,9 @@
     <string name="summary_custom_not_bar_off">Stai usando la barra notifiche CyanogenMod classica</string>
     
     <string name="title_not_bar_color_mask">Colore Barra</string>
-    <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) può avere risultati imprevedibili! Sono raccomandati colori pieni</string>
+    <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) non verrà applicata</string>
 
-    <string name="title_custom_exp_not_bar">Barra pulldown personalizzata</string>
-    <string name="summary_custom_exp_not_bar_on">Stai usando colore e stile della barra pulldown personalizzati</string>
-    <string name="summary_custom_exp_not_bar_off">Stai usando la barra pulldown CyanogenMod classica</string>
-         
-    <string name="title_not_exp_bar_color_mask">Colore Barra pulldown</string>
-    <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra pulldown</string>
+    
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Forza home in memoria</string>

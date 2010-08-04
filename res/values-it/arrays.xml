@@ -43,6 +43,28 @@
         <item>Fucsia</item>
 	</string-array>
 
+    <string-array name="entries_trackball_colors">
+        <item>Verde</item>
+        <item>Bianco</item>
+        <item>Rosso</item>
+        <item>Blu</item>
+        <item>Giallo</item>
+        <item>Ciano</item>
+        <item>Magenta</item>
+        <item>Rosa</item>
+        <item>Arancione</item>
+        <item>Blu Chiaro</item>
+	<item>Random</item>
+    </string-array>
+
+    <string-array name="pref_trackball_blink_rate_entries">
+        <item>2 (Veloce)</item>
+        <item>3</item>
+        <item>4 (Media)</item>
+        <item>5</item>
+        <item>6 (Lenta)</item>
+    </string-array>
+
     
 
 </resources>
