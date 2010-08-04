@@ -295,6 +295,11 @@
     <string name="summary_custom_not_bar_off">Using classic CyanogenMod notification bar</string>
     <string name="title_not_bar_color_mask">Bar color</string>
     <string name="summary_not_bar_color_mask">Note: Transparency (alpha) setting will not be applied</string>
+    <string name="title_custom_exp_not_bar">Custom pulldown bar</string>
+    <string name="summary_custom_exp_not_bar_on">Using customized expanded pulldown bar color and style</string>
+    <string name="summary_custom_exp_not_bar_off">Using classic CyanogenMod expanded pulldown bar</string>
+    <string name="title_not_exp_bar_color_mask">Pulldown bar color</string>
+    <string name="summary_not_exp_bar_color_mask">Pick a color to apply to elements of the pulldown notification bar</string>
 
 
     <!-- Performance : Lock home memory -->

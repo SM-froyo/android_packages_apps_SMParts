@@ -178,7 +178,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                         return "Gmail";
                 else if(pkg.equals("com.google.android.gsf"))
                         return "GTalk";
-                else if(pkg.equals("com.tiwtter.android"))
+                else if(pkg.equals("com.twitter.android"))
                         return "Twitter";
                 else if(pkg.equals("jp.r246.twicca"))
                         return "Twicca";
