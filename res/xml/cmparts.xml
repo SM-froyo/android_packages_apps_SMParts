@@ -8,7 +8,15 @@
             android:targetPackage="com.cyanogenmod.cmparts"
             android:targetClass="com.cyanogenmod.cmparts.activities.ApplicationActivity" />
     </PreferenceScreen>
-
+    
+    <!-- DSP Manager Settings -->
+    <PreferenceScreen android:key="dsp_manager_settings"
+        android:title="@string/dsp_settings_title" android:summary="@string/dsp_settings_summary">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.DSPManagerActivity" />
+    </PreferenceScreen>
+    
     <!-- Input Settings -->
     <PreferenceScreen android:key="input_settings"
         android:title="@string/input_settings_title" android:summary="@string/input_settings_summary">
@@ -33,13 +41,13 @@
             android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
     </PreferenceScreen>
         
-
+<!-- Possible future Use: Pedlar 
     <PreferenceScreen android:key="battery_tester"
         android:title="Test Battery" android:summary="Battery Drain Tester">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.cyanogenmod.cmparts"
             android:targetClass="com.cyanogenmod.cmparts.activities.BatteryTester" />
     </PreferenceScreen>
-
+-->
 
 </PreferenceScreen>

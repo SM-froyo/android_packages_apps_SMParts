@@ -282,11 +282,23 @@
     <string name="summary_not_bar_color_mask">Note: Transparency (alpha) setting will not be applied</string>
 
 
-    <string name="chon_timer_name">Time Elapsed</string>
-    <string name="chronometer_initial_format">00:00</string>
-    <string name="start_battery_test">Start Test</string>
-    <string name="startpercent_battery_test">0</string>
-    <string name="endpercent_battery_test">0</string>
-    <string name="startname_battery_test">Start Percent</string>
-    <string name="endname_battery_test">End Percent</string>
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Lock home in memory</string>
+    <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
+
+	<!-- DSP Manager -->
+	<string name="dsp_settings_title">DSP Settings</string>
+	<string name="dsp_settings_summary">Modify device audio settings</string>
+	<string name="pref_dynamic_range_compression">Dynamic Range Compression</string>
+	<string name="pref_graphic_equalizer">5 Band Graphic Equalizer</string>
+	<string name="pref_headset_virtual_room">Headset Virtual Room Effect</string>
+	<string name="label_ratio">Ratio</string>
+	<string name="label_ratio_slider">1:x</string>
+	<string name="slider_6">+6 dB</string>
+	<string name="slider_63">63 Hz</string>
+	<string name="slider_250">250 Hz</string>
+	<string name="slider_1k">1 kHz</string>
+	<string name="slider_4k">4 kHz</string>
+	<string name="slider_16k">16 kHz</string>
+
 </resources>
