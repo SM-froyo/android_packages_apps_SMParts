@@ -108,7 +108,7 @@
 	<string name="color_trackball_test">Flash test</string>
     <string name="pref_trackball_screen_title">Pulsa sempre</string>
     <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso.</string>
-    <string name="pref_trackball_sucess_title">Sucessione</string>
+    <string name="pref_trackball_sucess_title">Successione</string>
     <string name="pref_trackball_sucess_summary">Notifiche pulsanti in successione.</string>
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">WARNING: Può causare un aumento di consumo di batteria</string>
