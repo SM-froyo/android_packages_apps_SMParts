@@ -9,6 +9,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
+import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
@@ -51,6 +53,14 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		return temp;
 	}
 
+	public static String[] mPackage;
+	public String mPackageSource;
+	
+	public String[] getArray(String mGetFrom) {
+		String[] temp = mGetFrom.split("\\|");
+		return temp;
+	}
+	
 	public String createString(String[] mArray) {
 		int i;
 		String temp = "";
