@@ -14,6 +14,11 @@
     <string name="pref_rotation_180_title">180度</string>
     <string name="pref_rotation_270_title">270度</string>
 
+    <!-- User interface : trackball -->
+    <string name="ui_trackball">トラックボール設定</string>
+    <string name="trackball_title">トラックボール通知</string>
+    <string name="trackball_summary">通知の色や点滅を制御する</string>
+
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">ピンチインリフロー</string>
@@ -88,6 +93,31 @@
     <string name="title_notifications_items_title">アイテムタイトルの色</string>
     <string name="title_notifications_items_text">アイテムテキストの色</string>
     <string name="title_notifications_items_time">アイテム時刻の色</string>
+
+    <!-- User interface: Trackball notifcations -->
+    <string name="trackball_notifications_title">トラックーボールの通知色</string>
+    <string name="dialog_color_trackball">色を選択</string>
+    <string name="dialog_blink_trackball">点滅間隔を選択</string>
+    <string name="color_trackball_flash_title">点灯色</string>
+    <string name="color_trackball_flash_summary">点灯時の色</string>
+    <string name="color_trackball_blink_title">点滅間隔</string>
+    <string name="color_trackball_blink_summary">点滅間隔</string>
+    <string name="color_trackball_test_title">点灯テスト</string>
+    <string name="color_trackball_test_summary">点灯をテストする</string>
+    <string name="trackball_advanced_title">アドバンスド</string>
+    <string name="pref_trackball_sucess_title">継続</string>
+    <string name="pref_trackball_sucess_summary">通知の点滅を継続させる</string>
+    <string name="pref_trackball_random_title">ランダムな色</string>
+    <string name="pref_trackball_random_summary">すべての通知について、ランダムな色で点滅する</string>
+    <string name="pref_trackball_order_title">順序に従って点滅</string>
+    <string name="pref_trackball_order_summary">LED色の順序に従って点滅</string>
+    <string name="pref_trackball_reset_title">リセット</string>
+    <string name="pref_trackball_reset_summary">すべてのアプリについて色設定をリセット</string>
+
+    <!-- Trackball Settings : Warning dialog -->
+    <string name="notification_battery_warning_title">注意: バッテリーが消費します</string>
+    <string name="notification_battery_warning">このオプションを有効にすることにより、1時間に約3%ほどのバッテリー消費が増加します。バッテリー消費が速くなったと感じたら、恐らくこのオプションが原因です。バッテリー消費が気になるのであれば、このオプションは有効にするべきではありません。</string>
+
 
     <!-- Tweaks Extras -->
     <string name="te_title">追加機能</string>
@@ -259,13 +289,6 @@
     <string name="summary_custom_not_bar_off">CyanogenMod従来の通知バーを使用する</string>
     <string name="title_not_bar_color_mask">バーの色</string>
     <string name="summary_not_bar_color_mask">メモ: 透明度(alpha値)は予測できない結果になります!不透明色をお勧めします</string>
-
-    <string name="title_custom_exp_not_bar">カスタムプルダウンバー</string>
-    <string name="summary_custom_exp_not_bar_on">色やスタイルをカスタマイズしたプルダウンバーを使用する</string>
-    <string name="summary_custom_exp_not_bar_off">従来のCyanogenModプルダウンバーを使用する</string>
-
-    <string name="title_not_exp_bar_color_mask">プルダウンバーの色</string>
-    <string name="summary_not_exp_bar_color_mask">プルダウン通知バーに適用する色を選択する</string>
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">ホームをメモリに維持</string>

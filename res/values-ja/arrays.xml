@@ -42,4 +42,26 @@
         <item>フューシャ</item>
     </string-array>
 
+    <string-array name="entries_trackball_colors">
+        <item>緑</item>
+        <item>白</item>
+        <item>赤</item>
+        <item>青</item>
+        <item>黄</item>
+        <item>シアン</item>
+        <item>マゼンタ</item>
+        <item>ピンク</item>
+        <item>オレンジ</item>
+        <item>ライトブルー</item>
+        <item>ランダム</item>
+    </string-array>
+
+    <string-array name="pref_trackball_blink_rate_entries">
+        <item>2 (速い)</item>
+        <item>3</item>
+        <item>4 (普通)</item>
+        <item>5</item>
+        <item>6 (遅い)</item>
+    </string-array>
+
 </resources>
