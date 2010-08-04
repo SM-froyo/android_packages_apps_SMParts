@@ -293,6 +293,11 @@
     
     <string name="title_not_bar_color_mask">Colore Barra</string>
     <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) non verrà applicata</string>
+    <string name="title_custom_exp_not_bar">Barra pulldown personalizzata</string>
+    <string name="summary_custom_exp_not_bar_on">Stai usando colore e stile della barra pulldown personalizzati</string>
+    <string name="summary_custom_exp_not_bar_off">Stai usando la barra pulldown CyanogenMod classica</string>
+    <string name="title_not_exp_bar_color_mask">Colore Barra pulldown</string>
+    <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra pulldown</string>
 
     
 
