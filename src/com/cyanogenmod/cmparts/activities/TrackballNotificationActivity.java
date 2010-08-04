@@ -344,23 +344,89 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         } else if (preference.getKey().toString().equals("always_pulse")) {
         	CheckBoxPreference keyPref = (CheckBoxPreference) preference;
         	value = keyPref.isChecked();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.TRACKBALL_SCREEN_ON, value ? 1 : 0);
-        } else if (preference.getKey().toString().equals("pulse_sucession")) {
-        		CheckBoxPreference keyPref = (CheckBoxPreference) preference;
-            	value = keyPref.isChecked();
                 Settings.System.putInt(getContentResolver(),
-                        Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+                Settings.System.TRACKBALL_SCREEN_ON, value ? 1 : 0);
+        } else if (preference.getKey().toString().equals("pulse_sucession")) {
+       		CheckBoxPreference keyPref = (CheckBoxPreference) preference;
+            	value = keyPref.isChecked();
+                if(value == false) {
+                        Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, 0);
+                        return;
+                }
+
+		alertDialog = new AlertDialog.Builder(this).create();
+       		alertDialog.setTitle(R.string.notification_battery_warning_title);
+       		alertDialog.setMessage(getResources().getString(R.string.notification_battery_warning));
+       		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+     		public void onClick(DialogInterface dialog, int which) {
+               		Settings.System.putInt(getContentResolver(),
+                       		Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+			return;
+      		} });
+		alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                        Settings.System.putInt(getContentResolver(),
+                           Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+               		keyPref.setChecked(false);
+		         return;
+                }});
+	        alertDialog.show();
 	} else if (preference.getKey().toString().equals("pulse_random_colors")) {
                 CheckBoxPreference keyPref = (CheckBoxPreference) preference;
                 value = keyPref.isChecked();
-                Settings.System.putInt(getContentResolver(),
+                if(value == false) {
+                        Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRACKBALL_NOTIFICATION_RANDOM, 0);
+                        return;
+                }
+
+                alertDialog = new AlertDialog.Builder(this).create();
+                alertDialog.setTitle(R.string.notification_battery_warning_title);
+                alertDialog.setMessage(getResources().getString(R.string.notification_battery_warning));
+                alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+	                Settings.System.putInt(getContentResolver(),
                         Settings.System.TRACKBALL_NOTIFICATION_RANDOM, value ? 1 : 0);
+                        return;
+
+                } });
+                alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+        	        Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRACKBALL_NOTIFICATION_RANDOM, 0);
+			keyPref.setChecked(false);
+                        return;
+                }});
+                alertDialog.show();
 	} else if (preference.getKey().toString().equals("pulse_colors_in_order")) {
                 CheckBoxPreference keyPref = (CheckBoxPreference) preference;
                 value = keyPref.isChecked();
-                Settings.System.putInt(getContentResolver(),
+		if(value == false) {
+			Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, 0);
+			return;
+		}
+
+		alertDialog = new AlertDialog.Builder(this).create();
+                alertDialog.setTitle(R.string.notification_battery_warning_title);
+                alertDialog.setMessage(getResources().getString(R.string.notification_battery_warning));
+                alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+        	        Settings.System.putInt(getContentResolver(),
                         Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, value ? 1 : 0);
+                        return;
+                } });
+                alertDialog.setButton(DialogInterface._BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+	                Settings.System.putInt(getContentResolver(),
+                        Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, 0);
+			keyPref.setChecked(false);
+                        return;
+                }});
+                alertDialog.show();
+
+
         } else if(preference.getSummary() != null) {
         	if(preference.getSummary().toString().equals("Test the flash")) {
         		testPackage(preference.getKey().toString());
