@@ -112,7 +112,7 @@
     <string name="pref_trackball_sucess_summary">Pulse notifications in sucession.</string>
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">WARNING: May Cause Battery Drain</string>
-    <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don't wish to incure the drain.</string>
+    <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incure the drain.</string>
 
 
     <!-- Tweaks Extras -->

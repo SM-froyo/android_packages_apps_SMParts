@@ -53,14 +53,6 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		return temp;
 	}
 
-	public static String[] mPackage;
-	public String mPackageSource;
-	
-	public String[] getArray(String mGetFrom) {
-		String[] temp = mGetFrom.split("\\|");
-		return temp;
-	}
-	
 	public String createString(String[] mArray) {
 		int i;
 		String temp = "";
@@ -337,7 +329,8 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        boolean value;
+        final boolean value;
+	AlertDialog alertDialog;
         if (preference.getKey().toString().equals("reset_notifications")) {
         	Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_PACKAGE_COLORS, "");
         	Toast.makeText(this, "Reset all colors", Toast.LENGTH_LONG).show();
@@ -347,12 +340,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 Settings.System.putInt(getContentResolver(),
                 Settings.System.TRACKBALL_SCREEN_ON, value ? 1 : 0);
         } else if (preference.getKey().toString().equals("pulse_sucession")) {
-       		CheckBoxPreference keyPref = (CheckBoxPreference) preference;
+       		final CheckBoxPreference keyPref = (CheckBoxPreference) preference;
             	value = keyPref.isChecked();
                 if(value == false) {
                         Settings.System.putInt(getContentResolver(),
                         Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, 0);
-                        return;
+                        return true;
                 }
 
 		alertDialog = new AlertDialog.Builder(this).create();
@@ -373,12 +366,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 }});
 	        alertDialog.show();
 	} else if (preference.getKey().toString().equals("pulse_random_colors")) {
-                CheckBoxPreference keyPref = (CheckBoxPreference) preference;
+                final CheckBoxPreference keyPref = (CheckBoxPreference) preference;
                 value = keyPref.isChecked();
                 if(value == false) {
                         Settings.System.putInt(getContentResolver(),
                         Settings.System.TRACKBALL_NOTIFICATION_RANDOM, 0);
-                        return;
+                        return true;
                 }
 
                 alertDialog = new AlertDialog.Builder(this).create();
@@ -400,12 +393,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 }});
                 alertDialog.show();
 	} else if (preference.getKey().toString().equals("pulse_colors_in_order")) {
-                CheckBoxPreference keyPref = (CheckBoxPreference) preference;
+                final CheckBoxPreference keyPref = (CheckBoxPreference) preference;
                 value = keyPref.isChecked();
 		if(value == false) {
 			Settings.System.putInt(getContentResolver(),
                         Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, 0);
-			return;
+			return true;
 		}
 
 		alertDialog = new AlertDialog.Builder(this).create();
@@ -417,7 +410,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                         Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, value ? 1 : 0);
                         return;
                 } });
-                alertDialog.setButton(DialogInterface._BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
 	                Settings.System.putInt(getContentResolver(),
                         Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, 0);
