@@ -133,6 +133,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	private String[] colorList = {"green", "white", "red", "blue", "yellow", "cyan", "#800080", "#ffc0cb", "#ffa500", "#add8e6"};
 
 	public void testPackage(String pkg) {
+		final int mAlwaysPulse = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
 		String[] mTestPackage = findPackage(pkg);
 		if(mTestPackage == null) {
 			return;
@@ -153,6 +154,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		notification.ledOffMS = mBlinkRate * 1000;
 		NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
+		if(mAlwaysPulse != 1) {
+		 	Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 1);
+		}
 	        nm.notify(NOTIFICATION_ID, notification);
 
         	AlertDialog.Builder endFlash = new AlertDialog.Builder(this);
@@ -162,6 +166,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
           	public void onClick(DialogInterface dialog, int which) {
         	  	NotificationManager dialogNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 	        	  dialogNM.cancel(NOTIFICATION_ID);
+			if(mAlwaysPulse != 1) {
+                        	Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
+			}
        		 } });
 	        endFlash.show();
 	}
