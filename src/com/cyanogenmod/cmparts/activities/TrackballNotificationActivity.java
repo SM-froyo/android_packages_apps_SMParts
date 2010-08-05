@@ -248,7 +248,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	root.addPreference(appName);
 
         	ListPreference colorList = new ListPreference(this);
-        	colorList.setKey(packageList[i]);
+                colorList.setKey(packageList[i]+"_color");
         	colorList.setTitle(R.string.color_trackball_flash_title);
         	colorList.setSummary(R.string.color_trackball_flash_summary);
         	colorList.setDialogTitle(R.string.dialog_color_trackball);
@@ -258,7 +258,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	appName.addPreference(colorList);
 
         	ListPreference blinkList = new ListPreference(this);
-        	blinkList.setKey(packageList[i]);
+                blinkList.setKey(packageList[i]+"_blink");
         	blinkList.setTitle(R.string.color_trackball_blink_title);
         	blinkList.setSummary(R.string.color_trackball_blink_summary);
         	blinkList.setDialogTitle(R.string.dialog_blink_trackball);
@@ -268,7 +268,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	appName.addPreference(blinkList);
 
         	Preference testColor = new Preference(this);
-        	testColor.setKey(packageList[i]);
+                testColor.setKey(packageList[i]+"_test");
         	testColor.setSummary(R.string.color_trackball_test_summary);
         	testColor.setTitle(R.string.color_trackball_test_title);
         	appName.addPreference(testColor);
@@ -325,12 +325,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         String value = objValue.toString();
-        if(preference.getSummary() != null) {
-        	if(preference.getSummary().toString().contains("Blink")) {
-        		updatePackage(preference.getKey().toString(), "", value);
-        	} else {
-        		updatePackage(preference.getKey().toString(), value, "0");
-        	}
+        String key = preference.getKey().toString();
+        String pkg = key.substring(0, key.lastIndexOf("_"));
+        if(key.endsWith("_blink")) {
+            updatePackage(pkg, "", value);
+        } else {
+            updatePackage(pkg, value, "0");
         }
         return true;
     }
@@ -427,10 +427,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 alertDialog.show();
 
 
-        } else if(preference.getSummary() != null) {
-        	if(preference.getSummary().toString().equals("Test the flash")) {
-        		testPackage(preference.getKey().toString());
-        	}
+        } else if(preference.getKey().toString().endsWith("_test")) {
+            String pkg = preference.getKey().toString().substring(0, preference.getKey().toString().lastIndexOf("_"));
+            testPackage(pkg);
         }
         return false;
     }
