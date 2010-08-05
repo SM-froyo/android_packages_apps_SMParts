@@ -112,8 +112,8 @@
     <string name="trackball_advanced_title">Advanced</string>
     <string name="pref_trackball_screen_title">Always pulse</string>
     <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>
-    <string name="pref_trackball_sucess_title">Sucession</string>
-    <string name="pref_trackball_sucess_summary">Pulse notifications in sucession.</string>
+    <string name="pref_trackball_sucess_title">Succession</string>
+    <string name="pref_trackball_sucess_summary">Pulse notifications in succession.</string>
     <string name="pref_trackball_random_title">Random colors</string>
     <string name="pref_trackball_random_summary">Pulses the LED in random colors for all notifications</string>
     <string name="pref_trackball_order_title">Pulse in order</string>

@@ -286,21 +286,21 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
     	alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
     	advancedScreen.addPreference(alwaysPulse);
 
-    	//TRACKBALL_NOTIFICATION_SUCESSION
-    	CheckBoxPreference sucessionPulse = new CheckBoxPreference(this);
-    	sucessionPulse.setKey("pulse_sucession");
-    	sucessionPulse.setSummary(R.string.pref_trackball_sucess_summary);
-    	sucessionPulse.setTitle(R.string.pref_trackball_sucess_title);
-    	advancedScreen.addPreference(sucessionPulse);
+    	//TRACKBALL_NOTIFICATION_SUCCESSION
+    	CheckBoxPreference successionPulse = new CheckBoxPreference(this);
+    	successionPulse.setKey("pulse_succession");
+    	successionPulse.setSummary(R.string.pref_trackball_sucess_summary);
+    	successionPulse.setTitle(R.string.pref_trackball_sucess_title);
+    	advancedScreen.addPreference(successionPulse);
 
-        //TRACKBALL_NOTIFICATION_SUCESSION
+        //TRACKBALL_NOTIFICATION_SUCCESSION
         CheckBoxPreference randomPulse = new CheckBoxPreference(this);
         randomPulse.setKey("pulse_random_colors");
         randomPulse.setSummary(R.string.pref_trackball_random_summary);
         randomPulse.setTitle(R.string.pref_trackball_random_title);
         advancedScreen.addPreference(randomPulse);
 
-        //TRACKBALL_NOTIFICATION_SUCESSION
+        //TRACKBALL_NOTIFICATION_SUCCESSION
         CheckBoxPreference orderPulse = new CheckBoxPreference(this);
         orderPulse.setKey("pulse_colors_in_order");
         orderPulse.setSummary(R.string.pref_trackball_order_summary);
@@ -346,12 +346,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	value = keyPref.isChecked();
                 Settings.System.putInt(getContentResolver(),
                 Settings.System.TRACKBALL_SCREEN_ON, value ? 1 : 0);
-        } else if (preference.getKey().toString().equals("pulse_sucession")) {
+        } else if (preference.getKey().toString().equals("pulse_succession")) {
        		final CheckBoxPreference keyPref = (CheckBoxPreference) preference;
             	value = keyPref.isChecked();
                 if(value == false) {
                         Settings.System.putInt(getContentResolver(),
-                        Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, 0);
+                        Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0);
                         return true;
                 }
 
@@ -361,13 +361,13 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
        		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
      		public void onClick(DialogInterface dialog, int which) {
                		Settings.System.putInt(getContentResolver(),
-                       		Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+                       		Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, value ? 1 : 0);
 			return;
       		} });
 		alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                         Settings.System.putInt(getContentResolver(),
-                           Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+                           Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, value ? 1 : 0);
                		keyPref.setChecked(false);
 		         return;
                 }});
