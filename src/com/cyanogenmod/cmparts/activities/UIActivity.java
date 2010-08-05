@@ -137,34 +137,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         return false;
     }
     
-    // Taken from DevelopmentSettings
     private void updateFlingerOptions() {
-        // magic communication with surface flinger.
-        try {
-            IBinder flinger = ServiceManager.getService("SurfaceFlinger");
-            if (flinger != null) {
-                Parcel data = Parcel.obtain();
-                Parcel reply = Parcel.obtain();
-                data.writeInterfaceToken("android.ui.ISurfaceComposer");
-                flinger.transact(1010, data, reply, 0);
-                int v;
-                v = reply.readInt();
-                // mShowCpuCB.setChecked(v != 0);
-                v = reply.readInt();
-                // mEnableGLCB.setChecked(v != 0);
-                v = reply.readInt();
-                // mShowUpdatesCB.setChecked(v != 0);
-                v = reply.readInt();
-                // mShowBackgroundCB.setChecked(v != 0);
-
-                v = reply.readInt();
-                mRenderEffectPref.setValue(String.valueOf(v));
-
-                reply.recycle();
-                data.recycle();
-            }
-        } catch (RemoteException ex) {
-        }
-
+        int v = FlingerPinger.readRenderEffect();
+        if (v >= 0 )
+            mRenderEffectPref.setValue(String.valueOf(v));
     }
 }

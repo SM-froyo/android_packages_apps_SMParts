@@ -1,21 +1,23 @@
 package com.cyanogenmod.cmparts.activities;
 
 import com.cyanogenmod.cmparts.R;
+import com.cyanogenmod.cmparts.provider.FlingerPinger;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.CompoundButton;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.ToggleButton;
+import android.widget.ListView;
 
-public final class LocaleEdit extends Activity
+public final class LocaleRenderEdit extends ListActivity
 {
-	public static final String EXTRA_TOGGLE = "com.cyanogenmod.cmparts.intent.extra.toggle";
+	public static final String EXTRA_RENDER_EFFECT = "com.cyanogenmod.cmparts.intent.extra.RENDER_EFFECT";
 
 	private static final int MENU_SAVE = 1;
 	private static final int MENU_DONT_SAVE = 2;
@@ -24,37 +26,54 @@ public final class LocaleEdit extends Activity
 	private static final String EXTRA_BUNDLE = "com.twofortyfouram.locale.intent.extra.BUNDLE";
 	private static final int MAXIMUM_BLURB_LENGTH = 40;
 	private static final String EXTRA_STRING_BLURB = "com.twofortyfouram.locale.intent.extra.BLURB";
+	private static final String EXTRA_STRING_BREADCRUMB = "com.twofortyfouram.locale.intent.extra.BREADCRUMB";
+	private static final String BREADCRUMB_SEPARATOR = " > ";
 
 	private boolean isCancelled = false;
-	ToggleButton tb;
-	TextView hint;
+	private int previous = -1;
 
 	@Override
 	public void onCreate(final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.locale_edit);
-		tb = (ToggleButton)findViewById(R.id.locale_toggle);
-		hint = (TextView)findViewById(R.id.locale_hint);
-		tb.setOnCheckedChangeListener(new ToggleButton.OnCheckedChangeListener() {
-			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				updateHint();
+		final String breadcrumbString = getIntent().getStringExtra(EXTRA_STRING_BREADCRUMB);
+		if (breadcrumbString != null)
+			setTitle(String.format("%s%s%s", breadcrumbString, BREADCRUMB_SEPARATOR, getString(R.string.pref_render_effect_title))); //$NON-NLS-1$
+		final ListView lv = getListView();
+
+		lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+		setListAdapter(ArrayAdapter.createFromResource(this, R.array.entries_render_effect, android.R.layout.simple_list_item_single_choice));
+
+		lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				FlingerPinger.writeRenderEffect(position);
 			}
 		});
 
 		if (savedInstanceState == null) {
 			final Bundle forwardedBundle = getIntent().getBundleExtra(EXTRA_BUNDLE);
 			if (forwardedBundle != null) {
-				final boolean checked = getIntent().getBooleanExtra(EXTRA_TOGGLE, false);
-				tb.setChecked(checked);
+				final int effect = getIntent().getIntExtra(EXTRA_RENDER_EFFECT, 0);
+				lv.setItemChecked(effect, true);
+			} else {
+				lv.setItemChecked(0, true);
 			}
 		}
-		updateHint();
 	}
 
-	public void updateHint()
+	@Override
+	public void onResume()
 	{
-		hint.setText(getString(tb.isChecked() ? R.string.locale_onBlurb : R.string.locale_offBlurb));
+		super.onResume();
+		previous = FlingerPinger.readRenderEffect();
+	}
+
+	@Override
+	public void onPause()
+	{
+		super.onPause();
+		if (previous >= 0)
+			FlingerPinger.writeRenderEffect(previous);
 	}
 
 	@Override
@@ -63,12 +82,12 @@ public final class LocaleEdit extends Activity
 		if (isCancelled) {
 			setResult(RESULT_CANCELED);
 		} else {
-			final boolean checked = ((ToggleButton) findViewById(R.id.locale_toggle)).isChecked();
+			final int effect = getListView().getCheckedItemPosition();
 			final Intent returnIntent = new Intent();
 			final Bundle storeAndForwardExtras = new Bundle();
-			storeAndForwardExtras.putBoolean(EXTRA_TOGGLE, checked);
+			storeAndForwardExtras.putInt(EXTRA_RENDER_EFFECT, effect);
 			returnIntent.putExtra(EXTRA_BUNDLE, storeAndForwardExtras);
-			String message = getString(checked ? R.string.locale_onBlurb : R.string.locale_offBlurb);
+			String message = (effect >= 0) ? getResources().getStringArray(R.array.entries_render_effect)[effect] : "unknown!";
 			if (message.length() > MAXIMUM_BLURB_LENGTH)
 				returnIntent.putExtra(EXTRA_STRING_BLURB, message.substring(0, MAXIMUM_BLURB_LENGTH));
 			else

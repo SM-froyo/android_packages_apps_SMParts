@@ -323,10 +323,7 @@
 	<string name="slider_16k">16 kHz</string>
 
 	<!-- Locale -->
-	<string name="locale_label">Render effect</string>
 	<string name="locale_save">Save</string>
 	<string name="locale_dont_save">Don\'t Save</string>
-	<string name="locale_onBlurb">Night (red)</string>
-	<string name="locale_offBlurb">No effect</string>
 
 </resources>
