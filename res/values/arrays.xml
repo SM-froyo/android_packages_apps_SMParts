@@ -50,6 +50,7 @@
         <item>Amber</item>
         <item>Salmon</item>
         <item>Fuscia</item>
+        <item>Calibrated (N1)</item>
     </string-array>
 
     <string-array name="values_render_effect">
@@ -60,6 +61,7 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <item>7</item>
     </string-array>
     
 	<string-array name="render_entries">
@@ -69,6 +71,7 @@
         <item>Amber</item>
         <item>Salmon</item>
         <item>Fuscia</item>
+        <item>Calibrated (N1)</item>
 	</string-array>
 
 	<string-array name="render_values">
@@ -78,6 +81,7 @@
 		<item>4</item>
 		<item>5</item>
 		<item>6</item>
+        <item>7</item>
 	</string-array>
     
     <string-array name="entries_trackball_colors">

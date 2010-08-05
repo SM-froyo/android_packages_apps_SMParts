@@ -133,6 +133,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	private String[] colorList = {"green", "white", "red", "blue", "yellow", "cyan", "#800080", "#ffc0cb", "#ffa500", "#add8e6"};
 
 	public void testPackage(String pkg) {
+		final int mAlwaysPulse = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
 		String[] mTestPackage = findPackage(pkg);
 		if(mTestPackage == null) {
 			return;
@@ -153,6 +154,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		notification.ledOffMS = mBlinkRate * 1000;
 		NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
+		if(mAlwaysPulse != 1) {
+		 	Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 1);
+		}
 	        nm.notify(NOTIFICATION_ID, notification);
 
         	AlertDialog.Builder endFlash = new AlertDialog.Builder(this);
@@ -162,6 +166,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
           	public void onClick(DialogInterface dialog, int which) {
         	  	NotificationManager dialogNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 	        	  dialogNM.cancel(NOTIFICATION_ID);
+			if(mAlwaysPulse != 1) {
+                        	Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
+			}
        		 } });
 	        endFlash.show();
 	}
@@ -241,7 +248,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	root.addPreference(appName);
 
         	ListPreference colorList = new ListPreference(this);
-        	colorList.setKey(packageList[i]);
+                colorList.setKey(packageList[i]+"_color");
         	colorList.setTitle(R.string.color_trackball_flash_title);
         	colorList.setSummary(R.string.color_trackball_flash_summary);
         	colorList.setDialogTitle(R.string.dialog_color_trackball);
@@ -251,7 +258,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	appName.addPreference(colorList);
 
         	ListPreference blinkList = new ListPreference(this);
-        	blinkList.setKey(packageList[i]);
+                blinkList.setKey(packageList[i]+"_blink");
         	blinkList.setTitle(R.string.color_trackball_blink_title);
         	blinkList.setSummary(R.string.color_trackball_blink_summary);
         	blinkList.setDialogTitle(R.string.dialog_blink_trackball);
@@ -261,7 +268,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	appName.addPreference(blinkList);
 
         	Preference testColor = new Preference(this);
-        	testColor.setKey(packageList[i]);
+                testColor.setKey(packageList[i]+"_test");
         	testColor.setSummary(R.string.color_trackball_test_summary);
         	testColor.setTitle(R.string.color_trackball_test_title);
         	appName.addPreference(testColor);
@@ -279,21 +286,21 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
     	alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
     	advancedScreen.addPreference(alwaysPulse);
 
-    	//TRACKBALL_NOTIFICATION_SUCESSION
-    	CheckBoxPreference sucessionPulse = new CheckBoxPreference(this);
-    	sucessionPulse.setKey("pulse_sucession");
-    	sucessionPulse.setSummary(R.string.pref_trackball_sucess_summary);
-    	sucessionPulse.setTitle(R.string.pref_trackball_sucess_title);
-    	advancedScreen.addPreference(sucessionPulse);
+    	//TRACKBALL_NOTIFICATION_SUCCESSION
+    	CheckBoxPreference successionPulse = new CheckBoxPreference(this);
+    	successionPulse.setKey("pulse_succession");
+    	successionPulse.setSummary(R.string.pref_trackball_sucess_summary);
+    	successionPulse.setTitle(R.string.pref_trackball_sucess_title);
+    	advancedScreen.addPreference(successionPulse);
 
-        //TRACKBALL_NOTIFICATION_SUCESSION
+        //TRACKBALL_NOTIFICATION_SUCCESSION
         CheckBoxPreference randomPulse = new CheckBoxPreference(this);
         randomPulse.setKey("pulse_random_colors");
         randomPulse.setSummary(R.string.pref_trackball_random_summary);
         randomPulse.setTitle(R.string.pref_trackball_random_title);
         advancedScreen.addPreference(randomPulse);
 
-        //TRACKBALL_NOTIFICATION_SUCESSION
+        //TRACKBALL_NOTIFICATION_SUCCESSION
         CheckBoxPreference orderPulse = new CheckBoxPreference(this);
         orderPulse.setKey("pulse_colors_in_order");
         orderPulse.setSummary(R.string.pref_trackball_order_summary);
@@ -318,12 +325,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         String value = objValue.toString();
-        if(preference.getSummary() != null) {
-        	if(preference.getSummary().toString().contains("Blink")) {
-        		updatePackage(preference.getKey().toString(), "", value);
-        	} else {
-        		updatePackage(preference.getKey().toString(), value, "0");
-        	}
+        String key = preference.getKey().toString();
+        String pkg = key.substring(0, key.lastIndexOf("_"));
+        if(key.endsWith("_blink")) {
+            updatePackage(pkg, "", value);
+        } else {
+            updatePackage(pkg, value, "0");
         }
         return true;
     }
@@ -339,12 +346,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	value = keyPref.isChecked();
                 Settings.System.putInt(getContentResolver(),
                 Settings.System.TRACKBALL_SCREEN_ON, value ? 1 : 0);
-        } else if (preference.getKey().toString().equals("pulse_sucession")) {
+        } else if (preference.getKey().toString().equals("pulse_succession")) {
        		final CheckBoxPreference keyPref = (CheckBoxPreference) preference;
             	value = keyPref.isChecked();
                 if(value == false) {
                         Settings.System.putInt(getContentResolver(),
-                        Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, 0);
+                        Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0);
                         return true;
                 }
 
@@ -354,13 +361,13 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
        		alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
      		public void onClick(DialogInterface dialog, int which) {
                		Settings.System.putInt(getContentResolver(),
-                       		Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+                       		Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, value ? 1 : 0);
 			return;
       		} });
 		alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                         Settings.System.putInt(getContentResolver(),
-                           Settings.System.TRACKBALL_NOTIFICATION_SUCESSION, value ? 1 : 0);
+                           Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, value ? 1 : 0);
                		keyPref.setChecked(false);
 		         return;
                 }});
@@ -420,10 +427,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 alertDialog.show();
 
 
-        } else if(preference.getSummary() != null) {
-        	if(preference.getSummary().toString().equals("Test the flash")) {
-        		testPackage(preference.getKey().toString());
-        	}
+        } else if(preference.getKey().toString().endsWith("_test")) {
+            String pkg = preference.getKey().toString().substring(0, preference.getKey().toString().lastIndexOf("_"));
+            testPackage(pkg);
         }
         return false;
     }
