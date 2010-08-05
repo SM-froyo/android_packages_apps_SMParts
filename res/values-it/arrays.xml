@@ -32,6 +32,7 @@
         <item>Ambra</item>
         <item>Salmone</item>
         <item>Fucsia</item>
+        <item>Calibrato (N1)</item>
     </string-array>
 
     <string-array name="render_entries">
@@ -41,6 +42,7 @@
         <item>Ambra</item>
         <item>Salmone</item>
         <item>Fucsia</item>
+        <item>Calibrato (N1)</item>
 	</string-array>
 
     <string-array name="entries_trackball_colors">
