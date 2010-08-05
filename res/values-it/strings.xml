@@ -109,6 +109,7 @@
         <string name="color_trackball_blink_summary">Frequenza del lampeggio</string>
 	<string name="color_trackball_test_title">Prova lampeggio</string>
         <string name="color_trackball_test_summary">Prova il lampeggio</string>
+        <string name="dialog_clear_flash">Ferma Lampeggio</string>
     <string name="trackball_advanced_title">Avanzato</string>
     <string name="pref_trackball_screen_title">Pulsa sempre</string>
     <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso.</string>
