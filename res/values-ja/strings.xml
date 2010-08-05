@@ -289,6 +289,12 @@
     <string name="summary_custom_not_bar_off">CyanogenMod従来の通知バーを使用する</string>
     <string name="title_not_bar_color_mask">バーの色</string>
     <string name="summary_not_bar_color_mask">メモ: 透明度(alpha値)は予測できない結果になります!不透明色をお勧めします</string>
+    <string name="title_custom_exp_not_bar">カスタムプルダウンバー</string>
+    <string name="summary_custom_exp_not_bar_on">色やスタイルをカスタマイズしたプルダウンバーを使用する</string>
+    <string name="summary_custom_exp_not_bar_off">従来のCyanogenModプルダウンバーを使用する</string>
+
+    <string name="title_not_exp_bar_color_mask">プルダウンバーの色</string>
+    <string name="summary_not_exp_bar_color_mask">プルダウン通知バーに適用する色を選択する</string>
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">ホームをメモリに維持</string>
