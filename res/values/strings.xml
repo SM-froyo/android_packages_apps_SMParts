@@ -109,6 +109,7 @@
         <string name="color_trackball_blink_summary">Blink rate</string>
 	<string name="color_trackball_test_title">Flash test</string>
         <string name="color_trackball_test_summary">Test the flash</string>
+        <string name="dialog_clear_flash">Clear Flash</string>
     <string name="trackball_advanced_title">Advanced</string>
     <string name="pref_trackball_screen_title">Always pulse</string>
     <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>

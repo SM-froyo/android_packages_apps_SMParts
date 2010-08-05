@@ -160,7 +160,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	        nm.notify(NOTIFICATION_ID, notification);
 
         	AlertDialog.Builder endFlash = new AlertDialog.Builder(this);
-        	endFlash.setMessage("Clear Flash")
+        	endFlash.setMessage(R.string.dialog_clear_flash)
         	.setCancelable(false)
         	.setPositiveButton("OK", new DialogInterface.OnClickListener() {
           	public void onClick(DialogInterface dialog, int which) {
