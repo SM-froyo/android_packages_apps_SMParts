@@ -121,7 +121,7 @@
     <string name="pref_trackball_reset_title">Ripristino</string>
     <string name="pref_trackball_reset_summary">Ripristina tutti i colori e le app</string>
     <!-- Trackball Settings : Warning dialog -->
-    <string name="notification_battery_warning_title">WARNING: Può causare un aumento di consumo di batteria</string>
+    <string name="notification_battery_warning_title">WARNING:Causa un aumento di consumo di batteria</string>
     <string name="notification_battery_warning">È stato provato che questa opzione aumenta il consumo di batteria del ~3% ogni ora. Se noti un aumento del consumo mentre sono attive le notifiche pulsanti questa ne è la causa. Non attivarla se non vuoi peggiorare la durata della batteria.</string>
 
     <!-- Tweaks Extras -->
