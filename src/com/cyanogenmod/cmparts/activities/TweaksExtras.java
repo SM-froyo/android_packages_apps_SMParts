@@ -24,6 +24,9 @@ import java.io.FileNotFoundException;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 import org.xmlpull.v1.XmlPullParserException;
+import android.content.Intent;
+import java.io.FileInputStream;
+import java.io.DataInputStream;
 
 import com.cyanogenmod.cmparts.R;
 
@@ -38,6 +41,7 @@ public class TweaksExtras extends PreferenceActivity {
     private Preference mExportToXML;
     private static final String UI_IMPORT_FROM_XML = "import_from_xml";
     private Preference mImportFromXML;
+    private static final String NAMESPACE = "com.cyanogenmod.cmparts";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,11 @@ public class TweaksExtras extends PreferenceActivity {
         /* XML */
         mExportToXML = prefSet.findPreference(UI_EXPORT_TO_XML);
         mImportFromXML = prefSet.findPreference(UI_IMPORT_FROM_XML);
+
+        Intent mvSdUi = new Intent("com.cyanogenmod.cmparts.RESTORE_CMPARTS_UI");
+        mvSdUi.putExtra("temp", "temp");
+        sendBroadcast(mvSdUi);
+
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -146,8 +155,10 @@ public class TweaksExtras extends PreferenceActivity {
             return;
         }
 
+        Intent mvUiSd = new Intent("com.cyanogenmod.cmparts.SAVE_CMPARTS_UI");
+
         FileWriter writer = null;
-        File outFile = new File(Environment.getExternalStorageDirectory() + "/" + "tempfile.xml");
+        File outFile = new File(Environment.getDataDirectory() + "/data/" + NAMESPACE + "/tempfile.xml");
         boolean success = false;
 
         try {
@@ -219,11 +230,20 @@ public class TweaksExtras extends PreferenceActivity {
         }
 
         if (success) {
-            File xmlFile = new File(Environment.getExternalStorageDirectory() + "/" + XML_FILENAME);
-            outFile.renameTo(xmlFile);
-            Toast.makeText(getApplicationContext(), R.string.xml_export_success, Toast.LENGTH_SHORT).show();
+            try {
+              FileInputStream infile = new FileInputStream(outFile);
+              DataInputStream in = new DataInputStream(infile);
+              byte[] b = new byte[in.available()];
+              in.readFully(b);
+              in.close();
+              String result = new String(b, 0, b.length);
+              mvUiSd.putExtra("xmldata", result);
+            } catch (Exception e) {
+              e.printStackTrace();
+            }
+            Toast.makeText(getApplicationContext(), R.string.xml_run_helper, Toast.LENGTH_SHORT).show();
+            sendBroadcast(mvUiSd);
         }
-
         if (outFile.exists())
             outFile.delete();
     }
@@ -234,11 +254,13 @@ public class TweaksExtras extends PreferenceActivity {
             return;
         }
 
+        File xmlFile = new File(Environment.getDataDirectory() + "/data/" + NAMESPACE + "/tempfile.xml");
         FileReader reader = null;
         boolean success = false;
+        boolean exists = false;
 
         try {
-            reader = new FileReader(new File(Environment.getExternalStorageDirectory() + "/" + XML_FILENAME));
+            reader = new FileReader(xmlFile);
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             XmlPullParser parser = factory.newPullParser();
             parser.setInput(reader);
@@ -282,6 +304,8 @@ public class TweaksExtras extends PreferenceActivity {
         if (success) {
             Toast.makeText(getApplicationContext(), R.string.xml_import_success, Toast.LENGTH_SHORT).show();
         }
+        if (xmlFile.exists())
+            xmlFile.delete();
     }
 
     private String convertToARGB(int color) {

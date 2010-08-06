@@ -106,7 +106,7 @@
     <string name="title_notifications_items_title">Items title color</string>
     <string name="title_notifications_items_text">Items text color</string>
     <string name="title_notifications_items_time">Items time color</string>
-    
+
 	<!-- User interface: Trackball notifcations -->
 	<string name="trackball_notifications_title">Trackball Notification Colors</string>
 	<string name="dialog_color_trackball">Choose a color</string>
@@ -158,6 +158,7 @@
     <string name="xml_parse_error">Error parsing XML!</string>
     <string name="xml_invalid_color">Invalid color code in XML!</string>
     <string name="xml_import_success">XML import successful! Reboot to see changes</string>
+    <string name="xml_run_helper">Running settings helper</string>
 
     <!-- Input Settings -->
     <string name="input_settings_title">Input settings</string>
