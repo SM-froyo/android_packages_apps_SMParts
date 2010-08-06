@@ -315,4 +315,14 @@
     <string name="slider_4k">4 kHz</string>
     <string name="slider_16k">16 kHz</string>
 
+    <string name="ui_lockscreen_title">スクリーンロックの設定</string>
+    <string name="pref_lockscreen_delay_title">ディレイ</string>
+    <string name="pref_lockscreen_timeout_lock_delay">スクリーンタイムアウトからのディレイ</string>
+    <string name="pref_lockscreen_screenoff_lock_delay">スクリーンオフしてからのディレイ</string>
+    <string name="pref_lockscreen_timeout_lock_delay_summary">スクリーンがタイムアウトしてからどのくらいの時間でロックするか</string>
+    <string name="pref_lockscreen_screenoff_lock_delay_summary">スクリーンをオフにしてからどのらいの時間でロックするか</string>
+
+    <string name="dialog_clear_flash">クリア</string>
+    <string name="locale_save">保存</string>
+    <string name="locale_dont_save">破棄</string>
 </resources>
