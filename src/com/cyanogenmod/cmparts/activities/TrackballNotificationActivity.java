@@ -241,6 +241,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         		if(isNull(packageList[i]))
         			continue;
 
+		String[] packageValues = findPackage(packageList[i]);
         	String packageName = getPackageName(packageList[i]);
         	PreferenceScreen appName = getPreferenceManager().createPreferenceScreen(this);
         	appName.setKey(packageList[i] + "_screen");
@@ -253,6 +254,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	colorList.setSummary(R.string.color_trackball_flash_summary);
         	colorList.setDialogTitle(R.string.dialog_color_trackball);
         	colorList.setEntries(R.array.entries_trackball_colors);
+		/*if(packageValues != null) {
+			colorList.setValue(packageValues[1]);
+		}*/
         	colorList.setEntryValues(R.array.pref_trackball_colors_values);
         	colorList.setOnPreferenceChangeListener(this);
         	appName.addPreference(colorList);
@@ -264,6 +268,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	blinkList.setDialogTitle(R.string.dialog_blink_trackball);
         	blinkList.setEntries(R.array.pref_trackball_blink_rate_entries);
         	blinkList.setEntryValues(R.array.pref_trackball_blink_rate_values);
+                /*if(packageValues != null) {
+                        blinkList.setValue(packageValues[2]);
+                }*/
         	blinkList.setOnPreferenceChangeListener(this);
         	appName.addPreference(blinkList);
 
