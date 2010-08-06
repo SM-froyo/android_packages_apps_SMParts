@@ -39,6 +39,10 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String RENDER_EFFECT_PREF = "pref_render_effect";
     private static final String POWER_PROMPT_PREF = "power_dialog_prompt";
     
+    /* Screen Lock */
+    private static final String LOCKSCREEN_TIMEOUT_DELAY_PREF = "pref_lockscreen_timeout_delay";
+    private static final String LOCKSCREEN_SCREENOFF_DELAY_PREF = "pref_lockscreen_screenoff_delay";
+
     private CheckBoxPreference mPinchReflowPref;
     private CheckBoxPreference mRotation90Pref;
     private CheckBoxPreference mRotation180Pref;
@@ -47,6 +51,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private CheckBoxPreference mPowerPromptPref;
     private ListPreference mRenderEffectPref;
     
+    private ListPreference mScreenLockTimeoutDelayPref;
+    private ListPreference mScreenLockScreenOffDelayPref;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +79,17 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mRotation90Pref.setChecked((mode & 1) != 0);
         mRotation180Pref.setChecked((mode & 2) != 0);
         mRotation270Pref.setChecked((mode & 4) != 0);
+
+        /* Screen Lock */
+        mScreenLockTimeoutDelayPref = (ListPreference) prefSet.findPreference(LOCKSCREEN_TIMEOUT_DELAY_PREF);
+        int timeoutDelay = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_LOCK_TIMEOUT_DELAY, 5000);
+        mScreenLockTimeoutDelayPref.setValue(String.valueOf(timeoutDelay));
+        mScreenLockTimeoutDelayPref.setOnPreferenceChangeListener(this);
+
+        mScreenLockScreenOffDelayPref = (ListPreference) prefSet.findPreference(LOCKSCREEN_SCREENOFF_DELAY_PREF);
+        int screenOffDelay = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_LOCK_SCREENOFF_DELAY, 0);
+        mScreenLockScreenOffDelayPref.setValue(String.valueOf(screenOffDelay)); 
+        mScreenLockScreenOffDelayPref.setOnPreferenceChangeListener(this);
 
         /* Pinch reflow */
         mPinchReflowPref = (CheckBoxPreference) prefSet.findPreference(PINCH_REFLOW_PREF);
@@ -132,6 +150,14 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mRenderEffectPref) {
             FlingerPinger.writeRenderEffect(Integer.valueOf((String)newValue));
+            return true;
+        } else if (preference == mScreenLockTimeoutDelayPref) {
+            int timeoutDelay = Integer.valueOf((String)newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_LOCK_TIMEOUT_DELAY, timeoutDelay);
+            return true;
+        } else if (preference == mScreenLockScreenOffDelayPref) {
+            int screenOffDelay = Integer.valueOf((String)newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_LOCK_SCREENOFF_DELAY, screenOffDelay);
             return true;
         }
         return false;

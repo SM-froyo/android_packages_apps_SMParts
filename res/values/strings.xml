@@ -24,6 +24,14 @@
     <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
     <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
 
+	<!-- User interface : Lock Screen -->
+	<string name="ui_lockscreen_title">Screen lock settings</string>
+	<string name="pref_lockscreen_delay_title">Delay</string>
+	<string name="pref_lockscreen_timeout_lock_delay">Screen timeout delay</string>
+	<string name="pref_lockscreen_screenoff_lock_delay">Screen turned off delay</string>
+	<string name="pref_lockscreen_timeout_lock_delay_summary">How long to delay before enabling screen lock when screen times out</string>
+	<string name="pref_lockscreen_screenoff_lock_delay_summary">How long to delay before enabling screen lock when screen is turned off</string>
+
     <!-- Color Picker -->
     <string name="title_color_picker">Pick a color</string>
     <string name="msg_color_picker">Tap on center color to confirm.\nPress back to cancel</string>

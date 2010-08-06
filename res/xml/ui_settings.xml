@@ -81,5 +81,16 @@
             android:title="@string/pref_pinch_reflow_title"
             android:summary="@string/pref_pinch_reflow_summary" />
     </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/ui_lockscreen_title">
+        <!-- screen timeout delay -->
+        <ListPreference android:key="pref_lockscreen_timeout_delay" android:dialogTitle="@string/pref_lockscreen_delay_title"
+            android:title="@string/pref_lockscreen_timeout_lock_delay" android:summary="@string/pref_lockscreen_timeout_lock_delay_summary"
+	    android:entries="@array/pref_lockscreen_delay_entries" android:entryValues="@array/pref_lockscreen_delay_values" />
 
+        <!-- screen off delay -->
+        <ListPreference android:key="pref_lockscreen_screenoff_delay" android:dialogTitle="@string/pref_lockscreen_delay_title"
+            android:title="@string/pref_lockscreen_screenoff_lock_delay" android:summary="@string/pref_lockscreen_screenoff_lock_delay_summary"
+	    android:entries="@array/pref_lockscreen_delay_entries" android:entryValues="@array/pref_lockscreen_delay_values" />
+    </PreferenceCategory>
 </PreferenceScreen>
