@@ -331,8 +331,4 @@
 	<string name="slider_4k">4 kHz</string>
 	<string name="slider_16k">16 kHz</string>
 
-	<!-- Locale -->
-	<string name="locale_save">Save</string>
-	<string name="locale_dont_save">Don\'t Save</string>
-
 </resources>

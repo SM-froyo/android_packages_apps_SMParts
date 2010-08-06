@@ -1,7 +1,6 @@
 package com.cyanogenmod.cmparts.activities;
 
 import com.cyanogenmod.cmparts.R;
-import com.cyanogenmod.cmparts.provider.FlingerPinger;
 
 import android.os.Bundle;
 import android.os.IBinder;
@@ -149,7 +148,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mRenderEffectPref) {
-            FlingerPinger.writeRenderEffect(Integer.valueOf((String)newValue));
+            writeRenderEffect(Integer.valueOf((String)newValue));
             return true;
         } else if (preference == mScreenLockTimeoutDelayPref) {
             int timeoutDelay = Integer.valueOf((String)newValue);
@@ -163,9 +162,49 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         return false;
     }
     
+    // Taken from DevelopmentSettings
     private void updateFlingerOptions() {
-        int v = FlingerPinger.readRenderEffect();
-        if (v >= 0 )
-            mRenderEffectPref.setValue(String.valueOf(v));
+        // magic communication with surface flinger.
+        try {
+            IBinder flinger = ServiceManager.getService("SurfaceFlinger");
+            if (flinger != null) {
+                Parcel data = Parcel.obtain();
+                Parcel reply = Parcel.obtain();
+                data.writeInterfaceToken("android.ui.ISurfaceComposer");
+                flinger.transact(1010, data, reply, 0);
+                int v;
+                v = reply.readInt();
+                // mShowCpuCB.setChecked(v != 0);
+                v = reply.readInt();
+                // mEnableGLCB.setChecked(v != 0);
+                v = reply.readInt();
+                // mShowUpdatesCB.setChecked(v != 0);
+                v = reply.readInt();
+                // mShowBackgroundCB.setChecked(v != 0);
+
+                v = reply.readInt();
+                mRenderEffectPref.setValue(String.valueOf(v));
+
+                reply.recycle();
+                data.recycle();
+            }
+        } catch (RemoteException ex) {
+        }
+
     }
+
+    private void writeRenderEffect(int id) {
+        try {
+            IBinder flinger = ServiceManager.getService("SurfaceFlinger");
+            if (flinger != null) {
+                Parcel data = Parcel.obtain();
+                data.writeInterfaceToken("android.ui.ISurfaceComposer");
+                data.writeInt(id);
+                flinger.transact(1014, data, null, 0);
+                data.recycle();
+            }
+        } catch (RemoteException ex) {
+        }
+    }
+
 }

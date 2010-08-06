@@ -115,18 +115,5 @@
 
 		<service android:enabled="true" android:name=".services.RenderFXService" />
 		<service android:enabled="true" android:name=".services.BatteryService" />
-
-		<activity android:name=".activities.LocaleRenderEdit" android:label="@string/pref_render_effect_title">
-			<intent-filter>
-				<action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING"/>
-			</intent-filter>
-		</activity>
-
-		<receiver android:name=".provider.LocaleFire">
-			<intent-filter>
-				<action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING"/>
-			</intent-filter>
-		</receiver>
-
     </application>
 </manifest>
