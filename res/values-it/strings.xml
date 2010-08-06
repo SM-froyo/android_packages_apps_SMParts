@@ -23,6 +23,14 @@
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">Reflow dopo il pinch in</string>
     <string name="pref_pinch_reflow_summary">Reflow del testo dopo il pinch to zoom</string>
+  
+    <!-- User interface : Lock Screen -->
+	<string name="ui_lockscreen_title">Impostazioni Lockscreen</string>
+	<string name="pref_lockscreen_delay_title">Ritardo</string>
+	<string name="pref_lockscreen_timeout_lock_delay">Ritardo timeout schermo</string>
+	<string name="pref_lockscreen_screenoff_lock_delay">Ritardo spegnimento schermo</string>
+	<string name="pref_lockscreen_timeout_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo il timeout</string>
+	<string name="pref_lockscreen_screenoff_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo averlo averlo spento</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">Scegli un colore</string>
@@ -148,6 +156,7 @@
     <string name="xml_parse_error">Errore nel parsing del file!</string>
     <string name="xml_invalid_color">Codice colore non valido!</string>
     <string name="xml_import_success">File XML importato con successo! Riavvia affinchè le modifiche abbiano effetto.</string>
+    <string name="xml_run_helper">Avviando aiuto impostazioni</string>
 
     <!-- Input Settings -->
     <string name="input_settings_title">Impostazioni input</string>
@@ -313,4 +322,9 @@
 	<string name="pref_graphic_equalizer">Equalizzatore Grafico a 5 bande</string>
 	<string name="pref_headset_virtual_room">Effetto Virtual Room (cuffie)</string>
 	<string name="label_ratio">Rapporto</string>
+
+    <!-- Locale -->
+	<string name="locale_save">Salva</string>
+	<string name="locale_dont_save">Non salvare</string>
+
 </resources>
