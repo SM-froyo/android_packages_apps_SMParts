@@ -241,11 +241,11 @@ public class TweaksExtras extends PreferenceActivity {
             } catch (Exception e) {
               e.printStackTrace();
             }
-            Toast.makeText(getApplicationContext(), R.string.xml_run_helper, Toast.LENGTH_SHORT).show();
             sendBroadcast(mvUiSd);
         }
         if (outFile.exists())
             outFile.delete();
+        finish();
     }
 
     private void readUIValuesFromXML() {
@@ -306,6 +306,7 @@ public class TweaksExtras extends PreferenceActivity {
         }
         if (xmlFile.exists())
             xmlFile.delete();
+        finish();
     }
 
     private String convertToARGB(int color) {
