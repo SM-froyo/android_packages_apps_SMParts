@@ -121,6 +121,8 @@
     <string name="trackball_advanced_title">Avanzato</string>
     <string name="pref_trackball_screen_title">Pulsa sempre</string>
     <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso.</string>
+    <string name="pref_trackball_blend_title">Mischia colori di notifica</string>
+    <string name="pref_trackball_blend_summary">Mischia i colori delle luci di notifica. Annulla Successione.</string>
     <string name="pref_trackball_sucess_title">Successione</string>
     <string name="pref_trackball_sucess_summary">Notifiche pulsanti in successione</string>
     <string name="pref_trackball_random_title">Colori Random</string>
