@@ -322,9 +322,5 @@
 	<string name="pref_graphic_equalizer">Equalizzatore Grafico a 5 bande</string>
 	<string name="pref_headset_virtual_room">Effetto Virtual Room (cuffie)</string>
 	<string name="label_ratio">Rapporto</string>
-
-    <!-- Locale -->
-	<string name="locale_save">Salva</string>
-	<string name="locale_dont_save">Non salvare</string>
-
+   
 </resources>
