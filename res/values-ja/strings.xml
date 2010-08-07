@@ -322,10 +322,7 @@
     <string name="pref_lockscreen_timeout_lock_delay_summary">スクリーンがタイムアウトしてからどのくらいの時間でロックするか</string>
     <string name="pref_lockscreen_screenoff_lock_delay_summary">スクリーンをオフにしてからどのらいの時間でロックするか</string>
 
-    <string name="dialog_clear_flash">クリア</string>
-    <string name="locale_save">保存</string>
-    <string name="locale_dont_save">破棄</string>
-
+    <string name="dialog_clear_flash">点滅をクリア</string>
     <string name="xml_run_helper">設定ヘルパーを起動</string>
 
 </resources>
