@@ -33,8 +33,8 @@
         <item>Salmone</item>
         <item>Fucsia</item>
         <item>Calibrato (N1)</item>
-	<item>Calibrato (N1) Low Red</item>
-	<item>Calibrato (N1) Cool</item>
+	    <item>Calibrato (N1) Low Red</item>
+	    <item>Calibrato (N1) Cool</item>
     </string-array>
 
     <string-array name="render_entries">
@@ -45,8 +45,8 @@
         <item>Salmone</item>
         <item>Fucsia</item>
         <item>Calibrato (N1)</item>
-	<item>Calibrato (N1) Low Red</item>
-	<item>Calibrato (N1) Cool</item>
+	    <item>Calibrato (N1) Low Red</item>
+	    <item>Calibrato (N1) Cool</item>
 	</string-array>
 
     <string-array name="entries_trackball_colors">
@@ -60,7 +60,7 @@
         <item>Rosa</item>
         <item>Arancione</item>
         <item>Blu Chiaro</item>
-	<item>Random</item>
+	    <item>Random</item>
     </string-array>
 
     <string-array name="pref_trackball_blink_rate_entries">

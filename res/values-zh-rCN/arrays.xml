@@ -32,8 +32,8 @@
         <item>Salmon</item>
         <item>Fuscia</item>
         <item>Calibrated (N1)</item>
-	<item>Calibrated (N1) Low Red</item>
-	<item>Calibrated (N1) Cool</item>
+	    <item>Calibrated (N1) Low Red</item>
+	    <item>Calibrated (N1) Cool</item>
     </string-array>
 
 	<string-array name="render_entries">
@@ -44,7 +44,7 @@
         <item>Salmon</item>
         <item>Fuscia</item>
         <item>Calibrated (N1)</item>
-	<item>Calibrated (N1) Low Red</item>
-	<item>Calibrated (N1) Cool</item>
+	    <item>Calibrated (N1) Low Red</item>
+	    <item>Calibrated (N1) Cool</item>
 	</string-array>
 </resources>

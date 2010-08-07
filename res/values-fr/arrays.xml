@@ -50,9 +50,9 @@
         <item>Ambre</item>
         <item>Saumon</item>
         <item>Fuchsia</item>
-	<item>Calibrated (N1)</item>
-	<item>Calibrated (N1) Low Red</item>
-	<item>Calibrated (N1) Cool</item>
+	    <item>Calibrated (N1)</item>
+	    <item>Calibrated (N1) Low Red</item>
+	    <item>Calibrated (N1) Cool</item>
     </string-array>
 
     <string-array name="values_render_effect">
@@ -63,9 +63,9 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
-	<item>7</item>
-	<item>8</item>
-	<item>9</item>
+	    <item>7</item>
+	    <item>8</item>
+	    <item>9</item>
     </string-array>
     
 	<string-array name="render_entries">
@@ -75,9 +75,9 @@
         <item>Ambre</item>
         <item>Saumon</item>
         <item>Fuchsia</item>
-	<item>Calibrated (N1)</item>
-	<item>Calibrated (N1) Low Red</item>
-	<item>Calibrated (N1) Cool</item>
+	    <item>Calibrated (N1)</item>
+	    <item>Calibrated (N1) Low Red</item>
+	    <item>Calibrated (N1) Cool</item>
 	</string-array>
 
 	<string-array name="render_values">
