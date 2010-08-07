@@ -30,5 +30,8 @@
     <item>Amber</item>
     <item>Lachs</item>
     <item>Fuchsia</item>
+    <item>Calibrated (N1)</item>
+    <item>Calibrated (N1) Low Red</item>
+    <item>Calibrated (N1) Cool</item>
   </string-array>
 </resources>
