@@ -105,12 +105,14 @@
     <string name="color_trackball_test_title">点灯テスト</string>
     <string name="color_trackball_test_summary">点灯をテストする</string>
     <string name="trackball_advanced_title">アドバンスド</string>
-    <string name="pref_trackball_sucess_title">継続</string>
+    <string name="pref_trackball_sucess_title">通知を継続</string>
     <string name="pref_trackball_sucess_summary">通知の点滅を継続させる</string>
     <string name="pref_trackball_random_title">ランダムな色</string>
     <string name="pref_trackball_random_summary">すべての通知について、ランダムな色で点滅する</string>
     <string name="pref_trackball_order_title">順序に従って点滅</string>
     <string name="pref_trackball_order_summary">LED色の順序に従って点滅</string>
+    <string name="pref_trackball_blend_title">ブレンド通知</string>
+    <string name="pref_trackball_blend_summary">色を混ぜて通知する。通知の継続をオーバーライドします。</string>
     <string name="pref_trackball_reset_title">リセット</string>
     <string name="pref_trackball_reset_summary">すべてのアプリについて色設定をリセット</string>
 
