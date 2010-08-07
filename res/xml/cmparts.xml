@@ -12,9 +12,7 @@
     <!-- DSP Manager Settings -->
     <PreferenceScreen android:key="dsp_manager_settings"
         android:title="@string/dsp_settings_title" android:summary="@string/dsp_settings_summary">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.DSPManagerActivity" />
+        <intent android:action="com.bel.android.dspmanager.MAIN" />
     </PreferenceScreen>
     
     <!-- Input Settings -->

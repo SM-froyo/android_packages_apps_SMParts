@@ -72,11 +72,6 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.DSPManagerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
         <activity android:name=".activities.HapticTweaksActivity">
          <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
