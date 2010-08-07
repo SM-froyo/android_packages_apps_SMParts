@@ -293,21 +293,24 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
     	alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
     	advancedScreen.addPreference(alwaysPulse);
 
-    	//TRACKBALL_NOTIFICATION_SUCCESSION
+       	CheckBoxPreference blendPulse = new CheckBoxPreference(this);
+        blendPulse.setKey("blend_colors");
+        blendPulse.setSummary(R.string.pref_trackball_blend_summary);
+        blendPulse.setTitle(R.string.pref_trackball_blend_title);
+        advancedScreen.addPreference(blendPulse);
+
     	CheckBoxPreference successionPulse = new CheckBoxPreference(this);
     	successionPulse.setKey("pulse_succession");
     	successionPulse.setSummary(R.string.pref_trackball_sucess_summary);
     	successionPulse.setTitle(R.string.pref_trackball_sucess_title);
     	advancedScreen.addPreference(successionPulse);
 
-        //TRACKBALL_NOTIFICATION_SUCCESSION
         CheckBoxPreference randomPulse = new CheckBoxPreference(this);
         randomPulse.setKey("pulse_random_colors");
         randomPulse.setSummary(R.string.pref_trackball_random_summary);
         randomPulse.setTitle(R.string.pref_trackball_random_title);
         advancedScreen.addPreference(randomPulse);
 
-        //TRACKBALL_NOTIFICATION_SUCCESSION
         CheckBoxPreference orderPulse = new CheckBoxPreference(this);
         orderPulse.setKey("pulse_colors_in_order");
         orderPulse.setSummary(R.string.pref_trackball_order_summary);
@@ -432,8 +435,10 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                         return;
                 }});
                 alertDialog.show();
-
-
+       } else if (preference.getKey().toString().equals("blend_colors")) {
+                final CheckBoxPreference keyPref = (CheckBoxPreference) preference;
+                value = keyPref.isChecked();
+                Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, value ? 1 : 0);
         } else if(preference.getKey().toString().endsWith("_test")) {
             String pkg = preference.getKey().toString().substring(0, preference.getKey().toString().lastIndexOf("_"));
             testPackage(pkg);
