@@ -9,8 +9,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
-import android.os.Bundle;
-import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
@@ -20,10 +18,12 @@ import android.util.Log;
 import android.widget.Toast;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageInfo;
 import java.util.List;
 import java.util.Random;
+import android.os.Handler;
 
 public class TrackballNotificationActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
 
@@ -31,6 +31,8 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
 	public static String[] mPackage;
 	public String mPackageSource;
+	public Handler mHandler = new Handler();
+	public ProgressDialog pbarDialog;
 
 	public boolean isNull(String mString) {
 		if(mString == null || mString.matches("null")
@@ -326,11 +328,24 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         return root;
 	}
 
+    final Runnable mFinishLoading = new Runnable() {
+	public void run () {
+		pbarDialog.dismiss();
+	}
+    };
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);  
+        super.onCreate(savedInstanceState);
         setTitle(R.string.trackball_notifications_title);
-        setPreferenceScreen(createPreferenceScreen());
+	pbarDialog = ProgressDialog.show(this, "Loading...", "Loading Package List", true, false);
+    	Thread t = new Thread() {
+		public void run() {
+			setPreferenceScreen(createPreferenceScreen());
+			mHandler.post(mFinishLoading);
+		}
+	};
+	t.start();
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
