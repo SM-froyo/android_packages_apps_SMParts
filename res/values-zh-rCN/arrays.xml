@@ -23,4 +23,28 @@
         <item>储存卡</item>
     </string-array>
 
+    <string-array name="entries_render_effect">
+        <item>No render effect</item>
+        <item>Night mode (red)</item>
+        <item>Terminal (green)</item>
+        <item>Blue</item>
+        <item>Amber</item>
+        <item>Salmon</item>
+        <item>Fuscia</item>
+        <item>Calibrated (N1)</item>
+	    <item>Calibrated (N1) Low Red</item>
+	    <item>Calibrated (N1) Cool</item>
+    </string-array>
+
+	<string-array name="render_entries">
+        <item>Night Mode (Red)</item>
+        <item>Terminal (Green)</item>
+        <item>Blue</item>
+        <item>Amber</item>
+        <item>Salmon</item>
+        <item>Fuscia</item>
+        <item>Calibrated (N1)</item>
+	    <item>Calibrated (N1) Low Red</item>
+	    <item>Calibrated (N1) Cool</item>
+	</string-array>
 </resources>

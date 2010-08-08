@@ -32,6 +32,8 @@
         <item>サーモン</item>
         <item>フューシャ</item>
         <item>調整済み(N1)</item>
+	    <item>調整済み(N1) Low Red</item>
+	    <item>調整済み(N1) Cold</item>
     </string-array>
 
     <string-array name="render_entries">
@@ -42,6 +44,8 @@
         <item>サーモン</item>
         <item>フューシャ</item>
         <item>調整済み(N1)</item>
+	    <item>調整済み(N1) Low Red</item>
+	    <item>調整済み(N1) Cold</item>
     </string-array>
 
     <string-array name="entries_trackball_colors">
