@@ -2,6 +2,8 @@ package com.cyanogenmod.cmparts.activities;
 
 import com.cyanogenmod.cmparts.R;
 
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -25,6 +27,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 	private static final String NOTIFICATION_SCREEN = "notification_settings";
 	private static final String NOTIFICATION_TRACKBALL = "trackball_notifications";
 	private static final String EXTRAS_SCREEN = "tweaks_extras";
+	private static final String BACKLIGHT_SETTINGS = "backlight_settings";
 	private static final String GENERAL_CATEGORY = "general_category";
 	
 	private PreferenceScreen mStatusBarScreen;
@@ -32,6 +35,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private PreferenceScreen mNotificationScreen;
     private PreferenceScreen mTrackballScreen;;
     private PreferenceScreen mExtrasScreen;
+    private PreferenceScreen mBacklightScreen;
     
     /* Other */	
     private static final String PINCH_REFLOW_PREF = "pref_pinch_reflow";
@@ -71,6 +75,12 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mNotificationScreen = (PreferenceScreen) prefSet.findPreference(NOTIFICATION_SCREEN);
         mTrackballScreen = (PreferenceScreen) prefSet.findPreference(NOTIFICATION_TRACKBALL);
         mExtrasScreen = (PreferenceScreen) prefSet.findPreference(EXTRAS_SCREEN);
+        mBacklightScreen = (PreferenceScreen) prefSet.findPreference(BACKLIGHT_SETTINGS);
+        // No reason to show backlight if no light sensor on device
+        if (((SensorManager)getSystemService(SENSOR_SERVICE)).getDefaultSensor(
+            Sensor.TYPE_LIGHT) == null) {
+            prefSet.removePreference(mBacklightScreen);
+        }
         
         // Special exception for Sapphire since we can't overlay it
         if (!(getResources().getBoolean(R.bool.has_rgb_notification_led) || Build.DEVICE.equals("sapphire"))) {
@@ -129,7 +139,10 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         if (preference == mExtrasScreen) {
         	startActivity(mExtrasScreen.getIntent());
         }
-        
+        if (preference == mBacklightScreen) {
+        	startActivity(mBacklightScreen.getIntent());
+        }
+
         if (preference == mPinchReflowPref) {
             value = mPinchReflowPref.isChecked();
             Settings.System.putInt(getContentResolver(),

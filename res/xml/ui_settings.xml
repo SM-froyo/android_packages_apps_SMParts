@@ -23,6 +23,14 @@
             android:title="@string/pref_render_effect_title" android:summary="@string/pref_render_effect_summary"
             android:entries="@array/entries_render_effect" android:entryValues="@array/values_render_effect" />
 
+        <!-- Backlight -->
+        <PreferenceScreen android:key="backlight_settings"
+            android:title="@string/backlight_title" android:summary="@string/backlight_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.BacklightActivity" />
+        </PreferenceScreen>
+
     </PreferenceCategory>
 
     <!-- Status Bar Customization -->
