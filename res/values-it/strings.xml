@@ -15,8 +15,8 @@
     <string name="pref_rotation_270_title">270 gradi</string>
     
     <!-- User interface : trackball -->
-    <string name="trackball_title">Notifiche Trackball</string>
-    <string name="trackball_summary">Imposta colore e pulsazione delle notifiche</string>
+    <string name="trackball_title">Notifiche LED</string>
+    <string name="trackball_summary">Imposta colore e pulsazione delle notifiche trackball/LED</string>
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
