@@ -94,6 +94,18 @@
                 <category android:name="android.intent.category.PREFERENCE" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.BacklightActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LightLevelsActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation">
+           <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+        </activity>
 
         <activity android:name=".activities.BatteryTester"
                   android:label="Battery Tester">
