@@ -15,9 +15,8 @@
     <string name="pref_rotation_270_title">270度</string>
 
     <!-- User interface : trackball -->
-    <string name="ui_trackball">トラックボール設定</string>
-    <string name="trackball_title">トラックボール通知</string>
-    <string name="trackball_summary">通知の色や点滅を制御する</string>
+    <string name="trackball_title">LED通知</string>
+    <string name="trackball_summary">トラックボール/LEDでの通知の色や点滅を制御する</string>
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
@@ -108,7 +107,7 @@
     <string name="pref_trackball_sucess_title">通知を継続</string>
     <string name="pref_trackball_sucess_summary">通知の点滅を継続させる</string>
     <string name="pref_trackball_random_title">ランダムな色</string>
-    <string name="pref_trackball_random_summary">すべての通知について、ランダムな色で点滅する</string>
+    <string name="pref_trackball_random_summary">すべての通知について、ランダムな色でLEDを点滅する</string>
     <string name="pref_trackball_order_title">順序に従って点滅</string>
     <string name="pref_trackball_order_summary">LED色の順序に従って点滅</string>
     <string name="pref_trackball_blend_title">ブレンド通知</string>
@@ -301,21 +300,6 @@
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">ホームをメモリに維持</string>
     <string name="pref_lock_home_summary">現在のホームアプリを常にメモリに維持する</string>
-
-    <!-- DSP Manager -->
-    <string name="dsp_settings_title">DSP設定</string>
-    <string name="dsp_settings_summary">オーディオデバイスの設定を変更する</string>
-    <string name="pref_dynamic_range_compression">ダイナミックレンジコンプレッション</string>
-    <string name="pref_graphic_equalizer">5バンドグラフィックイコライザ</string>
-    <string name="pref_headset_virtual_room">ヘッドセットバーチャルルームエフェクト</string>
-    <string name="label_ratio">レート</string>
-    <string name="label_ratio_slider">1:x</string>
-    <string name="slider_6">+6 dB</string>
-    <string name="slider_63">63 Hz</string>
-    <string name="slider_250">250 Hz</string>
-    <string name="slider_1k">1 kHz</string>
-    <string name="slider_4k">4 kHz</string>
-    <string name="slider_16k">16 kHz</string>
 
     <string name="ui_lockscreen_title">スクリーンロックの設定</string>
     <string name="pref_lockscreen_delay_title">ディレイ</string>

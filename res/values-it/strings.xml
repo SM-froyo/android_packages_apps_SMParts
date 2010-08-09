@@ -15,7 +15,6 @@
     <string name="pref_rotation_270_title">270 gradi</string>
     
     <!-- User interface : trackball -->
-    <string name="ui_trackball">Impostazioni Trackball</string>
     <string name="trackball_title">Notifiche Trackball</string>
     <string name="trackball_summary">Imposta colore e pulsazione delle notifiche</string>
 
@@ -317,12 +316,5 @@
     <string name="pref_lock_home_title">Forza home in memoria</string>
     <string name="pref_lock_home_summary">Cerca di mantenere l\'applicazione home sempre in memoria</string>
 
-    <!-- DSP Manager -->
-	<string name="dsp_settings_title">Impostazioni DSP</string>
-	<string name="dsp_settings_summary">Modifica impostazioni audio del device</string>
-	<string name="pref_dynamic_range_compression">Dynamic Range Compression</string>
-	<string name="pref_graphic_equalizer">Equalizzatore Grafico a 5 bande</string>
-	<string name="pref_headset_virtual_room">Effetto Virtual Room (cuffie)</string>
-	<string name="label_ratio">Rapporto</string>
-   
+
 </resources>

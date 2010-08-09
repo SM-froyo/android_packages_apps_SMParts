@@ -14,23 +14,22 @@
     <string name="pref_rotation_180_title">180 degrees</string>
     <string name="pref_rotation_270_title">270 degrees</string>
 
- 	<!-- User interface : trackball -->
-    <string name="ui_trackball">Trackball settings</string>
-    <string name="trackball_title">Trackball notifications</string>
-    <string name="trackball_summary">Control notification colors and pulse</string>
+    <!-- User interface : LED Notifications -->
+    <string name="trackball_title">LED notifications</string>
+    <string name="trackball_summary">Control trackball/LED notification colors and pulse</string>
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
     <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
 
-	<!-- User interface : Lock Screen -->
-	<string name="ui_lockscreen_title">Screen lock settings</string>
-	<string name="pref_lockscreen_delay_title">Delay</string>
-	<string name="pref_lockscreen_timeout_lock_delay">Screen timeout delay</string>
-	<string name="pref_lockscreen_screenoff_lock_delay">Screen turned off delay</string>
-	<string name="pref_lockscreen_timeout_lock_delay_summary">How long to delay before enabling screen lock when screen times out</string>
-	<string name="pref_lockscreen_screenoff_lock_delay_summary">How long to delay before enabling screen lock when screen is turned off</string>
+    <!-- User interface : Lock Screen -->
+    <string name="ui_lockscreen_title">Screen lock settings</string>
+    <string name="pref_lockscreen_delay_title">Delay</string>
+    <string name="pref_lockscreen_timeout_lock_delay">Screen timeout delay</string>
+    <string name="pref_lockscreen_screenoff_lock_delay">Screen turned off delay</string>
+    <string name="pref_lockscreen_timeout_lock_delay_summary">How long to delay before enabling screen lock when screen times out</string>
+    <string name="pref_lockscreen_screenoff_lock_delay_summary">How long to delay before enabling screen lock when screen is turned off</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">Pick a color</string>
@@ -107,15 +106,15 @@
     <string name="title_notifications_items_text">Items text color</string>
     <string name="title_notifications_items_time">Items time color</string>
 
-	<!-- User interface: Trackball notifcations -->
-	<string name="trackball_notifications_title">Trackball Notification Colors</string>
-	<string name="dialog_color_trackball">Choose a color</string>
-	<string name="dialog_blink_trackball">Choose a blink rate</string>
-	<string name="color_trackball_flash_title">Flash color</string>
+    <!-- User interface: Trackball notifcations -->
+    <string name="trackball_notifications_title">Trackball Notification Colors</string>
+    <string name="dialog_color_trackball">Choose a color</string>
+    <string name="dialog_blink_trackball">Choose a blink rate</string>
+    <string name="color_trackball_flash_title">Flash color</string>
         <string name="color_trackball_flash_summary">Color to flash</string>
-	<string name="color_trackball_blink_title">Blink rate</string>
+    <string name="color_trackball_blink_title">Blink rate</string>
         <string name="color_trackball_blink_summary">Blink rate</string>
-	<string name="color_trackball_test_title">Flash test</string>
+    <string name="color_trackball_test_title">Flash test</string>
         <string name="color_trackball_test_summary">Test the flash</string>
         <string name="dialog_clear_flash">Clear Flash</string>
     <string name="trackball_advanced_title">Advanced</string>
@@ -287,21 +286,21 @@
 
     <string name="widget_name">RenderFX Widget</string>
     <string name="renderfx_temp">RenderFX</string>
-	<string name="prefs_render_effect">Render Effect</string>
-	<string name="notify_render_effect">Render effect on</string>
+    <string name="prefs_render_effect">Render Effect</string>
+    <string name="notify_render_effect">Render effect on</string>
         <string name="add_widget">Add widget</string>
 
-	<!--  Widget Types -->
-	<string name="night">Night</string>
-	<string name="terminal">Term</string>
+    <!--  Widget Types -->
+    <string name="night">Night</string>
+    <string name="terminal">Term</string>
     <string name="blue">Blue</string>
-	<string name="amber">Amber</string>
-	<string name="salmon">Salmon</string>
-	<string name="fuscia">Fuscia</string>
+    <string name="amber">Amber</string>
+    <string name="salmon">Salmon</string>
+    <string name="fuscia">Fuscia</string>
 
-	<!-- Notification Bar Colors -->
+    <!-- Notification Bar Colors -->
 
-	<string name="title_notification_bar">Notification bar</string>
+    <string name="title_notification_bar">Notification bar</string>
     <string name="title_custom_not_bar">Custom notification bar</string>
     <string name="summary_custom_not_bar_on">Using customized notification bar color and style</string>
     <string name="summary_custom_not_bar_off">Using classic CyanogenMod notification bar</string>
@@ -317,20 +316,5 @@
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Lock home in memory</string>
     <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
-
-	<!-- DSP Manager -->
-	<string name="dsp_settings_title">DSP Settings</string>
-	<string name="dsp_settings_summary">Modify device audio settings</string>
-	<string name="pref_dynamic_range_compression">Dynamic Range Compression</string>
-	<string name="pref_graphic_equalizer">5 Band Graphic Equalizer</string>
-	<string name="pref_headset_virtual_room">Headset Virtual Room Effect</string>
-	<string name="label_ratio">Ratio</string>
-	<string name="label_ratio_slider">1:x</string>
-	<string name="slider_6">+6 dB</string>
-	<string name="slider_63">63 Hz</string>
-	<string name="slider_250">250 Hz</string>
-	<string name="slider_1k">1 kHz</string>
-	<string name="slider_4k">4 kHz</string>
-	<string name="slider_16k">16 kHz</string>
 
 </resources>

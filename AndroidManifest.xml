@@ -16,66 +16,75 @@
                 <action android:name="com.cyanogenmod.cmpartshelper.RESTORE_CMPARTS_UI"></action>
             </intent-filter>
         </receiver>
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <category android:name="com.android.settings.SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.InputActivity">
+        <activity android:name=".activities.CreateShortcut" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.InputActivity" android:label="@string/input_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.cyanogenmod.cmparts.SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.UIActivity" android:label="@string/ui_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.cyanogenmod.cmparts.SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.TrackballNotificationActivity" android:label="@string/trackball_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.UIActivity">
+        <activity android:name=".activities.ApplicationActivity" android:label="@string/application_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.cyanogenmod.cmparts.SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LongPressHomeActivity" android:label="@string/long_press_home_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.StatusBarActivity" android:label="@string/status_bar_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.DateProviderActivity" android:label="@string/dp_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.NotificationsActivity" android:label="@string/title_notifications_color_tweaks">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.TweaksExtras" android:label="@string/te_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.PerformanceSettingsActivity" android:label="@string/performance_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.cyanogenmod.cmparts.SHORTCUT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.HapticTweaksActivity" android:label="@string/haptic_title">
          <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
-         </intent-filter>
-        </activity>
-        <activity android:name=".activities.TrackballNotificationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.ApplicationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.LongPressHomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.StatusBarActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.DateProviderActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.NotificationsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.TweaksExtras">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.PerformanceSettingsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.HapticTweaksActivity">
-         <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
-            <category android:name="android.intent.category.DEFAULT" />
         </intent-filter>
         </activity>
         <activity android:name=".activities.HapticAdjust"
