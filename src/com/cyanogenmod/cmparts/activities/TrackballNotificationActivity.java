@@ -338,7 +338,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(R.string.trackball_notifications_title);
-	pbarDialog = ProgressDialog.show(this, "Loading...", "Loading Package List", true, false);
+	pbarDialog = ProgressDialog.show(this, getString(R.string.dialog_trackball_loading), getString(R.string.dialog_trackball_packagelist), true, false);
     	Thread t = new Thread() {
 		public void run() {
 			setPreferenceScreen(createPreferenceScreen());
