@@ -15,7 +15,6 @@
     <string name="pref_rotation_270_title">270度</string>
 
     <!-- User interface : trackball -->
-    <string name="ui_trackball">トラックボール設定</string>
     <string name="trackball_title">トラックボール通知</string>
     <string name="trackball_summary">通知の色や点滅を制御する</string>
 
@@ -301,21 +300,6 @@
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">ホームをメモリに維持</string>
     <string name="pref_lock_home_summary">現在のホームアプリを常にメモリに維持する</string>
-
-    <!-- DSP Manager -->
-    <string name="dsp_settings_title">DSP設定</string>
-    <string name="dsp_settings_summary">オーディオデバイスの設定を変更する</string>
-    <string name="pref_dynamic_range_compression">ダイナミックレンジコンプレッション</string>
-    <string name="pref_graphic_equalizer">5バンドグラフィックイコライザ</string>
-    <string name="pref_headset_virtual_room">ヘッドセットバーチャルルームエフェクト</string>
-    <string name="label_ratio">レート</string>
-    <string name="label_ratio_slider">1:x</string>
-    <string name="slider_6">+6 dB</string>
-    <string name="slider_63">63 Hz</string>
-    <string name="slider_250">250 Hz</string>
-    <string name="slider_1k">1 kHz</string>
-    <string name="slider_4k">4 kHz</string>
-    <string name="slider_16k">16 kHz</string>
 
     <string name="ui_lockscreen_title">スクリーンロックの設定</string>
     <string name="pref_lockscreen_delay_title">ディレイ</string>

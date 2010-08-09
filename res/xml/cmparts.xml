@@ -9,12 +9,6 @@
             android:targetClass="com.cyanogenmod.cmparts.activities.ApplicationActivity" />
     </PreferenceScreen>
     
-    <!-- DSP Manager Settings -->
-    <PreferenceScreen android:key="dsp_manager_settings"
-        android:title="@string/dsp_settings_title" android:summary="@string/dsp_settings_summary">
-        <intent android:action="com.bel.android.dspmanager.MAIN" />
-    </PreferenceScreen>
-    
     <!-- Input Settings -->
     <PreferenceScreen android:key="input_settings"
         android:title="@string/input_settings_title" android:summary="@string/input_settings_summary">
