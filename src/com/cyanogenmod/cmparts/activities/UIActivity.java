@@ -2,6 +2,7 @@ package com.cyanogenmod.cmparts.activities;
 
 import com.cyanogenmod.cmparts.R;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Parcel;
@@ -12,6 +13,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
@@ -23,6 +25,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 	private static final String NOTIFICATION_SCREEN = "notification_settings";
 	private static final String NOTIFICATION_TRACKBALL = "trackball_notifications";
 	private static final String EXTRAS_SCREEN = "tweaks_extras";
+	private static final String GENERAL_CATEGORY = "general_category";
 	
 	private PreferenceScreen mStatusBarScreen;
     private PreferenceScreen mDateProviderScreen;
@@ -69,6 +72,11 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mTrackballScreen = (PreferenceScreen) prefSet.findPreference(NOTIFICATION_TRACKBALL);
         mExtrasScreen = (PreferenceScreen) prefSet.findPreference(EXTRAS_SCREEN);
         
+        // Special exception for Sapphire since we can't overlay it
+        if (!(getResources().getBoolean(R.bool.has_rgb_notification_led) || Build.DEVICE.equals("sapphire"))) {
+            ((PreferenceCategory)prefSet.findPreference(GENERAL_CATEGORY)).removePreference(mTrackballScreen);
+        }
+        
         /* Rotation */
         mRotation90Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_90_PREF);
         mRotation180Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_180_PREF);
@@ -99,6 +107,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mRenderEffectPref = (ListPreference) prefSet.findPreference(RENDER_EFFECT_PREF);
         mRenderEffectPref.setOnPreferenceChangeListener(this);
         updateFlingerOptions();
+        
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {

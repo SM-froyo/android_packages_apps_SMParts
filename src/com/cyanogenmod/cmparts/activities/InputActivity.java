@@ -31,9 +31,7 @@ public class InputActivity extends PreferenceActivity {
         addPreferencesFromResource(R.xml.input_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-
-        Boolean mCanEnableTrackball = (getResources().getBoolean(R.bool.has_trackball) == true);
-
+                
         /* Music Controls */
         mMusicControlPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_MUSIC_CONTROLS);
         mMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
@@ -46,20 +44,23 @@ public class InputActivity extends PreferenceActivity {
 
         /* Trackball Wake */
         mTrackballWakePref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_WAKE_PREF);
-        mTrackballWakePref.setEnabled(mCanEnableTrackball);
         mTrackballWakePref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.TRACKBALL_WAKE_SCREEN, 0) == 1);
 
         /* Trackball Unlock */
         mTrackballUnlockPref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_UNLOCK_PREF);
-        mTrackballUnlockPref.setEnabled(mCanEnableTrackball);
         mTrackballUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
-
+     
         /* Menu Unlock */
         mMenuUnlockPref = (CheckBoxPreference) prefSet.findPreference(MENU_UNLOCK_PREF);
         mMenuUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.MENU_UNLOCK_SCREEN, 0) == 1);
+        
+        if (!getResources().getBoolean(R.bool.has_trackball)) {
+            prefSet.removePreference(mTrackballWakePref);
+            prefSet.removePreference(mTrackballUnlockPref);
+        }
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
