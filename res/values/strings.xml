@@ -112,6 +112,8 @@
     <string name="dialog_blink_trackball">Choose a blink rate</string>
     <string name="color_trackball_flash_title">Flash color</string>
         <string name="color_trackball_flash_summary">Color to flash</string>
+    <string name="color_trackball_custom_title">Custom color</string>
+        <string name="color_trackball_custom_summary">Custom color to flash</string>
     <string name="color_trackball_blink_title">Blink rate</string>
         <string name="color_trackball_blink_summary">Blink rate</string>
     <string name="color_trackball_test_title">Flash test</string>
