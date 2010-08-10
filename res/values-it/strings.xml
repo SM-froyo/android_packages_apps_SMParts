@@ -319,5 +319,43 @@
     <string name="pref_lock_home_title">Forza home in memoria</string>
     <string name="pref_lock_home_summary">Cerca di mantenere l\'applicazione home sempre in memoria</string>
 
+    <!-- Backlight -->
+    <string name="backlight_title">Retroilluminazione Automatica</string>
+    <string name="backlight_summary">Modifica livelli e filtri</string>
+    <string name="light_filter_title">Filtri sensore di luce</string>
+    <string name="light_filter_enabled_title">Attivo</string>
+    <string name="light_filter_enabled_summary">Applica filtro a media mobile per ridurre lo sfarfallio.</string>
+    <string name="light_filter_window_title">Lunghezza finestra</string>
+    <string name="light_filter_window_summary">Il valore filtrato è la media dei valori ottenuti tramite il sensore in questo periodo.</string>
+    <string name="light_filter_reset_title">Soglia reset</string>
+    <string name="light_filter_reset_summary">Campioni che deviano di così tanto dalla media attuale resettano il filtro.</string>
+    <string name="light_filter_interval_title">Intervallo campione</string>
+    <string name="light_filter_interval_summary">Valori bassi migliorano la precisione ma usano più CPU.</string>
+    <string name="light_levels_title">Livelli di luminosità</string>
+    <string name="light_levels_enabled_title">Usa personalizzati</string>
+    <string name="light_levels_dim_title">Liv. oscuramento display</string>
+    <string name="light_levels_dim_summary">Livello di luminosità che oscura il display</string>
+    <string name="light_levels_editor_title">Modifica altri livelli...</string>
+    <string name="light_decrease_enabled_title">Diminuzione luce</string>
+    <string name="light_decrease_enabled_summary">Attiva per permettere di diminuire la luce. Usa isteresi per ridurre lo sfarfallio.</string>
+    <string name="light_decrease_hysteresis_title">Diminuisci isteresi</string>
+    <string name="light_decrease_hysteresis_summary">I livelli del sensore vengono sovrapposti in questa percentuale verso il basso.</string>
 
+    <!-- Light sensor levels -->
+    <string name="ll_title">Livelli sensore</string>
+    <string name="ll_header_upper">Superiore</string>
+    <string name="ll_header_lower">Inferiore</string>
+    <string name="ll_header_lcd">Display</string>
+    <string name="ll_header_btn">Tasti</string>
+    <string name="ll_header_kb">Tastiera</string>
+    <string name="ll_lux">Sensore (filtrato / raw):</string>
+    <string name="ll_lcd">Display:</string>
+    <string name="ll_btn">Tasti:</string>
+    <string name="ll_kb">Tastiera:</string>
+    <string name="ll_disabled">disattivato</string>
+    <string name="ll_default">Carica default</string>
+    <string name="ll_save">Salva &amp; applica</string>
+    <string name="ll_reload">Ricarica attuali</string>
+    <string name="ll_bad_levels">Livelli devono aumentare</string>
+    <string name="ll_num_levels">Imposta numero livelli</string>
 </resources>
