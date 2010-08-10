@@ -32,8 +32,8 @@
         <item>サーモン</item>
         <item>フューシャ</item>
         <item>調整済み(N1)</item>
-	    <item>調整済み(N1) Low Red</item>
-	    <item>調整済み(N1) Cold</item>
+        <item>調整済み(N1) Low Red</item>
+        <item>調整済み(N1) Cold</item>
     </string-array>
 
     <string-array name="render_entries">
@@ -44,8 +44,8 @@
         <item>サーモン</item>
         <item>フューシャ</item>
         <item>調整済み(N1)</item>
-	    <item>調整済み(N1) Low Red</item>
-	    <item>調整済み(N1) Cold</item>
+        <item>調整済み(N1) Low Red</item>
+        <item>調整済み(N1) Cold</item>
     </string-array>
 
     <string-array name="entries_trackball_colors">
@@ -82,4 +82,32 @@
         <item>10分</item>
         <item>30分</item>
     </string-array>
+
+    <string-array name="entries_light_filter_window">
+        <item>10秒</item>
+        <item>20秒</item>
+        <item>30秒</item>
+        <item>40秒</item>
+        <item>50秒</item>
+        <item>60秒</item>
+    </string-array>
+
+    <string-array name="entries_light_filter_reset">
+        <item>400ルクス</item>
+        <item>500ルクス</item>
+        <item>600ルクス</item>
+        <item>700ルクス</item>
+        <item>800ルクス</item>
+        <item>900ルクス</item>
+        <item>1000ルクス</item>
+    </string-array>
+
+    <string-array name="entries_light_filter_interval">
+        <item>0.5秒</item>
+        <item>1秒</item>
+        <item>2秒</item>
+        <item>5秒</item>
+        <item>10秒</item>
+    </string-array>
+
 </resources>
