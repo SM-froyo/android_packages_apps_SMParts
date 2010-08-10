@@ -33,6 +33,10 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	public String mPackageSource;
 	public Handler mHandler = new Handler();
 	public ProgressDialog pbarDialog;
+	public String mGlobalPackage;
+	public int mGlobalPulse = 0;
+	public int mGlobalSuccession = 0;
+	public int mGlobalBlend = 0;
 
 	public boolean isNull(String mString) {
 		if(mString == null || mString.matches("null")
@@ -276,6 +280,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         	blinkList.setOnPreferenceChangeListener(this);
         	appName.addPreference(blinkList);
 
+                Preference customColor = new Preference(this);
+                customColor.setKey(packageList[i]+"_custom");
+                customColor.setSummary(R.string.color_trackball_custom_summary);
+                customColor.setTitle(R.string.color_trackball_custom_title);
+                appName.addPreference(customColor);
+
         	Preference testColor = new Preference(this);
                 testColor.setKey(packageList[i]+"_test");
         	testColor.setSummary(R.string.color_trackball_test_summary);
@@ -354,9 +364,10 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         String pkg = key.substring(0, key.lastIndexOf("_"));
         if(key.endsWith("_blink")) {
             updatePackage(pkg, "", value);
-        } else {
+        } else if (key.endsWith("_color")) {
             updatePackage(pkg, value, "0");
-        }
+	}
+
         return true;
     }
 
@@ -454,10 +465,110 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 final CheckBoxPreference keyPref = (CheckBoxPreference) preference;
                 value = keyPref.isChecked();
                 Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, value ? 1 : 0);
+	} else if(preference.getKey().toString().endsWith("_custom")) {
+            String pkg = preference.getKey().toString().substring(0, preference.getKey().toString().lastIndexOf("_"));
+	    mGlobalPackage = pkg;
+            ColorPickerDialog cp = new ColorPickerDialog(this,
+                   mPackageColorListener,
+                   readPackageColor());
+            cp.show();
         } else if(preference.getKey().toString().endsWith("_test")) {
             String pkg = preference.getKey().toString().substring(0, preference.getKey().toString().lastIndexOf("_"));
             testPackage(pkg);
         }
         return false;
     }
+
+    private int readPackageColor() {
+	     String[] mPackage = findPackage(mGlobalPackage);
+	     if(mPackage == null) {
+		return -16777216;
+	     }
+	     if(mPackage[1].equals("random")) {
+		return -16777216;
+	     } else {
+		return Color.parseColor(mPackage[1]);
+	     }
+    }
+
+    public void pulseLight(int color) {
+	mGlobalPulse = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
+	mGlobalSuccession = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0);
+	mGlobalBlend = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0);
+	Notification notification = new Notification();
+        notification.flags |= Notification.FLAG_SHOW_LIGHTS;
+        notification.ledARGB = color;
+        notification.ledOnMS = 500;
+        notification.ledOffMS = 0;
+        final NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if(mGlobalPulse != 1) {
+		Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 1);
+        }
+	if(mGlobalSuccession != 1) {
+		Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 1);
+	}
+	if(mGlobalBlend == 1) {
+                Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0);
+        }
+        nm.notify(NOTIFICATION_ID, notification);
+	Thread t = new Thread() {
+                public void run() {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				//shouldn't happen
+			}
+
+			nm.cancel(NOTIFICATION_ID);
+		        if(mGlobalPulse != 1) {
+        	        	Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
+        		}
+		        if(mGlobalSuccession != 1) {
+				Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0);
+		        }
+			if(mGlobalBlend == 1) {
+                                Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 1);
+                        }
+                }
+        };
+        t.start();
+   }
+
+    ColorPickerDialog.OnColorChangedListener mPackageColorListener =
+        new ColorPickerDialog.OnColorChangedListener() {
+            public void colorUpdate(int color) {
+                pulseLight(color);
+            }
+
+            public void colorChanged(int color) {
+		updatePackage(mGlobalPackage, convertToARGB(color), "0");
+            }
+    };
+
+    private String convertToARGB(int color) {
+	String alpha = Integer.toHexString(Color.alpha(color));
+        String red = Integer.toHexString(Color.red(color));
+        String green = Integer.toHexString(Color.green(color));
+        String blue = Integer.toHexString(Color.blue(color));
+
+	if (alpha.length() == 1) {
+            alpha = "0" + alpha;
+        }
+
+	if (red.length() == 1) {
+            red = "0" + red;
+        }
+
+        if (green.length() == 1) {
+            green = "0" + green;
+        }
+
+        if (blue.length() == 1) {
+            blue = "0" + blue;
+        }
+
+        return "#" + alpha + red + green + blue;
+    }
+
 }

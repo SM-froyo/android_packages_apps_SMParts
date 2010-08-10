@@ -48,6 +48,8 @@ public class ColorPickerDialog extends Dialog {
 
     public interface OnColorChangedListener {
         void colorChanged(int color);
+	/** @hide */
+        void colorUpdate(int color);
     }
 
     private OnColorChangedListener mListener;
@@ -227,7 +229,8 @@ public class ColorPickerDialog extends Dialog {
                         int color = interpColor(mColors, unit);
                         mCenterPaint.setColor(color);
                         mEditText.setText(convertToARGB(color));
-                        invalidate();
+                        mListener.colorUpdate(color);
+			invalidate();
                     }
                     break;
                 case MotionEvent.ACTION_UP:
@@ -339,6 +342,9 @@ public class ColorPickerDialog extends Dialog {
         public void colorChanged(int color) {
            mListener.colorChanged(color);
            dismiss();
+        }
+        public void colorUpdate(int color) {
+	  mListener.colorUpdate(color);
         }
     };
     
