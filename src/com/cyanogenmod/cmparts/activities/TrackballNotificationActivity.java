@@ -34,6 +34,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 	public Handler mHandler = new Handler();
 	public ProgressDialog pbarDialog;
 	public String mGlobalPackage;
+	public int mGlobalPulse = 0;
+	public int mGlobalSuccession = 0;
+	public int mGlobalBlend = 0;
 
 	public boolean isNull(String mString) {
 		if(mString == null || mString.matches("null")
@@ -487,10 +490,59 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 		return Color.parseColor(mPackage[1]);
 	     }
     }
+
+    public void pulseLight(int color) {
+	mGlobalPulse = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
+	mGlobalSuccession = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0);
+	mGlobalBlend = Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0);
+	Notification notification = new Notification();
+        notification.flags |= Notification.FLAG_SHOW_LIGHTS;
+        notification.ledARGB = color;
+        notification.ledOnMS = 500;
+        notification.ledOffMS = 0;
+        final NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if(mGlobalPulse != 1) {
+		Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 1);
+        }
+	if(mGlobalSuccession != 1) {
+		Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 1);
+	}
+	if(mGlobalBlend == 1) {
+                Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0);
+        }
+        nm.notify(NOTIFICATION_ID, notification);
+	Thread t = new Thread() {
+                public void run() {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				//shouldn't happen
+			}
+
+			nm.cancel(NOTIFICATION_ID);
+		        if(mGlobalPulse != 1) {
+        	        	Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_SCREEN_ON, 0);
+        		}
+		        if(mGlobalSuccession != 1) {
+				Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0);
+		        }
+			if(mGlobalBlend == 1) {
+                                Settings.System.putInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 1);
+                        }
+                }
+        };
+        t.start();
+   }
+
     ColorPickerDialog.OnColorChangedListener mPackageColorListener =
         new ColorPickerDialog.OnColorChangedListener() {
+            public void colorUpdate(int color) {
+                pulseLight(color);
+            }
+
             public void colorChanged(int color) {
-               updatePackage(mGlobalPackage, convertToARGB(color), "0");
+		updatePackage(mGlobalPackage, convertToARGB(color), "0");
             }
     };
 

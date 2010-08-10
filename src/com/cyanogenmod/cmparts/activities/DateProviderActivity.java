@@ -110,6 +110,8 @@ public class DateProviderActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.DATE_COLOR, color);
             }
+            public void colorUpdate(int color) {
+            }
     };
     /* PLMN Font Color */
     private int readPlmnLabelColor() {
@@ -125,6 +127,8 @@ public class DateProviderActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.PLMN_LABEL_COLOR, color);
             }
+            public void colorUpdate(int color) {
+            }
     };
     /* PLMN Font Color */
     private int readSpnLabelColor() {
@@ -139,6 +143,8 @@ public class DateProviderActivity extends PreferenceActivity {
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.SPN_LABEL_COLOR, color);
+            }
+            public void colorUpdate(int color) {
             }
     };
 }

@@ -139,6 +139,8 @@ public class StatusBarActivity extends PreferenceActivity {
         public void colorChanged(int color) {
             Settings.System.putInt(getContentResolver(), mSetting, color);
         }
+	public void colorUpdate(int color) {
+        }
 
         private int readColor() {
             try {
