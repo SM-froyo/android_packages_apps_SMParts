@@ -160,6 +160,8 @@ public class NotificationsActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NEW_NOTIF_TICKER_COLOR, color);
             }
+	    public void colorUpdate(int color) {
+	    }
     };
 
     private int readNotifCountColor() {
@@ -174,6 +176,8 @@ public class NotificationsActivity extends PreferenceActivity {
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_COUNT_COLOR, color);
+            }
+            public void colorUpdate(int color) {
             }
     };
 
@@ -190,6 +194,8 @@ public class NotificationsActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NO_NOTIF_COLOR, color);
             }
+            public void colorUpdate(int color) {
+            }
     };
 
     private int readClearLabelColor() {
@@ -204,6 +210,8 @@ public class NotificationsActivity extends PreferenceActivity {
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.CLEAR_BUTTON_LABEL_COLOR, color);
+            }
+            public void colorUpdate(int color) {
             }
     };
 
@@ -220,6 +228,8 @@ public class NotificationsActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.ONGOING_NOTIF_COLOR, color);
             }
+            public void colorUpdate(int color) {
+            }
     };
 
     private int readLatestNotifColor() {
@@ -234,6 +244,8 @@ public class NotificationsActivity extends PreferenceActivity {
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.LATEST_NOTIF_COLOR, color);
+            }
+            public void colorUpdate(int color) {
             }
     };
 
@@ -250,6 +262,8 @@ public class NotificationsActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_ITEM_TITLE_COLOR, color);
             }
+            public void colorUpdate(int color) {
+            }
     };
 
     private int readNotifItemTextColor() {
@@ -264,6 +278,8 @@ public class NotificationsActivity extends PreferenceActivity {
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_ITEM_TEXT_COLOR, color);
+            }
+            public void colorUpdate(int color) {
             }
     };
 
@@ -280,6 +296,8 @@ public class NotificationsActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_ITEM_TIME_COLOR, color);
             }
+            public void colorUpdate(int color) {
+            }
     };
     private int readNotifBarColor() {
         try {
@@ -294,6 +312,8 @@ public class NotificationsActivity extends PreferenceActivity {
             public void colorChanged(int color) {
             	Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_BAR_COLOR, color);
             }
+            public void colorUpdate(int color) {
+            }
     };
     private int readExpBarColor() {
         try {
@@ -307,6 +327,8 @@ public class NotificationsActivity extends PreferenceActivity {
         new ColorPickerDialog.OnColorChangedListener() {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NOTIF_EXPANDED_BAR_COLOR, color);
+            }
+            public void colorUpdate(int color) {
             }
     };
 }
