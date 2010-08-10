@@ -112,6 +112,8 @@
 	<string name="dialog_blink_trackball">Scegli frequenza di lampeggio</string>
 	<string name="color_trackball_flash_title">Colore lampeggio</string>
         <string name="color_trackball_flash_summary">Colore da usare per il lampeggio del LED</string>
+        <string name="color_trackball_custom_title">Colore personalizzato</string>
+        <string name="color_trackball_custom_summary">Colore personalizzato da usare per il lampeggio</string>
 	<string name="color_trackball_blink_title">Frequenza lampeggio</string>
         <string name="color_trackball_blink_summary">Frequenza del lampeggio</string>
 	<string name="color_trackball_test_title">Prova lampeggio</string>
