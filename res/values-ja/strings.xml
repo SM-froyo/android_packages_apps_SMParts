@@ -114,6 +114,9 @@
     <string name="pref_trackball_blend_summary">色を混ぜて通知する。通知の継続をオーバーライドします。</string>
     <string name="pref_trackball_reset_title">リセット</string>
     <string name="pref_trackball_reset_summary">すべてのアプリについて色設定をリセット</string>
+    <string name="dialog_trackball_loading">ロード中...</string>
+    <string name="dialog_trackball_packagelist">パッケージリストをロード中</string>
+
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">注意: バッテリーが消費します</string>
@@ -310,5 +313,45 @@
 
     <string name="dialog_clear_flash">点滅をクリア</string>
     <string name="xml_run_helper">設定ヘルパーを起動</string>
+
+    <!-- Backlight -->
+    <string name="backlight_title">自動バックライト</string>
+    <string name="backlight_summary">レベルの調整とフィルタ</string>
+    <string name="light_filter_title">ライトセンサーフィルタ</string>
+    <string name="light_filter_enabled_title">有効にする</string>
+    <string name="light_filter_enabled_summary">移動平均フィルタを適用し、フリッカを減少させる。</string>
+    <string name="light_filter_window_title">分析窓長</string>
+    <string name="light_filter_window_summary">フィルタ値はこの期間でのセンサー平均値になります。</string>
+    <string name="light_filter_reset_title">リセットする閾値</string>
+    <string name="light_filter_reset_summary">サンプルが現在の平均からこの値だけ逸脱した場合フィルタをリセットします</string>
+    <string name="light_filter_interval_title">サンプリング間隔</string>
+    <string name="light_filter_interval_summary">低い値は精度が良くなりますが、よりCPUを使用します。</string>
+    <string name="light_levels_title">ライトレベル</string>
+    <string name="light_levels_enabled_title">カスタム</string>
+    <string name="light_levels_dim_title">スクリーンの暗さレベル</string>
+    <string name="light_levels_dim_summary">スクリーンを暗くした時の明るさ</string>
+    <string name="light_levels_editor_title">他のレベルを編集...</string>
+    <string name="light_decrease_enabled_title">ライトの減少を許可</string>
+    <string name="light_decrease_enabled_summary">ライトが減少するのを許可します。ヒステリシスを使用してフリッカを減少させてください。</string>
+    <string name="light_decrease_hysteresis_title">ヒステリシスを減少させる</string>
+    <string name="light_decrease_hysteresis_summary">センサーレベルはこれより下にオーバーラップします。</string>
+
+    <!-- Light sensor levels -->
+    <string name="ll_title">ライトセンサーレベル</string>
+    <string name="ll_header_upper">上方</string>
+    <string name="ll_header_lower">下方</string>
+    <string name="ll_header_lcd">スクリーン</string>
+    <string name="ll_header_btn">ボタン</string>
+    <string name="ll_header_kb">キーボード</string>
+    <string name="ll_lux">センサー(フィルタ/生):</string>
+    <string name="ll_lcd">スクリーン:</string>
+    <string name="ll_btn">ボタン:</string>
+    <string name="ll_kb">キーボード:</string>
+    <string name="ll_disabled">無効にする</string>
+    <string name="ll_default">デフォルトに戻す</string>
+    <string name="ll_save">適用して保存</string>
+    <string name="ll_reload">現在の設定を再読込み</string>
+    <string name="ll_bad_levels">レベルは増加しなくてはなりません</string>
+    <string name="ll_num_levels">レベル数をセット</string>
 
 </resources>
