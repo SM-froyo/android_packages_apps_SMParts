@@ -60,6 +60,7 @@
         <item>オレンジ</item>
         <item>ライトブルー</item>
         <item>ランダム</item>
+        <item>なし</item>
     </string-array>
 
     <string-array name="pref_trackball_blink_rate_entries">
