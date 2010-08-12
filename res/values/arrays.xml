@@ -104,6 +104,7 @@
         <item>Orange</item>
         <item>Light Blue</item>
 	<item>Random</item>
+	<item>None</item>
     </string-array>
 
     <string-array name="pref_trackball_colors_values" translatable="false">
@@ -118,6 +119,7 @@
         <item>#ffa500</item>
         <item>#add8e6</item>
 	<item>random</item>
+	<item>none</item>
     </string-array>
 
 	<string-array name="pref_trackball_blink_rate_entries">
