@@ -99,6 +99,8 @@
     <string name="dialog_blink_trackball">点滅間隔を選択</string>
     <string name="color_trackball_flash_title">点灯色</string>
     <string name="color_trackball_flash_summary">点灯時の色</string>
+    <string name="color_trackball_custom_title">カスタムカラー</string>
+    <string name="color_trackball_custom_summary">点灯色をカスタマイズする</string>
     <string name="color_trackball_blink_title">点滅間隔</string>
     <string name="color_trackball_blink_summary">点滅間隔</string>
     <string name="color_trackball_test_title">点灯テスト</string>

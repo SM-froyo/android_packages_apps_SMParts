@@ -104,6 +104,7 @@
         <item>Orange</item>
         <item>Light Blue</item>
 	<item>Random</item>
+	<item>None</item>
     </string-array>
 
     <string-array name="pref_trackball_colors_values" translatable="false">
@@ -118,6 +119,7 @@
         <item>#ffa500</item>
         <item>#add8e6</item>
 	<item>random</item>
+	<item>none</item>
     </string-array>
 
 	<string-array name="pref_trackball_blink_rate_entries">
@@ -217,6 +219,13 @@
     </string-array>
 
     <string-array name="entries_light_levels_dim">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>8</item>
         <item>10</item>
         <item>12</item>
         <item>14</item>
@@ -229,6 +238,13 @@
     </string-array>
 
     <string-array name="values_light_levels_dim" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>8</item>
         <item>10</item>
         <item>12</item>
         <item>14</item>
