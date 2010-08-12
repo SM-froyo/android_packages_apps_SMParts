@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
@@ -16,7 +17,8 @@ public class InputActivity extends PreferenceActivity {
     private static final String TRACKBALL_WAKE_PREF = "pref_trackball_wake";
     private static final String TRACKBALL_UNLOCK_PREF = "pref_trackball_unlock";
     private static final String MENU_UNLOCK_PREF = "pref_menu_unlock";
-
+    private static final String BUTTON_CATEGORY = "pref_category_button_settings";
+    
     private CheckBoxPreference mMusicControlPref;
     private CheckBoxPreference mAlwaysMusicControlPref;
     private CheckBoxPreference mTrackballWakePref;
@@ -58,8 +60,9 @@ public class InputActivity extends PreferenceActivity {
                 Settings.System.MENU_UNLOCK_SCREEN, 0) == 1);
         
         if (!getResources().getBoolean(R.bool.has_trackball)) {
-            prefSet.removePreference(mTrackballWakePref);
-            prefSet.removePreference(mTrackballUnlockPref);
+            PreferenceCategory buttonCategory = (PreferenceCategory)prefSet.findPreference(BUTTON_CATEGORY);
+            buttonCategory.removePreference(mTrackballWakePref);
+            buttonCategory.removePreference(mTrackballUnlockPref);
         }
     }
 

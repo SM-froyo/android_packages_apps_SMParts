@@ -26,7 +26,7 @@
             android:summary="@string/pref_lockscreen_always_music_controls_summary" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/button_settings_title">
+    <PreferenceCategory android:title="@string/button_settings_title" android:key="pref_category_button_settings">
         <CheckBoxPreference android:key="pref_trackball_wake"
             android:title="@string/pref_trackball_wake_title" android:summary="@string/pref_trackball_wake_summary" />
 
