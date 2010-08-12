@@ -61,6 +61,7 @@
         <item>Arancione</item>
         <item>Blu Chiaro</item>
 	    <item>Random</item>
+            <item>Nessuno</item>
     </string-array>
 
     <string-array name="pref_trackball_blink_rate_entries">
