@@ -84,6 +84,23 @@
         <item>10m</item>
         <item>30m</item>
     </string-array>
+
+    <string-array name="entries_light_filter_window">
+        <item>10 secondi</item>
+        <item>20 secondi</item>
+        <item>30 secondi</item>
+        <item>40 secondi</item>
+        <item>50 secondi</item>
+        <item>60 secondi</item>
+    </string-array>
+  
+    <string-array name="entries_light_filter_interval">
+        <item>0.5 secondi</item>
+        <item>1 secondi</item>
+        <item>2 secondi</item>
+        <item>5 secondi</item>
+        <item>10 secondi</item>
+    </string-array>
     
 
 </resources>

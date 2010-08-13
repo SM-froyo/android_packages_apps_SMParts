@@ -136,7 +136,7 @@
     <string name="dialog_trackball_packagelist">Caricamento Lista App</string> 
 
     <!-- Trackball Settings : Warning dialog -->
-    <string name="notification_battery_warning_title">WARNING:Causa un aumento di consumo di batteria</string>
+    <string name="notification_battery_warning_title">ATTENZIONE:Aumento consumo di batteria</string>
     <string name="notification_battery_warning">È stato provato che questa opzione aumenta il consumo di batteria del ~3% ogni ora. Se noti un aumento del consumo mentre sono attive le notifiche pulsanti questa ne è la causa. Non attivarla se non vuoi peggiorare la durata della batteria.</string>
 
     <!-- Tweaks Extras -->
@@ -328,20 +328,20 @@
     <string name="light_filter_enabled_title">Attivo</string>
     <string name="light_filter_enabled_summary">Applica filtro a media mobile per ridurre lo sfarfallio.</string>
     <string name="light_filter_window_title">Lunghezza finestra</string>
-    <string name="light_filter_window_summary">Il valore filtrato è la media dei valori ottenuti tramite il sensore in questo periodo.</string>
+    <string name="light_filter_window_summary">Il valore filtrato è la media dei valori ottenuti tramite il sensore in questo intervallo di tempo.</string>
     <string name="light_filter_reset_title">Soglia reset</string>
     <string name="light_filter_reset_summary">Campioni che deviano di così tanto dalla media attuale resettano il filtro.</string>
     <string name="light_filter_interval_title">Intervallo campione</string>
-    <string name="light_filter_interval_summary">Valori bassi migliorano la precisione ma usano più CPU.</string>
+    <string name="light_filter_interval_summary">Valori bassi migliorano la precisione ma utilizzano più CPU.</string>
     <string name="light_levels_title">Livelli di luminosità</string>
     <string name="light_levels_enabled_title">Usa personalizzati</string>
     <string name="light_levels_dim_title">Liv. oscuramento display</string>
-    <string name="light_levels_dim_summary">Livello di luminosità che oscura il display</string>
+    <string name="light_levels_dim_summary">Luminosità usata per oscurare il display</string>
     <string name="light_levels_editor_title">Modifica altri livelli...</string>
     <string name="light_decrease_enabled_title">Diminuzione luce</string>
-    <string name="light_decrease_enabled_summary">Attiva per permettere di diminuire la luce. Usa isteresi per ridurre lo sfarfallio.</string>
+    <string name="light_decrease_enabled_summary">Attiva per consentire di diminuire la luce. Usa isteresi per ridurre lo sfarfallio.</string>
     <string name="light_decrease_hysteresis_title">Diminuisci isteresi</string>
-    <string name="light_decrease_hysteresis_summary">I livelli del sensore vengono sovrapposti in questa percentuale verso il basso.</string>
+    <string name="light_decrease_hysteresis_summary">Seleziona di quanto è consentito diminuire la luce.</string>
 
     <!-- Light sensor levels -->
     <string name="ll_title">Livelli sensore</string>
