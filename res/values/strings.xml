@@ -360,4 +360,23 @@
     <string name="ll_reload">Reload current</string>
     <string name="ll_bad_levels">Levels must be increasing</string>
     <string name="ll_num_levels">Set number of levels</string>
+
+    <!-- Sound -->
+    <string name="sound_title">Sound settings</string>
+    <string name="sound_notifications_focus_title">Notification focus</string>
+    <string name="sound_notifications_focus_summary">Audio focus requests causes compatible apps to lower the volume while notifications play.</string>
+    <string name="sound_to_speaker_title">Always play on speaker</string>
+    <string name="sound_notifications_title">Notifications</string>
+    <string name="sound_rings_title">Ring tones</string>
+    <string name="sound_alarms_title">Alarms</string>
+    <string name="sound_note_title">Note</string>
+    <string name="sound_note_summary">The settings below apply only when headphones are used.</string>
+    <string name="sound_attenuation_title">Attenuation of set volume</string>
+    <string name="sound_limitvol_title">Volume if music playing</string>
+    <string name="sound_notifications_attenuation_dialog">Notification attenuation</string>
+    <string name="sound_rings_attenuation_dialog">Ring tone attenuation</string>
+    <string name="sound_alarms_attenuation_dialog">Alarm attenuation</string>
+    <string name="sound_notifications_limitvol_dialog">Notification volume</string>
+    <string name="sound_rings_limitvol_dialog">Ring tone volume</string>
+    <string name="sound_alarms_limitvol_dialog">Alarm volume</string>
 </resources>
