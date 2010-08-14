@@ -217,7 +217,7 @@ public class LightLevelsActivity extends Activity implements OnClickListener {
                     updateButtons();
                 }
             } else if (mEditedId >= 2000 && mEditedId < 3000) {
-                if (value >= 0 && value < mSensorRange) {
+                if (value >= 0 && value <= mSensorRange) {
                     mLevels[mEditedId - 2000] = value;
                     ((Button) findViewById(mEditedId)).setText(String.valueOf(value));
                     ((TextView) findViewById(mEditedId - 1000)).setText(String.valueOf(value - 1));
