@@ -183,6 +183,7 @@
     </string-array>
 
     <string-array name="entries_light_filter_reset">
+        <item>Disabled</item>
         <item>400 lux</item>
         <item>500 lux</item>
         <item>600 lux</item>
@@ -190,9 +191,13 @@
         <item>800 lux</item>
         <item>900 lux</item>
         <item>1000 lux</item>
+        <item>1500 lux</item>
+        <item>2000 lux</item>
+        <item>2500 lux</item>
     </string-array>
 
     <string-array name="values_light_filter_reset" translatable="false">
+        <item>-1</item>
         <item>400</item>
         <item>500</item>
         <item>600</item>
@@ -200,6 +205,9 @@
         <item>800</item>
         <item>900</item>
         <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
     </string-array>
 
     <string-array name="entries_light_filter_interval">

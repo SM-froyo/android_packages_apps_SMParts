@@ -94,6 +94,7 @@
     </string-array>
 
     <string-array name="entries_light_filter_reset">
+        <item>無効にする</item>
         <item>400ルクス</item>
         <item>500ルクス</item>
         <item>600ルクス</item>
@@ -101,6 +102,9 @@
         <item>800ルクス</item>
         <item>900ルクス</item>
         <item>1000ルクス</item>
+        <item>1500ルクス</item>
+        <item>2000ルクス</item>
+        <item>2500ルクス</item>
     </string-array>
 
     <string-array name="entries_light_filter_interval">

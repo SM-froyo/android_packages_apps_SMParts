@@ -71,6 +71,7 @@
   </string-array>
 
   <string-array name="entries_light_filter_reset">
+    <item>Ausgeschaltet</item>
     <item>400 Lux</item>
     <item>500 Lux</item>
     <item>600 Lux</item>
@@ -78,6 +79,9 @@
     <item>800 Lux</item>
     <item>900 Lux</item>
     <item>1000 Lux</item>
+    <item>1500 Lux</item>
+    <item>2000 Lux</item>
+    <item>2500 Lux</item>
   </string-array>
 
   <string-array name="entries_light_filter_interval">

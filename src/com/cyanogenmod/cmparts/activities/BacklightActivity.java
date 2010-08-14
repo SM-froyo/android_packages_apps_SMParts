@@ -50,7 +50,7 @@ public class BacklightActivity extends PreferenceActivity implements
         
         mFilterReset = (ListPreference) prefSet.findPreference(FILTER_RESET);
         mFilterReset.setValue(String.valueOf(Settings.System.getInt(cr,
-                Settings.System.LIGHT_FILTER_RESET, 800)));
+                Settings.System.LIGHT_FILTER_RESET, -1)));
         mFilterReset.setOnPreferenceChangeListener(this);
 
         mFilterWindow = (ListPreference) prefSet.findPreference(FILTER_WINDOW);
