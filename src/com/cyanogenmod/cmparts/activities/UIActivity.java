@@ -4,7 +4,6 @@ import com.cyanogenmod.cmparts.R;
 
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Parcel;
@@ -82,8 +81,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             prefSet.removePreference(mBacklightScreen);
         }
         
-        // Special exception for Sapphire since we can't overlay it
-        if (!(getResources().getBoolean(R.bool.has_rgb_notification_led) || Build.DEVICE.equals("sapphire"))) {
+        if (!getResources().getBoolean(R.bool.has_rgb_notification_led)) {
             ((PreferenceCategory)prefSet.findPreference(GENERAL_CATEGORY)).removePreference(mTrackballScreen);
         }
         
