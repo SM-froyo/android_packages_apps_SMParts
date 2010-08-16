@@ -360,4 +360,24 @@
     <string name="ll_reload">Ricarica attuali</string>
     <string name="ll_bad_levels">Livelli devono aumentare</string>
     <string name="ll_num_levels">Imposta numero livelli</string>
+    
+    <!-- Sound -->
+    <string name="sound_title">Impostazioni audio</string>
+    <string name="sound_notifications_focus_title">Focus Notifiche</string>
+    <string name="sound_notifications_focus_summary">Il focus audio fa in modo che durante una notifica venga diminuito il volume delle app compatibili.</string>
+    <string name="sound_to_speaker_title">Solo tramite speaker</string>
+    <string name="sound_notifications_title">Notifiche</string>
+    <string name="sound_rings_title">Suonerie</string>
+    <string name="sound_alarms_title">Allarmi</string>
+    <string name="sound_note_title">Nota</string>
+    <string name="sound_note_summary">Le seguenti impostazioni vengono applicate solo quando si utilizzano le cuffie.</string>
+    <string name="sound_attenuation_title">Attenuazione volume</string>
+    <string name="sound_limitvol_title">Durante ripr. musicale</string>
+    <string name="sound_notifications_attenuation_dialog">Attenuazione notifica</string>
+    <string name="sound_rings_attenuation_dialog">Attenuazione suoneria</string>
+    <string name="sound_alarms_attenuation_dialog">Attenuazione allarme</string>
+    <string name="sound_notifications_limitvol_dialog">Volume notifica</string>
+    <string name="sound_rings_limitvol_dialog">Volume suoneria</string>
+    <string name="sound_alarms_limitvol_dialog">Volume allarme</string>
+
 </resources>

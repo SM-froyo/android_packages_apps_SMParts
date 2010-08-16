@@ -101,6 +101,11 @@
         <item>5 secondi</item>
         <item>10 secondi</item>
     </string-array>
+
+    <string-array name="entries_sound_limitvol">
+        <item>Valori di sistema attenuati</item>
+        <item>Volume musica (default)</item>
+    </string-array>
     
 
 </resources>
