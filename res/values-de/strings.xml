@@ -350,4 +350,23 @@
   <string name="ll_reload">Derzeitige Werte neu laden</string>
   <string name="ll_bad_levels">Stufen müssen zunehmen</string>
   <string name="ll_num_levels">Anzahl an Stufen einstellen</string>
+
+  <!-- Sound -->
+  <string name="sound_title">Klang-Einstellungen</string>
+  <string name="sound_notifications_focus_title">Benachrichtigung betonen</string>
+  <string name="sound_notifications_focus_summary">Verringert die Lautstärke kompatibler Apps um die Benachrichtigung deutlicher hörbar zu machen</string>
+  <string name="sound_to_speaker_title">Immer über Lautsprecher</string>
+  <string name="sound_notifications_title">Benachrichtigung</string>
+  <string name="sound_rings_title">Klingeltöne tones</string>
+  <string name="sound_alarms_title">Wecker</string>
+  <string name="sound_note_title">Hinweis</string>
+  <string name="sound_note_summary">Die folgenden Einstellungen wirken sich nur bei Nutzung von Kopfhörern aus.</string>
+  <string name="sound_attenuation_title">Verringerung der eingestellten Lautstärke</string>
+  <string name="sound_limitvol_title">Lautstärke bei Musik</string>
+  <string name="sound_notifications_attenuation_dialog">Benachrichtigung-Dämpfung</string>
+  <string name="sound_rings_attenuation_dialog">KLingelton-Dämpfung</string>
+  <string name="sound_alarms_attenuation_dialog">Wecker-Dämpfung</string>
+  <string name="sound_notifications_limitvol_dialog">Benachrichtigungslautstärke</string>
+  <string name="sound_rings_limitvol_dialog">Klingeltonlautstärke</string>
+  <string name="sound_alarms_limitvol_dialog">Weckerlautstärke</string>
 </resources>

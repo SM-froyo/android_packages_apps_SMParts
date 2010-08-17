@@ -133,4 +133,18 @@
     <item>80 %</item>
     <item>90 %</item>
   </string-array>
+
+  <string-array name="entries_sound_attenuation">
+    <item>0 dB</item>
+    <item>4 dB</item>
+    <item>6 dB (Standard)</item>
+    <item>8 dB</item>
+    <item>10 dB</item>
+  </string-array>
+
+  <string-array name="entries_sound_limitvol">
+    <item>Abgeschwächte Voreinstellung</item>
+    <item>Musik-Lautstärke (Standard)</item>
+  </string-array>
+
 </resources>
