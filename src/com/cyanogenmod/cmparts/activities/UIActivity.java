@@ -78,7 +78,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         // No reason to show backlight if no light sensor on device
         if (((SensorManager)getSystemService(SENSOR_SERVICE)).getDefaultSensor(
             Sensor.TYPE_LIGHT) == null) {
-            prefSet.removePreference(mBacklightScreen);
+            ((PreferenceCategory)prefSet.findPreference(GENERAL_CATEGORY)).removePreference(mBacklightScreen);
         }
         
         if (!getResources().getBoolean(R.bool.has_rgb_notification_led)) {
