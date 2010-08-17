@@ -115,4 +115,17 @@
         <item>10秒</item>
     </string-array>
 
+    <string-array name="entries_sound_attenuation">
+        <item>0 dB</item>
+        <item>4 dB</item>
+        <item>6 dB(デフォルト)</item>
+        <item>8 dB</item>
+        <item>10 dB</item>
+    </string-array>
+
+    <string-array name="entries_sound_limitvol">
+        <item>システム設定による減衰</item>
+        <item>音楽の音量(デフォルト)</item>
+    </string-array>
+
 </resources>

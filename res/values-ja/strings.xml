@@ -356,4 +356,24 @@
     <string name="ll_bad_levels">レベルは増加しなくてはなりません</string>
     <string name="ll_num_levels">レベル数をセット</string>
 
+    <!-- Sound -->
+    <string name="sound_title">サウンド設定</string>
+    <string name="sound_notifications_focus_title">通知音フォーカス</string>
+    <string name="sound_notifications_focus_summary">通知音再生時に、オーディオフォーカスリクエストに対応しているアプリの音量を下げる</string>
+    <string name="sound_to_speaker_title">常にスピーカーで再生する</string>
+    <string name="sound_notifications_title">通知音</string>
+    <string name="sound_rings_title">着信音</string>
+    <string name="sound_alarms_title">アラーム</string>
+    <string name="sound_note_title">ノート</string>
+    <string name="sound_note_summary">以下の設定はヘッドフォン利用時のみ適用されます</string>
+    <string name="sound_attenuation_title">音量の減衰</string>
+    <string name="sound_limitvol_title">音楽再生時の音量</string>
+    <string name="sound_notifications_attenuation_dialog">通知音の減衰</string>
+    <string name="sound_rings_attenuation_dialog">着信音の減衰</string>
+
+    <string name="sound_alarms_attenuation_dialog">アラームの減衰</string>
+    <string name="sound_notifications_limitvol_dialog">通知音量</string>
+    <string name="sound_rings_limitvol_dialog">着信音量</string>
+    <string name="sound_alarms_limitvol_dialog">アラーム音量</string>
+
 </resources>
