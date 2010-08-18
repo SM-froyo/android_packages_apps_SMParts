@@ -186,7 +186,7 @@
 
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Compcacheを使用する</string>
-    <string name="pref_compcache_summary">仮想容量を増やすためにメモリを圧縮する</string>
+    <string name="pref_compcache_summary">仮想容量を増やすためにメモリを圧縮する(再起動が必要)</string>
 
     <!-- Performance Settings : JIT Mode -->
     <string name="pref_jit_mode_title">JITを使用する</string>
