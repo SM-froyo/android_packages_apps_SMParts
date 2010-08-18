@@ -29,7 +29,7 @@
 	<string name="pref_lockscreen_timeout_lock_delay">Ritardo timeout schermo</string>
 	<string name="pref_lockscreen_screenoff_lock_delay">Ritardo spegnimento schermo</string>
 	<string name="pref_lockscreen_timeout_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo il timeout</string>
-	<string name="pref_lockscreen_screenoff_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo averlo averlo spento</string>
+	<string name="pref_lockscreen_screenoff_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo averlo spento</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">Scegli un colore</string>
@@ -221,8 +221,8 @@
     <string name="application_settings_summary">Modifica diverse impostazioni riguardanti le applicazioni</string>
 
     <!-- Application Settings : Move any app -->
-    <string name="pref_move_all_apps_title">Abilita spostamento applicazioni</string>
-    <string name="pref_move_all_apps_summary">Permette di spostare qualsiasi app nella memoria esterna</string>
+    <string name="pref_move_all_apps_title">Abilita spostamento app</string>
+    <string name="pref_move_all_apps_summary">Permette di spostare qualsiasi applicazione nella memoria esterna</string>
 
     <!-- Application Settings : Install Location -->
     <string name="pref_install_location_title">Luogo di installazione</string>
@@ -365,14 +365,14 @@
     <string name="sound_title">Impostazioni audio</string>
     <string name="sound_notifications_focus_title">Focus Notifiche</string>
     <string name="sound_notifications_focus_summary">Il focus audio fa in modo che durante una notifica venga diminuito il volume delle app compatibili.</string>
-    <string name="sound_to_speaker_title">Solo tramite speaker</string>
+    <string name="sound_to_speaker_title">Riproduic solo tramite speaker</string>
     <string name="sound_notifications_title">Notifiche</string>
     <string name="sound_rings_title">Suonerie</string>
     <string name="sound_alarms_title">Allarmi</string>
     <string name="sound_note_title">Nota</string>
     <string name="sound_note_summary">Le seguenti impostazioni vengono applicate solo quando si utilizzano le cuffie.</string>
     <string name="sound_attenuation_title">Attenuazione volume</string>
-    <string name="sound_limitvol_title">Durante ripr. musicale</string>
+    <string name="sound_limitvol_title">Volume durante riproduzione musicale</string>
     <string name="sound_notifications_attenuation_dialog">Attenuazione notifica</string>
     <string name="sound_rings_attenuation_dialog">Attenuazione suoneria</string>
     <string name="sound_alarms_attenuation_dialog">Attenuazione allarme</string>
