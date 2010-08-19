@@ -365,7 +365,7 @@
     <string name="sound_title">Impostazioni audio</string>
     <string name="sound_notifications_focus_title">Focus Notifiche</string>
     <string name="sound_notifications_focus_summary">Il focus audio fa in modo che durante una notifica venga diminuito il volume delle app compatibili.</string>
-    <string name="sound_to_speaker_title">Riproduic solo tramite speaker</string>
+    <string name="sound_to_speaker_title">Riproduci solo tramite speaker</string>
     <string name="sound_notifications_title">Notifiche</string>
     <string name="sound_rings_title">Suonerie</string>
     <string name="sound_alarms_title">Allarmi</string>
