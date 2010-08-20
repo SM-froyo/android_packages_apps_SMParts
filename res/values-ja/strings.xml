@@ -358,6 +358,7 @@
 
     <!-- Sound -->
     <string name="sound_title">サウンド設定</string>
+    <string name="sound_summary">サウンドとオーディオフォーカスの設定</string>
     <string name="sound_notifications_focus_title">通知音フォーカス</string>
     <string name="sound_notifications_focus_summary">通知音再生時に、オーディオフォーカスリクエストに対応しているアプリの音量を下げる</string>
     <string name="sound_to_speaker_title">常にスピーカーで再生する</string>
