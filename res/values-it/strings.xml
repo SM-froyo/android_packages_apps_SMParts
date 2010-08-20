@@ -363,6 +363,7 @@
     
     <!-- Sound -->
     <string name="sound_title">Impostazioni audio</string>
+    <string name="sound_summary">Impostazioni audio e focus audio</string>
     <string name="sound_notifications_focus_title">Focus Notifiche</string>
     <string name="sound_notifications_focus_summary">Il focus audio fa in modo che durante una notifica venga diminuito il volume delle app compatibili.</string>
     <string name="sound_to_speaker_title">Riproduci solo tramite speaker</string>
