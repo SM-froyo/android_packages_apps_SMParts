@@ -23,8 +23,16 @@
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.cyanogenmod.cmparts"
             android:targetClass="com.cyanogenmod.cmparts.activities.PerformanceSettingsActivity" />
-    </PreferenceScreen>    
- 
+    </PreferenceScreen>
+
+    <!-- Sound settings -->
+    <PreferenceScreen android:key="sound_settings"
+            android:title="@string/sound_title" android:summary="@string/sound_summary">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.SoundActivity" />
+    </PreferenceScreen>
+
     <!-- UI Settings -->
     <PreferenceScreen android:key="ui_settings"
         android:title="@string/ui_title" android:summary="@string/ui_summary">
@@ -33,15 +41,7 @@
             android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
     </PreferenceScreen>
 
-    <!-- Sound settings -->
-    <PreferenceScreen android:key="sound_settings"
-        android:title="@string/sound_title">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.SoundActivity" />
-    </PreferenceScreen>
-
-<!-- Possible future Use: Pedlar 
+<!-- Possible future Use: Pedlar
     <PreferenceScreen android:key="battery_tester"
         android:title="Test Battery" android:summary="Battery Drain Tester">
         <intent android:action="android.intent.action.MAIN"

@@ -363,6 +363,7 @@
 
     <!-- Sound -->
     <string name="sound_title">Sound settings</string>
+    <string name="sound_summary">Sound and audio focus settings</string>
     <string name="sound_notifications_focus_title">Notification focus</string>
     <string name="sound_notifications_focus_summary">Audio focus requests causes compatible apps to lower the volume while notifications play.</string>
     <string name="sound_to_speaker_title">Always play on speaker</string>
