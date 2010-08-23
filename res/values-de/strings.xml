@@ -353,6 +353,7 @@
 
   <!-- Sound -->
   <string name="sound_title">Klang-Einstellungen</string>
+  <string name="sound_summary">Einstellungen für Klang und Audio-Fokus</string>
   <string name="sound_notifications_focus_title">Benachrichtigung betonen</string>
   <string name="sound_notifications_focus_summary">Verringert die Lautstärke kompatibler Apps um die Benachrichtigung deutlicher hörbar zu machen</string>
   <string name="sound_to_speaker_title">Immer über Lautsprecher</string>
