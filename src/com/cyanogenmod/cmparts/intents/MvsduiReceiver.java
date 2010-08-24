@@ -13,11 +13,11 @@ import java.io.IOException;
 import java.io.File;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-
+import com.cyanogenmod.cmparts.activities.TweaksExtras;
 import com.cyanogenmod.cmparts.R;
 
 
-public class mvsduiReceiver extends BroadcastReceiver {
+public class MvsduiReceiver extends BroadcastReceiver {
 
     public static final String mvUiSd = "com.cyanogenmod.cmpartshelper.RESTORE_CMPARTS_UI";
     private static final String NAMESPACE = "com.cyanogenmod.cmparts";
@@ -38,6 +38,7 @@ public class mvsduiReceiver extends BroadcastReceiver {
                 success = false;
                 Toast.makeText(context, R.string.xml_write_error, Toast.LENGTH_SHORT).show();
               }
+              TweaksExtras.readUIValuesFromXML(null);
             } else {
                 Toast.makeText(context, R.string.xml_sdcard_unmounted, Toast.LENGTH_SHORT).show();
             }

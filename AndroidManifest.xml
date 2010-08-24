@@ -11,9 +11,14 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
 
     <application android:label="@string/app_name" android:icon="@drawable/cm_icon">
-        <receiver android:name=".intents.mvsduiReceiver" android:enabled="true">
+        <receiver android:name=".intents.MvsduiReceiver" android:enabled="true">
             <intent-filter>
                 <action android:name="com.cyanogenmod.cmpartshelper.RESTORE_CMPARTS_UI"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".intents.CatchThemeListReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.cyanogenmod.cmpartshelper.GET_THEME_LIST"></action>
             </intent-filter>
         </receiver>
         <activity android:name=".activities.MainActivity" android:label="@string/app_name">
