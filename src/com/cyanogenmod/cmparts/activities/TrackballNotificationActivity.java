@@ -1,7 +1,6 @@
 
 package com.cyanogenmod.cmparts.activities;
 
-import com.cyanogenmod.cmparts.util.IconPreferenceScreen;
 import com.cyanogenmod.cmparts.R;
 
 import android.app.AlertDialog;
