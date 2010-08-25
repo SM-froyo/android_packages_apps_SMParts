@@ -1,33 +1,39 @@
 
 package com.cyanogenmod.cmparts.activities;
 
+import com.cyanogenmod.cmparts.util.IconPreferenceScreen;
 import com.cyanogenmod.cmparts.R;
 
+import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import java.io.File;
 import android.util.Log;
 import android.widget.Toast;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.app.ProgressDialog;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageInfo;
-import java.util.List;
-import java.util.Random;
-import android.os.Handler;
-import java.util.Set;
-import java.util.HashSet;
+
+import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class TrackballNotificationActivity extends PreferenceActivity implements
         Preference.OnPreferenceChangeListener {
@@ -253,37 +259,22 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         return null;
     }
 
-    public String getPackageName(String pkg) {
-        PackageManager packageManager = getPackageManager();
-        List<PackageInfo> packs = packageManager.getInstalledPackages(0);
-        int size = packs.size();
-        for (int i = 0; i < size; i++) {
-            PackageInfo p = packs.get(i);
-            if (p.packageName.equals(pkg)) {
-                if (knownPackage(pkg) != null) {
-                    return knownPackage(pkg);
-                } else {
-                    return p.applicationInfo.loadLabel(packageManager).toString();
-                }
-            }
-        }
-        return null;
+    public String getPackageName(PackageInfo p) {
+        String knownPackage = knownPackage(p.packageName);
+        return knownPackage == null ?
+                p.applicationInfo.loadLabel(getPackageManager()).toString() : knownPackage;
     }
 
-    public String[] getPackageList() {
+    public List<PackageInfo> getPackageList() {
         PackageManager packageManager = getPackageManager();
         List<PackageInfo> packs = packageManager.getInstalledPackages(0);
-        int size = packs.size();
-        String[] list = new String[50];
-        int x = 0;
-        for (int i = 0; i < size; i++) {
-            PackageInfo p = packs.get(i);
+        List<PackageInfo> list = new ArrayList<PackageInfo>();
+        for (PackageInfo p : packs) {
             try {
                 Context appContext = createPackageContext(p.packageName, 0);
                 boolean exists = (new File(appContext.getFilesDir(), "trackball_lights")).exists();
                 if (exists || (knownPackage(p.packageName) != null)) {
-                    list[x] = p.packageName;
-                    x++;
+                    list.add(p);
                 }
             } catch (Exception e) {
                 Log.d("GetPackageList", e.toString());
@@ -310,65 +301,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
     }
 
     private PreferenceScreen createPreferenceScreen() {
+
         // The root of our system
-        String[] packageList = getPackageList();
         PreferenceScreen root = getPreferenceManager().createPreferenceScreen(this);
-
-        for (int i = 0; i < packageList.length; i++) {
-            if (isNull(packageList[i]))
-                continue;
-
-            String[] packageValues = findPackage(packageList[i]);
-            String packageName = getPackageName(packageList[i]);
-            PreferenceScreen appName = getPreferenceManager().createPreferenceScreen(this);
-            appName.setKey(packageList[i] + "_screen");
-            appName.setTitle(packageName);
-            root.addPreference(appName);
-
-            ListPreference colorList = new ListPreference(this);
-            colorList.setKey(packageList[i] + "_color");
-            colorList.setTitle(R.string.color_trackball_flash_title);
-            colorList.setSummary(R.string.color_trackball_flash_summary);
-            colorList.setDialogTitle(R.string.dialog_color_trackball);
-            colorList.setEntries(R.array.entries_trackball_colors);
-            /*
-             * if(packageValues != null) { colorList.setValue(packageValues[1]);
-             * }
-             */
-            colorList.setEntryValues(R.array.pref_trackball_colors_values);
-            colorList.setOnPreferenceChangeListener(this);
-            appName.addPreference(colorList);
-
-            ListPreference blinkList = new ListPreference(this);
-            blinkList.setKey(packageList[i] + "_blink");
-            blinkList.setTitle(R.string.color_trackball_blink_title);
-            blinkList.setSummary(R.string.color_trackball_blink_summary);
-            blinkList.setDialogTitle(R.string.dialog_blink_trackball);
-            blinkList.setEntries(R.array.pref_trackball_blink_rate_entries);
-            blinkList.setEntryValues(R.array.pref_trackball_blink_rate_values);
-            /*
-             * if(packageValues != null) { blinkList.setValue(packageValues[2]);
-             * }
-             */
-            blinkList.setOnPreferenceChangeListener(this);
-            appName.addPreference(blinkList);
-
-            Preference customColor = new Preference(this);
-            customColor.setKey(packageList[i] + "_custom");
-            customColor.setSummary(R.string.color_trackball_custom_summary);
-            customColor.setTitle(R.string.color_trackball_custom_title);
-            appName.addPreference(customColor);
-
-            Preference testColor = new Preference(this);
-            testColor.setKey(packageList[i] + "_test");
-            testColor.setSummary(R.string.color_trackball_test_summary);
-            testColor.setTitle(R.string.color_trackball_test_title);
-            if (packageValues != null) { // Check if the color is none, if it is
-                                         // disable Test.
-                testColor.setEnabled(!packageValues[1].equals("none"));
-            }
-            appName.addPreference(testColor);
-        }
 
         /* Advanced */
         PreferenceScreen advancedScreen = getPreferenceManager().createPreferenceScreen(this);
@@ -411,6 +346,74 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         resetColors.setSummary(R.string.pref_trackball_reset_summary);
         resetColors.setTitle(R.string.pref_trackball_reset_title);
         advancedScreen.addPreference(resetColors);
+
+        // Add each application
+        PreferenceCategory cat = new PreferenceCategory(this);
+        cat.setTitle(R.string.group_applications);
+        root.addPreference(cat);
+
+        Map<String, PackageInfo> sortedPackages = new TreeMap<String, PackageInfo>();
+        for (PackageInfo pkgInfo : getPackageList()) {
+            sortedPackages.put(getPackageName(pkgInfo), pkgInfo);
+        }
+
+        for (Map.Entry<String, PackageInfo> pkgEntry : sortedPackages.entrySet()) {
+            String pkg = pkgEntry.getValue().packageName;
+            if (isNull(pkg))
+                continue;
+
+            String shortPackageName = pkgEntry.getKey();
+            PreferenceScreen appName = getPreferenceManager().createPreferenceScreen(this);
+            appName.setKey(pkg + "_screen");
+            appName.setTitle(shortPackageName);
+            cat.addPreference(appName);
+
+            ListPreference colorList = new ListPreference(this);
+            colorList.setKey(pkg + "_color");
+            colorList.setTitle(R.string.color_trackball_flash_title);
+            colorList.setSummary(R.string.color_trackball_flash_summary);
+            colorList.setDialogTitle(R.string.dialog_color_trackball);
+            colorList.setEntries(R.array.entries_trackball_colors);
+            /*
+             * if(packageValues != null) { colorList.setValue(packageValues[1]);
+             * }
+             */
+            colorList.setEntryValues(R.array.pref_trackball_colors_values);
+            colorList.setOnPreferenceChangeListener(this);
+            appName.addPreference(colorList);
+
+            ListPreference blinkList = new ListPreference(this);
+            blinkList.setKey(pkg + "_blink");
+            blinkList.setTitle(R.string.color_trackball_blink_title);
+            blinkList.setSummary(R.string.color_trackball_blink_summary);
+            blinkList.setDialogTitle(R.string.dialog_blink_trackball);
+            blinkList.setEntries(R.array.pref_trackball_blink_rate_entries);
+            blinkList.setEntryValues(R.array.pref_trackball_blink_rate_values);
+            /*
+             * if(packageValues != null) { blinkList.setValue(packageValues[2]);
+             * }
+             */
+            blinkList.setOnPreferenceChangeListener(this);
+            appName.addPreference(blinkList);
+
+            Preference customColor = new Preference(this);
+            customColor.setKey(pkg + "_custom");
+            customColor.setSummary(R.string.color_trackball_custom_summary);
+            customColor.setTitle(R.string.color_trackball_custom_title);
+            appName.addPreference(customColor);
+
+            Preference testColor = new Preference(this);
+            testColor.setKey(pkg + "_test");
+            testColor.setSummary(R.string.color_trackball_test_summary);
+            testColor.setTitle(R.string.color_trackball_test_title);
+
+            String[] packageValues = findPackage(pkg);
+            if (packageValues != null) {
+                // Check if the color is none, if it isdisable Test.
+                testColor.setEnabled(!packageValues[1].equals("none"));
+            }
+            appName.addPreference(testColor);
+        }
 
         return root;
     }
