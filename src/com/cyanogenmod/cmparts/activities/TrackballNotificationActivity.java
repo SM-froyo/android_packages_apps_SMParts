@@ -63,6 +63,8 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
     public CheckBoxPreference globalBlend;
 
+    public Preference globalCustom;
+
     public Preference globalTest;
 
     public String[] uniqueArray(String[] array) {
@@ -399,6 +401,12 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             customColor.setKey(pkg + "_custom");
             customColor.setSummary(R.string.color_trackball_custom_summary);
             customColor.setTitle(R.string.color_trackball_custom_title);
+
+            String[] packageValues = findPackage(pkg);
+            if (packageValues != null) {
+                // Check if the color is none, if it is disable custom.
+                customColor.setEnabled(!packageValues[1].equals("none"));
+            }
             appName.addPreference(customColor);
 
             Preference testColor = new Preference(this);
@@ -406,7 +414,6 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             testColor.setSummary(R.string.color_trackball_test_summary);
             testColor.setTitle(R.string.color_trackball_test_title);
 
-            String[] packageValues = findPackage(pkg);
             if (packageValues != null) {
                 // Check if the color is none, if it isdisable Test.
                 testColor.setEnabled(!packageValues[1].equals("none"));
@@ -448,6 +455,10 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             updatePackage(pkg, value, "0", "0");
 
             PreferenceScreen prefSet = getPreferenceScreen();
+
+            globalCustom = prefSet.findPreference(pkg + "_custom");
+            globalCustom.setEnabled(!value.matches("none"));
+
             globalTest = prefSet.findPreference(pkg + "_test");
             globalTest.setEnabled(!value.matches("none"));
         }
