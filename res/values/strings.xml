@@ -134,6 +134,16 @@
     <string name="pref_trackball_reset_summary">Reset all colors and apps</string>
     <string name="dialog_trackball_loading">Loading...</string>
     <string name="dialog_trackball_packagelist">Loading Package List</string>
+    <string name="trackball_category_dialog_text">Please enter a new category</string>
+    <string name="trackball_category_list_title">Category</string>
+    <string name="trackball_category_list_summary">Choose a category</string>
+    <string name="trackball_category_screen">Manage Categories</string>
+    <string name="trackball_category_add_title">Add category</string>
+    <string name="trackball_category_add_summary">Add a category to the list</string>
+    <string name="trackball_category_remove_title">Remove category</string>
+    <string name="trackball_category_remove_summary">Remove a category from the list</string>
+    <string name="trackball_remove_default_toast">Can\'t remove this category as its the default one.</string>
+    <string name="trackball_reset_all">Reset all colors and categories.</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">WARNING: May Cause Battery Drain</string>
