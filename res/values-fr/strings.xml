@@ -14,10 +14,22 @@
     <string name="pref_rotation_180_title">180 degrés</string>
     <string name="pref_rotation_270_title">270 degrés</string>
 
+    <!-- User interface : LED Notifications -->
+    <string name="trackball_title">Notifications par LED</string>
+    <string name="trackball_summary">Contôler les réglages des notifications par LED ou pulsation de la trackball</string>
+
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">Réarrangement après zoom</string>
     <string name="pref_pinch_reflow_summary">Réarranger le contenu immédiatement après un zoom avant</string>
+
+    <!-- User interface : Lock Screen -->
+    <string name="ui_lockscreen_title">Paramètres de l\'écran de verrouillage</string>
+    <string name="pref_lockscreen_delay_title">Délai</string>
+    <string name="pref_lockscreen_timeout_lock_delay">Délai avant timeout</string>
+    <string name="pref_lockscreen_screenoff_lock_delay">Délai avant veille</string>
+    <string name="pref_lockscreen_timeout_lock_delay_summary">Combien de temps l\'écran attendra avant de s\'éteindre</string>
+    <string name="pref_lockscreen_screenoff_lock_delay_summary">Combien de temps le téléphone attendra avant de se verrouiller lorsque l\'écran est déjà éteint</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">Choisir une couleur</string>
@@ -89,6 +101,39 @@
     <string name="title_notifications_items_text">Couleur du texte</string>
     <string name="title_notifications_items_time">Couleur de l\'heure</string>
 
+    <!-- User interface: Trackball notifcations -->
+	<string name="trackball_notifications_title">Couleurs des notifications de la trackball</string>
+	<string name="dialog_color_trackball">Choisir une couleur</string>
+	<string name="dialog_blink_trackball">Choisir la fréquence de clignotement</string>
+	<string name="color_trackball_flash_title">Couleur du flash</string>
+    <string name="color_trackball_flash_summary">Choix de la couleur lors du flash</string>
+    <string name="color_trackball_custom_title">Couleur personnalisée</string>
+    <string name="color_trackball_custom_summary">Choix de la couleur personnalisée lors du flash</string>
+	<string name="color_trackball_blink_title">Fréquence du clignotement</string>
+    <string name="color_trackball_blink_summary">Choix de la durée à attendre entre deux flashs</string>
+	<string name="color_trackball_test_title">Test</string>
+    <string name="color_trackball_test_summary">Tester les paramètres choisis</string>
+    <string name="dialog_clear_flash">Annuler le flash</string>
+    <string name="trackball_advanced_title">Avancé</string>
+    <string name="pref_trackball_screen_title">Toujours respirer</string>
+    <string name="pref_trackball_screen_summary">La trackball \"respirera\" lorsque l\'écran sera allumé</string>
+    <string name="pref_trackball_blend_title">Mélanger notifications</string>
+    <string name="pref_trackball_blend_summary">Mélanger les couleurs des notifications</string>
+    <string name="pref_trackball_sucess_title">Succession</string>
+    <string name="pref_trackball_sucess_summary">Notifier chaque notification à la suite</string>
+    <string name="pref_trackball_random_title">Couleurs aléatoires</string>
+    <string name="pref_trackball_random_summary">Utiliser des couleurs aléatoires</string>
+    <string name="pref_trackball_order_title">Notifier dans l\'ordre</string>
+    <string name="pref_trackball_order_summary">Notifier les couleurs dans l\'ordre</string>
+    <string name="pref_trackball_reset_title">Remise à zéro</string>
+    <string name="pref_trackball_reset_summary">Remise à zéro des paramètres de notification</string>
+    <string name="dialog_trackball_loading">Chargement...</string>
+    <string name="dialog_trackball_packagelist">Chargement de la liste des applications</string>
+
+    <!-- Trackball Settings : Warning dialog -->
+    <string name="notification_battery_warning_title">ATTENTION : Peut vider votre batterie</string>
+    <string name="notification_battery_warning">Il a été prouvé que cette option accentue l\'utilisation de la batterie d\'environ 3% par heure. Si vous constatez ce phénomène, c\'est certainement cette option qui en est la cause directe. N\'activez cette option uniquement en connaissance de cause !</string>
+
     <!-- Tweaks Extras -->
     <string name="te_title">Tweaks supplémentaires</string>
     <string name="te_title_summary">Outils supplémentaires des tweaks de l\'UI</string>
@@ -112,6 +157,7 @@
     <string name="xml_parse_error">Erreur de parsage XML!</string>
     <string name="xml_invalid_color">Code couleur invalide !</string>
     <string name="xml_import_success">Import XML effectué avec succès ! Redémarrez pour appliquer</string>
+    <string name="xml_run_helper">Démarrage de l\'assistant</string>
 
     <!-- Input Settings -->
     <string name="input_settings_title">Paramètres des entrées</string>
@@ -128,8 +174,6 @@
     <string name="pref_trackball_unlock_summary">Une pression sur la trackball déverrouille le téléphone</string>
     <string name="pref_menu_unlock_title">Déverrouillage par menu</string>
     <string name="pref_menu_unlock_summary">Une pression sur le bouton menu déverrouille le téléphone</string>
-    <string name="pref_trackball_screen_title">Toujours respirer</string>
-    <string name="pref_trackball_screen_summary">La trackball respirera lorsque l\'écran sera allumé</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Pression longue sur maison</string>
@@ -252,19 +296,15 @@
 	<string name="fuscia">Fuchsia</string>
 
 	<!-- Notification Bar Colors -->
-
 	<string name="title_notification_bar">Barre de notification</string>
     <string name="title_custom_not_bar">Barre de notification personnalisée</string>
     <string name="summary_custom_not_bar_on">Utilisation de la couleur et du style de la barre de notification personnelle</string>
     <string name="summary_custom_not_bar_off">Utilisation de la barre de notification classique de CyanogenMod</string>
-
     <string name="title_not_bar_color_mask">Couleur de la barre</string>
     <string name="summary_not_bar_color_mask">Note : La transparence (alpha) peut causer de drôles de résultats !</string>
-
     <string name="title_custom_exp_not_bar">Barre déroulante personnalisée</string>
     <string name="summary_custom_exp_not_bar_on">Utilisation de la couleur et du style personnalisé de la barre déroulante</string>
     <string name="summary_custom_exp_not_bar_off">Utilisation de la barre déroulante classique de CyanogenMod</string>
-         
     <string name="title_not_exp_bar_color_mask">Couleur de la barre déroulante</string>
     <string name="summary_not_exp_bar_color_mask">Choisir une couleur à appliquer aux éléments de la barre déroulante</string>
 
@@ -272,4 +312,63 @@
     <string name="pref_lock_home_title">Garder l\'accueil en mémoire</string>
     <string name="pref_lock_home_summary">Tenter de garder l\'application Accueil dans la mémoire en tout temps</string>
 
+    <!-- Backlight -->
+    <string name="backlight_title">Rétroéclairage automatique</string>
+    <string name="backlight_summary">Tweaks et niveaux de filtrage</string>
+    <string name="light_filter_title">Filtrage du capteur de lumière</string>
+    <string name="light_filter_enabled_title">Activé</string>
+    <string name="light_filter_enabled_summary">Appliquer le filtre moyen afin de réduire le scintillement</string>
+    <string name="light_filter_window_title">Longueur de la fenêtre</string>
+    <string name="light_filter_window_summary">La valeur filtrée est la valeur moyenne du capteur de lumière durant une certaine période</string>
+    <string name="light_filter_reset_title">Seuil de remise à zéro</string>
+    <string name="light_filter_reset_summary">Les échantillons qui dépassent le seuil annulent le filtre</string>
+    <string name="light_filter_interval_title">Intervalle d\'échantillonage</string>
+    <string name="light_filter_interval_summary">Une valeur plus basse améliore l\'efficacité mais utilise plus le CPU</string>
+    <string name="light_levels_title">Niveaux de lumière</string>
+    <string name="light_levels_enabled_title">Utiliser valeur personnalisée</string>
+    <string name="light_levels_dim_title">Niveau d\'obscurcissement</string>
+    <string name="light_levels_dim_summary">Niveau de luminosité utilisé pour l\'obscurcissement</string>
+    <string name="light_levels_editor_title">Éditer les autres niveaux...</string>
+    <string name="light_decrease_enabled_title">Autoriser diminution luminosité</string>
+    <string name="light_decrease_enabled_summary">Activer afin d\'autoriser la diminution des éclairages. Utiliser l\'hystérésis pour réduire le scintillement.</string>
+    <string name="light_decrease_hysteresis_title">Diminuer l\'hystérésis</string>
+    <string name="light_decrease_hysteresis_summary">Les niveaux de mesures se chevaucheront de tant vers le bas.</string>
+
+    <!-- Light sensor levels -->
+    <string name="ll_title">Niveaux du capteur d\'éclairage</string>
+    <string name="ll_header_upper">Plus haut</string>
+    <string name="ll_header_lower">Plus bas</string>
+    <string name="ll_header_lcd">Écran</string>
+    <string name="ll_header_btn">Boutons</string>
+    <string name="ll_header_kb">Clavier</string>
+    <string name="ll_lux">Capteur (filtré / brut):</string>
+    <string name="ll_lcd">Écran :</string>
+    <string name="ll_btn">Boutons :</string>
+    <string name="ll_kb">Clavier :</string>
+    <string name="ll_disabled">désactivé</string>
+    <string name="ll_default">Charger défauts</string>
+    <string name="ll_save">Enregistrer &amp; appliquer</string>
+    <string name="ll_reload">Recharger actifs</string>
+    <string name="ll_bad_levels">Les niveaux doivent croître</string>
+    <string name="ll_num_levels">Définir le nombre de niveaux</string>
+
+    <!-- Sound -->
+    <string name="sound_title">Paramètres du son</string>
+    <string name="sound_summary">Paramètres et ajustements sonores</string>
+    <string name="sound_notifications_focus_title">Priorité aux notifications</string>
+    <string name="sound_notifications_focus_summary">Les applications compatibles baisseront leurs volumes lors d\'une notification</string>
+    <string name="sound_to_speaker_title">Toujours dans le haut-parleur</string>
+    <string name="sound_notifications_title">Notifications</string>
+    <string name="sound_rings_title">Sonneries</string>
+    <string name="sound_alarms_title">Alarmes</string>
+    <string name="sound_note_title">Remarque</string>
+    <string name="sound_note_summary">Le paramètre ci-dessous ne s\'applique seulement lorsqu\'un casque est utilisé</string>
+    <string name="sound_attenuation_title">Diminution du volume</string>
+    <string name="sound_limitvol_title">Volume lors de la lecture musicale</string>
+    <string name="sound_notifications_attenuation_dialog">Atténuation des notifications</string>
+    <string name="sound_rings_attenuation_dialog">Atténuation des sonneries</string>
+    <string name="sound_alarms_attenuation_dialog">Atténuation des alarmes</string>
+    <string name="sound_notifications_limitvol_dialog">Volume de notification</string>
+    <string name="sound_rings_limitvol_dialog">Volume de la sonnerie</string>
+    <string name="sound_alarms_limitvol_dialog">Volume des alarmes</string>
 </resources>
