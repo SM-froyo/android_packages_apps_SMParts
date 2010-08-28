@@ -13,7 +13,7 @@
     <string name="pref_rotation_90_title">90 gradi</string>
     <string name="pref_rotation_180_title">180 gradi</string>
     <string name="pref_rotation_270_title">270 gradi</string>
-    
+
     <!-- User interface : trackball -->
     <string name="trackball_title">Notifiche LED</string>
     <string name="trackball_summary">Imposta colore e pulsazione delle notifiche trackball/LED</string>
@@ -22,14 +22,14 @@
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">Reflow dopo il pinch in</string>
     <string name="pref_pinch_reflow_summary">Reflow del testo dopo il pinch to zoom</string>
-  
+
     <!-- User interface : Lock Screen -->
-	<string name="ui_lockscreen_title">Impostazioni Lockscreen</string>
-	<string name="pref_lockscreen_delay_title">Ritardo</string>
-	<string name="pref_lockscreen_timeout_lock_delay">Ritardo timeout schermo</string>
-	<string name="pref_lockscreen_screenoff_lock_delay">Ritardo spegnimento schermo</string>
-	<string name="pref_lockscreen_timeout_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo il timeout</string>
-	<string name="pref_lockscreen_screenoff_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo averlo spento</string>
+        <string name="ui_lockscreen_title">Impostazioni Lockscreen</string>
+        <string name="pref_lockscreen_delay_title">Ritardo</string>
+        <string name="pref_lockscreen_timeout_lock_delay">Ritardo timeout schermo</string>
+        <string name="pref_lockscreen_screenoff_lock_delay">Ritardo spegnimento schermo</string>
+        <string name="pref_lockscreen_timeout_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo il timeout</string>
+        <string name="pref_lockscreen_screenoff_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo averlo spento</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">Scegli un colore</string>
@@ -42,8 +42,7 @@
     <!-- Status Bar, Battery -->
     <string name="battery_title">Batteria</string>
     <string name="pref_battery_percentage_title">Percentuale batteria</string>
-    <string name="pref_battery_percentage_summary">Visualizza la percentuale della batteria nella status bar
-    </string>
+    <string name="pref_battery_percentage_summary">Visualizza la percentuale della batteria nella status bar</string>
     <string name="battery_status_color_title">Colore percentuale batteria</string>
 
     <!-- Status Bar, Clock -->
@@ -71,24 +70,20 @@
     <string name="plmn_title">Stringa operatore</string>
     <string name="title_show_plmn_ls">Visualizza operatore (lockscreen)</string>
     <string name="summary_on_show_plmn_ls">L\'operatore viene visualizzato nel lockscreen</string>
-    <string name="summary_off_show_plmn_ls">L\'operatore non viene visualizzato nel lockscreen
-    </string>
+    <string name="summary_off_show_plmn_ls">L\'operatore non viene visualizzato nel lockscreen</string>
     <string name="title_show_plmn_sb">Visualizza operatore (status bar)</string>
     <string name="summary_on_show_plmn_sb">L\'operatore viene visualizzato nella status bar</string>
-    <string name="summary_off_show_plmn_sb">L\'operatore non viene visualizzato nella status bar
-    </string>
+    <string name="summary_off_show_plmn_sb">L\'operatore non viene visualizzato nella status bar</string>
     <string name="title_plmn_label_color">Colore etichetta operatore</string>
 
     <!-- Date and Provider, SPN -->
     <string name="spn_title">Impostazioni stringa provider</string>
     <string name="title_show_spn_ls">Visualizza provider (lockscreen)</string>
     <string name="summary_on_show_spn_ls">Il provider viene visualizzato nel lockscreen</string>
-    <string name="summary_off_show_spn_ls">Il provider non viene visualizzato nel lockscreen
-    </string>
+    <string name="summary_off_show_spn_ls">Il provider non viene visualizzato nel lockscreen</string>
     <string name="title_show_spn_sb">Visualizza provider (status bar)</string>
     <string name="summary_on_show_spn_sb">Il provider viene visualizzato nella status bar</string>
-    <string name="summary_off_show_spn_sb">Il provider non viene visualizzato nella status bar
-    </string>
+    <string name="summary_off_show_spn_sb">Il provider non viene visualizzato nella status bar</string>
     <string name="title_spn_label_color">Colore etichetta provider</string>
 
     <!-- Notifications -->
@@ -107,16 +102,16 @@
     <string name="title_notifications_items_time">Ora</string>
 
     <!-- User interface: Trackball notifcations -->
-	<string name="trackball_notifications_title">Colori Notifiche Trackball</string>
-	<string name="dialog_color_trackball">Scegli un colore</string>
-	<string name="dialog_blink_trackball">Scegli frequenza di lampeggio</string>
-	<string name="color_trackball_flash_title">Colore lampeggio</string>
+        <string name="trackball_notifications_title">Colori Notifiche Trackball</string>
+        <string name="dialog_color_trackball">Scegli un colore</string>
+        <string name="dialog_blink_trackball">Scegli frequenza di lampeggio</string>
+        <string name="color_trackball_flash_title">Colore lampeggio</string>
         <string name="color_trackball_flash_summary">Colore da usare per il lampeggio del LED</string>
         <string name="color_trackball_custom_title">Colore personalizzato</string>
         <string name="color_trackball_custom_summary">Colore personalizzato da usare per il lampeggio</string>
-	<string name="color_trackball_blink_title">Frequenza lampeggio</string>
+        <string name="color_trackball_blink_title">Frequenza lampeggio</string>
         <string name="color_trackball_blink_summary">Frequenza del lampeggio</string>
-	<string name="color_trackball_test_title">Prova lampeggio</string>
+        <string name="color_trackball_test_title">Prova lampeggio</string>
         <string name="color_trackball_test_summary">Prova il lampeggio</string>
         <string name="dialog_clear_flash">Ferma Lampeggio</string>
     <string name="trackball_advanced_title">Avanzato</string>
@@ -288,21 +283,21 @@
 
 <string name="widget_name">Widget RenderFX</string>
     <string name="renderfx_temp">RenderFX</string>
-	<string name="prefs_render_effect">Effetto Render</string>
-	<string name="notify_render_effect">Effetto render attivo</string>
+        <string name="prefs_render_effect">Effetto Render</string>
+        <string name="notify_render_effect">Effetto render attivo</string>
         <string name="add_widget">Aggiungi widget</string>
 
-	<!--  Widget Types -->
-	<string name="night">Night</string>
-	<string name="terminal">Term</string>
-    <string name="blue">Blu</string>
-	<string name="amber">Ambra</string>
-	<string name="salmon">Salmone</string>
-	<string name="fuscia">Fucsia</string>
+        <!--  Widget Types -->
+        <string name="night">Night</string>
+        <string name="terminal">Term</string>
+        <string name="blue">Blu</string>
+        <string name="amber">Ambra</string>
+        <string name="salmon">Salmone</string>
+        <string name="fuscia">Fucsia</string>
 
         <!-- Notification Bar Colors -->
-	
-	<string name="title_notification_bar">Barra Notifiche</string>
+
+    <string name="title_notification_bar">Barra Notifiche</string>
     <string name="title_custom_not_bar">Personalizza la barra delle notifiche</string>
     <string name="summary_custom_not_bar_on">Stai usando colore e stile della barra notifiche personalizzati</string>
     <string name="summary_custom_not_bar_off">Stai usando la barra notifiche CyanogenMod classica</string>
@@ -315,7 +310,7 @@
     <string name="title_not_exp_bar_color_mask">Colore Barra pulldown</string>
     <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra pulldown</string>
 
-    
+
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Forza home in memoria</string>
@@ -360,12 +355,12 @@
     <string name="ll_reload">Ricarica attuali</string>
     <string name="ll_bad_levels">Livelli devono aumentare</string>
     <string name="ll_num_levels">Imposta numero livelli</string>
-    
+
     <!-- Sound -->
     <string name="sound_title">Impostazioni audio</string>
-    <string name="sound_summary">Impostazioni audio e focus audio</string>
+    <string name="sound_summary">Impostazioni audio e audio focus</string>
     <string name="sound_notifications_focus_title">Focus Notifiche</string>
-    <string name="sound_notifications_focus_summary">Il focus audio fa in modo che durante una notifica venga diminuito il volume delle app compatibili.</string>
+    <string name="sound_notifications_focus_summary">L\'Audio focus fa in modo che durante una notifica venga diminuito il volume delle app compatibili.</string>
     <string name="sound_to_speaker_title">Riproduci solo tramite speaker</string>
     <string name="sound_notifications_title">Notifiche</string>
     <string name="sound_rings_title">Suonerie</string>
