@@ -158,6 +158,10 @@
     <string name="xml_invalid_color">Code couleur invalide !</string>
     <string name="xml_import_success">Import XML effectué avec succès ! Redémarrez pour appliquer</string>
     <string name="xml_run_helper">Démarrage de l\'assistant</string>
+    <string name="title_apply_theme">Choisir une thème</string>
+    <string name="summary_apply_theme">Choisir un thème pré-existant ou un enregistré sur la carte SD</string>
+    <string name="title_save_theme">Sauver thème courant</string>
+    <string name="summary_save_theme">Enregistrer les réglages de couleurs actuels sur la carte SD</string>
 
     <!-- Input Settings -->
     <string name="input_settings_title">Paramètres des entrées</string>
