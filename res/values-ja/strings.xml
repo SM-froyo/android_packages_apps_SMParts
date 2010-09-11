@@ -378,4 +378,23 @@
     <string name="sound_rings_limitvol_dialog">着信音量</string>
     <string name="sound_alarms_limitvol_dialog">アラーム音量</string>
 
+    <!-- Quiet hours -->
+    <string name="sound_category_quiet_hours_title">静寂時間</string>
+    <string name="quiet_hours_enabled">静寂時間を有効にする</string>
+    <string name="quiet_hours_enabled_on">静寂時間が機能します</string>
+    <string name="quiet_hours_enabled_off">通知は平常通り行われます</string>
+    <string name="quiet_hours_start">開始時刻</string>
+    <string name="quiet_hours_start_summary">静寂時間が始まる時刻</string>
+    <string name="quiet_hours_end">終了時刻</string>
+    <string name="quiet_hours_end_summary">静寂時間を終了する時刻</string>
+    <string name="quiet_hours_mute">通知音をミュート</string>
+    <string name="quiet_hours_mute_on">通知音は再生されません</string>
+    <string name="quiet_hours_mute_off">通知音は再生されます</string>
+    <string name="quiet_hours_still">振動を無効</string>
+    <string name="quiet_hours_still_on">端末は振動しません</string>
+    <string name="quiet_hours_still_off">端末は平常通り振動します</string>
+    <string name="quiet_hours_dim">LEDを暗くする</string>
+    <string name="quiet_hours_dim_on">可能であればLEDを暗くします</string>
+    <string name="quiet_hours_dim_off">LEDは最大照度で点灯します</string>
+
 </resources>
