@@ -143,20 +143,16 @@
     <string name="title_dialog_ui_interface">Tweaks de l\'UI</string>
     <string name="message_dialog_reset">Charger les paramètres par défaut des tweaks de l\'UI ? Redémarrer pour appliquer</string>
     <string name="reset_ui_success">Les paramètres par défaut de l\'UI ont été restaurés ! Redémarrer pour appliquer</string>
-    <string name="title_export_to_xml">Exporter les couleurs</string>
-    <string name="summary_export_to_xml">Exporter les couleurs vers /sdcard/cmparts_ui.xml</string>
-    <string name="message_dialog_export">Exporter les couleurs en XML ? Ceci écrasera le fichier existant</string>
+    <string name="message_dialog_export">Entrer un nom pour ce fichier. Si ce fichier existe déjà, il sera remplacé.</string>
     <string name="xml_sdcard_unmounted">La carte SD n\'est pas montée !</string>
     <string name="xml_write_error">Erreur d\'écriture XML !</string>
     <string name="xml_export_success">Export XML effectué avec succès !</string>
-    <string name="title_import_from_xml">Importer les couleurs</string>
-    <string name="summary_import_from_xml">Importer les couleurs depuis /sdcard/cmparts_ui.xml</string>
-    <string name="message_dialog_import">Importer les couleurs depuis XML ? Redémarrez pour appliquer</string>
+    <string name="message_dialog_import">Êtes-vous sûr de vouloir charger ce thème de couleurs ? Redémarrer pour appliquer</string>
     <string name="xml_file_not_found">Fichier XML introuvable !</string>
     <string name="xml_io_exception">Erreur de lecture du fichier !</string>
     <string name="xml_parse_error">Erreur de parsage XML!</string>
     <string name="xml_invalid_color">Code couleur invalide !</string>
-    <string name="xml_import_success">Import XML effectué avec succès ! Redémarrez pour appliquer</string>
+    <string name="xml_import_success">Import XML effectué avec succès ! Redémarrer pour appliquer</string>
     <string name="xml_run_helper">Démarrage de l\'assistant</string>
     <string name="title_apply_theme">Choisir une thème</string>
     <string name="summary_apply_theme">Choisir un thème pré-existant ou un enregistré sur la carte SD</string>
@@ -375,4 +371,22 @@
     <string name="sound_notifications_limitvol_dialog">Volume de notification</string>
     <string name="sound_rings_limitvol_dialog">Volume de la sonnerie</string>
     <string name="sound_alarms_limitvol_dialog">Volume des alarmes</string>
+    <!-- Quiet hours -->
+    <string name="sound_category_quiet_hours_title">Heures silencieuses</string>
+    <string name="quiet_hours_enabled">Activer heures silencieuses</string>
+    <string name="quiet_hours_enabled_on">Les heures silencieuses seront activées</string>
+    <string name="quiet_hours_enabled_off">Les notifications se comporteront normalement</string>
+    <string name="quiet_hours_start">Début des heures silencieuses</string>
+    <string name="quiet_hours_start_summary">Définir quand les heures silencieuses débutent</string>
+    <string name="quiet_hours_end">Fin des heures silencieuses</string>
+    <string name="quiet_hours_end_summary">Définir quand les heures silencieuses finissent</string>
+    <string name="quiet_hours_mute">Notifications muettes</string>
+    <string name="quiet_hours_mute_on">Aucun son ne sera joué</string>
+    <string name="quiet_hours_mute_off">Les sons se joueront normalement</string>
+    <string name="quiet_hours_still">Désactiver les vibrations</string>
+    <string name="quiet_hours_still_on">Le téléphone ne vibrera pas</string>
+    <string name="quiet_hours_still_off">Le téléphone vibrera normalement</string>
+    <string name="quiet_hours_dim">Diminuer éclairage LED</string>
+    <string name="quiet_hours_dim_on">La LED éclairera avec moins de puissance</string>
+    <string name="quiet_hours_dim_off">La LED éclairera avec le maximum de puissance</string>
 </resources>
