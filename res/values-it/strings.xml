@@ -331,7 +331,7 @@
     <string name="light_levels_title">Livelli di luminosità</string>
     <string name="light_levels_enabled_title">Usa personalizzati</string>
     <string name="light_levels_dim_title">Liv. oscuramento display</string>
-    <string name="light_levels_dim_summary">Luminosità usata per oscurare il display</string>
+    <string name="light_levels_dim_summary">Luminosità che oscura il display</string>
     <string name="light_levels_editor_title">Modifica altri livelli...</string>
     <string name="light_decrease_enabled_title">Diminuzione luce</string>
     <string name="light_decrease_enabled_summary">Attiva per consentire di diminuire la luce. Usa isteresi per ridurre lo sfarfallio.</string>
@@ -353,7 +353,7 @@
     <string name="ll_default">Carica default</string>
     <string name="ll_save">Salva &amp; applica</string>
     <string name="ll_reload">Ricarica attuali</string>
-    <string name="ll_bad_levels">Livelli devono aumentare</string>
+    <string name="ll_bad_levels">I livelli devono essere crescenti</string>
     <string name="ll_num_levels">Imposta numero livelli</string>
 
     <!-- Sound -->
@@ -366,7 +366,7 @@
     <string name="sound_rings_title">Suonerie</string>
     <string name="sound_alarms_title">Allarmi</string>
     <string name="sound_note_title">Nota</string>
-    <string name="sound_note_summary">Le seguenti impostazioni vengono applicate solo quando si utilizzano le cuffie.</string>
+    <string name="sound_note_summary">Le seguenti impostazioni verranno applicate solo durante l\'utilizzo delle cuffie.</string>
     <string name="sound_attenuation_title">Attenuazione volume</string>
     <string name="sound_limitvol_title">Volume durante riproduzione musicale</string>
     <string name="sound_notifications_attenuation_dialog">Attenuazione notifica</string>
@@ -375,5 +375,22 @@
     <string name="sound_notifications_limitvol_dialog">Volume notifica</string>
     <string name="sound_rings_limitvol_dialog">Volume suoneria</string>
     <string name="sound_alarms_limitvol_dialog">Volume allarme</string>
-
+    <!-- Quiet hours -->
+    <string name="sound_category_quiet_hours_title">Ore di Quiete</string>
+    <string name="quiet_hours_enabled">Attiva ore di quiete</string>
+    <string name="quiet_hours_enabled_on">Verranno applicate le ore di quiete</string>
+    <string name="quiet_hours_enabled_off">Le notifiche verranno riprodotte normalmente</string>
+    <string name="quiet_hours_start">Inizio ore di quiete</string>
+    <string name="quiet_hours_start_summary">Imposta quando vuoi che inizino le ore di quiete</string>
+    <string name="quiet_hours_end">Fine ore di quiete</string>
+    <string name="quiet_hours_end_summary">Imposta quando vuoi che finiscano le ore di quiete</string>
+    <string name="quiet_hours_mute">Disattiva notifiche</string>
+    <string name="quiet_hours_mute_on">Non verrà riprodotto alcun suono</string>
+    <string name="quiet_hours_mute_off">I suoni verranno riprodotti normalmente</string>
+    <string name="quiet_hours_still">Disattiva vibrazione</string>
+    <string name="quiet_hours_still_on">Il dispositivo non vibrerà</string>
+    <string name="quiet_hours_still_off">Il dispositivo vibrerà normalmente</string>
+    <string name="quiet_hours_dim">Spegni LED</string>
+    <string name="quiet_hours_dim_on">Possibilmente il LED rimarrà spento</string>
+    <string name="quiet_hours_dim_off">Il LED pulserà normalmente</string>
 </resources>
