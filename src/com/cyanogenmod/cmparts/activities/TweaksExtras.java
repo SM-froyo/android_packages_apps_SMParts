@@ -247,12 +247,12 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         protected Void doInBackground(Void... params) {
             if (pickedTheme.contains("STOCK")) {
                 readUIValuesFromXML(pickedTheme);
-                return null;
             } else {
         	    Intent mvSdUi = new Intent("com.cyanogenmod.cmparts.RESTORE_CMPARTS_UI");
     	        mvSdUi.putExtra("filename", pickedTheme);
 	            mActivity.sendBroadcast(mvSdUi);
 			}
+			return null;
         }
 
         @Override
