@@ -230,7 +230,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         return false;
     }
 
-    private static class ImportThemeTask extends AsyncTask<Void, Void, Void>() {
+    private static class ImportThemeTask extends AsyncTask<Void, Void, Void> {
         public TweaksExtras mActivity;
         public ProgressDialog mProgress;
 
