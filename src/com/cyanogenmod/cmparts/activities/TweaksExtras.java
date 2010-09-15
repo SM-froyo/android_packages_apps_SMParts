@@ -16,6 +16,8 @@ import android.app.AlertDialog;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.os.Environment;
+import android.os.AsyncTask;
+import android.app.ProgressDialog;
 
 
 import java.io.File;
@@ -49,7 +51,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
     private static final String UI_EXPORT_TO_XML = "save_theme";
     private static final String UI_IMPORT_FROM_XML = "apply_theme";
     private static final String NAMESPACE = "com.cyanogenmod.cmparts";
-    
+
     private static final int WHITE = -1;
     private static final int BLACK = -16777216;
     private static final int SET_ON = 1;
@@ -65,6 +67,8 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
     private static String[] filePickNames = {""};
     private static String[] filePickValues = {""};
 
+    private ImportThemeTask mTask;
+
     static Context mContext;
     static AssetManager mAssetManager;
     static ContentResolver cr;
@@ -76,6 +80,12 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         mAssetManager = getAssets();
         cr = getContentResolver();
         setTitle(R.string.te_title);
+
+        mTask = (ImportThemeTask) getLastNonConfigurationInstance();
+        if (mTask != null) {
+            mTask.mActivity = this;
+        }
+
         addPreferencesFromResource(R.xml.tweaks_extras);
         PreferenceScreen prefSet = getPreferenceScreen();
         if (!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
@@ -92,6 +102,11 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
 
         Intent getList = new Intent("com.cyanogenmod.cmparts.GET_THEME_LIST");
         sendBroadcast(getList);
+    }
+
+    @Override
+    public Object onRetainNonConfigurationInstance() {
+        return mTask;
     }
 
     /**
@@ -134,7 +149,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         masterFileValues.toArray(filePickValues);
         mApplyTheme.setEntryValues(filePickValues);
         mApplyTheme.setEntries(filePickNames);
-        mApplyTheme.setEnabled(true);      
+        mApplyTheme.setEnabled(true);
 
     }
 
@@ -198,7 +213,8 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
                 alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getResources().getString(android.R.string.ok),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        importTheme();
+                        mTask = new ImportThemeTask(TweaksExtras.this);
+                        mTask.execute();
                     }
                 });
                 alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, getResources().getString(android.R.string.cancel),
@@ -214,14 +230,34 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         return false;
     }
 
-    private void importTheme() {
-        if (pickedTheme.contains("STOCK")) {
-            readUIValuesFromXML(pickedTheme);
-            return;
+    private static class ImportThemeTask extends AsyncTask<Void, Void, Void>() {
+        public TweaksExtras mActivity;
+        public ProgressDialog mProgress;
+
+        public ImportThemeTask(TweaksExtras activity) {
+            mActivity = activity;
         }
-        Intent mvSdUi = new Intent("com.cyanogenmod.cmparts.RESTORE_CMPARTS_UI");
-        mvSdUi.putExtra("filename", pickedTheme);
-        sendBroadcast(mvSdUi);
+
+        @Override
+        protected void onPreExecute() {
+            mProgress = ProgressDialog.show(mActivity, "", "Loading theme. Please wait...", true);
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            if (pickedTheme.contains("STOCK")) {
+                readUIValuesFromXML(pickedTheme);
+                return;
+            }
+            Intent mvSdUi = new Intent("com.cyanogenmod.cmparts.RESTORE_CMPARTS_UI");
+            mvSdUi.putExtra("filename", pickedTheme);
+            sendBroadcast(mvSdUi);
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            mProgress.dismiss();
+        }
     }
 
     private void resetUITweaks() {
@@ -485,3 +521,4 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         return "#" + alpha + red + green + blue;
     }
 }
+
