@@ -80,7 +80,7 @@
     <string name="title_plmn_label_color">Carrier PLMN label color</string>
 
     <!-- Date and Provider, SPN -->
-    <string name="spn_title">Settings for SPN carrier string</string>
+    <string name="spn_title">SPN carrier string</string>
     <string name="title_show_spn_ls">Display SPN (lockscreen)</string>
     <string name="summary_on_show_spn_ls">SPN field is displayed on lockscreen</string>
     <string name="summary_off_show_spn_ls">SPN field is not displayed on lockscreen
