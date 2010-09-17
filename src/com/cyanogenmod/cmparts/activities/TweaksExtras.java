@@ -230,7 +230,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         return false;
     }
 
-    private static class ImportThemeTask extends AsyncTask<Void, Void, Void> {
+    private static class ImportThemeTask extends AsyncTask<Void, Integer, Void> {
         public TweaksExtras mActivity;
         public ProgressDialog mProgress;
 
@@ -244,15 +244,117 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         }
 
         @Override
+        protected void onProgressUpdate(Integer... params) {
+            switch (params[0]) {
+            case 0:
+                Toast.makeText(mContext, R.string.xml_sdcard_unmounted, Toast.LENGTH_SHORT).show();
+                break;
+            case 1:
+                Toast.makeText(mContext, R.string.xml_file_not_found, Toast.LENGTH_SHORT).show();
+                break;
+            case 2:
+                Toast.makeText(mContext, R.string.xml_io_exception, Toast.LENGTH_SHORT).show();
+                break;
+            case 3:
+                Toast.makeText(mContext, R.string.xml_parse_error, Toast.LENGTH_SHORT).show();
+                break;
+            case 4:
+                Toast.makeText(mContext, R.string.xml_invalid_color, Toast.LENGTH_SHORT).show();
+                break;
+            case 5:
+                Toast.makeText(mContext, R.string.xml_import_success, Toast.LENGTH_SHORT).show();
+                break;
+            }
+        }
+
+        @Override
         protected Void doInBackground(Void... params) {
             if (pickedTheme.contains("STOCK")) {
-                readUIValuesFromXML(pickedTheme);
+                boolean sd = (pickedTheme == null);
+                File xmlFile = null;
+                FileReader freader = null;
+                InputStream iStream = null;
+                InputStreamReader isreader = null;
+                if (sd) {
+                    if (!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+                        publishProgress(0);
+                        return null;
+                    }
+                    String fPath = "/data/" + NAMESPACE + "/tempfile.xml";
+                    xmlFile = new File(Environment.getDataDirectory() + fPath);
+                    try {
+                        freader = new FileReader(xmlFile);
+                    } catch (FileNotFoundException e) { }
+                } else {
+                    try {
+                        iStream = mAssetManager.open(pickedTheme);
+                        isreader = new InputStreamReader(iStream);
+                    } catch (IOException e) { }
+                }
+                boolean success = false;
+                try {
+                    XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+                    XmlPullParser parser = factory.newPullParser();
+
+                    if (sd) {
+                        parser.setInput(freader);
+                    } else {
+                        parser.setInput(isreader);
+                    }
+                    int eventType = parser.getEventType();
+                    String uiType = null;
+
+                    while (eventType != XmlPullParser.END_DOCUMENT) {
+                        switch (eventType) {
+                            case XmlPullParser.START_TAG:
+                                uiType = parser.getName().trim();
+                                if (!uiType.equalsIgnoreCase("cmparts")) {
+                                    String val = parser.nextText();
+                                    if (val.contains("#")) {
+                                        Settings.System.putInt(cr, uiType, Color.parseColor(val));
+                                    } else {
+                                        Settings.System.putInt(cr, uiType, Integer.parseInt(val));
+                                    }
+                                }
+                                break;
+                        }
+                        eventType = parser.next();
+                    }
+                    success = true;
+                } catch (FileNotFoundException e) {
+                    publishProgress(1);
+                } catch (IOException e) {
+                    publishProgress(2);
+                } catch (XmlPullParserException e) {
+                    publishProgress(3);
+                } catch (IllegalArgumentException e) {
+                    publishProgress(4);
+                } finally {
+                    if (freader != null) {
+                        try {
+                            freader.close();
+                        } catch (IOException e) {
+                        }
+                    }
+                    if (isreader != null) {
+                        try {
+                            isreader.close();
+                        } catch (IOException e) {
+                        }
+                    }
+                }
+                if (success) {
+                    publishProgress(5);
+                }
+                if (xmlFile != null && xmlFile.exists()) {
+                    xmlFile.delete();
+                }
             } else {
-        	    Intent mvSdUi = new Intent("com.cyanogenmod.cmparts.RESTORE_CMPARTS_UI");
-    	        mvSdUi.putExtra("filename", pickedTheme);
-	            mActivity.sendBroadcast(mvSdUi);
-			}
-			return null;
+                Intent mvSdUi = new Intent("com.cyanogenmod.cmparts.RESTORE_CMPARTS_UI");
+                mvSdUi.putExtra("filename", pickedTheme);
+                mActivity.sendBroadcast(mvSdUi);
+            }
+            return null;
         }
 
         @Override
@@ -425,17 +527,16 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
             if (!Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
                 Toast.makeText(mContext, R.string.xml_sdcard_unmounted, Toast.LENGTH_SHORT).show();
                 return;
-                }
+            }
             xmlFile = new File(Environment.getDataDirectory() + "/data/" + NAMESPACE + "/tempfile.xml");
             try {
                 freader = new FileReader(xmlFile);
-                } catch (FileNotFoundException e) { }
-            }
-        else {
+            } catch (FileNotFoundException e) { }
+        } else {
             try {
                 iStream = mAssetManager.open(pickedTheme);
                 isreader = new InputStreamReader(iStream);
-                } catch (IOException e) {  }
+            } catch (IOException e) { }
         }
         boolean success = false;
         try {
@@ -444,54 +545,47 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
 
             if (sd) {
                 parser.setInput(freader);
-                } else {
+            } else {
                 parser.setInput(isreader);
-                }
+            }
             int eventType = parser.getEventType();
             String uiType = null;
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 switch (eventType) {
-                    case XmlPullParser.START_TAG:
-                        uiType = parser.getName().trim();
-                        if (!uiType.equalsIgnoreCase("cmparts")) {
-                            String val = parser.nextText();
-                            if (val.contains("#")) {
-                                Settings.System.putInt(cr, uiType, Color.parseColor(val));
-                            } else {
-                                Settings.System.putInt(cr, uiType, Integer.parseInt(val));
-                            }
+                case XmlPullParser.START_TAG:
+                    uiType = parser.getName().trim();
+                    if (!uiType.equalsIgnoreCase("cmparts")) {
+                        String val = parser.nextText();
+                        if (val.contains("#")) {
+                            Settings.System.putInt(cr, uiType, Color.parseColor(val));
+                        } else {
+                            Settings.System.putInt(cr, uiType, Integer.parseInt(val));
                         }
-                        break;
+                    }
+                    break;
                 }
                 eventType = parser.next();
             }
             success = true;
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             Toast.makeText(mContext, R.string.xml_file_not_found, Toast.LENGTH_SHORT).show();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             Toast.makeText(mContext, R.string.xml_io_exception, Toast.LENGTH_SHORT).show();
-        }
-        catch (XmlPullParserException e) {
+        } catch (XmlPullParserException e) {
             Toast.makeText(mContext, R.string.xml_parse_error, Toast.LENGTH_SHORT).show();
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             Toast.makeText(mContext, R.string.xml_invalid_color, Toast.LENGTH_SHORT).show();
-        }
-        finally {
+        } finally {
             if (freader != null) {
                 try {
                     freader.close();
-                } catch (IOException e) {
-                }
+                } catch (IOException e) { }
             }
             if (isreader != null) {
                 try {
                     isreader.close();
-                } catch (IOException e) {
-                }
+                } catch (IOException e) { }
             }
         }
         if (success) {
