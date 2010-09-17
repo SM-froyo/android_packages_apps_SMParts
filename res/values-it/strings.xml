@@ -77,7 +77,7 @@
     <string name="title_plmn_label_color">Colore etichetta operatore</string>
 
     <!-- Date and Provider, SPN -->
-    <string name="spn_title">Impostazioni stringa provider</string>
+    <string name="spn_title">Stringa provider</string>
     <string name="title_show_spn_ls">Visualizza provider (lockscreen)</string>
     <string name="summary_on_show_spn_ls">Il provider viene visualizzato nel lockscreen</string>
     <string name="summary_off_show_spn_ls">Il provider non viene visualizzato nel lockscreen</string>
