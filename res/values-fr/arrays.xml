@@ -83,6 +83,15 @@
         <item>30m</item>
     </string-array>
 
+    <string-array name="pref_compcache_size_entries">
+        <item>Désactivé</item>
+        <item>5% de la RAM totale</item>
+        <item>15%</item>
+        <item>25% (par défaut)</item>
+        <item>35%</item>
+        <item>45%</item>
+    </string-array>
+
     <string-array name="entries_light_filter_reset">
         <item>Désactivé</item>
         <item>400 lux</item>

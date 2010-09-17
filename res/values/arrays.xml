@@ -164,6 +164,20 @@
         <item>1800000</item>
     </string-array>
 
+    <string-array name="pref_compcache_size_entries">
+        <item>Disabled</item>
+        <item>15%</item>
+        <item>25% (default)</item>
+        <item>35%</item>
+    </string-array>
+
+    <string-array name="pref_compcache_size_values" translatable="false">
+        <item>0</item>
+        <item>15</item>
+        <item>25</item>
+        <item>35</item>
+    </string-array>
+
     <string-array name="entries_light_filter_window">
         <item>10 s</item>
         <item>20 s</item>
