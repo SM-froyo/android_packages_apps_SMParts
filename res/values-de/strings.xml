@@ -370,4 +370,23 @@
   <string name="sound_notifications_limitvol_dialog">Benachrichtigungslautstärke</string>
   <string name="sound_rings_limitvol_dialog">Klingeltonlautstärke</string>
   <string name="sound_alarms_limitvol_dialog">Weckerlautstärke</string>
+
+  <!-- Quiet hours -->
+  <string name="sound_category_quiet_hours_title">Ruhige Stunden</string>
+  <string name="quiet_hours_enabled">Ruhige Stunden aktivieren</string>
+  <string name="quiet_hours_enabled_on">Ruhige Stunden werden erzwungen</string>
+  <string name="quiet_hours_enabled_off">normale Benachrichtigungen</string>
+  <string name="quiet_hours_start">Beginn der ruhigen Stunden</string>
+  <string name="quiet_hours_start_summary">Zu welcher Uhrzeit sollen die ruhigen Stunden beginnen</string>
+  <string name="quiet_hours_end">Ende der ruhigen Stunden</string>
+  <string name="quiet_hours_end_summary">Zu welcher Uhrzeit sollen die ruhigen Stunden beendet werden</string>
+  <string name="quiet_hours_mute">Benachrichtigungen stummschalten</string>
+  <string name="quiet_hours_mute_on">Keine Töne</string>
+  <string name="quiet_hours_mute_off">Töne werden normal abgespielt</string>
+  <string name="quiet_hours_still">Vibration abschalten</string>
+  <string name="quiet_hours_still_on">Gerät wird nicht vibrieren</string>
+  <string name="quiet_hours_still_off">Gerät wird normal vibrieren</string>
+  <string name="quiet_hours_dim">LED abdunkeln</string>
+  <string name="quiet_hours_dim_on">LED wird abgedunkelt (wenn möglich)</string>
+  <string name="quiet_hours_dim_off">LED behält volle Helligkeit</string>
 </resources>
