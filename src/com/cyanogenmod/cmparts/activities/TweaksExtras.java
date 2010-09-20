@@ -131,8 +131,9 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         int numthemes = builtinThemes.length;
         if (builtinThemes != null && numthemes > 0) {
             for (int i = 0; i < numthemes; i++) {
-                masterFileNames.add(builtinThemes[i].split(".xml")[0]);
-                masterFileValues.add("CMTheme/" + builtinThemes[i]);
+                try {
+                    masterFileNames.add(sdList[i].split(".xml")[0]);
+                } catch (ArrayIndexOutOfBoundsException e) { } // if name is no good, skip it
             }
         }
         // If we were successful at grabbing a list off the SD Card, add those to the arraylists
@@ -186,6 +187,9 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
                 public void onClick(DialogInterface dialog, int which) {
                     String nameUnformatted = nameInput.getText().toString();
                     if (nameUnformatted != null) {
+                        nameUnformatted = nameUnformatted.trim();
+                        if (nameUnformatted.length() < 1)
+                            nameUnformatted = "unnamed";
                         String nameFormatted = nameUnformatted.replace(" ", "_");
                         nameFormatted = nameFormatted.concat(".xml");
                         writeUIValuesToXML(nameFormatted);
