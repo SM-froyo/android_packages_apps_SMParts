@@ -193,7 +193,7 @@
 
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Utiliser Compcache</string>
-    <string name="pref_compcache_summary">Compresser une partie de la RAM afin d\'augmenter virtuellement sa capacité</string>
+    <string name="pref_compcache_summary">Compresser une partie de la RAM afin d\'augmenter virtuellement sa capacité (nécessite un redémarrage)</string>
 
     <!-- Performance Settings : JIT Mode -->
     <string name="pref_jit_mode_title">Activer JIT</string>
@@ -204,7 +204,7 @@
     <string name="pref_use_dithering_summary">Le tramage améliore la qualité des images au détriment des performances (nécessite un redémarrage)</string>
 
     <!-- Performance Settings : VM Heap Size -->
-    <string name="pref_heapsize_title">VM heap size</string>
+    <string name="pref_heapsize_title">Taille de pile par VM</string>
     <string name="pref_heapsize_summary">Quantité de mémoire disponible pour chaque machine virtuelle (nécessite un redémarrage)</string>
 
     <!-- Performance Settings : Warning dialog -->
@@ -309,8 +309,12 @@
     <string name="summary_not_exp_bar_color_mask">Choisir une couleur à appliquer aux éléments de la barre déroulante</string>
 
     <!-- Performance : Lock home memory -->
-    <string name="pref_lock_home_title">Garder l\'accueil en mémoire</string>
+    <string name="pref_lock_home_title">Garder l\'accueil en RAM</string>
     <string name="pref_lock_home_summary">Tenter de garder l\'application Accueil dans la mémoire en tout temps</string>
+
+    <!-- Performance : Lock mms app in memory -->
+    <string name="pref_lock_mms_title">Garder SMS/MMS en RAM</string>
+    <string name="pref_lock_mms_summary">Tenter de garder l\'application SMS/MMS dans la mémoire. Ceci permet d\'éviter les messages ratés en condition de mémoire faible</string>
 
     <!-- Backlight -->
     <string name="backlight_title">Rétroéclairage automatique</string>
