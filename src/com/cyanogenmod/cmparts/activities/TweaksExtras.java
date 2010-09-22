@@ -131,17 +131,18 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
         int numthemes = builtinThemes.length;
         if (builtinThemes != null && numthemes > 0) {
             for (int i = 0; i < numthemes; i++) {
-                try {
-                    masterFileNames.add(sdList[i].split(".xml")[0]);
-                } catch (ArrayIndexOutOfBoundsException e) { } // if name is no good, skip it
+                masterFileNames.add(builtinThemes[i].split(".xml")[0]);
+                masterFileValues.add("CMTheme/" + builtinThemes[i]);
             }
         }
         // If we were successful at grabbing a list off the SD Card, add those to the arraylists
         if (gotSDThemes) {
             int numsdthemes = sdList.length;
             for (int i = 0; i < numsdthemes; i++) {
-                masterFileNames.add(sdList[i].split(".xml")[0]);
-                masterFileValues.add(sdList[i]);
+                try {
+                    masterFileNames.add(sdList[i].split(".xml")[0]);
+                    masterFileValues.add(sdList[i]);
+                } catch (ArrayIndexOutOfBoundsException e) { }// if name is no good, skip it
             }
         }
         filePickNames = new String [masterFileNames.size()];
