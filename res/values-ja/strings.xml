@@ -302,6 +302,10 @@
     <string name="pref_lock_home_title">ホームをメモリに維持</string>
     <string name="pref_lock_home_summary">現在のホームアプリを常にメモリに維持する</string>
 
+    <!-- Performance : Lock mms app in memory -->
+    <string name="pref_lock_mms_title">メッセージアプリをメモリに維持</string>
+    <string name="pref_lock_mms_summary">メモリが少ないときにメッセージが消失するのを防ぐ</string>
+
     <string name="ui_lockscreen_title">スクリーンロックの設定</string>
     <string name="pref_lockscreen_delay_title">ディレイ</string>
     <string name="pref_lockscreen_timeout_lock_delay">スクリーンタイムアウトからのディレイ</string>
