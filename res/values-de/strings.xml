@@ -311,6 +311,10 @@
   <string name="pref_lock_home_title">Home-App im Speicher</string>
   <string name="pref_lock_home_summary">Versuchen die derzeitige Home-App im Speicher zu halten</string>
 
+  <!-- Performance : Lock mms app in memory -->
+  <string name="pref_lock_mms_title">MMS-App im Speicher halten</string>
+  <string name="pref_lock_mms_summary">Zum Vermeiden von Nachrichtenverlust bei wenig verfügbarem Speicher auf dem Gerät</string>
+
   <!-- Backlight -->
   <string name="backlight_title">Autom. Hintergrundlicht</string>
   <string name="backlight_summary">Stufen und Filterung</string>
