@@ -316,6 +316,10 @@
     <string name="pref_lock_home_title">Forza home in memoria</string>
     <string name="pref_lock_home_summary">Cerca di mantenere l\'applicazione home sempre in memoria</string>
 
+    <!-- Performance : Lock mms app in memory -->
+    <string name="pref_lock_mms_title">Forza app messaggi in memoria</string>
+    <string name="pref_lock_mms_summary">Attiva per non rischiare di perdere messaggi in entrata in condizioni di poca memoria disponibile</string>
+
     <!-- Backlight -->
     <string name="backlight_title">Retroilluminazione Automatica</string>
     <string name="backlight_summary">Modifica livelli e filtri</string>
