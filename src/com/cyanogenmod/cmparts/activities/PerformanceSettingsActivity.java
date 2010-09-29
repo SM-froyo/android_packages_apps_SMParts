@@ -46,7 +46,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
     
     private static final String USE_DITHERING_PERSIST_PROP = "persist.sys.use_dithering";
     
-    private static final String USE_DITHERING_DEFAULT = "1";
+    private static final String USE_DITHERING_DEFAULT = "0";
 
     private static final String LOCK_HOME_PREF = "pref_lock_home";
 
