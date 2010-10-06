@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic -->    
+    <string name="app_name">Настройки CyanogenMod</string>
+
+    <!-- User interface -->
+    <string name="ui_title">Интерфейс</string>
+    <string name="ui_summary">Настройки пользовательского интерфейса</string>
+    <string name="ui_status_bar">Настройки статус бара</string>
+
+    <!-- User interface : orientation -->
+    <string name="ui_rotation_title">Автоповорот экрана</string>
+    <string name="pref_rotation_90_title">90 градусов</string>
+    <string name="pref_rotation_180_title">180 градусов</string>
+    <string name="pref_rotation_270_title">270 градусов</string>
+
+    <!-- User interface : LED Notifications 
+    <string name="trackball_title">LED notifications</string>
+    <string name="trackball_summary">Control trackball/LED notification colors and pulse</string> -->
+
+    <!-- User interface : WebView -->
+    <string name="ui_webview_title">WebView</string>
+    <string name="pref_pinch_reflow_title">Перерисовка после увеличения</string>
+    <string name="pref_pinch_reflow_summary">Перерисовывать контент немедленно после увеличения</string>
+
+    <!-- User interface : Lock Screen -->
+    <string name="ui_lockscreen_title">Настройка блокировки экрана</string>
+    <string name="pref_lockscreen_delay_title">Задержка</string>
+    <string name="pref_lockscreen_timeout_lock_delay">Задержка при автовыключении экрана</string>
+    <string name="pref_lockscreen_screenoff_lock_delay">Задержка при выключении экрана</string>
+    <string name="pref_lockscreen_timeout_lock_delay_summary">Как быстро срабатывает блокировка после автовыключения экрана</string>
+    <string name="pref_lockscreen_screenoff_lock_delay_summary">Как быстро срабатывает блокировка после выключения экрана</string>
+
+    <!-- Color Picker -->
+    <string name="title_color_picker">Выберите цвет</string>
+    <string name="msg_color_picker">Нажмите в центр для подтверждения.\nНажмите назад для отмены</string>
+
+    <!-- Status Bar -->
+    <string name="status_bar_title">Статус бар</string>
+    <string name="status_bar_summary">Настройки статус бара</string>
+
+    <!-- Status Bar, Battery -->
+    <string name="battery_title">Батарея</string>
+    <string name="pref_battery_percentage_title">Батарея в процентах</string>
+    <string name="pref_battery_percentage_summary">Отображение заряда батареи в статус баре процентами </string>
+    <string name="battery_status_color_title">Цвет процентов</string>
+
+    <!-- Status Bar, Clock -->
+    <string name="clock_title">Часы</string>
+    <string name="title_show_clock">Показывать часы</string>
+    <string name="title_clock_color">Цвет часов</string>
+    <string name="clock_show_am_pm">Показывать AM/PM для 12-часового формата</string>
+
+    <!-- Status Bar, dBm Signal -->
+    <string name="dbm_title">Мощность сигнала (dBm)</string>
+    <string name="title_show_dbm">Показывать мощность сигнала</string>
+    <string name="summary_on_show_dbm">Мощность сигнала в dBm отображается на статус баре</string>
+    <string name="summary_off_show_dbm">Мощность сигнала в dBm отображается на статус баре</string>
+    <string name="title_dbm_color">Цвет мощности сигнала</string>
+
+    <!-- Date and Provider -->
+    <string name="dp_title">Дата и оператор</string>
+    <string name="dp_summary">Настройки даты и отображения названия оператора сотовой связи</string>
+
+    <!-- Date and Provider, Date -->
+    <string name="date_title">Дата</string>
+    <string name="title_date_color">Цвет даты</string>
+
+    <!-- Date and Provider, PLMN  -->
+    <string name="plmn_title">Строка несущей PLMN</string>
+    <string name="title_show_plmn_ls">PLMN на экране блокировки</string>
+    <string name="summary_on_show_plmn_ls">Значение PLMN отображается на экране блокировки</string>
+    <string name="summary_off_show_plmn_ls">Значение PLMN не отображается на экране блокировки</string>
+    <string name="title_show_plmn_sb">PLMN в статус баре</string>
+    <string name="summary_on_show_plmn_sb">Значение PLMN отображается в выпадающей панели статус бара</string>
+    <string name="summary_off_show_plmn_sb">Значение PLMN не отображается в выпадающей панели статус бара</string>
+    <string name="title_plmn_label_color">Цвет PLMN</string> 
+
+    <!-- Date and Provider, SPN -->
+    <string name="spn_title">Строка несущей SPN</string>
+    <string name="title_show_spn_ls">SPN на экране блокировки</string>
+    <string name="summary_on_show_spn_ls">Значение SPN отображается на экране блокировки</string>
+    <string name="summary_off_show_spn_ls">Значение SPN не отображается на экране блокировки</string>
+    <string name="title_show_spn_sb">SPN в статус баре</string>
+    <string name="summary_on_show_spn_sb">Значение SPN отображается в выпадающей панели статус бара</string>
+    <string name="summary_off_show_spn_sb">Значение SPN не отображается в выпадающей панели статус бара</string>
+    <string name="title_spn_label_color">Цвет SPN</string> 
+
+    <!-- Notifications  -->
+    <string name="title_notifications_sb">Цвета в статус баре и панели увед.</string>
+    <string name="title_notifications_color_tweaks">Цвета уведомлений</string>
+    <string name="summary_notifications_color_tweaks">Цвета статус бара и панели уведомлений</string>
+    <string name="title_notifications_ticker_color">Текс уведомления в статус баре</string>
+    <string name="title_notifications_count_color">Счётчик уведомлений</string>
+    <string name="title_no_notifications_color">Заголовок без уведомлений</string>
+    <string name="title_clear_button_label_color">Кнопка очистить</string>
+    <string name="title_ongoing_notifications_color">Заголовок текущих уведомлений</string>
+    <string name="title_latest_notifications_color">Заголовок последних уведомлений</string>
+    <string name="title_notifications_items">Цвета уведомления</string>
+    <string name="title_notifications_items_title">Заголовок уведомления</string>
+    <string name="title_notifications_items_text">Текст уведомления</string>
+    <string name="title_notifications_items_time">Время уведомления</string>
+
+    <!-- User interface: Trackball notifcations 
+    <string name="trackball_notifications_title">Trackball Notification Colors</string>
+    <string name="dialog_color_trackball">Choose a color</string>
+    <string name="dialog_blink_trackball">Choose a blink rate</string>
+    <string name="color_trackball_flash_title">Flash color</string>
+    <string name="color_trackball_flash_summary">Color to flash</string>
+    <string name="color_trackball_custom_title">Custom color</string>
+    <string name="color_trackball_custom_summary">Custom color to flash</string>
+    <string name="color_trackball_blink_title">Blink rate</string>
+    <string name="color_trackball_blink_summary">Blink rate</string>
+    <string name="color_trackball_test_title">Flash test</string>
+    <string name="color_trackball_test_summary">Test the flash</string>
+    <string name="dialog_clear_flash">Clear Flash</string>
+    <string name="trackball_advanced_title">Advanced</string>
+    <string name="pref_trackball_screen_title">Always pulse</string>
+    <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>
+    <string name="pref_trackball_blend_title">Blend notifications</string>
+    <string name="pref_trackball_blend_summary">Blend notification colors. Overrides succession.</string>
+    <string name="pref_trackball_sucess_title">Succession</string>
+    <string name="pref_trackball_sucess_summary">Pulse notifications in succession.</string>
+    <string name="pref_trackball_random_title">Random colors</string>
+    <string name="pref_trackball_random_summary">Pulses the LED in random colors for all notifications</string>
+    <string name="pref_trackball_order_title">Pulse in order</string>
+    <string name="pref_trackball_order_summary">Pulses the LED color in order</string>
+    <string name="pref_trackball_reset_title">Reset</string>
+    <string name="pref_trackball_reset_summary">Reset all colors and apps</string>
+    <string name="dialog_trackball_loading">Loading...</string>
+    <string name="dialog_trackball_packagelist">Loading Package List</string> -->
+
+    <!-- Trackball Settings : Warning dialog 
+    <string name="notification_battery_warning_title">WARNING: May Cause Battery Drain</string>
+    <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incur the drain.</string> -->
+
+
+    <!-- Tweaks Extras -->
+    <string name="te_title">Экстра</string>
+    <string name="te_title_summary">Дополнительные инструменты для настройки интерфейса</string>
+    <string name="te_reset">Сброс настроек интерфейса</string>
+    <string name="title_reset_ui_tweaks_to_defaults">Сбросить на по умолчанию</string>
+    <string name="te_xml">Инструменты XML</string>
+    <string name="title_dialog_ui_interface">Настройки интерфейса</string>
+    <string name="message_dialog_reset">Сбросить все настройки интерфейса на настройки по умолчанию? Перезагрузитесь для того чтобы увидеть изменения.</string>
+    <string name="reset_ui_success">Настройки интерфейса сброшены! Перезагрузитесь для того чтобы увидеть изменения.</string>
+    <string name="message_dialog_export">Введите имя для этого файла. Если файл с таким именем уже есть, он будет перезаписан.</string>
+    <string name="xml_sdcard_unmounted">SD карта не монтирована!</string>
+    <string name="xml_write_error">Ошибка записи XML!</string>
+    <string name="xml_export_success">Экспорт XML завершён!</string>
+    <string name="message_dialog_import">Вы уверены, что хотите загрузить эту цветовую схему? Перезагрузитесь для того чтобы увидеть изменения.</string>
+    <string name="xml_file_not_found">XML файл не найден!</string>
+    <string name="xml_io_exception">Ошибка чтения файла!</string>
+    <string name="xml_parse_error">Ошибка парсинга XML!</string>
+    <string name="xml_invalid_color">Неправильный код цвета в XML!</string>
+    <string name="xml_import_success">Загрузка XML завершена! Перезагрузитесь для того чтобы увидеть изменения.</string>
+    <string name="xml_run_helper">Запуск помощника в настройках</string>
+    <string name="title_apply_theme">Выбрать тему</string>
+    <string name="summary_apply_theme">Загрузить заранее созданные или сохранённые на SD карту темы</string>
+    <string name="title_save_theme">Сохранить текущую тему</string>
+    <string name="summary_save_theme">Сохранить текущие настройки цветов интерфейса на SD карту</string>
+    
+
+    <!-- Input Settings -->
+    <string name="input_settings_title">Ввод</string>
+    <string name="input_settings_summary">Настройка поведения кнопок</string>
+    <string name="button_settings_title">Настройки кнопок</string>
+    <string name="lockscreen_settings_title">Настройки экрана блокировки</string>
+    <string name="pref_lockscreen_music_controls_title">Управление плеером</string>
+    <string name="pref_lockscreen_music_controls_summary">Показывать на экране блокировки элементы управления плеером</string>
+    <string name="pref_lockscreen_always_music_controls_title">Показывать всегда</string>
+    <string name="pref_lockscreen_always_music_controls_summary">Всегда показывать управление плеером, даже если музыка не играет</string>
+    <string name="pref_trackball_wake_title">Trackball - пробуждение</string>
+    <string name="pref_trackball_wake_summary">Нажатие на trackball пробуждает устройство</string>
+    <string name="pref_trackball_unlock_title">Trackball - разблокировка</string>
+    <string name="pref_trackball_unlock_summary">Нажатие на trackball разблокирует устройство</string>
+    <string name="pref_menu_unlock_title">Menu - разблокировка</string>
+    <string name="pref_menu_unlock_summary">Нажатие на Menu разблокирует устройство</string>
+
+
+    <!-- Long Press Home -->
+    <string name="long_press_home_title">Долгое нажатие на Home</string>
+    <string name="long_press_home_summary">Количество последних приложений и т.д.</string>
+    <string name="recent_apps_show_title">Показывать заголовок окна</string>
+    <string name="recent_apps_num_title">Количество последних приложений</string>
+    <string name="recent_apps_num_summary">Количество последних приложений, которые появляются при долгом нажатие на кнопку Home</string>
+    <string name="dialog_recent_apps_num_title">Выберите количество приложений</string>
+    <string name="use_custom_app_title">Своё приложение</string>
+    <string name="use_custom_app_summary">Использовать своё приложение, которое будет запускаться при долгом нажатие на кнопку Home</string>
+    <string name="select_custom_app_title">Выбрать своё приложение</string>
+    <string name="group_applications">Приложения</string>
+
+    <!-- Performance Settings -->
+    <string name="performance_settings_title">Производительность</string>
+    <string name="performance_settings_summary">Настройки производительности устройства</string>
+
+    <!-- Performance Settings : Compcache -->
+    <string name="pref_compcache_title">Включить Compcache</string>
+    <string name="pref_compcache_summary">Сжатие памяти для увеличения её количества (требуется перезагрузка)</string>
+
+    <!-- Performance Settings : JIT Mode -->
+    <string name="pref_jit_mode_title">Включить JIT</string>
+    <string name="pref_jit_mode_summary">Использовать Dalvik just-in-time компилятор (требуется перезагрузка)</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">Сглаживание поверхностей</string>
+    <string name="pref_use_dithering_summary">Сглаживание поверхностей улучшает качество изображения за счет производительности (требуется перезагрузка)</string>
+
+    <!-- Performance Settings : VM Heap Size -->
+    <string name="pref_heapsize_title">Размер VM heap</string>
+    <string name="pref_heapsize_summary">Максимум допустимой памяти для VM heap (требуется перезагрузка)</string>
+
+    <!-- Performance Settings : Warning dialog -->
+    <string name="performance_settings_warning_title">ВНИМАНИЕ</string>
+    <string name="performance_settings_warning">Эти настройки изменяют производительность системы, потенциально в худшую сторону. Всё это добавлено для экспериментов и мы просим не слать баг-репорты если вы что то меняли в этих настройках.</string>
+
+    <!-- Application Settings -->
+    <string name="application_settings_title">Приложения</string>
+    <string name="application_settings_summary">Изменение различных настроек приложений, такие как место установки</string>
+
+    <!-- Application Settings : Move any app -->
+    <string name="pref_move_all_apps_title">Разрешить перемещение</string>
+    <string name="pref_move_all_apps_summary">Разрешить перемещение любых приложений на внешнюю память</string>
+
+    <!-- Application Settings : Install Location -->
+    <string name="pref_install_location_title">Место установки</string>
+    <string name="pref_install_location_summary">Укажите куда будут устанавливаться новые приложения</string>
+
+    <!-- HapticTweaks -->
+    <string name="haptic_title">Отклик на действие</string>
+    <string name="haptic_summary">Укажите когда и насколько сильно устройство будет откликаться на действия</string>
+
+    <string name="title_haptic_feedback">Haptic feedback main</string>
+    <string name="summary_on_haptic_feedback">Use haptic feedback on keypress for softkeys and certain UI interactions</string>
+    <string name="summary_off_haptic_feedback">No haptic feedback on keypress for softkeys and certain UI interactions</string>
+
+    <string name="title_haptic_feedback_up">Haptic feedback up</string>
+    <string name="summary_on_haptic_feedback_up">Use haptic feedback on key release for softkeys and certain UI interactions</string>
+    <string name="summary_off_haptic_feedback_up">No haptic feedback on key release for softkeys and certain UI interactions</string>
+
+    <string name="title_haptic_feedback_all">Haptic screen items</string>
+    <string name="summary_on_haptic_feedback_all">Use haptic feedback when making screen selections</string>
+    <string name="summary_off_haptic_feedback_all">No haptic feedback when making screen selections</string>
+
+    <string name="title_haptic_down_decider">Set Down Pattern</string>
+    <string name="title_haptic_up_decider">Set Up Pattern</string>
+    <string name="title_haptic_long_decider">Set Long-Press Pattern</string>
+    <string name="title_haptic_tap_decider">Set Keypad Tap Pattern</string>
+
+    <string name="title_haptic_menu">Регулировка отклика</string>
+    <string name="title_haptic_notice">ТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА ДЛЯ ТОГО ЧТОБЫ НАСТРОЙКА ВСТУПИЛА В СИЛУ</string>
+
+    <string name="haptic_delay_desc">ms ВЫКЛ.</string>
+    <string name="haptic_vibe_desc">ms ВКЛ.</string>
+
+    <string name="haptic_down_description">Adjusting haptic values for button DOWN-PRESSES\n(Virtual hardkeys and certain UI interactions.)</string>
+    <string name="haptic_up_description">Adjusting haptic values for button RELEASES\n(Virtual hardkeys and most screen presses.)</string>
+    <string name="haptic_long_description">Adjusting haptic values for LONG-PRESSES.</string>
+    <string name="haptic_tap_description">Adjusting haptic values for on-screen keyboard taps</string>
+
+    <string name="haptic_plus_minus_desc">Нажимайте кнопки Плюс или Минус для того чтоб добавить или удалить шаг в последовательности.</string>
+
+    <string name="haptic_button_plus">+</string>
+    <string name="haptic_button_minus">-</string>
+
+    <string name="haptic_button_save">Сохр</string>
+    <string name="haptic_button_test">Тест</string>
+    <string name="haptic_button_cancel">Отмена</string>
+    <string name="haptic_button_revert">Вернуть</string>
+    <string name="haptic_button_default">По умолчанию</string>
+
+    <string name="haptic_save_toast">Сохраненные значения отклика: </string>
+    <string name="haptic_cancel_toast">Значение отклика не изменено</string>
+    <string name="haptic_revert_toast">Восстановлены последние используемые значения</string>
+    <string name="haptic_default_toast">Загружены значения по умолчанию</string>
+
+    <string name="general_title">Основные</string>
+
+    <!-- UI Settings : Power off prompt -->
+    <string name="pref_power_prompt_title">Варианты перезагрузки</string>
+    <string name="pref_power_prompt_summary">Если включено, то будут предложены варианты перезагрузки.</string>
+
+    <!-- UI Settings : Render effect -->
+    <string name="pref_render_effect_title">Эффекты экрана</string>
+    <string name="pref_render_effect_summary">Позволяет изменять цвет прорисовки экрана (экономит батарею)</string>
+
+    <string name="widget_name">Эффекты экрана</string>
+    <string name="renderfx_temp">Эффект</string>
+    <string name="prefs_render_effect">Эффект экрана</string>
+    <string name="notify_render_effect">Render effect on</string>
+    <string name="add_widget">Добавить виджет</string>
+
+    <!--  Widget Types -->
+    <string name="night">Ночь</string>
+    <string name="terminal">Терм</string>
+    <string name="blue">Синий</string>
+    <string name="amber">Жёлтый</string>
+    <string name="salmon">Salmon</string>
+    <string name="fuscia">Розовый</string>
+
+    <!-- Notification Bar Colors -->
+
+    <string name="title_notification_bar">Цвета фонов статус бара и панели</string>
+    <string name="title_custom_not_bar">Изменить статус бар</string>
+    <string name="summary_custom_not_bar_on">Используются настраиваемый цвет статус бара</string>
+    <string name="summary_custom_not_bar_off">Используется классическое оформление статус бара (CyanogenMod)</string>
+    <string name="title_not_bar_color_mask">Цвет статус бара</string>
+    <string name="summary_not_bar_color_mask">Примечание: Настройки прозрачности (alpha) не применяются</string>
+    <string name="title_custom_exp_not_bar">Изменить панель уведомлений</string>
+    <string name="summary_custom_exp_not_bar_on">Используется настраиваемый цвет панели уведомлений</string>
+    <string name="summary_custom_exp_not_bar_off">Используется классическое оформление панели уведомлений (CyanogenMod)</string>
+    <string name="title_not_exp_bar_color_mask">Цвет панели уведомлений</string>
+    <string name="summary_not_exp_bar_color_mask">Выберите цвет, который будет применяться к элементам панели</string>
+
+
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Блокировать рабочий стол в памяти</string>
+    <string name="pref_lock_home_summary">Пытаться не давать системе выгружать ваш текущий рабочий стол из памяти</string>
+
+    <!-- Performance : Lock mms app in memory -->
+    <string name="pref_lock_mms_title">Блокировать SMS/MMS в памяти</string>
+    <string name="pref_lock_mms_summary">Поможет избежать потери сообщений в ситуациях, когда мало памяти</string>
+
+    <!-- Backlight -->
+    <string name="backlight_title">Автоматическая яркость</string>
+    <string name="backlight_summary">Настройки автоматической регулировки яркости подсветки</string>
+    <string name="light_filter_title">Фильтр датчика освещённости</string>
+    <string name="light_filter_enabled_title">Включить</string>
+    <string name="light_filter_enabled_summary">Применить фильтр скользящего среднего к датчику освещённости, уменьшает мерцание.</string>
+    <string name="light_filter_window_title">Размер окна</string>
+    <string name="light_filter_window_summary">Период времени, для которого вычисляется среднее значение.</string>
+    <string name="light_filter_reset_title">Порог сброса</string>
+    <string name="light_filter_reset_summary">Samples deviating this much from current average resets the filter.</string>
+    <string name="light_filter_interval_title">Sample interval</string>
+    <string name="light_filter_interval_summary">Low value can improve accuracy but uses some more CPU.</string>
+    <string name="light_levels_title">Light levels</string>
+    <string name="light_levels_enabled_title">Use custom</string>
+    <string name="light_levels_dim_title">Screen dim level</string>
+    <string name="light_levels_dim_summary">Brightness used to dim the screen</string>
+    <string name="light_levels_editor_title">Edit other levels...</string>
+    <string name="light_decrease_enabled_title">Allow light decrease</string>
+    <string name="light_decrease_enabled_summary">Enable to allow lights to decrease. Use hysteresis to reduce flicker.</string>
+    <string name="light_decrease_hysteresis_title">Decrease hysteresis</string>
+    <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards.</string>
+
+    <!-- Light sensor levels 
+    <string name="ll_title">Light sensor levels</string>
+    <string name="ll_header_upper">Upper</string>
+    <string name="ll_header_lower">Lower</string>
+    <string name="ll_header_lcd">Screen</string>
+    <string name="ll_header_btn">Buttons</string>
+    <string name="ll_header_kb">Keyboard</string>
+    <string name="ll_lux">Sensor (filtered / raw):</string>
+    <string name="ll_lcd">Screen:</string>
+    <string name="ll_btn">Buttons:</string>
+    <string name="ll_kb">Keyboard:</string>
+    <string name="ll_disabled">disabled</string>
+    <string name="ll_default">Load defaults</string>
+    <string name="ll_save">Save &amp; apply</string>
+    <string name="ll_reload">Reload current</string>
+    <string name="ll_bad_levels">Levels must be increasing</string>
+    <string name="ll_num_levels">Set number of levels</string> -->
+
+    <!-- Sound -->
+    <string name="sound_title">Звук</string>
+    <string name="sound_summary">Настройки звуков и фокуса на уведомление</string>
+    <string name="sound_notifications_focus_title">Фокус на уведомление</string>
+    <string name="sound_notifications_focus_summary">Приложения будут приглушать звук, когда проигрывается уведомление</string>
+    <string name="sound_to_speaker_title">Всегда проигрывать через динамик</string>
+    <string name="sound_notifications_title">Уведомления</string>
+    <string name="sound_rings_title">Звонки</string>
+    <string name="sound_alarms_title">Будильники</string>
+    <string name="sound_note_title">Примечание</string>
+    <string name="sound_note_summary">Настройки ниже применяются только тогда, когда подключены наушники.</string>
+    <string name="sound_attenuation_title">Пониженная громкость</string>
+    <string name="sound_limitvol_title">Громкость, когда музыка проигрывается</string>
+    <string name="sound_notifications_attenuation_dialog">Понижение громкости уведомлений</string>
+    <string name="sound_rings_attenuation_dialog">Понижение громкости звонков</string>
+    <string name="sound_alarms_attenuation_dialog">Понижение громкости будильников</string>
+    <string name="sound_notifications_limitvol_dialog">Громкость уведомлений</string>
+    <string name="sound_rings_limitvol_dialog">Громкость звонков</string>
+    <string name="sound_alarms_limitvol_dialog">Громкость будильников</string>
+    
+    <!-- Quiet hours -->
+    <string name="sound_category_quiet_hours_title">Тихие часы</string>
+    <string name="quiet_hours_enabled">Включить тихие часы</string>
+    <string name="quiet_hours_enabled_on">Тихие часы активированы</string>
+    <string name="quiet_hours_enabled_off">Уведомления будут вести себя как обычно</string>
+    <string name="quiet_hours_start">Начало тихих часов</string>
+    <string name="quiet_hours_start_summary">Время начала тихих часов</string>
+    <string name="quiet_hours_end">Конец тихих часов</string>
+    <string name="quiet_hours_end_summary">Время окончания тихих часов</string>
+    <string name="quiet_hours_mute">Отключить звук уведомлений</string>
+    <string name="quiet_hours_mute_on">Звуки уведомлений не проигрываются</string>
+    <string name="quiet_hours_mute_off">Звуки проигрываются нормально</string>
+    <string name="quiet_hours_still">Отключить вибрацию</string>
+    <string name="quiet_hours_still_on">Устройство не будет вибрировать</string>
+    <string name="quiet_hours_still_off">Устройство вибрирует нормально</string>
+    <string name="quiet_hours_dim">Притушить LED</string>
+    <string name="quiet_hours_dim_on">LED будет притушен, если это возможно</string>
+    <string name="quiet_hours_dim_off">LED будет работать на полной яркости</string>
+    
+</resources>
