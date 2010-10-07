@@ -40,8 +40,7 @@ public class NotificationsActivity extends PreferenceActivity {
     private Preference mExpBarColorPref;
     private CheckBoxPreference mCustomNotBar;
     private CheckBoxPreference mCustomExpBar;
-    
-    
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +54,8 @@ public class NotificationsActivity extends PreferenceActivity {
         mNotifCountColor = prefSet.findPreference(UI_NOTIF_COUNT_COLOR);
         mNoNotifColorPref = prefSet.findPreference(UI_NO_NOTIF_COLOR);
         mClearLabelColorPref = prefSet.findPreference(UI_CLEAR_LABEL_COLOR);
-        mOngoingNotifColorPref = prefSet.findPreference(UI_ONGOING_NOTIF_COLOR);        
-        mLatestNotifColorPref = prefSet.findPreference(UI_LATEST_NOTIF_COLOR);        
+        mOngoingNotifColorPref = prefSet.findPreference(UI_ONGOING_NOTIF_COLOR);
+        mLatestNotifColorPref = prefSet.findPreference(UI_LATEST_NOTIF_COLOR);
         mNotifItemTitlePref = prefSet.findPreference(UI_NOTIF_ITEM_TITLE_COLOR);
         mNotifItemTextPref = prefSet.findPreference(UI_NOTIF_ITEM_TEXT_COLOR);
         mNotifItemTimePref = prefSet.findPreference(UI_NOTIF_ITEM_TIME_COLOR);
@@ -68,6 +67,7 @@ public class NotificationsActivity extends PreferenceActivity {
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
+
         if (preference == mNotifTickerColor) {
             ColorPickerDialog cp = new ColorPickerDialog(this,
                 mNotifTickerColorListener,
@@ -160,8 +160,8 @@ public class NotificationsActivity extends PreferenceActivity {
             public void colorChanged(int color) {
                 Settings.System.putInt(getContentResolver(), Settings.System.NEW_NOTIF_TICKER_COLOR, color);
             }
-	    public void colorUpdate(int color) {
-	    }
+            public void colorUpdate(int color) {
+            }
     };
 
     private int readNotifCountColor() {

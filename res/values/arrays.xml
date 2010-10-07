@@ -315,4 +315,57 @@
         <item>0</item>
         <item>1</item>
     </string-array>
+
+   <string-array name="entries_brightness_widget" translatable="false">
+        <item>Auto/Dim/40%/100%</item>
+        <item>Auto/Dim/25%/75%/100%</item>
+        <item>Auto/25%/100%</item>
+        <item>Dim/100%</item>
+    </string-array>
+
+   <string-array name="values_brightness_widget" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="entries_network_widget" translatable="false">
+        <item>2G/3G+2G</item>  
+        <item>2G/3G Only</item>   
+        <item>2G/3G Only/3G+2G</item>
+    </string-array>
+
+    <string-array name="values_network_widget" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="entries_screentimeout_widget" translatable="false">
+        <item>15s/1m/5m</item>
+        <item>30s/2m/5m</item>
+    </string-array>
+
+    <string-array name="values_screentimeout_widget" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="entries_ring_widget" translatable="false">
+        <item>Sound+Vibrate/Vibrate</item>
+        <item>Sound/Vibrate</item>
+        <item>Sound/Silent</item>
+        <item>Sound+Vib/Vib/Silent</item>
+        <item>Sound/Vibrate/Silent</item>
+    </string-array>
+
+    <string-array name="values_ring_widget" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

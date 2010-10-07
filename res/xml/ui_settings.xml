@@ -70,6 +70,27 @@
         </PreferenceScreen>
 
     </PreferenceCategory>
+
+    <!-- Expanded View Power Widget -->
+   <PreferenceCategory android:title="@string/title_expanded_widget">
+      <CheckBoxPreference android:key="expanded_widget"
+         android:title="@string/title_expanded_widget"
+         android:summary="@string/summary_expanded_widget"
+         android:defaultValue="true" />
+      <Preference
+         android:key="expanded_color_mask"
+         android:title="@string/expanded_color_mask"
+         android:summary="@string/expanded_color_mask"
+         android:defaultValue="-1"
+         android:dependency="expanded_widget" />
+      <PreferenceScreen android:key="widget_picker"
+          android:title="@string/title_widget_picker" android:summary="@string/summary_widget_picker">
+          <intent android:action="android.intent.action.MAIN"
+              android:targetPackage="com.cyanogenmod.cmparts"
+              android:targetClass="com.cyanogenmod.cmparts.activities.WidgetActivity" />
+      </PreferenceScreen>
+   </PreferenceCategory>
+
     
     <!-- Rotation -->
     <PreferenceCategory android:title="@string/ui_rotation_title">

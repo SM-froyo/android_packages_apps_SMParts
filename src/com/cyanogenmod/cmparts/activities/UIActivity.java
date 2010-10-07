@@ -17,6 +17,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 
 public class UIActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 	
@@ -28,6 +29,10 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 	private static final String EXTRAS_SCREEN = "tweaks_extras";
 	private static final String BACKLIGHT_SETTINGS = "backlight_settings";
 	private static final String GENERAL_CATEGORY = "general_category";
+
+    private static final String UI_EXP_WIDGET = "expanded_widget";
+    private static final String UI_EXP_WIDGET_COLOR = "expanded_color_mask";
+    private static final String UI_EXP_WIDGET_PICKER = "widget_picker";
 	
 	private PreferenceScreen mStatusBarScreen;
     private PreferenceScreen mDateProviderScreen;
@@ -58,6 +63,10 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     
     private ListPreference mScreenLockTimeoutDelayPref;
     private ListPreference mScreenLockScreenOffDelayPref;
+
+    private CheckBoxPreference mPowerWidget;
+    private Preference mPowerWidgetColor;
+    private PreferenceScreen mPowerPicker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -115,6 +124,11 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mRenderEffectPref = (ListPreference) prefSet.findPreference(RENDER_EFFECT_PREF);
         mRenderEffectPref.setOnPreferenceChangeListener(this);
         updateFlingerOptions();
+
+        /* Expanded View Power Widget */
+        mPowerWidget = (CheckBoxPreference) prefSet.findPreference(UI_EXP_WIDGET);
+        mPowerWidgetColor = prefSet.findPreference(UI_EXP_WIDGET_COLOR);
+        mPowerPicker = (PreferenceScreen)prefSet.findPreference(UI_EXP_WIDGET_PICKER);
         
     }
 
@@ -140,6 +154,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         if (preference == mBacklightScreen) {
         	startActivity(mBacklightScreen.getIntent());
         }
+        if(preference == mPowerPicker) {
+            startActivity(mPowerPicker.getIntent());
+        }
 
         if (preference == mPinchReflowPref) {
             value = mPinchReflowPref.isChecked();
@@ -163,6 +180,20 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             Settings.System.putInt(getContentResolver(),
                      Settings.System.ACCELEROMETER_ROTATION_MODE, mode);
         }
+
+        if(preference == mPowerWidget) {
+            value = mPowerWidget.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.EXPANDED_VIEW_WIDGET, value ? 1 : 0);
+        }
+
+        if (preference == mPowerWidgetColor) {
+            ColorPickerDialog cp = new ColorPickerDialog(this,
+                mWidgetColorListener,
+                readWidgetColor());
+            cp.show();
+        }
+
         return true;
     }
     
@@ -227,4 +258,20 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         }
     }
 
+    private int readWidgetColor() {
+        try {
+            return Settings.System.getInt(getContentResolver(), Settings.System.EXPANDED_VIEW_WIDGET_COLOR);
+        }
+        catch (SettingNotFoundException e) {
+            return -16777216;
+        }
+    }
+    ColorPickerDialog.OnColorChangedListener mWidgetColorListener =
+        new ColorPickerDialog.OnColorChangedListener() {
+            public void colorChanged(int color) {
+                Settings.System.putInt(getContentResolver(), Settings.System.EXPANDED_VIEW_WIDGET_COLOR, color);
+            }
+            public void colorUpdate(int color) {
+            }
+    };
 }
