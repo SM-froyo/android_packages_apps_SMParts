@@ -171,7 +171,7 @@
   <string name="pref_trackball_wake_summary">Aufwecken des Gerätes durch Drücken des Trackballs.</string>
   <string name="pref_trackball_unlock_title">Trackball-Entsperren</string>
   <string name="pref_trackball_unlock_summary">Entsperren des Gerätes durch Drücken des Trackballs</string>
-  <string name="pref_menu_unlock_title">Menu entsterren</string>
+  <string name="pref_menu_unlock_title">Menu entsperren</string>
   <string name="pref_menu_unlock_summary">Menu-Taste entsperrt das Gerät.</string>
 
   <!-- Long Press Home -->
