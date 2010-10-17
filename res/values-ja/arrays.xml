@@ -84,6 +84,13 @@
         <item>30分</item>
     </string-array>
 
+    <string-array name="pref_compcache_size_entries">
+        <item>無効</item>
+        <item>15%</item>
+        <item>25%(デフォルト)</item>
+        <item>35%</item>
+    </string-array>
+
     <string-array name="entries_light_filter_window">
         <item>10秒</item>
         <item>20秒</item>

@@ -47,6 +47,10 @@
     <string name="title_show_dbm">電波強度を表示</string>
     <string name="summary_on_show_dbm">電波強度をdBm単位でステータスバーに表示する</string>
     <string name="summary_off_show_dbm">電波強度をdBm単位でステータスバーに表示する</string>
+    <string name="title_hide_signal_dbm">電波強度アイコンを隠す</string>
+    <string name="summary_on_hide_signal_dbm">電波強度アイコンを隠して、dBmの数値だけを表示します</string>
+    <string name="summary_off_hide_signal_dbm">電波強度アイコンを表示します</string>
+
     <string name="title_dbm_color">電波強度の色</string>
 
     <!-- Date and Provider -->
@@ -118,6 +122,16 @@
     <string name="pref_trackball_reset_summary">すべてのアプリについて色設定をリセット</string>
     <string name="dialog_trackball_loading">ロード中...</string>
     <string name="dialog_trackball_packagelist">パッケージリストをロード中</string>
+    <string name="trackball_category_dialog_text">新しいカテゴリを入力してください。</string>
+    <string name="trackball_category_list_title">ガテゴリ</string>
+    <string name="trackball_category_list_summary">カテゴリを選択</string>
+    <string name="trackball_category_screen">カテゴリを管理</string>
+    <string name="trackball_category_add_title">カテゴリを追加</string>
+    <string name="trackball_category_add_summary">リストにカテゴリを追加する</string>
+    <string name="trackball_category_remove_title">カテゴリを削除</string>
+    <string name="trackball_category_remove_summary">リストからカテゴリを削除する</string>
+    <string name="trackball_remove_default_toast">デフォルトカテゴリを削除することはできません。</string>
+    <string name="trackball_reset_all">すべてのカテゴリとカラーをリセット</string>
 
 
     <!-- Trackball Settings : Warning dialog -->
@@ -163,6 +177,9 @@
     <string name="pref_menu_unlock_summary">メニューボタンを押して端末をロックから解除する</string>
     <string name="pref_trackball_screen_title">常に点滅する</string>
     <string name="pref_trackball_screen_summary">スクリーンオン中はトラックボールを点滅させる</string>
+    <string name="pref_lockscreen_quick_unlock_control_title">クイックアンロック</string>
+    <string name="pref_lockscreen_quick_unlock_control_summary">PINやパワードを入力後、OKを押す必要を省きます。不正入力時のカウントは無効になります。</string>
+
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">ホーム長押し設定</string>
@@ -297,6 +314,36 @@
 
     <string name="title_not_exp_bar_color_mask">プルダウンバーの色</string>
     <string name="summary_not_exp_bar_color_mask">プルダウン通知バーに適用する色を選択する</string>
+
+    <!-- Expanded View Power Widget -->
+    <string name="title_expanded_widget">通知バーの電源ウィジェット</string>
+    <string name="summary_expanded_widget">通知バーを伸ばしたときに電源ウィジェットを表示する</string>
+    <string name="expanded_color_mask">インジケータの色</string>
+    <string name="title_widget_picker">ウィジェットボタン</string>
+    <string name="summary_widget_picker">ウィジェットボタンを選択</string>
+    <string name="title_toggle_wifi">Wi-Fiトグル</string>
+    <string name="title_toggle_bluetooth">Bluetoothトグル</string>
+    <string name="title_toggle_gps">GPSトグル</string>
+    <string name="title_toggle_sound">サウンドトグル</string>
+    <string name="title_toggle_brightness">明るさトグル</string>
+    <string name="title_toggle_sync">同期トグル</string>
+    <string name="title_toggle_wifiap">Wi-Fi APトグル</string>
+    <string name="title_toggle_screentimeout">スクリーンタイムアウトトグル</string>
+    <string name="title_toggle_mobiledata">モバイルデータトグル</string>
+    <string name="title_toggle_lockscreen">ロックスクリーントグル</string>
+    <string name="title_toggle_networkmode">2G/3Gトグル</string>
+    <string name="title_toggle_autorotate">回転トグル</string>
+    <string name="title_toggle_airplane">機内モードトグル</string>
+    <string name="title_button_modes">ボタンモード</string>
+    <string name="pref_brightness_mode_title">明るさ</string>
+    <string name="pref_brightness_mode_summary">明るさトグルで変更するモードの選択</string>
+    <string name="pref_network_mode_title">ネットワーク</string>
+    <string name="pref_network_mode_summary">ネットワークのトグルで変更するモードの選択</string>
+    <string name="pref_screentimeout_mode_title">スクリーンタイムアウト</string>
+    <string name="pref_screentimeout_mode_summary">スクリーンタイムアウトトグルで変更するモードの選択</string>
+    <string name="pref_ring_mode_title">サウンド</string>
+    <string name="pref_ring_mode_summary">サウンドトグルで変更するモードの選択</string>
+
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">ホームをメモリに維持</string>
