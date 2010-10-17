@@ -399,5 +399,34 @@
     <string name="quiet_hours_dim">Притушить LED</string>
     <string name="quiet_hours_dim_on">LED будет притушен, если это возможно</string>
     <string name="quiet_hours_dim_off">LED будет работать на полной яркости</string>
+	
+    <!-- Expanded View Power Widget -->
+    <string name="title_expanded_widget">Виджет в панели</string>
+    <string name="summary_expanded_widget">Использовать элементы управления питанием в выпадающей панели</string>
+    <string name="expanded_color_mask">Цвет индикатора</string>
+    <string name="title_widget_picker">Кнопки виджета</string>
+    <string name="summary_widget_picker">Выберите кнопки, которые будут отображаться в этом виджете.</string>
+    <string name="title_toggle_wifi">WiFi</string>
+    <string name="title_toggle_bluetooth">Bluetooth</string>
+    <string name="title_toggle_gps">GPS</string>
+    <string name="title_toggle_sound">Звук</string>
+    <string name="title_toggle_brightness">Подсветка</string>
+    <string name="title_toggle_sync">Синхронизация</string>
+    <string name="title_toggle_wifiap">Точки доступа WiFi</string>
+    <string name="title_toggle_screentimeout">Задержка выкл. экрана</string>
+    <string name="title_toggle_mobiledata">Передача данных</string>
+    <string name="title_toggle_lockscreen">Блокировка</string>
+    <string name="title_toggle_networkmode">2G/3G</string>
+    <string name="title_toggle_autorotate">Автоповорот</string>
+    <string name="title_toggle_airplane">Режим самолёта</string>
+    <string name="title_button_modes">Режимы кнопок</string>
+    <string name="pref_brightness_mode_title">Режимы подсветки</string>
+    <string name="pref_brightness_mode_summary">Укажите какие режимы будут меняться кнопкой Подсветка</string>
+    <string name="pref_network_mode_title">Режимы сети (2G/3G)</string>
+    <string name="pref_network_mode_summary">Укажите какие режимы сети будут меняться кнопкой 2G/3G</string>
+    <string name="pref_screentimeout_mode_title">Режимы откл. экрана</string>
+    <string name="pref_screentimeout_mode_summary">Укажите какие режимы отключения экрана будут меняться кнопкой Задержка выкл. экрана</string>
+    <string name="pref_ring_mode_title">Режимы звука</string>
+    <string name="pref_ring_mode_summary">Укажите какие режимы будут меняться кнопкой Звук</string>
     
 </resources>
