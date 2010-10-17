@@ -355,8 +355,8 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
         Preference addCat = new Preference(this);
         addCat.setKey(ADD_CATEGORY);
-        addCat.setSummary(R.string.trackball_category_add_title);
-        addCat.setTitle(R.string.trackball_category_add_summary);
+        addCat.setSummary(R.string.trackball_category_add_summary);
+        addCat.setTitle(R.string.trackball_category_add_title);
         catScreen.addPreference(addCat);
 
         String[] mRemoveList = getArray(mCatListString);
