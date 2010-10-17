@@ -334,6 +334,7 @@
 
 
     <!-- Expanded View Power Widget -->
+    <string name="title_widget_buttons">Expanded View Widget</string>
     <string name="title_expanded_widget">Notification power widget</string>
     <string name="summary_expanded_widget">Use the expanded views power widget</string>
     <string name="expanded_color_mask">Indicator color</string>

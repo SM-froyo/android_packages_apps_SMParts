@@ -129,7 +129,7 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Expanded View Widget");
+        setTitle(R.string.title_widget_buttons);
         addPreferencesFromResource(R.xml.power_widget);
 
         PreferenceScreen prefSet = getPreferenceScreen();
