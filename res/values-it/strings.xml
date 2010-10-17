@@ -26,8 +26,8 @@
     <!-- User interface : Lock Screen -->
         <string name="ui_lockscreen_title">Impostazioni Lockscreen</string>
         <string name="pref_lockscreen_delay_title">Ritardo</string>
-        <string name="pref_lockscreen_timeout_lock_delay">Ritardo timeout schermo</string>
-        <string name="pref_lockscreen_screenoff_lock_delay">Ritardo spegnimento schermo</string>
+        <string name="pref_lockscreen_timeout_lock_delay">Ritardo dopo timeout</string>
+        <string name="pref_lockscreen_screenoff_lock_delay">Ritardo dopo spegnimento</string>
         <string name="pref_lockscreen_timeout_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo il timeout</string>
         <string name="pref_lockscreen_screenoff_lock_delay_summary">Di quanto ritardare il blocco dello schermo dopo averlo spento</string>
 
@@ -56,6 +56,9 @@
     <string name="title_show_dbm">Mostra dBm</string>
     <string name="summary_on_show_dbm">La potenza del segnale viene visualizzata in dBm nella status bar</string>
     <string name="summary_off_show_dbm">La potenza del segnale non viene visualizzato in dBm nella status bar</string>
+    <string name="title_hide_signal_dbm">Nascondi potenza segnale</string>
+    <string name="summary_on_hide_signal_dbm">L\'icona di potenza del segnale non è attiva, verranno visualizzati solo i dBm</string>
+    <string name="summary_off_hide_signal_dbm">L\'icona di potenza del segnale è attiva</string>
     <string name="title_dbm_color">colore dBm</string>
 
     <!-- Date and Provider -->
@@ -116,19 +119,29 @@
         <string name="dialog_clear_flash">Ferma Lampeggio</string>
     <string name="trackball_advanced_title">Avanzato</string>
     <string name="pref_trackball_screen_title">Pulsa sempre</string>
-    <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso.</string>
+    <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso</string>
     <string name="pref_trackball_blend_title">Mischia colori di notifica</string>
-    <string name="pref_trackball_blend_summary">Mischia i colori delle luci di notifica. Annulla Successione.</string>
+    <string name="pref_trackball_blend_summary">Mischia i colori delle luci di notifica</string>
     <string name="pref_trackball_sucess_title">Successione</string>
     <string name="pref_trackball_sucess_summary">Notifiche pulsanti in successione</string>
-    <string name="pref_trackball_random_title">Colori Random</string>
+    <string name="pref_trackball_random_title">Colori Casuali</string>
     <string name="pref_trackball_random_summary">Pulsa il LED con colori casuali per tutte le notifiche</string>
-    <string name="pref_trackball_order_title">Pulsa in ordine</string>
-    <string name="pref_trackball_order_summary">Pulsa il LED con colori in ordine</string>
+    <string name="pref_trackball_order_title">Pulsa in sequenza</string>
+    <string name="pref_trackball_order_summary">Pulsa il LED con una sequenza di colori</string>
     <string name="pref_trackball_reset_title">Ripristino</string>
     <string name="pref_trackball_reset_summary">Ripristina tutti i colori e le app</string>
     <string name="dialog_trackball_loading">Caricamento...</string>
-    <string name="dialog_trackball_packagelist">Caricamento Lista App</string> 
+    <string name="dialog_trackball_packagelist">Caricamento Lista App</string>
+    <string name="trackball_category_dialog_text">Inserisci una nuova categoria</string>
+    <string name="trackball_category_list_title">Categoria</string>
+    <string name="trackball_category_list_summary">Scegli una categoria</string>
+    <string name="trackball_category_screen">Gestisci Categorie</string>
+    <string name="trackball_category_add_title">Aggiungi categoria</string>
+    <string name="trackball_category_add_summary">Aggiungi una categoria alla lista</string>
+    <string name="trackball_category_remove_title">Rimuovi categoria</string>
+    <string name="trackball_category_remove_summary">Rimuovi una categoria dalla lista</string>
+    <string name="trackball_remove_default_toast">Non è possibile rimuovere la categoria di default.</string>
+    <string name="trackball_reset_all">Ripristina le app e le categorie</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">ATTENZIONE:Aumento consumo di batteria</string>
@@ -174,7 +187,9 @@
     <string name="pref_trackball_unlock_summary">Sblocca il telefono premendo la trackball</string>
     <string name="pref_menu_unlock_title">Menu unlock</string>
     <string name="pref_menu_unlock_summary">Sblocca il telefono premendo il tasto menu</string>
-    
+    <string name="pref_lockscreen_quick_unlock_control_title">Sblocco veloce</string>
+    <string name="pref_lockscreen_quick_unlock_control_summary">Non è richiesto premere OK dopo aver inserito il PIN o la Password. Cancellare conta come tentativo fallito.</string>
+
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press tasto home</string>
     <string name="long_press_home_summary">Numero di applicazioni recenti, etc.</string>
@@ -304,11 +319,40 @@
     
     <string name="title_not_bar_color_mask">Colore Barra</string>
     <string name="summary_not_bar_color_mask">Nota: La Trasparenza (alpha) non verrà applicata</string>
-    <string name="title_custom_exp_not_bar">Barra pulldown personalizzata</string>
-    <string name="summary_custom_exp_not_bar_on">Stai usando colore e stile della barra pulldown personalizzati</string>
-    <string name="summary_custom_exp_not_bar_off">Stai usando la barra pulldown CyanogenMod classica</string>
-    <string name="title_not_exp_bar_color_mask">Colore Barra pulldown</string>
-    <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra pulldown</string>
+    <string name="title_custom_exp_not_bar">Barra scorrevole personalizzata</string>
+    <string name="summary_custom_exp_not_bar_on">Stai usando colore e stile della barra scorrevole personalizzati</string>
+    <string name="summary_custom_exp_not_bar_off">Stai usando la barra scorrevole CyanogenMod classica</string>
+    <string name="title_not_exp_bar_color_mask">Colore Barra scorrevole</string>
+    <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra scorrevole</string>
+
+    <!-- Expanded View Power Widget -->
+    <string name="title_expanded_widget">Notification power widget</string>
+    <string name="summary_expanded_widget">Visualizza il widget per il risparmio energetico nella barra scorrevole delle notifiche</string>
+    <string name="expanded_color_mask">Colore indicatore</string>
+    <string name="title_widget_picker">Tasti widget</string>
+    <string name="summary_widget_picker">Scegli i tasti da aggiungere al widget</string>
+    <string name="title_toggle_wifi">Wi-Fi</string>
+    <string name="title_toggle_bluetooth">Bluetooth</string>
+    <string name="title_toggle_gps">GPS</string>
+    <string name="title_toggle_sound">Audio</string>
+    <string name="title_toggle_brightness">Luminosità</string>
+    <string name="title_toggle_sync">Sync</string>
+    <string name="title_toggle_wifiap">Hotspot Wi-Fi</string>
+    <string name="title_toggle_screentimeout">Timeout Schermo</string>
+    <string name="title_toggle_mobiledata">Mobile data</string>
+    <string name="title_toggle_lockscreen">Lockscreen</string>
+    <string name="title_toggle_networkmode">2G/3G</string>
+    <string name="title_toggle_autorotate">Rotazione automatica</string>
+    <string name="title_toggle_airplane">Modalità aereo</string>
+    <string name="title_button_modes">Modalità tasti</string>
+    <string name="pref_brightness_mode_title">Mod. Luminosità</string>
+    <string name="pref_brightness_mode_summary">Scegli le modalità del tasto per la luminosità</string>
+    <string name="pref_network_mode_title">Mod. Rete</string>
+    <string name="pref_network_mode_summary">Scegli le modalità del tasto per la rete</string>
+    <string name="pref_screentimeout_mode_title">Mod. Timeout</string>
+    <string name="pref_screentimeout_mode_summary">Scegli le modalità del tasto per il timeout dello schermo</string>
+    <string name="pref_ring_mode_title">Mod. Audio</string>
+    <string name="pref_ring_mode_summary">Scegli le modalità del tasto per l\'audio</string>
 
 
 
