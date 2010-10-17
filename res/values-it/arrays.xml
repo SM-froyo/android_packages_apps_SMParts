@@ -85,6 +85,13 @@
         <item>30m</item>
     </string-array>
 
+    <string-array name="pref_compcache_size_entries">
+        <item>Non attiva</item>
+        <item>15%</item>
+        <item>25% (default)</item>
+        <item>35%</item>
+    </string-array>
+
     <string-array name="entries_light_filter_window">
         <item>10 secondi</item>
         <item>20 secondi</item>
