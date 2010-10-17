@@ -30,6 +30,9 @@ public class StatusBarActivity extends PreferenceActivity {
     /* Display dBm Signal */
     private static final String UI_SHOW_STATUS_DBM = "show_status_dbm";
     private CheckBoxPreference mShowDbmPref;
+    /* Hide Signal Strength */
+    private static final String UI_HIDE_SIGNAL = "hide_signal_dbm";
+    private CheckBoxPreference mHideSignalPref;
     /* dBm Font Color */
     private static final String UI_DBM_COLOR = "dbm_color";
     private Preference mDbmColorPref;
@@ -62,6 +65,11 @@ public class StatusBarActivity extends PreferenceActivity {
         mShowDbmPref = (CheckBoxPreference) prefSet.findPreference(UI_SHOW_STATUS_DBM);
         mShowDbmPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.SHOW_STATUS_DBM, 0) != 0);
+        /* Hide signal */
+        mHideSignalPref = (CheckBoxPreference) prefSet.findPreference(UI_HIDE_SIGNAL);
+        mHideSignalPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.SHOW_STATUS_HIDE_SIGNAL, 0) != 0);
+
         /* dBm Signal Color */
         mDbmColorPref = prefSet.findPreference(UI_DBM_COLOR);
     }
@@ -99,6 +107,11 @@ public class StatusBarActivity extends PreferenceActivity {
             value = mShowDbmPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.SHOW_STATUS_DBM, value ? 1 : 0);
+        }
+        else if (preference == mHideSignalPref) {
+            value = mHideSignalPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SHOW_STATUS_HIDE_SIGNAL, value ? 1 : 0);
         }
         /* dBm Signal Font Color */
         else if (preference == mDbmColorPref) {

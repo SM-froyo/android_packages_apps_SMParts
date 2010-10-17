@@ -57,6 +57,9 @@
     <string name="title_show_dbm">Show dBm</string>
     <string name="summary_on_show_dbm">Signal strength in dBm displayed in the status bar</string>
     <string name="summary_off_show_dbm">Signal strength in dBm displayed in the status bar</string>
+    <string name="title_hide_signal_dbm">Hide signal strength</string>
+    <string name="summary_on_hide_signal_dbm">Signal strength icon is disabled only dBm will show</string>
+    <string name="summary_off_hide_signal_dbm">Signal strength icon is enabled</string>
     <string name="title_dbm_color">dBm color</string>
 
     <!-- Date and Provider -->
