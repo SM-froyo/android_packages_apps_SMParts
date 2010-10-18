@@ -310,15 +310,19 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         return (uniqueArray(catList));
     }
 
-    private void removeFromList(String value) {
+    private void manageCatList(String value, boolean add) {
         List<String> newList = new ArrayList<String>();
         String[] tempList = mCatListString.split("\\|");
         for(int i = 0; i < tempList.length; i++) {
             newList.add(tempList[i]);
         }
 
-        int indexRemove = newList.indexOf(value);
-        newList.remove(indexRemove);
+        if (!add) {
+           int indexRemove = newList.indexOf(value);
+           newList.remove(indexRemove);
+        } else {
+            newList.add(value);
+        }
 
         String newCatList = new String();
         for (String name : newList) {
@@ -551,7 +555,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 return false;
 	        }
 
-            removeFromList(value);
+            manageCatList(value, false);
             loadPrefs();
             PreferenceScreen prefSet = getPreferenceScreen();
             ListPreference removeList = (ListPreference)prefSet.findPreference(REMOVE_CATEGORY);
@@ -570,7 +574,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         AlertDialog alertDialog;
         if (preference.getKey().toString().equals(RESET_NOTIFS)) {
             Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_PACKAGE_COLORS, "");
-	    Editor mEdit = mPrefs.edit();
+            Editor mEdit = mPrefs.edit();
             mEdit.putString(CAT_KEY, CAT_PRIMARY + "|");
             mEdit.commit();
             Toast.makeText(this, R.string.trackball_reset_all, Toast.LENGTH_LONG).show();
@@ -584,10 +588,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 public void onClick(DialogInterface dialog, int which) {
                     //updateCatList(value.toString(), false);
                     EditText textBox = (EditText) textEntryView.findViewById(R.id.cat_text);
-                    mCatListString = mCatListString + textBox.getText().toString() + "|";
-                    Editor mEdit = mPrefs.edit();
-                    mEdit.putString(CAT_KEY, mCatListString);
-                    mEdit.commit();
+                    manageCatList(textBox.getText().toString(), true);
                     loadPrefs();
                     PreferenceScreen prefSet = getPreferenceScreen();
                     ListPreference removeList = (ListPreference)prefSet.findPreference(REMOVE_CATEGORY);
