@@ -129,7 +129,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mPowerWidget = (CheckBoxPreference) prefSet.findPreference(UI_EXP_WIDGET);
         mPowerWidgetColor = prefSet.findPreference(UI_EXP_WIDGET_COLOR);
         mPowerPicker = (PreferenceScreen)prefSet.findPreference(UI_EXP_WIDGET_PICKER);
-        
+
+        mPowerWidget.setChecked((Settings.System.getInt(getContentResolver(),
+                    Settings.System.EXPANDED_VIEW_WIDGET, 1) == 1));
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
