@@ -39,7 +39,7 @@ public class InputActivity extends PreferenceActivity {
         /* Music Controls */
         mMusicControlPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_MUSIC_CONTROLS);
         mMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
-                Settings.System.LOCKSCREEN_MUSIC_CONTROLS, 0) == 1);
+                Settings.System.LOCKSCREEN_MUSIC_CONTROLS, 1) == 1);
 
         /* Always Display Music Controls */
         mAlwaysMusicControlPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ALWAYS_MUSIC_CONTROLS);
