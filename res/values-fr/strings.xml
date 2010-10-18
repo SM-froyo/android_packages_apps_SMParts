@@ -140,8 +140,9 @@
     <string name="trackball_category_add_summary">Ajoute une catégorie à la liste</string>
     <string name="trackball_category_remove_title">Retirer catégorie</string>
     <string name="trackball_category_remove_summary">Retire une catégorie de la liste</string>
-    <string name="trackball_remove_default_toast">Impossible de retirer la catégorie pas défaut.</string>
+    <string name="trackball_remove_default_toast">Impossible de retirer la catégorie par défaut.</string>
     <string name="trackball_reset_all">RàZ des couleurs et catégories</string>
+    <string name="trackball_array_error">Une erreur de tableau a été rencontrée. Ce paquet est désormais dans la catégorie Autres.</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">ATTENTION : Peut vider votre batterie</string>
@@ -250,9 +251,9 @@
     <string name="summary_on_haptic_feedback_up">Utiliser le retour haptique lors du relâchement de certaines touches</string>
     <string name="summary_off_haptic_feedback_up">Ne pas utiliser le retour haptique lors du relâchement de certaines touches</string>
 
-    <string name="title_haptic_feedback_all">Retour à la séléction</string>
-    <string name="summary_on_haptic_feedback_all">Utiliser le retour haptique lors de séléctions à l\'écran</string>
-    <string name="summary_off_haptic_feedback_all">Ne pas utiliser le retour haptique lors de séléctions à l\'écran</string>
+    <string name="title_haptic_feedback_all">Retour à la sélection</string>
+    <string name="summary_on_haptic_feedback_all">Utiliser le retour haptique lors de sélections à l\'écran</string>
+    <string name="summary_off_haptic_feedback_all">Ne pas utiliser le retour haptique lors de sélections à l\'écran</string>
 
     <string name="title_haptic_down_decider">Séquence à la pression</string>
     <string name="title_haptic_up_decider">Séquence au relâchement</string>
@@ -324,6 +325,7 @@
     <string name="summary_not_exp_bar_color_mask">Choisir une couleur à appliquer aux éléments de la barre déroulante</string>
 
     <!-- Expanded View Power Widget -->
+    <string name="title_widget_buttons">Boutons à afficher sur le widget</string>
     <string name="title_expanded_widget">Gestion de l\'énergie en notification</string>
     <string name="summary_expanded_widget">Afficher le contrôle de l\'alimentation dans la barre de notification</string>
     <string name="expanded_color_mask">Couleur de l\'indicateur</string>
