@@ -206,7 +206,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         final int mAlwaysPulse = Settings.System.getInt(getContentResolver(),
                                  Settings.System.TRACKBALL_SCREEN_ON, 0);
         String[] mTestPackage = findPackage(pkg);
-        if (mTestPackage == null) {
+        if (mTestPackage == null || mTestPackage[1].equals("none")) {
             return;
         }
         final Notification notification = new Notification();
