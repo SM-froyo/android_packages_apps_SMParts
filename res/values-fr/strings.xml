@@ -56,6 +56,9 @@
     <string name="title_show_dbm">Afficher les dBm</string>
     <string name="summary_on_show_dbm">La force du signal mesurée en dBm sera affichée dans la barre de statut</string>
     <string name="summary_off_show_dbm">La force du signal mesurée en dBm ne sera pas affichée dans la barre de statut</string>
+    <string name="title_hide_signal_dbm">Masquer force du signal</string>
+    <string name="summary_on_hide_signal_dbm">L\'icône représentant la force du signal sera masquée. Seul les dBm seront affichés</string>
+    <string name="summary_off_hide_signal_dbm">L\'icône représentant la force du signal sera affichée</string>
     <string name="title_dbm_color">Couleur des dBm</string>
 
     <!-- Date and Provider -->
@@ -129,6 +132,16 @@
     <string name="pref_trackball_reset_summary">Remise à zéro des paramètres de notification</string>
     <string name="dialog_trackball_loading">Chargement...</string>
     <string name="dialog_trackball_packagelist">Chargement de la liste des applications</string>
+    <string name="trackball_category_dialog_text">Veuillez entrer une nouvelle catégorie</string>
+    <string name="trackball_category_list_title">Catégorie</string>
+    <string name="trackball_category_list_summary">Choisir une catégorie</string>
+    <string name="trackball_category_screen">Gérer les catégories</string>
+    <string name="trackball_category_add_title">Ajouter catégorie</string>
+    <string name="trackball_category_add_summary">Ajoute une catégorie à la liste</string>
+    <string name="trackball_category_remove_title">Retirer catégorie</string>
+    <string name="trackball_category_remove_summary">Retire une catégorie de la liste</string>
+    <string name="trackball_remove_default_toast">Impossible de retirer la catégorie pas défaut.</string>
+    <string name="trackball_reset_all">RàZ des couleurs et catégories</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">ATTENTION : Peut vider votre batterie</string>
@@ -174,6 +187,8 @@
     <string name="pref_trackball_unlock_summary">Une pression sur la trackball déverrouille le téléphone</string>
     <string name="pref_menu_unlock_title">Déverrouillage par menu</string>
     <string name="pref_menu_unlock_summary">Une pression sur le bouton menu déverrouille le téléphone</string>
+    <string name="pref_lockscreen_quick_unlock_control_title">Déverrouillage rapide</string>
+    <string name="pref_lockscreen_quick_unlock_control_summary">Une pression sur OK n\'est plus nécessaire lors de la saisie d\'un PIN ou mot de passe. Effacer compte comme une erreur.</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Pression longue sur maison</string>
@@ -307,6 +322,35 @@
     <string name="summary_custom_exp_not_bar_off">Utilisation de la barre déroulante classique de CyanogenMod</string>
     <string name="title_not_exp_bar_color_mask">Couleur de la barre déroulante</string>
     <string name="summary_not_exp_bar_color_mask">Choisir une couleur à appliquer aux éléments de la barre déroulante</string>
+
+    <!-- Expanded View Power Widget -->
+    <string name="title_expanded_widget">Gestion de l\'énergie en notification</string>
+    <string name="summary_expanded_widget">Afficher le contrôle de l\'alimentation dans la barre de notification</string>
+    <string name="expanded_color_mask">Couleur de l\'indicateur</string>
+    <string name="title_widget_picker">Boutons du widget</string>
+    <string name="summary_widget_picker">Choisir quels boutons seront affichés</string>
+    <string name="title_toggle_wifi">Wi-Fi</string>
+    <string name="title_toggle_bluetooth">Bluetooth</string>
+    <string name="title_toggle_gps">GPS</string>
+    <string name="title_toggle_sound">Sonnerie</string>
+    <string name="title_toggle_brightness">Luminosité</string>
+    <string name="title_toggle_sync">Synchronisation</string>
+    <string name="title_toggle_wifiap">Partage Wi-Fi</string>
+    <string name="title_toggle_screentimeout">Timeout de l\'écran</string>
+    <string name="title_toggle_mobiledata">Données mobiles</string>
+    <string name="title_toggle_lockscreen">Écran de verrouillage</string>
+    <string name="title_toggle_networkmode">2G/3G</string>
+    <string name="title_toggle_autorotate">Rotation automatique</string>
+    <string name="title_toggle_airplane">Mode avion</string>
+    <string name="title_button_modes">Modes de fonctionnement des boutons</string>
+    <string name="pref_brightness_mode_title">Modes de luminosité</string>
+    <string name="pref_brightness_mode_summary">Choisir comment le bouton Luminosité se comportera</string>
+    <string name="pref_network_mode_title">Modes 2G/3G</string>
+    <string name="pref_network_mode_summary">Choisir comment le bouton 2G/3G se comportera</string>
+    <string name="pref_screentimeout_mode_title">Modes Timeout de l\'écran</string>
+    <string name="pref_screentimeout_mode_summary">Choisir comment le bouton Timeout de l\'écran se comportera</string>
+    <string name="pref_ring_mode_title">Modes Sonnerie</string>
+    <string name="pref_ring_mode_summary">Choisir comment le bouton Sonnerie se comportera</string>
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Garder l\'accueil en RAM</string>
