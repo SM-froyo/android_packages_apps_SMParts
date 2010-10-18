@@ -142,7 +142,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         String[] temp = getArray(stringtemp);
         int i;
         String[] temp2;
-        temp2 = new String[temp.length];
+        temp2 = new String[5];
         boolean found = false;
         for (i = 0; i < temp.length; i++) {
             temp2 = getPackageAndColorAndBlink(temp[i]);
@@ -167,14 +167,13 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 temp[i] = tempcolor;
             } catch (ArrayIndexOutOfBoundsException e) {
                 // Making array changes, if they aren't new, they will error.
-                // Have to force them to be reset unfortunately.
-                Settings.System.putString(getContentResolver(),
-                                          Settings.System.NOTIFICATION_PACKAGE_COLORS, "");
+                // So we force the category to go to Miscelaneous and inform them.
+                String tempcolor = temp2[0] + "=" + temp2[1] + "=" + temp2[2] + "=" + CAT_PRIMARY;
+                temp[i] = tempcolor;
                 Toast.makeText(
                     this,
-                    "Unfortunately there was an array error. Your colors have been reset, we apologize for any inconveience.",
+                    R.string.trackball_array_error,
                     Toast.LENGTH_LONG).show();
-                return; // we want to end it here, no need to continue
             }
         } else {
             int x = 0;
