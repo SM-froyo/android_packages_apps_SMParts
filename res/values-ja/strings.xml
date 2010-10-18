@@ -302,10 +302,10 @@
     <string name="fuscia">フューシャ</string>
 
     <!-- Notification Bar Colors -->
-    <string name="title_notification_bar">通知バー</string>
-    <string name="title_custom_not_bar">通知バーのカスタマイズ</string>
-    <string name="summary_custom_not_bar_on">色やスタイルをカスタマイズした通知バーを使用する</string>
-    <string name="summary_custom_not_bar_off">CyanogenMod従来の通知バーを使用する</string>
+    <string name="title_notification_bar">通知領域</string>
+    <string name="title_custom_not_bar">通知領域のカスタマイズ</string>
+    <string name="summary_custom_not_bar_on">色やスタイルをカスタマイズした通知領域を使用する</string>
+    <string name="summary_custom_not_bar_off">CyanogenMod従来の通知領域を使用する</string>
     <string name="title_not_bar_color_mask">バーの色</string>
     <string name="summary_not_bar_color_mask">メモ: 透明度(alpha値)は予測できない結果になります!不透明色をお勧めします</string>
     <string name="title_custom_exp_not_bar">カスタムプルダウンバー</string>
@@ -313,11 +313,12 @@
     <string name="summary_custom_exp_not_bar_off">従来のCyanogenModプルダウンバーを使用する</string>
 
     <string name="title_not_exp_bar_color_mask">プルダウンバーの色</string>
-    <string name="summary_not_exp_bar_color_mask">プルダウン通知バーに適用する色を選択する</string>
+    <string name="summary_not_exp_bar_color_mask">プルダウン通知領域に適用する色を選択する</string>
 
     <!-- Expanded View Power Widget -->
-    <string name="title_expanded_widget">通知バーの電源ウィジェット</string>
-    <string name="summary_expanded_widget">通知バーを伸ばしたときに電源ウィジェットを表示する</string>
+    <string name="title_widget_buttons">通知領域ウィジェット</string>
+    <string name="title_expanded_widget">通知領域の電源ウィジェット</string>
+    <string name="summary_expanded_widget">通知領域を伸ばしたときに電源ウィジェットを表示する</string>
     <string name="expanded_color_mask">インジケータの色</string>
     <string name="title_widget_picker">ウィジェットボタン</string>
     <string name="summary_widget_picker">ウィジェットボタンを選択</string>
