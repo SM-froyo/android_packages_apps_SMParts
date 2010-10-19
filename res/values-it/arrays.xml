@@ -87,9 +87,9 @@
 
     <string-array name="pref_compcache_size_entries">
         <item>Non attiva</item>
-        <item>15% (default)</item>
-        <item>25%</item>
-        <item>35%</item>
+        <item>10%</item>
+        <item>18% (default)</item>
+        <item>26%</item>
     </string-array>
 
     <string-array name="entries_light_filter_window">

@@ -85,9 +85,9 @@
 
     <string-array name="pref_compcache_size_entries">
         <item>Désactivé</item>
-        <item>15% (par défaut)</item>
-        <item>25%</item>
-        <item>35%</item>
+        <item>10%</item>
+        <item>18% (par défaut)</item>
+        <item>26%</item>
     </string-array>
 
     <string-array name="entries_light_filter_reset">

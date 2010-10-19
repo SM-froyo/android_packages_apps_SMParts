@@ -86,9 +86,9 @@
 
     <string-array name="pref_compcache_size_entries">
         <item>無効</item>
-        <item>15%(デフォルト)</item>
-        <item>25%</item>
-        <item>35%</item>
+        <item>10%</item>
+        <item>18%(デフォルト)</item>
+        <item>26%</item>
     </string-array>
 
     <string-array name="entries_light_filter_window">
