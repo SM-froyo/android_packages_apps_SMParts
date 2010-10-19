@@ -73,8 +73,8 @@
 
   <string-array name="pref_compcache_size_entries">
     <item>Ausgeschaltet</item>
-    <item>15% des gesamten RAM</item>
-    <item>25% (Standard)</item>
+    <item>15% (Standard)</item>
+    <item>25%</item>
     <item>35%</item>
   </string-array>
 

@@ -85,8 +85,8 @@
 
     <string-array name="pref_compcache_size_entries">
         <item>Désactivé</item>
-        <item>15% de la RAM totale</item>
-        <item>25% (par défaut)</item>
+        <item>15% (par défaut)</item>
+        <item>25%</item>
         <item>35%</item>
     </string-array>
 

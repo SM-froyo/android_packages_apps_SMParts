@@ -86,8 +86,8 @@
 
     <string-array name="pref_compcache_size_entries">
         <item>無効</item>
-        <item>15%</item>
-        <item>25%(デフォルト)</item>
+        <item>15%(デフォルト)</item>
+        <item>25%</item>
         <item>35%</item>
     </string-array>
 

@@ -87,8 +87,8 @@
 
     <string-array name="pref_compcache_size_entries">
         <item>Non attiva</item>
-        <item>15%</item>
-        <item>25% (default)</item>
+        <item>15% (default)</item>
+        <item>25%</item>
         <item>35%</item>
     </string-array>
 

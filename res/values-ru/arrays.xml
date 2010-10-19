@@ -149,8 +149,8 @@
     
     <string-array name="pref_compcache_size_entries">
         <item>Отключенно</item>
-        <item>15%</item>
-        <item>25% (по умолчанию)</item>
+        <item>15% (по умолчанию)</item>
+        <item>25%</item>
         <item>35%</item>
     </string-array>
 	

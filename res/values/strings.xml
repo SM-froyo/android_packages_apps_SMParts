@@ -216,7 +216,7 @@
     <string name="performance_settings_summary">Device performance tweaks</string>
 
     <!-- Performance Settings : Compcache -->
-    <string name="pref_compcache_title">Use Compcache</string>
+    <string name="pref_compcache_title">Compcache RAM Usage</string>
     <string name="pref_compcache_summary">Compress memory for increased virtual capacity (requires reboot)</string>
 
     <!-- Performance Settings : JIT Mode -->
