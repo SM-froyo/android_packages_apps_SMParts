@@ -39,6 +39,12 @@
     <CheckBoxPreference android:key="toggle_airplane"
         android:title="@string/title_toggle_airplane"
         android:defaultValue="false" />
+    <CheckBoxPreference android:key="toggle_sleep"
+        android:title="@string/title_toggle_sleep"
+        android:defaultValue="false" />
+    <CheckBoxPreference android:key="toggle_flashlight"
+        android:title="@string/title_toggle_flashlight"
+        android:defaultValue="false" />
 
     <PreferenceCategory android:title="@string/title_button_modes">
         <ListPreference android:key="pref_brightness_mode" android:dialogTitle="@string/pref_brightness_mode_title"
@@ -56,5 +62,9 @@
         <ListPreference android:key="pref_ring_mode" android:dialogTitle="@string/pref_ring_mode_title"
             android:title="@string/pref_ring_mode_title" android:summary="@string/pref_ring_mode_summary"
             android:entries="@array/entries_ring_widget" android:entryValues="@array/values_ring_widget" />
+
+        <ListPreference android:key="pref_flash_mode" android:dialogTitle="@string/pref_flash_mode_title"
+            android:title="@string/pref_flash_mode_title" android:summary="@string/pref_flash_mode_summary"
+            android:entries="@array/entries_flash_widget" android:entryValues="@array/values_flash_widget" />
     </PreferenceCategory>
 </PreferenceScreen>
