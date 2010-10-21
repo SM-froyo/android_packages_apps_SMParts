@@ -132,7 +132,7 @@
     <string name="trackball_category_remove_summary">リストからカテゴリを削除する</string>
     <string name="trackball_remove_default_toast">デフォルトカテゴリを削除することはできません。</string>
     <string name="trackball_reset_all">すべてのカテゴリとカラーをリセット</string>
-
+    <string name="trackball_array_error">残念なことに配列エラーが発生しました。このパッケージは雑多カテゴリに追加されました。</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">注意: バッテリーが消費します</string>
@@ -335,6 +335,8 @@
     <string name="title_toggle_networkmode">2G/3Gトグル</string>
     <string name="title_toggle_autorotate">回転トグル</string>
     <string name="title_toggle_airplane">機内モードトグル</string>
+    <string name="title_toggle_flashlight">LEDフラッシュトグル</string>
+    <string name="title_toggle_sleep">スリープ</string>
     <string name="title_button_modes">ボタンモード</string>
     <string name="pref_brightness_mode_title">明るさ</string>
     <string name="pref_brightness_mode_summary">明るさトグルで変更するモードの選択</string>
@@ -344,7 +346,8 @@
     <string name="pref_screentimeout_mode_summary">スクリーンタイムアウトトグルで変更するモードの選択</string>
     <string name="pref_ring_mode_title">サウンド</string>
     <string name="pref_ring_mode_summary">サウンドトグルで変更するモードの選択</string>
-
+    <string name="pref_flash_mode_title">フラッシュ</string>
+    <string name="pref_flash_mode_summary">HighかDeath Ray(Evo)を選択</string>
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">ホームをメモリに維持</string>
