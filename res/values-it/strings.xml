@@ -142,6 +142,7 @@
     <string name="trackball_category_remove_summary">Rimuovi una categoria dalla lista</string>
     <string name="trackball_remove_default_toast">Non è possibile rimuovere la categoria di default.</string>
     <string name="trackball_reset_all">Ripristina le app e le categorie</string>
+    <string name="trackball_array_error">Purtroppo si è verificato un errore di array. Questa app è stata forzata nella categoria Miscellaneous.</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">ATTENZIONE:Aumento consumo di batteria</string>
@@ -326,10 +327,11 @@
     <string name="summary_not_exp_bar_color_mask">Scegli un colore da applicare agli elementi della barra scorrevole</string>
 
     <!-- Expanded View Power Widget -->
+    <string name="title_widget_buttons">Expanded View Widget</string>
     <string name="title_expanded_widget">Notification power widget</string>
-    <string name="summary_expanded_widget">Visualizza il widget per il risparmio energetico nella barra scorrevole delle notifiche</string>
+    <string name="summary_expanded_widget">Visualizza il widget per il risparmio energetico nell\'area delle notifiche</string>
     <string name="expanded_color_mask">Colore indicatore</string>
-    <string name="title_widget_picker">Tasti widget</string>
+    <string name="title_widget_picker">Tasti del widget</string>
     <string name="summary_widget_picker">Scegli i tasti da aggiungere al widget</string>
     <string name="title_toggle_wifi">Wi-Fi</string>
     <string name="title_toggle_bluetooth">Bluetooth</string>
@@ -344,7 +346,9 @@
     <string name="title_toggle_networkmode">2G/3G</string>
     <string name="title_toggle_autorotate">Rotazione automatica</string>
     <string name="title_toggle_airplane">Modalità aereo</string>
-    <string name="title_button_modes">Modalità tasti</string>
+    <string name="title_toggle_flashlight">Torcia LED</string>
+    <string name="title_toggle_sleep">Vai in sleep mode</string>
+    <string name="title_button_modes">Modalità di funzionamento dei tasti</string>
     <string name="pref_brightness_mode_title">Mod. Luminosità</string>
     <string name="pref_brightness_mode_summary">Scegli le modalità del tasto per la luminosità</string>
     <string name="pref_network_mode_title">Mod. Rete</string>
@@ -353,6 +357,8 @@
     <string name="pref_screentimeout_mode_summary">Scegli le modalità del tasto per il timeout dello schermo</string>
     <string name="pref_ring_mode_title">Mod. Audio</string>
     <string name="pref_ring_mode_summary">Scegli le modalità del tasto per l\'audio</string>
+    <string name="pref_flash_mode_title">Mod. Torcia</string>
+    <string name="pref_flash_mode_summary">Scegli tra Normal e High / Death Ray(Evo)</string>
 
 
 
