@@ -230,7 +230,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
         AlertDialog.Builder endFlash = new AlertDialog.Builder(this);
         endFlash.setMessage(R.string.dialog_clear_flash).setCancelable(false)
-        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        .setPositiveButton(getString(android.R.string.ok), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 NotificationManager dialogNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 dialogNM.cancel(NOTIFICATION_ID);
@@ -583,7 +583,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             final View textEntryView = factory.inflate(R.layout.add_cat, null);
             alertDialog.setTitle(R.string.trackball_category_add_title);
             alertDialog.setView(textEntryView);
-            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     //updateCatList(value.toString(), false);
                     EditText textBox = (EditText) textEntryView.findViewById(R.id.cat_text);
@@ -596,7 +596,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                     return;
                 }
             });
-            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, getString(android.R.string.cancel), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
 
                     return;
@@ -629,14 +629,14 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             alertDialog = new AlertDialog.Builder(this).create();
             alertDialog.setTitle(R.string.notification_battery_warning_title);
             alertDialog.setMessage(getResources().getString(R.string.notification_battery_warning));
-            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     Settings.System.putInt(getContentResolver(),
                                            Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, value ? 1 : 0);
                     return;
                 }
             });
-            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, getString(android.R.string.cancel), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     Settings.System.putInt(getContentResolver(),
                                            Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, value ? 1 : 0);
@@ -665,7 +665,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             alertDialog = new AlertDialog.Builder(this).create();
             alertDialog.setTitle(R.string.notification_battery_warning_title);
             alertDialog.setMessage(getResources().getString(R.string.notification_battery_warning));
-            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     Settings.System.putInt(getContentResolver(),
                                            Settings.System.TRACKBALL_NOTIFICATION_RANDOM, value ? 1 : 0);
@@ -673,7 +673,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
                 }
             });
-            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, getString(android.R.string.cancel), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     Settings.System.putInt(getContentResolver(),
                                            Settings.System.TRACKBALL_NOTIFICATION_RANDOM, 0);
@@ -703,14 +703,14 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             alertDialog = new AlertDialog.Builder(this).create();
             alertDialog.setTitle(R.string.notification_battery_warning_title);
             alertDialog.setMessage(getResources().getString(R.string.notification_battery_warning));
-            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, getString(android.R.string.ok), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     Settings.System.putInt(getContentResolver(),
                                            Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, value ? 1 : 0);
                     return;
                 }
             });
-            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            alertDialog.setButton(DialogInterface.BUTTON_NEGATIVE, getString(android.R.string.cancel), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     Settings.System.putInt(getContentResolver(),
                                            Settings.System.TRACKBALL_NOTIFICATION_PULSE_ORDER, 0);
