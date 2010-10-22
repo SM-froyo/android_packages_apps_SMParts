@@ -14,9 +14,9 @@
     <string name="pref_rotation_180_title">180 градусов</string>
     <string name="pref_rotation_270_title">270 градусов</string>
 
-    <!-- User interface : LED Notifications 
-    <string name="trackball_title">LED notifications</string>
-    <string name="trackball_summary">Control trackball/LED notification colors and pulse</string> -->
+    <!-- User interface : LED Notifications -->
+    <string name="trackball_title">LED уведомления</string>
+    <string name="trackball_summary">Настройка цветов и ритма уведомлений через Trackball/LED</string> 
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
@@ -52,11 +52,14 @@
     <string name="clock_show_am_pm">Показывать AM/PM для 12-часового формата</string>
 
     <!-- Status Bar, dBm Signal -->
-    <string name="dbm_title">Мощность сигнала (dBm)</string>
-    <string name="title_show_dbm">Показывать мощность сигнала</string>
+    <string name="dbm_title">Мощность сигнала в dBm</string>
+    <string name="title_show_dbm">Мощность сигнала в dBm</string>
     <string name="summary_on_show_dbm">Мощность сигнала в dBm отображается на статус баре</string>
     <string name="summary_off_show_dbm">Мощность сигнала в dBm отображается на статус баре</string>
-    <string name="title_dbm_color">Цвет мощности сигнала</string>
+    <string name="title_hide_signal_dbm">Скрыть индикатор сигнала</string>
+    <string name="summary_on_hide_signal_dbm">Иконка индикатора сигнала скрыта с статус бара, отображатся только dBm</string>
+    <string name="summary_off_hide_signal_dbm">Иконка индикатора сигнала включена</string>
+    <string name="title_dbm_color">Цвет мощности в dBm</string>
 
     <!-- Date and Provider -->
     <string name="dp_title">Дата и оператор</string>
@@ -160,7 +163,6 @@
     <string name="title_save_theme">Сохранить текущую тему</string>
     <string name="summary_save_theme">Сохранить текущие настройки цветов интерфейса на SD карту</string>
     
-
     <!-- Input Settings -->
     <string name="input_settings_title">Ввод</string>
     <string name="input_settings_summary">Настройка поведения кнопок</string>
@@ -176,7 +178,8 @@
     <string name="pref_trackball_unlock_summary">Нажатие на trackball разблокирует устройство</string>
     <string name="pref_menu_unlock_title">Menu - разблокировка</string>
     <string name="pref_menu_unlock_summary">Нажатие на Menu разблокирует устройство</string>
-
+	<string name="pref_lockscreen_quick_unlock_control_title">Быстрая разблокировка</string>
+    <string name="pref_lockscreen_quick_unlock_control_summary">Не требуется нажимать подтверждение после ввода пароля или PIN.</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Долгое нажатие на Home</string>
@@ -283,7 +286,6 @@
     <!-- UI Settings : Render effect -->
     <string name="pref_render_effect_title">Эффекты экрана</string>
     <string name="pref_render_effect_summary">Позволяет изменять цвет прорисовки экрана (экономит батарею)</string>
-
     <string name="widget_name">Эффекты экрана</string>
     <string name="renderfx_temp">Эффект</string>
     <string name="prefs_render_effect">Эффект экрана</string>
@@ -299,7 +301,6 @@
     <string name="fuscia">Розовый</string>
 
     <!-- Notification Bar Colors -->
-
     <string name="title_notification_bar">Цвета фонов статус бара и панели</string>
     <string name="title_custom_not_bar">Изменить статус бар</string>
     <string name="summary_custom_not_bar_on">Используются настраиваемый цвет статус бара</string>
@@ -331,35 +332,35 @@
     <string name="light_filter_window_summary">Период времени, для которого вычисляется среднее значение.</string>
     <string name="light_filter_reset_title">Порог сброса</string>
     <string name="light_filter_reset_summary">Samples deviating this much from current average resets the filter.</string>
-    <string name="light_filter_interval_title">Sample interval</string>
-    <string name="light_filter_interval_summary">Low value can improve accuracy but uses some more CPU.</string>
-    <string name="light_levels_title">Light levels</string>
-    <string name="light_levels_enabled_title">Use custom</string>
-    <string name="light_levels_dim_title">Screen dim level</string>
-    <string name="light_levels_dim_summary">Brightness used to dim the screen</string>
-    <string name="light_levels_editor_title">Edit other levels...</string>
+    <string name="light_filter_interval_title">Интервал выборки</string>
+    <string name="light_filter_interval_summary">Низкое значение может улучшить точность, но больше загружает процессор.</string>
+    <string name="light_levels_title">Уровни освещённости</string>
+    <string name="light_levels_enabled_title">Пользовательские уровни</string>
+    <string name="light_levels_dim_title">Затемнение экрана</string>
+    <string name="light_levels_dim_summary">Яркость использемая для затемнения экрана</string>
+    <string name="light_levels_editor_title">Редактировать другие уровни...</string>
     <string name="light_decrease_enabled_title">Allow light decrease</string>
     <string name="light_decrease_enabled_summary">Enable to allow lights to decrease. Use hysteresis to reduce flicker.</string>
     <string name="light_decrease_hysteresis_title">Decrease hysteresis</string>
     <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards.</string>
 
-    <!-- Light sensor levels 
-    <string name="ll_title">Light sensor levels</string>
-    <string name="ll_header_upper">Upper</string>
-    <string name="ll_header_lower">Lower</string>
-    <string name="ll_header_lcd">Screen</string>
-    <string name="ll_header_btn">Buttons</string>
-    <string name="ll_header_kb">Keyboard</string>
-    <string name="ll_lux">Sensor (filtered / raw):</string>
-    <string name="ll_lcd">Screen:</string>
-    <string name="ll_btn">Buttons:</string>
-    <string name="ll_kb">Keyboard:</string>
-    <string name="ll_disabled">disabled</string>
-    <string name="ll_default">Load defaults</string>
-    <string name="ll_save">Save &amp; apply</string>
-    <string name="ll_reload">Reload current</string>
-    <string name="ll_bad_levels">Levels must be increasing</string>
-    <string name="ll_num_levels">Set number of levels</string> -->
+    <!-- Light sensor levels -->
+    <string name="ll_title">Уровни датчика освещённости</string>
+    <string name="ll_header_upper">Верхнее</string>
+    <string name="ll_header_lower">Нижнее</string>
+    <string name="ll_header_lcd">Экран</string>
+    <string name="ll_header_btn">Кнопки</string>
+    <string name="ll_header_kb">Клавиатура</string>
+    <string name="ll_lux">Датчик (фильтрованное/исходное):</string>
+    <string name="ll_lcd">Экран:</string>
+    <string name="ll_btn">Кнопки:</string>
+    <string name="ll_kb">Клавиатура:</string>
+    <string name="ll_disabled">отключенно</string>
+    <string name="ll_default">По умолчанию</string>
+    <string name="ll_save">Соранить и применить</string>
+    <string name="ll_reload">Текущие</string>
+    <string name="ll_bad_levels">Уровень необходимо увеличить</string>
+    <string name="ll_num_levels">Установите количество уровней</string>
 
     <!-- Sound -->
     <string name="sound_title">Звук</string>
