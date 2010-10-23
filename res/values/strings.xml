@@ -455,4 +455,6 @@
     <string name="quiet_hours_dim_on">LED will dim if possible</string>
     <string name="quiet_hours_dim_off">LED will be full brightness</string>
 
+    <string name="cmstats_title">Anonymous statistics"</string>
+    <string name="cmstats_summary">Help make CM better by opting-in to anonymous statistics reporting</string>
 </resources>
