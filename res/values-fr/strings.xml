@@ -443,4 +443,7 @@
     <string name="quiet_hours_dim">Diminuer éclairage LED</string>
     <string name="quiet_hours_dim_on">La LED éclairera avec moins de puissance</string>
     <string name="quiet_hours_dim_off">La LED éclairera avec le maximum de puissance</string>
+
+    <string name="cmstats_title">Statistiques anonymes</string>
+    <string name="cmstats_summary">Aidez CyanogenMod en participant à l\'envoi de statistiques anonymes</string>
 </resources>
