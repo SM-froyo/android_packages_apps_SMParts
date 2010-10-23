@@ -344,6 +344,8 @@
     <string name="title_toggle_networkmode">2G/3G</string>
     <string name="title_toggle_autorotate">Rotation automatique</string>
     <string name="title_toggle_airplane">Mode avion</string>
+    <string name="title_toggle_flashlight">Lampe de poche LED</string>
+    <string name="title_toggle_sleep">Mise en veille</string>
     <string name="title_button_modes">Modes de fonctionnement des boutons</string>
     <string name="pref_brightness_mode_title">Modes de luminosité</string>
     <string name="pref_brightness_mode_summary">Choisir comment le bouton Luminosité se comportera</string>
@@ -353,6 +355,8 @@
     <string name="pref_screentimeout_mode_summary">Choisir comment le bouton Timeout de l\'écran se comportera</string>
     <string name="pref_ring_mode_title">Modes Sonnerie</string>
     <string name="pref_ring_mode_summary">Choisir comment le bouton Sonnerie se comportera</string>
+    <string name="pref_flash_mode_title">Mode flash</string>
+    <string name="pref_flash_mode_summary">Choisir la puissance du flash : Haute ou Death Ray (Evo uniquement)</string>
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Garder l\'accueil en RAM</string>
