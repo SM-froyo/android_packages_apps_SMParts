@@ -233,22 +233,22 @@
     <string name="haptic_title">Отклик на действие</string>
     <string name="haptic_summary">Укажите когда и насколько сильно устройство будет откликаться на действия</string>
 
-    <string name="title_haptic_feedback">Haptic feedback main</string>
-    <string name="summary_on_haptic_feedback">Use haptic feedback on keypress for softkeys and certain UI interactions</string>
-    <string name="summary_off_haptic_feedback">No haptic feedback on keypress for softkeys and certain UI interactions</string>
+    <string name="title_haptic_feedback">Отклик на нажатие</string>
+    <string name="summary_on_haptic_feedback">Использовать отклик на нажатие функциональных клавишь и определенных элементов интерфейса</string>
+    <string name="summary_off_haptic_feedback">Не использовать отклик на нажатие функциональных клавишь и определенных элементов интерфейса</string>
 
-    <string name="title_haptic_feedback_up">Haptic feedback up</string>
-    <string name="summary_on_haptic_feedback_up">Use haptic feedback on key release for softkeys and certain UI interactions</string>
-    <string name="summary_off_haptic_feedback_up">No haptic feedback on key release for softkeys and certain UI interactions</string>
+    <string name="title_haptic_feedback_up">Отклик на отпускание</string>
+    <string name="summary_on_haptic_feedback_up">Использовать отклик на отпускание функциональных клавишь и определенных элементов интерфейса</string>
+    <string name="summary_off_haptic_feedback_up">Не использовать отклик на отпускание функциональных клавишь и определенных элементов интерфейса</string>
 
-    <string name="title_haptic_feedback_all">Haptic screen items</string>
-    <string name="summary_on_haptic_feedback_all">Use haptic feedback when making screen selections</string>
-    <string name="summary_off_haptic_feedback_all">No haptic feedback when making screen selections</string>
+    <string name="title_haptic_feedback_all">Отклик на элемент</string>
+    <string name="summary_on_haptic_feedback_all">Использовать отклик на выбор любого элемента</string>
+    <string name="summary_off_haptic_feedback_all">Не использовать отклик на выбор любого элемента</string>
 
-    <string name="title_haptic_down_decider">Set Down Pattern</string>
-    <string name="title_haptic_up_decider">Set Up Pattern</string>
-    <string name="title_haptic_long_decider">Set Long-Press Pattern</string>
-    <string name="title_haptic_tap_decider">Set Keypad Tap Pattern</string>
+    <string name="title_haptic_down_decider">Шаблон нажатия</string>
+    <string name="title_haptic_up_decider">Шаблон отпускания</string>
+    <string name="title_haptic_long_decider">Шаблон долгово нажатия</string>
+    <string name="title_haptic_tap_decider">Шаблон клавиатуры</string>
 
     <string name="title_haptic_menu">Регулировка отклика</string>
     <string name="title_haptic_notice">ТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА ДЛЯ ТОГО ЧТОБЫ НАСТРОЙКА ВСТУПИЛА В СИЛУ</string>
@@ -256,17 +256,17 @@
     <string name="haptic_delay_desc">ms ВЫКЛ.</string>
     <string name="haptic_vibe_desc">ms ВКЛ.</string>
 
-    <string name="haptic_down_description">Adjusting haptic values for button DOWN-PRESSES\n(Virtual hardkeys and certain UI interactions.)</string>
-    <string name="haptic_up_description">Adjusting haptic values for button RELEASES\n(Virtual hardkeys and most screen presses.)</string>
-    <string name="haptic_long_description">Adjusting haptic values for LONG-PRESSES.</string>
-    <string name="haptic_tap_description">Adjusting haptic values for on-screen keyboard taps</string>
+    <string name="haptic_down_description">Настройте отклик на НАЖАТИЕ\n(Виртуальные кнопки и определенные элементы интерфейса.)</string>
+    <string name="haptic_up_description">Настройте отклик на ОТПУСКАНИЕ\n(Виртуальные кнопки и большинство нажатий на экран.)</string>
+    <string name="haptic_long_description">Настройте отклик на ДОЛГОЕ НАЖАТИЕ.</string>
+    <string name="haptic_tap_description">Настройте отклик на нажатие клавиш экранной клавиатуры.</string>
 
-    <string name="haptic_plus_minus_desc">Нажимайте кнопки Плюс или Минус для того чтоб добавить или удалить шаг в последовательности.</string>
+    <string name="haptic_plus_minus_desc">Используйте кнопки + или - для добавления или удаления шага в последовательности.</string>
 
     <string name="haptic_button_plus">+</string>
     <string name="haptic_button_minus">-</string>
 
-    <string name="haptic_button_save">Сохр</string>
+    <string name="haptic_button_save">Сохранить</string>
     <string name="haptic_button_test">Тест</string>
     <string name="haptic_button_cancel">Отмена</string>
     <string name="haptic_button_revert">Вернуть</string>
@@ -331,7 +331,7 @@
     <string name="light_filter_window_title">Размер окна</string>
     <string name="light_filter_window_summary">Период времени, для которого вычисляется среднее значение.</string>
     <string name="light_filter_reset_title">Порог сброса</string>
-    <string name="light_filter_reset_summary">Samples deviating this much from current average resets the filter.</string>
+    <string name="light_filter_reset_summary">При отклонении значения датчика от текущего среднего на данную величину фильтр сбразывается.</string>
     <string name="light_filter_interval_title">Интервал выборки</string>
     <string name="light_filter_interval_summary">Низкое значение может улучшить точность, но больше загружает процессор.</string>
     <string name="light_levels_title">Уровни освещённости</string>
@@ -339,10 +339,10 @@
     <string name="light_levels_dim_title">Затемнение экрана</string>
     <string name="light_levels_dim_summary">Яркость использемая для затемнения экрана</string>
     <string name="light_levels_editor_title">Редактировать другие уровни...</string>
-    <string name="light_decrease_enabled_title">Allow light decrease</string>
-    <string name="light_decrease_enabled_summary">Enable to allow lights to decrease. Use hysteresis to reduce flicker.</string>
-    <string name="light_decrease_hysteresis_title">Decrease hysteresis</string>
-    <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards.</string>
+    <string name="light_decrease_enabled_title">Лёгкое уменьшение</string>
+    <string name="light_decrease_enabled_summary">Включение лёгкого понижения света. Используйте гистерезис, чтобы уменьшить мерцание.</string>
+    <string name="light_decrease_hysteresis_title">Гистерезис уменьшения</string>
+    <string name="light_decrease_hysteresis_summary">Насколько будут перекрыты значения датчика освещённости.</string>
 
     <!-- Light sensor levels -->
     <string name="ll_title">Уровни датчика освещённости</string>
@@ -351,13 +351,13 @@
     <string name="ll_header_lcd">Экран</string>
     <string name="ll_header_btn">Кнопки</string>
     <string name="ll_header_kb">Клавиатура</string>
-    <string name="ll_lux">Датчик (фильтрованное/исходное):</string>
+    <string name="ll_lux">Датчик (фильтр./исходное):</string>
     <string name="ll_lcd">Экран:</string>
     <string name="ll_btn">Кнопки:</string>
     <string name="ll_kb">Клавиатура:</string>
     <string name="ll_disabled">отключенно</string>
     <string name="ll_default">По умолчанию</string>
-    <string name="ll_save">Соранить и применить</string>
+    <string name="ll_save">Применить</string>
     <string name="ll_reload">Текущие</string>
     <string name="ll_bad_levels">Уровень необходимо увеличить</string>
     <string name="ll_num_levels">Установите количество уровней</string>
@@ -429,5 +429,8 @@
     <string name="pref_screentimeout_mode_summary">Укажите какие режимы отключения экрана будут меняться кнопкой Задержка выкл. экрана</string>
     <string name="pref_ring_mode_title">Режимы звука</string>
     <string name="pref_ring_mode_summary">Укажите какие режимы будут меняться кнопкой Звук</string>
+	
+    <string name="cmstats_title">Анонимная статистика</string>
+    <string name="cmstats_summary">Помогите сделать CM лучше, включите отправку анонимных отчётов</string>
     
 </resources>
