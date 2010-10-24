@@ -359,6 +359,7 @@
     <string name="pref_ring_mode_summary">Scegli le modalità del tasto per l\'audio</string>
     <string name="pref_flash_mode_title">Mod. Torcia</string>
     <string name="pref_flash_mode_summary">Scegli tra Normal e High / Death Ray(Evo)</string>
+    <string name="widget_max_buttons">6 è il numero massimo di tasti.</string>
 
 
 

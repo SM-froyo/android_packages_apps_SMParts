@@ -13,6 +13,7 @@ import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.widget.Toast;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -123,6 +124,7 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
         List<String> sList = getList();
         if(add) {
             if(sList.size() >= 6) {
+                Toast.makeText(this, R.string.widget_max_buttons, Toast.LENGTH_LONG).show();
                 return false;
             }
             sList.add(toggle);
