@@ -452,4 +452,6 @@
     <string name="quiet_hours_dim_on">可能であればLEDを暗くします</string>
     <string name="quiet_hours_dim_off">LEDは最大照度で点灯します</string>
 
+    <string name="cmstats_title">匿名利用状況</string>
+    <string name="cmstats_summary">匿名の利用状況レポートを有効にすることによってCMの改善に協力できます</string>
 </resources>
