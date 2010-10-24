@@ -447,4 +447,7 @@
     <string name="quiet_hours_dim">Spegni LED</string>
     <string name="quiet_hours_dim_on">Possibilmente il LED rimarrà spento</string>
     <string name="quiet_hours_dim_off">Il LED pulserà normalmente</string>
+
+    <string name="cmstats_title">Statistiche anonime</string>
+    <string name="cmstats_summary">Aiuta a migliorare CM accettando l\'invio di statistiche di utilizo anonime</string>
 </resources>
