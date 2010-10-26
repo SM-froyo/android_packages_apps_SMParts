@@ -420,6 +420,7 @@
     <string name="title_toggle_networkmode">2G/3G</string>
     <string name="title_toggle_autorotate">Автоповорот</string>
     <string name="title_toggle_airplane">Режим самолёта</string>
+	<string name="title_toggle_flashlight">LED фонарик</string>
     <string name="title_button_modes">Режимы кнопок</string>
     <string name="pref_brightness_mode_title">Режимы подсветки</string>
     <string name="pref_brightness_mode_summary">Укажите какие режимы будут меняться кнопкой Подсветка</string>
@@ -429,6 +430,9 @@
     <string name="pref_screentimeout_mode_summary">Укажите какие режимы отключения экрана будут меняться кнопкой Задержка выкл. экрана</string>
     <string name="pref_ring_mode_title">Режимы звука</string>
     <string name="pref_ring_mode_summary">Укажите какие режимы будут меняться кнопкой Звук</string>
+	<string name="pref_flash_mode_title">Режимы фонарика</string>
+    <string name="pref_flash_mode_summary">Выберите High/Death Ray(EVO)</string>
+    <string name="widget_max_buttons">Возможно выбрать только 6 кнопок.</string>
 	
     <string name="cmstats_title">Анонимная статистика</string>
     <string name="cmstats_summary">Помогите сделать CM лучше, включите отправку анонимных отчётов</string>
