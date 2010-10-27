@@ -300,11 +300,11 @@
     <string name="pref_render_effect_title">渲染效果</string>
     <string name="pref_render_effect_summary">选择描绘屏幕图像时所使用的颜色系 (有可能降低耗电量)</string>
 
-    <string name="widget_name">渲染效果桌面插件</string>
+    <string name="widget_name">渲染效果桌面部件</string>
     <string name="renderfx_temp">渲染效果</string>
     <string name="prefs_render_effect">渲染效果</string>
     <string name="notify_render_effect">渲染效果开启</string>
-        <string name="add_widget">添加桌面插件</string>
+        <string name="add_widget">添加桌面部件</string>
 
     <!--  Widget Types -->
     <string name="night">夜间</string>
@@ -330,12 +330,12 @@
 
 
     <!-- Expanded View Power Widget -->
-    <string name="title_widget_buttons">高级桌面插件</string>
-    <string name="title_expanded_widget">电源控制桌面插件</string>
-    <string name="summary_expanded_widget">使用高级电源控制桌面插件</string>
+    <string name="title_widget_buttons">下拉通知栏集成插件</string>
+    <string name="title_expanded_widget">通知栏电源控制插件</string>
+    <string name="summary_expanded_widget">使用集成在下拉通知栏中的电源控制插件</string>
     <string name="expanded_color_mask">指示灯颜色</string>
-    <string name="title_widget_picker">桌面插件按钮</string>
-    <string name="summary_widget_picker">选取您需要的桌面插件按钮</string>
+    <string name="title_widget_picker">控制按钮</string>
+    <string name="summary_widget_picker">选取您需要的控制按钮</string>
     <string name="title_toggle_wifi">切换 Wifi</string>
     <string name="title_toggle_bluetooth">切换蓝牙</string>
     <string name="title_toggle_gps">切换 GPS</string>
