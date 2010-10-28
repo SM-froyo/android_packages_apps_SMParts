@@ -63,7 +63,7 @@
     <string name="title_dbm_color">dBm 색</string>
 
     <!-- Date and Provider -->
-    <string name="dp_title">날짜와 서비스 제공자<string>
+    <string name="dp_title">날짜와 서비스 제공자</string>
     <string name="dp_summary">날짜와 서비스 제공자 조정</string>
 
     <!-- Date and Provider, Date -->
@@ -76,7 +76,7 @@
     <string name="summary_on_show_plmn_ls">PLMN 값이 잠금 화면에 표시됩니다.</string>
     <string name="summary_off_show_plmn_ls">PLMN 값이 잠금 화면에 표시되지 않습니다.</string>
     <string name="title_show_plmn_sb">PLMN 표시 (상태 표시줄)</string>
-    <string name="summary_on_show_plmn_sb">PLMN 값이 상태 표시줄에 표시됩니다.</tring>
+    <string name="summary_on_show_plmn_sb">PLMN 값이 상태 표시줄에 표시됩니다.</string>
     <string name="summary_off_show_plmn_sb">PLMN 값이 상태 표시줄에 표시되지 않습니다.</string>
     <string name="title_plmn_label_color">PLMN 캐리어 색</string>
 
@@ -99,7 +99,7 @@
     <string name="title_no_notifications_color">알림 없음 글자 색</string>
     <string name="title_clear_button_label_color">알림 제거 글자 색</string>
     <string name="title_ongoing_notifications_color">진행중인 알림 글자 색</string>
-    <string name="title_latest_notifications_color">최근 알림 글자 색</tring>
+    <string name="title_latest_notifications_color">최근 알림 글자 색</string>
     <string name="title_notifications_items">항목 알림</string>
     <string name="title_notifications_items_title">항목 제목 색</string>
     <string name="title_notifications_items_text">항목 내용 색</string>
