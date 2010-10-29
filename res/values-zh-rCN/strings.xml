@@ -168,7 +168,7 @@
     <string name="xml_parse_error">解析 XML 时发生错误！</string>
     <string name="xml_invalid_color">XML 中存在无效的颜色代码！</string>
     <string name="xml_import_success">导入 XML 成功！重启后生效。</string>
-    <string name="xml_run_helper">Running settings helper</string>
+    <string name="xml_run_helper">正在运行设置助手</string>
     <string name="title_apply_theme">选择主题</string>
     <string name="summary_apply_theme">从预置主题或 SD 卡中保存的主题中选择</string>
     <string name="title_save_theme">保存当前主题</string>
