@@ -20,7 +20,7 @@
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
-    <string name="pref_pinch_reflow_title">확대 후 자동으로 내용 다시 표시</string>
+    <string name="pref_pinch_reflow_title">확대 후 내용 다시 표시</string>
     <string name="pref_pinch_reflow_summary">확대 후 자동으로 내용의 크기를 조절하여 다시 표시합니다.</string>
 
     <!-- User interface : Lock Screen -->
@@ -181,10 +181,10 @@
     <string name="input_settings_summary">버튼 작동방식 조정</string>
     <string name="button_settings_title">버튼 설정</string>
     <string name="lockscreen_settings_title">잠금 화면 설정</string>
-    <string name="pref_lockscreen_music_controls_title">잠금 화면에서 음악 제어</string>
-    <string name="pref_lockscreen_music_controls_summary">음악 제어 화면을 잠금 화면에 표시합니다.</string>
-    <string name="pref_lockscreen_always_music_controls_title">항상 음악 제어 표시</string>
-    <string name="pref_lockscreen_always_music_controls_summary">음악을 재생하고 있지 않더라도 음악 제어를 표시합니다.</string>
+    <string name="pref_lockscreen_music_controls_title">잠금 화면에서 음악 조정</string>
+    <string name="pref_lockscreen_music_controls_summary">음악 조정 화면을 잠금 화면에 표시합니다.</string>
+    <string name="pref_lockscreen_always_music_controls_title">항상 음악 조정 표시</string>
+    <string name="pref_lockscreen_always_music_controls_summary">음악을 재생하고 있지 않더라도 음악 조정 화면을 표시합니다.</string>
     <string name="pref_trackball_wake_title">트랙볼 깨어남</string>
     <string name="pref_trackball_wake_summary">트랙볼 버튼을 눌러 장비를 깨웁니다.</string>
     <string name="pref_trackball_unlock_title">트랙볼 잠금 해제</string>
@@ -192,20 +192,20 @@
     <string name="pref_menu_unlock_title">메뉴 잠금 해제</string>
     <string name="pref_menu_unlock_summary">메뉴 버튼을 눌러 잠금을 해제합니다.</string>
     <string name="pref_lockscreen_quick_unlock_control_title">빠른 잠금 해제</string>
-    <string name="pref_lockscreen_quick_unlock_control_summary">Pin이나 비밀번호를 입력할 때 OK를 누르지 않아도 됩니다. 단 글자 지우기는 잘못된 시도로 집계됩니다.</string>
+    <string name="pref_lockscreen_quick_unlock_control_summary">Pin이나 비밀번호를 입력할 때 확인을 누르지 않아도 됩니다. 단 글자 지우기는 잘못된 시도로 집계됩니다.</string>
 
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">홈버튼 길게 누르기 설정</string>
-    <string name="long_press_home_summary">최근 앱의 갯수 설정 등</string>
-    <string name="recent_apps_show_title">최근 앱 제목 보이기</string>
-    <string name="recent_apps_num_title">최근 앱 갯수</string>
-    <string name="recent_apps_num_summary">홈 버튼을 길게 눌렀을때 보여줄 최근 앱의 갯수를 설정합니다.</string>
-    <string name="dialog_recent_apps_num_title">최근 앱 갯수를 입력하세요.</string>
-    <string name="use_custom_app_title">사용자 지정 앱 사용</string>
-    <string name="use_custom_app_summary">최근 앱 화면 대신에 사용자 지정 앱을 표시합니다.</string>
-    <string name="select_custom_app_title">사용자 지정 앱 설정</string>
-    <string name="group_applications">앱</string>
+    <string name="long_press_home_summary">최근 어플리케이션의 갯수 설정 등</string>
+    <string name="recent_apps_show_title">최근 어플리케이션 제목 보이기</string>
+    <string name="recent_apps_num_title">최근 어플리케이션 갯수</string>
+    <string name="recent_apps_num_summary">홈 버튼을 길게 눌렀을때 보여줄 최근 어플리케이션의 갯수를 설정합니다.</string>
+    <string name="dialog_recent_apps_num_title">보여줄 최근 어플리케이션의 갯수를 선택하세요.</string>
+    <string name="use_custom_app_title">사용자 지정 어플리케이션 사용</string>
+    <string name="use_custom_app_summary">최근 어플리케이션 화면 대신에 사용자 지정 어플리케이션을 표시합니다.</string>
+    <string name="select_custom_app_title">사용자 지정 어플리케이션 설정</string>
+    <string name="group_applications">어플리케이션</string>
 
     <!-- Performance Settings -->
     <string name="performance_settings_title">성능 설정</string>
@@ -232,16 +232,16 @@
     <string name="performance_settings_warning">이 설정은 시스템의 성능을 주로 나쁜 방향으로 조정합니다. 이 설정은 실험을 위해 포함되었고 이 설정의 변경으로 인한 문제점을 보고하지 마십시오.</string>
 
     <!-- Application Settings -->
-    <string name="application_settings_title">앱 설정</string>
-    <string name="application_settings_summary">설치 경로와 같은 앱 설정 변경</string>
+    <string name="application_settings_title">어플리케이션 설정</string>
+    <string name="application_settings_summary">설치 경로와 같은 어플리케이션 설정 변경</string>
 
     <!-- Application Settings : Move any app -->
-    <string name="pref_move_all_apps_title">앱 이동 허용</string>
-    <string name="pref_move_all_apps_summary">외부 저장장치로 앱 이동 허용</string>
+    <string name="pref_move_all_apps_title">어플리케이션 이동 허용</string>
+    <string name="pref_move_all_apps_summary">외부 저장장치로 어플리케이션 이동 허용</string>
 
     <!-- Application Settings : Install Location -->
     <string name="pref_install_location_title">설치 위치</string>
-    <string name="pref_install_location_summary">새로운 앱이 어디에 설치될 지 설택하세요.</string>
+    <string name="pref_install_location_summary">새로운 어플리케이션의 설치 위치를 선택하세요.</string>
 
     <!-- HapticTweaks -->
     <string name="haptic_title">촉각 반응 설정 조정</string>
@@ -320,12 +320,12 @@
     <string name="title_notification_bar">상태 표시줄</string>
     <string name="title_custom_not_bar">사용자 지정 상태 표시줄</string>
     <string name="summary_custom_not_bar_on">사용자가 지정한 색과 스타일을 상태 표시줄에 사용합니다.</string>
-    <string name="summary_custom_not_bar_off">구식의 CyanogenMod 상태 표시줄을 사용합니다.</string>
+    <string name="summary_custom_not_bar_off">구식의 CyanogenMod식 상태 표시줄을 사용합니다.</string>
     <string name="title_not_bar_color_mask">표시줄 색</string>
     <string name="summary_not_bar_color_mask">알림: 투명 설정은 적용되지 않을 것입니다.</string>
     <string name="title_custom_exp_not_bar">사용자 지정 내림 표시줄</string>
     <string name="summary_custom_exp_not_bar_on">사용자가 지정한 색과 스타일을 내림 표시줄에 사용</string>
-    <string name="summary_custom_exp_not_bar_off">구식의 CyanogenMod 내림 표시줄 사용</string>
+    <string name="summary_custom_exp_not_bar_off">구식의 CyanogenMod식 내림 표시줄 사용</string>
     <string name="title_not_exp_bar_color_mask">내림 표시줄 색</string>
     <string name="summary_not_exp_bar_color_mask">내림 표시줄의 항목에 적용할 색을 선택하세요</string>
 
@@ -336,7 +336,7 @@
     <string name="summary_expanded_widget">확장된 전윈 위젯을 사용합니다.</string>
     <string name="expanded_color_mask">지시기 색</string>
     <string name="title_widget_picker">위젯 버튼</string>
-    <string name="summary_widget_picker">사용할위젯 버튼을 골라주세요.</string>
+    <string name="summary_widget_picker">사용할 위젯 버튼을 골라주세요.</string>
     <string name="title_toggle_wifi">와이파이</string>
     <string name="title_toggle_bluetooth">블루투스</string>
     <string name="title_toggle_gps">GPS</string>
@@ -367,11 +367,11 @@
 
 
     <!-- Performance : Lock home memory -->
-    <string name="pref_lock_home_title">홈 앱을 메모리에 고정</string>
-    <string name="pref_lock_home_summary">홈 앱을 메모리에 항상 올려놓습니다.</string>
+    <string name="pref_lock_home_title">홈 어플리케이션 고정</string>
+    <string name="pref_lock_home_summary">홈 어플리케이션을 메모리에 항상 올려놓습니다.</string>
 
     <!-- Performance : Lock mms app in memory -->
-    <string name="pref_lock_mms_title">메시지 앱을 메모리에 고정</string>
+    <string name="pref_lock_mms_title">메시지 어플리케이션 고정</string>
     <string name="pref_lock_mms_summary">메모리가 낮을 때 메시지를 받지 못하는 상황을 예방합니다.</string>
 
     <!-- Backlight -->
@@ -383,16 +383,16 @@
     <string name="light_filter_window_title">창 크기</string>
     <string name="light_filter_window_summary">이 기간 동안의 평균이 필터된 값입니다.</string>
     <string name="light_filter_reset_title">초기화 한계</string>
-    <string name="light_filter_reset_summary">측정값이 평균보다 얼마나 차이나야 필터를 초기화할지 지정합니다.</string>
+	<string name="light_filter_reset_summary">측정값과 평균과의 차이가 이 값보다 크면 필터를 초기화합니다.</string>
     <string name="light_filter_interval_title">측정 주기</string>
-    <string name="light_filter_interval_summary">낮은 값은 정밀도를 높이지만 CPU를 더 많이 사횽압니다.</string>
+    <string name="light_filter_interval_summary">낮은 값은 더 정밀하지만 CPU를 더 많이 사용합니다.</string>
     <string name="light_levels_title">밝기 단계</string>
-    <string name="light_levels_enabled_title">사용자 지정 사용</string>
+    <string name="light_levels_enabled_title">사용자 지정 단계 사용</string>
     <string name="light_levels_dim_title">화면을 어둡게 할 밝기</string>
     <string name="light_levels_dim_summary">화면을 어둡게 할 때 사용할 밝기 값을 지정합니다.</string>
-    <string name="light_levels_editor_title">기타 단계 수정...</string>
-    <string name="light_decrease_enabled_title">빛 감소 허용</string>
-    <string name="light_decrease_enabled_summary">빛 감소를 허용합니다. 히스테리시스를 사용하여 잦은 밝기 변화를 줄입니다.</string>
+    <string name="light_levels_editor_title">사용자 지정 단계 수정...</string>
+    <string name="light_decrease_enabled_title">밝기 감소 허용</string>
+    <string name="light_decrease_enabled_summary">밝기 감소를 허용합니다. 히스테리시스를 사용하여 잦은 밝기 변화를 줄입니다.</string>
     <string name="light_decrease_hysteresis_title">감소 히스테리시스</string>
     <string name="light_decrease_hysteresis_summary">센서 값을 내릴 때 이 값을 적용합니다.</string>
 
@@ -418,7 +418,7 @@
     <string name="sound_title">소리 설정</string>
     <string name="sound_summary">소리와 오디오 집중 설정</string>
     <string name="sound_notifications_focus_title">알림 집중</string>
-    <string name="sound_notifications_focus_summary">오디오 집중은 알림 소리가 재생될 때 호환되는 앱이 볼륨을 낮추도록 요청하는 것입니다.</string>
+    <string name="sound_notifications_focus_summary">오디오 집중은 알림 소리가 재생될 때 호환되는 어플리케이션이 볼륨을 낮추도록 요청하는 기능입니다.</string>
     <string name="sound_to_speaker_title">항상 스피커로 재생</string>
     <string name="sound_notifications_title">알림</string>
     <string name="sound_rings_title">벨소리</string>
