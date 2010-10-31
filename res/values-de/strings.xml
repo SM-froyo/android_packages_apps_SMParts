@@ -52,9 +52,12 @@
 
   <!-- Status Bar, dBm Signal -->
   <string name="dbm_title">dBm Signalstärke</string>
-  <string name="title_show_dbm">Zeige dBm</string>
-  <string name="summary_on_show_dbm">Signalstärke in dBm in der Statuszeile anzeigen</string>
-  <string name="summary_off_show_dbm">Signalstärke in der Statuszeile wird nicht angezeigt</string>
+  <string name="title_show_dbm">Zeige Signalstärke</string>
+  <string name="summary_on_show_dbm">Signalstärke in dBm wird in der Statuszeile angezeigt.</string>
+  <string name="summary_off_show_dbm">Signalstärke in dBm wird nicht in der Statuszeile angezeigt.</string>
+  <string name="title_hide_signal_dbm">Signalstärke verstecken</string>
+  <string name="summary_on_hide_signal_dbm">Das Symbol für die Signalstärke wird ausgeblendet. Nur dBM-Anzeige.</string>
+  <string name="summary_off_hide_signal_dbm">Ein Symbol für die Signalstärke wird eingeblendet.</string>
   <string name="title_dbm_color">Farbe dBm</string>
 
   <!-- Date and Provider -->
@@ -128,6 +131,17 @@
   <string name="pref_trackball_reset_summary">Alle Farben und Apps zurücksetzen.</string>
   <string name="dialog_trackball_loading">Lade...</string>
   <string name="dialog_trackball_packagelist">Lade Paketliste</string>
+  <string name="trackball_category_dialog_text">Neue Kategorie eingeben</string>
+  <string name="trackball_category_list_title">Kategorie</string>
+  <string name="trackball_category_list_summary">Kategorie auswählen</string>
+  <string name="trackball_category_screen">Kategorie verwalten</string>
+  <string name="trackball_category_add_title">Kategorie hinzufügen</string>
+  <string name="trackball_category_add_summary">Eine Kategorie der Liste hinzufügen</string>
+  <string name="trackball_category_remove_title">Kategorie entfernen</string>
+  <string name="trackball_category_remove_summary">Eine Kategorie aus der Liste entfernen</string>
+  <string name="trackball_remove_default_toast">Die Standardkategorie kann nicht entfernt werden.</string>
+  <string name="trackball_reset_all">Alle Farben und Kategorien zurücksetzen.</string>
+  <string name="trackball_array_error">Leider ist ein Fehler aufgetreten. Dieses Paket ist in die Kategorie \"Verschiedenes\" verschoben worden.</string>
 
   <!-- Trackball Settings : Warning dialog -->
   <string name="notification_battery_warning_title">WARNUNG: Kann Batterieentladung beschleunigen</string>
@@ -171,8 +185,10 @@
   <string name="pref_trackball_wake_summary">Aufwecken des Gerätes durch Drücken des Trackballs.</string>
   <string name="pref_trackball_unlock_title">Trackball-Entsperren</string>
   <string name="pref_trackball_unlock_summary">Entsperren des Gerätes durch Drücken des Trackballs</string>
-  <string name="pref_menu_unlock_title">Menu entsperren</string>
-  <string name="pref_menu_unlock_summary">Menu-Taste entsperrt das Gerät.</string>
+  <string name="pref_menu_unlock_title">Mit MENÜ entsperren</string>
+  <string name="pref_menu_unlock_summary">Menütaste entsperrt das Gerät.</string>
+  <string name="pref_lockscreen_quick_unlock_control_title">Schnelles Entsperren</string>
+  <string name="pref_lockscreen_quick_unlock_control_summary">PIN und Passwort ohne Bestätigung eingeben. Löschen gilt als Fehlversuch.</string>
 
   <!-- Long Press Home -->
   <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
@@ -191,8 +207,8 @@
   <string name="performance_settings_summary">Tweaks für Geräteleistung</string>
 
   <!-- Performance Settings : Compcache -->
-  <string name="pref_compcache_title">Compcache verwenden</string>
-  <string name="pref_compcache_summary">Speicher komprimieren um Kapazitäten virtuell zu erhöhen (Neustart erforderlich)</string>
+  <string name="pref_compcache_title">Compcache-Speichernutzung</string>
+  <string name="pref_compcache_summary">Für virtuell erhöhte Kapazitäten Compcache einschalten und Größe auswählen. (Neustart erforderlich)</string>
 
   <!-- Performance Settings : JIT Mode -->
   <string name="pref_jit_mode_title">JIT verwenden</string>
@@ -307,6 +323,41 @@
   <string name="title_not_exp_bar_color_mask">Farbe der Elemente</string>
   <string name="summary_not_exp_bar_color_mask">Farbe für Elemente der runtergezogenen Statuszeile wählen</string>
 
+  <!-- Expanded View Power Widget -->
+  <string name="title_widget_buttons">Energie-Widget</string>
+  <string name="title_expanded_widget">Energiesteuerung in Benachrichtigungsfeld</string>
+  <string name="summary_expanded_widget">Tasten für Energiesteuerung in aufgeklappter Benachrichtigungsanzeige</string>
+  <string name="expanded_color_mask">Farbe der Anzeige</string>
+  <string name="title_widget_picker">Anzuzeigende Tasten</string>
+  <string name="summary_widget_picker">Tasten auswählen, die angezeigt werden sollen.</string>
+  <string name="title_toggle_wifi">WLAN</string>
+  <string name="title_toggle_bluetooth">Bluetooth</string>
+  <string name="title_toggle_gps">GPS</string>
+  <string name="title_toggle_sound">Töne/Vibration</string>
+  <string name="title_toggle_brightness">Helligkeit</string>
+  <string name="title_toggle_sync">Synchronisierung</string>
+  <string name="title_toggle_wifiap">WLAN-Accesspoint</string>
+  <string name="title_toggle_screentimeout">Bildschirm abschalten</string>
+  <string name="title_toggle_mobiledata">Mobilfunkdaten</string>
+  <string name="title_toggle_lockscreen">Bildschirm sperren</string>
+  <string name="title_toggle_networkmode">2G/3G</string>
+  <string name="title_toggle_autorotate">Autom. Ausrichtung</string>
+  <string name="title_toggle_airplane">Flugzeugmodus</string>
+  <string name="title_toggle_flashlight">LED-Blitzlicht</string>
+  <string name="title_toggle_sleep">In Standby wechseln</string>
+  <string name="title_button_modes">Modi für Tasten</string>
+  <string name="pref_brightness_mode_title">Helligkeitsmodi</string>
+  <string name="pref_brightness_mode_summary">Helligkeitsstufen auswählen</string>
+  <string name="pref_network_mode_title">Netzwerkmodi</string>
+  <string name="pref_network_mode_summary">Netzwerkmodus auswählen</string>
+  <string name="pref_screentimeout_mode_title">Bildschirmabschaltung</string>
+  <string name="pref_screentimeout_mode_summary">Die Zeiten für die Bildschirmabschaltung auswählen</string>
+  <string name="pref_ring_mode_title">Modi für Töne</string>
+  <string name="pref_ring_mode_summary">Den Modus für Töne und Vibration auswählen</string>
+  <string name="pref_flash_mode_title">Blitzintensität</string>
+  <string name="pref_flash_mode_summary">Wähle zwischen normaler und hoher Helligkeit des Blitzlichts</string>
+  <string name="widget_max_buttons">Mehr als 6 Tasten können nicht angezeigt werden.</string>
+
   <!-- Performance : Lock home memory -->
   <string name="pref_lock_home_title">Home-App im Speicher</string>
   <string name="pref_lock_home_summary">Versuchen die derzeitige Home-App im Speicher zu halten</string>
@@ -393,4 +444,8 @@
   <string name="quiet_hours_dim">LED abdunkeln</string>
   <string name="quiet_hours_dim_on">LED wird abgedunkelt (wenn möglich)</string>
   <string name="quiet_hours_dim_off">LED behält volle Helligkeit</string>
+
+  <string name="cmstats_title">Anonyme Statistiken</string>
+  <string name="cmstats_summary">Helfe CyanogenMod zu verbessern durch das anonyme Berichten von Statistiken über dein Gerät</string>
+
 </resources>
