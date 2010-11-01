@@ -198,6 +198,8 @@
     <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device</string>
     <string name="pref_lockscreen_quick_unlock_control_title">Quick Unlock</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">No need to press OK when entering Pin or Password. Delete counts as bad try.</string>
+    <string name="pref_lockscreen_phone_messaging_control_title">Phone and Messaging</string>
+    <string name="pref_lockscreen_phone_messaging_control_summary">Phone and Messaging accesible from Locksreen.</string>
 
 
     <!-- Long Press Home -->

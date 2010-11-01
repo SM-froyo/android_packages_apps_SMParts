@@ -19,6 +19,7 @@ public class InputActivity extends PreferenceActivity {
     private static final String MENU_UNLOCK_PREF = "pref_menu_unlock";
     private static final String BUTTON_CATEGORY = "pref_category_button_settings";
     private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control";
+    private static final String LOCKSCREEN_PHONE_MESSAGING_TAB = "lockscreen_phone_messaging_tab";
     
     private CheckBoxPreference mMusicControlPref;
     private CheckBoxPreference mAlwaysMusicControlPref;
@@ -26,6 +27,7 @@ public class InputActivity extends PreferenceActivity {
     private CheckBoxPreference mTrackballUnlockPref;
     private CheckBoxPreference mMenuUnlockPref;
     private CheckBoxPreference mQuickUnlockScreenPref;
+    private CheckBoxPreference mPhoneMessagingTabPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,11 @@ public class InputActivity extends PreferenceActivity {
                 prefSet.findPreference(LOCKSCREEN_QUICK_UNLOCK_CONTROL);
         mQuickUnlockScreenPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0) == 1);
+
+        /* Lockscreen Phone Messaging Tab */
+        mPhoneMessagingTabPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_PHONE_MESSAGING_TAB);
+        mPhoneMessagingTabPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_PHONE_MESSAGING_TAB, 0) == 1);
 
         /* Trackball Wake */
         mTrackballWakePref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_WAKE_PREF);
@@ -90,6 +97,11 @@ public class InputActivity extends PreferenceActivity {
             value = mQuickUnlockScreenPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, value ? 1 : 0);
+            return true;
+        } else if (preference == mPhoneMessagingTabPref) {
+            value = mPhoneMessagingTabPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_PHONE_MESSAGING_TAB, value ? 1 : 0);
             return true;
         } else if (preference == mTrackballWakePref) {
             value = mTrackballWakePref.isChecked();

@@ -26,6 +26,9 @@
             android:summary="@string/pref_lockscreen_always_music_controls_summary" />
         <CheckBoxPreference android:key="lockscreen_quick_unlock_control"
             android:title="@string/pref_lockscreen_quick_unlock_control_title" android:summary="@string/pref_lockscreen_quick_unlock_control_summary" />
+        <CheckBoxPreference android:key="lockscreen_phone_messaging_tab"
+            android:title="@string/pref_lockscreen_phone_messaging_control_title" 
+            android:summary="@string/pref_lockscreen_phone_messaging_control_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/button_settings_title" android:key="pref_category_button_settings">
