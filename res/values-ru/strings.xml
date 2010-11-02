@@ -339,9 +339,9 @@
     <string name="light_levels_dim_title">Затемнение экрана</string>
     <string name="light_levels_dim_summary">Яркость использемая для затемнения экрана</string>
     <string name="light_levels_editor_title">Редактировать другие уровни...</string>
-    <string name="light_decrease_enabled_title">Лёгкое уменьшение</string>
-    <string name="light_decrease_enabled_summary">Включение лёгкого понижения света. Используйте гистерезис, чтобы уменьшить мерцание.</string>
-    <string name="light_decrease_hysteresis_title">Гистерезис уменьшения</string>
+    <string name="light_decrease_enabled_title">Плавное затемнение</string>
+    <string name="light_decrease_enabled_summary">Включение плавного затемнения подсветки. Используйте гистерезис, чтобы уменьшить мерцание.</string>
+    <string name="light_decrease_hysteresis_title">Гистерезис затемнения</string>
     <string name="light_decrease_hysteresis_summary">Насколько будут перекрыты значения датчика освещённости.</string>
 
     <!-- Light sensor levels -->
@@ -403,6 +403,7 @@
 	
     <!-- Expanded View Power Widget -->
     <string name="title_expanded_widget">Виджет в панели</string>
+    <string name="title_widget_buttons">Виджет в панели</string>
     <string name="summary_expanded_widget">Использовать элементы управления питанием в выпадающей панели</string>
     <string name="expanded_color_mask">Цвет индикатора</string>
     <string name="title_widget_picker">Кнопки виджета</string>
@@ -420,6 +421,7 @@
     <string name="title_toggle_networkmode">2G/3G</string>
     <string name="title_toggle_autorotate">Автоповорот</string>
     <string name="title_toggle_airplane">Режим самолёта</string>
+	<string name="title_toggle_sleep">Выключить экран</string>
 	<string name="title_toggle_flashlight">LED фонарик</string>
     <string name="title_button_modes">Режимы кнопок</string>
     <string name="pref_brightness_mode_title">Режимы подсветки</string>
