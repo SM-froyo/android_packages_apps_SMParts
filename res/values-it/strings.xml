@@ -175,8 +175,8 @@
 
     <!-- Input Settings -->
     <string name="input_settings_title">Impostazioni input</string>
-    <string name="input_settings_summary">Scegli il comportamento dei pulsanti</string>
-    <string name="button_settings_title">Impostazioni pulsanti</string>
+    <string name="input_settings_summary">Scegli il comportamento dei tasti</string>
+    <string name="button_settings_title">Impostazioni tasti</string>
     <string name="lockscreen_settings_title">Impostazioni Lockscreen</string>
     <string name="pref_lockscreen_music_controls_title">Controlli player musicale</string>
     <string name="pref_lockscreen_music_controls_summary">Visualizza i controlli del player musicale nel lockscreen</string>
@@ -205,7 +205,7 @@
 
     <!-- Performance Settings -->
     <string name="performance_settings_title">Impostazioni performance</string>
-    <string name="performance_settings_summary">Modifiche performance del dispositivo</string>
+    <string name="performance_settings_summary">Modifiche alle performance del dispositivo</string>
 
     <!-- Performance Settings : Compcache -->
     <string name="pref_compcache_title">Usa compcache</string>
@@ -358,7 +358,7 @@
     <string name="pref_ring_mode_title">Mod. Audio</string>
     <string name="pref_ring_mode_summary">Scegli le modalità del tasto per l\'audio</string>
     <string name="pref_flash_mode_title">Mod. Torcia</string>
-    <string name="pref_flash_mode_summary">Scegli tra Normal e High / Death Ray(Evo)</string>
+    <string name="pref_flash_mode_summary">Scegli tra Normale e Forte / Death Ray(Evo)</string>
     <string name="widget_max_buttons">6 è il numero massimo di tasti.</string>
 
 

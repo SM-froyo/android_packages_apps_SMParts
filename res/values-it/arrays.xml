@@ -127,6 +127,31 @@
         <item>Valori di sistema attenuati</item>
         <item>Volume musica (default)</item>
     </string-array>
-    
+
+<string-array name="entries_brightness_widget">
+        <item>Auto/Debole/40%/100%</item>
+        <item>Auto/Debole/25%/75%/100%</item>
+        <item>Auto/25%/100%</item>
+        <item>Debole/100%</item>
+    </string-array>
+
+    <string-array name="entries_network_widget">
+        <item>2G/3G+2G</item>
+        <item>2G/Solo 3G</item>
+        <item>2G/Solo 3G/3G+2G</item>
+    </string-array>
+
+    <string-array name="entries_ring_widget">
+        <item>Suono+Vibrazione/Vibrazione</item>
+        <item>Suono/Vibrazione</item>
+        <item>Suono/Silenzioso</item>
+        <item>Suono+Vib/Vib/Silenzioso</item>
+        <item>Suono/Vibrazione/Silenzioso</item>
+    </string-array>
+
+    <string-array name="entries_flash_widget">
+        <item>Normale</item>
+        <item>Forte / Death Ray</item>
+    </string-array>
 
 </resources>
