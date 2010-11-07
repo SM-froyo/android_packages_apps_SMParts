@@ -196,6 +196,8 @@
     <string name="pref_menu_unlock_summary">Sblocca il telefono premendo il tasto menu</string>
     <string name="pref_lockscreen_quick_unlock_control_title">Sblocco veloce</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">Non è richiesto premere OK dopo aver inserito il PIN o la Password. Cancellare conta come tentativo fallito.</string>
+    <string name="pref_lockscreen_phone_messaging_control_title">Telefono e Messaggi</string>
+    <string name="pref_lockscreen_phone_messaging_control_summary">Telefono e Messaggi accessibili dal lockscreen.</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press tasto home</string>
