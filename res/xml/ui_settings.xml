@@ -108,6 +108,14 @@
             android:title="@string/pref_pinch_reflow_title"
             android:summary="@string/pref_pinch_reflow_summary" />
     </PreferenceCategory>
+
+    <!-- Overscrolling -->
+    <PreferenceCategory android:title="@string/ui_overscroll_title">
+        <CheckBoxPreference android:key="pref_overscroll"
+            android:title="@string/pref_overscroll_title"
+            android:summaryOn="@string/pref_overscroll_summary_on"
+            android:summaryOff="@string/pref_overscroll_summary_off" />
+    </PreferenceCategory>
     
     <PreferenceCategory android:title="@string/ui_lockscreen_title">
         <!-- screen timeout delay -->

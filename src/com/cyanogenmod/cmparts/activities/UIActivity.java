@@ -48,6 +48,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String ROTATION_270_PREF = "pref_rotation_270";
     private static final String RENDER_EFFECT_PREF = "pref_render_effect";
     private static final String POWER_PROMPT_PREF = "power_dialog_prompt";
+    private static final String OVERSCROLL_PREF = "pref_overscroll";
     
     /* Screen Lock */
     private static final String LOCKSCREEN_TIMEOUT_DELAY_PREF = "pref_lockscreen_timeout_delay";
@@ -67,6 +68,8 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private CheckBoxPreference mPowerWidget;
     private Preference mPowerWidgetColor;
     private PreferenceScreen mPowerPicker;
+
+    private CheckBoxPreference mOverscrollPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -132,6 +135,11 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
         mPowerWidget.setChecked((Settings.System.getInt(getContentResolver(),
                     Settings.System.EXPANDED_VIEW_WIDGET, 1) == 1));
+
+        /* Overscroll */
+        mOverscrollPref = (CheckBoxPreference) prefSet.findPreference(OVERSCROLL_PREF);
+        mOverscrollPref.setChecked(Settings.System.getInt(getContentResolver(), 
+                Settings.System.ALLOW_OVERSCROLL, 1) == 1);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -194,6 +202,12 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                 mWidgetColorListener,
                 readWidgetColor());
             cp.show();
+        }
+
+        if (preference == mOverscrollPref) {
+            value = mOverscrollPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ALLOW_OVERSCROLL, value ? 1 : 0);
         }
 
         return true;

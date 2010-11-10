@@ -23,6 +23,12 @@
     <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
     <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>
 
+    <!-- User interface : Overscroll -->
+    <string name="ui_overscroll_title">Overscrolling</string>
+    <string name="pref_overscroll_title">Enable overscrolling</string>
+    <string name="pref_overscroll_summary_on">Scrollable objects overshoot and bounce back</string>
+    <string name="pref_overscroll_summary_off">Scrollable objects do not overshoot</string>
+
     <!-- User interface : Lock Screen -->
     <string name="ui_lockscreen_title">Screen lock settings</string>
     <string name="pref_lockscreen_delay_title">Delay</string>
