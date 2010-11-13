@@ -23,6 +23,12 @@
     <string name="pref_pinch_reflow_title">ピンチインリフロー</string>
     <string name="pref_pinch_reflow_summary">つまんでズームした後、改行を調整する</string>
 
+    <!-- User interface : Overscroll -->
+    <string name="ui_overscroll_title">オーバースクロール</string>
+    <string name="pref_overscroll_title">オーバースクロールを有効にする</string>
+    <string name="pref_overscroll_summary_on">スクロールオブジェクトはオーバーシュートして跳ね返る</string>
+    <string name="pref_overscroll_summary_off">スクロールオブジェクトはオーバーシュートしない</string>
+
     <!-- Color Picker -->
     <string name="title_color_picker">色を選択</string>
     <string name="msg_color_picker">中央をタップして確定\n戻るボタンでキャンセル</string>
@@ -348,6 +354,7 @@
     <string name="pref_ring_mode_summary">サウンドトグルで変更するモードの選択</string>
     <string name="pref_flash_mode_title">フラッシュ</string>
     <string name="pref_flash_mode_summary">HighかDeath Ray(Evo)を選択</string>
+    <string name="widget_max_buttons">設置できるボタンは6個までです</string>
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">ホームをメモリに維持</string>
