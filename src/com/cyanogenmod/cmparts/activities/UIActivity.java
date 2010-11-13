@@ -139,7 +139,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         /* Overscroll */
         mOverscrollPref = (CheckBoxPreference) prefSet.findPreference(OVERSCROLL_PREF);
         mOverscrollPref.setChecked(Settings.System.getInt(getContentResolver(), 
-                Settings.System.ALLOW_OVERSCROLL, 1) == 1);
+                Settings.System.ALLOW_OVERSCROLL, 0) == 1);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
