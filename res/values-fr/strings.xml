@@ -23,6 +23,12 @@
     <string name="pref_pinch_reflow_title">Réarrangement après zoom</string>
     <string name="pref_pinch_reflow_summary">Réarranger le contenu immédiatement après un zoom avant</string>
 
+    <!-- User interface : Overscroll -->
+    <string name="ui_overscroll_title">Surdéfilement</string>
+    <string name="pref_overscroll_title">Activer surdéfilement</string>
+    <string name="pref_overscroll_summary_on">Les objets défilants s\'arrêteront en bout de course en imitant un effet de ressort</string>
+    <string name="pref_overscroll_summary_off">Les objets défilants s\'arrêteront brutalement en bout de course</string>
+
     <!-- User interface : Lock Screen -->
     <string name="ui_lockscreen_title">Paramètres de l\'écran de verrouillage</string>
     <string name="pref_lockscreen_delay_title">Délai</string>
@@ -357,6 +363,7 @@
     <string name="pref_ring_mode_summary">Choisir comment le bouton Sonnerie se comportera</string>
     <string name="pref_flash_mode_title">Mode flash</string>
     <string name="pref_flash_mode_summary">Choisir la puissance du flash : Haute ou Death Ray (Evo uniquement)</string>
+    <string name="widget_max_buttons">Le nombre maximum de boutons est de 6</string>
 
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Garder l\'accueil en RAM</string>
