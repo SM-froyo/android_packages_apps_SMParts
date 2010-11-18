@@ -461,4 +461,8 @@
 
     <string name="cmstats_title">Anonymous statistics</string>
     <string name="cmstats_summary">Help make CM better by opting-in to anonymous statistics reporting</string>
+    <string name="user_defined_key1">Quick Key 1</string>
+    <string name="user_defined_key2">Quick Key 2</string>
+    <string name="user_defined_key3">Quick Key 3</string>
+    <string name="user_defined_not_set">Nothing Set</string>
 </resources>
