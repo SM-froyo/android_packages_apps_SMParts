@@ -22,6 +22,12 @@
   <string name="pref_pinch_reflow_title">Textfluss nach Pinch</string>
   <string name="pref_pinch_reflow_summary">Nach Pinch-To-Zoom Inhalte sofort neu anpassen</string>
 
+  <!-- User interface : Overscroll -->
+  <string name="ui_overscroll_title">Überscrollen</string>
+  <string name="pref_overscroll_title">Überscrollen aktivieren</string>
+  <string name="pref_overscroll_summary_on">Scrollbare Objekte überschwingen und federn zurück</string>
+  <string name="pref_overscroll_summary_off">Scrollbare Objekte überschwingen nicht</string>
+
   <!-- User interface : Lock Screen -->
   <string name="ui_lockscreen_title">Bildschirmsperre einstellen</string>
   <string name="pref_lockscreen_delay_title">Verzögerung</string>
