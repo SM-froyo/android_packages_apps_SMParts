@@ -189,6 +189,8 @@
   <string name="pref_menu_unlock_summary">Menütaste entsperrt das Gerät.</string>
   <string name="pref_lockscreen_quick_unlock_control_title">Schnelles Entsperren</string>
   <string name="pref_lockscreen_quick_unlock_control_summary">PIN und Passwort ohne Bestätigung eingeben. Löschen gilt als Fehlversuch.</string>
+  <string name="pref_lockscreen_phone_messaging_control_title">Telefon und SMS/MMS</string>
+  <string name="pref_lockscreen_phone_messaging_control_summary">Telefon und SMS/MMS Slider auf gesperrtem Bildschirm anzeigen.</string>
 
   <!-- Long Press Home -->
   <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
