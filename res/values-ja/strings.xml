@@ -185,7 +185,8 @@
     <string name="pref_trackball_screen_summary">スクリーンオン中はトラックボールを点滅させる</string>
     <string name="pref_lockscreen_quick_unlock_control_title">クイックアンロック</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">PINやパワードを入力後、OKを押す必要を省きます。不正入力時のカウントは無効になります。</string>
-
+    <string name="pref_lockscreen_phone_messaging_control_title">電話とメッセージ</string>
+    <string name="pref_lockscreen_phone_messaging_control_summary">ロックスクリーンから電話とメッセージにアクセスできるようにする</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">ホーム長押し設定</string>
