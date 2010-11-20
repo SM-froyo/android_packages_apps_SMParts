@@ -35,6 +35,14 @@
     <item>Kalibriert (N1) Kalt</item>
   </string-array>
 
+  <string-array name="entries_overscroll_weight">
+    <item>Extra schwer</item>
+    <item>Schwer</item>
+    <item>Mittel</item>
+    <item>Leicht</item>
+    <item>Extra leicht</item>
+  </string-array>
+
   <string-array name="entries_trackball_colors">
     <item>Grün</item>
     <item>Weiß</item>
