@@ -49,6 +49,14 @@
 	    <item>Calibrato (N1) Cool</item>
 	</string-array>
 
+    <string-array name="entries_overscroll_weight">
+        <item>Pesantissimo</item>
+        <item>Pesante</item>
+        <item>Medio</item>
+        <item>Leggero</item>
+        <item>Leggerissimo</item>
+        </string-array>
+
     <string-array name="entries_trackball_colors">
         <item>Verde</item>
         <item>Bianco</item>

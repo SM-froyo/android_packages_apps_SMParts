@@ -28,6 +28,8 @@
     <string name="pref_overscroll_title">Attiva overscrolling</string>
     <string name="pref_overscroll_summary_on">Effetto di rimbalzo per elementi scorrevoli</string>
     <string name="pref_overscroll_summary_off">Nessun effetto di rimbalzo per elementi scorrevoli</string>
+    <string name="pref_overscroll_weight_title">Peso overscrolling</string>
+    <string name="pref_overscroll_weight_summary">Seleziona il peso degli elementi scorrevoli</string>
 
     <!-- User interface : Lock Screen -->
         <string name="ui_lockscreen_title">Impostazioni Lockscreen</string>
@@ -459,4 +461,8 @@
 
     <string name="cmstats_title">Statistiche anonime</string>
     <string name="cmstats_summary">Aiuta a migliorare CM accettando l\'invio di statistiche di utilizo anonime</string>
+    <string name="user_defined_key1">Tasto Rapido 1</string>
+    <string name="user_defined_key2">Tasto Rapido 2</string>
+    <string name="user_defined_key3">Tasto Rapido 3</string>
+    <string name="user_defined_not_set">Non definito</string>
 </resources>
