@@ -27,6 +27,8 @@
   <string name="pref_overscroll_title">Überscrollen aktivieren</string>
   <string name="pref_overscroll_summary_on">Scrollbare Objekte überschwingen und federn zurück</string>
   <string name="pref_overscroll_summary_off">Scrollbare Objekte überschwingen nicht</string>
+  <string name="pref_overscroll_weight_title">Überscroll-Gewicht</string>
+  <string name="pref_overscroll_weight_summary">Gewicht von scrollbaren Objekten auswählen</string>
 
   <!-- User interface : Lock Screen -->
   <string name="ui_lockscreen_title">Bildschirmsperre einstellen</string>
@@ -455,5 +457,9 @@
 
   <string name="cmstats_title">Anonyme Statistiken</string>
   <string name="cmstats_summary">Helfe CyanogenMod zu verbessern durch das anonyme Berichten von Statistiken über dein Gerät</string>
+  <string name="user_defined_key1">Schnelltaste 1</string>
+  <string name="user_defined_key2">Schnelltaste 2</string>
+  <string name="user_defined_key3">Schnelltaste 3</string>
+  <string name="user_defined_not_set">Nichts gesetzt</string>
 
 </resources>
