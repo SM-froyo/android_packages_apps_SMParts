@@ -91,6 +91,22 @@
 	    <item>8</item>
 	    <item>9</item>
 	</string-array>
+	
+	<string-array name="entries_overscroll_weight">
+        <item>Extra Heavy</item>
+        <item>Heavy</item>
+        <item>Medium</item>
+        <item>Light</item>
+        <item>Extra Light</item>
+	</string-array>
+
+	<string-array name="values_overscroll_weight">
+		<item>1</item>
+		<item>3</item>
+		<item>5</item>
+		<item>7</item>
+		<item>9</item>
+	</string-array>
     
     <string-array name="entries_trackball_colors">
         <item>Green</item>
