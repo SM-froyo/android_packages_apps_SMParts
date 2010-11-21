@@ -28,6 +28,8 @@
     <string name="pref_overscroll_title">オーバースクロールを有効にする</string>
     <string name="pref_overscroll_summary_on">スクロールオブジェクトはオーバーシュートして跳ね返る</string>
     <string name="pref_overscroll_summary_off">スクロールオブジェクトはオーバーシュートしない</string>
+    <string name="pref_overscroll_weight_title">オーバースクロールウェイト</string>
+    <string name="pref_overscroll_weight_summary">スクロールオブジェクトのウェイトを選択</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">色を選択</string>
