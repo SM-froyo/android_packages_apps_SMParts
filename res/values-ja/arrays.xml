@@ -48,6 +48,14 @@
         <item>調整済み(N1) Cold</item>
     </string-array>
 
+    <string-array name="entries_overscroll_weight">
+        <item>かなり重い</item>
+        <item>重い</item>
+        <item>普通</item>
+        <item>軽い</item>
+        <item>かなり軽い</item>
+    </string-array>
+
     <string-array name="entries_trackball_colors">
         <item>緑</item>
         <item>白</item>
