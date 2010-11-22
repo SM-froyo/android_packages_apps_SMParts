@@ -36,11 +36,11 @@
   </string-array>
 
   <string-array name="entries_overscroll_weight">
-    <item>Extra schwer</item>
-    <item>Schwer</item>
+    <item>Sehr stark</item>
+    <item>Stark</item>
     <item>Mittel</item>
-    <item>Leicht</item>
-    <item>Extra leicht</item>
+    <item>Schwach</item>
+    <item>Sehr schwach</item>
   </string-array>
 
   <string-array name="entries_trackball_colors">

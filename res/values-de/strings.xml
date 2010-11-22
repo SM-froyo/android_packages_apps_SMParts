@@ -27,8 +27,8 @@
   <string name="pref_overscroll_title">Überscrollen aktivieren</string>
   <string name="pref_overscroll_summary_on">Scrollbare Objekte überschwingen und federn zurück</string>
   <string name="pref_overscroll_summary_off">Scrollbare Objekte überschwingen nicht</string>
-  <string name="pref_overscroll_weight_title">Überscroll-Gewicht</string>
-  <string name="pref_overscroll_weight_summary">Gewicht von scrollbaren Objekten auswählen</string>
+  <string name="pref_overscroll_weight_title">Überscroll-Stärke</string>
+  <string name="pref_overscroll_weight_summary">Stärke des Überscroll-Effekts einstellen</string>
 
   <!-- User interface : Lock Screen -->
   <string name="ui_lockscreen_title">Bildschirmsperre einstellen</string>
