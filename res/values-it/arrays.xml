@@ -50,11 +50,11 @@
 	</string-array>
 
     <string-array name="entries_overscroll_weight">
-        <item>Pesantissimo</item>
-        <item>Pesante</item>
+        <item>Molto forte</item>
+        <item>Forte</item>
         <item>Medio</item>
-        <item>Leggero</item>
-        <item>Leggerissimo</item>
+        <item>Debole</item>
+        <item>Molto debole</item>
         </string-array>
 
     <string-array name="entries_trackball_colors">

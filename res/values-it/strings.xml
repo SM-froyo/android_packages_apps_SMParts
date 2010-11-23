@@ -28,8 +28,8 @@
     <string name="pref_overscroll_title">Attiva overscrolling</string>
     <string name="pref_overscroll_summary_on">Effetto di rimbalzo per elementi scorrevoli</string>
     <string name="pref_overscroll_summary_off">Nessun effetto di rimbalzo per elementi scorrevoli</string>
-    <string name="pref_overscroll_weight_title">Peso overscrolling</string>
-    <string name="pref_overscroll_weight_summary">Seleziona il peso degli elementi scorrevoli</string>
+    <string name="pref_overscroll_weight_title">Misura overscrolling</string>
+    <string name="pref_overscroll_weight_summary">Seleziona l\'entità dell\'effetto di rimbalzo</string>
 
     <!-- User interface : Lock Screen -->
         <string name="ui_lockscreen_title">Impostazioni Lockscreen</string>
@@ -199,7 +199,7 @@
     <string name="pref_lockscreen_quick_unlock_control_title">Sblocco veloce</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">Non è richiesto premere OK dopo aver inserito il PIN o la Password. Cancellare conta come tentativo fallito.</string>
     <string name="pref_lockscreen_phone_messaging_control_title">Telefono e Messaggi</string>
-    <string name="pref_lockscreen_phone_messaging_control_summary">Telefono e Messaggi accessibili dal lockscreen.</string>
+    <string name="pref_lockscreen_phone_messaging_control_summary">Applicazioni Telefono e Messaggi accessibili dal lockscreen.</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press tasto home</string>
@@ -401,7 +401,7 @@
     <string name="light_decrease_enabled_title">Diminuzione luce</string>
     <string name="light_decrease_enabled_summary">Attiva per consentire di diminuire la luce. Usa isteresi per ridurre lo sfarfallio.</string>
     <string name="light_decrease_hysteresis_title">Diminuisci isteresi</string>
-    <string name="light_decrease_hysteresis_summary">Seleziona di quanto è consentito diminuire la luce.</string>
+    <string name="light_decrease_hysteresis_summary">Scegli di quanto abbassare i livelli del sensore.</string>
 
     <!-- Light sensor levels -->
     <string name="ll_title">Livelli sensore</string>
