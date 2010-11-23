@@ -29,8 +29,13 @@
         <CheckBoxPreference android:key="lockscreen_phone_messaging_tab"
             android:title="@string/pref_lockscreen_phone_messaging_control_title" 
             android:summary="@string/pref_lockscreen_phone_messaging_control_summary" />
+        <PreferenceScreen android:key="lockscreen_gestures"
+            android:title="@string/pref_lockscreen_title">
+                <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.cyanogenmod.cmparts"
+                    android:targetClass="com.cyanogenmod.cmparts.activities.GestureMenuActivity" />
+        </PreferenceScreen>
     </PreferenceCategory>
-
     <PreferenceCategory android:title="@string/button_settings_title" android:key="pref_category_button_settings">
         <CheckBoxPreference android:key="pref_trackball_wake"
             android:title="@string/pref_trackball_wake_title" android:summary="@string/pref_trackball_wake_summary" />

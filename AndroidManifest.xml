@@ -129,22 +129,40 @@
         <provider android:name=".provider.SettingsProvider"
             android:authorities="com.cyanogenmod.cmparts.provider.Settings" />
 
-		<activity android:name=".activities.WidgetOptionsActivity">
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
-			</intent-filter>
-		</activity>
+        <activity android:name=".activities.WidgetOptionsActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
 
-		<receiver android:name=".provider.RenderFXWidgetProvider" android:label="@string/widget_name">
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-			</intent-filter>
-			<meta-data
-				android:name="android.appwidget.provider"
-				android:resource="@xml/appwidget_info" />
-		</receiver>
+        <activity android:name=".activities.GestureMenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
 
-		<service android:enabled="true" android:name=".services.RenderFXService" />
-		<service android:enabled="true" android:name=".services.BatteryService" />
+        <activity android:name=".activities.GestureListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.GestureCreateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.EDIT"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".provider.RenderFXWidgetProvider" android:label="@string/widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+            android:name="android.appwidget.provider"
+            android:resource="@xml/appwidget_info" />
+        </receiver>
+
+        <service android:enabled="true" android:name=".services.RenderFXService" />
+        <service android:enabled="true" android:name=".services.BatteryService" />
     </application>
 </manifest>

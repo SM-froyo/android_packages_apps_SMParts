@@ -467,4 +467,26 @@
     <string name="user_defined_key2">Quick Key 2</string>
     <string name="user_defined_key3">Quick Key 3</string>
     <string name="user_defined_not_set">Nothing Set</string>
+
+    <!--  Lockscreen gesture strings -->
+    <string name="pref_lockscreen_title">Lockscreen gestures</string>
+    <string name="pref_lockscreen_gestures_enable_title">Use lockscreen gestures</string>
+    <string name="pref_lockscreen_gestures_trail_title">Show gesture trails</string>
+    <string name="pref_lockscreen_gestures_builder_title">Build gestures</string>
+    <string name="pref_lockscreen_gestures_sensitivity_title">Sensitivity</string>
+    <string name="label_create_gesture">Create a gesture</string>
+    <string name="gestures_button_add">Add gesture</string>
+    <string name="gestures_button_discard">Discard</string>
+    <string name="gestures_button_done">Done</string>
+    <string name="gestures_shortcut_picker_button_label">Pick a shortcut or activity for this gesture</string>
+    <string name="gestures_error_missing_shortcut">You must pick an action for this gesture!</string>
+    <string name="gestures_save_success">Gesture saved in %s</string>
+    <string name="gestures_cancel_action">Cancel</string>
+    <string name="gestures_loading">Loading gestures...</string>
+    <string name="gestures_empty">No gestures</string>
+    <string name="gestures_activity">Gestures</string>
+    <string name="gestures_delete">Delete</string>
+    <string name="gestures_delete_success">Gesture deleted</string>
+    <string name="gestures_error_loading">Problem with gesture file operation.</string>
+
 </resources>
