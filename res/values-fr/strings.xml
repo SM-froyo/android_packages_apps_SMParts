@@ -28,6 +28,8 @@
     <string name="pref_overscroll_title">Activer surdéfilement</string>
     <string name="pref_overscroll_summary_on">Les objets défilants s\'arrêteront en bout de course en imitant un effet de ressort</string>
     <string name="pref_overscroll_summary_off">Les objets défilants s\'arrêteront brutalement en bout de course</string>
+    <string name="pref_overscroll_weight_title">Longueur surdéfilement</string>
+    <string name="pref_overscroll_weight_summary">Choisir la longueur de l\'effet ressort</string>
 
     <!-- User interface : Lock Screen -->
     <string name="ui_lockscreen_title">Paramètres de l\'écran de verrouillage</string>
@@ -455,4 +457,8 @@
 
     <string name="cmstats_title">Statistiques anonymes</string>
     <string name="cmstats_summary">Aidez CyanogenMod en participant à l\'envoi de statistiques anonymes</string>
+    <string name="user_defined_key1">Touche rapide 1</string>
+    <string name="user_defined_key2">Touche rapide 2</string>
+    <string name="user_defined_key3">Touche rapide 3</string>
+    <string name="user_defined_not_set">Non configuré</string>
 </resources>
