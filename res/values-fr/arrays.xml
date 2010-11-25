@@ -47,6 +47,14 @@
 	    <item>Calibré (N1) Froid</item>
 	</string-array>
 
+    <string-array name="entries_overscroll_weight">
+        <item>Extra long</item>
+        <item>Long</item>
+        <item>Moyen</item>
+        <item>Court</item>
+        <item>Extra court</item>
+    </string-array>
+
     <string-array name="entries_trackball_colors">
         <item>Vert</item>
         <item>Blanc</item>
