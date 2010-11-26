@@ -23,6 +23,14 @@
     <string name="pref_pinch_reflow_title">Перерисовка после увеличения</string>
     <string name="pref_pinch_reflow_summary">Перерисовывать контент немедленно после увеличения</string>
 
+    <!-- User interface : Overscroll -->
+    <string name="ui_overscroll_title">Перепрокрутка</string>
+    <string name="pref_overscroll_title">Перепрокрутка</string>
+    <string name="pref_overscroll_summary_on">Прокручиваемые элементы выезжают за границы и возвращаются обратно</string>
+    <string name="pref_overscroll_summary_off">Прокручиваемые элементы не выезжают за границы</string>
+    <string name="pref_overscroll_weight_title">Размер перепрокрутки</string>
+    <string name="pref_overscroll_weight_summary">Укажите насколько будут перепрокручиватся элементы</string>
+
     <!-- User interface : Lock Screen -->
     <string name="ui_lockscreen_title">Настройка блокировки экрана</string>
     <string name="pref_lockscreen_delay_title">Задержка</string>
@@ -137,7 +145,6 @@
     <string name="notification_battery_warning_title">WARNING: May Cause Battery Drain</string>
     <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incur the drain.</string> -->
 
-
     <!-- Tweaks Extras -->
     <string name="te_title">Экстра</string>
     <string name="te_title_summary">Дополнительные инструменты для настройки интерфейса</string>
@@ -162,7 +169,7 @@
     <string name="summary_apply_theme">Загрузить заранее созданные или сохранённые на SD карту темы</string>
     <string name="title_save_theme">Сохранить текущую тему</string>
     <string name="summary_save_theme">Сохранить текущие настройки цветов интерфейса на SD карту</string>
-    
+
     <!-- Input Settings -->
     <string name="input_settings_title">Ввод</string>
     <string name="input_settings_summary">Настройка поведения кнопок</string>
@@ -178,8 +185,10 @@
     <string name="pref_trackball_unlock_summary">Нажатие на trackball разблокирует устройство</string>
     <string name="pref_menu_unlock_title">Menu - разблокировка</string>
     <string name="pref_menu_unlock_summary">Нажатие на Menu разблокирует устройство</string>
-	<string name="pref_lockscreen_quick_unlock_control_title">Быстрая разблокировка</string>
+    <string name="pref_lockscreen_quick_unlock_control_title">Быстрая разблокировка</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">Не требуется нажимать подтверждение после ввода пароля или PIN.</string>
+    <string name="pref_lockscreen_phone_messaging_control_title">Телефон и SMS</string>
+    <string name="pref_lockscreen_phone_messaging_control_summary">Телефон и SMS доступны с экрана блокировки.</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Долгое нажатие на Home</string>
@@ -313,7 +322,6 @@
     <string name="title_not_exp_bar_color_mask">Цвет панели уведомлений</string>
     <string name="summary_not_exp_bar_color_mask">Выберите цвет, который будет применяться к элементам панели</string>
 
-
     <!-- Performance : Lock home memory -->
     <string name="pref_lock_home_title">Блокировать рабочий стол в памяти</string>
     <string name="pref_lock_home_summary">Пытаться не давать системе выгружать ваш текущий рабочий стол из памяти</string>
@@ -381,7 +389,7 @@
     <string name="sound_notifications_limitvol_dialog">Громкость уведомлений</string>
     <string name="sound_rings_limitvol_dialog">Громкость звонков</string>
     <string name="sound_alarms_limitvol_dialog">Громкость будильников</string>
-    
+
     <!-- Quiet hours -->
     <string name="sound_category_quiet_hours_title">Тихие часы</string>
     <string name="quiet_hours_enabled">Включить тихие часы</string>
@@ -400,7 +408,7 @@
     <string name="quiet_hours_dim">Притушить LED</string>
     <string name="quiet_hours_dim_on">LED будет притушен, если это возможно</string>
     <string name="quiet_hours_dim_off">LED будет работать на полной яркости</string>
-	
+
     <!-- Expanded View Power Widget -->
     <string name="title_expanded_widget">Виджет в панели</string>
     <string name="title_widget_buttons">Виджет в панели</string>
@@ -421,8 +429,8 @@
     <string name="title_toggle_networkmode">2G/3G</string>
     <string name="title_toggle_autorotate">Автоповорот</string>
     <string name="title_toggle_airplane">Режим самолёта</string>
-	<string name="title_toggle_sleep">Выключить экран</string>
-	<string name="title_toggle_flashlight">LED фонарик</string>
+    <string name="title_toggle_sleep">Выключить экран</string>
+    <string name="title_toggle_flashlight">LED фонарик</string>
     <string name="title_button_modes">Режимы кнопок</string>
     <string name="pref_brightness_mode_title">Режимы подсветки</string>
     <string name="pref_brightness_mode_summary">Укажите какие режимы будут меняться кнопкой Подсветка</string>
@@ -432,11 +440,11 @@
     <string name="pref_screentimeout_mode_summary">Укажите какие режимы отключения экрана будут меняться кнопкой Задержка выкл. экрана</string>
     <string name="pref_ring_mode_title">Режимы звука</string>
     <string name="pref_ring_mode_summary">Укажите какие режимы будут меняться кнопкой Звук</string>
-	<string name="pref_flash_mode_title">Режимы фонарика</string>
+    <string name="pref_flash_mode_title">Режимы фонарика</string>
     <string name="pref_flash_mode_summary">Выберите High/Death Ray(EVO)</string>
     <string name="widget_max_buttons">Возможно выбрать только 6 кнопок.</string>
-	
+
     <string name="cmstats_title">Анонимная статистика</string>
     <string name="cmstats_summary">Помогите сделать CM лучше, включите отправку анонимных отчётов</string>
-    
+
 </resources>

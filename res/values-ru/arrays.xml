@@ -153,5 +153,13 @@
         <item>18% (по умолчанию)</item>
         <item>26%</item>
     </string-array>
-	
+
+    <string-array name="entries_overscroll_weight"> 
+        <item>Очень большой</item> 
+        <item>Большой</item> 
+        <item>Средний</item> 
+        <item>Маленький</item> 
+        <item>Очень маленький</item> 
+    </string-array> 
+
 </resources>
