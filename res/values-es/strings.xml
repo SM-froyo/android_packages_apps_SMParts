@@ -181,7 +181,7 @@
     <string name="summary_apply_theme">Escoger un Tema original o uno guardado en su SD card</string>
     <string name="title_save_theme">Guardar Tema actual</string>
     <string name="summary_save_theme">Guarda el Tema actual en su SD card</string>
-    
+
 
     <!-- Input Settings -->
     <string name="input_settings_title">Parametros de Entrada</string>
@@ -253,36 +253,36 @@
     <string name="pref_install_location_summary">Selecciona donde se deben instalar las aplicaciones</string>
 
     <!-- HapticTweaks -->
-    <string name="haptic_title">Haptic feedback tweaks</string>
-    <string name="haptic_summary">Adjust when and how strong haptic feedback occurs</string>
+    <string name="haptic_title">vibracion Haptic</string>
+    <string name="haptic_summary">Adjusar como y cuando vibra el dispositivo</string>
 
-    <string name="title_haptic_feedback">Haptic feedback main</string>
-    <string name="summary_on_haptic_feedback">Use haptic feedback on keypress for softkeys and certain UI interactions</string>
-    <string name="summary_off_haptic_feedback">No haptic feedback on keypress for softkeys and certain UI interactions</string>
+    <string name="title_haptic_feedback">Param. Principales Haptic</string>
+    <string name="summary_on_haptic_feedback">Usar haptic al pulsar las teclas y ciertas interacciones del IU</string>
+    <string name="summary_off_haptic_feedback">No usar haptic al pulsar las teclas y ciertas interacciones del IU</string>
 
-    <string name="title_haptic_feedback_up">Haptic feedback up</string>
-    <string name="summary_on_haptic_feedback_up">Use haptic feedback on key release for softkeys and certain UI interactions</string>
-    <string name="summary_off_haptic_feedback_up">No haptic feedback on key release for softkeys and certain UI interactions</string>
+    <string name="title_haptic_feedback_up">Haptic al soltar</string>
+    <string name="summary_on_haptic_feedback_up">Usar vibración haptic al soltar las teclas y al terminar cietas interaciones con el IU</string>
+    <string name="summary_off_haptic_feedback_up">No Usar vibración haptic al soltar las teclas y al terminar cietas interaciones con el IU</string>
 
-    <string name="title_haptic_feedback_all">Haptic screen items</string>
-    <string name="summary_on_haptic_feedback_all">Use haptic feedback when making screen selections</string>
-    <string name="summary_off_haptic_feedback_all">No haptic feedback when making screen selections</string>
+    <string name="title_haptic_feedback_all">Haptic elementos de pantalla</string>
+    <string name="summary_on_haptic_feedback_all">Usar haptic se realicen selecciones</string>
+    <string name="summary_off_haptic_feedback_all">No usar haptic se realicen seleccione</string>
 
-    <string name="title_haptic_down_decider">Set Down Pattern</string>
-    <string name="title_haptic_up_decider">Set Up Pattern</string>
-    <string name="title_haptic_long_decider">Set Long-Press Pattern</string>
-    <string name="title_haptic_tap_decider">Set Keypad Tap Pattern</string>
+    <string name="title_haptic_down_decider">Ajuste de la vibracion</string>
+    <string name="title_haptic_up_decider">Ajustar vibracion</string>
+    <string name="title_haptic_long_decider">Ajustar vibracion en pulsacion larga</string>
+    <string name="title_haptic_tap_decider">Establecer vibracion al pulsar tecla</string>
 
-    <string name="title_haptic_menu">Haptic Adjust</string>
-    <string name="title_haptic_notice">REBOOT REQUIRED FOR CHANGES TO APPLY GLOBALLY</string>
+    <string name="title_haptic_menu">Ajustes de Haptic</string>
+    <string name="title_haptic_notice">SE REQUIERE REINICIAR PARA VER LAS MODIFICACIONES</string>
 
-    <string name="haptic_delay_desc">ms Off Time</string>
-    <string name="haptic_vibe_desc">ms On Time</string>
+    <string name="haptic_delay_desc">ms timepo Off</string>
+    <string name="haptic_vibe_desc">ms tiempo On</string>
 
-    <string name="haptic_down_description">Adjusting haptic values for button DOWN-PRESSES\n(Virtual hardkeys and certain UI interactions.)</string>
-    <string name="haptic_up_description">Adjusting haptic values for button RELEASES\n(Virtual hardkeys and most screen presses.)</string>
-    <string name="haptic_long_description">Adjusting haptic values for LONG-PRESSES.</string>
-    <string name="haptic_tap_description">Adjusting haptic values for on-screen keyboard taps</string>
+    <string name="haptic_down_description">Ajustar valores haptic a la pulsacion\n(Teclas Hard Virtuales and ciertas interacciones del IU.)</string>
+    <string name="haptic_up_description">Ajustar valores haptic al soltar pulsacion\n(Teclas Hard Virtuales and ciertas interacciones del IU.)</string>
+    <string name="haptic_long_description">Ajustar valores haptic en pulsacion SOSTENIDA.</string>
+    <string name="haptic_tap_description">Ajustar valores haptic al pulsar para encender pantalla</string>
 
     <string name="haptic_plus_minus_desc">Press the Plus or Minus Buttons to add or remove steps in the sequence.</string>
 
