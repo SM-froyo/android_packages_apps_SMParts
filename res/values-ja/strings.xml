@@ -464,4 +464,30 @@
 
     <string name="cmstats_title">匿名利用状況</string>
     <string name="cmstats_summary">匿名の利用状況レポートを有効にすることによってCMの改善に協力できます</string>
+    <string name="user_defined_key1">クイックキー1</string>
+    <string name="user_defined_key2">クイックキー2</string>
+    <string name="user_defined_key3">クイックキー3</string>
+    <string name="user_defined_not_set">なし</string>
+
+    <!--  Lockscreen gesture strings -->
+    <string name="pref_lockscreen_title">ロックスクリーンジェスチャー</string>
+    <string name="pref_lockscreen_gestures_enable_title">ジェスチャーを有効にする</string>
+    <string name="pref_lockscreen_gestures_trail_title">軌跡を表示する</string>
+    <string name="pref_lockscreen_gestures_builder_title">ジェスチャーを作成</string>
+    <string name="pref_lockscreen_gestures_sensitivity_title">感度</string>
+    <string name="label_create_gesture">ジェスチャーを作成</string>
+    <string name="gestures_button_add">ジェスチャーを追加</string>
+    <string name="gestures_button_discard">破棄</string>
+    <string name="gestures_button_done">完了</string>
+    <string name="gestures_shortcut_picker_button_label">このジェスチャーに割り当てるショートカットやアクティビティを選択</string>
+    <string name="gestures_error_missing_shortcut">ジェスチャーにアクションを割り当てる必要があります！</string>
+    <string name="gestures_save_success">%s にジェスチャーを保存しました</string>
+    <string name="gestures_cancel_action">キャンセル</string>
+    <string name="gestures_loading">ジェスチャーをロード中...</string>
+    <string name="gestures_empty">ジェスチャーなし</string>
+    <string name="gestures_activity">ジェスチャー</string>
+    <string name="gestures_delete">削除</string>
+    <string name="gestures_delete_success">ジェスチャーを削除しました</string>
+    <string name="gestures_error_loading">ジェスチャーファイルの操作に問題が発生しました</string>
+
 </resources>
