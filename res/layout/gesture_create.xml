@@ -20,14 +20,35 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gestures_explain_create_screen"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:paddingBottom="10dip" />
     <Button android:id="@+id/shortcut_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/gestures_shortcut_picker_button_label"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:onClick="pickShortcut" />
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <Button android:id="@+id/unlock_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gestures_unlock_only"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:onClick="pickUnlockOnly" />
+        <Button android:id="@+id/sound_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gestures_toggle_sound"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:onClick="pickSoundOnly" />
+    </LinearLayout>
     <android.gesture.GestureOverlayView
         android:id="@+id/gestures_overlay"
         android:layout_width="match_parent"

@@ -1,13 +1,17 @@
 package com.cyanogenmod.cmparts.activities;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import com.cyanogenmod.cmparts.R;
 
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
+import android.gesture.GestureLibraries;
+import android.gesture.GestureLibrary;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -26,7 +30,7 @@ public class InputActivity extends PreferenceActivity {
     private static final String BUTTON_CATEGORY = "pref_category_button_settings";
     private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control";
     private static final String LOCKSCREEN_PHONE_MESSAGING_TAB = "lockscreen_phone_messaging_tab";
-
+    private static final String LOCKSCREEN_DISABLE_UNLOCK_TAB = "lockscreen_disable_unlock_tab";
     private static final String USER_DEFINED_KEY1 = "pref_user_defined_key1";
     private static final String USER_DEFINED_KEY2 = "pref_user_defined_key2";
     private static final String USER_DEFINED_KEY3 = "pref_user_defined_key3";
@@ -39,6 +43,7 @@ public class InputActivity extends PreferenceActivity {
     private CheckBoxPreference mMenuUnlockPref;
     private CheckBoxPreference mQuickUnlockScreenPref;
     private CheckBoxPreference mPhoneMessagingTabPref;
+    private CheckBoxPreference mDisableUnlockTab;
 
     private Preference mUserDefinedKey1Pref;
     private Preference mUserDefinedKey2Pref;
@@ -94,6 +99,18 @@ public class InputActivity extends PreferenceActivity {
         mMenuUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.MENU_UNLOCK_SCREEN, 0) == 1);
 
+        /* Disabling of unlock tab on lockscreen */
+        mDisableUnlockTab = (CheckBoxPreference)
+        prefSet.findPreference(LOCKSCREEN_DISABLE_UNLOCK_TAB);
+        if (!doesUnlockAbilityExist()) {
+            mDisableUnlockTab.setEnabled(false);
+            mDisableUnlockTab.setChecked(false);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.LOCKSCREEN_GESTURES_DISABLE_UNLOCK, 0);
+        } else {
+            mDisableUnlockTab.setEnabled(true);
+        }
+
         PreferenceCategory buttonCategory = (PreferenceCategory)prefSet.findPreference(BUTTON_CATEGORY);
 
         if (!getResources().getBoolean(R.bool.has_trackball)) {
@@ -119,6 +136,14 @@ public class InputActivity extends PreferenceActivity {
         mUserDefinedKey2Pref.setSummary(Settings.System.getString(getContentResolver(), Settings.System.USER_DEFINED_KEY2_APP));
         mUserDefinedKey3Pref.setSummary(Settings.System.getString(getContentResolver(), Settings.System.USER_DEFINED_KEY3_APP));
         mMessagingTabApp.setSummary(Settings.System.getString(getContentResolver(), Settings.System.LOCKSCREEN_MESSAGING_TAB_APP));
+        if (!doesUnlockAbilityExist()) {
+            mDisableUnlockTab.setEnabled(false);
+            mDisableUnlockTab.setChecked(false);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.LOCKSCREEN_GESTURES_DISABLE_UNLOCK, 0);
+        } else {
+            mDisableUnlockTab.setEnabled(true);
+        }
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -158,6 +183,10 @@ public class InputActivity extends PreferenceActivity {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MENU_UNLOCK_SCREEN, value ? 1 : 0);
             return true;
+        } else if (preference == mDisableUnlockTab) {
+            value = mDisableUnlockTab.isChecked();
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.LOCKSCREEN_GESTURES_DISABLE_UNLOCK, value ? 1 : 0);
         } else if (preference == mUserDefinedKey1Pref) {
             pickShortcut(1);
             return true;
@@ -223,7 +252,6 @@ public class InputActivity extends PreferenceActivity {
 
     void completeSetCustomShortcut(Intent data) {
         Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
-        
         int keyNumber = mKeyNumber;
         if (keyNumber == 1){
             if (Settings.System.putString(getContentResolver(), Settings.System.USER_DEFINED_KEY1_APP, intent.toUri(0))) {
@@ -262,6 +290,29 @@ public class InputActivity extends PreferenceActivity {
             if (Settings.System.putString(getContentResolver(), Settings.System.LOCKSCREEN_MESSAGING_TAB_APP, data.toUri(0))) {
                 mMessagingTabApp.setSummary(data.toUri(0));
             }
+        }
+    }
+
+    private boolean doesUnlockAbilityExist() {
+        final File mStoreFile = new File(Environment.getDataDirectory(), "/misc/lockscreen_gestures");
+        boolean GestureCanUnlock = false;
+        boolean trackCanUnlock = Settings.System.getInt(getContentResolver(),
+                Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1;
+        boolean menuCanUnlock = Settings.System.getInt(getContentResolver(),
+                Settings.System.MENU_UNLOCK_SCREEN, 0) == 1;
+        GestureLibrary gl = GestureLibraries.fromFile(mStoreFile);
+        if (gl.load()) {
+            for (String name : gl.getGestureEntries()) {
+                if ("UNLOCK___UNLOCK".equals(name)) {
+                    GestureCanUnlock = true;
+                    break;
+                }
+            }
+        }
+        if (GestureCanUnlock || trackCanUnlock || menuCanUnlock) {
+            return true;
+        } else {
+            return false;
         }
     }
 }

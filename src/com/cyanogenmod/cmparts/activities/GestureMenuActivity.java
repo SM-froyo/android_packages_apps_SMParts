@@ -7,6 +7,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -14,8 +15,14 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.util.Log;
+
+import java.io.File;
 import java.util.List;
+
 import com.cyanogenmod.cmparts.R;
+import android.gesture.GestureLibrary;
+import android.gesture.GestureLibraries;
 
 public class GestureMenuActivity extends PreferenceActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener {
@@ -28,7 +35,6 @@ public class GestureMenuActivity extends PreferenceActivity
     private CheckBoxPreference mGesturesEnable;
     private CheckBoxPreference mGesturesTrail;
     private ListPreference mGesturesSensitivity;
-
 
     public static boolean updatePreferenceToSpecificActivityOrRemove(Context context,
             PreferenceGroup parentPreferenceGroup, String preferenceKey, int flags) {
@@ -81,7 +87,7 @@ public class GestureMenuActivity extends PreferenceActivity
                     Settings.System.LOCKSCREEN_GESTURES_TRAIL, 0) != 0);
             mGesturesSensitivity.setValue(Integer.toString(Settings.System.getInt(
                     getContentResolver(),
-                    Settings.System.LOCKSCREEN_GESTURES_SENSITIVITY, 0)));
+                    Settings.System.LOCKSCREEN_GESTURES_SENSITIVITY, 3)));
             mGesturesSensitivity.setSummary(mGesturesSensitivity.getEntry());
     }
 

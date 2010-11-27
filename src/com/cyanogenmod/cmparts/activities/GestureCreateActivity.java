@@ -24,6 +24,7 @@ import android.view.MotionEvent;
 import android.gesture.GestureOverlayView;
 import android.gesture.Gesture;
 import android.gesture.GestureLibrary;
+import android.graphics.RectF;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -117,6 +118,15 @@ public class GestureCreateActivity extends Activity {
             if (mGesture.getLength() < LENGTH_THRESHOLD) {
                 overlay.clear(false);
             }
+            // check vertical state - can't be less than 45 deg from vertical
+            // I'd like to fix this but for now... keep people from making
+            // gestures they can't reproduce on the lockscreen
+            if (mGesture.getStrokesCount() == 1) {
+                RectF box = mGesture.getBoundingBox();
+                if (Math.abs(box.width() / box.height()) < 1.0) {
+                    overlay.clear(false);
+                }
+            }
             mDoneButton.setEnabled(true);
         }
 
@@ -142,6 +152,17 @@ public class GestureCreateActivity extends Activity {
 
         startActivityForResult(pickIntent, REQUEST_PICK_SHORTCUT);
     }
+
+    public void pickUnlockOnly(View v) {
+        mShortcutButton.setText(getString(R.string.gestures_unlock_only));
+        mUri = "UNLOCK___UNLOCK";
+    }
+
+    public void pickSoundOnly(View v) {
+        mShortcutButton.setText(getString(R.string.gestures_toggle_sound));
+        mUri = "SOUND___SOUND";
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

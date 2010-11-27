@@ -47,6 +47,11 @@
 
         <CheckBoxPreference android:key="pref_menu_unlock"
             android:title="@string/pref_menu_unlock_title" android:summary="@string/pref_menu_unlock_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_disable_unlock_tab"
+            android:title="@string/pref_lockscreen_disable_unlock_tab"
+            android:summary="@string/pref_lockscreen_disable_unlock_tab_summary" />
+
         <Preference
             android:key="pref_user_defined_key1"
             android:title="@string/user_defined_key1"
