@@ -462,4 +462,24 @@
   <string name="user_defined_key3">Schnelltaste 3</string>
   <string name="user_defined_not_set">Nichts gesetzt</string>
 
+  <!--  Lockscreen gesture strings -->
+  <string name="pref_lockscreen_title">Gesten auf Bildschirmsperre</string>
+  <string name="pref_lockscreen_gestures_enable_title">Gesten aktivieren</string>
+  <string name="pref_lockscreen_gestures_trail_title">Spur anzeigen</string>
+  <string name="pref_lockscreen_gestures_builder_title">Gesten erstellen</string>
+  <string name="pref_lockscreen_gestures_sensitivity_title">Empfindlichkeit</string>
+  <string name="label_create_gesture">Geste erstellen</string>
+  <string name="gestures_button_add">Geste hinzufügen</string>
+  <string name="gestures_button_discard">Verwerfen</string>
+  <string name="gestures_button_done">Fertig</string>
+  <string name="gestures_shortcut_picker_button_label">Verknüpfung oder Aktivität für diese Geste auswählen</string>
+  <string name="gestures_error_missing_shortcut">Es muss noch eine Aktion für die Geste gewählt werden!</string>
+  <string name="gestures_save_success">Geste gespeichert in %s</string>
+  <string name="gestures_cancel_action">Abbrechen</string>
+  <string name="gestures_loading">Lade Gesten...</string>
+  <string name="gestures_empty">Keine Gesten</string>
+  <string name="gestures_activity">Gesten</string>
+  <string name="gestures_delete">Löschen</string>
+  <string name="gestures_delete_success">Geste gelöscht</string>
+  <string name="gestures_error_loading">Problem mit Gesten-Dateivorgang.</string>
 </resources>
