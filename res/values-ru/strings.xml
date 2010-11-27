@@ -448,4 +448,25 @@
     <string name="cmstats_title">Анонимная статистика</string>
     <string name="cmstats_summary">Помогите сделать CM лучше, включите отправку анонимных отчётов</string>
 
+    <!--  Lockscreen gesture strings -->
+    <string name="pref_lockscreen_title">Жесты экрана блокировки</string>
+    <string name="pref_lockscreen_gestures_enable_title">Использовать жесты экрана блокировки</string>
+    <string name="pref_lockscreen_gestures_trail_title">Показывать путь жестов</string>
+    <string name="pref_lockscreen_gestures_builder_title">Созданные жесты</string>
+    <string name="pref_lockscreen_gestures_sensitivity_title">Чувствительность</string>
+    <string name="label_create_gesture">Создать жест</string>
+    <string name="gestures_button_add">Добавить жест</string>
+    <string name="gestures_button_discard">Отменить</string>
+    <string name="gestures_button_done">Готово</string>
+    <string name="gestures_shortcut_picker_button_label">Выберите ярлык или действие для этого жеста</string>
+    <string name="gestures_error_missing_shortcut">Вы должны выбрать действия для этого жеста!</string>
+    <string name="gestures_save_success">Жест сохранен в %s</string>
+    <string name="gestures_cancel_action">Отмена</string>
+    <string name="gestures_loading">Загрузка жестов...</string>
+    <string name="gestures_empty">Нет жестов</string>
+    <string name="gestures_activity">Жесты</string>
+    <string name="gestures_delete">Удалить</string>
+    <string name="gestures_delete_success">Жест удален</string>
+    <string name="gestures_error_loading">Проблема с жестом для выполнения операции.</string>
+
 </resources>
