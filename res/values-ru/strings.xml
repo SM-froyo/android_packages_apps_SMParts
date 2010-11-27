@@ -112,38 +112,39 @@
     <string name="title_notifications_items_text">Текст уведомления</string>
     <string name="title_notifications_items_time">Время уведомления</string>
 
-    <!-- User interface: Trackball notifcations 
-    <string name="trackball_notifications_title">Trackball Notification Colors</string>
-    <string name="dialog_color_trackball">Choose a color</string>
-    <string name="dialog_blink_trackball">Choose a blink rate</string>
-    <string name="color_trackball_flash_title">Flash color</string>
-    <string name="color_trackball_flash_summary">Color to flash</string>
-    <string name="color_trackball_custom_title">Custom color</string>
-    <string name="color_trackball_custom_summary">Custom color to flash</string>
-    <string name="color_trackball_blink_title">Blink rate</string>
-    <string name="color_trackball_blink_summary">Blink rate</string>
-    <string name="color_trackball_test_title">Flash test</string>
-    <string name="color_trackball_test_summary">Test the flash</string>
-    <string name="dialog_clear_flash">Clear Flash</string>
-    <string name="trackball_advanced_title">Advanced</string>
-    <string name="pref_trackball_screen_title">Always pulse</string>
-    <string name="pref_trackball_screen_summary">Trackball will pulse while screen is on.</string>
-    <string name="pref_trackball_blend_title">Blend notifications</string>
-    <string name="pref_trackball_blend_summary">Blend notification colors. Overrides succession.</string>
-    <string name="pref_trackball_sucess_title">Succession</string>
-    <string name="pref_trackball_sucess_summary">Pulse notifications in succession.</string>
-    <string name="pref_trackball_random_title">Random colors</string>
-    <string name="pref_trackball_random_summary">Pulses the LED in random colors for all notifications</string>
-    <string name="pref_trackball_order_title">Pulse in order</string>
-    <string name="pref_trackball_order_summary">Pulses the LED color in order</string>
-    <string name="pref_trackball_reset_title">Reset</string>
-    <string name="pref_trackball_reset_summary">Reset all colors and apps</string>
-    <string name="dialog_trackball_loading">Loading...</string>
-    <string name="dialog_trackball_packagelist">Loading Package List</string> -->
+    <!-- User interface: Trackball notifcations -->
+    <string name="trackball_notifications_title">Цвета уведомлений trackball</string>
+    <string name="dialog_color_trackball">Выберите цвет</string>
+    <string name="dialog_blink_trackball">Выберите частоту свечения</string>
+    <string name="color_trackball_flash_title">Цвет свечения</string>
+    <string name="color_trackball_flash_summary">Выбор цвета свечения</string>
+    <string name="color_trackball_custom_title">Пользовательский цвет</string>
+    <string name="color_trackball_custom_summary">Ручные настройки цвета свечения</string>
+    <string name="color_trackball_blink_title">Частота свечения</string>
+    <string name="color_trackball_blink_summary">Выбор периодичности свечения</string>
+    <string name="color_trackball_test_title">Тест свечения</string>
+    <string name="color_trackball_test_summary">Выполнение теста свечения trackball</string>
+    <string name="dialog_clear_flash">Очистить настройки</string>
+    <string name="trackball_advanced_title">Расширенные</string>
+    <string name="pref_trackball_screen_title">Мерцать всегда</string>
+    <string name="pref_trackball_screen_summary">Trackball будет мерцать при включенном экране.</string>
+    <string name="pref_trackball_blend_title">Смешанное уведомление</string>
+    <string name="pref_trackball_blend_summary">Смешивает цвета уведомлений. Заменяет очередность.</string>
+    <string name="pref_trackball_sucess_title">Очередность</string>
+    <string name="pref_trackball_sucess_summary">Чередует цвета уведомлений.</string>
+    <string name="pref_trackball_random_title">Случайные цвета</string>
+    <string name="pref_trackball_random_summary">LED будет мерцать случайным цветом для всех уведомлений</string>
+    <string name="pref_trackball_order_title">Порядок</string>
+    <string name="pref_trackball_order_summary">Мерцать LED в порядке</string>
+    <string name="pref_trackball_reset_title">Сброс</string>
+    <string name="pref_trackball_reset_summary">Сброс всех настроек для приложений</string>
+    <string name="dialog_trackball_loading">Загрузка...</string>
+    <string name="dialog_trackball_packagelist">Загрузка списка приложений</string>
 
-    <!-- Trackball Settings : Warning dialog 
-    <string name="notification_battery_warning_title">WARNING: May Cause Battery Drain</string>
-    <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incur the drain.</string> -->
+    <!--Trackball Settings : Warning dialog -->
+    <string name="notification_battery_warning_title">Внимание: может вызвать разрядку батареи</string>
+    <string name="notification_battery_warning">Эта настройка может потреблять ~3% заряда батареи в час. Не включайте ее, если не хотите быстрой разрядки.</string>
+
 
     <!-- Tweaks Extras -->
     <string name="te_title">Экстра</string>
