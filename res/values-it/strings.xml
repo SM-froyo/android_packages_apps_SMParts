@@ -465,4 +465,25 @@
     <string name="user_defined_key2">Tasto Rapido 2</string>
     <string name="user_defined_key3">Tasto Rapido 3</string>
     <string name="user_defined_not_set">Non definito</string>
+
+    <!--  Lockscreen gesture strings -->
+    <string name="pref_lockscreen_title">Gesture nel lockscreen</string>
+    <string name="pref_lockscreen_gestures_enable_title">Attiva gesture</string>
+    <string name="pref_lockscreen_gestures_trail_title">Mostra traccia gesture</string>
+    <string name="pref_lockscreen_gestures_builder_title">Crea gesture</string>
+    <string name="pref_lockscreen_gestures_sensitivity_title">Sensibilità</string>
+    <string name="label_create_gesture">Crea una gesture</string>
+    <string name="gestures_button_add">Aggiungi gesture</string>
+    <string name="gestures_button_discard">Annulla</string>
+    <string name="gestures_button_done">Fatto</string>
+    <string name="gestures_shortcut_picker_button_label">Assegna un collegamento o un\'attività a questa gesture</string>
+    <string name="gestures_error_missing_shortcut">Devi selezionare un\'azione per questa gesture!</string>
+    <string name="gestures_save_success">Gesture salvata in %s</string>
+    <string name="gestures_cancel_action">Cancella</string>
+    <string name="gestures_loading">Caricando gesture...</string>
+    <string name="gestures_empty">Nessuna gesture</string>
+    <string name="gestures_activity">Gesture</string>
+    <string name="gestures_delete">Elimina</string>
+    <string name="gestures_delete_success">Gesture eliminata</string>
+    <string name="gestures_error_loading">Problema nel caricare il file delle gesture.</string>
 </resources>
