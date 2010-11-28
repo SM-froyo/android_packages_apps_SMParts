@@ -23,6 +23,14 @@
     <string name="pref_pinch_reflow_title">触摸放大后使内容自动换行</string>
     <string name="pref_pinch_reflow_summary">通过多点触摸放大网页后立即使内容按窗口自动换行</string>
 
+    <!-- User interface : Overscroll -->
+    <string name="ui_overscroll_title">滚动越界</string>
+    <string name="pref_overscroll_title">打开滚动越界</string>
+    <string name="pref_overscroll_summary_on">可滚动对象超出屏幕并弹回</string>
+    <string name="pref_overscroll_summary_off">可滚动对象不能超出屏幕</string>
+    <string name="pref_overscroll_weight_title">越界程度</string>
+    <string name="pref_overscroll_weight_summary">选择可滚动对象的越界程度</string>
+
     <!-- User interface : Lock Screen -->
     <string name="ui_lockscreen_title">锁屏设置</string>
     <string name="pref_lockscreen_delay_title">延迟</string>
@@ -453,4 +461,30 @@
 
     <string name="cmstats_title">匿名统计数据</string>
     <string name="cmstats_summary">发送您的匿名使用统计数据以帮助我们改善 CyanogenMod</string>
+    <string name="user_defined_key1">快捷键 1</string>
+    <string name="user_defined_key2">快捷键 2</string>
+    <string name="user_defined_key3">快捷键 3</string>
+    <string name="user_defined_not_set">没有设置</string>
+
+    <!--  Lockscreen gesture strings -->
+    <string name="pref_lockscreen_title">锁屏手势</string>
+    <string name="pref_lockscreen_gestures_enable_title">使用锁屏手势</string>
+    <string name="pref_lockscreen_gestures_trail_title">显示手势路径</string>
+    <string name="pref_lockscreen_gestures_builder_title">建立手势</string>
+    <string name="pref_lockscreen_gestures_sensitivity_title">敏感度</string>
+    <string name="label_create_gesture">创建一个手势</string>
+    <string name="gestures_button_add">添加手势</string>
+    <string name="gestures_button_discard">舍弃</string>
+    <string name="gestures_button_done">完成</string>
+    <string name="gestures_shortcut_picker_button_label">为这个手势选择一个快捷方式或活动</string>
+    <string name="gestures_error_missing_shortcut">您必需为这个手势选择一个动作！</string>
+    <string name="gestures_save_success">手势保存到 %s</string>
+    <string name="gestures_cancel_action">取消</string>
+    <string name="gestures_loading">载入手势...</string>
+    <string name="gestures_empty">没有手势</string>
+    <string name="gestures_activity">手势</string>
+    <string name="gestures_delete">删除</string>
+    <string name="gestures_delete_success">手势已删除</string>
+    <string name="gestures_error_loading">手势文件操作发生问题。</string>
+
 </resources>
