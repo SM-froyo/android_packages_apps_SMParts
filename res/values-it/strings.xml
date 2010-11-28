@@ -200,6 +200,7 @@
     <string name="pref_lockscreen_quick_unlock_control_summary">Non è richiesto premere OK dopo aver inserito il PIN o la Password. Cancellare conta come tentativo fallito.</string>
     <string name="pref_lockscreen_phone_messaging_control_title">Telefono e Messaggi</string>
     <string name="pref_lockscreen_phone_messaging_control_summary">Applicazioni Telefono e Messaggi accessibili dal lockscreen.</string>
+    <string name="pref_messaging_tab_app_title">Applicazione messaggi</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press tasto home</string>
@@ -486,4 +487,9 @@
     <string name="gestures_delete">Elimina</string>
     <string name="gestures_delete_success">Gesture eliminata</string>
     <string name="gestures_error_loading">Problema nel caricare il file delle gesture.</string>
+    <string name="gestures_unlock_only">Sblocco telefono</string>
+    <string name="gestures_toggle_sound">Interruttore audio</string>
+    <string name="pref_lockscreen_disable_unlock_tab">Disattiva slider di sblocco</string>
+    <string name="pref_lockscreen_disable_unlock_tab_summary">Nota: Perchè quest\'opzione sia disponibile devi aver prima abilitato lo sblocco tramite trackball, tasto menu o gesture</string>
+    <string name="gestures_explain_create_screen">Scegli un\'azione da eseguire (oppure seleziona Sblocco o Int. audio) e disegna una gesture sullo schermo.\nTieni presente che le gesture composte da una singola linea verticale (verso l\'alto o verso il basso) non sono valide.</string>
 </resources>
