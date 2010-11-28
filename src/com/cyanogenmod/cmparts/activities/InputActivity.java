@@ -14,6 +14,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.util.Log;
 
 public class InputActivity extends PreferenceActivity {
 
@@ -25,10 +26,11 @@ public class InputActivity extends PreferenceActivity {
     private static final String BUTTON_CATEGORY = "pref_category_button_settings";
     private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control";
     private static final String LOCKSCREEN_PHONE_MESSAGING_TAB = "lockscreen_phone_messaging_tab";
-    
+
     private static final String USER_DEFINED_KEY1 = "pref_user_defined_key1";
     private static final String USER_DEFINED_KEY2 = "pref_user_defined_key2";
     private static final String USER_DEFINED_KEY3 = "pref_user_defined_key3";
+    private static final String MESSAGING_TAB_APP = "pref_messaging_tab_app";
 
     private CheckBoxPreference mMusicControlPref;
     private CheckBoxPreference mAlwaysMusicControlPref;
@@ -41,6 +43,7 @@ public class InputActivity extends PreferenceActivity {
     private Preference mUserDefinedKey1Pref;
     private Preference mUserDefinedKey2Pref;
     private Preference mUserDefinedKey3Pref;
+    private Preference mMessagingTabApp;
     private int mKeyNumber = 1;
 
     private static final int REQUEST_PICK_SHORTCUT = 1;
@@ -100,6 +103,7 @@ public class InputActivity extends PreferenceActivity {
         mUserDefinedKey1Pref = (Preference) prefSet.findPreference(USER_DEFINED_KEY1);
         mUserDefinedKey2Pref = (Preference) prefSet.findPreference(USER_DEFINED_KEY2);
         mUserDefinedKey3Pref = (Preference) prefSet.findPreference(USER_DEFINED_KEY3);
+        mMessagingTabApp = (Preference) prefSet.findPreference(MESSAGING_TAB_APP);
 
         if (!"vision".equals(Build.DEVICE)) {
             buttonCategory.removePreference(mUserDefinedKey1Pref);
@@ -114,6 +118,7 @@ public class InputActivity extends PreferenceActivity {
         mUserDefinedKey1Pref.setSummary(Settings.System.getString(getContentResolver(), Settings.System.USER_DEFINED_KEY1_APP));
         mUserDefinedKey2Pref.setSummary(Settings.System.getString(getContentResolver(), Settings.System.USER_DEFINED_KEY2_APP));
         mUserDefinedKey3Pref.setSummary(Settings.System.getString(getContentResolver(), Settings.System.USER_DEFINED_KEY3_APP));
+        mMessagingTabApp.setSummary(Settings.System.getString(getContentResolver(), Settings.System.LOCKSCREEN_MESSAGING_TAB_APP));
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -162,6 +167,8 @@ public class InputActivity extends PreferenceActivity {
         } else if (preference == mUserDefinedKey3Pref) {
             pickShortcut(3);
             return true;
+        } else if (preference == mMessagingTabApp) {
+            pickShortcut(4);
         }
         return false;
     }
@@ -198,7 +205,7 @@ public class InputActivity extends PreferenceActivity {
             }
         }
     }
-    
+
     void processShortcut(Intent intent, int requestCodeApplication, int requestCodeShortcut) {
         // Handle case where user selected "Applications"
         String applicationName = getResources().getString(R.string.group_applications);
@@ -213,7 +220,7 @@ public class InputActivity extends PreferenceActivity {
             startActivityForResult(intent, requestCodeShortcut);
         }
     }
-    
+
     void completeSetCustomShortcut(Intent data) {
         Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
         
@@ -230,9 +237,13 @@ public class InputActivity extends PreferenceActivity {
             if (Settings.System.putString(getContentResolver(), Settings.System.USER_DEFINED_KEY3_APP, intent.toUri(0))) {
                 mUserDefinedKey3Pref.setSummary(intent.toUri(0));
             }
-        } 
+        } else if (keyNumber == 4){
+            if (Settings.System.putString(getContentResolver(), Settings.System.LOCKSCREEN_MESSAGING_TAB_APP, intent.toUri(0))) {
+                mMessagingTabApp.setSummary(intent.toUri(0));
+            }
+        }
     }
-    
+
     void completeSetCustomApp(Intent data) {
         int keyNumber = mKeyNumber;
         if (keyNumber == 1){
@@ -247,9 +258,10 @@ public class InputActivity extends PreferenceActivity {
             if (Settings.System.putString(getContentResolver(), Settings.System.USER_DEFINED_KEY3_APP, data.toUri(0))) {
                 mUserDefinedKey3Pref.setSummary(data.toUri(0));
             }
-        } 
-    }    
-    
-    
-    
+        } else if (keyNumber == 4){
+            if (Settings.System.putString(getContentResolver(), Settings.System.LOCKSCREEN_MESSAGING_TAB_APP, data.toUri(0))) {
+                mMessagingTabApp.setSummary(data.toUri(0));
+            }
+        }
+    }
 }
