@@ -30,22 +30,22 @@
         <item>Ambar</item>
         <item>Salmon</item>
         <item>Fucsia</item>
-	    <item>Calibrado (N1)</item>
-	    <item>Calibrado (N1) Rojo</item>
-	    <item>Calibrado (N1) Frio</item>
+            <item>Calibrado (N1)</item>
+            <item>Calibrado (N1) Rojo</item>
+            <item>Calibrado (N1) Frio</item>
     </string-array>
 
-	<string-array name="render_entries">
+    <string-array name="render_entries">
         <item>Mode noche (rojo)</item>
         <item>Terminal (verde)</item>
         <item>Azul</item>
         <item>Ambar</item>
         <item>Salmon</item>
         <item>Fucsia</item>
-	    <item>Calibrado (N1)</item>
-	    <item>Calibrado (N1) Rojo</item>
-	    <item>Calibrado (N1) Frio</item>
-	</string-array>
+            <item>Calibrado (N1)</item>
+            <item>Calibrado (N1) Rojo</item>
+            <item>Calibrado (N1) Frio</item>
+    </string-array>
 
     <string-array name="entries_trackball_colors">
         <item>Verde</item>
@@ -58,11 +58,11 @@
         <item>Rosa</item>
         <item>Naranja</item>
         <item>Azul cielo</item>
-	    <item>Aleatorio</item>
-	    <item>Ninguno</item>
+            <item>Aleatorio</item>
+            <item>Ninguno</item>
     </string-array>
 
-	<string-array name="pref_trackball_blink_rate_entries">
+    <string-array name="pref_trackball_blink_rate_entries">
         <item>2 (Rapido)</item>
         <item>3</item>
         <item>4 (Medio)</item>
@@ -108,4 +108,28 @@
         <item>Regulacion dada por el sistema</item>
         <item>Volumen de la musica (por defecto)</item>
     </string-array>
+
+    <string-array name="entries_ring_widget" translatable="false">
+        <item>Sonido+Vibrar/Vibrar</item>
+        <item>Sonido/Vibrar</item>
+        <item>Sonido/Silencio</item>
+        <item>Sonido+Vib/Vib/Silencio</item>
+        <item>Sonido/Vibrar/Silencio</item>
+    </string-array>
+
+    <string-array name="pref_lockscreen_gestures_sensitivity_entries">
+        <item>1 (Pasota)</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12 (Estricto)</item>
+    </string-array>
+
 </resources>
