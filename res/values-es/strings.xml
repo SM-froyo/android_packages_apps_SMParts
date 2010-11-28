@@ -467,4 +467,27 @@
     <string name="user_defined_key2">Tecla Rapida 2</string>
     <string name="user_defined_key3">Tecla Rapida 3</string>
     <string name="user_defined_not_set">Nada acivo</string>
+
+    <!--  Lockscreen gesture strings -->
+    <string name="pref_lockscreen_title">Patrones Protector</string>
+    <string name="pref_lockscreen_gestures_enable_title">Usar Patrones Protector</string>
+    <string name="pref_lockscreen_gestures_trail_title">Mostrar ayudas Patrones</string>
+    <string name="pref_lockscreen_gestures_builder_title">Crear Patrones</string>
+    <string name="pref_lockscreen_gestures_sensitivity_title">Sensibilidad</string>
+    <string name="label_create_gesture">Crear un patron</string>
+    <string name="gestures_button_add">Añadir Patr.</string>
+    <string name="gestures_button_discard">Cancelar</string>
+    <string name="gestures_button_done">Fin</string>
+    <string name="gestures_shortcut_picker_button_label">Elegir actividad para este gesto</string>
+    <string name="gestures_error_missing_shortcut">Debes seleccionar acceon para el Gesto!</string>
+    <string name="gestures_save_success">Patron guardado en %s</string>
+    <string name="gestures_cancel_action">Cancelar</string>
+    <string name="gestures_loading">Revisando patrones...</string>
+    <string name="gestures_empty">No patrone</string>
+    <string name="gestures_activity">Patrones</string>
+    <string name="gestures_delete">Borrar</string>
+    <string name="gestures_delete_success">Patron borrado</string>
+    <string name="gestures_error_loading">Problema al abrir fichero patron.</string>
+
+
 </resources>
