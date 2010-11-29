@@ -343,17 +343,17 @@
   <string name="title_toggle_wifi">WLAN</string>
   <string name="title_toggle_bluetooth">Bluetooth</string>
   <string name="title_toggle_gps">GPS</string>
-  <string name="title_toggle_sound">Töne/Vibration</string>
+  <string name="title_toggle_sound">Klingelmodus</string>
   <string name="title_toggle_brightness">Helligkeit</string>
   <string name="title_toggle_sync">Synchronisierung</string>
-  <string name="title_toggle_wifiap">WLAN-Accesspoint</string>
-  <string name="title_toggle_screentimeout">Bildschirm abschalten</string>
-  <string name="title_toggle_mobiledata">Mobilfunkdaten</string>
-  <string name="title_toggle_lockscreen">Bildschirm sperren</string>
+  <string name="title_toggle_wifiap">WLAN-Hotspot</string>
+  <string name="title_toggle_screentimeout">Bildschirm-Zeitlimit</string>
+  <string name="title_toggle_mobiledata">Mobilfunk-Daten</string>
+  <string name="title_toggle_lockscreen">Gesperrter Bildschirm</string>
   <string name="title_toggle_networkmode">2G/3G</string>
-  <string name="title_toggle_autorotate">Autom. Ausrichtung</string>
-  <string name="title_toggle_airplane">Flugzeugmodus</string>
-  <string name="title_toggle_flashlight">LED-Blitzlicht</string>
+  <string name="title_toggle_autorotate">Ausrichtung</string>
+  <string name="title_toggle_airplane">Flugmodus</string>
+  <string name="title_toggle_flashlight">Taschenlampe</string>
   <string name="title_toggle_sleep">In Standby wechseln</string>
   <string name="title_button_modes">Modi für Tasten</string>
   <string name="pref_brightness_mode_title">Helligkeitsmodi</string>
@@ -482,4 +482,9 @@
   <string name="gestures_delete">Löschen</string>
   <string name="gestures_delete_success">Geste gelöscht</string>
   <string name="gestures_error_loading">Problem mit Gesten-Dateivorgang.</string>
+  <string name="gestures_unlock_only">Entsperren</string>
+  <string name="gestures_toggle_sound">Klingelmodus</string>
+  <string name="pref_lockscreen_disable_unlock_tab">Entsperr-Slider verbergen</string>
+  <string name="pref_lockscreen_disable_unlock_tab_summary">Hinweis: Es muss Trackball-, MENÜ- oder Gesten-Entsperren aktiviert sein bevor diese Option möglich ist</string>
+  <string name="gestures_explain_create_screen">Aktion (oder Entsperren/Klingelton) auswählen und eine Geste auf den Bildschirm zeichnen.</string>
 </resources>
