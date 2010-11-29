@@ -199,6 +199,7 @@
   <string name="pref_lockscreen_quick_unlock_control_summary">PIN und Passwort ohne Bestätigung eingeben. Löschen gilt als Fehlversuch.</string>
   <string name="pref_lockscreen_phone_messaging_control_title">Telefon und SMS/MMS</string>
   <string name="pref_lockscreen_phone_messaging_control_summary">Telefon und SMS/MMS Slider auf gesperrtem Bildschirm anzeigen.</string>
+  <string name="pref_messaging_tab_app_title">SMS/MMS Slider Anwendung</string>
 
   <!-- Long Press Home -->
   <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
@@ -484,7 +485,7 @@
   <string name="gestures_error_loading">Problem mit Gesten-Dateivorgang.</string>
   <string name="gestures_unlock_only">Entsperren</string>
   <string name="gestures_toggle_sound">Klingelmodus</string>
-  <string name="pref_lockscreen_disable_unlock_tab">Entsperr-Slider verbergen</string>
+  <string name="pref_lockscreen_disable_unlock_tab">Entsperr Slider verbergen</string>
   <string name="pref_lockscreen_disable_unlock_tab_summary">Hinweis: Es muss Trackball-, MENÜ- oder Gesten-Entsperren aktiviert sein bevor diese Option möglich ist</string>
   <string name="gestures_explain_create_screen">Aktion (oder Entsperren/Klingelton) auswählen und eine Geste auf den Bildschirm zeichnen.</string>
 </resources>
