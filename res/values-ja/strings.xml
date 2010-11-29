@@ -189,6 +189,7 @@
     <string name="pref_lockscreen_quick_unlock_control_summary">PINやパワードを入力後、OKを押す必要を省きます。不正入力時のカウントは無効になります。</string>
     <string name="pref_lockscreen_phone_messaging_control_title">電話とメッセージ</string>
     <string name="pref_lockscreen_phone_messaging_control_summary">ロックスクリーンから電話とメッセージにアクセスできるようにする</string>
+    <string name="pref_messaging_tab_app_title">メッセージアプリケーション</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">ホーム長押し設定</string>
@@ -489,5 +490,10 @@
     <string name="gestures_delete">削除</string>
     <string name="gestures_delete_success">ジェスチャーを削除しました</string>
     <string name="gestures_error_loading">ジェスチャーファイルの操作に問題が発生しました</string>
+    <string name="gestures_unlock_only">アンロック</string>
+    <string name="gestures_toggle_sound">サウンドトグル</string>
+    <string name="pref_lockscreen_disable_unlock_tab">アンロックスライダーを無効にする</string>
+    <string name="pref_lockscreen_disable_unlock_tab_summary">ノート: このオプションを有効にする前に、トラックボールやメニューキー、ジェスチャーでのアンロックを設定する必要があります。</string>
+    <string name="gestures_explain_create_screen">実行するアクション(あるいはアンロックやサウンド)を選択し、スクリーンにジェスチャーを描いてください。\n縦方向(上/下)に1回のみのジェスチャーは不正になります。</string>
 
 </resources>
