@@ -118,15 +118,6 @@ public class GestureCreateActivity extends Activity {
             if (mGesture.getLength() < LENGTH_THRESHOLD) {
                 overlay.clear(false);
             }
-            // check vertical state - can't be less than 45 deg from vertical
-            // I'd like to fix this but for now... keep people from making
-            // gestures they can't reproduce on the lockscreen
-            if (mGesture.getStrokesCount() == 1) {
-                RectF box = mGesture.getBoundingBox();
-                if (Math.abs(box.width() / box.height()) < 1.0) {
-                    overlay.clear(false);
-                }
-            }
             mDoneButton.setEnabled(true);
         }
 
