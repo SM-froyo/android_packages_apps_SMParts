@@ -455,6 +455,7 @@
     <string name="pref_lockscreen_gestures_trail_title">Показывать путь жестов</string>
     <string name="pref_lockscreen_gestures_builder_title">Созданные жесты</string>
     <string name="pref_lockscreen_gestures_sensitivity_title">Чувствительность</string>
+    <string name="pref_lockscreen_gestures_color_title">Цвет жеста</string>
     <string name="label_create_gesture">Создать жест</string>
     <string name="gestures_button_add">Добавить жест</string>
     <string name="gestures_button_discard">Отменить</string>
@@ -474,6 +475,5 @@
     <string name="pref_lockscreen_disable_unlock_tab">Отключить слайдер</string>
     <string name="pref_lockscreen_disable_unlock_tab_summary">Примечание: Вы должны включить разблокировку через trackball, кнопку menu или жесты - для того что бы эта опция была доступна.</string>
     <string name="gestures_explain_create_screen">Выберите действие для выполнения (или выберите Разблокировать или Переключить звук) и нарисуйте жесть на экране.\nПримечание: одиночный вертикальный (верх или вниз) жест не поддерживается.</string>
-
 
 </resources>
