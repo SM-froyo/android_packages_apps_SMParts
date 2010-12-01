@@ -15,6 +15,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 
 import java.io.File;
@@ -31,10 +32,12 @@ public class GestureMenuActivity extends PreferenceActivity
     private static final String LOCKSCREEN_GESTURES_ENABLE = "lockscreen_gestures_enable";
     private static final String LOCKSCREEN_GESTURES_TRAIL = "lockscreen_gestures_trail";
     private static final String LOCKSCREEN_GESTURES_SENSITIVITY = "lockscreen_gestures_sensitivity";
+    private static final String LOCKSCREEN_GESTURES_COLOR = "lockscreen_gestures_color";
 
     private CheckBoxPreference mGesturesEnable;
     private CheckBoxPreference mGesturesTrail;
     private ListPreference mGesturesSensitivity;
+    private Preference mGesturesColor;
 
     public static boolean updatePreferenceToSpecificActivityOrRemove(Context context,
             PreferenceGroup parentPreferenceGroup, String preferenceKey, int flags) {
@@ -73,9 +76,11 @@ public class GestureMenuActivity extends PreferenceActivity
         mGesturesEnable = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_GESTURES_ENABLE);
         mGesturesTrail = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_GESTURES_TRAIL);
         mGesturesSensitivity = (ListPreference) prefSet.findPreference(LOCKSCREEN_GESTURES_SENSITIVITY);
+        mGesturesColor = (Preference) prefSet.findPreference(LOCKSCREEN_GESTURES_COLOR);
 
         final PreferenceGroup parentPreference = getPreferenceScreen();
         parentPreference.getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+        mGesturesColor.setSummary(Integer.toHexString(getGestureColor()));
     }
 
     private void updateToggles() {
@@ -89,6 +94,7 @@ public class GestureMenuActivity extends PreferenceActivity
                     getContentResolver(),
                     Settings.System.LOCKSCREEN_GESTURES_SENSITIVITY, 3)));
             mGesturesSensitivity.setSummary(mGesturesSensitivity.getEntry());
+            mGesturesColor.setSummary(Integer.toHexString(getGestureColor()));
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -97,7 +103,12 @@ public class GestureMenuActivity extends PreferenceActivity
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        if (preference == mGesturesColor) {
+            ColorPickerDialog cp = new ColorPickerDialog(this, mGesturesColorListener, getGestureColor());
+            cp.show();
+            return true;
+        }
+        return false;
     }
 
     public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {
@@ -116,6 +127,21 @@ public class GestureMenuActivity extends PreferenceActivity
             mGesturesSensitivity.setSummary(mGesturesSensitivity.getEntry());
         }
     }
+
+    private int getGestureColor() {
+        return Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_GESTURES_COLOR, 0xFFFFFF00);
+    }
+
+    ColorPickerDialog.OnColorChangedListener mGesturesColorListener =
+        new ColorPickerDialog.OnColorChangedListener() {
+            public void colorChanged(int color) {
+                Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_GESTURES_COLOR, color);
+                mGesturesColor.setSummary(Integer.toHexString(color));
+            }
+            public void colorUpdate(int color) {
+            }
+    };
 
     @Override
     public void onResume() {

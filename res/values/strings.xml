@@ -475,6 +475,7 @@
     <string name="pref_lockscreen_gestures_trail_title">Show gesture trails</string>
     <string name="pref_lockscreen_gestures_builder_title">Build gestures</string>
     <string name="pref_lockscreen_gestures_sensitivity_title">Sensitivity</string>
+    <string name="pref_lockscreen_gestures_color_title">Gestures color</string>
     <string name="label_create_gesture">Create a gesture</string>
     <string name="gestures_button_add">Add gesture</string>
     <string name="gestures_button_discard">Discard</string>
