@@ -18,6 +18,8 @@ import com.cyanogenmod.cmparts.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.MotionEvent;
@@ -28,6 +30,7 @@ import android.graphics.RectF;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.List;
 import java.util.ArrayList;
 
 public class GestureCreateActivity extends Activity {
@@ -52,6 +55,13 @@ public class GestureCreateActivity extends Activity {
         mShortcutButton = (Button) findViewById(R.id.shortcut_picker);
         GestureOverlayView overlay = (GestureOverlayView) findViewById(R.id.gestures_overlay);
         overlay.addOnGestureListener(new GesturesProcessor());
+        // Remove flashlight button if Torch app isn't on the phone
+        PackageManager pm = this.getBaseContext().getPackageManager();
+        List<ResolveInfo> l = pm.queryBroadcastReceivers(new Intent("net.cactii.flash2.TOGGLE_FLASHLIGHT"), 0);
+        if (l.isEmpty()) {
+            Button flashlight = (Button) findViewById(R.id.flashlight_pick);
+            flashlight.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -154,6 +164,10 @@ public class GestureCreateActivity extends Activity {
         mUri = "SOUND___SOUND";
     }
 
+    public void pickFlashlight(View v) {
+        mShortcutButton.setText(getString(R.string.gestures_flashlight));
+        mUri = "FLASHLIGHT___FLASHLIGHT";
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -48,6 +48,12 @@
             android:text="@string/gestures_toggle_sound"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:onClick="pickSoundOnly" />
+        <Button android:id="@+id/flashlight_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gestures_flashlight"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:onClick="pickFlashlight" />
     </LinearLayout>
     <android.gesture.GestureOverlayView
         android:id="@+id/gestures_overlay"
