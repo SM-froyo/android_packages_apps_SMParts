@@ -77,6 +77,11 @@
          android:title="@string/title_expanded_widget"
          android:summary="@string/summary_expanded_widget"
          android:defaultValue="true" />
+      <CheckBoxPreference android:key="expanded_hide_onchange"
+         android:title="@string/title_expanded_hide_onchange"
+         android:summary="@string/summary_expanded_hide_onchange"
+         android:defaultValue="false"
+         android:dependency="expanded_widget" />
       <Preference
          android:key="expanded_color_mask"
          android:title="@string/expanded_color_mask"
