@@ -486,6 +486,7 @@
     <string name="gestures_error_loading">Un problème avec le fichier du geste est survenu.</string>
     <string name="gestures_unlock_only">Déverrouiller le téléphone</string>
     <string name="gestures_toggle_sound">Activer/Désactiver son</string>
+    <string name="gestures_flashlight">Lampe de poche</string>
     <string name="pref_lockscreen_disable_unlock_tab">Masquer curseur déverr.</string>
     <string name="pref_lockscreen_disable_unlock_tab_summary">Note: Vous devez activer le déverrouillage par trackball, touche menu ou par geste afin que cette option soit disponible</string>
     <string name="gestures_explain_create_screen">Choisissez une action à effectuer (ou séléctionnez déverouillage ou son) et dessinez un geste sur l\'écran.</string>
