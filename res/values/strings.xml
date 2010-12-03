@@ -113,7 +113,7 @@
     <string name="title_notifications_items_time">Items time color</string>
 
     <!-- User interface: LED notifcations -->
-    <string name="trackball_notifications_title">LED notification Colors</string>
+    <string name="trackball_notifications_title">LED notification colors</string>
     <string name="dialog_color_trackball">Choose a color</string>
     <string name="dialog_blink_trackball">Choose a blink rate</string>
     <string name="color_trackball_flash_title">Flash color</string>
@@ -139,11 +139,11 @@
     <string name="pref_trackball_reset_title">Reset</string>
     <string name="pref_trackball_reset_summary">Reset all colors and apps</string>
     <string name="dialog_trackball_loading">Loading...</string>
-    <string name="dialog_trackball_packagelist">Loading Package List</string>
+    <string name="dialog_trackball_packagelist">Loading package list</string>
     <string name="trackball_category_dialog_text">Please enter a new category</string>
     <string name="trackball_category_list_title">Category</string>
     <string name="trackball_category_list_summary">Choose a category</string>
-    <string name="trackball_category_screen">Manage Categories</string>
+    <string name="trackball_category_screen">Manage categories</string>
     <string name="trackball_category_add_title">Add category</string>
     <string name="trackball_category_add_summary">Add a category to the list</string>
     <string name="trackball_category_remove_title">Remove category</string>
@@ -153,7 +153,7 @@
     <string name="trackball_array_error">Unfortunately there was an array error. This package has been forced into Miscellaneous category.</string>
 
     <!-- Trackball Settings : Warning dialog -->
-    <string name="notification_battery_warning_title">WARNING: May Cause Battery Drain</string>
+    <string name="notification_battery_warning_title">WARNING: May cause battery drain</string>
     <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incur the drain.</string>
 
 
