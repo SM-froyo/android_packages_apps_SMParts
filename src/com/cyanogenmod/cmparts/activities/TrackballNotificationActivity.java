@@ -555,7 +555,9 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
             updatePackage(pkg, value, "0", "0");
             PreferenceScreen prefSet = getPreferenceScreen();
             globalCustom = prefSet.findPreference(pkg + "_custom");
-            globalCustom.setEnabled(!value.matches("none"));
+            if (globalCustom != null) {
+                globalCustom.setEnabled(!value.matches("none"));
+            }
             globalTest = prefSet.findPreference(pkg + "_test");
             globalTest.setEnabled(!value.matches("none"));
         } else if (key.equals(REMOVE_CATEGORY)) {
