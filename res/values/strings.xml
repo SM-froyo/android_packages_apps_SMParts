@@ -151,6 +151,8 @@
     <string name="trackball_remove_default_toast">Can\'t remove this category as its the default one.</string>
     <string name="trackball_reset_all">Reset all colors and categories.</string>
     <string name="trackball_array_error">Unfortunately there was an array error. This package has been forced into Miscellaneous category.</string>
+    <string name="trackball_color_notice_title">NOTE:</string>
+    <string name="trackball_color_notice_summary">Not all colors will display on all devices.</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">WARNING: May cause battery drain</string>
