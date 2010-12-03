@@ -76,7 +76,7 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
 
     public List<String> uniqueArray(String[] array) {
         Set<String> set = new HashSet<String>(Arrays.asList(array));
-        List array2 = new ArrayList<String>(set);
+        List<String> array2 = new ArrayList<String>(set);
         return array2;
     }
 
@@ -373,39 +373,42 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         removeCatList.setOnPreferenceChangeListener(this);
         catScreen.addPreference(removeCatList);
 
-        CheckBoxPreference alwaysPulse = new CheckBoxPreference(this);
-        alwaysPulse.setKey(ALWAYS_PULSE);
-        alwaysPulse.setSummary(R.string.pref_trackball_screen_summary);
-        alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
-        advancedScreen.addPreference(alwaysPulse);
+        // Advanced options only relevant to RGB lights
+        if (!getResources().getBoolean(R.bool.has_dual_notification_led)) {
+            CheckBoxPreference alwaysPulse = new CheckBoxPreference(this);
+            alwaysPulse.setKey(ALWAYS_PULSE);
+            alwaysPulse.setSummary(R.string.pref_trackball_screen_summary);
+            alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
+            advancedScreen.addPreference(alwaysPulse);
 
-        CheckBoxPreference blendPulse = new CheckBoxPreference(this);
-        blendPulse.setKey(BLEND_COLORS);
-        blendPulse.setSummary(R.string.pref_trackball_blend_summary);
-        blendPulse.setTitle(R.string.pref_trackball_blend_title);
-        blendPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0) == 1 ? false : true);
-        advancedScreen.addPreference(blendPulse);
+            CheckBoxPreference blendPulse = new CheckBoxPreference(this);
+            blendPulse.setKey(BLEND_COLORS);
+            blendPulse.setSummary(R.string.pref_trackball_blend_summary);
+            blendPulse.setTitle(R.string.pref_trackball_blend_title);
+            blendPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_SUCCESSION, 0) == 1 ? false : true);
+            advancedScreen.addPreference(blendPulse);
 
-        CheckBoxPreference successionPulse = new CheckBoxPreference(this);
-        successionPulse.setKey(PULSE_SUCCESSION);
-        successionPulse.setSummary(R.string.pref_trackball_sucess_summary);
-        successionPulse.setTitle(R.string.pref_trackball_sucess_title);
-        successionPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0) == 1 ? false : true);
-        advancedScreen.addPreference(successionPulse);
+            CheckBoxPreference successionPulse = new CheckBoxPreference(this);
+            successionPulse.setKey(PULSE_SUCCESSION);
+            successionPulse.setSummary(R.string.pref_trackball_sucess_summary);
+            successionPulse.setTitle(R.string.pref_trackball_sucess_title);
+            successionPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0) == 1 ? false : true);
+            advancedScreen.addPreference(successionPulse);
 
-        CheckBoxPreference randomPulse = new CheckBoxPreference(this);
-        randomPulse.setKey(PULSE_RANDOM);
-        randomPulse.setSummary(R.string.pref_trackball_random_summary);
-        randomPulse.setTitle(R.string.pref_trackball_random_title);
-        randomPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0) == 1? false : true);
-        advancedScreen.addPreference(randomPulse);
+            CheckBoxPreference randomPulse = new CheckBoxPreference(this);
+            randomPulse.setKey(PULSE_RANDOM);
+            randomPulse.setSummary(R.string.pref_trackball_random_summary);
+            randomPulse.setTitle(R.string.pref_trackball_random_title);
+            randomPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0) == 1? false : true);
+            advancedScreen.addPreference(randomPulse);
 
-        CheckBoxPreference orderPulse = new CheckBoxPreference(this);
-        orderPulse.setKey(PULSE_IN_ORDER);
-        orderPulse.setSummary(R.string.pref_trackball_order_summary);
-        orderPulse.setTitle(R.string.pref_trackball_order_title);
-        orderPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0) == 1 ? false : true);
-        advancedScreen.addPreference(orderPulse);
+            CheckBoxPreference orderPulse = new CheckBoxPreference(this);
+            orderPulse.setKey(PULSE_IN_ORDER);
+            orderPulse.setSummary(R.string.pref_trackball_order_summary);
+            orderPulse.setTitle(R.string.pref_trackball_order_title);
+            orderPulse.setEnabled(Settings.System.getInt(getContentResolver(), Settings.System.TRACKBALL_NOTIFICATION_BLEND_COLOR, 0) == 1 ? false : true);
+            advancedScreen.addPreference(orderPulse);
+        }
 
         Preference resetColors = new Preference(this);
         resetColors.setKey(RESET_NOTIFS);
@@ -469,30 +472,37 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
                 colorList.setTitle(R.string.color_trackball_flash_title);
                 colorList.setSummary(R.string.color_trackball_flash_summary);
                 colorList.setDialogTitle(R.string.dialog_color_trackball);
-                colorList.setEntries(R.array.entries_trackball_colors);
-                colorList.setEntryValues(R.array.pref_trackball_colors_values);
+                if (getResources().getBoolean(R.bool.has_dual_notification_led)) {
+                    colorList.setEntries(R.array.entries_dual_led_colors);
+                    colorList.setEntryValues(R.array.values_dual_led_colors);
+                } else {
+                    colorList.setEntries(R.array.entries_trackball_colors);
+                    colorList.setEntryValues(R.array.pref_trackball_colors_values);
+                }
                 colorList.setOnPreferenceChangeListener(this);
                 appName.addPreference(colorList);
 
-                ListPreference blinkList = new ListPreference(this);
-                blinkList.setKey(pkg + "_blink");
-                blinkList.setTitle(R.string.color_trackball_blink_title);
-                blinkList.setSummary(R.string.color_trackball_blink_summary);
-                blinkList.setDialogTitle(R.string.dialog_blink_trackball);
-                blinkList.setEntries(R.array.pref_trackball_blink_rate_entries);
-                blinkList.setEntryValues(R.array.pref_trackball_blink_rate_values);
-                blinkList.setOnPreferenceChangeListener(this);
-                appName.addPreference(blinkList);
+                if (!getResources().getBoolean(R.bool.has_dual_notification_led)) {
+                    ListPreference blinkList = new ListPreference(this);
+                    blinkList.setKey(pkg + "_blink");
+                    blinkList.setTitle(R.string.color_trackball_blink_title);
+                    blinkList.setSummary(R.string.color_trackball_blink_summary);
+                    blinkList.setDialogTitle(R.string.dialog_blink_trackball);
+                    blinkList.setEntries(R.array.pref_trackball_blink_rate_entries);
+                    blinkList.setEntryValues(R.array.pref_trackball_blink_rate_values);
+                    blinkList.setOnPreferenceChangeListener(this);
+                    appName.addPreference(blinkList);
 
-                Preference customColor = new Preference(this);
-                customColor.setKey(pkg + "_custom");
-                customColor.setSummary(R.string.color_trackball_custom_summary);
-                customColor.setTitle(R.string.color_trackball_custom_title);
-                if (packageValues != null) {
-                    // Check if the color is none, if it is disable custom.
-                    customColor.setEnabled(!packageValues[1].equals("none"));
+                    Preference customColor = new Preference(this);
+                    customColor.setKey(pkg + "_custom");
+                    customColor.setSummary(R.string.color_trackball_custom_summary);
+                    customColor.setTitle(R.string.color_trackball_custom_title);
+                    if (packageValues != null) {
+                        // Check if the color is none, if it is disable custom.
+                        customColor.setEnabled(!packageValues[1].equals("none"));
+                    }
+                    appName.addPreference(customColor);
                 }
-                appName.addPreference(customColor);
 
                 Preference testColor = new Preference(this);
                 testColor.setKey(pkg + "_test");

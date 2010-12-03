@@ -94,11 +94,12 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             Sensor.TYPE_LIGHT) == null) {
             ((PreferenceCategory)prefSet.findPreference(GENERAL_CATEGORY)).removePreference(mBacklightScreen);
         }
-        
-        if (!getResources().getBoolean(R.bool.has_rgb_notification_led)) {
+
+        if (!getResources().getBoolean(R.bool.has_rgb_notification_led) &&
+                !getResources().getBoolean(R.bool.has_dual_notification_led)) {
             ((PreferenceCategory)prefSet.findPreference(GENERAL_CATEGORY)).removePreference(mTrackballScreen);
         }
-        
+
         /* Rotation */
         mRotation90Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_90_PREF);
         mRotation180Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_180_PREF);

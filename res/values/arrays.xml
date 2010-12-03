@@ -51,8 +51,8 @@
         <item>Salmon</item>
         <item>Fuscia</item>
         <item>Calibrated (N1)</item>
-	    <item>Calibrated (N1) Low Red</item>
-	    <item>Calibrated (N1) Cool</item>
+        <item>Calibrated (N1) Low Red</item>
+        <item>Calibrated (N1) Cool</item>
     </string-array>
 
     <string-array name="values_render_effect">
@@ -64,11 +64,11 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
-	    <item>8</item>
-	    <item>9</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
-    
-	<string-array name="render_entries">
+
+    <string-array name="render_entries">
         <item>Night Mode (Red)</item>
         <item>Terminal (Green)</item>
         <item>Blue</item>
@@ -76,38 +76,38 @@
         <item>Salmon</item>
         <item>Fuscia</item>
         <item>Calibrated (N1)</item>
-	    <item>Calibrated (N1) Low Red</item>
-	    <item>Calibrated (N1) Cool</item>
-	</string-array>
+        <item>Calibrated (N1) Low Red</item>
+        <item>Calibrated (N1) Cool</item>
+    </string-array>
 
-	<string-array name="render_values">
-		<item>1</item>
-		<item>2</item>
-		<item>3</item>
-		<item>4</item>
-		<item>5</item>
-		<item>6</item>
+    <string-array name="render_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
         <item>7</item>
-	    <item>8</item>
-	    <item>9</item>
-	</string-array>
-	
-	<string-array name="entries_overscroll_weight">
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="entries_overscroll_weight">
         <item>Extra Heavy</item>
         <item>Heavy</item>
         <item>Medium</item>
         <item>Light</item>
         <item>Extra Light</item>
-	</string-array>
+    </string-array>
 
-	<string-array name="values_overscroll_weight">
-		<item>1</item>
-		<item>3</item>
-		<item>5</item>
-		<item>7</item>
-		<item>9</item>
-	</string-array>
-    
+    <string-array name="values_overscroll_weight">
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+    </string-array>
+
     <string-array name="entries_trackball_colors">
         <item>Green</item>
         <item>White</item>
@@ -119,8 +119,8 @@
         <item>Pink</item>
         <item>Orange</item>
         <item>Light Blue</item>
-	<item>Random</item>
-	<item>None</item>
+        <item>Random</item>
+        <item>None</item>
     </string-array>
 
     <string-array name="pref_trackball_colors_values" translatable="false">
@@ -134,11 +134,23 @@
         <item>#ffc0cb</item>
         <item>#ffa500</item>
         <item>#add8e6</item>
-	<item>random</item>
-	<item>none</item>
+        <item>random</item>
+        <item>none</item>
     </string-array>
 
-	<string-array name="pref_trackball_blink_rate_entries">
+    <string-array name="entries_dual_led_colors">
+        <item>Green</item>
+        <item>Amber</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="values_dual_led_colors" translatable="false">
+        <item>green</item>
+        <item>red</item>
+        <item>none</item>
+    </string-array>
+
+    <string-array name="pref_trackball_blink_rate_entries">
         <item>2 (Fast)</item>
         <item>3</item>
         <item>4 (Medium)</item>
