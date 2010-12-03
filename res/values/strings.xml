@@ -112,8 +112,8 @@
     <string name="title_notifications_items_text">Items text color</string>
     <string name="title_notifications_items_time">Items time color</string>
 
-    <!-- User interface: Trackball notifcations -->
-    <string name="trackball_notifications_title">Trackball Notification Colors</string>
+    <!-- User interface: LED notifcations -->
+    <string name="trackball_notifications_title">LED notification Colors</string>
     <string name="dialog_color_trackball">Choose a color</string>
     <string name="dialog_blink_trackball">Choose a blink rate</string>
     <string name="color_trackball_flash_title">Flash color</string>
