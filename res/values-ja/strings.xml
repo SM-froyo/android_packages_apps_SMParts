@@ -476,6 +476,7 @@
     <string name="pref_lockscreen_gestures_trail_title">軌跡を表示する</string>
     <string name="pref_lockscreen_gestures_builder_title">ジェスチャーを作成</string>
     <string name="pref_lockscreen_gestures_sensitivity_title">感度</string>
+    <string name="pref_lockscreen_gestures_color_title">色</string>
     <string name="label_create_gesture">ジェスチャーを作成</string>
     <string name="gestures_button_add">ジェスチャーを追加</string>
     <string name="gestures_button_discard">破棄</string>
@@ -492,6 +493,7 @@
     <string name="gestures_error_loading">ジェスチャーファイルの操作に問題が発生しました</string>
     <string name="gestures_unlock_only">アンロック</string>
     <string name="gestures_toggle_sound">サウンドトグル</string>
+    <string name="gestures_flashlight">フラッシュライト</string>
     <string name="pref_lockscreen_disable_unlock_tab">アンロックスライダーを無効にする</string>
     <string name="pref_lockscreen_disable_unlock_tab_summary">ノート: このオプションを有効にする前に、トラックボールやメニューキー、ジェスチャーでのアンロックを設定する必要があります。</string>
     <string name="gestures_explain_create_screen">実行するアクション(あるいはアンロックやサウンド)を選択し、スクリーンにジェスチャーを描いてください。\n縦方向(上/下)に1回のみのジェスチャーは不正になります。</string>
