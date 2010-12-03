@@ -373,14 +373,14 @@ public class TrackballNotificationActivity extends PreferenceActivity implements
         removeCatList.setOnPreferenceChangeListener(this);
         catScreen.addPreference(removeCatList);
 
-        // Advanced options only relevant to RGB lights
-        if (!getResources().getBoolean(R.bool.has_dual_notification_led)) {
-            CheckBoxPreference alwaysPulse = new CheckBoxPreference(this);
-            alwaysPulse.setKey(ALWAYS_PULSE);
-            alwaysPulse.setSummary(R.string.pref_trackball_screen_summary);
-            alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
-            advancedScreen.addPreference(alwaysPulse);
+        CheckBoxPreference alwaysPulse = new CheckBoxPreference(this);
+        alwaysPulse.setKey(ALWAYS_PULSE);
+        alwaysPulse.setSummary(R.string.pref_trackball_screen_summary);
+        alwaysPulse.setTitle(R.string.pref_trackball_screen_title);
+        advancedScreen.addPreference(alwaysPulse);
 
+         // Advanced options only relevant to RGB lights
+         if (!getResources().getBoolean(R.bool.has_dual_notification_led)) {
             CheckBoxPreference blendPulse = new CheckBoxPreference(this);
             blendPulse.setKey(BLEND_COLORS);
             blendPulse.setSummary(R.string.pref_trackball_blend_summary);
