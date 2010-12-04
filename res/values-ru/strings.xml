@@ -115,13 +115,13 @@
     <!-- User interface: Trackball notifcations -->
     <string name="trackball_notifications_title">Цвета уведомлений trackball</string>
     <string name="dialog_color_trackball">Выберите цвет</string>
-    <string name="dialog_blink_trackball">Выберите частоту свечения</string>
-    <string name="color_trackball_flash_title">Цвет свечения</string>
-    <string name="color_trackball_flash_summary">Выбор цвета свечения</string>
+    <string name="dialog_blink_trackball">Выберите частоту мерцания</string>
+    <string name="color_trackball_flash_title">Цвет мерцания</string>
+    <string name="color_trackball_flash_summary">Выбор цвета мерцания</string>
     <string name="color_trackball_custom_title">Пользовательский цвет</string>
-    <string name="color_trackball_custom_summary">Ручные настройки цвета свечения</string>
-    <string name="color_trackball_blink_title">Частота свечения</string>
-    <string name="color_trackball_blink_summary">Выбор периодичности свечения</string>
+    <string name="color_trackball_custom_summary">Ручные установки цвета мерцания</string>
+    <string name="color_trackball_blink_title">Частота мерцания</string>
+    <string name="color_trackball_blink_summary">Выбор периодичности мерцания</string>
     <string name="color_trackball_test_title">Тест свечения</string>
     <string name="color_trackball_test_summary">Выполнение теста свечения trackball</string>
     <string name="dialog_clear_flash">Очистить настройки</string>
@@ -135,11 +135,24 @@
     <string name="pref_trackball_random_title">Случайные цвета</string>
     <string name="pref_trackball_random_summary">LED будет мерцать случайным цветом для всех уведомлений</string>
     <string name="pref_trackball_order_title">Порядок</string>
-    <string name="pref_trackball_order_summary">Мерцать LED в порядке</string>
+    <string name="pref_trackball_order_summary">Порядок мерцания LED</string>
     <string name="pref_trackball_reset_title">Сброс</string>
     <string name="pref_trackball_reset_summary">Сброс всех настроек для приложений</string>
     <string name="dialog_trackball_loading">Загрузка...</string>
     <string name="dialog_trackball_packagelist">Загрузка списка приложений</string>
+    <string name="trackball_category_dialog_text">Пожалуйста, введите новую категорию</string>
+    <string name="trackball_category_list_title">Категория</string>
+    <string name="trackball_category_list_summary">Выберите категорию</string>
+    <string name="trackball_category_screen">Управление категориями</string>
+    <string name="trackball_category_add_title">Добавить категорию</string>
+    <string name="trackball_category_add_summary">Добавить категорию в список</string>
+    <string name="trackball_category_remove_title">Удалить категорию</string>
+    <string name="trackball_category_remove_summary">Удалить категорию из списка</string>
+    <string name="trackball_remove_default_toast">Невозможно удалить категорию, т.к. она является по умолчанию.</string>
+    <string name="trackball_reset_all">Сброс всех цветов и категорий.</string>
+    <string name="trackball_array_error">К сожалению, произошла ошибка. Этот папкет был помещен в категорию Разное.</string>
+    <string name="trackball_color_notice_title">ПРИМЕЧАНИЕ:</string>
+    <string name="trackball_color_notice_summary">На некоторых устройствах будут отображаться не все цвета.</string>
 
     <!--Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">Внимание: может вызвать разрядку батареи</string>
@@ -415,6 +428,8 @@
     <string name="title_expanded_widget">Виджет в панели</string>
     <string name="title_widget_buttons">Виджет в панели</string>
     <string name="summary_expanded_widget">Использовать элементы управления питанием в выпадающей панели</string>
+    <string name="title_expanded_hide_onchange">Скрывать панель</string>
+    <string name="summary_expanded_hide_onchange">Скрывать выпадающую панель уведомлений, после переключения кнопки виджета</string>
     <string name="expanded_color_mask">Цвет индикатора</string>
     <string name="title_widget_picker">Кнопки виджета</string>
     <string name="summary_widget_picker">Выберите кнопки, которые будут отображаться в этом виджете.</string>
@@ -470,8 +485,8 @@
     <string name="gestures_delete">Удалить</string>
     <string name="gestures_delete_success">Жест удален</string>
     <string name="gestures_error_loading">Проблема с жестом для выполнения операции.</string>
-    <string name="gestures_unlock_only">Разблокировать</string>
-    <string name="gestures_toggle_sound">Переключить звук</string>
+    <string name="gestures_unlock_only">Разблок.</string>
+    <string name="gestures_toggle_sound">Перекл. звук</string>
     <string name="gestures_flashlight">Фонарик</string>
     <string name="pref_lockscreen_disable_unlock_tab">Отключить слайдер</string>
     <string name="pref_lockscreen_disable_unlock_tab_summary">Примечание: Вы должны включить разблокировку через trackball, кнопку menu или жесты - для того что бы эта опция была доступна.</string>
