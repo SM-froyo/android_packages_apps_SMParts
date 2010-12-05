@@ -112,8 +112,8 @@
     <string name="title_notifications_items_text">Testo</string>
     <string name="title_notifications_items_time">Ora</string>
 
-    <!-- User interface: Trackball notifcations -->
-        <string name="trackball_notifications_title">Colori Notifiche Trackball</string>
+    <!-- User interface: LED notifcations -->
+        <string name="trackball_notifications_title">Colori Notifiche LED</string>
         <string name="dialog_color_trackball">Scegli un colore</string>
         <string name="dialog_blink_trackball">Scegli frequenza di lampeggio</string>
         <string name="color_trackball_flash_title">Colore lampeggio</string>
@@ -127,7 +127,7 @@
         <string name="dialog_clear_flash">Ferma Lampeggio</string>
     <string name="trackball_advanced_title">Avanzato</string>
     <string name="pref_trackball_screen_title">Pulsa sempre</string>
-    <string name="pref_trackball_screen_summary">La trackball pulserà anche a schermo acceso</string>
+    <string name="pref_trackball_screen_summary">Il LED pulserà anche a schermo acceso</string>
     <string name="pref_trackball_blend_title">Mischia colori di notifica</string>
     <string name="pref_trackball_blend_summary">Mischia i colori delle luci di notifica</string>
     <string name="pref_trackball_sucess_title">Successione</string>
@@ -151,6 +151,8 @@
     <string name="trackball_remove_default_toast">Non è possibile rimuovere la categoria di default.</string>
     <string name="trackball_reset_all">Ripristina le app e le categorie</string>
     <string name="trackball_array_error">Purtroppo si è verificato un errore di array. Questa app è stata forzata nella categoria Miscellaneous.</string>
+    <string name="trackball_color_notice_title">NOTA:</string>
+    <string name="trackball_color_notice_summary">Non tutti i colori verranno visualizzati su tutti i dispositivi.</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">ATTENZIONE:Aumento consumo di batteria</string>
@@ -341,6 +343,8 @@
     <string name="title_widget_buttons">Expanded View Widget</string>
     <string name="title_expanded_widget">Notification power widget</string>
     <string name="summary_expanded_widget">Visualizza il widget per il risparmio energetico nell\'area delle notifiche</string>
+    <string name="title_expanded_hide_onchange">Ritira barra</string>
+    <string name="summary_expanded_hide_onchange">Ritira la barra scorrevole delle notifiche dopo aver premuto un tasto del widget</string>
     <string name="expanded_color_mask">Colore indicatore</string>
     <string name="title_widget_picker">Tasti del widget</string>
     <string name="summary_widget_picker">Scegli i tasti da aggiungere al widget</string>
