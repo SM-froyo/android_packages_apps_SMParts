@@ -27,25 +27,25 @@
         <item>Mode nuit (rouge)</item>
         <item>Terminal (vert)</item>
         <item>Bleu</item>
-        <item>Ambre</item>
+        <item>Orange</item>
         <item>Saumon</item>
         <item>Fuchsia</item>
-	    <item>Calibré (N1)</item>
-	    <item>Calibré (N1) Rouge</item>
-	    <item>Calibré (N1) Froid</item>
+        <item>Calibré (N1)</item>
+        <item>Calibré (N1) Rouge</item>
+        <item>Calibré (N1) Froid</item>
     </string-array>
 
-	<string-array name="render_entries">
+    <string-array name="render_entries">
         <item>Mode nuit (rouge)</item>
         <item>Terminal (vert)</item>
         <item>Bleu</item>
-        <item>Ambre</item>
+        <item>Orange</item>
         <item>Saumon</item>
         <item>Fuchsia</item>
-	    <item>Calibré (N1)</item>
-	    <item>Calibré (N1) Rouge</item>
-	    <item>Calibré (N1) Froid</item>
-	</string-array>
+        <item>Calibré (N1)</item>
+        <item>Calibré (N1) Rouge</item>
+        <item>Calibré (N1) Froid</item>
+    </string-array>
 
     <string-array name="entries_overscroll_weight">
         <item>Extra long</item>
@@ -66,11 +66,17 @@
         <item>Rose</item>
         <item>Orange</item>
         <item>Blue ciel</item>
-	    <item>Aléatoire</item>
-	    <item>Aucune</item>
+        <item>Aléatoire</item>
+        <item>Aucune</item>
     </string-array>
 
-	<string-array name="pref_trackball_blink_rate_entries">
+    <string-array name="entries_dual_led_colors">
+        <item>Vert</item>
+        <item>Orange</item>
+        <item>Aucune</item>
+    </string-array>
+
+    <string-array name="pref_trackball_blink_rate_entries">
         <item>2 (Rapide)</item>
         <item>3</item>
         <item>4 (Moyen)</item>
