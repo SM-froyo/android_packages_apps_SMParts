@@ -17,7 +17,7 @@
 
 <resources>
     <string-array name="entries_install_location">
-        <item>Automatico</item>
+        <item>Automático</item>
         <item>Interna</item>
         <item>Externa</item>
     </string-array>
@@ -28,23 +28,23 @@
         <item>Terminal (verde)</item>
         <item>Azul</item>
         <item>Ambar</item>
-        <item>Salmon</item>
+        <item>Salmón</item>
         <item>Fucsia</item>
-            <item>Calibrado (N1)</item>
-            <item>Calibrado (N1) Rojo</item>
-            <item>Calibrado (N1) Frio</item>
+        <item>Calibrado (N1)</item>
+        <item>Calibrado (N1) Rojo</item>
+        <item>Calibrado (N1) Frio</item>
     </string-array>
 
     <string-array name="render_entries">
-        <item>Mode noche (rojo)</item>
+        <item>Modo noche (rojo)</item>
         <item>Terminal (verde)</item>
         <item>Azul</item>
         <item>Ambar</item>
-        <item>Salmon</item>
-        <item>Fucsia</item>
-            <item>Calibrado (N1)</item>
-            <item>Calibrado (N1) Rojo</item>
-            <item>Calibrado (N1) Frio</item>
+        <item>Salmón</item>
+        <item>Fuscia</item>
+        <item>Calibrado (N1)</item>
+        <item>Calibrado (N1) Rojo</item>
+        <item>Calibrato (N1) Frio</item>
     </string-array>
 
     <string-array name="entries_trackball_colors">
@@ -53,17 +53,17 @@
         <item>Rojo</item>
         <item>Azul</item>
         <item>Amarillo</item>
-        <item>Cian</item>
-        <item>Margenta</item>
+        <item>Cián</item>
+        <item>Magenta</item>
         <item>Rosa</item>
         <item>Naranja</item>
-        <item>Azul cielo</item>
-            <item>Aleatorio</item>
-            <item>Ninguno</item>
+        <item>Celeste</item>
+        <item>Aleatorio</item>
+        <item>Ninguno</item>
     </string-array>
 
     <string-array name="pref_trackball_blink_rate_entries">
-        <item>2 (Rapido)</item>
+        <item>2 (Rápido)</item>
         <item>3</item>
         <item>4 (Medio)</item>
         <item>5</item>
@@ -71,9 +71,9 @@
     </string-array>
 
     <string-array name="pref_lockscreen_delay_entries">
-        <item>Immediato</item>
+        <item>Inmediatamente</item>
         <item>1s</item>
-        <item>5os</item>
+        <item>5s</item>
         <item>10s</item>
         <item>15s</item>
         <item>30s</item>
@@ -86,7 +86,7 @@
     <string-array name="pref_compcache_size_entries">
         <item>Desactivado</item>
         <item>10%</item>
-        <item>18% (por defecto)</item>
+        <item>18% (predeterminado)</item>
         <item>26%</item>
     </string-array>
 
@@ -104,17 +104,88 @@
         <item>2500 lux</item>
     </string-array>
 
-    <string-array name="entries_sound_limitvol">
-        <item>Regulacion dada por el sistema</item>
-        <item>Volumen de la musica (por defecto)</item>
+    <string-array name="entries_light_filter_interval">
+        <item>0.5 s</item>
+        <item>1 s</item>
+        <item>2 s</item>
+        <item>5 s</item>
+        <item>10 s</item>
     </string-array>
 
-    <string-array name="entries_ring_widget" translatable="false">
-        <item>Sonido+Vibrar/Vibrar</item>
-        <item>Sonido/Vibrar</item>
+    <string-array name="entries_light_levels_dim">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20 (predeterminado)</item>
+        <item>22</item>
+        <item>24</item>
+        <item>26</item>
+    </string-array>
+
+    <string-array name="entries_light_decrease_hysteresis">
+        <item>0 %</item>
+        <item>10 %</item>
+        <item>20 %</item>
+        <item>30 %</item>
+        <item>40 %</item>
+        <item>50 %</item>
+        <item>60 %</item>
+        <item>70 %</item>
+        <item>80 %</item>
+        <item>90 %</item>
+    </string-array>
+
+    <string-array name="entries_sound_attenuation">
+        <item>0 dB</item>
+        <item>4 dB</item>
+        <item>6 dB (predeterminado)</item>
+        <item>8 dB</item>
+        <item>10 dB</item>
+    </string-array>
+
+    <string-array name="entries_sound_limitvol">
+        <item>Ajustes de sistema atenuados</item>
+        <item>Volumen de la música (predeterminado)</item>
+    </string-array>
+
+    <string-array name="entries_brightness_widget">
+        <item>Automático/Difuminado/40%/100%</item>
+        <item>Automático/Difuminado/25%/75%/100%</item>
+        <item>Automático/25%/100%</item>
+        <item>Difuminado/100%</item>
+    </string-array>
+
+    <string-array name="entries_network_widget">
+        <item>2G/3G+2G</item>
+        <item>2G/3G Solo</item>
+        <item>2G/3G Solo/3G+2G</item>
+    </string-array>
+
+    <string-array name="entries_screentimeout_widget">
+        <item>15s/1m/5m</item>
+        <item>30s/2m/5m</item>
+    </string-array>
+
+    <string-array name="entries_ring_widget">
+        <item>Sonido+Vibración/Vibración</item>
+        <item>Sonido/Vibración</item>
         <item>Sonido/Silencio</item>
         <item>Sonido+Vib/Vib/Silencio</item>
-        <item>Sonido/Vibrar/Silencio</item>
+        <item>Sonido/Vibración/Silencio</item>
+    </string-array>
+
+    <string-array name="entries_flash_widget">
+        <item>Normal</item>
+        <item>Alto / Rayo Mortal</item>
     </string-array>
 
     <string-array name="pref_lockscreen_gestures_sensitivity_entries">
