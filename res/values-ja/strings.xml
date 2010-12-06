@@ -141,6 +141,8 @@
     <string name="trackball_remove_default_toast">デフォルトカテゴリを削除することはできません。</string>
     <string name="trackball_reset_all">すべてのカテゴリとカラーをリセット</string>
     <string name="trackball_array_error">残念なことに配列エラーが発生しました。このパッケージは雑多カテゴリに追加されました。</string>
+    <string name="trackball_color_notice_title">ノート</string>
+    <string name="trackball_color_notice_summary">すべての色がすべてのデバイスで使用できるわけではありません。</string>
 
     <!-- Trackball Settings : Warning dialog -->
     <string name="notification_battery_warning_title">注意: バッテリーが消費します</string>
@@ -329,6 +331,9 @@
     <string name="title_widget_buttons">通知領域ウィジェット</string>
     <string name="title_expanded_widget">通知領域の電源ウィジェット</string>
     <string name="summary_expanded_widget">通知領域を伸ばしたときに電源ウィジェットを表示する</string>
+    <string name="title_expanded_hide_onchange">変更したら隠す</string>
+    <string name="summary_expanded_hide_onchange">トグルウィジェットボタンを押したら伸ばした通知領域を隠す</string>
+
     <string name="expanded_color_mask">インジケータの色</string>
     <string name="title_widget_picker">ウィジェットボタン</string>
     <string name="summary_widget_picker">ウィジェットボタンを選択</string>
