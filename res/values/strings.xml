@@ -209,7 +209,8 @@
     <string name="pref_lockscreen_phone_messaging_control_title">Phone and Messaging</string>
     <string name="pref_lockscreen_phone_messaging_control_summary">Phone and Messaging accessible from Lockscreen.</string>
     <string name="pref_messaging_tab_app_title">Messaging tab application</string>
-
+    <string name="pref_lockscreen_style_title">Lockscreen style</string>
+    <string name="pref_lockscreen_style_summary">Choose the style of the lockscreen</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press home settings</string>

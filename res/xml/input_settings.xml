@@ -26,11 +26,15 @@
             android:summary="@string/pref_lockscreen_always_music_controls_summary" />
         <CheckBoxPreference android:key="lockscreen_quick_unlock_control"
             android:title="@string/pref_lockscreen_quick_unlock_control_title" android:summary="@string/pref_lockscreen_quick_unlock_control_summary" />
+        <ListPreference android:key="pref_lockscreen_style"
+            android:dialogTitle="@string/pref_lockscreen_style_title"
+            android:title="@string/pref_lockscreen_style_title" android:summary="@string/pref_lockscreen_style_summary"
+            android:entries="@array/pref_lockscreen_style_entries" android:entryValues="@array/pref_lockscreen_style_values" />
         <CheckBoxPreference android:key="lockscreen_phone_messaging_tab"
-            android:title="@string/pref_lockscreen_phone_messaging_control_title" 
+            android:title="@string/pref_lockscreen_phone_messaging_control_title"
             android:summary="@string/pref_lockscreen_phone_messaging_control_summary" />
         <Preference android:key="pref_messaging_tab_app"
-            android:title="@string/pref_messaging_tab_app_title" />
+            android:dependency="lockscreen_phone_messaging_tab" android:title="@string/pref_messaging_tab_app_title" />
         <PreferenceScreen android:key="lockscreen_gestures"
             android:title="@string/pref_lockscreen_title">
                 <intent android:action="android.intent.action.MAIN"
