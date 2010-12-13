@@ -3,6 +3,9 @@
     <!-- Generic -->
     <string name="app_name">CyanogenMod設定</string>
 
+    <!--  Update Notifications -->
+    <string name="updatenotify_title">更新通知</string>
+    <string name="updatenotify_summary">更新情報をプッシュ通知で受け取る</string>
     <!-- User interface -->
     <string name="ui_title">ユーザインタフェース</string>
     <string name="ui_summary">ユーザインタフェース設定と調整</string>
