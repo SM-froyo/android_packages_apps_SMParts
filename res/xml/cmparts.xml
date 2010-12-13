@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Update Notifications -->
+    <PreferenceScreen android:key="updatenotify_settings"
+        android:title="@string/updatenotify_title" android:summary="@string/updatenotify_summary">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.updatenotify"
+            android:targetClass="com.cyanogenmod.updatenotify.MainActivity" />
+    </PreferenceScreen>
     
     <!-- Application Settings -->
     <PreferenceScreen android:key="application_settings"
