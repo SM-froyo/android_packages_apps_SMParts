@@ -205,6 +205,8 @@
     <string name="pref_lockscreen_phone_messaging_control_title">Telefon und SMS/MMS</string>
     <string name="pref_lockscreen_phone_messaging_control_summary">Telefon und SMS/MMS Slider auf gesperrtem Bildschirm anzeigen.</string>
     <string name="pref_messaging_tab_app_title">SMS/MMS Slider Anwendung</string>
+    <string name="pref_lockscreen_style_title">Lockscreen-Aussehen</string>
+	  <string name="pref_lockscreen_style_summary">Einen Stil für den Lockscreen auswählen</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Home-Gedrückt-Einstellungen</string>
