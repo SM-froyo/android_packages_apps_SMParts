@@ -195,6 +195,8 @@
     <string name="pref_lockscreen_phone_messaging_control_title">電話とメッセージ</string>
     <string name="pref_lockscreen_phone_messaging_control_summary">ロックスクリーンから電話とメッセージにアクセスできるようにする</string>
     <string name="pref_messaging_tab_app_title">メッセージアプリケーション</string>
+    <string name="pref_lockscreen_style_title">ロックスクリーンスタイル</string>
+    <string name="pref_lockscreen_style_summary">ロックスクリーンのスタイルを選択する</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">ホーム長押し設定</string>

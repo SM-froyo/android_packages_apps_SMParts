@@ -158,4 +158,9 @@
         <item>12 (最も狭い)</item>
     </string-array>
 
+    <string-array name="pref_lockscreen_style_entries">
+        <item>スライディングタブ</item>
+        <item>ロータリー</item>
+    </string-array>
+
 </resources>
