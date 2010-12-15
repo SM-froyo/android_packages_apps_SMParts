@@ -3,6 +3,10 @@
     <!-- Generic -->
     <string name="app_name">Paramètres CyanogenMod</string>
 
+    <!-- Update Notifications -->
+    <string name="updatenotify_title">Notifications de mise à jour</string>
+    <string name="updatenotify_summary">Recevoir une notification push lorsqu\'une mise à jour est disponible</string>
+
     <!-- User interface -->
     <string name="ui_title">Interface utilisateur</string>
     <string name="ui_summary">Paramètres de l\'interface utilisateur &amp; tweaks</string>
