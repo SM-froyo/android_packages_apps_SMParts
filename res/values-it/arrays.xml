@@ -176,4 +176,10 @@
         <item>11</item>
         <item>12 (Preciso)</item>
     </string-array>
+
+    <string-array name="pref_lockscreen_style_entries">
+        <item>Tab scorrevoli</item>
+        <item>Rotante</item>
+
+    </string-array>
 </resources>
