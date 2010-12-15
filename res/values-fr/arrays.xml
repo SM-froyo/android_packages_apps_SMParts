@@ -137,4 +137,9 @@
         <item>11</item>
         <item>12 (le plus strict)</item>
     </string-array>
+
+    <string-array name="pref_lockscreen_style_entries">
+        <item>Curseurs</item>
+        <item>Rotatif</item>
+    </string-array>
 </resources>

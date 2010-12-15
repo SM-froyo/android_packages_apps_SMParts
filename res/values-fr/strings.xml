@@ -207,6 +207,8 @@
     <string name="pref_lockscreen_phone_messaging_control_title">Téléphone et messages</string>
     <string name="pref_lockscreen_phone_messaging_control_summary">Le téléphone ainsi que les messages seront accessibles depuis l\'écran de verrouillage</string>
     <string name="pref_messaging_tab_app_title">Application de messagerie</string>
+    <string name="pref_lockscreen_style_title">Style de l\'écran de verrouillage</string>
+    <string name="pref_lockscreen_style_summary">Choisir le style de l\'écran de verrouillage</string>
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Pression longue sur maison</string>
