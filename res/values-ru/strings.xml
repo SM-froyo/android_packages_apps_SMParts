@@ -3,6 +3,10 @@
     <!-- Generic -->    
     <string name="app_name">Настройки CyanogenMod</string>
 
+    <!--  Update Notifications -->
+    <string name="updatenotify_title">Уведомления об обновлениях</string>
+    <string name="updatenotify_summary">Получать уведомления об обновлениях.</string>
+
     <!-- User interface -->
     <string name="ui_title">Интерфейс</string>
     <string name="ui_summary">Настройки пользовательского интерфейса</string>
@@ -490,6 +494,6 @@
     <string name="gestures_flashlight">Фонарик</string>
     <string name="pref_lockscreen_disable_unlock_tab">Отключить слайдер</string>
     <string name="pref_lockscreen_disable_unlock_tab_summary">Примечание: Вы должны включить разблокировку через trackball, кнопку menu или жесты - для того что бы эта опция была доступна.</string>
-    <string name="gestures_explain_create_screen">Выберите действие для выполнения (или выберите Разблокировать или Переключить звук) и нарисуйте жесть на экране.\nПримечание: одиночный вертикальный (верх или вниз) жест не поддерживается.</string>
+    <string name="gestures_explain_create_screen">Выберите действие для выполнения (или выберите Разблокировать или Переключить звук) и нарисуйте жест на экране.\nПримечание: одиночный вертикальный (верх или вниз) жест не поддерживается.</string>
 
 </resources>
