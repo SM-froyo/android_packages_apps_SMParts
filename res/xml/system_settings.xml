@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- General settings -->
+    <PreferenceCategory android:key="general_category"
+        android:title="@string/general_title">
+
+        <!-- CMStats -->
+        <PreferenceScreen android:key="cmstats_settings"
+            android:title="@string/cmstats_title" android:summary="@string/cmstats_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.stats"
+                android:targetClass="com.cyanogenmod.stats.MainActivity" />
+        </PreferenceScreen>
+
+        <!-- Update Notifications -->
+        <PreferenceScreen android:key="updatenotify_settings"
+            android:title="@string/updatenotify_title" android:summary="@string/updatenotify_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.updatenotify"
+                android:targetClass="com.cyanogenmod.updatenotify.MainActivity" />
+        </PreferenceScreen>
+
+        <!-- Change Log -->
+        <PreferenceScreen android:key="changelog"
+            android:title="@string/changelog_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.ChangeLog" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

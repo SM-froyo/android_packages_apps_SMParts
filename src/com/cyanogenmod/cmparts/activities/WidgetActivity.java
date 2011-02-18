@@ -2,25 +2,18 @@ package com.cyanogenmod.cmparts.activities;
 
 import com.cyanogenmod.cmparts.R;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceCategory;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.widget.Toast;
-import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class WidgetActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
@@ -287,7 +280,6 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
         } else if(preference == mFlashMode) {
             Settings.System.putInt(getContentResolver(), Settings.System.EXPANDED_FLASH_MODE, value);
         }
-
         return true;
     }
 }

@@ -10,6 +10,7 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
@@ -25,6 +26,8 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
     private static final String COMPCACHE_PERSIST_PROP = "persist.service.compcache";
 
     private static final String COMPCACHE_DEFAULT = SystemProperties.get("ro.compcache.default");
+
+    private static final String GENERAL_CATEGORY = "general_category";
 
     private static final String JIT_PREF = "pref_jit_mode";
 
@@ -48,7 +51,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
 
     private static final String USE_DITHERING_PERSIST_PROP = "persist.sys.use_dithering";
     
-    private static final String USE_DITHERING_DEFAULT = "0";
+    private static final String USE_DITHERING_DEFAULT = "1";
 
     private static final String LOCK_HOME_PREF = "pref_lock_home";
 
@@ -56,7 +59,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
 
     private static final int LOCK_HOME_DEFAULT = 0;
 
-    private static final int LOCK_MMS_DEFAULT = 1;
+    private static final int LOCK_MMS_DEFAULT = 0;
 
     private ListPreference mCompcachePref;
 
@@ -79,10 +82,13 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setTitle(R.string.performance_settings_title);
+        setTitle(R.string.performance_settings_title_subhead);
         addPreferencesFromResource(R.xml.performance_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+        
+        PreferenceCategory generalCategory = (PreferenceCategory)prefSet.findPreference(GENERAL_CATEGORY);
+
         mCompcachePref = (ListPreference) prefSet.findPreference(COMPCACHE_PREF);
         if (isSwapAvailable()) {
 	    if (SystemProperties.get(COMPCACHE_PERSIST_PROP) == "1")
@@ -90,7 +96,7 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
             mCompcachePref.setValue(SystemProperties.get(COMPCACHE_PERSIST_PROP, COMPCACHE_DEFAULT));
             mCompcachePref.setOnPreferenceChangeListener(this);
         } else {
-            prefSet.removePreference(mCompcachePref);
+            generalCategory.removePreference(mCompcachePref);
         }
 
         mJitPref = (CheckBoxPreference) prefSet.findPreference(JIT_PREF);

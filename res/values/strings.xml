@@ -3,8 +3,34 @@
     <!-- Generic -->
     <string name="app_name">CyanogenMod settings</string>
 
+    <!--  Primary Screen Settings -->
+    <string name="application_settings_title_head">Application</string>
+    <string name="application_settings_title_subhead">Application settings</string>
+    <string name="application_settings_summary_head">Application moving, install location</string>
+    <string name="display_settings_title_head">Display</string>
+    <string name="display_settings_title_subhead">Display settings</string>
+    <string name="display_settings_summary_head">Display animations, rotation, timeouts</string>
+    <string name="input_settings_title_head">Input</string>
+    <string name="input_settings_title_subhead">Input settings</string>
+    <string name="input_settings_summary_head">Input behavior, buttons, haptic feedback</string>
+    <string name="interface_settings_title_head">Interface</string>
+    <string name="interface_settings_title_subhead">Interface settings</string>
+    <string name="interface_settings_summary_head">Interface tweaks, overscrolling, render effect</string>
+    <string name="lockscreen_settings_title_head">Lockscreen</string>
+    <string name="lockscreen_settings_title_subhead">Lockscreen settings</string>
+    <string name="lockscreen_settings_summary_head">Lockscreen gestures, style, unlock options</string>
+    <string name="performance_settings_title_head">Performance</string>
+    <string name="performance_settings_title_subhead">Performance settings</string>
+    <string name="performance_settings_summary_head">Performance tweaks, JIT, VM heap size</string>
+    <string name="sound_settings_title_head">Sound</string>
+    <string name="sound_settings_title_subhead">Sound settings</string>
+    <string name="sound_settings_summary_head">Sound volumes, audio focus, quiet hours</string>
+    <string name="system_settings_title_head">System</string>
+    <string name="system_settings_title_subhead">System settings</string>
+    <string name="system_settings_summary_head">System changelog, stats, update notifications</string>
+
     <!--  Update Notifications -->
-    <string name="updatenotify_title">Update Notifications</string>
+    <string name="updatenotify_title">Update notifications</string>
     <string name="updatenotify_summary">Get push notifications of updates.</string>
 
     <!-- User interface -->
@@ -12,11 +38,15 @@
     <string name="ui_summary">User interface settings &amp; tweaks</string>
     <string name="ui_status_bar">Status Bar Customization</string>
 
-    <!-- User interface : orientation -->
-    <string name="ui_rotation_title">Accelerometer rotation</string>
-    <string name="pref_rotation_90_title">90 degrees</string>
-    <string name="pref_rotation_180_title">180 degrees</string>
-    <string name="pref_rotation_270_title">270 degrees</string>
+    <string name="pref_electron_beam_animation_on">Screen-on animation</string>
+    <string name="pref_electron_beam_animation_off">Screen-off animation</string>
+
+    <!-- User interface : rotation -->
+    <string name="ui_rotation_title">Rotation</string>
+
+    <string name="pref_rotation_90_title">Rotate 90 degrees</string>
+    <string name="pref_rotation_180_title">Rotate 180 degrees</string>
+    <string name="pref_rotation_270_title">Rotate 270 degrees</string>
 
     <!-- User interface : LED Notifications -->
     <string name="trackball_title">LED notifications</string>
@@ -29,9 +59,8 @@
 
     <!-- User interface : Overscroll -->
     <string name="ui_overscroll_title">Overscrolling</string>
-    <string name="pref_overscroll_title">Enable overscrolling</string>
-    <string name="pref_overscroll_summary_on">Scrollable objects overshoot and bounce back</string>
-    <string name="pref_overscroll_summary_off">Scrollable objects do not overshoot</string>
+    <string name="pref_overscroll_title">Overscroll effect</string>
+    <string name="pref_overscroll_summary">Choose how scrollable objects look when they overshoot</string>
     <string name="pref_overscroll_weight_title">Overscrolling weight</string>
     <string name="pref_overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
@@ -162,7 +191,6 @@
     <string name="notification_battery_warning_title">WARNING: May cause battery drain</string>
     <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incur the drain.</string>
 
-
     <!-- Tweaks Extras -->
     <string name="te_title">Tweaks extras</string>
     <string name="te_title_summary">Extra tools for interface tweaks</string>
@@ -244,6 +272,14 @@
     <string name="pref_heapsize_title">VM heap size</string>
     <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
 
+    <!-- Performance : Lock home memory -->
+    <string name="pref_lock_home_title">Lock home in memory</string>
+    <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
+
+    <!-- Performance : Lock mms app in memory -->
+    <string name="pref_lock_mms_title">Lock messaging app in memory</string>
+    <string name="pref_lock_mms_summary">Avoid lost messages on low memory situations</string>
+
     <!-- Performance Settings : Warning dialog -->
     <string name="performance_settings_warning_title">WARNING: Dragons Ahead!</string>
     <string name="performance_settings_warning">The options in here will change the performance of your system, potentially for the worse. They are included for experimentation and we request that you do not file bug reports if you have changed any from the defaults.</string>
@@ -309,6 +345,7 @@
     <string name="haptic_default_toast">Loading hard-coded defaults</string>
 
     <string name="general_title">General</string>
+    <string name="buttons_title">Buttons</string>
 
     <!-- UI Settings : Power off prompt -->
     <string name="pref_power_prompt_title">Power prompt</string>
@@ -384,15 +421,6 @@
     <string name="pref_flash_mode_summary">Choose High / Death Ray(Evo)</string>
     <string name="widget_max_buttons">6 is the max amount of buttons.</string>
 
-
-    <!-- Performance : Lock home memory -->
-    <string name="pref_lock_home_title">Lock home in memory</string>
-    <string name="pref_lock_home_summary">Attempt to keep the current home app in memory at all times</string>
-
-    <!-- Performance : Lock mms app in memory -->
-    <string name="pref_lock_mms_title">Lock messaging app in memory</string>
-    <string name="pref_lock_mms_summary">Avoid lost messages on low memory situations</string>
-
     <!-- Backlight -->
     <string name="backlight_title">Automatic backlight</string>
     <string name="backlight_summary">Tweak levels and filtering</string>
@@ -438,6 +466,8 @@
     <string name="sound_summary">Sound and audio focus settings</string>
     <string name="sound_notifications_focus_title">Notification focus</string>
     <string name="sound_notifications_focus_summary">Audio focus requests causes compatible apps to lower the volume while notifications play.</string>
+    <string name="sound_volume_control_silent_title">Silent state</string>
+    <string name="sound_volume_control_silent_summary">Add a state for complete silence to volume control</string>
     <string name="sound_to_speaker_title">Always play on speaker</string>
     <string name="sound_notifications_title">Notifications</string>
     <string name="sound_rings_title">Ring tones</string>
@@ -503,6 +533,54 @@
     <string name="gestures_toggle_sound">Toggle sound</string>
     <string name="gestures_flashlight">Flashlight</string>
     <string name="pref_lockscreen_disable_unlock_tab">Disable unlock slider</string>
-    <string name="pref_lockscreen_disable_unlock_tab_summary">Note: You need to enable trackball, menu key, or gesture unlocking before this option becomes available</string>
+    <string name="pref_lockscreen_disable_unlock_tab_summary">Note: You need to enable trackball, menu key, hold key or gesture unlocking before this option becomes available.</string>
     <string name="gestures_explain_create_screen">Pick an action to perform (or select Unlock or Sound) and draw a gesture on the screen.</string>
+
+    <!-- Change Log strings -->
+    <string name="changelog_title">View changelog</string>
+    <string name="changelog_dialog">Changelog</string>
+    <string name="changelog_loading">Loading changelog...</string>
+    <string name="changelog_error">Error loading changelog...</string>
+    <string name="changelog_unknown">Unknown</string>
+    <string name="changelog_version">Version</string>
+
+    <!-- HOLD unlock -->
+    <string name="pref_hold_unlock_title">HOLD unlock</string>
+    <string name="pref_hold_unlock_summary">Hold lock button to unlock</string>
+
+    <!-- Extended Lockscreen strings -->
+    <string name="ext_ls_settings_title">Extended Lockscreen</string>
+    <string name="ext_ls_title">Extended Lockscreen settings</string>
+
+    <string name="ext_ls_background_title">Lockscreen background</string>
+    <string name="ext_ls_background_summaryon">Will use /sdcard/lockscreen_wallpaper.png</string>
+    <string name="ext_ls_background_summaryoff">Will use system wallpaper</string>
+
+    <string name="ext_ls_unlock_possibility_title">Unlock ability</string>
+    <string name="ext_ls_unlock_possibility_text">Note: You need to enable trackball, menu key, hold key or gesture unlocking!</string>
+
+    <string name="ext_ls_visibility_title">Elements visibility</string>
+    <string name="ext_ls_counterbar_visibility_title">Counter bar</string>
+    <string name="ext_ls_counterbar_visibility_summary">Show unread/missed counter</string>
+    <string name="ext_ls_connectivitybar_visibility_title">Connectivity bar</string>
+    <string name="ext_ls_connectivitybar_visibility_summary">Show connectivity information bar</string>
+    <string name="ext_ls_genie_visibility_title">GenieWidget</string>
+    <string name="ext_ls_genie_visibility_summary">Show weather forecast</string>
+    <string name="ext_ls_nowplaying_visibility_title">Now playing</string>
+    <string name="ext_ls_nowplaying_visibility_summary">Show marquee with now playing</string>
+
+    <string name="ext_ls_notofications_title">Notifications</string>
+    <string name="ext_ls_smsmms_notification_title">New SMS/MMS message</string>
+    <string name="ext_ls_call_notification_title">Missed call</string>
+    <string name="ext_ls_gmail_notification_title">New Gmail message</string>
+    <string name="ext_ls_alarm_notification_title">Clock alarms</string>
+    <string name="ext_ls_state_notification_title">Phone state</string>
+    <string name="ext_ls_state_notification_summary">Sounds, vibration...</string>
+
+    <!-- statusbar music controls -->
+    <string name="title_statusbar_music_control">Statusbar music</string>
+    <string name="pref_statusbar_music_controls_title">Statusbar music controls</string>
+    <string name="pref_statusbar_music_controls_summary">Displays music controls on the statusbar</string>
+    <string name="pref_statusbar_always_music_controls_title">Always display music controls</string>
+    <string name="pref_statusbar_always_music_controls_summary">Display music controls regardless of whether or not music is playing</string>
 </resources>
