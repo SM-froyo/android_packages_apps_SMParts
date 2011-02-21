@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Generic -->
-    <string name="app_name">CyanogenMod settings</string>
+    <string name="app_name">SpicagenMod settings</string>
 
     <!--  Primary Screen Settings -->
     <string name="application_settings_title_head">Application</string>
@@ -41,6 +41,22 @@
     <string name="pref_electron_beam_animation_on">Screen-on animation</string>
     <string name="pref_electron_beam_animation_off">Screen-off animation</string>
 
+	<!-- User interface : animation -->
+	<string name="title_animation">Animation</title>
+	
+	<string name="title_window_animations">Window animations</string>
+	<string name="summary_window_animations">Speed of animations in individual windows</string>
+	<string name="dialog_title_window_animations">Select window speed</string>
+
+	<string name="title_transition_animations">Transition animations</string>
+	<string name="summary_transition_animations">Speed of animations moving between screens</string>
+	<string name="dialog_title_transition_animations">Select transition speed</string>
+
+	<string name="title_fancy_ime_animations">Fancy input animations</string>
+	<string name="summary_on_fancy_ime_animations">Use fancier animations for input method windows</string>
+	<string name="summary_off_fancy_ime_animations">Use normal animations for input method windows</string>
+	
+	
     <!-- User interface : rotation -->
     <string name="ui_rotation_title">Rotation</string>
 

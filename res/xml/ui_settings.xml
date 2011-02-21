@@ -67,6 +67,33 @@
 
     </PreferenceCategory>
 
+	<!-- Animations -->
+	<PreferenceCategory android:title="@string/title_animations">
+		<ListPreference
+                android:key="window_animations"
+                android:title="@string/title_window_animations"
+                android:summary="@string/summary_window_animations"
+                android:entries="@array/entries_animations"
+                android:entryValues="@array/entryvalues_animations"
+                android:dialogTitle="@string/dialog_title_window_animations" /> 
+                
+        <ListPreference
+                android:key="transition_animations"
+                android:title="@string/title_transition_animations"
+                android:summary="@string/summary_transition_animations"
+                android:entries="@array/entries_animations"
+                android:entryValues="@array/entryvalues_animations"
+                android:dialogTitle="@string/dialog_title_transition_animations" /> 
+        
+        <CheckBoxPreference 
+            android:key="fancy_ime_animations" 
+            android:title="@string/title_fancy_ime_animations" 
+            android:summaryOn="@string/summary_on_fancy_ime_animations"
+            android:summaryOff="@string/summary_off_fancy_ime_animations"/> 
+	
+	</PreferenceCategory>
+	
+	
     <!-- Expanded View Power Widget -->
     <PreferenceCategory android:title="@string/title_expanded_widget">
         <CheckBoxPreference android:key="expanded_widget"
