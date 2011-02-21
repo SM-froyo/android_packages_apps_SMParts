@@ -33,6 +33,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String UI_EXP_WIDGET_HIDE_ONCHANGE = "expanded_hide_onchange";
     private static final String UI_EXP_WIDGET_COLOR = "expanded_color_mask";
     private static final String UI_EXP_WIDGET_PICKER = "widget_picker";
+	private static final String WINDOW_ANIMATIONS_PREF = "window_animations";
+	private static final String TRANSITION_ANIMATIONS_PREF = "transition_animations";
+	private static final String FANCY_IME_ANIMATIONS_PREF = "fancy_ime_animations";
 
     private PreferenceScreen mStatusBarScreen;
     private PreferenceScreen mDateProviderScreen;
@@ -55,9 +58,12 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private CheckBoxPreference mPowerPromptPref;
 
     private ListPreference mRenderEffectPref;
+	private ListPreference mWindowAnimationPref;
+	private ListPreference mTransitionAnimationPref;
 
     private CheckBoxPreference mPowerWidget;
     private CheckBoxPreference mPowerWidgetHideOnChange;
+	private CheckBoxPreference mFancyImeAnimationsPref;
 
     private Preference mPowerWidgetColor;
     private PreferenceScreen mPowerPicker;
@@ -97,6 +103,13 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mRenderEffectPref.setOnPreferenceChangeListener(this);
         updateFlingerOptions();
 
+		/* Animation */
+		mWindowAnimationsPref = (ListPreference) prefSet.findPreference(WINDOW_ANIMATIONS_PREF);
+		mWindowAnimationsPref.setOnPreferenceChangeListener(this);
+		mTransitionAnimationsPref = (ListPreference) prefSet.findPreference(TRANSITION_ANIMATIONS_PREF);
+		mTransitionAnimationsPref.setOnPreferenceChangeListener(this);
+		mFancyImeAnimationsPref = (CheckBoxPreference) prefSet.findPreference(FANCY_IME_ANIMATIONS_PREF);
+		
         /* Expanded View Power Widget */
         mPowerWidget = (CheckBoxPreference) prefSet.findPreference(UI_EXP_WIDGET);
         mPowerWidgetHideOnChange = (CheckBoxPreference) prefSet
@@ -130,6 +143,8 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                 Settings.System.OVERSCROLL_WEIGHT, 5);
         mOverscrollWeightPref.setValue(String.valueOf(overscrollWeight));
         mOverscrollWeightPref.setOnPreferenceChangeListener(this);
+		
+		mWindowManager = IWindowManager.Stub.asInterface(ServiceManager.getService("window"));
 
     }
 
@@ -198,6 +213,12 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                     Settings.System.STATUSBAR_ALWAYS_MUSIC_CONTROLS, value ? 1 : 0);
         }
 
+		if (preference == mTransitionAnimationPref) {
+			Settings.System.putInt(getContentResolver(),
+				Settings.System.FANCY_IME_ANIMATIONS,
+				mFancyImeAnimationsPref.isChecked() ? 1 : 0);
+		}
+		
         return true;
     }
 
@@ -215,7 +236,15 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             Settings.System.putInt(getContentResolver(), Settings.System.OVERSCROLL_WEIGHT,
                     overscrollWeight);
             return true;
-        }
+        } else if (preference == mWindowAnimationsPref){
+			float val = Float.parseFloat(newValue.toString());
+			mWindowManager.setAnimationScale(0, val);
+			return true;
+		} else if (preference == mTransitionAnimationsPref){
+			float val = Float.parseFloat(newValue.toString());
+			mWindowManager.setAnimationScale(1, val);
+			return true;
+		}
         return false;
     }
 
@@ -272,6 +301,19 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             return -16777216;
         }
     }
+	
+	int floatToIndex(float val, int resid) {
+		String[] indices = getResources().getStringArray(resid);
+		float lastVal = Float.parseFloat(indices[0]);
+		for (int i=1; i<indices.length; i++) {
+			float thisVal = Float.parseFloat(indices[i]);
+			if (val < (lastVal + (thisVal-lastVal)*.5f)) {
+				return i-1;
+			}
+			lastVal = thisVal;
+		}
+		return indices.length-1;
+	}
 
     ColorPickerDialog.OnColorChangedListener mWidgetColorListener = new ColorPickerDialog.OnColorChangedListener() {
         public void colorChanged(int color) {
@@ -282,5 +324,15 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         public void colorUpdate(int color) {
         }
     };
+ 
 
+	@Override
+	public void onResume() {
+		super.onResume();
+		float mWindowAnimationScale = mWindowManager.getAnimationScale(0);
+		mWindowAnimationPref.setValueIndex(floatToIndex(mWindowAnimationScale,R.array.entryvalues_animations));
+		float mTransitionAnimationScale = mWindowManager.getAnimationScale(which);
+		mTransitionAnimationPref.setValueIndex(floatToIndex(mTransitionAnimationScale,R.array.entryvalues_animations));
+		mFancyImeAnimationsPref.setChecked(Settings.System.getInt( getContentResolver(), Settings.System.FANCY_IME_ANIMATIONS, 0) != 0);
+	}
 }
