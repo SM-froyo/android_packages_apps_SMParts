@@ -19,7 +19,7 @@ import com.spicagenmod.smparts.R;
 
 public class MvsduiReceiver extends BroadcastReceiver {
 
-    public static final String mvUiSd = "com.cyanogenmod.cmpartshelper.RESTORE_CMPARTS_UI";
+    public static final String mvUiSd = "com.spicagenmod.smpartshelper.RESTORE_CMPARTS_UI";
     private static final String NAMESPACE = "com.spicagenmod.smparts";
 
     @Override

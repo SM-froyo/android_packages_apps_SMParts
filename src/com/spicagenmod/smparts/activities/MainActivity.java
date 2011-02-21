@@ -13,7 +13,7 @@ public class MainActivity extends PreferenceActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.cmparts);
+        addPreferencesFromResource(R.xml.smparts);
 /*        findPreference("changelog").setSummary(getString(R.string.changelog_version) + ": " +
             SystemProperties.get("ro.modversion", getResources().getString(R.string.changelog_unknown)));*/
     }
