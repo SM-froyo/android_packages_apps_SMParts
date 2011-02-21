@@ -42,7 +42,7 @@
     <string name="pref_electron_beam_animation_off">Screen-off animation</string>
 
 	<!-- User interface : animation -->
-	<string name="title_animation">Animation</title>
+	<string name="title_animation">Animation</string>
 	
 	<string name="title_window_animations">Window animations</string>
 	<string name="summary_window_animations">Speed of animations in individual windows</string>
