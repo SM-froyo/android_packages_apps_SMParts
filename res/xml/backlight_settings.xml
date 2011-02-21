@@ -59,8 +59,8 @@
             android:title="@string/light_levels_editor_title"
             android:dependency="light_levels_enabled">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.LightLevelsActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.LightLevelsActivity" />
         </PreferenceScreen>
 
         <!-- Allow screen brightness to decrease -->

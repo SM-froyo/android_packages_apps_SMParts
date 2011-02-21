@@ -17,7 +17,7 @@
      <PreferenceScreen android:key="lockscreen_gestures_builder"
         android:title="@string/pref_lockscreen_gestures_builder_title">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.GestureListActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.GestureListActivity" />
      </PreferenceScreen>
 </PreferenceScreen>

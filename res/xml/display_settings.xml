@@ -9,8 +9,8 @@
         <PreferenceScreen android:key="backlight_settings"
             android:title="@string/backlight_title" android:summary="@string/backlight_summary">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.BacklightActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.BacklightActivity" />
         </PreferenceScreen>
 
     </PreferenceCategory>

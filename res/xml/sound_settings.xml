@@ -132,6 +132,6 @@
             android:title="@string/quiet_hours_dim" android:summaryOn="@string/quiet_hours_dim_on"
             android:summaryOff="@string/quiet_hours_dim_off"
             android:dependency="quiet_hours_enabled" />
-        \
+        
     </PreferenceCategory>
 </PreferenceScreen>

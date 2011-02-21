@@ -6,8 +6,8 @@
         android:title="@string/application_settings_title_head"
         android:summary="@string/application_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.ApplicationActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.ApplicationActivity" />
     </PreferenceScreen>
 
     <!-- Display Settings -->
@@ -15,24 +15,24 @@
         android:title="@string/display_settings_title_head"
         android:summary="@string/display_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.DisplayActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.DisplayActivity" />
     </PreferenceScreen>
 
     <!-- Input Settings -->
     <PreferenceScreen android:key="input_settings"
         android:title="@string/input_settings_title_head" android:summary="@string/input_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.InputActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.InputActivity" />
     </PreferenceScreen>
 
     <!-- Interface Settings -->
     <PreferenceScreen android:key="ui_settings"
         android:title="@string/interface_settings_title_head" android:summary="@string/interface_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.UIActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.UIActivity" />
     </PreferenceScreen>
 
     <!-- Lockscreen Settings -->
@@ -40,8 +40,8 @@
         android:title="@string/lockscreen_settings_title_head"
         android:summary="@string/lockscreen_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.LockscreenActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.LockscreenActivity" />
     </PreferenceScreen>
 
     <!-- Performance settings -->
@@ -49,16 +49,16 @@
         android:title="@string/performance_settings_title_head"
         android:summary="@string/performance_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.PerformanceSettingsActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.PerformanceSettingsActivity" />
     </PreferenceScreen>
 
     <!-- Sound settings -->
     <PreferenceScreen android:key="sound_settings"
         android:title="@string/sound_settings_title_head" android:summary="@string/sound_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.SoundActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.SoundActivity" />
     </PreferenceScreen>
 
     <!-- System Settings -->
@@ -66,14 +66,14 @@
         android:title="@string/system_settings_title_head"
         android:summary="@string/system_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.SystemActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.SystemActivity" />
     </PreferenceScreen>
 
     <!-- Possible future Use: Pedlar <PreferenceScreen android:key="battery_tester" 
         android:title="Test Battery" android:summary="Battery Drain Tester"> <intent 
-        android:action="android.intent.action.MAIN" android:targetPackage="com.cyanogenmod.cmparts" 
-        android:targetClass="com.cyanogenmod.cmparts.activities.BatteryTester" /> 
+        android:action="android.intent.action.MAIN" android:targetPackage="com.spicagenmod.smparts" 
+        android:targetClass="com.spicagenmod.smparts.activities.BatteryTester" /> 
         </PreferenceScreen> -->
 
 </PreferenceScreen>

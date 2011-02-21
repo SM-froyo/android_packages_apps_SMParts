@@ -25,8 +25,8 @@
         <PreferenceScreen android:key="changelog"
             android:title="@string/changelog_title">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.ChangeLog" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.ChangeLog" />
         </PreferenceScreen>
 
     </PreferenceCategory>
