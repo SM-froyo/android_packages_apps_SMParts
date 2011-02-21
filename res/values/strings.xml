@@ -29,10 +29,6 @@
     <string name="system_settings_title_subhead">System settings</string>
     <string name="system_settings_summary_head">System changelog, stats, update notifications</string>
 
-    <!--  Update Notifications -->
-    <string name="updatenotify_title">Update notifications</string>
-    <string name="updatenotify_summary">Get push notifications of updates.</string>
-
     <!-- User interface -->
     <string name="ui_title">User interface</string>
     <string name="ui_summary">User interface settings &amp; tweaks</string>
