@@ -112,7 +112,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
     /**
      * This builds the master file list for the load theme listpreference -
      * it collects the files on the sd card under /CMTheme as well as built-in
-     * themes from CMParts/res/assets.
+     * themes from SMParts/res/assets.
      *
      * This is called from .intent.catchThemeListReceiver with the
      * @param sdList    file list from sdcard (or null)
