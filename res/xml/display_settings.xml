@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- General settings -->
-    <PreferenceCategory android:key="general_category"
-        android:title="@string/general_title">
-
-        <!-- Backlight -->
-        <PreferenceScreen android:key="backlight_settings"
-            android:title="@string/backlight_title" android:summary="@string/backlight_summary">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.BacklightActivity" />
-        </PreferenceScreen>
-
-    </PreferenceCategory>
-
     <!-- Rotation -->
     <PreferenceCategory android:key="rotation_category"
 		android:title="@string/ui_rotation_title">

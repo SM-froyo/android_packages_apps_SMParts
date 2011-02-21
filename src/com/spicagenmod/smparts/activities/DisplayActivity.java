@@ -1,4 +1,3 @@
-
 package com.spicagenmod.smparts.activities;
 
 import com.spicagenmod.smparts.R;
@@ -22,13 +21,6 @@ import android.provider.Settings.SettingNotFoundException;
 
 public class DisplayActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
-    /* Preference Screens */
-    private static final String BACKLIGHT_SETTINGS = "backlight_settings";
-
-    private static final String GENERAL_CATEGORY = "general_category";
-
-    private PreferenceScreen mBacklightScreen;
-
     /* Other */
     private static final String ROTATION_90_PREF = "pref_rotation_90";
     private static final String ROTATION_180_PREF = "pref_rotation_180";
@@ -47,14 +39,6 @@ public class DisplayActivity extends PreferenceActivity implements OnPreferenceC
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        /* Preference Screens */
-        mBacklightScreen = (PreferenceScreen) prefSet.findPreference(BACKLIGHT_SETTINGS);
-        // No reason to show backlight if no light sensor on device
-        if (((SensorManager) getSystemService(SENSOR_SERVICE)).getDefaultSensor(Sensor.TYPE_LIGHT) == null) {
-            ((PreferenceCategory) prefSet.findPreference(GENERAL_CATEGORY))
-                    .removePreference(mBacklightScreen);
-        }
-
         /* Rotation */
         mRotation90Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_90_PREF);
         mRotation180Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_180_PREF);
@@ -71,9 +55,6 @@ public class DisplayActivity extends PreferenceActivity implements OnPreferenceC
         boolean value;
 
         /* Preference Screens */
-        if (preference == mBacklightScreen) {
-            startActivity(mBacklightScreen.getIntent());
-        }
         if (preference == mRotation90Pref ||
             preference == mRotation180Pref ||
             preference == mRotation270Pref) {
