@@ -14,13 +14,13 @@
         <receiver android:name=".intents.MvsduiReceiver"
             android:enabled="true">
             <intent-filter>
-                <action android:name="com.cyanogenmod.smpartshelper.RESTORE_CMPARTS_UI"></action>
+                <action android:name="com.spicagenmod.smpartshelper.RESTORE_CMPARTS_UI"></action>
             </intent-filter>
         </receiver>
         <receiver android:name=".intents.CatchThemeListReceiver"
             android:enabled="true">
             <intent-filter>
-                <action android:name="com.cyanogenmod.smpartshelper.GET_THEME_LIST"></action>
+                <action android:name="com.spicagenmod.smpartshelper.GET_THEME_LIST"></action>
             </intent-filter>
         </receiver>
         <activity android:name=".activities.MainActivity"

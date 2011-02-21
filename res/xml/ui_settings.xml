@@ -28,16 +28,16 @@
         <PreferenceScreen android:key="status_bar_settings"
             android:title="@string/status_bar_title" android:summary="@string/status_bar_summary">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.StatusBarActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.StatusBarActivity" />
         </PreferenceScreen>
 
         <!-- Date and Provider -->
         <PreferenceScreen android:key="date_provider_settings"
             android:title="@string/dp_title" android:summary="@string/dp_summary">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.DateProviderActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.DateProviderActivity" />
         </PreferenceScreen>
 
         <!-- Notification Colors -->
@@ -45,16 +45,16 @@
             android:title="@string/title_notifications_color_tweaks"
             android:summary="@string/summary_notifications_color_tweaks">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.NotificationsActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.NotificationsActivity" />
         </PreferenceScreen>
 
         <!-- Extras -->
         <PreferenceScreen android:key="tweaks_extras"
             android:title="@string/te_title" android:summary="@string/te_title_summary">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.TweaksExtras" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.TweaksExtras" />
         </PreferenceScreen>
 
     </PreferenceCategory>
@@ -102,8 +102,8 @@
         <PreferenceScreen android:key="widget_picker"
             android:title="@string/title_widget_picker" android:summary="@string/summary_widget_picker">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.WidgetActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.WidgetActivity" />
         </PreferenceScreen>
     </PreferenceCategory>
 

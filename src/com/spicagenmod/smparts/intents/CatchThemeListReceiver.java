@@ -10,7 +10,7 @@ import com.spicagenmod.smparts.R;
 
 public class CatchThemeListReceiver extends BroadcastReceiver {
 
-    public static final String catchList = "com.cyanogenmod.smpartshelper.GET_THEME_LIST";
+    public static final String catchList = "com.spicagenmod.smpartshelper.GET_THEME_LIST";
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals(catchList)) {
