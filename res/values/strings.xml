@@ -64,10 +64,6 @@
     <string name="pref_rotation_180_title">Rotate 180 degrees</string>
     <string name="pref_rotation_270_title">Rotate 270 degrees</string>
 
-    <!-- User interface : LED Notifications -->
-    <string name="trackball_title">LED notifications</string>
-    <string name="trackball_summary">Control trackball/LED notification colors and pulse</string>
-
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
@@ -161,52 +157,7 @@
     <string name="title_notifications_items_text">Items text color</string>
     <string name="title_notifications_items_time">Items time color</string>
 
-    <!-- User interface: LED notifcations -->
-    <string name="trackball_notifications_title">LED notification colors</string>
-    <string name="dialog_color_trackball">Choose a color</string>
-    <string name="dialog_blink_trackball">Choose a blink rate</string>
-    <string name="color_trackball_flash_title">Flash color</string>
-    <string name="color_trackball_flash_summary">Color to flash</string>
-    <string name="color_trackball_custom_title">Custom color</string>
-    <string name="color_trackball_custom_summary">Custom color to flash</string>
-    <string name="color_trackball_blink_title">Blink rate</string>
-    <string name="color_trackball_blink_summary">Blink rate</string>
-    <string name="color_trackball_test_title">Flash test</string>
-    <string name="color_trackball_test_summary">Test the flash</string>
-    <string name="dialog_clear_flash">Clear Flash</string>
-    <string name="trackball_advanced_title">Advanced</string>
-    <string name="pref_trackball_screen_title">Always pulse</string>
-    <string name="pref_trackball_screen_summary">LED will pulse while screen is on</string>
-    <string name="pref_trackball_blend_title">Blend notifications</string>
-    <string name="pref_trackball_blend_summary">Blend notification colors. Overrides succession.</string>
-    <string name="pref_trackball_sucess_title">Succession</string>
-    <string name="pref_trackball_sucess_summary">Pulse notifications in succession.</string>
-    <string name="pref_trackball_random_title">Random colors</string>
-    <string name="pref_trackball_random_summary">Pulses the LED in random colors for all notifications</string>
-    <string name="pref_trackball_order_title">Pulse in order</string>
-    <string name="pref_trackball_order_summary">Pulses the LED color in order</string>
-    <string name="pref_trackball_reset_title">Reset</string>
-    <string name="pref_trackball_reset_summary">Reset all colors and apps</string>
-    <string name="dialog_trackball_loading">Loading...</string>
-    <string name="dialog_trackball_packagelist">Loading package list</string>
-    <string name="trackball_category_dialog_text">Please enter a new category</string>
-    <string name="trackball_category_list_title">Category</string>
-    <string name="trackball_category_list_summary">Choose a category</string>
-    <string name="trackball_category_screen">Manage categories</string>
-    <string name="trackball_category_add_title">Add category</string>
-    <string name="trackball_category_add_summary">Add a category to the list</string>
-    <string name="trackball_category_remove_title">Remove category</string>
-    <string name="trackball_category_remove_summary">Remove a category from the list</string>
-    <string name="trackball_remove_default_toast">Can\'t remove this category as its the default one.</string>
-    <string name="trackball_reset_all">Reset all colors and categories.</string>
-    <string name="trackball_array_error">Unfortunately there was an array error. This package has been forced into Miscellaneous category.</string>
-    <string name="trackball_color_notice_title">NOTE:</string>
-    <string name="trackball_color_notice_summary">Not all colors will display on all devices.</string>
-
-    <!-- Trackball Settings : Warning dialog -->
-    <string name="notification_battery_warning_title">WARNING: May cause battery drain</string>
-    <string name="notification_battery_warning">This option has been proven to increase the amount of battery drain by ~3% per hour. If you notice an increase in drain during trackball lights pulsing then this option is why. Do not enable if you don\'t wish to incur the drain.</string>
-
+   
     <!-- Tweaks Extras -->
     <string name="te_title">Tweaks extras</string>
     <string name="te_title_summary">Extra tools for interface tweaks</string>
@@ -437,45 +388,7 @@
     <string name="pref_flash_mode_summary">Choose High / Death Ray(Evo)</string>
     <string name="widget_max_buttons">6 is the max amount of buttons.</string>
 
-    <!-- Backlight -->
-    <string name="backlight_title">Automatic backlight</string>
-    <string name="backlight_summary">Tweak levels and filtering</string>
-    <string name="light_filter_title">Light sensor filter</string>
-    <string name="light_filter_enabled_title">Enabled</string>
-    <string name="light_filter_enabled_summary">Apply moving average filter to sensor data to reduce flicker.</string>
-    <string name="light_filter_window_title">Window length</string>
-    <string name="light_filter_window_summary">Filtered value is the average sensor value during this period.</string>
-    <string name="light_filter_reset_title">Reset threshold</string>
-    <string name="light_filter_reset_summary">Samples deviating this much from current average resets the filter.</string>
-    <string name="light_filter_interval_title">Sample interval</string>
-    <string name="light_filter_interval_summary">Low value can improve accuracy but uses some more CPU.</string>
-    <string name="light_levels_title">Light levels</string>
-    <string name="light_levels_enabled_title">Use custom</string>
-    <string name="light_levels_dim_title">Screen dim level</string>
-    <string name="light_levels_dim_summary">Brightness used to dim the screen</string>
-    <string name="light_levels_editor_title">Edit other levels...</string>
-    <string name="light_decrease_enabled_title">Allow light decrease</string>
-    <string name="light_decrease_enabled_summary">Enable to allow lights to decrease. Use hysteresis to reduce flicker.</string>
-    <string name="light_decrease_hysteresis_title">Decrease hysteresis</string>
-    <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards.</string>
 
-    <!-- Light sensor levels -->
-    <string name="ll_title">Light sensor levels</string>
-    <string name="ll_header_upper">Upper</string>
-    <string name="ll_header_lower">Lower</string>
-    <string name="ll_header_lcd">Screen</string>
-    <string name="ll_header_btn">Buttons</string>
-    <string name="ll_header_kb">Keyboard</string>
-    <string name="ll_lux">Sensor (filtered / raw):</string>
-    <string name="ll_lcd">Screen:</string>
-    <string name="ll_btn">Buttons:</string>
-    <string name="ll_kb">Keyboard:</string>
-    <string name="ll_disabled">disabled</string>
-    <string name="ll_default">Load defaults</string>
-    <string name="ll_save">Save &amp; apply</string>
-    <string name="ll_reload">Reload current</string>
-    <string name="ll_bad_levels">Levels must be increasing</string>
-    <string name="ll_num_levels">Set number of levels</string>
 
     <!-- Sound -->
     <string name="sound_title">Sound settings</string>

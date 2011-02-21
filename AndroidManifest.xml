@@ -51,12 +51,6 @@
                 <category android:name="com.spicagenmod.smparts.SHORTCUT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.TrackballNotificationActivity"
-            android:label="@string/trackball_title">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
         <activity android:name=".activities.ApplicationActivity"
             android:label="@string/application_settings_title">
             <intent-filter>
@@ -152,17 +146,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.EDIT" />
                 <category android:name="android.intent.category.PREFERENCE" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.BacklightActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.LightLevelsActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.SoundActivity">
