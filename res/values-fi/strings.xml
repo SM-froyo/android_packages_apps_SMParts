@@ -2,7 +2,6 @@
 <resources>
     <!-- Generic -->
     <string name="app_name">SpicagenMod settings</string>
-
     <!--  Primary Screen Settings -->
     <string name="application_settings_title_head">Sovellus/string>
     <string name="application_settings_title_subhead">Sovellusasetukset</string>
