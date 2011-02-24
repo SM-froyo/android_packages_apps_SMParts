@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rotation -->
+    <PreferenceCategory android:key="rotation_category"
+		android:title="@string/ui_rotation_title">
+        <CheckBoxPreference android:key="pref_rotation_90"
+            android:title="@string/pref_rotation_90_title" />
+        <CheckBoxPreference android:key="pref_rotation_180"
+            android:title="@string/pref_rotation_180_title" />
+        <CheckBoxPreference android:key="pref_rotation_270"
+            android:title="@string/pref_rotation_270_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

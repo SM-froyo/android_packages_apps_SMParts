@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="ext_ls_settings">
+    
+    <!-- TODO: background selection 
+    <PreferenceScreen android:key="ext_ls_background"
+        android:title="@string/ext_ls_background_title">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.cyanogenmod.cmparts"
+            android:targetClass="com.cyanogenmod.cmparts.activities.ExtendedLockscreenActivity" />
+    </PreferenceScreen> -->
+
+    <CheckBoxPreference android:key="ext_ls_background" android:title="@string/ext_ls_background_title"
+        android:summaryOn="@string/ext_ls_background_summaryon" android:summaryOff="@string/ext_ls_background_summaryoff" />
+
+    <PreferenceCategory android:title="@string/ext_ls_visibility_title">
+        <CheckBoxPreference android:key="ext_ls_counterbar_visibility"
+            android:title="@string/ext_ls_counterbar_visibility_title" android:summary="@string/ext_ls_counterbar_visibility_summary" />
+        <CheckBoxPreference android:key="ext_ls_connectivitybar_visibility"
+            android:title="@string/ext_ls_connectivitybar_visibility_title" android:summary="@string/ext_ls_connectivitybar_visibility_summary" />
+        <CheckBoxPreference android:key="ext_ls_genie_visibility"
+            android:title="@string/ext_ls_genie_visibility_title" android:summary="@string/ext_ls_genie_visibility_summary" />
+        <CheckBoxPreference android:key="ext_ls_nowplaying_visibility"
+            android:title="@string/ext_ls_nowplaying_visibility_title" android:summary="@string/ext_ls_nowplaying_visibility_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ext_ls_notofications_title">
+        <CheckBoxPreference android:key="ext_ls_smsmms_notification"
+            android:title="@string/ext_ls_smsmms_notification_title" />
+        <CheckBoxPreference android:key="ext_ls_call_notification"
+            android:title="@string/ext_ls_call_notification_title" />
+        <CheckBoxPreference android:key="ext_ls_gmail_notification"
+            android:title="@string/ext_ls_gmail_notification_title" />
+        <CheckBoxPreference android:key="ext_ls_alarm_notification"
+            android:title="@string/ext_ls_alarm_notification_title" />
+        <CheckBoxPreference android:key="ext_ls_state_notification"
+            android:title="@string/ext_ls_state_notification_title" android:summary="@string/ext_ls_state_notification_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

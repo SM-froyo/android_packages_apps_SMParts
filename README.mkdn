@@ -1,0 +1,7 @@
+SMParts
+=======
+
+What is SMParts?
+----------------
+SMParts is a central location for SpicagenMod specific settings, instead of cluttering the AOSP Settings app.
+

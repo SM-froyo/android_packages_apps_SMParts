@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- General settings -->
+    <PreferenceCategory android:key="general_category"
+        android:title="@string/general_title">
+
+	<!-- Power prompt -->
+	<CheckBoxPreference android:key="power_dialog_prompt"
+		android:title="@string/pref_power_prompt_title"
+		android:summary="@string/pref_power_prompt_summary"
+		android:defaultValue="true" />
+
+	<!-- Render effect -->
+	<ListPreference android:key="pref_render_effect"
+		android:dialogTitle="@string/pref_render_effect_title"
+		android:title="@string/pref_render_effect_title"
+		android:summary="@string/pref_render_effect_summary"
+		android:entries="@array/entries_render_effect"
+		android:entryValues="@array/values_render_effect" />
+
+	<!-- Font size -->
+	<ListPreference android:key="font_size"
+		android:dialogTitle="@string/font_size_title"
+		android:title="@string/font_size_title"
+		android:summary="@string/font_size_summary"
+		android:entries="@array/entries_font_size"
+		android:entryValues="@array/values_font_size" />
+    </PreferenceCategory>
+
+    <!-- Status Bar Customization -->
+    <PreferenceCategory android:title="@string/ui_status_bar">
+
+        <!-- Status Bar -->
+        <PreferenceScreen android:key="status_bar_settings"
+            android:title="@string/status_bar_title" android:summary="@string/status_bar_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.StatusBarActivity" />
+        </PreferenceScreen>
+
+        <!-- Date and Provider -->
+        <PreferenceScreen android:key="date_provider_settings"
+            android:title="@string/dp_title" android:summary="@string/dp_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.DateProviderActivity" />
+        </PreferenceScreen>
+
+        <!-- Notification Colors -->
+        <PreferenceScreen android:key="notification_settings"
+            android:title="@string/title_notifications_color_tweaks"
+            android:summary="@string/summary_notifications_color_tweaks">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.NotificationsActivity" />
+        </PreferenceScreen>
+
+        <!-- Extras -->
+        <PreferenceScreen android:key="tweaks_extras"
+            android:title="@string/te_title" android:summary="@string/te_title_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.TweaksExtras" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+	<!-- Animations -->
+	<PreferenceCategory android:title="@string/title_animations">
+		<ListPreference
+                android:key="window_animations"
+                android:title="@string/title_window_animations"
+                android:summary="@string/summary_window_animations"
+                android:entries="@array/entries_animations"
+                android:entryValues="@array/entryvalues_animations"
+                android:dialogTitle="@string/dialog_title_window_animations" /> 
+                
+        <ListPreference
+                android:key="transition_animations"
+                android:title="@string/title_transition_animations"
+                android:summary="@string/summary_transition_animations"
+                android:entries="@array/entries_animations"
+                android:entryValues="@array/entryvalues_animations"
+                android:dialogTitle="@string/dialog_title_transition_animations" /> 
+        
+        <CheckBoxPreference 
+            android:key="fancy_ime_animations" 
+            android:title="@string/title_fancy_ime_animations" 
+            android:summaryOn="@string/summary_on_fancy_ime_animations"
+            android:summaryOff="@string/summary_off_fancy_ime_animations"/> 
+	
+	</PreferenceCategory>
+	
+	
+    <!-- Expanded View Power Widget -->
+    <PreferenceCategory android:title="@string/title_expanded_widget">
+        <CheckBoxPreference android:key="expanded_widget"
+            android:title="@string/title_expanded_widget"
+            android:summary="@string/summary_expanded_widget"
+            android:defaultValue="true" />
+        <CheckBoxPreference android:key="expanded_hide_onchange"
+            android:title="@string/title_expanded_hide_onchange"
+            android:summary="@string/summary_expanded_hide_onchange"
+            android:defaultValue="false" android:dependency="expanded_widget" />
+        <Preference android:key="expanded_color_mask"
+            android:title="@string/expanded_color_mask" android:summary="@string/expanded_color_mask"
+            android:defaultValue="-1" android:dependency="expanded_widget" />
+        <PreferenceScreen android:key="widget_picker"
+            android:title="@string/title_widget_picker" android:summary="@string/summary_widget_picker">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.WidgetActivity" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <!-- Statusbar music control -->
+    <PreferenceCategory android:title="@string/title_statusbar_music_control">
+        <CheckBoxPreference android:key="statusbar_music_controls"
+            android:title="@string/pref_statusbar_music_controls_title"
+            android:summary="@string/pref_statusbar_music_controls_summary" />
+
+        <CheckBoxPreference android:key="statusbar_always_music_controls"
+            android:dependency="statusbar_music_controls"
+            android:title="@string/pref_statusbar_always_music_controls_title"
+            android:summary="@string/pref_statusbar_always_music_controls_summary" />
+    </PreferenceCategory>
+
+    <!-- Overscroll effect -->
+    <PreferenceCategory android:title="@string/ui_overscroll_title">
+        <ListPreference android:key="pref_overscroll_effect"
+            android:dialogTitle="@string/pref_overscroll_title"
+            android:title="@string/pref_overscroll_title"
+            android:summary="@string/pref_overscroll_summary"
+            android:entries="@array/pref_overscroll_effect_entries"
+            android:entryValues="@array/pref_overscroll_effect_values" />
+        <ListPreference android:key="pref_overscroll_weight"
+            android:dialogTitle="@string/pref_overscroll_weight_title"
+            android:title="@string/pref_overscroll_weight_title"
+            android:summary="@string/pref_overscroll_weight_summary"
+            android:entries="@array/entries_overscroll_weight"
+            android:entryValues="@array/values_overscroll_weight" />
+    </PreferenceCategory>
+
+    <!-- Webview Should this be moved to the browser? -->
+    <PreferenceCategory android:title="@string/ui_webview_title">
+        <CheckBoxPreference android:key="pref_pinch_reflow"
+            android:title="@string/pref_pinch_reflow_title"
+            android:summary="@string/pref_pinch_reflow_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

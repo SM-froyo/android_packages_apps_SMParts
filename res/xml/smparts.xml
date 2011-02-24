@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Application Settings -->
+    <PreferenceScreen android:key="application_settings"
+        android:title="@string/application_settings_title_head"
+        android:summary="@string/application_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.ApplicationActivity" />
+    </PreferenceScreen>
+
+    <!-- Display Settings -->
+    <PreferenceScreen android:key="display_settings"
+        android:title="@string/display_settings_title_head"
+        android:summary="@string/display_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.DisplayActivity" />
+    </PreferenceScreen>
+
+    <!-- Input Settings -->
+    <PreferenceScreen android:key="input_settings"
+        android:title="@string/input_settings_title_head" android:summary="@string/input_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.InputActivity" />
+    </PreferenceScreen>
+
+    <!-- Interface Settings -->
+    <PreferenceScreen android:key="ui_settings"
+        android:title="@string/interface_settings_title_head" android:summary="@string/interface_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.UIActivity" />
+    </PreferenceScreen>
+
+    <!-- Lockscreen Settings -->
+    <PreferenceScreen android:key="lockscreen_settings"
+        android:title="@string/lockscreen_settings_title_head"
+        android:summary="@string/lockscreen_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.LockscreenActivity" />
+    </PreferenceScreen>
+
+    <!-- Performance settings -->
+    <PreferenceScreen android:key="performance_settings"
+        android:title="@string/performance_settings_title_head"
+        android:summary="@string/performance_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.PerformanceSettingsActivity" />
+    </PreferenceScreen>
+
+    <!-- Sound settings -->
+    <PreferenceScreen android:key="sound_settings"
+        android:title="@string/sound_settings_title_head" android:summary="@string/sound_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.SoundActivity" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

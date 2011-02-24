@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/buttons_title"
+        android:key="pref_category_button_settings">
+		<!-- End button -->
+		<ListPreference
+			android:key="end_button"
+			android:title="@string/end_button_title"
+			android:summary="@string/end_button_summary"
+			android:entries="@array/entries_end_button"
+			android:entryValues="@array/values_end_button"
+			android:dialogTitle="@string/end_button_title" />
+
+        <!-- Long Press Home -->
+        <PreferenceScreen android:key="long_press_home"
+            android:title="@string/long_press_home_title"
+            android:summary="@string/long_press_home_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.LongPressHomeActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <!-- General settings -->
+    <PreferenceCategory android:key="general_category"
+        android:title="@string/general_title">
+
+        <!-- Haptic Feedback -->
+        <PreferenceScreen android:key="haptic_settings"
+            android:title="@string/haptic_title" android:summary="@string/haptic_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.HapticTweaksActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
