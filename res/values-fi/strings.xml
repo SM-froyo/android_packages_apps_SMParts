@@ -379,8 +379,6 @@
     <string name="pref_flash_mode_summary">Valitse voimakas / Kuolemansäde(Evo)</string>
     <string name="widget_max_buttons">6 on suurin sallittu painikkeiden määrä.</string>
 
-
-
     <!-- Sound -->
     <string name="sound_title">Ääni asetukset</string>
     <string name="sound_summary">Ääni ja äänenkeskittämis asetukset</string>
