@@ -329,7 +329,6 @@
     <string name="fuscia">Fuscia</string>
 
     <!-- Notification Bar Colors -->
-
     <string name="title_notification_bar">Ilmoituspalkki</string>
     <string name="title_custom_not_bar">Vapaavalintainen ilmoituspalkki</string>
     <string name="summary_custom_not_bar_on">Käytä muokattua ilmoituspalkin tyyliä ja väriä</string>
@@ -403,6 +402,7 @@
     <string name="sound_notifications_limitvol_dialog">Ilmoitusten voimakkuus</string>
     <string name="sound_rings_limitvol_dialog">Soittoäänen voimakkuus</string>
     <string name="sound_alarms_limitvol_dialog">Hälytysten voimakkuus</string>
+
     <!-- Quiet hours -->
     <string name="sound_category_quiet_hours_title">Hiljaisuusaika</string>
     <string name="quiet_hours_enabled">Ota hiljaisuusaika käyttöön</string>
