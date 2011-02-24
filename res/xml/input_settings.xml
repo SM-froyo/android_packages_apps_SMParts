@@ -31,8 +31,8 @@
         <PreferenceScreen android:key="haptic_settings"
             android:title="@string/haptic_title" android:summary="@string/haptic_summary">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.HapticTweaksActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.HapticTweaksActivity" />
         </PreferenceScreen>
 
     </PreferenceCategory>

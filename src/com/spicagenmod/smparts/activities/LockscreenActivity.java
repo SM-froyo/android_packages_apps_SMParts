@@ -27,7 +27,6 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
 
     private static final String LOCKSCREEN_MUSIC_CONTROLS = "lockscreen_music_controls";
     private static final String LOCKSCREEN_ALWAYS_MUSIC_CONTROLS = "lockscreen_always_music_controls";
-    private static final String TRACKBALL_UNLOCK_PREF = "pref_trackball_unlock";
     private static final String MENU_UNLOCK_PREF = "pref_menu_unlock";
     private static final String BUTTON_CATEGORY = "pref_category_button_settings";
     private static final String LOCKSCREEN_STYLE_PREF = "pref_lockscreen_style";
@@ -41,7 +40,6 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
 
     private CheckBoxPreference mMusicControlPref;
     private CheckBoxPreference mAlwaysMusicControlPref;
-    private CheckBoxPreference mTrackballUnlockPref;
     private CheckBoxPreference mMenuUnlockPref;
     private CheckBoxPreference mQuickUnlockScreenPref;
     private CheckBoxPreference mPhoneMessagingTabPref;
@@ -119,10 +117,7 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
             mExtendedLockscreenPref.setEnabled(true);
         }
 
-        /* Trackball Unlock */
-        mTrackballUnlockPref = (CheckBoxPreference) prefSet.findPreference(TRACKBALL_UNLOCK_PREF);
-        mTrackballUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1);
+
         /* Menu Unlock */
         mMenuUnlockPref = (CheckBoxPreference) prefSet.findPreference(MENU_UNLOCK_PREF);
         mMenuUnlockPref.setChecked(Settings.System.getInt(getContentResolver(),
@@ -217,11 +212,6 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
             value = mPhoneMessagingTabPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_PHONE_MESSAGING_TAB, value ? 1 : 0);
-            return true;
-        } else if (preference == mTrackballUnlockPref) {
-            value = mTrackballUnlockPref.isChecked();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.TRACKBALL_UNLOCK_SCREEN, value ? 1 : 0);
             return true;
         } else if (preference == mMenuUnlockPref) {
             value = mMenuUnlockPref.isChecked();
@@ -345,8 +335,6 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
     private boolean doesUnlockAbilityExist() {
         final File mStoreFile = new File(Environment.getDataDirectory(), "/misc/lockscreen_gestures");
         boolean GestureCanUnlock = false;
-        boolean trackCanUnlock = Settings.System.getInt(getContentResolver(),
-                Settings.System.TRACKBALL_UNLOCK_SCREEN, 0) == 1;
         boolean menuCanUnlock = Settings.System.getInt(getContentResolver(),
                 Settings.System.MENU_UNLOCK_SCREEN, 0) == 1;
         boolean holdCanUnlock = Settings.System.getInt(getContentResolver(),
@@ -360,7 +348,7 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
                 }
             }
         }
-        if (GestureCanUnlock || trackCanUnlock || menuCanUnlock || holdCanUnlock) {
+        if (GestureCanUnlock ||  menuCanUnlock || holdCanUnlock) {
             return true;
         } else {
             return false;

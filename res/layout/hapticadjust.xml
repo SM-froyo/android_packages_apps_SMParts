@@ -86,7 +86,7 @@
       android:layout_alignParentLeft="true">
     </Button>
 
-    <view class="com.cyanogenmod.cmparts.activities.HapticAdjust$TestButton" 
+    <view class="com.spicagenmod.smparts.activities.HapticAdjust$TestButton" 
       android:id="@+id/test_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
