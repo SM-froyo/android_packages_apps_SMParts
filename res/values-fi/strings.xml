@@ -25,9 +25,6 @@
     <string name="sound_settings_title_head">Äänet</string>
     <string name="sound_settings_title_subhead">Ääniasetukset</string>
     <string name="sound_settings_summary_head">Äänen voimakkuus, äänen keskittäminen, hiljaisuusaika</string>
-    <string name="system_settings_title_head">Järjestelmä</string>
-    <string name="system_settings_title_subhead">Järjestelmäasetukset</string>
-    <string name="system_settings_summary_head">Järjestelmän muutosloki, tilastot, päivitysilmoitukset</string>
 
     <!-- User interface -->
     <string name="ui_title">Käyttöliittymä</string>
@@ -426,8 +423,6 @@
     <string name="quiet_hours_dim_on">LED valo himmennetään jos mahdollista</string>
     <string name="quiet_hours_dim_off">LED valoa ei himmennetä</string>
 
-    <string name="cmstats_title">Anonyymit tilastot</string>
-    <string name="cmstats_summary">Auta parantamaan CM:ää liittymällä anonyymiin tilastojen raportointiin</string>
     <string name="user_defined_key1">Pikanäppäin 1</string>
     <string name="user_defined_key2">Pikanäppäin 2</string>
     <string name="user_defined_key3">Pikanäppäin 3</string>
@@ -460,14 +455,6 @@
     <string name="pref_lockscreen_disable_unlock_tab">Poista lukituksen avauksen liukusäädin</string>
     <string name="pref_lockscreen_disable_unlock_tab_summary">Huomio: Sinun täytyy ottaa käyttöön trackball, menu näppäimellä, lukitus näppäimellä tai eleellä avaus ennen kuin tämä valinta on mahdollinen.</string>
     <string name="gestures_explain_create_screen">Valitse suoritettava toiminto (tai valitse lukituksen avaus tai äänet) ja piirrä ele ruudulle.</string>
-
-    <!-- Change Log strings -->
-    <string name="changelog_title">Avaa muutosloki</string>
-    <string name="changelog_dialog">Muutosloko</string>
-    <string name="changelog_loading">Ladataan muutosloki...</string>
-    <string name="changelog_error">Ongelma muutoslokin avauksessa...</string>
-    <string name="changelog_unknown">Tuntematon</string>
-    <string name="changelog_version">Versio</string>
 
     <!-- HOLD unlock -->
     <string name="pref_hold_unlock_title">Lukitusnäppäimellä lukituksen avaus</string>
