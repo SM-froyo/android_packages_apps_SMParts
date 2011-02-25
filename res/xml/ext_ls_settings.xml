@@ -6,8 +6,8 @@
     <PreferenceScreen android:key="ext_ls_background"
         android:title="@string/ext_ls_background_title">
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.cmparts"
-            android:targetClass="com.cyanogenmod.cmparts.activities.ExtendedLockscreenActivity" />
+            android:targetPackage="com.spicagenmod.smparts"
+            android:targetClass="com.spicagenmod.smparts.activities.ExtendedLockscreenActivity" />
     </PreferenceScreen> -->
 
     <CheckBoxPreference android:key="ext_ls_background" android:title="@string/ext_ls_background_title"

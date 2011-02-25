@@ -5,20 +5,27 @@
     <PreferenceCategory android:key="general_category"
         android:title="@string/general_title">
 
-        <!-- Power prompt -->
-        <CheckBoxPreference android:key="power_dialog_prompt"
-            android:title="@string/pref_power_prompt_title"
-            android:summary="@string/pref_power_prompt_summary"
-            android:defaultValue="true" />
+	<!-- Power prompt -->
+	<CheckBoxPreference android:key="power_dialog_prompt"
+		android:title="@string/pref_power_prompt_title"
+		android:summary="@string/pref_power_prompt_summary"
+		android:defaultValue="true" />
 
-        <!-- Render effect -->
-        <ListPreference android:key="pref_render_effect"
-            android:dialogTitle="@string/pref_render_effect_title"
-            android:title="@string/pref_render_effect_title"
-            android:summary="@string/pref_render_effect_summary"
-            android:entries="@array/entries_render_effect"
-            android:entryValues="@array/values_render_effect" />
+	<!-- Render effect -->
+	<ListPreference android:key="pref_render_effect"
+		android:dialogTitle="@string/pref_render_effect_title"
+		android:title="@string/pref_render_effect_title"
+		android:summary="@string/pref_render_effect_summary"
+		android:entries="@array/entries_render_effect"
+		android:entryValues="@array/values_render_effect" />
 
+	<!-- Font size -->
+	<ListPreference android:key="font_size"
+		android:dialogTitle="@string/font_size_title"
+		android:title="@string/font_size_title"
+		android:summary="@string/font_size_summary"
+		android:entries="@array/entries_font_size"
+		android:entryValues="@array/values_font_size" />
     </PreferenceCategory>
 
     <!-- Status Bar Customization -->

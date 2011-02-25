@@ -30,7 +30,6 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
     public static final String TOGGLE_NETWORKMODE_STR = "toggleNetworkMode";
     public static final String TOGGLE_AUTOROTATE_STR = "toggleAutoRotate";
     public static final String TOGGLE_AIRPLANE_STR = "toggleAirplane";
-    public static final String TOGGLE_FLASHLIGHT_STR = "toggleFlashlight";
     public static final String TOGGLE_SLEEPMODE_STR = "toggleSleepMode";
 
     private static final String TOGGLE_WIFI = "toggle_wifi";
@@ -46,7 +45,6 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
     private static final String TOGGLE_NETWORKMODE = "toggle_networkmode";
     private static final String TOGGLE_AUTOROTATE = "toggle_autorotate";
     private static final String TOGGLE_AIRPLANE = "toggle_airplane";
-    private static final String TOGGLE_FLASHLIGHT = "toggle_flashlight";
     private static final String TOGGLE_SLEEPMODE = "toggle_sleep";
     private static final String EXP_BRIGHTNESS_MODE = "pref_brightness_mode";
     private static final String EXP_NETWORK_MODE = "pref_network_mode";
@@ -67,13 +65,11 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
     CheckBoxPreference mToggleNetworkMode;
     CheckBoxPreference mToggleAutoRotate;
     CheckBoxPreference mToggleAirplane;
-    CheckBoxPreference mToggleFlashlight;
     CheckBoxPreference mToggleSleepMode;
     ListPreference mBrightnessMode;
     ListPreference mNetworkMode;
     ListPreference mScreentimeoutMode;
     ListPreference mRingMode;
-    ListPreference mFlashMode;
 
     private boolean isNull(String mString) {
         if (mString == null || mString.matches("null") || mString.length() == 0
@@ -150,7 +146,6 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
         mToggleNetworkMode = (CheckBoxPreference) prefSet.findPreference(TOGGLE_NETWORKMODE);
         mToggleAutoRotate = (CheckBoxPreference) prefSet.findPreference(TOGGLE_AUTOROTATE);
         mToggleAirplane = (CheckBoxPreference) prefSet.findPreference(TOGGLE_AIRPLANE);
-        mToggleFlashlight = (CheckBoxPreference) prefSet.findPreference(TOGGLE_FLASHLIGHT);
         mToggleSleepMode = (CheckBoxPreference) prefSet.findPreference(TOGGLE_SLEEPMODE);
 
         mBrightnessMode = (ListPreference) prefSet.findPreference(EXP_BRIGHTNESS_MODE);
@@ -161,14 +156,7 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
         mScreentimeoutMode.setOnPreferenceChangeListener(this);
         mRingMode = (ListPreference) prefSet.findPreference(EXP_RING_MODE);
         mRingMode.setOnPreferenceChangeListener(this);
-        mFlashMode = (ListPreference) prefSet.findPreference(EXP_FLASH_MODE);
-        mFlashMode.setOnPreferenceChangeListener(this);
 
-
-        if (!getResources().getBoolean(R.bool.has_led_flash)) {
-            mToggleFlashlight.setEnabled(false);
-            mFlashMode.setEnabled(false);
-        }
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -251,13 +239,7 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
             if(!manageList(TOGGLE_AIRPLANE_STR, value)) {
                 keyPref.setChecked(false);
             }
-        }  else if (preference == mToggleFlashlight) {
-            CheckBoxPreference keyPref = (CheckBoxPreference) preference;
-            value = keyPref.isChecked();
-            if(!manageList(TOGGLE_FLASHLIGHT_STR, value)) {
-                keyPref.setChecked(false);
-            }
-        }  else if (preference == mToggleSleepMode) {
+        } else if (preference == mToggleSleepMode) {
             CheckBoxPreference keyPref = (CheckBoxPreference) preference;
             value = keyPref.isChecked();
             if(!manageList(TOGGLE_SLEEPMODE_STR, value)) {
@@ -277,8 +259,6 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
             Settings.System.putInt(getContentResolver(), Settings.System.EXPANDED_SCREENTIMEOUT_MODE, value);
         } else if(preference == mRingMode) {
             Settings.System.putInt(getContentResolver(), Settings.System.EXPANDED_RING_MODE, value);
-        } else if(preference == mFlashMode) {
-            Settings.System.putInt(getContentResolver(), Settings.System.EXPANDED_FLASH_MODE, value);
         }
         return true;
     }

@@ -7,13 +7,9 @@
         <PreferenceScreen android:key="lockscreen_gestures"
             android:title="@string/pref_lockscreen_title">
             <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.cyanogenmod.cmparts"
-                android:targetClass="com.cyanogenmod.cmparts.activities.GestureMenuActivity" />
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.GestureMenuActivity" />
         </PreferenceScreen>
-
-        <CheckBoxPreference android:key="pref_trackball_unlock"
-            android:title="@string/pref_trackball_unlock_title"
-            android:summary="@string/pref_trackball_unlock_summary" />
 
         <CheckBoxPreference android:key="pref_menu_unlock"
             android:title="@string/pref_menu_unlock_title"
@@ -63,8 +59,8 @@
 	    <PreferenceScreen android:key="ext_ls_settings"
             android:title="@string/ext_ls_settings_title">
                 <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.cyanogenmod.cmparts"
-                    android:targetClass="com.cyanogenmod.cmparts.activities.ExtendedLockscreenActivity" />
+                    android:targetPackage="com.spicagenmod.smparts"
+                    android:targetClass="com.spicagenmod.smparts.activities.ExtendedLockscreenActivity" />
         </PreferenceScreen>
 
         <!-- screen timeout delay -->

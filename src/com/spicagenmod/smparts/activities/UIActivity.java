@@ -3,6 +3,7 @@ package com.spicagenmod.smparts.activities;
 
 import com.spicagenmod.smparts.R;
 
+import android.app.ActivityManagerNative;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.content.res.Configuration;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -36,6 +38,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 	private static final String WINDOW_ANIMATIONS_PREF = "window_animations";
 	private static final String TRANSITION_ANIMATIONS_PREF = "transition_animations";
 	private static final String FANCY_IME_ANIMATIONS_PREF = "fancy_ime_animations";
+	private static final String FONT_SIZE_PREF = "font_size";
 
     private PreferenceScreen mStatusBarScreen;
     private PreferenceScreen mDateProviderScreen;
@@ -59,11 +62,14 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private ListPreference mRenderEffectPref;
 	private ListPreference mWindowAnimationsPref;
 	private ListPreference mTransitionAnimationsPref;
+	private ListPreference mFontSizePref;
 
     float mWindowAnimationScale;
     float mTransitionAnimationScale;
     
     private IWindowManager mWindowManager;
+
+    private final Configuration mCurConfig = new Configuration();
 
     private CheckBoxPreference mPowerWidget;
     private CheckBoxPreference mPowerWidgetHideOnChange;
@@ -107,18 +113,22 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 		mTransitionAnimationsPref.setOnPreferenceChangeListener(this);
 		mFancyImeAnimationsPref = (CheckBoxPreference) prefSet.findPreference(FANCY_IME_ANIMATIONS_PREF);
 		
-        /* Expanded View Power Widget */
-        mPowerWidget = (CheckBoxPreference) prefSet.findPreference(UI_EXP_WIDGET);
-        mPowerWidgetHideOnChange = (CheckBoxPreference) prefSet
-                .findPreference(UI_EXP_WIDGET_HIDE_ONCHANGE);
+		/* Font Size */
+		mFontSizePref = (ListPreference) prefSet.findPreference(FONT_SIZE_PREF);
+		mFontSizePref.setOnPreferenceChangeListener(this);
+	
+		/* Expanded View Power Widget */
+		mPowerWidget = (CheckBoxPreference) prefSet.findPreference(UI_EXP_WIDGET);
+		mPowerWidgetHideOnChange = (CheckBoxPreference) prefSet
+			.findPreference(UI_EXP_WIDGET_HIDE_ONCHANGE);
 
-        mPowerWidgetColor = prefSet.findPreference(UI_EXP_WIDGET_COLOR);
-        mPowerPicker = (PreferenceScreen) prefSet.findPreference(UI_EXP_WIDGET_PICKER);
+		mPowerWidgetColor = prefSet.findPreference(UI_EXP_WIDGET_COLOR);
+		mPowerPicker = (PreferenceScreen) prefSet.findPreference(UI_EXP_WIDGET_PICKER);
 
-        mPowerWidget.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.EXPANDED_VIEW_WIDGET, 1) == 1));
-        mPowerWidgetHideOnChange.setChecked((Settings.System.getInt(getContentResolver(),
-                Settings.System.EXPANDED_HIDE_ONCHANGE, 0) == 1));
+		mPowerWidget.setChecked((Settings.System.getInt(getContentResolver(),
+			Settings.System.EXPANDED_VIEW_WIDGET, 1) == 1));
+		mPowerWidgetHideOnChange.setChecked((Settings.System.getInt(getContentResolver(),
+			Settings.System.EXPANDED_HIDE_ONCHANGE, 0) == 1));
 
         /* Status Music Controls */
         mMusicControlPref = (CheckBoxPreference) prefSet.findPreference(STATUSBAR_MUSIC_CONTROLS);
@@ -143,20 +153,14 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 		
 		mWindowManager = IWindowManager.Stub.asInterface(ServiceManager.getService("window"));
 
-        try {
-            mWindowAnimationScale = mWindowManager.getAnimationScale(0);
-        } catch (RemoteException e) {
-            // do nothing
+		try{
+        	mWindowAnimationsPref.setValueIndex(floatToIndex(mWindowManager.getAnimationScale(0), R.array.entryvalues_animations));
+        	mTransitionAnimationsPref.setValueIndex(floatToIndex(mWindowManager.getAnimationScale(1), R.array.entryvalues_animations));
+        	mFancyImeAnimationsPref.setChecked(Settings.System.getInt( getContentResolver(), Settings.System.FANCY_IME_ANIMATIONS, 0) !=0);
+			mCurConfig.updateFrom(ActivityManagerNative.getDefault().getConfiguration());
+			mFontSizePref.setValueIndex(floatToIndex(mCurConfig.fontScale, R.array.values_font_size));
+		} catch (RemoteException e) {
         }
-        mWindowAnimationsPref.setValueIndex(floatToIndex(mWindowAnimationScale, R.array.entryvalues_animations));
-        try {
-            mTransitionAnimationScale = mWindowManager.getAnimationScale(1);
-        } catch (RemoteException e) {
-            // do nothing
-        }
-        mTransitionAnimationsPref.setValueIndex(floatToIndex(mTransitionAnimationScale, R.array.entryvalues_animations));
-        mFancyImeAnimationsPref.setChecked(Settings.System.getInt( getContentResolver(), Settings.System.FANCY_IME_ANIMATIONS, 0) != 0);
-
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -180,9 +184,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         }
 
         if (preference == mPinchReflowPref) {
-            value = mPinchReflowPref.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.WEB_VIEW_PINCH_REFLOW,
-                    value ? 1 : 0);
+			value = mPinchReflowPref.isChecked();
+			Settings.System.putInt(getContentResolver(), Settings.System.WEB_VIEW_PINCH_REFLOW,
+				    value ? 1 : 0);
         }
 
         if (preference == mPowerPromptPref) {
@@ -221,7 +225,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                     Settings.System.STATUSBAR_ALWAYS_MUSIC_CONTROLS, value ? 1 : 0);
         }
 
-		if (preference == mTransitionAnimationsPref) {
+		if (preference == mFancyImeAnimationsPref) {
 			Settings.System.putInt(getContentResolver(),
 				Settings.System.FANCY_IME_ANIMATIONS,
 				mFancyImeAnimationsPref.isChecked() ? 1 : 0);
@@ -244,7 +248,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             Settings.System.putInt(getContentResolver(), Settings.System.OVERSCROLL_WEIGHT,
                     overscrollWeight);
             return true;
-        } else if (preference == mWindowAnimationsPref){
+        } else if (preference == mWindowAnimationsPref) {
 			float val = Float.parseFloat(newValue.toString());
             try {
 			    mWindowManager.setAnimationScale(0, val);
@@ -252,7 +256,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                 // do nothing
             }
 			return true;
-		} else if (preference == mTransitionAnimationsPref){
+		} else if (preference == mTransitionAnimationsPref) {
 			float val = Float.parseFloat(newValue.toString());
             try {
 			    mWindowManager.setAnimationScale(1, val);
@@ -260,7 +264,13 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                 // do nothing
             }
 			return true;
-		}
+        } else if (preference == mFontSizePref) {
+            try {
+                mCurConfig.fontScale = Float.parseFloat(newValue.toString());
+                ActivityManagerNative.getDefault().updateConfiguration(mCurConfig);
+            } catch (RemoteException e) {
+            }
+        }
         return false;
     }
 

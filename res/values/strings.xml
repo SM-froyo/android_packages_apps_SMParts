@@ -9,7 +9,7 @@
     <string name="application_settings_summary_head">Application moving, install location</string>
     <string name="display_settings_title_head">Display</string>
     <string name="display_settings_title_subhead">Display settings</string>
-    <string name="display_settings_summary_head">Display animations, rotation, timeouts</string>
+    <string name="display_settings_summary_head">Display rotation, timeouts</string>
     <string name="input_settings_title_head">Input</string>
     <string name="input_settings_title_subhead">Input settings</string>
     <string name="input_settings_summary_head">Input behavior, buttons, haptic feedback</string>
@@ -33,6 +33,10 @@
 
     <string name="pref_electron_beam_animation_on">Screen-on animation</string>
     <string name="pref_electron_beam_animation_off">Screen-off animation</string>
+
+	<!-- User interface : font size -->
+	<string name="font_size_title">Font size</string>
+	<string name="font_size_summary">Overall size of fonts</string>
 
 	<!-- User interface : animation -->
 	<string name="title_animations">Animations</string>
@@ -179,6 +183,8 @@
     <!-- Input Settings -->
     <string name="input_settings_title">Input settings</string>
     <string name="input_settings_summary">Control button behavior</string>
+	<string name="end_button_title">End button behavior</string>
+	<string name="end_button_summary">Select End (red) button action</string>
     <string name="button_settings_title">Button settings</string>
     <string name="lockscreen_settings_title">Lockscreen settings</string>
     <string name="pref_lockscreen_music_controls_title">Lockscreen music controls</string>
