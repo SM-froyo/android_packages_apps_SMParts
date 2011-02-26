@@ -56,10 +56,16 @@
 	
     <!-- User interface : rotation -->
     <string name="ui_rotation_title">Rotation</string>
-
     <string name="pref_rotation_90_title">Rotate 90 degrees</string>
     <string name="pref_rotation_180_title">Rotate 180 degrees</string>
     <string name="pref_rotation_270_title">Rotate 270 degrees</string>
+
+    <!-- User interface: notification lighter -->
+    <string name="ui_notif_light_title">Notification lighter</string>
+    <string name="pref_notif_light_title">Notification lighter</string>
+    <string name="pref_notif_light_summary">Wake screen up on new notification</string>
+    <string name="notif_light_time_title">Screen on time</string>
+    <string name="notif_light_time_summary">How long should screen be on</string>
 
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>

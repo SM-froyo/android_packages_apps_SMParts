@@ -25,10 +25,15 @@ public class DisplayActivity extends PreferenceActivity implements OnPreferenceC
     private static final String ROTATION_90_PREF = "pref_rotation_90";
     private static final String ROTATION_180_PREF = "pref_rotation_180";
     private static final String ROTATION_270_PREF = "pref_rotation_270";
+    private static final String NOTIF_LIGHT_PREF = "notif_light";
+    private static final String NOTIF_LIGHT_TIME_PREF = "notif_light_time";
 
     private CheckBoxPreference mRotation90Pref;
     private CheckBoxPreference mRotation180Pref;
     private CheckBoxPreference mRotation270Pref;
+
+    private CheckBoxPreference mNotificationLighterPref;
+    private ListPreference mNotificationLighterTimePref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,12 +54,18 @@ public class DisplayActivity extends PreferenceActivity implements OnPreferenceC
         mRotation180Pref.setChecked((mode & 2) != 0);
         mRotation270Pref.setChecked((mode & 4) != 0);
 
+        /* Notification lighter */
+        mNotificationLighterPref = (CheckBoxPreference) prefSet.findPreference(NOTIF_LIGHT_PREF);
+        mNotificationLighterPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.NOTIFICATION_SCREEN_LIGHTER, 0) == 1);
+        mNotificationLighterTimePref = (ListPreference) prefSet.findPreference(NOTIF_LIGHT_TIME_PREF);
+        mNotificationLighterTimePref.setOnPreferenceChangeListener(this);
+
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
 
-        /* Preference Screens */
         if (preference == mRotation90Pref ||
             preference == mRotation180Pref ||
             preference == mRotation270Pref) {
@@ -66,10 +77,22 @@ public class DisplayActivity extends PreferenceActivity implements OnPreferenceC
                      Settings.System.ACCELEROMETER_ROTATION_MODE, mode);
         }
 
+        if (preference == mNotificationLighterPref) {
+            value = mNotificationLighterPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NOTIFICATION_SCREEN_LIGHTER, value ? 1 : 0);
+        }
+
         return true;
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mNotificationLighterTimePref) {
+            int lighterTime = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_SCREEN_LIGHTER_TIME,
+                    lighterTime);
+            return true;
+        }
         return false;
     }
 

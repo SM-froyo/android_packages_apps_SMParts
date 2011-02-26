@@ -26,8 +26,8 @@ import android.view.IWindowManager;
 public class UIActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
     /* Preference Screens */
-	private static final String STATUS_BAR_SCREEN = "status_bar_settings";
-	private static final String DATE_PROVIDER_SCREEN = "date_provider_settings";
+    private static final String STATUS_BAR_SCREEN = "status_bar_settings";
+    private static final String DATE_PROVIDER_SCREEN = "date_provider_settings";
     private static final String NOTIFICATION_SCREEN = "notification_settings";
     private static final String EXTRAS_SCREEN = "tweaks_extras";
     private static final String GENERAL_CATEGORY = "general_category";
@@ -35,10 +35,10 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String UI_EXP_WIDGET_HIDE_ONCHANGE = "expanded_hide_onchange";
     private static final String UI_EXP_WIDGET_COLOR = "expanded_color_mask";
     private static final String UI_EXP_WIDGET_PICKER = "widget_picker";
-	private static final String WINDOW_ANIMATIONS_PREF = "window_animations";
-	private static final String TRANSITION_ANIMATIONS_PREF = "transition_animations";
-	private static final String FANCY_IME_ANIMATIONS_PREF = "fancy_ime_animations";
-	private static final String FONT_SIZE_PREF = "font_size";
+    private static final String WINDOW_ANIMATIONS_PREF = "window_animations";
+    private static final String TRANSITION_ANIMATIONS_PREF = "transition_animations";
+    private static final String FANCY_IME_ANIMATIONS_PREF = "fancy_ime_animations";
+    private static final String FONT_SIZE_PREF = "font_size";
 
     private PreferenceScreen mStatusBarScreen;
     private PreferenceScreen mDateProviderScreen;
@@ -253,7 +253,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             try {
 			    mWindowManager.setAnimationScale(0, val);
             } catch (RemoteException e) {
-                // do nothing
             }
 			return true;
 		} else if (preference == mTransitionAnimationsPref) {
@@ -261,7 +260,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             try {
 			    mWindowManager.setAnimationScale(1, val);
             } catch (RemoteException e) {
-                // do nothing
             }
 			return true;
         } else if (preference == mFontSizePref) {

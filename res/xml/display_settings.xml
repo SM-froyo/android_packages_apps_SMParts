@@ -12,4 +12,18 @@
             android:title="@string/pref_rotation_270_title" />
     </PreferenceCategory>
 
+    <!-- Notification lighter -->
+    <PreferenceCategory android:key="notif_light_category"
+		android:title="@string/ui_notif_light_title">
+        <CheckBoxPreference android:key="notif_light"
+            android:title="@string/pref_notif_light_title"
+            android:summary="@string/pref_notif_light_summary" />
+	    <ListPreference android:key="notif_light_time"
+		    android:dialogTitle="@string/notif_light_time_title"
+		    android:title="@string/notif_light_time_title"
+		    android:summary="@string/notif_light_time_summary"
+		    android:entries="@array/entries_notif_light_time"
+		    android:entryValues="@array/values_notif_light_time" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
