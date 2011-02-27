@@ -36,6 +36,11 @@
             android:title="@string/pref_lockscreen_always_music_controls_title"
             android:summary="@string/pref_lockscreen_always_music_controls_summary" />
 
+        <CheckBoxPreference android:key="dpad_music_controls"
+            android:dependency="dpad_music_controls"
+            android:title="@string/pref_dpad_music_controls_title"
+            android:summary="@string/pref_dpad_music_controls_summary" />
+
         <CheckBoxPreference android:key="lockscreen_quick_unlock_control"
             android:title="@string/pref_lockscreen_quick_unlock_control_title"
             android:summary="@string/pref_lockscreen_quick_unlock_control_summary" />
