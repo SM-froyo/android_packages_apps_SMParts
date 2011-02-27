@@ -1,4 +1,3 @@
-
 package com.spicagenmod.smparts.activities;
 
 import com.spicagenmod.smparts.R;
@@ -133,7 +132,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         /* Status Music Controls */
         mMusicControlPref = (CheckBoxPreference) prefSet.findPreference(STATUSBAR_MUSIC_CONTROLS);
         mMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
-                Settings.System.STATUSBAR_MUSIC_CONTROLS, 1) == 1);
+                Settings.System.STATUSBAR_MUSIC_CONTROLS, 0) == 1);
         mAlwaysMusicControlPref = (CheckBoxPreference) prefSet.findPreference(STATUSBAR_ALWAYS_MUSIC_CONTROLS);
         mAlwaysMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.STATUSBAR_ALWAYS_MUSIC_CONTROLS, 0) == 1);
