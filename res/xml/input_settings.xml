@@ -35,15 +35,6 @@
                 android:targetClass="com.spicagenmod.smparts.activities.HapticTweaksActivity" />
         </PreferenceScreen>
 
-        <!-- Long Press Home -->
-        <PreferenceScreen android:key="long_press_home"
-            android:title="@string/long_press_home_title"
-            android:summary="@string/long_press_home_summary">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.spicagenmod.smparts"
-                android:targetClass="com.spicagenmod.smparts.activities.LongPressHomeActivity" />
-        </PreferenceScreen>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
