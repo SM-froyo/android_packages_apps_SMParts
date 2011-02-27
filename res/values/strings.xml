@@ -67,6 +67,10 @@
     <string name="notif_light_time_title">Screen on time</string>
     <string name="notif_light_time_summary">How long should screen be on</string>
 
+    <!-- D-Pad music controls -->
+    <string name="pref_dpad_music_controls_title">D-Pad music controls</string>
+    <string name="pref_dpad_music_controls_summary">D-Pad controls music when screen locked</string>
+
     <!-- User interface : WebView -->
     <string name="ui_webview_title">WebView</string>
     <string name="pref_pinch_reflow_title">Reflow after pinch in</string>

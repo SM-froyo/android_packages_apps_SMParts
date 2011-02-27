@@ -89,7 +89,7 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         /* D-Pad Music Controls */
         mDpadMusicControlPref = (CheckBoxPreference) prefSet.findPreference(DPAD_MUSIC_CONTROLS);
         mDpadMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
-                Settings.System.LOCKSCREEN_DPAD_MUSIC_CONTROLS, 1) == 1);
+                Settings.System.LOCKSCREEN_DPAD_MUSIC_CONTROLS, 0) == 1);
 
         /* Quick Unlock Screen Control */
         mQuickUnlockScreenPref = (CheckBoxPreference)
