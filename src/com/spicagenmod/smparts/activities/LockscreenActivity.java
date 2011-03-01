@@ -204,7 +204,7 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_MUSIC_CONTROLS, value ? 1 : 0);
             return true;
-        }else if (preference == mMusicControlPref) {
+        } else if (preference == mDpadMusicControlPref) {
             value = mDpadMusicControlPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_DPAD_MUSIC_CONTROLS, value ? 1 : 0);

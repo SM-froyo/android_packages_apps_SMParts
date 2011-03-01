@@ -58,7 +58,11 @@ public class DisplayActivity extends PreferenceActivity implements OnPreferenceC
         mNotificationLighterPref = (CheckBoxPreference) prefSet.findPreference(NOTIF_LIGHT_PREF);
         mNotificationLighterPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.NOTIFICATION_SCREEN_LIGHTER, 0) == 1);
+
         mNotificationLighterTimePref = (ListPreference) prefSet.findPreference(NOTIF_LIGHT_TIME_PREF);
+        int lighterTime = Settings.System.getInt(getContentResolver(),
+                Settings.System.NOTIFICATION_SCREEN_LIGHTER_TIME, 1);
+        mNotificationLighterTimePref.setValue(String.valueOf(lighterTime));
         mNotificationLighterTimePref.setOnPreferenceChangeListener(this);
 
     }
@@ -82,7 +86,6 @@ public class DisplayActivity extends PreferenceActivity implements OnPreferenceC
             Settings.System.putInt(getContentResolver(),
                     Settings.System.NOTIFICATION_SCREEN_LIGHTER, value ? 1 : 0);
         }
-
         return true;
     }
 
