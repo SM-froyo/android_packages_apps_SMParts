@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Um 90 Grad drehen</string>
   <string name="pref_rotation_180_title">Um 180 Grad drehen</string>
   <string name="pref_rotation_270_title">Um 270 Grad drehen</string>
+  <string name="ui_notif_light_title">Benachrichtigungslicht</string>
+  <string name="pref_notif_light_title">Benachrichtigungslicht</string>
+  <string name="pref_notif_light_summary">Bildschirm bei neuer Benachrichtigung aktivieren</string>
+  <string name="notif_light_time_title">Bildschirmaktivität</string>
+  <string name="notif_light_time_summary">Wie lange sollte das Bildschirm aktiv bleiben</string>
+  <string name="pref_dpad_music_controls_title">D-Pad Musiksteuerung</string>
+  <string name="pref_dpad_music_controls_summary">D-Pad steuert die Musik während der Bildschirmsperre</string>
   <string name="ui_webview_title">WebView</string>
   <string name="pref_pinch_reflow_title">Anzeige nach Zoom-In neu ausrichten</string>
   <string name="pref_pinch_reflow_summary">Inhalt direkt nach Zoom-In neu ausrichten</string>

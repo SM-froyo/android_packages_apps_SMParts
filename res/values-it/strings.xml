@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Rotate 90 degrees</string>
   <string name="pref_rotation_180_title">Rotate 180 degrees</string>
   <string name="pref_rotation_270_title">Rotate 270 degrees</string>
+  <string name="ui_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_summary">Wake screen up on new notification</string>
+  <string name="notif_light_time_title">Screen on time</string>
+  <string name="notif_light_time_summary">How long should screen be on</string>
+  <string name="pref_dpad_music_controls_title">D-Pad music controls</string>
+  <string name="pref_dpad_music_controls_summary">D-Pad controls music when screen locked</string>
   <string name="ui_webview_title">WebView</string>
   <string name="pref_pinch_reflow_title">Reflow after pinch in</string>
   <string name="pref_pinch_reflow_summary">Reflow content immediately after pinch to zoom in</string>

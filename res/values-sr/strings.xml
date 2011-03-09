@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Ротирај за 90 степени</string>
   <string name="pref_rotation_180_title">Ротирај за 180 степени</string>
   <string name="pref_rotation_270_title">Ротирај за 270 степени</string>
+  <string name="ui_notif_light_title">Паљење при обавештењу</string>
+  <string name="pref_notif_light_title">Паљење при обавештењу</string>
+  <string name="pref_notif_light_summary">Пали екран при новом обавештењу</string>
+  <string name="notif_light_time_title">Трајање укључености</string>
+  <string name="notif_light_time_summary">Колико дуго ће екран бити упаљен</string>
+  <string name="pref_dpad_music_controls_title">Музичке контроле</string>
+  <string name="pref_dpad_music_controls_summary">Музичке контроле када је екран закључан</string>
   <string name="ui_webview_title">Веб приказ</string>
   <string name="pref_pinch_reflow_title">Освежавање након прстохвата</string>
   <string name="pref_pinch_reflow_summary">Освежи садржај одмах након прстохвата за увећавање</string>

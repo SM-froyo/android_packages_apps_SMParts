@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Putar 90 derajat</string>
   <string name="pref_rotation_180_title">Putar 180 derajat</string>
   <string name="pref_rotation_270_title">Putar 270 derajat</string>
+  <string name="ui_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_summary">Wake screen up on new notification</string>
+  <string name="notif_light_time_title">Screen on time</string>
+  <string name="notif_light_time_summary">How long should screen be on</string>
+  <string name="pref_dpad_music_controls_title">D-Pad music controls</string>
+  <string name="pref_dpad_music_controls_summary">D-Pad controls music when screen locked</string>
   <string name="ui_webview_title">Tampilan web</string>
   <string name="pref_pinch_reflow_title">Reflow setelah pencubitan</string>
   <string name="pref_pinch_reflow_summary">Tampilkan ulang konten segera setelah mencubit untuk memperbesar</string>

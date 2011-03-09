@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Rotire 90 de grade</string>
   <string name="pref_rotation_180_title">Rotire 180 de grade</string>
   <string name="pref_rotation_270_title">Rotire 270 de grade</string>
+  <string name="ui_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_summary">Wake screen up on new notification</string>
+  <string name="notif_light_time_title">Screen on time</string>
+  <string name="notif_light_time_summary">How long should screen be on</string>
+  <string name="pref_dpad_music_controls_title">D-Pad music controls</string>
+  <string name="pref_dpad_music_controls_summary">D-Pad controls music when screen locked</string>
   <string name="ui_webview_title">VizualizareWeb</string>
   <string name="pref_pinch_reflow_title">Reorganizează după apropiere</string>
   <string name="pref_pinch_reflow_summary">Reorganizează conținutul imediat după apropiere</string>

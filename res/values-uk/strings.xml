@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Поворот на 90 градусів</string>
   <string name="pref_rotation_180_title">Поворот на 180 градусів</string>
   <string name="pref_rotation_270_title">Поворот на 270 градусів</string>
+  <string name="ui_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_summary">Wake screen up on new notification</string>
+  <string name="notif_light_time_title">Screen on time</string>
+  <string name="notif_light_time_summary">How long should screen be on</string>
+  <string name="pref_dpad_music_controls_title">D-Pad елементи керування музикою</string>
+  <string name="pref_dpad_music_controls_summary">D-Pad керування музикою, коли екран заблокований</string>
   <string name="ui_webview_title">WebВигляд</string>
   <string name="pref_pinch_reflow_title">Переформатувати після збільшення</string>
   <string name="pref_pinch_reflow_summary">Переформатувати зміст зразу після збільшення</string>

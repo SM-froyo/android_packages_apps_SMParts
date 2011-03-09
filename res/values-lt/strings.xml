@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Pasukimas 90 laipsnių</string>
   <string name="pref_rotation_180_title">Pasukimas 180 laipsnių</string>
   <string name="pref_rotation_270_title">Pasukimas 270 laipsnių</string>
+  <string name="ui_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_title">Notification lighter</string>
+  <string name="pref_notif_light_summary">Wake screen up on new notification</string>
+  <string name="notif_light_time_title">Screen on time</string>
+  <string name="notif_light_time_summary">How long should screen be on</string>
+  <string name="pref_dpad_music_controls_title">D-Pad music controls</string>
+  <string name="pref_dpad_music_controls_summary">D-Pad controls music when screen locked</string>
   <string name="ui_webview_title">Tinklalapių rodymas</string>
   <string name="pref_pinch_reflow_title">Performatuoti išplėtus</string>
   <string name="pref_pinch_reflow_summary">Iš karto performatuoti turinį, kai tik jis padidinamas pirštais</string>

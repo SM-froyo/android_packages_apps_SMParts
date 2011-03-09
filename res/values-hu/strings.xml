@@ -44,6 +44,13 @@
   <string name="pref_rotation_90_title">Elforgatás 90 fokkal</string>
   <string name="pref_rotation_180_title">Elforgatás 180 fokkal</string>
   <string name="pref_rotation_270_title">Elforgatás 270 fokkal</string>
+  <string name="ui_notif_light_title">Értesítés világosítás</string>
+  <string name="pref_notif_light_title">Értesítés világosítás</string>
+  <string name="pref_notif_light_summary">Képernyő aktiválása új értesítés esetén</string>
+  <string name="notif_light_time_title">Képernyő időkorlátja</string>
+  <string name="notif_light_time_summary">Mennyi ideig legyen bekapcsolt állapotban a képernyő</string>
+  <string name="pref_dpad_music_controls_title">D-Pad zenei vezérlők</string>
+  <string name="pref_dpad_music_controls_summary">A D-Pad zenei vezérlő működik lezárt képernyő esetén</string>
   <string name="ui_webview_title">Webnézet</string>
   <string name="pref_pinch_reflow_title">Áttördelés két ujjas nagyítás után</string>
   <string name="pref_pinch_reflow_summary">Tartalom azonnali áttördelése két ujjas nagyítás után</string>
