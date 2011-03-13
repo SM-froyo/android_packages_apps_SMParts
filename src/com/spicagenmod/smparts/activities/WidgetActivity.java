@@ -83,7 +83,7 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
     private List<String> getList() {
         String list = Settings.System.getString(getContentResolver(), Settings.System.WIDGET_BUTTONS);
         if(list == null) {
-            list = "toggleWifi|toggleBluetooth|toggleGPS|toggleSound";
+            list = "toggleWifi|toggleBluetooth|toggleGPS|toggleBrightness|toggleMobileData";
         }
         List<String> newList = new ArrayList<String>();
         String[] tempList = list.split("\\|");

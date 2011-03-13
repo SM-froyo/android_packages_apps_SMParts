@@ -22,61 +22,43 @@ import java.io.File;
 public class PerformanceSettingsActivity extends PreferenceActivity implements Preference.OnPreferenceChangeListener {
 
     private static final String COMPCACHE_PREF = "pref_compcache_size";
-
     private static final String COMPCACHE_PERSIST_PROP = "persist.service.compcache";
-
     private static final String COMPCACHE_DEFAULT = SystemProperties.get("ro.compcache.default");
-
     private static final String GENERAL_CATEGORY = "general_category";
-
     private static final String JIT_PREF = "pref_jit_mode";
-
     private static final String JIT_ENABLED = "int:jit";
-
     private static final String JIT_DISABLED = "int:fast";
-
     private static final String JIT_PERSIST_PROP = "persist.sys.jit-mode";
-
     private static final String JIT_PROP = "dalvik.vm.execution-mode";
-
     private static final String HEAPSIZE_PREF = "pref_heapsize";
-
     private static final String HEAPSIZE_PROP = "dalvik.vm.heapsize";
-
     private static final String HEAPSIZE_PERSIST_PROP = "persist.sys.vm.heapsize";
-
     private static final String HEAPSIZE_DEFAULT = "16m";
-
     private static final String USE_DITHERING_PREF = "pref_use_dithering";
-
     private static final String USE_DITHERING_PERSIST_PROP = "persist.sys.use_dithering";
-    
     private static final String USE_DITHERING_DEFAULT = "1";
-
     private static final String LOCK_HOME_PREF = "pref_lock_home";
-
     private static final String LOCK_MMS_PREF = "pref_lock_mms";
-
+    private static final String LOCK_PHONE_PREF = "pref_lock_phone";
+    private static final String LOCK_CONTACTS_PREF = "pref_lock_contacts";
+    private static final String LOCK_SU_PREF = "pref_lock_su";
     private static final int LOCK_HOME_DEFAULT = 0;
-
     private static final int LOCK_MMS_DEFAULT = 0;
+    private static final int LOCK_PHONE_DEFAULT = 0;
+    private static final int LOCK_CONTACTS_DEFAULT = 0;
+    private static final int LOCK_SU_DEFAULT = 0;
 
     private ListPreference mCompcachePref;
-
     private CheckBoxPreference mJitPref;
-
     private CheckBoxPreference mUseDitheringPref;
-
     private CheckBoxPreference mLockHomePref;
-
     private CheckBoxPreference mLockMmsPref;
-
+    private CheckBoxPreference mLockPhonePref;
+    private CheckBoxPreference mLockContactsPref;
+    private CheckBoxPreference mLockSuPref;
     private ListPreference mHeapsizePref;
-
     private AlertDialog alertDialog;
-
     private int swapAvailable = -1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +103,18 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         mLockMmsPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCK_MMS_IN_MEMORY, LOCK_MMS_DEFAULT) == 1);
 
+        mLockPhonePref = (CheckBoxPreference) prefSet.findPreference(LOCK_PHONE_PREF);
+        mLockPhonePref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCK_PHONE_IN_MEMORY, LOCK_PHONE_DEFAULT) == 1);
+
+        mLockContactsPref = (CheckBoxPreference) prefSet.findPreference(LOCK_CONTACTS_PREF);
+        mLockContactsPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCK_CONTACTS_IN_MEMORY, LOCK_CONTACTS_DEFAULT) == 1);
+
+        mLockSuPref = (CheckBoxPreference) prefSet.findPreference(LOCK_SU_PREF);
+        mLockSuPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCK_SUPERUSER_IN_MEMORY, LOCK_SU_DEFAULT) == 1);
+
         // Set up the warning
         alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle(R.string.performance_settings_warning_title);
@@ -156,6 +150,24 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         if (preference == mLockMmsPref) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCK_MMS_IN_MEMORY, mLockMmsPref.isChecked() ? 1 : 0);
+            return true;
+        }
+
+        if (preference == mLockPhonePref) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCK_PHONE_IN_MEMORY, mLockPhonePref.isChecked() ? 1 : 0);
+            return true;
+        }
+
+        if (preference == mLockContactsPref) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCK_CONTACTS_IN_MEMORY, mLockContactsPref.isChecked() ? 1 : 0);
+            return true;
+        }
+
+        if (preference == mLockSuPref) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCK_SUPERUSER_IN_MEMORY, mLockSuPref.isChecked() ? 1 : 0);
             return true;
         }
 

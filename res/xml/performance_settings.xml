@@ -13,7 +13,8 @@
             android:entryValues="@array/pref_compcache_size_values" />
 
         <CheckBoxPreference android:key="pref_jit_mode"
-            android:title="@string/pref_jit_mode_title" android:summary="@string/pref_jit_mode_summary" />
+            android:title="@string/pref_jit_mode_title"
+            android:summary="@string/pref_jit_mode_summary" />
 
         <CheckBoxPreference android:key="pref_use_dithering"
             android:title="@string/pref_use_dithering_title"
@@ -24,11 +25,25 @@
             android:summary="@string/pref_lock_home_summary" />
 
         <CheckBoxPreference android:key="pref_lock_mms"
-            android:title="@string/pref_lock_mms_title" android:summary="@string/pref_lock_mms_summary" />
+            android:title="@string/pref_lock_mms_title"
+            android:summary="@string/pref_lock_mms_summary" />
+
+        <CheckBoxPreference android:key="pref_lock_phone"
+            android:title="@string/pref_lock_phone_title"
+            android:summary="@string/pref_lock_phone_summary" />
+
+        <CheckBoxPreference android:key="pref_lock_contacts"
+            android:title="@string/pref_lock_contacts_title"
+            android:summary="@string/pref_lock_contacts_summary" />
+
+        <CheckBoxPreference android:key="pref_lock_su"
+            android:title="@string/pref_lock_su_title"
+            android:summary="@string/pref_lock_su_summary" />
 
         <ListPreference android:key="pref_heapsize"
             android:dialogTitle="@string/pref_heapsize_title"
-            android:title="@string/pref_heapsize_title" android:summary="@string/pref_heapsize_summary"
+            android:title="@string/pref_heapsize_title"
+            android:summary="@string/pref_heapsize_summary"
             android:entries="@array/entries_heapsize"
             android:entryValues="@array/entries_heapsize" />
 
