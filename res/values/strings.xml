@@ -196,15 +196,16 @@
 	<string name="end_button_title">End button behavior</string>
 	<string name="end_button_summary">Select End (red) button action</string>
     <string name="button_settings_title">Button settings</string>
+
+    <!-- Lockscreen settings -->
     <string name="lockscreen_settings_title">Lockscreen settings</string>
+    <string name="lockscreen_music_title">Music control</string>
     <string name="pref_lockscreen_music_controls_title">Lockscreen music controls</string>
     <string name="pref_lockscreen_music_controls_summary">Displays music controls on the lockscreen</string>
     <string name="pref_lockscreen_always_music_controls_title">Always display music controls</string>
     <string name="pref_lockscreen_always_music_controls_summary">Display music controls regardless of whether or not music is playing</string>
-    <string name="pref_trackball_wake_title">Trackball wake</string>
-    <string name="pref_trackball_wake_summary">Pressing the trackball wakes the device</string>
-    <string name="pref_trackball_unlock_title">Trackball unlock</string>
-    <string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device</string>
+    <string name="pref_lockscreen_always_battery_info_title">Always display battery status</string>
+    <string name="pref_lockscreen_always_battery_info_summary">Show battery percentage on lockscreen</string>
     <string name="pref_menu_unlock_title">Menu unlock</string>
     <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device</string>
     <string name="pref_lockscreen_quick_unlock_control_title">Quick Unlock</string>
