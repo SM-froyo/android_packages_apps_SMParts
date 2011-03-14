@@ -112,7 +112,7 @@ public class WidgetActivity extends PreferenceActivity implements OnPreferenceCh
     private boolean manageList(String toggle, boolean add) {
         List<String> sList = getList();
         if(add) {
-            if(sList.size() >= 6) {
+            if(sList.size() >= 14) {
                 Toast.makeText(this, R.string.widget_max_buttons, Toast.LENGTH_LONG).show();
                 return false;
             }

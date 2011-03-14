@@ -35,6 +35,7 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
     private static final String LOCKSCREEN_PHONE_MESSAGING_TAB = "lockscreen_phone_messaging_tab";
     private static final String LOCKSCREEN_DISABLE_UNLOCK_TAB = "lockscreen_disable_unlock_tab";
     private static final String MESSAGING_TAB_APP = "pref_messaging_tab_app";
+    private static final String LOCKSCREEN_ALWAYS_BATTERY_INFO = "lockscreen_always_battery_info";
 
     private static final String HOLD_UNLOCK_PREF = "pref_hold_unlock";
     private static final String EXTENDED_LOCKSCREEN_PREF = "ext_ls_settings";
@@ -42,6 +43,7 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
     private CheckBoxPreference mMusicControlPref;
     private CheckBoxPreference mAlwaysMusicControlPref;
     private CheckBoxPreference mDpadMusicControlPref;
+    private CheckBoxPreference mLockAlwaysBatteryInfoPref;
     private CheckBoxPreference mMenuUnlockPref;
     private CheckBoxPreference mQuickUnlockScreenPref;
     private CheckBoxPreference mPhoneMessagingTabPref;
@@ -90,6 +92,11 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         mDpadMusicControlPref = (CheckBoxPreference) prefSet.findPreference(DPAD_MUSIC_CONTROLS);
         mDpadMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.LOCKSCREEN_DPAD_MUSIC_CONTROLS, 0) == 1);
+
+        /* Always display battery stats */
+        mLockAlwaysBatteryInfoPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ALWAYS_BATTERY_INFO);
+        mLockAlwaysBatteryInfoPref.setChecked(Settings.System.getInt(getContentResolver(), 
+                Settings.System.LOCKSCREEN_ALWAYS_BATTERY_INFO, 0) == 1);
 
         /* Quick Unlock Screen Control */
         mQuickUnlockScreenPref = (CheckBoxPreference)
@@ -208,6 +215,11 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
             value = mDpadMusicControlPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_DPAD_MUSIC_CONTROLS, value ? 1 : 0);
+            return true;
+        } else if (preference == mLockAlwaysBatteryInfoPref) {
+            value = mLockAlwaysBatteryInfoPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ALWAYS_BATTERY_INFO, value ? 1 : 0);
             return true;
         } else if (preference == mAlwaysMusicControlPref) {
             value = mAlwaysMusicControlPref.isChecked();
