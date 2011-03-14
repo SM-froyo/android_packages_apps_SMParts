@@ -313,7 +313,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
                         switch (eventType) {
                             case XmlPullParser.START_TAG:
                                 uiType = parser.getName().trim();
-                                if (!uiType.equalsIgnoreCase("smparts")) {
+                                if (!uiType.equalsIgnoreCase("smparts") || !uiType.equalsIgnoreCase("cmparts")) {
                                     String val = parser.nextText();
                                     if (val.contains("#")) {
                                         Settings.System.putInt(cr, uiType, Color.parseColor(val));
@@ -560,7 +560,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
                 switch (eventType) {
                 case XmlPullParser.START_TAG:
                     uiType = parser.getName().trim();
-                    if (!uiType.equalsIgnoreCase("smparts")) {
+                    if (!uiType.equalsIgnoreCase("smparts") || !uiType.equalsIgnoreCase("cmparts")) {
                         String val = parser.nextText();
                         if (val.contains("#")) {
                             Settings.System.putInt(cr, uiType, Color.parseColor(val));
