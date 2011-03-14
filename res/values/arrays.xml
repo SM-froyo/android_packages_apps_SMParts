@@ -161,9 +161,9 @@
     </string-array>
 
    <string-array name="entries_brightness_widget">
-        <item>Auto/Dim/40%/100%</item>
-        <item>Auto/Dim/25%/75%/100%</item>
-        <item>Auto/25%/100%</item>
+        <item>Dim/40%/100%</item>
+        <item>Dim/25%/75%/100%</item>
+        <item>25%/100%</item>
         <item>Dim/100%</item>
     </string-array>
 

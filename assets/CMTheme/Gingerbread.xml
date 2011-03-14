@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <smparts>
     <battery_status_color_title>#ff000000</battery_status_color_title>
-    <clock_color>#ffffffff</clock_color>
+    <clock_color>#ff8bc800</clock_color>
     <dbm_color>#ff000000</dbm_color>
     <date_color>#ffffffff</date_color>
     <plmn_label_color>#ffe0e0e0</plmn_label_color>
