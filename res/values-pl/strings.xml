@@ -55,9 +55,9 @@
   <string name="pref_pinch_reflow_title">Dopasowanie tekstu</string>
   <string name="pref_pinch_reflow_summary">Natychmiastowe dopasowanie tekstu po przybliżeniu przez "uszczypnięcie"</string>
   <string name="ui_overscroll_title">Overscroll</string>
-  <string name="pref_overscroll_title">Efekt overscroll'u</string>
+  <string name="pref_overscroll_title">Efekt overscroll\'u</string>
   <string name="pref_overscroll_summary">Zachowanie list na granicach przewijania</string>
-  <string name="pref_overscroll_weight_title">Stopień overscroll'u</string>
+  <string name="pref_overscroll_weight_title">Stopień overscroll\'u</string>
   <string name="pref_overscroll_weight_summary">Wybierz siłe przewijania</string>
   <string name="ui_lockscreen_title">Ustawienia blokady ekranu</string>
   <string name="pref_lockscreen_delay_title">Opóźnienie</string>
