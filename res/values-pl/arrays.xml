@@ -59,31 +59,31 @@
     <item>Głośność muzyki (domyślnie)</item>
   </string-array>
   <string-array name="entries_brightness_widget">
-    <item>Auto/Przyciemniony/40%/100%</item>
-    <item>Auto/Przyciemniony/25%/75%/100%</item>
-    <item>Auto/25%/100%</item>
+    <item>Przyciemniony/40%/100%</item>
+    <item>Przyciemniony/25%/75%/100%</item>
+    <item>25%/100%</item>
     <item>Przyciemniony/100%</item>
   </string-array>
   <string-array name="entries_network_widget">
-    <item>2G/3G +2 G</item>
-    <item>2G/Tylko 3G</item>
-    <item>2G/Tylko 3G/3G+2G</item>
+    <item>2G / 3G+2G</item>
+    <item>2G / Tylko 3G</item>
+    <item>2G / Tylko 3G / 3G+2G</item>
   </string-array>
   <string-array name="entries_screentimeout_widget">
     <item>15s/1min/5min</item>
     <item>30s/2min/5min</item>
   </string-array>
   <string-array name="entries_ring_widget">
-    <item>Dźwięk+Wibracja/Wibracja</item>
-    <item>Dźwięk/Wibracje</item>
-    <item>Dźwięk/Milczący</item>
-    <item>Dźwięk+Wibracja/Wibracja/Milczący</item>
-    <item>Dźwięk/Wibracja/Milczący</item>
+    <item>Dźwięk+Wibracja / Wibracja</item>
+    <item>Dźwięk / Wibracje</item>
+    <item>Dźwięk / Milczący</item>
+    <item>Dźwięk+Wibracja / Wibracja / Milczący</item>
+    <item>Dźwięk / Wibracja / Milczący</item>
   </string-array>
   <string-array name="pref_lockscreen_gestures_sensitivity_entries">
-    <item>1 (najszerszy)</item>
+    <item>1 (dowolny)</item>
     <item>2</item>
-    <item>false</item>
+    <item>3</item>
     <item>4</item>
     <item>5</item>
     <item>6</item>
@@ -92,16 +92,16 @@
     <item>9</item>
     <item>10</item>
     <item>11</item>
-    <item>12 (ścisły)</item>
+    <item>12 (restrykcyjny)</item>
   </string-array>
   <string-array name="pref_lockscreen_style_entries">
-    <item>Rodzaj blokady</item>
+    <item>Slide</item>
     <item>Obrotowy</item>
     <item>Rozszerzony</item>
   </string-array>
   <string-array name="pref_overscroll_effect_entries">
     <item>Brak</item>
-    <item>Odbicie przesunięcia</item>
+    <item>Odbicie</item>
   </string-array>
   <string-array name="entries_overscroll_weight">
     <item>Bardzo ciężki</item>
@@ -127,15 +127,15 @@
     <item>Ogromna</item>
   </string-array>
   <string-array name="entries_end_button">
-    <item>Nic nierób</item>
+    <item>Nie rób nic</item>
     <item>Przejdź do pulpitu</item>
     <item>Wygaś ekran</item>
     <item>Pulpit, potem wygaś</item>
   </string-array>
   <string-array name="entries_notif_light_time">
-    <item>1 s (just blink)</item>
+    <item>1 s (tylko błysk)</item>
     <item>3 s</item>
-    <item>4 s (default)</item>
+    <item>4 s (standardowo)</item>
     <item>5 s</item>
     <item>10 s</item>
   </string-array>
