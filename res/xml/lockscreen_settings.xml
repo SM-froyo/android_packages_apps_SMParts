@@ -38,6 +38,14 @@
         <CheckBoxPreference android:key="dpad_music_controls"
             android:title="@string/pref_dpad_music_controls_title"
             android:summary="@string/pref_dpad_music_controls_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_now_playing"
+            android:title="@string/pref_lockscreen_now_playing_title"
+            android:summary="@string/pref_lockscreen_now_playing_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_album_art"
+            android:title="@string/pref_lockscreen_album_art_title"
+            android:summary="@string/pref_lockscreen_album_art_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/general_title">

@@ -28,6 +28,8 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
     private static final String LOCKSCREEN_MUSIC_CONTROLS = "lockscreen_music_controls";
     private static final String LOCKSCREEN_ALWAYS_MUSIC_CONTROLS = "lockscreen_always_music_controls";
     private static final String DPAD_MUSIC_CONTROLS = "dpad_music_controls";
+    private static final String LOCKSCREEN_NOW_PLAYING = "lockscreen_now_playing";
+    private static final String LOCKSCREEN_ALBUM_ART = "lockscreen_album_art";
     private static final String MENU_UNLOCK_PREF = "pref_menu_unlock";
     private static final String BUTTON_CATEGORY = "pref_category_button_settings";
     private static final String LOCKSCREEN_STYLE_PREF = "pref_lockscreen_style";
@@ -43,6 +45,8 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
     private CheckBoxPreference mMusicControlPref;
     private CheckBoxPreference mAlwaysMusicControlPref;
     private CheckBoxPreference mDpadMusicControlPref;
+    private CheckBoxPreference mNowPlayingPref;
+    private CheckBoxPreference mAlbumArtPref;
     private CheckBoxPreference mLockAlwaysBatteryInfoPref;
     private CheckBoxPreference mMenuUnlockPref;
     private CheckBoxPreference mQuickUnlockScreenPref;
@@ -92,6 +96,16 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         mDpadMusicControlPref = (CheckBoxPreference) prefSet.findPreference(DPAD_MUSIC_CONTROLS);
         mDpadMusicControlPref.setChecked(Settings.System.getInt(getContentResolver(), 
                 Settings.System.LOCKSCREEN_DPAD_MUSIC_CONTROLS, 0) == 1);
+
+        /* Now Playing */
+        mNowPlayingPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_NOW_PLAYING);
+        mNowPlayingPref.setChecked(Settings.System.getInt(getContentResolver(), 
+                Settings.System.LOCKSCREEN_NOW_PLAYING, 1) == 1);
+
+        /* Album Art */
+        mAlbumArtPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ALBUM_ART);
+        mAlbumArtPref.setChecked(Settings.System.getInt(getContentResolver(), 
+                Settings.System.LOCKSCREEN_ALBUM_ART, 0) == 1);
 
         /* Always display battery stats */
         mLockAlwaysBatteryInfoPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ALWAYS_BATTERY_INFO);
@@ -225,6 +239,16 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
             value = mAlwaysMusicControlPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_ALWAYS_MUSIC_CONTROLS, value ? 1 : 0);
+            return true;
+        } else if (preference == mNowPlayingPref) {
+            value = mNowPlayingPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_NOW_PLAYING, value ? 1 : 0);
+            return true;
+        } else if (preference == mAlbumArtPref) {
+            value = mAlbumArtPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ALBUM_ART, value ? 1 : 0);
             return true;
         } else if (preference == mQuickUnlockScreenPref) {
             value = mQuickUnlockScreenPref.isChecked();
