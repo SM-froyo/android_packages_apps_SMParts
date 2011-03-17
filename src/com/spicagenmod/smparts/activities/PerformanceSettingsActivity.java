@@ -95,7 +95,6 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
                 SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
         mHeapsizePref.setOnPreferenceChangeListener(this);
 
-        /*
         mLockHomePref = (CheckBoxPreference) prefSet.findPreference(LOCK_HOME_PREF);
         mLockHomePref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCK_HOME_IN_MEMORY, LOCK_HOME_DEFAULT) == 1);
@@ -115,7 +114,6 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
         mLockSuPref = (CheckBoxPreference) prefSet.findPreference(LOCK_SU_PREF);
         mLockSuPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCK_SUPERUSER_IN_MEMORY, LOCK_SU_DEFAULT) == 1);
-        */
 
         // Set up the warning
         alertDialog = new AlertDialog.Builder(this).create();
@@ -142,7 +140,6 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
                     mUseDitheringPref.isChecked() ? "1" : "0");
             return true;
         }
-        /*
         if (preference == mLockHomePref) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCK_HOME_IN_MEMORY, mLockHomePref.isChecked() ? 1 : 0);
@@ -172,7 +169,6 @@ public class PerformanceSettingsActivity extends PreferenceActivity implements P
                     Settings.System.LOCK_SUPERUSER_IN_MEMORY, mLockSuPref.isChecked() ? 1 : 0);
             return true;
         }
-        */
 
         return false;
     }
