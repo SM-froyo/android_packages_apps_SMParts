@@ -25,8 +25,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/general_title">
-
+    <PreferenceCategory android:title="@string/lockscreen_music_title">
         <CheckBoxPreference android:key="lockscreen_music_controls"
             android:title="@string/pref_lockscreen_music_controls_title"
             android:summary="@string/pref_lockscreen_music_controls_summary" />
@@ -39,6 +38,12 @@
         <CheckBoxPreference android:key="dpad_music_controls"
             android:title="@string/pref_dpad_music_controls_title"
             android:summary="@string/pref_dpad_music_controls_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/general_title">
+        <CheckBoxPreference android:key="lockscreen_always_battery_info"
+            android:title="@string/pref_lockscreen_always_battery_info_title"
+            android:summary="@string/pref_lockscreen_always_battery_info_summary" />
 
         <CheckBoxPreference android:key="lockscreen_quick_unlock_control"
             android:title="@string/pref_lockscreen_quick_unlock_control_title"
