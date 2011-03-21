@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:key="lockscreen_mode"
+        android:dialogTitle="@string/lockscreen_mode_title"
+        android:title="@string/lockscreen_mode_title"
+        android:summary="@string/lockscreen_mode_summary"
+        android:entries="@array/lockscreen_mode_entries"
+        android:entryValues="@array/lockscreen_mode_values" />
+    <PreferenceCategory android:title="@string/general_title">
+        <CheckBoxPreference android:key="lockscreen_custom_app_toggle"
+            android:title="@string/lockscreen_custom_app_toggle_title"
+            android:summary="@string/lockscreen_custom_app_toggle_summary" />
+
+        <Preference android:key="lockscreen_custom_app_activity"
+            android:dependency="lockscreen_custom_app_toggle"
+            android:title="@string/lockscreen_custom_app_activity_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/lockscreen_rotary_title">
+        <CheckBoxPreference android:key="lockscreen_rotary_unlock_down_toggle"
+            android:title="@string/lockscreen_rotary_unlock_down_title"
+            android:summary="@string/lockscreen_rotary_unlock_down_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_rotary_hide_arrows_toggle"
+            android:title="@string/lockscreen_rotary_hide_arrows_title"
+            android:summary="@string/lockscreen_rotary_hide_arrows_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

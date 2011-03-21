@@ -11,14 +11,6 @@
 		android:summary="@string/pref_power_prompt_summary"
 		android:defaultValue="true" />
 
-	<!-- Render effect -->
-	<ListPreference android:key="pref_render_effect"
-		android:dialogTitle="@string/pref_render_effect_title"
-		android:title="@string/pref_render_effect_title"
-		android:summary="@string/pref_render_effect_summary"
-		android:entries="@array/entries_render_effect"
-		android:entryValues="@array/values_render_effect" />
-
 	<!-- Font size -->
 	<ListPreference android:key="font_size"
 		android:dialogTitle="@string/font_size_title"

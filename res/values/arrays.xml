@@ -41,60 +41,8 @@
         <item>1</item>
         <item>2</item>
     </string-array>
-
-    <string-array name="entries_render_effect">
-        <item>No render effect</item>
-        <item>Night mode (red)</item>
-        <item>Terminal (green)</item>
-        <item>Blue</item>
-        <item>Amber</item>
-        <item>Salmon</item>
-        <item>Fuscia</item>
-        <item>Calibrated (N1)</item>
-        <item>Calibrated (N1) Low Red</item>
-        <item>Calibrated (N1) Cool</item>
-    </string-array>
-
-    <string-array name="values_render_effect" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-    </string-array>
-
-    <string-array name="render_entries">
-        <item>Night Mode (Red)</item>
-        <item>Terminal (Green)</item>
-        <item>Blue</item>
-        <item>Amber</item>
-        <item>Salmon</item>
-        <item>Fuscia</item>
-        <item>Calibrated (N1)</item>
-        <item>Calibrated (N1) Low Red</item>
-        <item>Calibrated (N1) Cool</item>
-    </string-array>
-
-    <string-array name="render_values" translatable="false">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-    </string-array>
-
-
     
-    <string-array name="pref_lockscreen_delay_entries">
+    <string-array name="lockscreen_delay_entries">
         <item>Immediately</item>
         <item>1s</item>
         <item>5s</item>
@@ -107,7 +55,7 @@
         <item>30m</item>
     </string-array>
 
-    <string-array name="pref_lockscreen_delay_values" translatable="false">
+    <string-array name="lockscreen_delay_values" translatable="false">
         <item>0</item>
         <item>1000</item>
         <item>5000</item>
@@ -242,16 +190,14 @@
         <item>12</item>
     </string-array>
 
-    <string-array name="pref_lockscreen_style_entries">
+    <string-array name="lockscreen_mode_entries">
         <item>Sliding Tab</item>
         <item>Rotary</item>
-        <item>Extended</item>
     </string-array>
 
-    <string-array name="pref_lockscreen_style_values" translatable="false">
+    <string-array name="lockscreen_mode_values" translatable="false">
         <item>1</item>
         <item>2</item>
-		<item>9</item>
     </string-array>
 
     <string-array name="pref_overscroll_effect_entries">

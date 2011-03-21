@@ -72,17 +72,35 @@
                 <category android:name="com.spicagenmod.smparts.SHORTCUT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LockscreenActivity"
-            android:label="@string/lockscreen_settings_title_head">
+        <activity android:name=".activities.LockscreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="com.spicagenmod.smparts.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LockscreenStyleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LockscreenWidgetsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LockscreenUnlockActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.LockscreenTimeoutActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.ExtendedLockscreenActivity"
             android:label="@string/ext_ls_title">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.LongPressHomeActivity"
@@ -201,16 +219,6 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".provider.RenderFXWidgetProvider"
-            android:label="@string/widget_name">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
-                android:resource="@xml/appwidget_info" />
-        </receiver>
-
-        <service android:enabled="true" android:name=".services.RenderFXService" />
         <service android:enabled="true" android:name=".services.BatteryService" />
     </application>
 </manifest>

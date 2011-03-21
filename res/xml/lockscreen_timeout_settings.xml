@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/lockscreen_timeout_title">
+        <ListPreference android:key="lockscreen_timeout_delay"
+            android:dialogTitle="@string/lockscreen_delay_title"
+            android:title="@string/lockscreen_timeout_delay_title"
+            android:summary="@string/lockscreen_timeout_delay_summary"
+            android:entries="@array/lockscreen_delay_entries"
+            android:entryValues="@array/lockscreen_delay_values" />
+
+        <ListPreference android:key="lockscreen_screenoff_delay"
+            android:dialogTitle="@string/lockscreen_delay_title"
+            android:title="@string/lockscreen_screenoff_delay_title"
+            android:summary="@string/lockscreen_screenoff_delay_summary"
+            android:entries="@array/lockscreen_delay_entries"
+            android:entryValues="@array/lockscreen_delay_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

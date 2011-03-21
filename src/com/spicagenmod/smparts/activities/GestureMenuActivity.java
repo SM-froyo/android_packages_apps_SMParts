@@ -71,7 +71,7 @@ public class GestureMenuActivity extends PreferenceActivity
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.gesture_settings);
+        addPreferencesFromResource(R.xml.lockscreen_gesture_settings);
         PreferenceScreen prefSet = getPreferenceScreen();
         mGesturesEnable = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_GESTURES_ENABLE);
         mGesturesTrail = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_GESTURES_TRAIL);

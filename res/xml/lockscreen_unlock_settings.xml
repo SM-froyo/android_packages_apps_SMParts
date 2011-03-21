@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/lockscreen_unlock_title">
+        <CheckBoxPreference android:key="lockscreen_menu_unlock"
+            android:title="@string/lockscreen_menu_unlock_title"
+            android:summary="@string/lockscreen_menu_unlock_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_hold_unlock"
+            android:title="@string/lockscreen_hold_unlock_title"
+			android:summary="@string/lockscreen_hold_unlock_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_disable_unlock_tab"
+            android:title="@string/lockscreen_disable_unlock_tab"
+            android:summary="@string/lockscreen_disable_unlock_tab_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_quick_unlock_control"
+            android:title="@string/lockscreen_quick_unlock_control_title"
+            android:summary="@string/lockscreen_quick_unlock_control_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,85 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="@string/buttons_title"
-        android:key="pref_category_button_settings">
+    <PreferenceCategory android:title="@string/lockscreen_settings_title">
+        <PreferenceScreen android:key="lockscreen_style"
+            android:title="@string/lockscreen_style_title"
+            android:summary="@string/lockscreen_style_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.LockscreenStyleActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="lockscreen_widgets"
+            android:title="@string/lockscreen_widgets_title"
+            android:summary="@string/lockscreen_widgets_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.LockscreenWidgetsActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="lockscreen_unlock"
+            android:title="@string/lockscreen_unlock_title"
+            android:summary="@string/lockscreen_unlock_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.LockscreenUnlockActivity" />
+        </PreferenceScreen>
 
         <PreferenceScreen android:key="lockscreen_gestures"
-            android:title="@string/pref_lockscreen_title">
+            android:title="@string/lockscreen_gestures_title"
+            android:summary="@string/lockscreen_gestures_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.spicagenmod.smparts"
                 android:targetClass="com.spicagenmod.smparts.activities.GestureMenuActivity" />
         </PreferenceScreen>
 
-        <CheckBoxPreference android:key="pref_menu_unlock"
-            android:title="@string/pref_menu_unlock_title"
-            android:summary="@string/pref_menu_unlock_summary" />
-
-        <CheckBoxPreference android:key="pref_hold_unlock"
-            android:title="@string/pref_hold_unlock_title"
-			android:summary="@string/pref_hold_unlock_summary" />
-
-        <CheckBoxPreference android:key="lockscreen_disable_unlock_tab"
-            android:title="@string/pref_lockscreen_disable_unlock_tab"
-            android:summary="@string/pref_lockscreen_disable_unlock_tab_summary" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/lockscreen_music_title">
-        <CheckBoxPreference android:key="lockscreen_music_controls"
-            android:title="@string/pref_lockscreen_music_controls_title"
-            android:summary="@string/pref_lockscreen_music_controls_summary" />
-
-        <CheckBoxPreference android:key="lockscreen_always_music_controls"
-            android:dependency="lockscreen_music_controls"
-            android:title="@string/pref_lockscreen_always_music_controls_title"
-            android:summary="@string/pref_lockscreen_always_music_controls_summary" />
-
-        <CheckBoxPreference android:key="dpad_music_controls"
-            android:title="@string/pref_dpad_music_controls_title"
-            android:summary="@string/pref_dpad_music_controls_summary" />
-
-        <CheckBoxPreference android:key="lockscreen_now_playing"
-            android:title="@string/pref_lockscreen_now_playing_title"
-            android:summary="@string/pref_lockscreen_now_playing_summary" />
-
-        <CheckBoxPreference android:key="lockscreen_album_art"
-            android:title="@string/pref_lockscreen_album_art_title"
-            android:summary="@string/pref_lockscreen_album_art_summary" />
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/general_title">
-        <CheckBoxPreference android:key="lockscreen_always_battery_info"
-            android:title="@string/pref_lockscreen_always_battery_info_title"
-            android:summary="@string/pref_lockscreen_always_battery_info_summary" />
-
-        <CheckBoxPreference android:key="lockscreen_quick_unlock_control"
-            android:title="@string/pref_lockscreen_quick_unlock_control_title"
-            android:summary="@string/pref_lockscreen_quick_unlock_control_summary" />
-
-        <ListPreference android:key="pref_lockscreen_style"
-            android:dialogTitle="@string/pref_lockscreen_style_title"
-            android:title="@string/pref_lockscreen_style_title"
-            android:summary="@string/pref_lockscreen_style_summary"
-            android:entries="@array/pref_lockscreen_style_entries"
-            android:entryValues="@array/pref_lockscreen_style_values" />
-
-        <CheckBoxPreference android:key="pref_lockscreen_rotary_unlock_down_toggle"
-            android:title="@string/pref_lockscreen_rotary_unlock_down_title"
-            android:summary="@string/pref_lockscreen_rotary_unlock_down_summary" />
-
-        <CheckBoxPreference android:key="pref_lockscreen_rotary_hide_arrows_toggle"
-            android:title="@string/pref_lockscreen_rotary_hide_arrows_title"
-            android:summary="@string/pref_lockscreen_rotary_hide_arrows_summary" />
-
-        <CheckBoxPreference android:key="pref_lockscreen_custom_app_toggle"
-            android:title="@string/pref_lockscreen_custom_app_toggle_title"
-            android:summary="@string/pref_lockscreen_custom_app_toggle_summary" />
-
-        <Preference android:key="pref_lockscreen_custom_app_activity"
-            android:dependency="pref_lockscreen_custom_app_toggle"
-            android:title="@string/pref_lockscreen_custom_app_activity_title" />
-
+        <PreferenceScreen android:key="lockscreen_timeout"
+            android:title="@string/lockscreen_timeout_title"
+            android:summary="@string/lockscreen_timeout_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.LockscreenTimeoutActivity" />
+        </PreferenceScreen>
         <!-- Extended Lockscreen for Spica -->
 	    <PreferenceScreen android:key="ext_ls_settings"
             android:title="@string/ext_ls_settings_title">
@@ -87,23 +48,6 @@
                     android:targetPackage="com.spicagenmod.smparts"
                     android:targetClass="com.spicagenmod.smparts.activities.ExtendedLockscreenActivity" />
         </PreferenceScreen>
-
-        <!-- screen timeout delay -->
-        <ListPreference android:key="pref_lockscreen_timeout_delay"
-            android:dialogTitle="@string/pref_lockscreen_delay_title"
-            android:title="@string/pref_lockscreen_timeout_lock_delay"
-            android:summary="@string/pref_lockscreen_timeout_lock_delay_summary"
-            android:entries="@array/pref_lockscreen_delay_entries"
-            android:entryValues="@array/pref_lockscreen_delay_values" />
-
-        <!-- screen off delay -->
-        <ListPreference android:key="pref_lockscreen_screenoff_delay"
-            android:dialogTitle="@string/pref_lockscreen_delay_title"
-            android:title="@string/pref_lockscreen_screenoff_lock_delay"
-            android:summary="@string/pref_lockscreen_screenoff_lock_delay_summary"
-            android:entries="@array/pref_lockscreen_delay_entries"
-            android:entryValues="@array/pref_lockscreen_delay_values" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>

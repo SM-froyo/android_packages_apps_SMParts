@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/lockscreen_music_title">
+        <CheckBoxPreference android:key="lockscreen_music_controls"
+            android:title="@string/lockscreen_music_controls_title"
+            android:summary="@string/lockscreen_music_controls_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_always_music_controls"
+            android:dependency="lockscreen_music_controls"
+            android:title="@string/lockscreen_always_music_controls_title"
+            android:summary="@string/lockscreen_always_music_controls_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_dpad_music_controls"
+            android:title="@string/lockscreen_dpad_music_controls_title"
+            android:summary="@string/lockscreen_dpad_music_controls_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_now_playing"
+            android:title="@string/lockscreen_now_playing_title"
+            android:summary="@string/lockscreen_now_playing_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_album_art"
+            android:title="@string/lockscreen_album_art_title"
+            android:summary="@string/lockscreen_album_art_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/general_title">
+        <CheckBoxPreference android:key="lockscreen_always_battery"
+            android:title="@string/lockscreen_always_battery_title"
+            android:summary="@string/lockscreen_always_battery_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

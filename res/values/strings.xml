@@ -9,13 +9,13 @@
     <string name="application_settings_summary_head">Application moving, install location</string>
     <string name="display_settings_title_head">Display</string>
     <string name="display_settings_title_subhead">Display settings</string>
-    <string name="display_settings_summary_head">Display rotation, timeouts</string>
+    <string name="display_settings_summary_head">Display rotation</string>
     <string name="input_settings_title_head">Input</string>
     <string name="input_settings_title_subhead">Input settings</string>
     <string name="input_settings_summary_head">Input behavior, buttons, haptic feedback</string>
     <string name="interface_settings_title_head">Interface</string>
     <string name="interface_settings_title_subhead">Interface settings</string>
-    <string name="interface_settings_summary_head">Interface tweaks, overscrolling, render effect</string>
+    <string name="interface_settings_summary_head">Interface tweaks, overscrolling</string>
     <string name="lockscreen_settings_title_head">Lockscreen</string>
     <string name="lockscreen_settings_title_subhead">Lockscreen settings</string>
     <string name="lockscreen_settings_summary_head">Lockscreen gestures, style, unlock options</string>
@@ -30,9 +30,6 @@
     <string name="ui_title">User interface</string>
     <string name="ui_summary">User interface settings &amp; tweaks</string>
     <string name="ui_status_bar">Status Bar Customization</string>
-
-    <string name="pref_electron_beam_animation_on">Screen-on animation</string>
-    <string name="pref_electron_beam_animation_off">Screen-off animation</string>
 
 	<!-- User interface : font size -->
 	<string name="font_size_title">Font size</string>
@@ -78,14 +75,6 @@
     <string name="pref_overscroll_summary">Choose how scrollable objects look when they overshoot</string>
     <string name="pref_overscroll_weight_title">Overscrolling weight</string>
     <string name="pref_overscroll_weight_summary">Select the weight of the scrollable objects</string>
-
-    <!-- User interface : Lock Screen -->
-    <string name="ui_lockscreen_title">Screen lock settings</string>
-    <string name="pref_lockscreen_delay_title">Delay</string>
-    <string name="pref_lockscreen_timeout_lock_delay">Screen timeout delay</string>
-    <string name="pref_lockscreen_screenoff_lock_delay">Screen turned off delay</string>
-    <string name="pref_lockscreen_timeout_lock_delay_summary">How long to delay before enabling screen lock when screen times out</string>
-    <string name="pref_lockscreen_screenoff_lock_delay_summary">How long to delay before enabling screen lock when screen is turned off</string>
 
     <!-- Color Picker -->
     <string name="title_color_picker">Pick a color</string>
@@ -193,34 +182,63 @@
 	<string name="end_button_summary">Select End (red) button action</string>
     <string name="button_settings_title">Button settings</string>
 
-    <!-- Lockscreen settings -->
+    <!-- Lockscreen Settings -->
     <string name="lockscreen_settings_title">Lockscreen settings</string>
+    <string name="lockscreen_style_title">Style options</string>
+    <string name="lockscreen_style_summary">Configure the lockscreen style and the corresponding settings</string>
+    <string name="lockscreen_widgets_title">Widgets</string>
+    <string name="lockscreen_widgets_summary">Enable or disable various widgets on the lockscreen</string>
+    <string name="lockscreen_unlock_title">Unlock options</string>
+    <string name="lockscreen_unlock_summary">Controls button unlocking and quick unlock</string>
+    <string name="lockscreen_gestures_title">Gestures</string>
+    <string name="lockscreen_gestures_summary">Enable and configure gestures on the lockscreen to control custom behavior</string>
+    <string name="lockscreen_timeout_title">Delay and timeout</string>
+    <string name="lockscreen_timeout_summary">Configure screen timout delay and screen turn off delay</string>
+
+    <!-- Lockscreen Settings : Widgets -->
     <string name="lockscreen_music_title">Music control</string>
-    <string name="pref_lockscreen_music_controls_title">Music controls</string>
-    <string name="pref_lockscreen_music_controls_summary">Displays music controls on the lockscreen</string>
-    <string name="pref_lockscreen_always_music_controls_title">Always display music controls</string>
-    <string name="pref_lockscreen_always_music_controls_summary">Display music controls regardless of whether or not music is playing</string>
-    <string name="pref_dpad_music_controls_title">D-Pad music controls</string>
-    <string name="pref_dpad_music_controls_summary">D-Pad controls music when screen is locked</string>
-    <string name="pref_lockscreen_now_playing_title">Now playing</string>
-    <string name="pref_lockscreen_now_playing_summary">Display currently playing song on lockscreen</string>
-    <string name="pref_lockscreen_album_art_title">Album art</string>
-    <string name="pref_lockscreen_album_art_summary">Display currently playing song\'s album art on lockscreen</string>
-    <string name="pref_lockscreen_always_battery_info_title">Always display battery status</string>
-    <string name="pref_lockscreen_always_battery_info_summary">Show battery percentage on lockscreen</string>
-    <string name="pref_menu_unlock_title">Menu unlock</string>
-    <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device</string>
-    <string name="pref_lockscreen_quick_unlock_control_title">Quick Unlock</string>
-    <string name="pref_lockscreen_quick_unlock_control_summary">No need to press OK when entering Pin or Password. Delete counts as bad try.</string>
-    <string name="pref_lockscreen_custom_app_toggle_title">Custom app starter</string>
-    <string name="pref_lockscreen_custom_app_toggle_summary">Shows a second slider on sliding style, shows a custom app dimple on rotary style</string>
-    <string name="pref_lockscreen_custom_app_activity_title">Custom application</string>
-    <string name="pref_lockscreen_rotary_unlock_down_title">Drag down to unlock</string>
-    <string name="pref_lockscreen_rotary_unlock_down_summary">Dragging down rotary wheel unlocks. Dragging right starts custom app</string>
-    <string name="pref_lockscreen_rotary_hide_arrows_title">Hide rotary arrows</string>
-    <string name="pref_lockscreen_rotary_hide_arrows_summary">Hides the directional hint arrows on rotary style</string>
-    <string name="pref_lockscreen_style_title">Lockscreen style</string>
-    <string name="pref_lockscreen_style_summary">Choose the style of the lockscreen</string>
+    <string name="lockscreen_music_controls_title">Music controls</string>
+    <string name="lockscreen_music_controls_summary">Displays music controls on the lockscreen</string>
+    <string name="lockscreen_always_music_controls_title">Always display music controls</string>
+    <string name="lockscreen_always_music_controls_summary">Display music controls regardless of whether or not music is playing</string>
+    <string name="lockscreen_dpad_music_controls_title">D-Pad music controls</string>
+    <string name="lockscreen_dpad_music_controls_summary">D-Pad controls music when screen is locked</string>
+    <string name="lockscreen_now_playing_title">Now playing</string>
+    <string name="lockscreen_now_playing_summary">Display currently playing song on lockscreen</string>
+    <string name="lockscreen_album_art_title">Album art</string>
+    <string name="lockscreen_album_art_summary">Display currently playing song\'s album art on lockscreen</string>
+    <string name="lockscreen_always_battery_title">Always display battery status</string>
+    <string name="lockscreen_always_battery_summary">Show battery percentage on lockscreen</string>
+
+    <!-- Lockscreen Settings : Unlock -->
+    <string name="lockscreen_menu_unlock_title">Menu unlock</string>
+    <string name="lockscreen_menu_unlock_summary">Pressing the menu button unlocks the device</string>
+    <string name="lockscreen_quick_unlock_control_title">Quick Unlock</string>
+    <string name="lockscreen_quick_unlock_control_summary">No need to press OK when entering Pin or Password. Delete counts as bad try.</string>
+    <string name="lockscreen_hold_unlock_title">HOLD unlock</string>
+    <string name="lockscreen_hold_unlock_summary">Hold lock button to unlock</string>
+    <string name="lockscreen_disable_unlock_tab">Disable unlock slider</string>
+    <string name="lockscreen_disable_unlock_tab_summary">Note: You need to enable menu key, hold key or gesture unlocking before this option becomes available.</string>
+
+    <!-- Lockscreen Settings : Style -->
+    <string name="lockscreen_mode_title">Lockscreen mode</string>
+    <string name="lockscreen_mode_summary">Choose the style of the lockscreen</string>
+    <string name="lockscreen_custom_app_toggle_title">Custom app starter</string>
+    <string name="lockscreen_custom_app_toggle_summary">Shows a second slider on sliding style, shows a custom app dimple on rotary style</string>
+    <string name="lockscreen_custom_app_activity_title">Custom application</string>
+    <string name="lockscreen_rotary_title">Rotary</string>
+    <string name="lockscreen_rotary_unlock_down_title">Drag down to unlock</string>
+    <string name="lockscreen_rotary_unlock_down_summary">Dragging down rotary wheel unlocks. Dragging right starts custom app</string>
+    <string name="lockscreen_rotary_hide_arrows_title">Hide rotary arrows</string>
+    <string name="lockscreen_rotary_hide_arrows_summary">Hides the directional hint arrows on rotary style</string>
+
+    <!-- Lockscreen Settings : Timeouts -->
+    <string name="lockscreen_delay_title">Delay</string>
+    <string name="lockscreen_timeout_delay_title">Screen timeout delay</string>
+    <string name="lockscreen_timeout_delay_summary">How long to delay before enabling screen lock when screen times out</string>
+    <string name="lockscreen_screenoff_delay_title">Screen turned off delay</string>
+    <string name="lockscreen_screenoff_delay_summary">How long to delay before enabling screen lock when screen is turned off</string>
+
 
     <!-- Long Press Home -->
     <string name="long_press_home_title">Long-press home settings</string>
@@ -275,8 +293,8 @@
     <string name="pref_lock_su_summary">Avoid non-granting SU rights</string>
 
     <!-- Performance Settings : Warning dialog -->
-    <string name="performance_settings_warning_title">WARNING: Dragons Ahead!</string>
-    <string name="performance_settings_warning">The options in here will change the performance of your system, potentially for the worse. They are included for experimentation and we request that you do not file bug reports if you have changed any from the defaults.</string>
+    <string name="performance_settings_warning_title">WARNING: Dangerous settings!</string>
+    <string name="performance_settings_warning">The options in here will change the performance of your system, potentially for the worse. Only change them if you know what you are doing.</string>
 
     <!-- Performance Settings : CPU Settings -->
     <string name="cpu_settings_title">CPU settings</string>
@@ -357,24 +375,6 @@
     <!-- UI Settings : Power off prompt -->
     <string name="pref_power_prompt_title">Power prompt</string>
     <string name="pref_power_prompt_summary">Change whether there is a prompt after choosing shutdown or reboot</string>
-
-    <!-- UI Settings : Render effect -->
-    <string name="pref_render_effect_title">Render effect</string>
-    <string name="pref_render_effect_summary">Change what colors are used to draw the screen (potential battery savings)</string>
-
-    <string name="widget_name">RenderFX Widget</string>
-    <string name="renderfx_temp">RenderFX</string>
-    <string name="prefs_render_effect">Render Effect</string>
-    <string name="notify_render_effect">Render effect on</string>
-        <string name="add_widget">Add widget</string>
-
-    <!--  Widget Types -->
-    <string name="night">Night</string>
-    <string name="terminal">Term</string>
-    <string name="blue">Blue</string>
-    <string name="amber">Amber</string>
-    <string name="salmon">Salmon</string>
-    <string name="fuscia">Fuscia</string>
 
     <!-- Notification Bar Colors -->
     <string name="title_notification_bar">Notification bar</string>
@@ -496,13 +496,7 @@
     <string name="gestures_unlock_only">Unlock phone</string>
     <string name="gestures_toggle_sound">Toggle sound</string>
     <string name="gestures_flashlight">Flashlight</string>
-    <string name="pref_lockscreen_disable_unlock_tab">Disable unlock slider</string>
-    <string name="pref_lockscreen_disable_unlock_tab_summary">Note: You need to enable trackball, menu key, hold key or gesture unlocking before this option becomes available.</string>
     <string name="gestures_explain_create_screen">Pick an action to perform (or select Unlock or Sound) and draw a gesture on the screen.</string>
-
-    <!-- HOLD unlock -->
-    <string name="pref_hold_unlock_title">HOLD unlock</string>
-    <string name="pref_hold_unlock_summary">Hold lock button to unlock</string>
 
     <!-- Extended Lockscreen strings -->
     <string name="ext_ls_settings_title">Extended Lockscreen</string>

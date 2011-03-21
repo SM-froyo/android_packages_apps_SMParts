@@ -32,7 +32,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String GENERAL_CATEGORY = "general_category";
     private static final String UI_EXP_WIDGET = "expanded_widget";
     private static final String UI_EXP_WIDGET_HIDE_ONCHANGE = "expanded_hide_onchange";
-    private static final String UI_EXP_WIDGET_COLOR = "expanded_color_mask";
     private static final String UI_EXP_WIDGET_PICKER = "widget_picker";
     private static final String UI_EXP_WIDGET_ORDER = "widget_order";
     private static final String WINDOW_ANIMATIONS_PREF = "window_animations";
@@ -47,7 +46,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
     /* Other */
     private static final String PINCH_REFLOW_PREF = "pref_pinch_reflow";
-    private static final String RENDER_EFFECT_PREF = "pref_render_effect";
     private static final String POWER_PROMPT_PREF = "power_dialog_prompt";
     private static final String OVERSCROLL_PREF = "pref_overscroll_effect";
     private static final String OVERSCROLL_WEIGHT_PREF = "pref_overscroll_weight";
@@ -59,7 +57,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private CheckBoxPreference mPinchReflowPref;
     private CheckBoxPreference mPowerPromptPref;
 
-    private ListPreference mRenderEffectPref;
 	private ListPreference mWindowAnimationsPref;
 	private ListPreference mTransitionAnimationsPref;
 	private ListPreference mFontSizePref;
@@ -75,7 +72,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private CheckBoxPreference mPowerWidgetHideOnChange;
 	private CheckBoxPreference mFancyImeAnimationsPref;
 
-    private Preference mPowerWidgetColor;
     private PreferenceScreen mPowerPicker;
     private PreferenceScreen mPowerOrder;
 
@@ -103,8 +99,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                 Settings.System.WEB_VIEW_PINCH_REFLOW, 0) == 1);
 
         mPowerPromptPref = (CheckBoxPreference) prefSet.findPreference(POWER_PROMPT_PREF);
-        mRenderEffectPref = (ListPreference) prefSet.findPreference(RENDER_EFFECT_PREF);
-        mRenderEffectPref.setOnPreferenceChangeListener(this);
         updateFlingerOptions();
 
 		/* Animation */
@@ -123,7 +117,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 		mPowerWidgetHideOnChange = (CheckBoxPreference) prefSet
 			.findPreference(UI_EXP_WIDGET_HIDE_ONCHANGE);
 
-		mPowerWidgetColor = prefSet.findPreference(UI_EXP_WIDGET_COLOR);
 		mPowerPicker = (PreferenceScreen) prefSet.findPreference(UI_EXP_WIDGET_PICKER);
         mPowerOrder = (PreferenceScreen) prefSet.findPreference(UI_EXP_WIDGET_ORDER);
 		mPowerWidget.setChecked((Settings.System.getInt(getContentResolver(),
@@ -210,12 +203,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                     value ? 1 : 0);
         }
 
-        if (preference == mPowerWidgetColor) {
-            ColorPickerDialog cp = new ColorPickerDialog(this, mWidgetColorListener,
-                    readWidgetColor());
-            cp.show();
-        }
-
         if (preference == mMusicControlPref) {
             value = mMusicControlPref.isChecked();
             Settings.System.putInt(getContentResolver(),
@@ -238,10 +225,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mRenderEffectPref) {
-            writeRenderEffect(Integer.valueOf((String) newValue));
-            return true;
-        } else if (preference == mOverscrollPref) {
+        if (preference == mOverscrollPref) {
             int overscrollEffect = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(), Settings.System.ALLOW_OVERSCROLL,
                     overscrollEffect);
@@ -296,7 +280,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
                 // mShowBackgroundCB.setChecked(v != 0);
 
                 v = reply.readInt();
-                mRenderEffectPref.setValue(String.valueOf(v));
 
                 reply.recycle();
                 data.recycle();
@@ -304,29 +287,6 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         } catch (RemoteException ex) {
         }
 
-    }
-
-    private void writeRenderEffect(int id) {
-        try {
-            IBinder flinger = ServiceManager.getService("SurfaceFlinger");
-            if (flinger != null) {
-                Parcel data = Parcel.obtain();
-                data.writeInterfaceToken("android.ui.ISurfaceComposer");
-                data.writeInt(id);
-                flinger.transact(1014, data, null, 0);
-                data.recycle();
-            }
-        } catch (RemoteException ex) {
-        }
-    }
-
-    private int readWidgetColor() {
-        try {
-            return Settings.System.getInt(getContentResolver(),
-                    Settings.System.EXPANDED_VIEW_WIDGET_COLOR);
-        } catch (SettingNotFoundException e) {
-            return -16777216;
-        }
     }
 	
 	int floatToIndex(float val, int resid) {
@@ -341,14 +301,4 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 		}
 		return indices.length-1;
 	}
-
-    ColorPickerDialog.OnColorChangedListener mWidgetColorListener = new ColorPickerDialog.OnColorChangedListener() {
-        public void colorChanged(int color) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.EXPANDED_VIEW_WIDGET_COLOR, color);
-        }
-
-        public void colorUpdate(int color) {
-        }
-    };
 }
