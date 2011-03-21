@@ -212,9 +212,13 @@
     <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device</string>
     <string name="pref_lockscreen_quick_unlock_control_title">Quick Unlock</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">No need to press OK when entering Pin or Password. Delete counts as bad try.</string>
-    <string name="pref_lockscreen_phone_messaging_control_title">Phone and Messaging</string>
-    <string name="pref_lockscreen_phone_messaging_control_summary">Phone and Messaging accessible from Lockscreen.</string>
-    <string name="pref_messaging_tab_app_title">Messaging tab application</string>
+    <string name="pref_lockscreen_custom_app_toggle_title">Custom app starter</string>
+    <string name="pref_lockscreen_custom_app_toggle_summary">Shows a second slider on sliding style, shows a custom app dimple on rotary style</string>
+    <string name="pref_lockscreen_custom_app_activity_title">Custom application</string>
+    <string name="pref_lockscreen_rotary_unlock_down_title">Drag down to unlock</string>
+    <string name="pref_lockscreen_rotary_unlock_down_summary">Dragging down rotary wheel unlocks. Dragging right starts custom app</string>
+    <string name="pref_lockscreen_rotary_hide_arrows_title">Hide rotary arrows</string>
+    <string name="pref_lockscreen_rotary_hide_arrows_summary">Hides the directional hint arrows on rotary style</string>
     <string name="pref_lockscreen_style_title">Lockscreen style</string>
     <string name="pref_lockscreen_style_summary">Choose the style of the lockscreen</string>
 
@@ -273,6 +277,19 @@
     <!-- Performance Settings : Warning dialog -->
     <string name="performance_settings_warning_title">WARNING: Dragons Ahead!</string>
     <string name="performance_settings_warning">The options in here will change the performance of your system, potentially for the worse. They are included for experimentation and we request that you do not file bug reports if you have changed any from the defaults.</string>
+
+    <!-- Performance Settings : CPU Settings -->
+    <string name="cpu_settings_title">CPU settings</string>
+    <string name="cpu_title">CPU settings</string>
+    <string name="cpu_summary">Governor and clock settings</string>
+    <string name="cpu_governors_title">Available governors</string>
+    <string name="cpu_governors_summary">List of available governors\nCurrently selected: %S</string>
+    <string name="cpu_min_freq_title">Min CPU frequency</string>
+    <string name="cpu_min_freq_summary">Minimum CPU frequency\nCurrently: %s</string>
+    <string name="cpu_max_freq_title">Max CPU frequency</string>
+    <string name="cpu_max_freq_summary">Maximum CPU frequency\nCurrently: %s</string>
+    <string name="cpu_set_on_boot">Set on boot</string>
+    <string name="cpu_set_on_boot_summary">Restore CPU settings on boot</string>
 
     <!-- Application Settings -->
     <string name="application_settings_title">Application settings</string>
@@ -374,14 +391,15 @@
 
 
     <!-- Expanded View Power Widget -->
-    <string name="title_widget_buttons">Expanded View Widget</string>
     <string name="title_expanded_widget">Notification power widget</string>
-    <string name="summary_expanded_widget">Use the expanded views power widget</string>
+    <string name="summary_expanded_widget">Use the expanded status bar power widget</string>
     <string name="title_expanded_hide_onchange">Hide on change</string>
     <string name="summary_expanded_hide_onchange">Hide the notification pulldown after toggling a widget button</string>
-    <string name="expanded_color_mask">Indicator color</string>
-    <string name="title_widget_picker">Widget buttons</string>
-    <string name="summary_widget_picker">Pick your widget buttons</string>
+    <string name="title_widget_buttons">Widget buttons</string>
+    <string name="summary_widget_buttons">Pick widget buttons </string>
+    <string name="title_widget_order">Widget button order</string>
+    <string name="summary_widget_order">Order of widget buttons</string>
+    <string name="title_buttons">Buttons</string>
     <string name="title_toggle_wifi">Toggle Wifi</string>
     <string name="title_toggle_bluetooth">Toggle Bluetooth</string>
     <string name="title_toggle_gps">Toggle GPS</string>
@@ -406,9 +424,7 @@
     <string name="pref_screentimeout_mode_summary">Choose how the Screentimeout button changes modes</string>
     <string name="pref_ring_mode_title">Sound modes</string>
     <string name="pref_ring_mode_summary">Choose how the sound button changes modes</string>
-    <string name="pref_flash_mode_title">Flash mode</string>
-    <string name="pref_flash_mode_summary">Choose High / Death Ray(Evo)</string>
-    <string name="widget_max_buttons">6 is the max amount of buttons.</string>
+    <string name="widget_max_buttons">14 is the max amount of buttons.</string>
 
     <!-- Sound -->
     <string name="sound_title">Sound settings</string>

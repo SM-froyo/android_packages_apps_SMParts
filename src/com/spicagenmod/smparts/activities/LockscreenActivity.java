@@ -3,9 +3,13 @@ package com.spicagenmod.smparts.activities;
 import com.spicagenmod.smparts.R;
 
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Intent.ShortcutIconResource;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.gesture.GestureLibraries;
 import android.gesture.GestureLibrary;
 import android.os.Build;
@@ -19,6 +23,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -34,9 +39,11 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
     private static final String BUTTON_CATEGORY = "pref_category_button_settings";
     private static final String LOCKSCREEN_STYLE_PREF = "pref_lockscreen_style";
     private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control";
-    private static final String LOCKSCREEN_PHONE_MESSAGING_TAB = "lockscreen_phone_messaging_tab";
+    private static final String LOCKSCREEN_CUSTOM_APP_TOGGLE = "pref_lockscreen_custom_app_toggle";
+    private static final String LOCKSCREEN_CUSTOM_APP_ACTIVITY = "pref_lockscreen_custom_app_activity";
+    private static final String LOCKSCREEN_ROTARY_UNLOCK_DOWN_TOGGLE = "pref_lockscreen_rotary_unlock_down_toggle"; 
+    private static final String LOCKSCREEN_ROTARY_HIDE_ARROWS_TOGGLE = "pref_lockscreen_rotary_hide_arrows_toggle";
     private static final String LOCKSCREEN_DISABLE_UNLOCK_TAB = "lockscreen_disable_unlock_tab";
-    private static final String MESSAGING_TAB_APP = "pref_messaging_tab_app";
     private static final String LOCKSCREEN_ALWAYS_BATTERY_INFO = "lockscreen_always_battery_info";
 
     private static final String HOLD_UNLOCK_PREF = "pref_hold_unlock";
@@ -50,7 +57,9 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
     private CheckBoxPreference mLockAlwaysBatteryInfoPref;
     private CheckBoxPreference mMenuUnlockPref;
     private CheckBoxPreference mQuickUnlockScreenPref;
-    private CheckBoxPreference mPhoneMessagingTabPref;
+    private CheckBoxPreference mCustomAppTogglePref;
+    private CheckBoxPreference mRotaryUnlockDownToggle;
+    private CheckBoxPreference mRotaryHideArrowsToggle;
     private CheckBoxPreference mDisableUnlockTab;
 
     private CheckBoxPreference mHoldUnlockPref;
@@ -59,8 +68,9 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
 
     private ListPreference mLockscreenStylePref;
 
-    private Preference mMessagingTabApp;
-    private int mKeyNumber = 1;
+    private Preference mCustomAppActivityPref;
+
+	private PackageManager mPackageManager;
 
     private static final int REQUEST_PICK_SHORTCUT = 1;
     private static final int REQUEST_PICK_APPLICATION = 2;
@@ -118,10 +128,18 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         mQuickUnlockScreenPref.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0) == 1);
 
-        /* Lockscreen Phone Messaging Tab */
-        mPhoneMessagingTabPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_PHONE_MESSAGING_TAB);
-        mPhoneMessagingTabPref.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKSCREEN_PHONE_MESSAGING_TAB, 0) == 1);
+        /* Lockscreen Custom App Toggle */
+        mCustomAppTogglePref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_CUSTOM_APP_TOGGLE);
+        mCustomAppTogglePref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_CUSTOM_APP_TOGGLE, 0) == 1);
+
+        mRotaryUnlockDownToggle = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ROTARY_UNLOCK_DOWN_TOGGLE);
+        mRotaryUnlockDownToggle.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_ROTARY_UNLOCK_DOWN, 0) == 1);
+
+        mRotaryHideArrowsToggle = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ROTARY_HIDE_ARROWS_TOGGLE);
+        mRotaryHideArrowsToggle.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1);
 
         /* Extended Lockscreen preferences */
         mExtendedLockscreenPref = (PreferenceScreen) prefSet.findPreference(EXTENDED_LOCKSCREEN_PREF);
@@ -133,15 +151,14 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         mLockscreenStylePref.setValue(String.valueOf(lockscreenStyle));
         mLockscreenStylePref.setOnPreferenceChangeListener(this);
         if (lockscreenStyle==1) {
-            mPhoneMessagingTabPref.setEnabled(true);
+            mCustomAppTogglePref.setEnabled(true);
             mExtendedLockscreenPref.setEnabled(false);
         } else if (lockscreenStyle==2) {
-            mPhoneMessagingTabPref.setEnabled(false);
-            mPhoneMessagingTabPref.setChecked(false);
+            mCustomAppTogglePref.setEnabled(true);
             mExtendedLockscreenPref.setEnabled(false);
         } else if (lockscreenStyle==9) {
-            mPhoneMessagingTabPref.setEnabled(false);
-            mPhoneMessagingTabPref.setChecked(false);
+            mCustomAppTogglePref.setEnabled(false);
+            mCustomAppTogglePref.setChecked(false);
             mExtendedLockscreenPref.setEnabled(true);
         }
 
@@ -157,18 +174,11 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         /* Disabling of unlock tab on lockscreen */
         mDisableUnlockTab = (CheckBoxPreference)
         prefSet.findPreference(LOCKSCREEN_DISABLE_UNLOCK_TAB);
-        if (!doesUnlockAbilityExist()) {
-            mDisableUnlockTab.setEnabled(false);
-            mDisableUnlockTab.setChecked(false);
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.LOCKSCREEN_GESTURES_DISABLE_UNLOCK, 0);
-        } else {
-            mDisableUnlockTab.setEnabled(true);
-        }
+        refreshDisableUnlock();
 
         PreferenceCategory buttonCategory = (PreferenceCategory)prefSet.findPreference(BUTTON_CATEGORY);
 
-        mMessagingTabApp = (Preference) prefSet.findPreference(MESSAGING_TAB_APP);
+        mCustomAppActivityPref = (Preference) prefSet.findPreference(LOCKSCREEN_CUSTOM_APP_ACTIVITY);
         
         /* Screen Lock */
         mScreenLockTimeoutDelayPref = (ListPreference) prefSet
@@ -194,26 +204,21 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         int lockscreenStyle = Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCKSCREEN_STYLE_PREF, 1);
 
-        mMessagingTabApp.setSummary(Settings.System.getString(getContentResolver(),
-                Settings.System.LOCKSCREEN_MESSAGING_TAB_APP));
-        if (!doesUnlockAbilityExist()) {
-            mDisableUnlockTab.setEnabled(false);
-            mDisableUnlockTab.setChecked(false);
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.LOCKSCREEN_GESTURES_DISABLE_UNLOCK, 0);
-        } else {
-            mDisableUnlockTab.setEnabled(true);
-        }
+        mCustomAppActivityPref.setSummary(Settings.System.getString(getContentResolver(),
+                Settings.System.LOCKSCREEN_CUSTOM_APP_TITLE));
+
+
+        refreshDisableUnlock();
+
         if (lockscreenStyle==1) {
-            mPhoneMessagingTabPref.setEnabled(true);
+            mCustomAppTogglePref.setEnabled(true);
             mExtendedLockscreenPref.setEnabled(false);
         } else if (lockscreenStyle==2) {
-            mPhoneMessagingTabPref.setEnabled(false);
-            mPhoneMessagingTabPref.setChecked(false);
+            mCustomAppTogglePref.setEnabled(true);
             mExtendedLockscreenPref.setEnabled(false);
         } else if (lockscreenStyle==9) {
-            mPhoneMessagingTabPref.setEnabled(false);
-            mPhoneMessagingTabPref.setChecked(false);
+            mCustomAppTogglePref.setEnabled(false);
+            mCustomAppTogglePref.setChecked(false);
             mExtendedLockscreenPref.setEnabled(true);
         }
     }
@@ -255,15 +260,26 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, value ? 1 : 0);
             return true;
-        } else if (preference == mPhoneMessagingTabPref) {
-            value = mPhoneMessagingTabPref.isChecked();
+        } else if (preference == mCustomAppTogglePref) {
+            value = mCustomAppTogglePref.isChecked();
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.LOCKSCREEN_PHONE_MESSAGING_TAB, value ? 1 : 0);
+                    Settings.System.LOCKSCREEN_CUSTOM_APP_TOGGLE, value ? 1 : 0);
+            return true;
+        } else if (preference == mRotaryUnlockDownToggle) {
+            value = mRotaryUnlockDownToggle.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ROTARY_UNLOCK_DOWN, value ? 1 : 0);
+            return true;
+        } else if (preference == mRotaryHideArrowsToggle) {
+            value = mRotaryHideArrowsToggle.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, value ? 1 : 0);
             return true;
         } else if (preference == mMenuUnlockPref) {
             value = mMenuUnlockPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MENU_UNLOCK_SCREEN, value ? 1 : 0);
+            refreshDisableUnlock();
             return true;
         } else if (preference == mHoldUnlockPref) {
             value = mHoldUnlockPref.isChecked();
@@ -273,9 +289,9 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         } else if (preference == mDisableUnlockTab) {
             value = mDisableUnlockTab.isChecked();
             Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.LOCKSCREEN_GESTURES_DISABLE_UNLOCK, value ? 1 : 0);
-        } else if (preference == mMessagingTabApp) {
-            pickShortcut(4);
+                    Settings.Secure.LOCKSCREEN_DISABLE_UNLOCK, value ? 1 : 0);
+        } else if (preference == mCustomAppActivityPref) {
+            pickShortcut();
         }
         return false;
     }
@@ -286,15 +302,14 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_STYLE_PREF,
                     lockscreenStyle);
             if (lockscreenStyle==1) {
-                mPhoneMessagingTabPref.setEnabled(true);
+                mCustomAppTogglePref.setEnabled(true);
                 mExtendedLockscreenPref.setEnabled(false);
             } else if (lockscreenStyle==2) {
-                mPhoneMessagingTabPref.setEnabled(false);
-                mPhoneMessagingTabPref.setChecked(false);
+                mCustomAppTogglePref.setEnabled(true);
                 mExtendedLockscreenPref.setEnabled(false);
             } else if (lockscreenStyle==9) {
-                mPhoneMessagingTabPref.setEnabled(false);
-                mPhoneMessagingTabPref.setChecked(false);
+                mCustomAppTogglePref.setEnabled(false);
+                mCustomAppTogglePref.setChecked(false);
                 mExtendedLockscreenPref.setEnabled(true);
             }
             return true;
@@ -312,70 +327,37 @@ public class LockscreenActivity extends PreferenceActivity implements OnPreferen
         return false;
     }
 
-    private void pickShortcut(int keyNumber) {
-        mKeyNumber = keyNumber;
-        Bundle bundle = new Bundle();
-        ArrayList<String> shortcutNames = new ArrayList<String>();
-        shortcutNames.add(getString(R.string.group_applications));
-        bundle.putStringArrayList(Intent.EXTRA_SHORTCUT_NAME, shortcutNames);
-        ArrayList<ShortcutIconResource> shortcutIcons = new ArrayList<ShortcutIconResource>();
-        shortcutIcons.add(ShortcutIconResource.fromContext(this, R.drawable.ic_launcher_application));
-        bundle.putParcelableArrayList(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, shortcutIcons);
-        Intent pickIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);
-        pickIntent.putExtra(Intent.EXTRA_INTENT, new Intent(Intent.ACTION_CREATE_SHORTCUT));
-        pickIntent.putExtra(Intent.EXTRA_TITLE, getText(R.string.select_custom_app_title));
-        pickIntent.putExtras(bundle);
-        startActivityForResult(pickIntent, REQUEST_PICK_SHORTCUT);
+    private void pickShortcut() {
+        Intent picker=new Intent();
+        picker.setClass(this, ActivityPickerActivity.class);
+        startActivityForResult(picker, REQUEST_PICK_APPLICATION);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case REQUEST_PICK_APPLICATION:
-                    completeSetCustomApp(data);
-                    break;
-                case REQUEST_CREATE_SHORTCUT:
-                    completeSetCustomShortcut(data);
-                    break;
-                case REQUEST_PICK_SHORTCUT:
-                    processShortcut(data, REQUEST_PICK_APPLICATION, REQUEST_CREATE_SHORTCUT);
-                    break;
+            Intent activityIntent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
+            String title = data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME);
+            if ((Settings.System.putString(getContentResolver(), 
+                    Settings.System.LOCKSCREEN_CUSTOM_APP_ACTIVITY, 
+                    activityIntent.toUri(0))) && 
+                (Settings.System.putString(getContentResolver(), 
+                    Settings.System.LOCKSCREEN_CUSTOM_APP_TITLE, 
+                    title))) {
+                mCustomAppActivityPref.setSummary(title);
             }
         }
     }
 
-    void processShortcut(Intent intent, int requestCodeApplication, int requestCodeShortcut) {
-        // Handle case where user selected "Applications"
-        String applicationName = getResources().getString(R.string.group_applications);
-        String shortcutName = intent.getStringExtra(Intent.EXTRA_SHORTCUT_NAME);
-        if (applicationName != null && applicationName.equals(shortcutName)) {
-            Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-            mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-            Intent pickIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);
-            pickIntent.putExtra(Intent.EXTRA_INTENT, mainIntent);
-            startActivityForResult(pickIntent, requestCodeApplication);
+    void refreshDisableUnlock() {
+        if (!doesUnlockAbilityExist()) {
+            mDisableUnlockTab.setEnabled(false);
+            mDisableUnlockTab.setChecked(false);
+            Settings.Secure.putInt(getContentResolver(),
+                    Settings.Secure.LOCKSCREEN_DISABLE_UNLOCK, 0);
         } else {
-            startActivityForResult(intent, requestCodeShortcut);
-        }
-    }
-
-    void completeSetCustomShortcut(Intent data) {
-        Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
-        int keyNumber = mKeyNumber;
-        if (keyNumber == 4){
-            if (Settings.System.putString(getContentResolver(), Settings.System.LOCKSCREEN_MESSAGING_TAB_APP, intent.toUri(0))) {
-                mMessagingTabApp.setSummary(intent.toUri(0));
-            }
-        }
-    }
-
-    void completeSetCustomApp(Intent data) {
-        int keyNumber = mKeyNumber;
-        if (keyNumber == 4){
-            if (Settings.System.putString(getContentResolver(), Settings.System.LOCKSCREEN_MESSAGING_TAB_APP, data.toUri(0))) {
-                mMessagingTabApp.setSummary(data.toUri(0));
-            }
+            mDisableUnlockTab.setEnabled(true);
         }
     }
 

@@ -64,13 +64,21 @@
             android:entries="@array/pref_lockscreen_style_entries"
             android:entryValues="@array/pref_lockscreen_style_values" />
 
-        <CheckBoxPreference android:key="lockscreen_phone_messaging_tab"
-            android:title="@string/pref_lockscreen_phone_messaging_control_title"
-            android:summary="@string/pref_lockscreen_phone_messaging_control_summary" />
+        <CheckBoxPreference android:key="pref_lockscreen_rotary_unlock_down_toggle"
+            android:title="@string/pref_lockscreen_rotary_unlock_down_title"
+            android:summary="@string/pref_lockscreen_rotary_unlock_down_summary" />
 
-        <Preference android:key="pref_messaging_tab_app"
-            android:dependency="lockscreen_phone_messaging_tab"
-            android:title="@string/pref_messaging_tab_app_title" />
+        <CheckBoxPreference android:key="pref_lockscreen_rotary_hide_arrows_toggle"
+            android:title="@string/pref_lockscreen_rotary_hide_arrows_title"
+            android:summary="@string/pref_lockscreen_rotary_hide_arrows_summary" />
+
+        <CheckBoxPreference android:key="pref_lockscreen_custom_app_toggle"
+            android:title="@string/pref_lockscreen_custom_app_toggle_title"
+            android:summary="@string/pref_lockscreen_custom_app_toggle_summary" />
+
+        <Preference android:key="pref_lockscreen_custom_app_activity"
+            android:dependency="pref_lockscreen_custom_app_toggle"
+            android:title="@string/pref_lockscreen_custom_app_activity_title" />
 
         <!-- Extended Lockscreen for Spica -->
 	    <PreferenceScreen android:key="ext_ls_settings"

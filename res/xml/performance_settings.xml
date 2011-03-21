@@ -5,6 +5,12 @@
     <PreferenceCategory android:key="general_category"
         android:title="@string/general_title">
 
+        <PreferenceScreen android:key="cpu_settings" android:title="@string/cpu_title" android:summary="@string/cpu_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.spicagenmod.smparts"
+                android:targetClass="com.spicagenmod.smparts.activities.CPUActivity" />
+        </PreferenceScreen>
+
         <ListPreference android:key="pref_compcache_size"
             android:dialogTitle="@string/pref_compcache_title"
             android:title="@string/pref_compcache_title"

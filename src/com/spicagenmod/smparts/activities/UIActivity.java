@@ -34,6 +34,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String UI_EXP_WIDGET_HIDE_ONCHANGE = "expanded_hide_onchange";
     private static final String UI_EXP_WIDGET_COLOR = "expanded_color_mask";
     private static final String UI_EXP_WIDGET_PICKER = "widget_picker";
+    private static final String UI_EXP_WIDGET_ORDER = "widget_order";
     private static final String WINDOW_ANIMATIONS_PREF = "window_animations";
     private static final String TRANSITION_ANIMATIONS_PREF = "transition_animations";
     private static final String FANCY_IME_ANIMATIONS_PREF = "fancy_ime_animations";
@@ -76,6 +77,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
     private Preference mPowerWidgetColor;
     private PreferenceScreen mPowerPicker;
+    private PreferenceScreen mPowerOrder;
 
     private ListPreference mOverscrollPref;
     private ListPreference mOverscrollWeightPref;
@@ -123,7 +125,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
 		mPowerWidgetColor = prefSet.findPreference(UI_EXP_WIDGET_COLOR);
 		mPowerPicker = (PreferenceScreen) prefSet.findPreference(UI_EXP_WIDGET_PICKER);
-
+        mPowerOrder = (PreferenceScreen) prefSet.findPreference(UI_EXP_WIDGET_ORDER);
 		mPowerWidget.setChecked((Settings.System.getInt(getContentResolver(),
 			Settings.System.EXPANDED_VIEW_WIDGET, 1) == 1));
 		mPowerWidgetHideOnChange.setChecked((Settings.System.getInt(getContentResolver(),
@@ -181,7 +183,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         if (preference == mPowerPicker) {
             startActivity(mPowerPicker.getIntent());
         }
-
+        if (preference == mPowerOrder) {
+            startActivity(mPowerOrder.getIntent());
+        }
         if (preference == mPinchReflowPref) {
 			value = mPinchReflowPref.isChecked();
 			Settings.System.putInt(getContentResolver(), Settings.System.WEB_VIEW_PINCH_REFLOW,
