@@ -31,14 +31,16 @@ import java.util.ArrayList;
 public class LockscreenUnlockActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
     private static final String LOCKSCREEN_MENU_UNLOCK_PREF = "lockscreen_menu_unlock";
-    private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock";
+    private static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control";
     private static final String LOCKSCREEN_HOLD_UNLOCK_PREF = "lockscreen_hold_unlock";
     private static final String LOCKSCREEN_DISABLE_UNLOCK_TAB = "lockscreen_disable_unlock_tab";
+    private static final String LOCKSCREEN_VIBRATE = "lockscreen_vibrate";
 
     private CheckBoxPreference mMenuUnlockPref;
     private CheckBoxPreference mQuickUnlockScreenPref;
     private CheckBoxPreference mHoldUnlockPref;
     private CheckBoxPreference mDisableUnlockTab;
+    private CheckBoxPreference mLockscreenVibratePref;
 
 
     @Override
@@ -64,6 +66,16 @@ public class LockscreenUnlockActivity extends PreferenceActivity implements OnPr
         mDisableUnlockTab.setChecked(Settings.Secure.getInt(getContentResolver(),
                 Settings.Secure.LOCKSCREEN_DISABLE_UNLOCK, 0) == 1);
 
+        /* Quick Unlock Screen Control */
+        mQuickUnlockScreenPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_QUICK_UNLOCK_CONTROL);
+        mQuickUnlockScreenPref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0) == 1);
+
+        /* Lockscreen vibration */
+        mLockscreenVibratePref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_VIBRATE);
+        mLockscreenVibratePref.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_VIBRATE, 1) == 1);
+
 
         refreshDisableUnlock();
 
@@ -88,6 +100,7 @@ public class LockscreenUnlockActivity extends PreferenceActivity implements OnPr
             value = mHoldUnlockPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.HOLD_UNLOCK_SCREEN, value ? 1 : 0);
+            refreshDisableUnlock();
             return true;
         } else if (preference == mDisableUnlockTab) {
             value = mDisableUnlockTab.isChecked();
@@ -98,6 +111,11 @@ public class LockscreenUnlockActivity extends PreferenceActivity implements OnPr
             value = mQuickUnlockScreenPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, value ? 1 : 0);
+            return true;
+        } else if (preference == mLockscreenVibratePref) {
+            value = mLockscreenVibratePref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_VIBRATE, value ? 1 : 0);
             return true;
         }
         return false;

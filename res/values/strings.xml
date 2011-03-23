@@ -219,6 +219,8 @@
     <string name="lockscreen_hold_unlock_summary">Hold lock button to unlock</string>
     <string name="lockscreen_disable_unlock_tab">Disable unlock slider</string>
     <string name="lockscreen_disable_unlock_tab_summary">Note: You need to enable menu key, hold key or gesture unlocking before this option becomes available.</string>
+    <string name="lockscreen_vibrate_title">Vibrate</string>
+    <string name="lockscreen_vibrate_summary">Change whether the lockscreen should vibrate</string>
 
     <!-- Lockscreen Settings : Style -->
     <string name="lockscreen_mode_title">Lockscreen mode</string>
