@@ -170,7 +170,7 @@
     <string name="xml_import_success">XML import successful! Reboot to see changes</string>
     <string name="xml_run_helper">Running settings helper</string>
     <string name="title_apply_theme">Select a theme</string>
-    <string name="summary_apply_theme">Pick from a pre-made theme or a saved one on your SD card</string>
+    <string name="summary_apply_theme">Pick a theme from your SD card</string>
     <string name="title_save_theme">Save current theme</string>
     <string name="summary_save_theme">Save the current color settings to your SD card</string>
     

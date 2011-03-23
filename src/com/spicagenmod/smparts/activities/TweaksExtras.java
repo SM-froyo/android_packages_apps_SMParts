@@ -37,7 +37,6 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 import org.xmlpull.v1.XmlPullParserException;
 import android.content.Intent;
-import android.content.res.AssetManager;
 
 import java.io.FileInputStream;
 import java.io.DataInputStream;
@@ -70,14 +69,12 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
     private ImportThemeTask mTask;
 
     static Context mContext;
-    static AssetManager mAssetManager;
     static ContentResolver cr;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this.getBaseContext();
-        mAssetManager = getAssets();
         cr = getContentResolver();
         setTitle(R.string.te_title);
 
@@ -111,8 +108,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
 
     /**
      * This builds the master file list for the load theme listpreference -
-     * it collects the files on the sd card under /CMTheme as well as built-in
-     * themes from SMParts/res/assets.
+     * it collects the files on the sd card under /CMTheme.
      *
      * This is called from .intent.catchThemeListReceiver with the
      * @param sdList    file list from sdcard (or null)
@@ -123,18 +119,6 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
     public static void buildFileList(String[] sdList, boolean gotSDThemes) {
         ArrayList<String> masterFileNames = new ArrayList<String>();
         ArrayList<String> masterFileValues = new ArrayList<String>();
-        // First, grab built-in xml files
-        String[] builtinThemes = null;
-        try {
-            builtinThemes = mAssetManager.list("CMTheme");
-            } catch (IOException e) {}
-        int numthemes = builtinThemes.length;
-        if (builtinThemes != null && numthemes > 0) {
-            for (int i = 0; i < numthemes; i++) {
-                masterFileNames.add(builtinThemes[i].split(".xml")[0]);
-                masterFileValues.add("CMTheme/" + builtinThemes[i]);
-            }
-        }
         // If we were successful at grabbing a list off the SD Card, add those to the arraylists
         if (gotSDThemes) {
             int numsdthemes = sdList.length;
@@ -144,14 +128,16 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
                     masterFileValues.add(sdList[i]);
                 } catch (ArrayIndexOutOfBoundsException e) { }// if name is no good, skip it
             }
+            filePickNames = new String [masterFileNames.size()];
+            masterFileNames.toArray(filePickNames);
+            filePickValues = new String [masterFileValues.size()];
+            masterFileValues.toArray(filePickValues);
+            mApplyTheme.setEntryValues(filePickValues);
+            mApplyTheme.setEntries(filePickNames);
+            mApplyTheme.setEnabled(true);
+        } else {
+            mApplyTheme.setEnabled(false);
         }
-        filePickNames = new String [masterFileNames.size()];
-        masterFileNames.toArray(filePickNames);
-        filePickValues = new String [masterFileValues.size()];
-        masterFileValues.toArray(filePickValues);
-        mApplyTheme.setEntryValues(filePickValues);
-        mApplyTheme.setEntries(filePickNames);
-        mApplyTheme.setEnabled(true);
 
     }
 
@@ -290,11 +276,6 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
                     try {
                         freader = new FileReader(xmlFile);
                     } catch (FileNotFoundException e) { }
-                } else {
-                    try {
-                        iStream = mAssetManager.open(pickedTheme);
-                        isreader = new InputStreamReader(iStream);
-                    } catch (IOException e) { }
                 }
                 boolean success = false;
                 try {
@@ -460,22 +441,21 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
                             s.equals(Settings.System.NOTIF_BAR_COLOR) ||
                             s.equals(Settings.System.NOTIF_EXPANDED_BAR_COLOR)) {
                         color = WHITE;
-                    } else
-                    if (s.equals(Settings.System.SHOW_STATUS_CLOCK) ||        // all default on items
+                    } else if (s.equals(Settings.System.SHOW_STATUS_CLOCK) ||        // all default on items
                             s.equals(Settings.System.SHOW_PLMN_LS) ||
                             s.equals(Settings.System.SHOW_SPN_LS) ||
                             s.equals(Settings.System.SHOW_PLMN_SB) ||
                             s.equals(Settings.System.SHOW_SPN_SB)) {
                         color = SET_ON;
-                    } else
-                    if (s.equals(Settings.System.BATTERY_PERCENTAGE_STATUS_ICON) ||         // all default off items
+                    } else if (s.equals(Settings.System.BATTERY_PERCENTAGE_STATUS_ICON) ||         // all default off items
                             s.equals(Settings.System.SHOW_STATUS_DBM) ||
                             s.equals(Settings.System.NOTIF_BAR_CUSTOM) ||
                             s.equals(Settings.System.NOTIF_EXPANDED_BAR_CUSTOM) ||
                             s.equals(Settings.System.HDPI_BATTERY_ALIGNMENT)) {
                         color = SET_OFF;
-                    }
-                    else {
+                    } else if (s.equals(Settings.System.CLOCK_COLOR)) {         // green GB clock
+                        color = -7616512;
+                    } else {
                         color = BLACK;        // all black colors
                     }
                 }
@@ -537,11 +517,6 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
             try {
                 freader = new FileReader(xmlFile);
             } catch (FileNotFoundException e) { }
-        } else {
-            try {
-                iStream = mAssetManager.open(pickedTheme);
-                isreader = new InputStreamReader(iStream);
-            } catch (IOException e) { }
         }
         boolean success = false;
         try {
