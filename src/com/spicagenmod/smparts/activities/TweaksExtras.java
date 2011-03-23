@@ -369,7 +369,7 @@ public class TweaksExtras extends PreferenceActivity implements Preference.OnPre
     }
 
     private void resetUITweaks() {
-        Settings.System.putInt(getContentResolver(), Settings.System.CLOCK_COLOR, BLACK);
+        Settings.System.putInt(getContentResolver(), Settings.System.CLOCK_COLOR, -7616512);
         Settings.System.putInt(getContentResolver(), Settings.System.DBM_COLOR, BLACK);
         Settings.System.putInt(getContentResolver(), Settings.System.DATE_COLOR, BLACK);
         Settings.System.putInt(getContentResolver(), Settings.System.SPN_LABEL_COLOR, BLACK);
