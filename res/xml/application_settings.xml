@@ -17,4 +17,15 @@
             android:entryValues="@array/values_install_location" />
 
     </PreferenceCategory>
+
+    <!-- External apps settings -->
+    <PreferenceCategory android:key="apps_category"
+        android:title="@string/apps_title">
+
+        <CheckBoxPreference android:key="pref_email_policy_exchange"
+            android:title="@string/pref_email_policy"
+            android:summary="@string/pref_email_policy_summary" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

@@ -372,7 +372,12 @@
     <string name="haptic_default_toast">Loading hard-coded defaults</string>
 
     <string name="general_title">General</string>
+    <string name="apps_title">Applications</string>
     <string name="buttons_title">Buttons</string>
+
+    <!-- Exchange fix for Email app -->
+    <string name="pref_email_policy">Exchange fix</string>
+    <string name="pref_email_policy_summary">Fix for Email Exchange policies</string>
 
     <!-- UI Settings : Power off prompt -->
     <string name="pref_power_prompt_title">Power prompt</string>

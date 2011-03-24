@@ -18,15 +18,16 @@ import android.util.Log;
 public class ApplicationActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 
     private static final String INSTALL_LOCATION_PREF = "pref_install_location";
-    
+   
     private static final String MOVE_ALL_APPS_PREF = "pref_move_all_apps";
+    private static final String EMAIL_EXCHANGE_POLICY = "pref_email_policy_exchange";
     
     private static final String LOG_TAG = "SMParts";
     
     private CheckBoxPreference mMoveAllAppsPref;
+    private CheckBoxPreference mEmailExchangePolicy;
     
     private ListPreference mInstallLocationPref;
-    
     private IPackageManager mPm;
         
     @Override
@@ -56,6 +57,11 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
         mMoveAllAppsPref = (CheckBoxPreference) prefSet.findPreference(MOVE_ALL_APPS_PREF);
         mMoveAllAppsPref.setChecked(Settings.Secure.getInt(getContentResolver(), 
             Settings.Secure.ALLOW_MOVE_ALL_APPS_EXTERNAL, 0) == 1);
+
+        mEmailExchangePolicy = (CheckBoxPreference) prefSet.findPreference(EMAIL_EXCHANGE_POLICY);
+        mEmailExchangePolicy.setChecked(Settings.System.getInt(getContentResolver(), 
+            Settings.System.EMAIL_POLICY_OVERRIDE, 0) == 1);
+
     }
         
     @Override
@@ -63,6 +69,10 @@ public class ApplicationActivity extends PreferenceActivity implements OnPrefere
         if (preference == mMoveAllAppsPref) {
             Settings.Secure.putInt(getContentResolver(),
                 Settings.Secure.ALLOW_MOVE_ALL_APPS_EXTERNAL, mMoveAllAppsPref.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mEmailExchangePolicy) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.EMAIL_POLICY_OVERRIDE, mEmailExchangePolicy.isChecked() ? 1 : 0);
             return true;
         }
         return false;
