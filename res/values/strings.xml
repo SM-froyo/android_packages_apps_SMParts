@@ -4,6 +4,9 @@
     <string name="app_name">SpicagenMod settings</string>
 
     <!--  Primary Screen Settings -->
+    <!--  Update Notifications -->
+    <string name="update_settings_title_head">Updates</string>
+    <string name="update_settings_summary_head">Get notifications of OTA updates</string>
     <string name="application_settings_title_head">Application</string>
     <string name="application_settings_title_subhead">Application settings</string>
     <string name="application_settings_summary_head">Application moving, install location</string>

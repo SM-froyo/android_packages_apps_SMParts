@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Update Notifications -->
+    <PreferenceScreen android:key="updatenotify_settings"
+        android:title="@string/update_settings_title_head" android:summary="@string/update_settings_summary_head">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.spicagenmod.updatenotify"
+            android:targetClass="com.spicagenmod.updatenotify.MainActivity" />
+    </PreferenceScreen>
 
     <!-- Application Settings -->
     <PreferenceScreen android:key="application_settings"
