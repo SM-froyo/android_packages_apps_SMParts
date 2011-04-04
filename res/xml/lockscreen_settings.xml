@@ -46,7 +46,8 @@
             android:title="@string/ext_ls_settings_title">
                 <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.spicagenmod.smparts"
-                    android:targetClass="com.spicagenmod.smparts.activities.ExtendedLockscreenActivity" />
+                    android:targetClass="com.spicagenmod.smparts.activities.ExtendedLockscreenActivity"
+                    android:visibility="gone" />
         </PreferenceScreen>
     </PreferenceCategory>
 
