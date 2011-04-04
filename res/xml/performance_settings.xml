@@ -8,7 +8,8 @@
         <PreferenceScreen android:key="cpu_settings" android:title="@string/cpu_title" android:summary="@string/cpu_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.spicagenmod.smparts"
-                android:targetClass="com.spicagenmod.smparts.activities.CPUActivity" />
+                android:targetClass="com.spicagenmod.smparts.activities.CPUActivity"
+                android:visibility="gone" />
         </PreferenceScreen>
 
         <ListPreference android:key="pref_compcache_size"

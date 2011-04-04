@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/general_title">
+        <CheckBoxPreference android:key="lockscreen_always_battery"
+            android:title="@string/lockscreen_always_battery_title"
+            android:summary="@string/lockscreen_always_battery_summary" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/lockscreen_music_title">
         <CheckBoxPreference android:key="lockscreen_music_controls"
             android:title="@string/lockscreen_music_controls_title"
@@ -21,11 +27,5 @@
         <CheckBoxPreference android:key="lockscreen_album_art"
             android:title="@string/lockscreen_album_art_title"
             android:summary="@string/lockscreen_album_art_summary" />
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/general_title">
-        <CheckBoxPreference android:key="lockscreen_always_battery"
-            android:title="@string/lockscreen_always_battery_title"
-            android:summary="@string/lockscreen_always_battery_summary" />
     </PreferenceCategory>
 </PreferenceScreen>

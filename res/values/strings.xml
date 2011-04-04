@@ -196,7 +196,7 @@
     <string name="lockscreen_timeout_summary">Configure screen timout delay and screen turn off delay</string>
 
     <!-- Lockscreen Settings : Widgets -->
-    <string name="lockscreen_music_title">Music control</string>
+    <string name="lockscreen_music_title">Music</string>
     <string name="lockscreen_music_controls_title">Music controls</string>
     <string name="lockscreen_music_controls_summary">Displays music controls on the lockscreen</string>
     <string name="lockscreen_always_music_controls_title">Always display music controls</string>
